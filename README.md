@@ -1,3 +1,3 @@
 # IanSkinner1982.github.io
 
-A website to show off all of my projects.
+Just me testing random html stuff I read about.

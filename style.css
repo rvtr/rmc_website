@@ -1,1 +1,54 @@
-
+body {
+    font-family: Calibri, Segoe UI, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FCFBF1;
+}
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0B5EA7;
+    font-family: 'Montserrat', sans-serif;
+}
+.navstd {
+    float: left;
+}
+.navalt {
+    float: right;
+}
+.navstd a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navalt a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.nav li a:hover {
+    background-color: #0B4F8A;
+}
+.navimg {
+    text-align: center;
+    float: right;
+    padding: 6px 14px;
+    object-fit: scale-down;
+}
+h1, h2, h3, h4, p {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+code {
+  font-family: Consolas,"courier new";
+  color: crimson;
+  background-color: #f1f1f1;
+  padding: 2px;
+  font-size: 70%;
+}

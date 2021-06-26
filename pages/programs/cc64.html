@@ -26,8 +26,8 @@
             <br>Gain (cookies per second)
             <br>Price</code>
             <br>
-            <br>Now edit the program. You will need to change the maximum number of buildings (written as <code>mb</code>) you want <b>minus one</b>. This is set at the start of line 10.
-            <br>Next, look at line 2010. These determine the building data that will be displayed on each page. (a range of 0-4 will print data for buildings 0-4, and 5-9 for 5-9 and so on) <code>SS</code> is the page number on which these values will be printed. Make sure you have <code>ifss>{page #}theni</code>. Add/edit ranges as needed.
+            <br>Now we'll start editing the actual program. You will need to change the old max # of buildings to the new max # of buildings you want, <b>minus one</b>. This can be edited at the start of line 10. (the max # of building is represented as mb)
+            <br>Next, look at line 2010. There are multiple ranges. These determine what building data will be displayed on each page. (a range of 0-4 will print data for buildings 0-4, and 5-9 for 5-9 and so on) <code>I</code> and <code>J</code> are the minimum and maximum values of a range, respectively. <code>SS</code> is the page number on which these values will be printed. Add/edit ranges as needed. Make sure you have <code>ifss>{page #}theni</code>.
             <br>(notes: page numbers start at 0, and ranges can be no bigger than 5)
             <br>
             <br>Lastly, edit line 3095 to be <code>ifss={max page #+1}thenss={max page #}</code>.

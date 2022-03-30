@@ -6,8 +6,8 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  padding-left: 3.8%;
-  overflow: hidden;
+  padding-left: 3.5%;
+/*  overflow: hidden; */
 }
 .navstd {
   float: left;
@@ -21,9 +21,11 @@ body {
 .imageOne {
     z-index: 0;
 }
-
 .imageTwo {
     z-index: 1;
+}
+.imageThree {
+  z-index: 2;
 }
 .image {
     position: absolute;
@@ -58,12 +60,48 @@ body {
 .navpadding li {
   padding-top: 1.5%;
 }
+.image2 {
+    position: absolute;
+    border-color: #FFFFFF
+    width: auto;
+    height: auto;
+}
+.titleimgoverlay {
+  margin: 0% 2% 0%;
+  opacity: 0.0;
+  text-align: center;
+  float: left;
+  width: 16vw;
+  height: auto;
+}
+.titleimgoverlay:hover {
+  opacity: 1.0;
+}
+.titleimg {
+  margin: 0% 2% 0%;
+  text-align: center;
+  float: left;
+  width: 16vw;
+  height: auto;
+}
+.titleedge {
+  text-align: center;
+  float: left;
+  margin: 1%;
+  width: 18vw;
+  height: auto;
+}
+.titlepadding li {
+  padding-top: 1.5%;
+  margin: 0% 2% 0%
+}
+
 </style>
 <body>
 <div class="nav">
     <nav>
         <ul>
-            <li class="navedge"><img src="/pages/dsiware/leftbracket.png" style="width:1.5vw;height:auto;"/></li>
+            <li class="navedge"><img src="/pages/dsiware/leftbracket.png" style="width:1.5vw;height:auto;margin:auto;"/></li>
             <div class="navpadding">
                 <li class="navimg">
                 <div class="container">
@@ -150,11 +188,42 @@ body {
                 </div>
                 </li>
                 </div>
-            <li class="navedge"><img src="/pages/dsiware/rightbracket.png" style="width:1.5vw;height:auto;"/></li>
+            <li class="navedge"><img src="/pages/dsiware/rightbracket.png" style="width:1.5vw;height:auto;margin:auto;"/></li>
         </ul>
     </nav>
 </div>
-  <p>
-    There will be lots of short DSiWare reviews soonish. Stay tuned.
-  </p>
+<div class="nav">
+    <nav>
+        <ul>
+            <li class="navedge" style="margin-left:3.5%;><img src="/pages/dsiware/leftbracket.png" style="width:1.5vw;height:auto;margin:auto;opacity: 0.0;"/></li>
+            <div class="titlepadding">
+                <li class="titleimg">
+                <div class="container">
+                <div class="imageOne image2"><img src="/pages/dsiware/prompt.png" class="titleimg"></div>
+                <div class="imageTwo image2"><img src="/pages/dsiware/prompthover.png" class="titleimgoverlay"></div>
+                </div>
+                </li>
+                <li class="titleimg">
+                <div class="container">
+                <div class="imageOne image2"><img src="/pages/dsiware/prompt.png" class="titleimg"></div>
+                <div class="imageTwo image2"><img src="/pages/dsiware/prompthover.png" class="titleimgoverlay"></div>
+                </div>
+                </li>
+                <li class="titleimg">
+                <div class="container">
+                <div class="imageOne image2"><img src="/pages/dsiware/prompt.png" class="titleimg"></div>
+                <div class="imageTwo image2"><img src="/pages/dsiware/prompthover.png" class="titleimgoverlay"></div>
+                </div>
+                </li>
+                <li class="titleimg">
+                <div class="container">
+                <div class="imageOne image2"><img src="/pages/dsiware/prompt.png" class="titleimg"></div>
+                <div class="imageTwo image2"><img src="/pages/dsiware/prompthover.png" class="titleimgoverlay"></div>
+                </div>
+                </li>
+                </div>
+            <li class="navedge"><img src="/pages/dsiware/rightbracket.png" style="width:1.5vw;height:auto;margin:auto;opacity: 0.0;"/></li>
+        </ul>
+    </nav>
+</div>
 </body>

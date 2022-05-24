@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<link rel="stylesheet" type="text/css" href="./error.css">
+<script type="text/javascript" src="./base.js"></script>
+<script type="text/javascript" src="./error_id.js"></script>
+<script type="text/javascript" src="./se.js"></script>
+
+
+<title>E_03_d</title>
+
+<script>;
+window.name = "DownWindow";
+var gkong = new Kong;
+var $ = function(arg){ return document.getElementById(arg) };
+window.addEventListener('load',             function(){ onload_error_page(); } , false);
+</script>
+
+<!--end_of_head-->
+
+</head>
+
+<body>
+
+<div id="error_down_bg_u"></div>
+<div id="error_down_bg_d"></div>
+
+<div id="error_down_title">
+	<span class="error_down_title_inner tx12error">
+		<script>document.write( gkong.GetMessage( JMS_shop_error_title ) );</script>
+	</span>
+</div>
+
+
+
+<!---------------->
+<div class="btn_base button_224x32" id="button_error_center">
+	<div class="btn_inner_base">
+		<span class="tx16">
+			<script>document.write( gkong.GetMessage( JMS_shop_ok ) )</script>
+		</span>
+	</div>
+	<div class="btn_spacer_base"></div>
+</div>
+
+<script>;
+//	setButtonImages($('button_error_center'), SBIMG_NO_LOADINGICON_NO_PARTICLE);
+	setButtonImages($('button_error_center'));
+	setOnclick( $('button_error_center'), "waitRestart();" );
+</script>
+
+
+
+</body>
+</html>

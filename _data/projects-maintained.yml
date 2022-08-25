@@ -1,0 +1,20 @@
+- name: ncxcore
+  truename: NCX-Core
+  icon: https://cdn.ncxprogramming.com/file/icon/ncxcore.png
+  desc: Our program to install more programs.
+- name: rngtool
+  truename: RNGTool
+  icon: https://cdn.ncxprogramming.com/file/icon/rngtool.png
+  desc: A macOS/iOS app that generates random numbers.
+- name: thevaultbasic
+  truename: theVaultBasic2.0
+  icon: https://cdn.ncxprogramming.com/file/icon/thevaultbasic.png
+  desc: A collection of C64 apps, similar to theVaultC.
+- name: thevaultc
+  truename: theVaultC
+  icon: https://cdn.ncxprogramming.com/file/icon/thevaultc.png
+  desc: A collection of cross-platform C console apps.
+- name: xware
+  truename: XWare
+  icon: https://cdn.ncxprogramming.com/file/icon/xware.png
+  desc: Our small programs that can be downloaded in NCX-Core.

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="icon" type="image/png" href="/icon.png"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link id="pagestyle" rel="stylesheet" type="text/css" href="">
+    <link rel="alternate" type="application/atom+xml" href="https://ianskinner1982.github.io/feed.xml">
+    <script src="/assets/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="/assets/js/main.js"></script>
+    {% if page.title == "Home" %}
+      <meta property="og:title" content="Welcome">
+    {% else %}
+      <meta property="og:title" content="{{ page.title }}">
+    {% endif %}
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="{{ page.title }} | {{ site.title }}">
+    <meta property="og:description" content="{{ page.title }} | {{ site.title }}">
+    <link rel="canonical" href="https://ianskinner1982.github.io">
+    <meta property="og:url" content="https://ianskinner1982.github.io">
+    <meta property="og:site_name" content="rmc's site">
+    {% if page.custicon == true %}
+      <meta property="og:image" content="{{ page.iconurl }}">
+    {% else %}
+      <meta property="og:image" content="https://ianskinner1982.github.io/icon.png">
+    {% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    {% include nav.html %}
+    <div id="content-wrap" style="padding-bottom: 2.5rem;">
+    {{ content }}
+    </div>
+  </body>
+  <footer>
+  {% include footer.html %}
+  </footer>
+</html>

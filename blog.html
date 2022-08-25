@@ -1,0 +1,17 @@
+---
+title: DSiWare
+layout: dsiware
+---
+
+<div class="text-center pt-3">
+    <h1>DSiWare Reviews</h1>
+    <p>Articles are listed alphabetically</p>
+</div>
+<div class="container">
+    <hr>
+    {% for post in site.posts %}
+        <p><a href="{{ post.url }}">{{ post.title }}</a></p>
+        <p>{{ post.date | date: "%Y-%m-%d" }} ({{ post.author }})</p>
+        <hr>
+    {% endfor %}
+</div>

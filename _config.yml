@@ -1,0 +1,9 @@
+name: rmc's site
+title: rmc's site
+url: https://ianskinner1982.github.io
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+feed:
+  posts_limit: 20

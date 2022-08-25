@@ -1,0 +1,12 @@
+- name: csharpcollection
+  truename: CSharpCollection
+  icon: https://cdn.ncxprogramming.com/file/icon/csharpcollection.png
+  desc: A collection of C# things made with WPF.
+- name: ncxcorelite
+  truename: NCX-Core-Lite
+  icon: https://cdn.ncxprogramming.com/file/icon/ncxcore.png
+  desc: The start of a cross-platform CLI/GUI program to install more programs.
+- name: thevault
+  truename: theVault
+  icon: https://cdn.ncxprogramming.com/file/icon/placeholder.svg
+  desc: A collection of cross-platform C# console apps.

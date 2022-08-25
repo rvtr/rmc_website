@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<title>IanSkinner1982's Website</title>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/style.css">
+    </head>
+<body>
+        <div class="nav">
+          <nav>
+            <ul>
+              <li class="navstd"><a href="/">Home</a></li>
+              <li class="navstd"><a href="/pages/programs/">Programs</a></li>
+              <li class="navstd"><a href="/pages/socialmedia/">Social Media</a></li>
+              <li class="navimg"><a href="https://github.com/IanSkinner1982"><img src="https://raw.githubusercontent.com/NCX-Programming/site/main/files/site/images/github64px.png" style="width:32px;height:32px;"/></a></li>
+              <li class="navimg"><a href="https://discord.gg/TbPXuFr"><img src="https://raw.githubusercontent.com/NCX-Programming/site/main/files/site/images/discord.png" style="width:30px;height:32px;"/></a></li>
+            </ul>
+          </nav>
+        </div>
+        <h1>CC64 docs</h1>
+        <p>
+            Adding new buildings in v3:
+            <br>First, add the new building data to the end of the <code>STOREDAT</code> file. The format should be as follows:
+            <br>
+            <br><code>Name (max 14 chars)
+            <br>Description (max 22 chars)
+            <br>Gain (cookies per second)
+            <br>Price</code>
+            <br>
+            <br>Now we'll start editing the actual program. You will need to change the old max # of buildings to the new max # of buildings you want, <b>minus one</b>. This can be edited at the start of line 10. (the max # of building is represented as mb)
+            <br>Next, look at line 2010. There are multiple ranges. These determine what building data will be displayed on each page. (a range of 0-4 will print data for buildings 0-4, and 5-9 for 5-9 and so on) <code>I</code> and <code>J</code> are the minimum and maximum values of a range, respectively. <code>SS</code> is the page number on which these values will be printed. Add/edit ranges as needed. Make sure you have <code>ifss>{page #}theni</code>.
+            <br>(notes: page numbers start at 0, and ranges can be no bigger than 5)
+            <br>
+            <br>Lastly, edit line 3095 to be <code>ifss={max page #+1}thenss={max page #}</code>.
+            <br>
+            <br>If, after doing this, the screen becomes messed up, try changing the amount of <code>{downs}</code> in line 2555. Currently there isn't any code that selects the amount of <code>{down}</code>s needed depending on the number of items printed. (that may come later) Everything <i>should</i> now work. If you are experiencing any problems, try updating your CC64 version and repeating the steps.
+        </p>
+    </body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The Problems With C On Windows | rmc's site</title>
+    <link rel="icon" type="image/png" href="/icon.png"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/styledsi.css">
+    <link id="pagestyle" rel="stylesheet" type="text/css" href="">
+    <link rel="alternate" type="application/atom+xml" href="https://ianskinner1982.github.io/feed.xml">
+    <script src="/assets/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="/assets/js/main.js"></script>
+    
+      <meta property="og:title" content="The Problems With C On Windows">
+    
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="The Problems With C On Windows | rmc's site">
+    <meta property="og:description" content="The Problems With C On Windows | rmc's site">
+    <link rel="canonical" href="https://ianskinner1982.github.io">
+    <meta property="og:url" content="https://ianskinner1982.github.io">
+    <meta property="og:site_name" content="rmc's site">
+    
+      <meta property="og:image" content="https://ianskinner1982.github.io/icon.png">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <style>
+body {
+  background-image: url('/assets/dsi/background.jpg');
+}
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 3.5%;
+/*  overflow: hidden; */
+}
+.navstd {
+  float: left;
+}
+.navalt {
+  float: right;
+}
+.container {
+    position: relative;
+}
+.imageOne {
+    z-index: 0;
+}
+.imageTwo {
+    z-index: 1;
+}
+.imageThree {
+  z-index: 2;
+}
+.image {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+.navimgoverlay {
+  opacity: 0.0;
+  text-align: center;
+  float: left;
+  padding-top: .6vw;
+  width: 6vw;
+  height: auto;
+}
+.navimgoverlay:hover {
+  opacity: 1.0;
+}
+.navimg {
+  text-align: center;
+  float: left;
+  padding-top: .6vw;
+  width: 6vw;
+  height: auto;
+}
+.navicon {
+  text-align: center;
+  float: left;
+  padding-top: 2.1vw;
+  padding-left: 1.38vw;
+  width: 3.2vw;
+  height: auto;
+}
+.navedge {
+  text-align: center;
+  float: left;
+  margin: 1%;
+  width: 1.5vw;
+  height: auto;
+}
+.navpadding li {
+  padding-top: 1.5%;
+}
+.image2 {
+    position: absolute;
+    border-color: #FFFFFF
+    width: auto;
+    height: auto;
+}
+.titleimgoverlay {
+  margin: 0% 2% 0%;
+  opacity: 0.0;
+  text-align: center;
+  float: left;
+  width: 16vw;
+  height: auto;
+}
+.titleimgoverlay:hover {
+  opacity: 1.0;
+}
+.titleimg {
+  margin: 0% 2% 0%;
+  text-align: center;
+  float: left;
+  width: 16vw;
+  height: auto;
+}
+.titleedge {
+  text-align: center;
+  float: left;
+  margin: 1%;
+  width: 18vw;
+  height: auto;
+}
+.titlepadding li {
+  padding-top: 1.5%;
+  margin: 0% 2% 0%
+}
+
+</style>
+<body>
+<div class="nav">
+    <nav>
+        <ul>
+            <li class="navedge"><img src="/assets/dsi/leftbracket.png" style="width:1.5vw;height:auto;margin:auto;"/></li>
+            <div class="navpadding">
+                <li class="navimg">
+                <div class="container">
+                <div class="imageOne image"><img src="/assets/dsi/boxfull.png" class="navimg"></div>
+                <div class="imageTwo image"><img src="/assets/dsi/home.png" class="navicon"></div>
+                <div class="imageThree image"><a href="/"><img src="/assets/dsi/boxoverlay.png" class="navimgoverlay"></a></div>
+                </div>
+                </li>
+                <li class="navimg">
+                <div class="container">
+                <div class="imageOne image"><img src="/assets/dsi/boxfull.png" class="navimg"></div>
+                <div class="imageTwo image"><img src="/assets/dsi/twldevapps.png" class="navicon"></div>
+                <div class="imageThree image"><a href="/aaaaaaa/"><img src="/assets/dsi/boxoverlay.png" class="navimgoverlay"></a></div>
+                </div>
+                </li>
+                <li class="navimg">
+                <div class="container">
+                <div class="imageOne image"><img src="/assets/dsi/boxfull.png" class="navimg"></div>
+                <div class="imageTwo image"><img src="/assets/dsi/dsishop.gif" class="navicon"></div>
+                <div class="imageThree image"><a href="/gaming/htmls/DEBUG/startup.html"><img src="/assets/dsi/boxoverlay.png" class="navimgoverlay"></a></div>
+                </div>
+                </li>
+                <li class="navimg">
+                <div class="container">
+                <div class="imageOne image"><img src="/assets/dsi/box.png" class="navimg"></div>
+                <div class="imageThree image"><img src="/assets/dsi/boxoverlay.png" class="navimgoverlay"></div>
+                </div>
+                </li>
+                <li class="navimg">
+                <div class="container">
+                <div class="imageOne image"><img src="/assets/dsi/box.png" class="navimg"></div>
+                <div class="imageThree image"><img src="/assets/dsi/boxoverlay.png" class="navimgoverlay"></div>
+                </div>
+                </li>
+                <li class="navimg">
+                <div class="container">
+                <div class="imageOne image"><img src="/assets/dsi/box.png" class="navimg"></div>
+                <div class="imageThree image"><img src="/assets/dsi/boxoverlay.png" class="navimgoverlay"></div>
+                </div>
+                </li>
+                <li class="navimg">
+                <div class="container">
+                <div class="imageOne image"><img src="/assets/dsi/box.png" class="navimg"></div>
+                <div class="imageThree image"><img src="/assets/dsi/boxoverlay.png" class="navimgoverlay"></div>
+                </div>
+                </li>
+                <li class="navimg">
+                <div class="container">
+                <div class="imageOne image"><img src="/assets/dsi/box.png" class="navimg"></div>
+                <div class="imageThree image"><img src="/assets/dsi/boxoverlay.png" class="navimgoverlay"></div>
+                </div>
+                </li>
+                <li class="navimg">
+                <div class="container">
+                <div class="imageOne image"><img src="/assets/dsi/box.png" class="navimg"></div>
+                <div class="imageThree image"><img src="/assets/dsi/boxoverlay.png" class="navimgoverlay"></div>
+                </div>
+                </li>
+                <li class="navimg">
+                <div class="container">
+                <div class="imageOne image"><img src="/assets/dsi/box.png" class="navimg"></div>
+                <div class="imageThree image"><img src="/assets/dsi/boxoverlay.png" class="navimgoverlay"></div>
+                </div>
+                </li>
+                <li class="navimg">
+                <div class="container">
+                <div class="imageOne image"><img src="/assets/dsi/box.png" class="navimg"></div>
+                <div class="imageThree image"><img src="/assets/dsi/boxoverlay.png" class="navimgoverlay"></div>
+                </div>
+                </li>
+                <li class="navimg">
+                <div class="container">
+                <div class="imageOne image"><img src="/assets/dsi/box.png" class="navimg"></div>
+                <div class="imageThree image"><img src="/assets/dsi/boxoverlay.png" class="navimgoverlay"></div>
+                </div>
+                </li>
+                <li class="navimg">
+                <div class="container">
+                <div class="imageOne image"><img src="/assets/dsi/boxfull.png" class="navimg"></div>
+                <div class="imageTwo image"><img src="/assets/dsi/discord.png" class="navicon"></div>
+                <div class="imageThree image"><a href="https://discord.gg/XZxxZngwDQ"><img src="/assets/dsi/boxoverlay.png" class="navimgoverlay"></a></div>
+                </div>
+                </li>
+                <li class="navimg">
+                <div class="container">
+                <div class="imageOne image"><img src="/assets/dsi/boxfull.png" class="navimg"></div>
+                <div class="imageTwo image"><img src="/assets/dsi/github.png" class="navicon"></div>
+                <div class="imageThree image"><a href="https://github.com/IanSkinner1982/ianskinner1982.github.io/"><img src="/assets/dsi/boxoverlay.png" class="navimgoverlay"></a></div>
+                </div>
+                </li>
+                </div>
+            <li class="navedge"><img src="/assets/dsi/rightbracket.png" style="width:1.5vw;height:auto;margin:auto;"/></li>
+        </ul>
+    </nav>
+</div>
+
+    <div id="content-wrap">
+    <div class="text-center pt-3">
+  <h1>The Problems With C On Windows</h1>
+  <h3>2021-08-16</h3>
+  <h4>NinjaCheetah</h4>
+  <p><a href=/blog>&lt;- Back</a></p>
+</div>
+<div class="container">
+  <hr>
+  <p><i>This will be a short article.</i></p>
+<p>As much as I like using C, I have one big issue with it. And that problem is Windows.</p>
+<p><b>1. Libraries</b></p>
+<p>Compared to macOS and Linux, installing/obtaining libraries to use on Windows is difficult. If you're on a Debian or Arch system, you have <code>apt</code> or <code>pacman</code>, respectively. If you're on macOS, you have a few options, such as my package manager of choice, <code>brew</code>. But on Windows? You don't have those options. You have to find and download those libraries yourself in order to use them in your program. Now is this a huge deal? No, not really. It's just inconvenient, compared to macOS and Linux where you'll always be using the latest libraries, and they can be installed with one command.</p>
+<p><b>2. POSIX Compliance</b></p>
+<p>Windows is not POSIX Compliant.<sup>[1]</sup> Now what does this mean? <a href="https://en.wikipedia.org/wiki/POSIX">"The Portable Operating System Interface (POSIX) is a family of standards specified by the IEEE Computer Society for maintaining compatibility between operating systems."</a><sup>[1]</sup> One particular POSIX standard that it doesn't meet is the C POSIX standard,<sup>[2]</sup> which is what causes me issues. Because Windows does not follow these standards, it doesn't include many of the standard C libraries, and instead forces you to use the proprietary Windows libraries. While this isn't inherently a bad thing, it does kill compatibility between Linux/macOS and Windows. This deters me from making Windows-compatible software because I need to rework a lot of code to do it. With macOS and Linux the changes I need to make are often either minor or nonexistent.</p>
+<p><b>3. Compiler</b></p>
+<p>Tying in with the previous section, Windows requires its own proprietary compiler because it needs to be able to include the Windows libraries.</p>
+<p><b>Finishing Off</b></p>
+<p>Overall, if you intend to only make Windows programs, there's no reason to not use C. However if, like me, you want to make programs that run on multiple operating systems, you'll have to write completely different versions for POSIX compliant and non-POSIX compliant systems.</p>
+<hr>
+<p><b>Sources</b></p>
+<p>1. <a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a> Wikipedia, retrieved on August 15, 2021.</p>
+<p>2. <a href="https://en.wikipedia.org/wiki/C_POSIX_library">C POSIX library</a> Wikipedia, retrieved on August 16, 2021.</p>
+
+</div>
+
+    </div>
+  </body>
+  <footer>
+  <footer class="bg-light text-lg-start border-top align-items-center text-center" style="text-align:center;">
+    <div class="text-center p-3 align-items-center" style="font-size: 8px;">
+        Copyright &copy; 2021-<span id="footerDate"></span> Ian M. Skinner <a href="/contactus" class="text-reset fw-bold">Contact me.</a>
+    </div>
+</footer>
+
+  </footer>
+</html>

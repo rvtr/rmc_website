@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<link rel="stylesheet" type="text/css" href="./error.css">
+
+<script type="text/javascript" src="./error_id.js"></script>
+<script type="text/javascript" src="./se.js"></script>
+
+
+<title>E_02_u</title>
+
+<script>;
+window.name = "UpWindow";
+var gkong = new Kong;
+</script>
+
+<!--end_of_head-->
+
+</head>
+
+<body>
+
+<div id="errorTitle" class="tx16white">
+	<script>document.write( gkong.GetMessage( JMS_shop_title ) );</script>
+</div>
+
+
+<div class="standardPage">
+
+	<div class="tx12error">
+
+<script>;
+var c = "" + gkong.GetErrorCode();
+if (c.length == 5) { c = "0" + c };
+document.write( gkong.GetMessage( JMS_shop_error_code ).replace("{0}", c ) );
+</script>
+
+	</div>
+
+	<br>
+
+	<div class="tx12error">
+		<script>document.write( gkong.GetErrorMessage() );</script>
+	</div>
+
+
+</div>
+
+
+</body>
+</html>

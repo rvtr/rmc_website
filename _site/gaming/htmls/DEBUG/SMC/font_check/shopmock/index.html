@@ -67,6 +67,7 @@ body {
 }
 .navimgoverlay:hover {
   opacity: 1.0;
+  width: 6vw;
 }
 .navimg {
   text-align: center;
@@ -99,6 +100,35 @@ body {
     width: auto;
     height: auto;
 }
+.image3 {
+  position: relative;
+    border-color: #FFFFFF
+    width: auto;
+    height: auto;
+}
+.text {
+    position: absolute;
+    text-align: left;
+    border-color: #FFFFFF;
+    font-size: 30px;
+    font-size: 1.5vw;
+    padding-top: 2vw;
+    padding-left: 6vw;
+}
+.icon {
+    padding-top:2.2vw;
+    margin-left: -9.3vw;
+    z-index: 2;
+}
+.launch {
+    padding-top: 2.1vw;
+    padding-left: .7vw;
+    font-size: 30px;
+    font-size: 1.5vw;
+    z-index: 2;
+    position: relative;
+}
+
 .titleimgoverlay {
   margin: 0% 2% 0%;
   opacity: 0.0;
@@ -116,6 +146,7 @@ body {
   float: left;
   width: 16vw;
   height: auto;
+  margin-bottom: 10vw;
 }
 .titleedge {
   text-align: center;
@@ -139,6 +170,13 @@ body {
                 <li class="navimg">
                 <div class="container">
                 <div class="imageOne image"><img src="/assets/dsi/boxfull.png" class="navimg"></div>
+                <div class="imageTwo image"><img src="/assets/dsi/back.png" class="navicon"></div>
+                <div class="imageThree image"><a href="/"><img src="/assets/dsi/boxoverlay.png" class="navimgoverlay"></a></div>
+                </div>
+                </li>
+                <li class="navimg">
+                <div class="container">
+                <div class="imageOne image"><img src="/assets/dsi/boxfull.png" class="navimg"></div>
                 <div class="imageTwo image"><img src="/assets/dsi/home.png" class="navicon"></div>
                 <div class="imageThree image"><a href="/blog"><img src="/assets/dsi/boxoverlay.png" class="navimgoverlay"></a></div>
                 </div>
@@ -155,12 +193,6 @@ body {
                 <div class="imageOne image"><img src="/assets/dsi/boxfull.png" class="navimg"></div>
                 <div class="imageTwo image"><img src="/assets/dsi/devshop.png" class="navicon"></div>
                 <div class="imageThree image"><a href="/gaming/htmls/DEBUG/startup.html"><img src="/assets/dsi/boxoverlay.png" class="navimgoverlay"></a></div>
-                </div>
-                </li>
-                <li class="navimg">
-                <div class="container">
-                <div class="imageOne image"><img src="/assets/dsi/box.png" class="navimg"></div>
-                <div class="imageThree image"><img src="/assets/dsi/boxoverlay.png" class="navimgoverlay"></div>
                 </div>
                 </li>
                 <li class="navimg">
@@ -243,7 +275,7 @@ body {
     </div>
   </body>
   <footer>
-  <footer class="bg-light text-lg-start border-top align-items-center text-center" style="text-align:center;">
+  <br><br><br><footer class="bg-light text-lg-start border-top align-items-center text-center" style="text-align:center;">
     <div class="text-center p-3 align-items-center" style="font-size: 8px;">
         Copyright &copy; 2021-<span id="footerDate"></span> Ian M. Skinner <a href="/contactus" class="text-reset fw-bold">Contact me.</a>
     </div>

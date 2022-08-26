@@ -5,13 +5,21 @@ layout: dsiware
 
 <div class="text-center pt-3">
     <h1>DSiWare Reviews coming soon (or maybe never, depends on how I feel)</h1>
-    <p>Reviews would be listed alphabetically if there were more than one to list.</p>
+    <p>Right now it's just butchered blog entries from ncx programming. I'll fix it sometime.</p>
 </div>
 <div class="container">
-    <hr>
     {% for post in site.posts %}
-        <p><a href="{{ post.url }}">{{ post.title }}</a></p>
-        <p>{{ post.date | date: "%Y-%m-%d" }} ({{ post.author }})</p>
-        <hr>
+                <ul class="titleimg">
+                <div class="container">
+                <div class="imageOne image2"><img src="/assets/dsi/prompt.png" class="titleimg"></div>
+                <a href="{{ post.url }}"><div class="imageTwo image2">
+                <img src="/assets/dsi/prompthover.png" class="titleimgoverlay" style="z-index:3;"></div></a>
+                <div class="text">{{ post.titleshort }}<br>{{ post.author }}</div>
+                <div class="imageThree image3 icon">
+ <img src="{{ post.icon }}" width="15%" height="15%" alt="">
+</div>
+                </div>
+                </ul>
     {% endfor %}
 </div>
+<div style="padding-bottom:62%;"></div>

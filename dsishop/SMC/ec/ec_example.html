@@ -1,0 +1,1633 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>ECommerce Object Example</title>
+	<link rel="stylesheet" type="text/css" href="../../common/css/default.css">
+    <script type="text/javascript" src="ec.js"></script>
+    <script type="text/javascript" src="ec_example.js"></script>
+
+    <style type="text/css">
+        body, p, td, div, span, a { font-size: 12px; color: #000000; font-family: tahoma,arial,verdana,sans-serif;background-color: #FFFFFF;}
+        option, input, textarea, select, .formText { font-family: tahoma,arial,verdana,sans-serif; }
+        <!-- /*.tdButton{width:100%} Doesn't work with opera*/  -->
+        .tdButton{}
+        .tdButton1{border-style: outset; text-align:center; background-color: #F5F5F5; color:#000000; font-weight:normal; font-size:100%}
+        .td1{text-align:center; background-color: #FFFFE0; color:#000000; font-weight:normal; font-size:100%}
+        th{background-color: #FFFFE0;}
+        .style1{color:#FA8072; font-weight:normal; font-size:200%}
+        .style2{color:#1E90FF; font-weight:normal; font-size:160%}
+        .style3{visibility:hidden}
+        .style4{color:#000000; font-weight:normal; font-size:100%; white-space:pre}
+        .errText{color:#FF0000; font-weight:bold; font-size:200%}
+        .successText{color:#FA8072; font-weight:bold; font-size:200%}
+    </style>
+
+    <script language="JavaScript">
+
+        var DEBUG = true;
+        var dots = "";
+        var useProgressBar; // set by initPage()
+        var titleId = null;
+        var defTitleId = "000300041234abcd";
+        var ec = new ECommerceInterface ();  // only create one per page
+        var testLog = new TestLog ();  // only create one per page
+        var disableButtonsDuringOp = true;
+        var opName;
+        var opDesc;
+        var queuedCmds = new Object;
+        var nextQueuedCmdIndex = 0;
+        // do register-unregister-register to clean server and local states
+        var queuedCmds = [ 'waitForConnectionUp()', 'generateKeyPair()', 'confirmKeyPair()', 'checkRegistration()', 'register()', 'unregister()', 'register()', 'checkDeviceStatus()', 'syncRegistration()', 'getPointsBalance()', 'purchaseTitle()', 'deleteOwnership()', 'syncTickets(1)', 'unregister()', 'exit()' ];
+     // var queuedCmds = [ 'checkRegistration()', 'register("vclinksuccess2","password")', 'checkRegistration()', 'register("","")','getPointsBalance()' ];
+     // var queuedCmds = [ 'checkRegistration()',  'checkDeviceStatus()', 'syncRegistration()', 'checkRegistration()', 'checkDeviceStatus()' ];
+     // var queuedCmds = [ 'checkRegistration()', 'syncRegistration()', 'checkRegistration()', 'checkDeviceStatus()' ];
+     // var queuedCmds = [ 'syncRegistration()', 'checkRegistration()', 'checkDeviceStatus()' ];
+     // var queuedCmds = [ 'register()' ];
+        
+        window.name = "DownWindow";
+
+        function MovePage( up_url, down_url)
+        {
+	    if ( up_url != "" || down_url != "" )
+	    {
+     	        if ( up_url != "" )
+		{
+		    window.open( up_url, "UpWindow" );
+		}
+		if ( down_url != "" )
+		{
+		    window.open( down_url, "DownWindow" );
+		}
+	    }
+        }
+
+        function waitForConnectionUp ()
+        {
+            setTimeout ('doNextQueuedCmd()', 10000);
+        }
+
+        function exit ()
+        {
+            testLog.exit ();
+        }
+
+        function setText1 (dynText1, optStyle1)
+        {
+            if (dynText1 != null) {
+                var d1 = document.getElementById("dynDiv1");
+                d1.innerHTML = dynText1;
+                if (optStyle1 == null) {
+                    d1.className = "style1";
+                } else  {
+                    d1.className = optStyle1;
+                }
+            }
+        }
+
+        function setText2 (dynText2, optStyle2)
+        {
+            if (dynText2 != null) {
+                var d2 = document.getElementById("dynDiv2");
+                d2.innerHTML = dynText2;
+                if (optStyle2 == null) {
+                    d2.className = "style2";
+                } else  {
+                    d2.className = optStyle2;
+                }
+            }
+        }
+
+        function setErr (errText, optStyle)
+        {
+            var d = document.getElementById("errDiv");
+            d.innerHTML = errText;
+            if (optStyle == null) {
+                d.className = "errText";
+            } else  {
+                d.className = optStyle;
+            }
+        }
+
+
+        function hexString (number)
+        {
+            return "0x" + number.toString(16);
+        }
+
+
+        function selectTitle(newTitleId)
+        {
+            var t;
+            var suggested;
+            var answer;
+            
+            if (newTitleId != null) {
+                answer = newTitleId;
+            }
+            else {
+                if (titleId == null || titleId == "") {
+                    suggested = defTitleId;
+                } else {
+                    suggested = titleId;
+                }
+
+                answer = prompt ("Enter title ID:", suggested);
+            }
+
+            if (answer != null && answer != "") {
+                titleId = answer;
+                t = "You selected title  " + titleId;
+            }
+            else {
+                t = "Title ID not changed";
+            }
+
+            setErr ("");
+            setText1 (t);
+        }
+
+
+        function disableButtons (isDisable)
+        {
+            if (isDisable && !disableButtonsDuringOp) {
+                return;
+            }
+
+            for (i = 1;  i < 40;  ++i) {
+            
+                if (i == 14)
+                    continue;
+                    
+                var b = document.getElementById("button" + i);
+
+                if (b != null) {
+                    b.disabled = isDisable;
+                }
+            }
+        }
+
+
+        function wasOpStarted (progress, msg)
+        {
+            if (progress.status < 0 && progress.status != EC_ERROR_NOT_DONE) {
+                showResult (progress, progress.operation, opDesc);
+                setErr (""); // op errors are displayed by setText1 (t1)
+                doNextQueuedCmd();
+                return false;
+            }
+            return true;
+        }
+
+        function setPoints(points)
+        {
+            document.getElementById("points").innerHTML = points;
+        }
+
+        function getPointsBalance()
+        {
+            opName = "Refresh Points Balance";
+            opDesc = "Refreshing Points available for purchases";
+            if ( wasOpStarted (ec.refreshCachedBalance (), opDesc)) {
+                showProgress(true, opName, opDesc, "onRefreshCachedBalanceDone");
+            }
+        }
+
+        function onRefreshCachedBalanceDone (progress)
+        {
+            showResult (progress, opName, opDesc);
+            if (progress.status >= 0) {
+                setPoints(ec.getCachedBalance());
+            }
+            finishOnOpDone ();
+        }
+
+        function checkDeviceStatus()
+        {
+            opName = "Check Device Status";
+            opDesc = "Checking ETicket Sync and getting balance";
+            if ( wasOpStarted (ec.checkDeviceStatus (), opDesc)) {
+                showProgress(true, opName, opDesc, "onCheckDeviceStatusDone");
+            }
+        }
+
+        function onCheckDeviceStatusDone (progress)
+        {
+            showResult (progress, opName, opDesc);
+            if (progress.status >= 0) {
+                setPoints(ec.getCachedBalance());
+            }
+            finishOnOpDone ();
+        }
+        
+        function showLimits (limits)
+        {
+            var len = limits.length;
+            var i;
+            var msg = "";
+            var code;
+            var limit;
+            
+            { // invalid index
+                var titleLimit = limits.get(len);
+                if (titleLimit) {
+                    code  = titleLimit.code;
+                    limit = titleLimit.limit;
+                } else {
+                    code = "Bad index";
+                    limit = code;
+                }
+                msg += "limits.get(" + i + ").code, limit " +
+                        code  + ", " + limit + "    ";
+            }
+            trace ("msg");
+            
+            for (i = 0; i < len;  ++i) {
+            
+                code  = limits.get(i).code;
+                limit = limits.get(i).limit;
+                
+                msg += "limits.get(" + i + ").code, limit " +
+                        code  + ", " + limit + "    ";
+            }
+
+            setText1 (msg);
+        }
+        
+        function setTitleLimits (limits)
+        {
+            // more  ways to set title limits
+             
+            var limit_1 = new ECTitleLimit("TR", 60*60*24*31);
+            
+            var limit_2 = new ECTitleLimit();
+            limit_2.code = "LR";
+            limit_2.limit = 15;
+            limit_2.limit = "15";
+            
+            limits.set(0,limit_1);
+            limits.set(1,limit_2);
+                
+        }
+        
+        function getTitleLimits2 ()
+        {
+            // example of constructing limts with limit constructor args
+            
+            var limit_1 = new ECTitleLimit("DR", 1153585981); // absolute time
+            var limit_1 = new ECTitleLimit("DR", "1153585981"); // absolute time
+            var limit_2 = new ECTitleLimit("LR", 25);         // 25 launches
+            var limit_2 = new ECTitleLimit("LR", "25");         // 25 launches
+            
+            var limits = new ECTitleLimits(limit_1, limit_2);
+            
+            return limits;
+        }
+        
+        function getTitleLimits()
+        {
+            // Examples of using ECTitleLimit and ECTitleLimits
+            
+            // /**********
+
+            var limits = new ECTitleLimits ();
+            limits.set(0, "TR", 60*60*24*31);  // 31 days
+            limits.set(1, "LR", 10);           // 10 launches           
+            limits.set("1", "LR", "10");       // 10 launches           
+            
+            limits.set(8, "TR", 60*60*24*31);   // invalid index
+            showLimits (limits);
+                
+            // or
+            
+            var limits2 = new ECTitleLimits ();
+            setTitleLimits (limits2);  // passes obj by reference
+            showLimits (limits2);
+            
+            // or
+            
+            var limits3 = getTitleLimits2()
+            showLimits (limits3);
+            
+            // or
+            
+            // ***********/
+            
+            var no_limits = new ECTitleLimits ();  // default is PR
+           
+            return no_limits;
+        }
+
+        function purchaseTitle()
+        {
+            opName  = "Purchase Title";
+            opDesc  = "Purchasing Title  " + titleId;
+
+            if (titleId == null) {
+                setErr ( "ERROR: purchaseTitle:  No selected title");
+                finishOnOpDone ();
+            }
+            else {
+                var downloadContent = true;
+                // purchase voting channel
+                //var itemId = "101494";  // dev4
+                //var itemId = "111439";  // lab3
+                //var itemId = "112369";  // lab4
+                var itemId = "109792";  // lab7
+                var amount = "0";
+                var currency = "POINTS"
+                var price = new ECPrice (amount, currency);
+                var payment = new ECAccountPayment(); // buy with points
+                
+                var limits = getTitleLimits();
+                
+                var purchaseInfo = null;
+                var taxes       = null;
+                var discount    = null;
+                
+                var progress = ec.purchaseTitle (titleId, itemId,
+                                                 price, payment,
+                                                 limits,
+                                                 downloadContent, // optional
+                                                 taxes,           // optional
+                                                 purchaseInfo,    // optional
+                                                 discount);       // optional
+                if ( wasOpStarted (progress, opDesc)) {
+                    showProgress(true, opName, opDesc, "onOpDone");
+                }
+            }
+        }
+        
+        function purchaseGiftTitle()
+        {
+            if (titleId == null) {
+                setErr ( "ERROR: purchaseGiftTitle:  No selected title");
+            }
+            else {
+                // purchase title as gift
+                //var itemId = "101494";  // dev4
+                //var itemId = "111439";  // lab3
+                //var itemId = "112369";  // lab4
+                var itemId = "109792";  // lab7
+                var amount = "0";
+                var currency = "POINTS"
+                var price = new ECPrice (amount, currency);
+                var payment = new ECAccountPayment(); // buy with points
+                
+                var limits = getTitleLimits();
+                
+                var purchaseInfo = null;
+                var taxes = null;
+                var discount = null;
+                
+                var identifier = "84064850";
+                var identifierKind = "DeviceCode";
+                var notes = "Hello Server"
+                
+                opName  = "Purchase Gift Title";
+                opDesc  = "Purchasing Gift Title  " + titleId;
+                var progress = ec.purchaseGiftTitle (
+                                        titleId,
+                                        itemId,
+                                        price,
+                                        payment,
+                                        limits,
+                                        identifier,
+                                        identifierKind,
+                                        notes,           // optional
+                                        taxes,           // optional
+                                        purchaseInfo,    // optional
+                                        discount);       // optional
+                                        
+                if ( wasOpStarted (progress, opDesc)) {
+                    showProgress(true, opName, opDesc, "onPurchaseGiftTitleDone");
+                }
+            }
+        }
+                
+        function onPurchaseGiftTitleDone (progress)
+        {
+            showResult (progress, opName, opDesc);
+            if (progress.status >= 0) {
+                setPoints(ec.getCachedBalance());
+                var transactions = ec.getTransactionInfos();
+                if (typeof(transactions) != "object") {
+                    setErr ( "ERROR: getTransactionInfos returned " + transactions);
+                }
+                else {
+                    trace ("purchaseGiftTitle returned " + transactions.length + " transactions");
+                    var n;
+                    for (n = 0;  n < transactions.length; ++n) {
+                        var transaction = transactions.get(n);
+                        trace ("purchaseGiftTitle transaction(" + n + ")" +
+                                "  id: " + transaction.id +
+                                "  type: " + transaction.type +
+                                "  date: " + transaction.date);
+                    }
+                }
+            }
+            trace ("After purchaseGiftTitle with status " + progress.status);
+            finishOnOpDone ();
+        }
+
+        function acceptGiftTitle ()
+        {
+            if (titleId == null) {
+                setErr ( "ERROR: acceptGiftTitle:  No selected title");
+            }
+            else {
+                var transactionId = "781884";  // 64 bit decimal number
+                var accept = true;
+                var reason = null;  // or reason code string
+                var downloadContent = true;
+                var progress = ec.acceptGiftTitle (titleId,
+                                                   transactionId,
+                                                   accept,
+                                                   reason,           // optional
+                                                   downloadContent); // optional
+                                        
+                if ( wasOpStarted (progress, opDesc)) {
+                    showProgress(true, opName, opDesc, "onOpDone");
+                }
+            }
+
+        }
+
+        function syncTickets (syncType)
+        {
+            opName = "Sync Tickets";
+            opDesc = "Synchronizing Tickets with server";
+            if ( wasOpStarted (ec.syncTickets (parseInt(syncType.toString(10))), opDesc)) {
+                showProgress(true, opName, opDesc, "onSyncTicketsDone");
+            }
+        }
+                
+        function onSyncTicketsDone (progress)
+        {
+            showResult (progress, opName, opDesc);
+            finishOnOpDone ();
+        }
+
+        // TODO: add credit card test for purchasePoints
+        function purchasePoints()
+        {
+            //var pointsToBuy = 2000;  // dev4
+            //var itemId = 100041;  // dev4
+            //price = new ECPrice ("2000", "POINTS");  // dev4
+            var pointsToBuy = 5000;  // lab3, lab4
+            var itemId = 100038;  // lab3, lab4
+            price = new ECPrice ("5000", "POINTS");  // lab3, lab4
+            var purchaseInfo = null;
+            var taxes       = null;
+            var discount    = null;
+            var payment;
+
+            // ECCreditCardPayment, ECECardPayment, and ECAccountPayment objects
+            // have a paymentMethod property initialized in the object constructor.
+            
+            if (0) {
+                payment = new ECAccountPayment ();
+            }
+            else if (1) {
+                eCard = new ECECardPayment ()
+                eCard.number = "00000000110284250069663485";
+                payment = eCard;
+            }
+
+            // Total account points balance will be returned in ec.pointsBalance
+
+            opName = "Purchase Points";
+            opDesc = "Purchasing Points";
+            var progress = ec.purchasePoints (pointsToBuy,
+                                              itemId,
+                                              price,
+                                              payment,
+                                              taxes,        // optional,
+                                              purchaseInfo, // optional
+                                              discount);    // optional
+            if ( wasOpStarted (progress, opDesc)) {
+                progress.descripton = pointsToBuy;
+                showProgress(true, opName, opDesc, "onBuyPointsDone");
+            }
+        }
+
+        function onBuyPointsDone (progress)
+        {
+            if (progress.status >= 0) {
+                setPoints(ec.getCachedBalance());
+                opDesc += "  Purchased points: " + progress.description;
+            }
+            trace ("After purchase points, purchaseInfo is " + ec.getPurchaseInfo());
+            showResult (progress, opName, opDesc);
+            finishOnOpDone ();
+        }
+
+        function download()
+        {
+            if (titleId == null) {
+                setErr ( "ERROR: download:  No selected title");
+            }
+            else {
+                opName = "Download";
+                opDesc = "Downloading  "  + titleId;
+                if ( wasOpStarted (ec.downloadTitle (titleId), opDesc)) {
+                    showProgress(true, opName, opDesc, "onOpDone");
+                }
+            }
+        }
+
+        function getUpdatedApps()
+        {
+            opName = "Get updated application title info";
+            opDesc = "Geting updated application title info";
+            if ( wasOpStarted (ec.getUpdatedApps (), opDesc)) {
+                showProgress(true, opName, opDesc, "onOpDone");
+            }
+        }
+
+        function generateKeyPair()
+        {
+            opName = "Generate key pair";
+            opDesc = "Generating key pair";
+            if ( wasOpStarted (ec.generateKeyPair (), opDesc)) {
+                showProgress(true, opName, opDesc, "onGenerateKeyPairDone");
+            }
+        }
+
+        function onGenerateKeyPairDone (progress)
+        {
+            showResult (progress, opName, opDesc);
+            finishOnOpDone ();
+        }
+        
+        function confirmKeyPair()
+        {
+            opName = "Confirm key pair";
+            opDesc = "Confirming key pair";
+            if ( wasOpStarted (ec.confirmKeyPair (), opDesc)) {
+                showProgress(true, opName, opDesc, "onConfirmKeyPairDone");
+            }
+        }
+
+        function onConfirmKeyPairDone (progress)
+        {
+            showResult (progress, opName, opDesc);
+            finishOnOpDone ();
+        }
+        
+        function transfer()
+        {
+            sendChallengeReq("onSendChallengeReqSuccessForTransfer");
+        }
+        
+        function onSendChallengeReqSuccessForTransfer()
+        {
+            var challenge = ec.getChallengeResp();
+            opName = "Transfer";
+            opDesc = "Transfering account and tickets from other device";
+            if ( wasOpStarted (ec.transfer (challenge), opDesc)) {
+                showProgress(true, opName, opDesc, "onTransferDone");
+            }
+        }
+
+        function onTransferDone (progress)
+        {
+            showResult (progress, opName, opDesc);
+            if (progress.status >= 0) {
+                showRegistrationStatus ();
+            }
+            finishOnOpDone ();
+        }
+
+        function checkRegistration()
+        {
+            opName = "Check Registration";
+            opDesc = "Checking Registration";
+            if ( wasOpStarted (ec.checkRegistration (), opDesc)) {
+                showProgress(true, opName, opDesc, "onCheckRegistrationDone");
+            }
+        }
+
+        function onCheckRegistrationDone (progress)
+        {
+            showResult (progress, opName, opDesc);
+            if (progress.status >= 0) {
+                showRegistrationStatus ();
+            }
+            finishOnOpDone ();
+
+        }
+               
+        function sendChallengeReq(onSuccess)
+        {
+            onSendChallengeReqSuccess = onSuccess;
+            opName = "SendChallengeReq";
+            opDesc = "Requesting Challenge";
+            if (wasOpStarted (ec.sendChallengeReq (), opDesc)) {
+                 showProgress(true, opName, opDesc, "onSendChallengeRegOpDone");
+            }
+        }
+        
+        function onSendChallengeRegOpDone (progress)
+        {
+            if (progress.status != EC_ERROR_OK) {
+                showResult (progress, opName, opDesc);
+                finishOnOpDone ();
+            }          
+            else {
+                eval (onSendChallengeReqSuccess + "()");
+            }
+        }
+        
+        var reqLoyaltyId;
+        var reqLoyaltPw;
+        
+        function register(loyaltyId, loyaltyPw)
+        {
+            reqLoyaltyId = loyaltyId;
+            reqLoyaltPw = loyaltyPw;
+            sendChallengeReq("onSendChallengeReqSuccessForRegister");
+        }
+
+        function onSendChallengeReqSuccessForRegister()
+        {
+            var challenge = ec.getChallengeResp();
+            var info = ec.getDeviceInfo ();
+            
+            opName = "Register";
+            opDesc = "Registering";
+
+            if (typeof(info) != "object") {
+                setErr ( "ERROR: getDeviceInfo returned " + info);
+                finishOnOpDone ();
+            }
+            else {
+                var extAccountId = null;
+                var extAccountPw = null;
+                if (reqLoyaltyId != null) {
+                    extAccountId = reqLoyaltyId;
+                    extAccountPw = reqLoyaltPw;
+                }
+                if ( wasOpStarted (ec.register (challenge, extAccountId, extAccountPw), opDesc)) {
+                    showProgress(true, opName, opDesc, "onRegisterDone");
+                }
+           }
+        }
+
+        function onRegisterDone (progress)
+        {
+            showResult (progress, opName, opDesc);
+            if (progress.status >= 0) {
+                showRegistrationStatus ();
+            }
+            finishOnOpDone ();
+        }
+        
+        function showRegistrationStatus ()
+        {        
+            var info = ec.getDeviceInfo ();
+            document.getElementById("regStat").innerHTML = info.registrationStatus;
+            if (info.accountId == EC_INVALID_ACCOUNT_ID) {
+                document.getElementById("accountId").innerHTML = "Not Registered";
+            } else {
+                document.getElementById("accountId").innerHTML = info.accountId;
+            }
+       }
+        
+        function unregister()
+        {
+            sendChallengeReq("onSendChallengeReqSuccessForUnregister");
+        }
+        
+        function onSendChallengeReqSuccessForUnregister()
+        {
+            var challenge = ec.getChallengeResp();
+            
+            opName = "Unregister";
+            opDesc = "Unregistering";
+            if ( wasOpStarted (ec.unregister (challenge), opDesc)) {
+                showProgress(true, opName, opDesc, "onUnregisterDone");
+            }
+        }
+
+        function onUnregisterDone (progress)
+        {
+            showResult (progress, opName, opDesc);
+            if (progress.status >= 0) {
+                showRegistrationStatus ();
+            }
+            finishOnOpDone ();
+        }
+        
+        
+        function syncRegistration()
+        {
+             sendChallengeReq("onSendChallengeReqSuccessForSyncRegistration");
+        }
+        
+        function onSendChallengeReqSuccessForSyncRegistration()
+        {
+            var challenge = ec.getChallengeResp();
+            
+            opName = "SyncRegistration";
+            opDesc = "Synchronizing Registration";
+            if ( wasOpStarted (ec.syncRegistration (challenge), opDesc)) {
+                showProgress(true, opName, opDesc, "onSyncRegistrationDone");
+            }
+        }
+
+        function onSyncRegistrationDone (progress)
+        {
+            showResult (progress, opName, opDesc);
+            if (progress.status >= 0) {
+                showRegistrationStatus ();
+            }
+            finishOnOpDone ();
+        }
+        
+        function showProgress(firstTime, operation, description, onDone)
+        {
+            var msg;
+            var text1;
+            var text2;
+            var s1;
+            var done = true;
+            var isFailed = true;
+            var onDoneText;
+
+            var progress = ec.getProgress();
+            var status = progress.status;
+            trace("progress status " + status);
+            
+            if (status == EC_ERROR_NOT_BUSY) {
+                return;
+            }
+
+            if (useProgressBar) {
+            
+                var timeInterval = 1000;
+                var message1;
+                var message2 = null;
+                if (progress.totalSize) {
+                    message1 = operation + " progress: ";
+                } else {
+                    progresCount = 0;
+                    message1 = operation + ". Please Wait.";
+                }
+                // use default color,height,width,style
+                var color = null;
+                var height = null;
+                var width = null;
+                var style = null;
+                setText1 (description, "style2");
+                setErr ("");
+                disableButtons (true);
+                showProgressBar("ec", "defTbpFunc", onDone,
+                                 "dynDiv2", timeInterval,
+                                 message1,message2,
+                                 color,height,width,style);
+           }
+            else {
+                if (status == EC_ERROR_NOT_DONE) {
+                    // showDebug (progress.phase);
+                    msg = operation;
+                    if (progress.totalSize) {
+                        // not expected except when downloading content
+                        var perCent = Math.round((100 * progress.downloadedSize)
+                                                   / progress.totalSize);
+                        msg += ":  downloadedSize " + progress.downloadedSize +
+                               "   totalSize "   + progress.totalSize +
+                               "   " + perCent + "%";
+                    }
+                    else {
+                        if (firstTime || dots.length == 10) {
+                            dots = "";
+                        }
+                        dots += "**";
+                        msg += ": Please wait.  " + dots;
+                    }
+                    setText1 (msg);
+ 
+                    if (firstTime) {
+                        setText2 (description);
+                        setErr ("");
+                        disableButtons (true);
+                    }
+                    setTimeout ('showProgress(false,"' + operation + '","' + description
+                                            + '","' + onDone + '")', 1000);
+                }
+                else {
+                    eval (onDone+"(progress)");
+                }
+            }
+        }
+
+
+        function showResult (progress, operation, description)
+        {
+            var t1;
+            var t2;
+            var s1;
+            var rv = progress.status;
+            
+            if (rv == EC_ERROR_NOT_DONE) {
+                t1 = "Internal Error: showResult was called before operation finished";
+                s1 = "errText";
+            }
+            else if (rv == EC_ERROR_NOT_BUSY || rv == EC_ERROR_NOT_ACTIVE) {
+                t1 = "Internal Error: expected operation status " +
+                        "but ec.getProgress() returned: " + errString(rv);
+                s1 = "errText";
+            }
+            else if (rv < 0) {
+                t1 = description + ": Failed: " + errString(rv);
+                s1 = "errText";
+            }
+            else {
+                t1 = description + ": Success";
+                s1 = "successText";
+            }
+
+            trace (t1);
+            setText1 (t1, s1);
+            if (progress.errInfo == null)
+                t2 = "Select another Operation";
+            else
+                t2 = progress.errInfo;
+            trace (t2);
+            setText2 (t2);
+        }
+
+
+        function defTbpFunc (barPerCent, progress)
+        {
+            // Returns progess text and bar %.  see updateProgress().
+            // The 'tbp' stands for text and bar per cent.
+            // default meaning of progess.value is  0 to 99 per cent
+            // but could be used diferently for different operations.
+            // The tbpFunction is not normally called by updateProgess
+            // when progress.value is 100, because at that point the
+            // operation is complete and onDone is called instead.
+
+            if (progress.totalSize) {
+                // not expected except when downloading content
+                barPerCent.value = Math.round((100 * progress.downloadedSize) / progress.totalSize);
+                return barPerCent.value + "%";
+            }
+            else {
+                if (++progresCount > 4) {
+                    barPerCent.value = 10;
+                    count = 1;
+                } else {
+                    barPerCent.value = 20 * progresCount;
+                }
+                return null;
+            }
+        }
+
+        // Default onOpDone
+        //
+        function  onOpDone (progress)
+        {
+            showResult (progress, opName, opDesc);
+            finishOnOpDone ();
+        }
+
+        function finishOnOpDone ()
+        {
+            var progress = ec.getProgress ();
+
+            if (progress.status == EC_ERROR_OK) {
+                testLog.pass (opName + " - " + opDesc);
+            } else {
+                testLog.fail (opName + " - " + opDesc + ", status=" + progress.status);
+            }
+
+            disableButtons (false);
+            setErr (""); // op errors are displayed by setText1 (t1)
+            doNextQueuedCmd();
+        }
+
+        function getDeviceInfo()
+        {
+            setText1 ("");
+            setText2 ("Select another Operation");
+            setErr ("");
+            var r = ec.getDeviceInfo ();
+            if (typeof(r) != "object") {
+                setErr ( "ERROR: getDeviceInfo returned " + r);
+            }
+            else {
+                setText1 ("<table border=1>" +
+                    "<tr><td  class='td1'>isKeyPairConfirmed<td  class='td1'><td  class='td1'>" + r.isKeyPairConfirmed        + "</td></tr>" +
+                    "<tr><td  class='td1'>deviceId     <td  class='td1'><td  class='td1'>" + r.deviceId        + "</td></tr>" +
+                    "<tr><td  class='td1'>titleId      <td  class='td1'><td  class='td1'>" + r.titleId        + "</td></tr>" +
+                    "<tr><td  class='td1'>serial       <td  class='td1'><td  class='td1'>" + r.serial          + "</td></tr>" +
+                    "<tr><td  class='td1'>orig serial  <td  class='td1'><td  class='td1'>" + r.originalSerial  + "</td></tr>" +
+                    "<tr><td  class='td1'>accountId    <td  class='td1'><td  class='td1'>" + r.accountId            + "</td></tr>" +
+                    "<tr><td  class='td1'>reg status   <td  class='td1'><td  class='td1'>" + r.registrationStatus  + "</td></tr>" +
+                    "<tr><td  class='td1'>country      <td  class='td1'><td  class='td1'>" + r.country         + "</td></tr>" +
+                    "<tr><td  class='td1'>actCountry   <td  class='td1'><td  class='td1'>" + r.accountCountry  + "</td></tr>" +
+                    "<tr><td  class='td1'>extAccountId <td  class='td1'><td  class='td1'>" + r.extAccountId    + "</td></tr>" +
+                    "<tr><td  class='td1'>region       <td  class='td1'><td  class='td1'>" + r.region      + "</td></tr>" +
+                    "<tr><td  class='td1'>language     <td  class='td1'><td  class='td1'>" + r.language    + "</td></tr>" +
+                    "<tr><td  class='td1'>block size   <td  class='td1'><td  class='td1'>" + r.blockSize   + "</td></tr>" +
+                    "<tr><td  class='td1'>used blocks  <td  class='td1'><td  class='td1'>" + r.usedBlocks  + "</td></tr>" +
+                    "<tr><td  class='td1'>total blocks <td  class='td1'><td  class='td1'>" + r.totalBlocks + "</td></tr>" +
+                    "<tr><td  class='td1'>netRestrict  <td  class='td1'><td  class='td1'>" + r.netContentRestrictions   + "</td></tr>" +
+                    "<tr><td  class='td1'>user age     <td  class='td1'><td  class='td1'>" + r.userAge                  + "</td></tr>" +
+                    "<tr><td  class='td1'>pctrl flags  <td  class='td1'><td  class='td1'>" + r.parentalControlFlags     + "</td></tr>" +
+                    "<tr><td  class='td1'>pctrl ogn    <td  class='td1'><td  class='td1'>" + r.parentalControlOgn       + "</td></tr>" +
+                    "<tr><td  class='td1'>need sync    <td  class='td1'><td  class='td1'>" + r.isNeedTicketSync         + "</td></tr>" +
+                    "<tr><td  class='td1'>import all   <td  class='td1'><td  class='td1'>" + r.isNeedTicketSyncImportAll+ "</td></tr>" +
+                    "<tr><td  class='td1'>last sync    <td  class='td1'><td  class='td1'>" + r.lastTicketSyncTime       + "</td></tr>" +
+                    "<tr><td  class='td1'>pcontrol ena <td  class='td1'><td  class='td1'>" + r.isParentalControlEnabled + "</td></tr>" +
+                    "<tr><td  class='td1'>free ch app  <td  class='td1'><td  class='td1'>" + r.freeChannelAppCount      + "</td></tr>" +
+                    "<tr><td  class='td1'>used inodes  <td  class='td1'><td  class='td1'>" + r.usedUserInodes           + "</td></tr>" +
+                    "<tr><td  class='td1'>max  inodes  <td  class='td1'><td  class='td1'>" + r.maxUserInodes            + "</td></tr>" +
+                    "<tr><td  class='td1'>deviceCode   <td  class='td1'><td  class='td1'>" + r.deviceCode               + "</td></tr>" +
+                    "<tr><td  class='td1'>actDeviceCode<td  class='td1'><td  class='td1'>" + r.accountDeviceCode        + "</td></tr>" +
+                    "<tr><td  class='td1'>wireless MAC <td  class='td1'><td  class='td1'>" + r.wirelessMACAddr          + "</td></tr>" +
+                    "<tr><td  class='td1'>blue2th  MAC <td  class='td1'><td  class='td1'>" + r.bluetoothMACAddr         + "</td></tr>" +                   
+                "</table>");
+            }
+        }
+
+        function setCountry(country)
+        {
+            var country;
+
+            var r = ec.setCountry (country);
+            if (r != EC_ERROR_OK) {
+                setErr ( "ERROR: setCountry returned  " + r);
+            }
+            else {
+                setText1 ("Set country was succesfull");
+                setText2 ("Select another Operation");
+                setErr ("");
+            }
+        }
+
+        function checkParentalControlPassword()
+        {
+            var t = "";
+            var err = "";
+            var passwd = "1111";
+
+            var r = ec.checkParentalControlPassword (passwd);
+            if (typeof(r) != "boolean") {
+                if (r == EC_ERROR_PC_DISABLED) {
+                    t = "Parental control is not enabled";
+                } else {
+                    err ="Could not check Parental Control Password";
+                }
+            }
+            else if (r)
+                t = "Password was correct";
+            else
+                t = "Password was wrong";
+            setText1 (t);
+            setText2 ("Select another Operation");
+            setErr (err);
+        }
+
+        function deleteOwnership()
+        {
+            var info;
+            
+            opName = "Delete Ticket";
+            opDesc = "Deleting Ticket";
+
+            var tickets = ec.getTicketInfos (titleId);
+            if (typeof(tickets) != "object") {
+                if (tickets == EC_ERROR_NOT_OWNED) {
+                    info = "Title is not owned";
+                } else {
+                    info = "getTicketInfos returned " + t;
+                }
+                setText1 (info);
+                setText2 ("Select another Operation");
+                setErr ("");
+                finishOnOpDone ();
+            }
+            else {
+                if (tickets.length > 1) {
+                    setText2 ("title has more than one ticket, using 1st one");
+                }
+                var t = tickets.get(0);
+                setText1 ("Deleting server ticket, local ticket, title content, data, and tmd for titleId " + t.titleId + " ticketId " + t.ticketId);
+                opDesc  = "Deleting server ticket, local ticket, title content, data, and tmd for ticket  " + t.ticketId + "  title  "+ t.titleId;
+                var progress = ec.deleteOwnership (t.titleId, t.ticketId);
+                if ( wasOpStarted (progress, opDesc)) {
+                    showProgress(true, opName, opDesc, "onOpDone");
+                }
+            }
+        }
+        
+        function deleteLocalTicket()
+        {
+            // This function is only used for testing ticket sync
+            var r;
+            var info;
+            
+            var tickets = ec.getTicketInfos (titleId);
+            setText2 ("Select another Operation");
+            setErr ("");
+            if (typeof(tickets) != "object") {
+                if (tickets == EC_ERROR_NOT_OWNED) {
+                    info = "Title is not owned";
+                } else {
+                    info = "getTicketInfos returned " + t;
+                }
+                setText1 (info);
+            }
+            else {
+                if (tickets.length > 1) {
+                    setText2 ("title has more than one ticket, using 1st one");
+                }
+                var t = tickets.get(0);
+                setText1 ("Deleting content, data, tmd, and local ticket for titleId " + t.titleId + " ticketId " + t.ticketId);
+            
+                //r = ec.deleteTitle (t.titleId);
+                r = EC_ERROR_OK;
+                
+                if (r != EC_ERROR_OK) {
+                    setErr ("ec.deleteTitle returned " + errString(r));
+                }
+                else {
+                    r = ec.deleteLocalTicket (t.titleId, t.ticketId);
+                    
+                    if (r == EC_ERROR_OK) {
+                        setText1 ("Deleted content, data, tmd, and local ticket for titleId " + t.titleId + " ticketId " + t.ticketId);
+                    } else {
+                        setErr ("ec.deleteLocalTicket returned " + errString(r));
+                    }
+                }
+            }
+        }
+        
+        function deleteTitle()
+        {
+            setErr ("");
+            setText1 ("Deleting content, data, and tmd for titleId " + titleId);
+        
+            var r = ec.deleteTitle (titleId);
+            
+            if (r == EC_ERROR_OK) {
+                setText1 ("Deleted content, data, tmd, and ticket for titleId " + titleId);
+            } else {
+                setErr ("ec.deleteTitle returned " + errString(r));
+            }
+        }
+        
+        function deleteTitleContent()
+        {
+            setErr ("");
+            setText1 ("Deleting content for titleId " + titleId);
+        
+            var r = ec.deleteTitleContent (titleId);
+    
+            if (r == EC_ERROR_OK) {
+                setText1 ("Deleted content for titleId " + titleId);
+            } else {
+                setErr ("ec.deleteTitleContent returned " + errString(r));
+            }
+        }
+        
+        function getLicenseType (ticket)
+        {
+            var ES_LICENSE_MASK         = 0x0f;
+            var ES_LICENSE_PERMANENT    = 0x00;
+            var ES_LICENSE_DEMO         = 0x01;
+            var ES_LICENSE_TRIAL        = 0x02;
+            var ES_LICENSE_RENTAL       = 0x03;
+            var ES_LICENSE_SUBSCRIPTION = 0x04;
+            var ES_LICENSE_GIFT_MASK    = 0x80;
+            var licenseTypeToString = new Object;
+            
+            licenseTypeToString[0] = "permanent";
+            licenseTypeToString[1] = "demo";
+            licenseTypeToString[2] = "trial";
+            licenseTypeToString[3] = "rental";
+            licenseTypeToString[4] = "subscription";
+            
+            return licenseTypeToString[ticket.licenseType & ES_LICENSE_MASK];
+        }
+        
+        function traceLicenseType (ticket)
+        {
+            var ES_LICENSE_MASK         = 0x0f;
+            var ES_LICENSE_PERMANENT    = 0x00;
+            var ES_LICENSE_DEMO         = 0x01;
+            var ES_LICENSE_TRIAL        = 0x02;
+            var ES_LICENSE_RENTAL       = 0x03;
+            var ES_LICENSE_SUBSCRIPTION = 0x04;
+            var ES_LICENSE_GIFT_MASK    = 0x80;
+            var licenseTypeToString = new Object;
+            
+            licenseTypeToString[0] = "permanent";
+            licenseTypeToString[1] = "demo";
+            licenseTypeToString[2] = "trial";
+            licenseTypeToString[3] = "rental";
+            licenseTypeToString[4] = "subscription";
+            
+            var licenseType = "Title " + ticket.titleId + " Ticket " + ticket.ticketId;
+            licenseType += "licenseType " + getLicenseType (ticket) + " and is ";
+            
+            if (!(ticket.licenseType & ES_LICENSE_GIFT_MASK)) {
+                licenseType += "not ";
+            }
+              
+            licenseType += "a gift";
+            trace (licenseType);
+            return licenseType;
+        }        
+        
+        function getTitleInfo()
+        {
+            var t2 = "Select another Operation";
+            
+            if (titleId == null) {
+                setErr ( "ERROR: getTitleInfo:  No selected title");
+            }
+            else {
+                // ec.getTitleInfo returns ECTitleInfo object or ECError number
+                var t = ec.getTitleInfo (titleId);
+                var t1;
+                if (typeof(t) != "object") {
+                    if (t == EC_ERROR_NOT_OWNED)
+                        t1 = "Title is not owned";
+                    else
+                        t1 = "getTitleInfo returned " + t;
+                }
+                else {
+                    t1 = "<table border=1>" +
+                         "<tr>"+
+                             "<th>titleId</th>" +
+                             "<th>loaded </th>" +
+                             "<th>version</th>" +
+                             "<th>type</th>" +
+                             "<th>limits</th>" +
+                         "</tr>" +
+                         "<tr>" +
+                             "<td  class='td1'>" + t.titleId       + "</td>" +
+                             "<td  class='td1'>" + t.isOnDevice    + "</td>";
+
+                    if (t.isTmdPresent) {
+                        t1 += "<td  class='td1'>" + t.version       + "</td>";
+                    } else {
+                        t1 += "<td  class='td1'>unknown</td>" +
+                              "<td  class='td1'>unknown</td>";
+                    }
+
+                    var tickets = ec.getTicketInfos (titleId);
+                    if (typeof(tickets) != "object") {
+                        err = "getTicketInfos returned ";
+                        if (typeof(tickets) != "number") {
+                            err += typeof(tickets);
+                        } else  {
+                            err += errString(tickets);
+                        }
+                    }
+                    if (tickets.length > 1) {
+                        t2 = "Title has more than one Ticket"
+                    }                     
+                    var n;
+                    var hasLimits = false;
+                    for (n = 0;  n < tickets.length; ++n) {
+                        var ticket = tickets.get(n);
+                        t1 += "<td  class='td1'>" + getLicenseType(ticket)  + "</td>";
+                        trace ("ticket view version " + ticket.version);
+                        trace ("ticket version " + ticket.ticketVersion);
+                        trace ("ticket ticketId " + hexString(ticket.ticketId));
+                        trace ("ticket deviceId " + hexString(ticket.deviceId));
+                        trace ("ticket titleId " + hexString(ticket.titleId));
+                        traceLicenseType(ticket);
+                        trace ("cidxMask[0] " + ticket.cidxMask);
+                        trace ("reserved[0] " + ticket.reserved);
+                        if (ticket.nLimits) {
+                            if (!hasLimits) {
+                                hasLimits = true;
+                                t1 += "<th><table>" +
+                                        "<tr>"+
+                                            "<th>limit code</th>" +
+                                            "<th>limit</th>" +
+                                            "<th>consumed</th>" +
+                                        "</tr>"
+                                } else {
+                                    t1 += "<tr>" + "<th></th><th>Ticket " + (n+1) + "</th></tr>";
+                                }
+                                var i;
+                                var limits = ticket.limits;
+                                for (i = 0;  i < limits.length;  ++i) {
+                                    var limit = ticket.limits.get(i);
+                                    var consumed = limit.hasConsumption ? limit.consumed : "unknown";
+                                    var consumed = limit.consumed; if (consumed == null) consumed = "unknown";
+                                    t1 += "<tr>" +
+                                                "<td  class='td1'>" + limit.code      + "</td>" +
+                                                "<td  class='td1'>" + limit.limit     + "</td>" +
+                                                "<td  class='td1'>" + limit.consumed  + "</td>" +
+                                            "</tr>";
+                                }
+                            }
+                    }
+                
+                    if (hasLimits) {
+                        t1 += "</th></table>";
+                    } else {
+                        t1 += "<td  class='td1'>none</td>";
+                    }
+
+                    t1 += "</tr></table>";
+                }
+                setText1 (t1);
+                setText2 (t2);
+                setErr ("");
+            }
+        }
+        
+        function getTitleInfos()
+        {
+            var t;
+            var i, k;
+            var err = null;
+            
+            var t1 = "<table border=1>" +
+                        "<tr>"+
+                           "<th>titleId</th>" +
+                           "<th>loaded </th>" +
+                           "<th>version</th>" +
+                           "<th>type</th>" +
+                           "<th>limits</th>" +
+                        "</tr>"
+                        
+            // ec.getTitleInfos returns an ECTitleInfos object or an ECError
+            // If there are no owned titles, a list with 0 elements is returned
+            
+            setText1("");
+            setText2("");
+            setErr("");
+                        
+            var titles = ec.getTitleInfos ();
+            
+            if (typeof(titles) != "object") {
+                err = "getTitleInfos returned ";
+                if (typeof(titles) != "number") {
+                    err += typeof(titles);
+                } else  {
+                    err += errString(titles);
+                }
+                titles = new ECTitleInfos();  // so it is valid 0 length list
+            }
+            else for (i = 0;  i < titles.length;  ++i) {
+                t = titles.get(i);
+                t1 +=
+                   "<tr><td  class='td1'>" + t.titleId + "</td>" +
+                       "<td  class='td1'>" + t.isOnDevice        + "</td>";
+                if (t.isTmdPresent) {
+                    t1 += "<td  class='td1'>" + t.version       + "</td>";
+                } else {
+                    t1 += "<td  class='td1'>unknown</td>" +
+                          "<td  class='td1'>unknown</td>";
+                }
+                       
+                var tickets = ec.getTicketInfos (t.titleId);
+                if (typeof(tickets) != "object") {
+                    err = "getTicketInfos returned ";
+                    if (typeof(tickets) != "number") {
+                        err += typeof(tickets);
+                    } else  {
+                        err += errString(tickets);
+                    }
+                }
+                var n;
+                var hasLimits = false;
+                for (n = 0;  n < tickets.length; ++n) {
+                    var ticket = tickets.get(n);
+                    t1 += "<td  class='td1'>" + getLicenseType(ticket)  + "</td>";
+                    traceLicenseType(ticket);
+                    if (ticket.nLimits) {
+                        if (!hasLimits) {
+                            hasLimits = true;
+                            t1 += "<th><table>" +
+                                    "<tr>"+
+                                        "<th>limit code</th>" +
+                                        "<th>limit</th>" +
+                                        "<th>consumed</th>" +
+                                    "</tr>";
+                        } else {
+                            t1 += "<tr>" + "<th></th><th>Ticket " + (n+1) + "</th></tr>";
+                        }
+                        var limits = ticket.limits;
+                        for (k = 0;  k < limits.length; ++k) {
+                            var limit = ticket.limits.get(k);
+                            t1 += "<tr>" +
+                                        "<td  class='td1'>" + limit.code      + "</td>" +
+                                        "<td  class='td1'>" + limit.limit     + "</td>" +
+                                        "<td  class='td1'>" + limit.consumed  + "</td>" +
+                                    "</tr>";
+                        }
+                    }
+                }
+                
+                if (hasLimits) {
+                     t1 += "</th></table>";
+                } else {
+                     t1 += "<td  class='td1'>none</td>";
+                }
+
+                t1 += "</tr>";
+            }
+            t1 += "</table>";
+            
+            if (titles.length == 0) {
+                t1 = "<br><br>No owned titles were found."
+            }
+            setText1 (t1)
+            setText2 ("Select another Operation");
+            
+            if (err != null) {
+                setErr (err);
+            }
+        }
+
+        function togProgressBar()
+        {
+            useProgressBar = !useProgressBar;
+            document.getElementById("useProgressBar").innerHTML = useProgressBar;
+            
+        }
+
+        function setDeviceInfo()
+        {
+            setCountry("US");
+            ec.setLanguage("en");
+            ec.setRegion("USA");
+            ec.setAge("10");
+        }
+        
+        function setUrls()
+        {
+            var ecsUrl = null;
+            var iasUrl = null;
+            var casUrl = null;
+            var ccsUrl = null;
+            var ucsUrl = null;
+ 
+            ecsUrl = "https://ecs.t.shop.nintendowifi.net/ecs/services/ECommerceSOAP";
+            iasUrl = "https://ias.t.shop.nintendowifi.net/ias/services/IdentityAuthenticationSOAP";
+            casUrl = "https://cas.t.shop.nintendowifi.net/cas/services/CatalogingSOAP";
+            ccsUrl = "http://ccs.t.shop.nintendowifi.net/ccs/download";
+            ucsUrl = "http://ccs.t.shop.nintendowifi.net/ccs/download";
+
+            ec.setWebSvcUrls (ecsUrl, iasUrl, casUrl);
+            ec.setContentUrls (ccsUrl, ucsUrl);
+            setText1 ("ecsUrl = " + ecsUrl + "<br>" +
+                      "iasUrl = " + iasUrl + "<br>" +
+                      "casUrl = " + casUrl + "<br>" +
+                      "ccsUrl = " + ccsUrl + "<br>" +
+                      "ucsUrl = " + ucsUrl)
+        }
+
+        function cancelOperation ()
+        {
+            // cancelOperation() is a synchronous operation, but the operation is not.
+            // The operation may not terminate immediately.  cancelOperation() returns
+            //      EC_ERROR_OK if a cancel request has been made.
+            //      EC_ERROR_NOT_BUSY if there is no active operation.
+            
+            if (ec.cancelOperation () == EC_ERROR_NOT_BUSY) {
+                setErr ("There is no active operation");
+            }
+            else {
+                var active = ec.getProgress();
+                setText1 ("Cancel was requested for operation \"" + active.operation + "\"");
+            }
+        }
+        
+        function getWeakToken ()
+        {
+            setErr ("");
+            setText1 ("");
+            
+            var weakToken = ec.getWeakToken ();
+            
+            if (weakToken == null) {
+                setErr ("getWeakToken returned null");
+            } else {
+                setText1 ("Your weak token is  \"" + weakToken + "\"");
+            }
+            setText2 ("Select another Operation");
+        }
+
+        function getVersion ()
+        {
+            setErr ("");
+            setText1 ("");
+            
+            var ecVersion = ec.getVersion ();
+            
+            if (ecVersion == null) {
+                setErr ("getVersion returned null");
+            } else {
+                setText1 ("EC library version is  \"" + ecVersion + "\"");
+            }
+            setText2 ("Select another Operation");
+        }
+
+        function setOptions ()
+        {
+            setErr ("");
+            setText1 ("");
+            var t1 = "";
+            var logLevel =  ECOPT_LOG_LEVEL;
+            var finer = EC_LOG_FINER;
+            
+            var result = ec.setOption (ECOPT_RE_DOWNLOAD_CONTENT, true);
+            
+            if (result < 0) {
+                var e = "setOption ECOPT_RE_DOWNLOAD_CONTENT returned " + result;
+                setErr (e);
+            } else {
+                t1 = "setOption ECOPT_RE_DOWNLOAD_CONTENT success";
+
+                result = ec.setOption (ECOPT_LOG_LEVEL, EC_LOG_FINER);
+                t1 += "<br>setOption ECOPT_LOG_LEVEL returned " + result;
+
+                result = ec.setOption (ECOPT_JS_TEST_MODE, EC_JS_TM_ON);
+                t1 += "<br>setOption ECOPT_JS_TEST_MODE returned " + result;
+            }
+            
+            setText1 (t1);
+            setText2 ("Select another Operation");
+        }
+
+        function testSessionValues()
+        {
+            var result;
+            
+            if ("getFakeMethod" in ec) {
+                result = "getFakeMethod is in ec<br>";
+            } else {
+                result = "getFakeMethod is not in ec<br>";
+            }
+
+            if ("getSessionValue" in ec) {
+                result += "getSessionValue is in ec<br>";
+            } else {
+                result += "getSessionValue is not in ec<br>";
+            }
+
+            var name1 = "MyTestVar";
+            var value1 = "(99 and 86)";
+            var name2 = "MyOtherVar";
+            var value2 = "Holy Smokes";
+            var name3 = "SomeoneElsesVar";
+            var value3 = "Conglomerate";
+            ec.setSessionValue (name1, value1);
+            ec.setSessionValue (name2, value2);
+            result += "name1 " +  ec.getSessionValue (name1) + "<br>" +
+                      "name2 " +  ec.getSessionValue (name2) + "<br>" +
+                      "name3 " + ec.getSessionValue (name3) + "<br>";
+            ec.setSessionValue (name3, value3);
+            ec.setSessionValue (name1, value1 + " modified");
+            ec.setSessionValue (name2, null);
+            result += "name3  " + ec.getSessionValue (name3) + "<br>" +
+                      "name2  " + ec.getSessionValue (name2) + "<br>" +
+                      "name1  " + ec.getSessionValue (name1) + "<br>" +
+                      "Undefined " + ec.getSessionValue ("UndefinedName") + "<br>";
+            ec.setSessionValue (name1);
+            result += "name2 " + ec.getSessionValue (name2) + "<br>" +
+                      "name1 " + ec.getSessionValue (name1) + "<br>" +
+                      "name3 " + ec.getSessionValue (name3) + "<br>";
+            ec.setSessionValue (name1, 5);
+            ec.setSessionValue (5, 6);
+            ec.setSessionValue (7, "8");
+            result += "name2 " + ec.getSessionValue (name2) + "<br>" +
+                      "name1 " + ec.getSessionValue (name1) + "<br>" +
+                      "name3 " + ec.getSessionValue (name3) + "<br>" +
+                      "5     " + ec.getSessionValue (5)     + "<br>" +
+                      "7     " + ec.getSessionValue (7);
+            setText1 (result);
+        }
+        
+        function startLog()
+        {
+            var logBytes = 8000;
+            ec.startLog(logBytes);
+        }
+        
+        function getLog()
+        {
+            var log = ec.getLog();
+            if (log == null) {
+                setText1 ("log is null");
+            }
+            else {
+                setText1 (log, "style4");
+            }
+        }
+        
+        function stopLog()
+        {
+            ec.stopLog();
+        }
+        
+        function doNextQueuedCmd ()
+        {
+            trace ("doNextQueuedCmd()");
+            if (queuedCmds.length > nextQueuedCmdIndex) {
+                trace ("Do Next Command");
+                trace (queuedCmds.length + " Next Command["+ nextQueuedCmdIndex + "] is: " + queuedCmds[nextQueuedCmdIndex]);
+                eval (queuedCmds[nextQueuedCmdIndex++]);
+            } else {
+                trace ("No more Commands");
+            }
+        }
+        
+        function initPage()
+        {
+            useProgressBar = false;
+            selectTitle("000300041234abcd");
+            setUrls();
+            showRegistrationStatus ();
+            trace ("initPage() calling doNextQueuedCmd()");
+            doNextQueuedCmd();
+            MovePage("ec_u.html", "");
+        }
+
+    </script>
+
+
+</head>
+<body onload="initPage();">
+
+    <div><a href="javascript:void(0)" onclick="MovePage('https://tss.t.shop.nintendowifi.net/index_u', 'https://tss.t.shop.nintendowifi.net')";>Nintendo Wifi (tss https auth)</a></div>
+    <div><a href="javascript:void(0)" onclick="MovePage('https://tss-noauth.t.shop.nintendowifi.net/index_u', 'https://tss-noauth.t.shop.nintendowifi.net')";>Nintendo Wifi (tss https no auth)</a></div>
+    <div><a href="javascript:void(0)" onclick="MovePage('http://tss.t.shop.nintendowifi.net/index_u', 'http://tss.t.shop.nintendowifi.net')";>Nintendo Wifi (tss http)</a></div>
+
+    <H1>EC Lib tests</H1>
+    <table border="2" id="table1">
+      <tr>
+        <td  class='td1'><button class="tdButton" onclick="checkRegistration()" id="button1">Check Registration</button></td>
+        <td  class='td1'><button class="tdButton" onclick="register()" id ="button2">Register</button></td>
+        <td  class='td1'><button class="tdButton" onclick="transfer()" id ="button3">Transfer</button></td>
+        <td  class='td1'><button class="tdButton" onclick="unregister()" id ="button4">Unregister</button></td>
+      </tr>
+      <tr>
+        <td  class='td1'><p id ="regStat">unknown</td>
+        <td  class='td1'><p id ="accountId">not registered</p></td>
+        <td  class='td1'><button class="tdButton" onclick="checkDeviceStatus()" id ="button5">Check Device Status</button></td>
+        <td  class='td1'><button class="tdButton" onclick="syncRegistration()" id ="button6">syncRegistration</button></td>
+      </tr>
+      <tr>
+        <td  class='td1'><button class="tdButton" onclick="getPointsBalance()" id ="button7">Get Points</button></td>
+        <td  class='td1'><button class="tdButton" onclick="purchasePoints()" id ="button8">Purchase Points</button></td>
+        <td  class='td1'><button class="tdButton" onclick="purchaseTitle()" id ="button9">Purchase Title</button></td>
+        <td  class='td1'><button class="tdButton" onclick="deleteOwnership()" id ="button10">Delete Ownership</button></td>
+      </tr>
+      <tr>
+        <td  class='td1'><p id ="points">unknown</td>
+        <td  class='td1'><button class="tdButton" onclick="purchaseGiftTitle()" id ="button11">Purchase Gift Title</button></td>
+        <td  class='td1'><button class="tdButton" onclick="acceptGiftTitle()" id ="button12">Accept Gift Title</button></td>
+        <td  class='td1'><button class="tdButton" onclick="download()" id ="button13">Download</button></td>
+      </tr>
+      <tr>
+        <td  class='td1'><button class="tdButton" onclick="cancelOperation()" id ="button14">Cancel Operation</button></td>
+        <td  class='td1'><button class="tdButton" onclick="syncTickets(1)" id ="button15">Update Tickets</button></td>
+        <td  class='td1'><button class="tdButton" onclick="deleteTitleContent()" id ="button16">Delete Content</button></td>
+        <td  class='td1'><button class="tdButton" onclick="deleteTitle()" id ="button17">Delete Title</button></td>
+      </tr>
+      <tr>
+        <td  class='td1'><button class="tdButton" onclick="deleteLocalTicket()" id ="button18">Delete Local Ticket</button></td>
+        <td  class='td1'><button class="tdButton" onclick="checkParentalControlPassword()" id ="button19">Parental Control</button></td>
+        <td  class='td1'><button class="tdButton" onclick="getWeakToken()" id ="button20">Get Weak Token</button></td>
+        <td  class='td1'><button class="tdButton" onclick="getVersion()" id ="button21">Get version</button></td>
+      </tr>
+      <tr>
+        <td  class='td1'><button class="tdButton" onclick="getTitleInfo()" id ="button22">Get Title Info</button></td>
+        <td  class='td1'><button class="tdButton" onclick="getTitleInfos()" id ="button23">List titles</button></td>
+        <td  class='td1'><button class="tdButton" onclick="getDeviceInfo()" id ="button24">Get Device Info</button></td>
+        <td  class='td1'><button class="tdButton" onclick="setDeviceInfo()" id ="button25">Set Device Info</button></td>
+      </tr>
+      <tr>
+        <td  class='td1'><button class="tdButton" onclick="startLog()" id ="button26">Start Log</button></td>
+        <td  class='td1'><button class="tdButton" onclick="getLog()" id="button27">Get Log</button></td>
+        <td  class='td1'><button class="tdButton" onclick="stopLog()" id ="button28">Stop Log</button></td>
+        <td  class='td1'><button class="tdButton" onclick="testSessionValues()" id ="button29">Test Session Values</button></td>
+      </tr>
+      <tr>
+        <td  class='td1'><button class="tdButton" onclick="generateKeyPair()" id="button30">Generate Key Pair</button></td>
+        <td  class='td1'><button class="tdButton" onclick="confirmKeyPair()" id="button31">Confirm Key Pair</button></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+    <br>
+        <div id="dynDiv1" class="style1"></div>
+    <br>
+        <div id="dynDiv2" class="style2"></div>
+    <br>
+        <div id="errDiv" class="style2"></div>
+
+</body>
+</html>

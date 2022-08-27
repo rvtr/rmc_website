@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="../../common/css/default.css">
+<style>
+body
+{
+    font-size: 10px;
+	background-color: #FFFFFF;
+}
+#output
+{
+    background-color: #CCFFCC;
+}
+#progress
+{
+    background-image: url("progress_bar.gif");
+	background-repeat: no-repeat;
+	background-position: -216px 0px;
+}
+</style>
+<script type="text/javascript" src="../common/js/default.js"></script>
+<script type="text/javascript" src="ec.js"></script>
+<script type="text/javascript" src="syncEc.js"></script>
+<script>
+<!--
+/*---------- グローバル変数 ----------*/
+var ec = new ECommerceInterface();
+var gStartDate = 0;
+var gShowProgerss = true;    //プログレスバーを表示するかのフラグ
+var gTitleId = 0;
+
+/*---------- デバッグ出力 ----------*/
+function Print( mes )
+{
+    output.innerHTML += mes + "<br>";
+}
+function PrintError( progress )
+{
+    Print( "status : " + progress.status );
+	Print( "operation : " + progress.operation );
+	Print( "totalSize : " + progress.totalSize );
+	Print( "downloadedSize : " + progress.downloadedSize );
+	Print( "errCode : " + progress.errCode );
+	Print( "errInfo : " + progress.errInfo );
+	Print( "phase : " + progress.phase );
+	Print( "isCancelRequested : " + progress.isCancelRequested );
+	Print( "description : " + progress.description );
+}
+function ClearDebugMessages( first_mes )
+{
+    output.innerHTML = first_mes + "<br>";
+}
+/*
+  最初のオペレーションのエラーチェック
+*/
+function CheckStartOperation( progress )
+{
+    if ( progress == null )
+	{
+	    Print("ASSERT progress == null : " + progress);
+		return ( false );
+	}
+    else if ( progress.status < 0 && progress.status != EC_ERROR_NOT_DONE )
+	{
+	    Print("Error StartOperation!");
+	    PrintError( progress );
+		return ( false );
+	}
+	else
+	{
+	    return ( true );
+	}
+}
+/*
+  ec.getProgress() のエラーチェック
+*/
+function CheckProgress( progress )
+{
+    if ( progress == null )
+	{
+	    Print("ASSERT progress == null : " + progress);
+		return ( false );
+	}
+    else if ( progress.status < 0 )
+	{
+	    Print("Error Progress!");
+	    PrintError( progress );
+		return ( false );
+	}
+	else
+	{
+	    return ( true );
+	}
+}
+
+/*
+  プログレスバーを更新
+*/
+var PROGRESS_BAR_WIDTH = 216;
+function UpdateProgressBar( downloaded, total )
+{
+    var pos = -1 * PROGRESS_BAR_WIDTH;
+    if ( total != 0 )
+        pos = PROGRESS_BAR_WIDTH * downloaded / total - PROGRESS_BAR_WIDTH;
+	if ( pos > 0 )
+	    pos = 0;
+	progress.style.backgroundPosition = pos + "px 0px";
+}
+
+/*---------- 初期化処理 ----------*/
+function InitEc()
+{
+    /*
+    var ecsUrl = "https://ecs.shop.wii.com/ecs/services/ECommerceSOAP";
+    var iasUrl = "https://ias.shop.wii.com/ias/services/IdentityAuthenticationSOAP";
+    var casUrl = "https://cas.shop.wii.com/cas/services/CatalogingSOAP";
+    var ccsUrl = "http://ccs.shop.wii.com/ccs/download";
+    var ucsUrl = "http://ccs.shop.wii.com/ccs/download";
+    */
+	var ecsUrl = "https://ecs.t.shop.nintendowifi.net/ecs/services/ECommerceSOAP";
+	var iasUrl = "https://ias.t.shop.nintendowifi.net/ias/services/IdentityAuthenticationSOAP";
+	var casUrl = "https://cas.t.shop.nintendowifi.net/cas/services/CatalogingSOAP";
+	var ccsUrl = "http://ccs.t.shop.nintendowifi.net/ccs/download";
+	var ucsUrl = "http://ccs.t.shop.nintendowifi.net/ccs/download";
+	
+    ec.setWebSvcUrls (ecsUrl, iasUrl, casUrl);
+    ec.setContentUrls (ccsUrl, ucsUrl);
+}
+
+/*----------------------------------------
+■ メモ
+ [ 基本的な流れ ]
+  ec.purchaseTitle などの処理をしたい関数を一度呼び、
+  ec.getProgress を EC_ERROR_NOT_DONE 以外になるまで定期的に呼びます。
+ 
+ [ 便利関数 ]
+  上記の基本的な流れを３つの便利関数で行っています
+  ▽ CheckStartOperation
+   ec.purchaseTitle などの処理をしたい関数のエラーチェック関数
+   エラー時は自動的にログ出力
+  ▽ SyncEc( "ec.getProgress()" )
+   ec.getProgress を同期処理で EC_ERROR_NOT_DONE 以外になるまで呼び続けます
+  ▽ CheckProgress
+   上記の SyncEc のエラーチェック関数。
+   エラー時は自動的にログ出力
+----------------------------------------*/
+
+/*---------- 各ボタンの処理 ----------*/
+/*
+  タイトル(アプリ)の購入
+  amount(金額)も含めて全て文字列で
+*/
+function PurchaseTitle( titleId, itemId, amount )
+{
+    var kong_ = new Kong();
+    //kong_.ShowLoadingIcon();
+
+    ClearDebugMessages("PurchaseTitle");
+	
+	var price = new ECPrice( amount, "POINTS");
+	var payment = new ECAccountPayment(); // default is vcid account
+    var limits = new ECTitleLimits();     // default is no limits
+	
+	var downloadContent = true;
+	var taxes = null;
+	var purchaseInfo = null;
+    var discount = null;
+    
+	var progress = ec.purchaseTitle (titleId, itemId,
+                                     price, payment,
+                                     limits,
+                                     downloadContent, // optional
+                                     taxes,           // optional
+                                     purchaseInfo,    // optional
+                                     discount);       // optional
+	if ( ! CheckStartOperation( progress ) )
+	    return(0);
+	/*
+	if ( ! CheckProgress( SyncEc( "ec.getProgress()" ) ) )
+	    return(0);
+    */
+	
+	if ( gShowProgerss ) kong_.ShowProgressBar();
+	
+	gTitleId = titleId;
+	
+	gStartDate = new Date();
+	DownloadStatusUpdate();
+	
+	Print("Success." );
+}
+
+/*
+  フォームの内容で PurchaseTitle
+*/
+function PurchaseTitleFromForm()
+{
+    var titleId = app.titleId.value;
+	var itemId = app.itemId.value;
+	var amount = app.amount.value;
+	PurchaseTitle( titleId, itemId, amount );
+}
+
+/*
+  ダウンロード状況を更新
+*/
+function DownloadStatusUpdate()
+{
+    var progress = ec.getProgress();
+	var kong_ = new Kong();
+    if ( progress.status == EC_ERROR_NOT_DONE )
+    {
+        //ダウンロード中
+        ClearDebugMessages("Downloading...");
+		
+		var nowDate = new Date();
+		var time = nowDate.getTime() - gStartDate.getTime();
+		Print("Time : " + time + "[ms]");
+		
+        if ( progress.totalSize != 0 )
+            Print( progress.downloadedSize + "/" + progress.totalSize + "[bytes]");
+		if ( gShowProgerss ) kong_.UpdateProgressBar(  progress.downloadedSize, progress.totalSize );
+        UpdateProgressBar( progress.downloadedSize, progress.totalSize );
+        setTimeout( "DownloadStatusUpdate()", 1 );    //todo interval
+    }
+    else if ( progress.status < 0 )
+    {
+        //ダウンロード失敗
+        ClearDebugMessages("Download Failed.");
+        PrintError( progress );
+        if ( gShowProgerss ) kong_.HideProgressBar();
+        //kong_.HideLoadingIcon();
+    }
+    else
+    {
+        //ダウンロード成功
+        ClearDebugMessages("Download Succeed.");
+		
+		var nowDate = new Date();
+		var time = nowDate.getTime() - gStartDate.getTime();
+		Print("Time : " + time + "[ms]");
+		
+        Print( progress.totalSize + "[bytes]");
+        
+		if ( gShowProgerss ) kong_.UpdateProgressBar(  progress.downloadedSize, progress.totalSize );
+        UpdateProgressBar( progress.downloadedSize, progress.totalSize );
+        
+		kong_.FinishDownload( String( gTitleId ) );
+		
+        if ( gShowProgerss ) 
+		{
+    		setTimeout( WaitProgressBarAnimFinished, 500 );
+		}
+    }
+}
+
+/*
+  プログレスバーのアニメ終了待ち
+*/
+function WaitProgressBarAnimFinished()
+{
+    var kong_ = new Kong();
+    if ( kong_.IsProgressBarAnimFinished() == false )
+	{
+	    setTimeout( WaitProgressBarAnimFinished, 500 );
+	}
+	else
+	{
+	    kong_.HideProgressBar();
+		//kong_.HideLoadingIcon();
+	}
+}
+
+/*
+  アプリのダウンロード
+  ダウンロードするには先に購入(PurchaseTitle)する必要があります
+*/
+function Download( titleId )
+{
+    gTitleId = titleId;
+	
+    var kong_ = new Kong();
+    //kong_.ShowLoadingIcon();
+    
+    ClearDebugMessages("Download");
+
+	gStartDate = new Date();
+	
+    if ( ! CheckStartOperation( ec.downloadTitle (titleId) ) )
+	    return(0);
+    
+	if ( gShowProgerss ) kong_.ShowProgressBar();
+    
+    DownloadStatusUpdate();
+}
+
+/*
+  フォームの内容で Download
+*/
+function DownloadFromForm()
+{
+    var titleId = app.titleId.value;
+	Download( titleId );
+}
+
+/*
+  フォームに option タグの内容を反映
+*/
+function SetFormValue()
+{
+    var id = new Array();
+	id = app.idset.value.split(",");
+	app.titleId.value = id[0];
+	app.itemId.value = id[1];
+	app.amount.value = id[2];
+}
+
+-->
+</script>
+</head>
+<body onload="InitEc();">
+<form id="app">
+<table border="1">
+    <tr>
+        <td>titleId</td>
+    	<td><input type="text" maxlength="16" size="22" id="titleId" onMouseDown="ActiveKeyboard(1, 'titleId', 1);" value="00030004444D3030"></td>
+    </tr>
+    <tr>
+        <td>itemId</td>
+    	<td><input type="text" maxlength="6" size="7" id="itemId" onMouseDown="ActiveKeyboard(0, 'itemId');" value="101488"></td>
+    </tr>
+    <tr>
+        <td>amount</td>
+    	<td><input type="text" maxlength="8" size="11" id="amount" onMouseDown="ActiveKeyboard(0, 'amount(金額)');" value="0"></td>
+    </tr>
+</table>
+<select onChange="SetFormValue()" id="idset" size="2">
+<option value='0003000022A733A2,101486,0'>test_twl_game</option>
+<option value='00030004444D3030,101488,0'>twl-dm00</option>
+<option value='00030004444D3032,101487,0'>twl-dm02</option>
+<option value='00030004444D3033,101489,0'>twl-dm03</option>
+<option value='00030004444D3034,,'>twl-dm04</option>
+<option value='00030004444D3130,101489,0'>twl-dm10</option>
+<option value='00030004444D3131,101490,0'>twl-dm11</option>
+<option value='00030004444D3330,101491,0'>twl-dm30</option>
+<option value='000300044B5A3241,101493,0'>kz2a</option>
+<option value='0003000434617841,101499,0'>4axA(18MB)</option>
+<option value='0003000434617941,101500,0'>4ayA(18MB)</option>
+<option value='0003000434617A41,101501,0'>4azA(18MB)</option>
+<option value='0003000434564341,101688,0'>4vcA(SAVE)</option>
+<option value='0003000434564441,101689,0'>4vdA(SAVE)</option>
+<option value='0003000434564541,101690,0'>4veA(SAVE)</option>
+</select>
+</form>
+<div>
+    <button onClick="PurchaseTitleFromForm();">PurchaseTitle</button>
+    <button onClick="DownloadFromForm();">Download</button>
+</div>
+<!--
+ 省スペースな a タグ版
+<div>
+    <a href="javascript:void(0);" onClick="PurchaseTitleFromForm();">PurchaseTitle</a>
+    <a href="javascript:void(0);" onClick="DownloadFromForm();">Download</a>
+</div>
+-->
+<div id="progress">
+    <img src="progress_bar_border.gif">
+</div>
+<div id="output"></div>
+</body>
+</html>

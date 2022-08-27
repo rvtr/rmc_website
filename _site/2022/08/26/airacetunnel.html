@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Cleaning Up CC64 | rmc's site</title>
+    <title>AiRace Tunnel - Great time waster | rmc's site</title>
     <link rel="icon" type="image/png" href="/icon.png"/>
     <link rel="stylesheet" type="text/css" href="/assets/css/styledsi.css">
     <link id="pagestyle" rel="stylesheet" type="text/css" href="">
@@ -9,11 +9,11 @@
     <script src="/assets/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="/assets/js/main.js"></script>
     
-      <meta property="og:title" content="Cleaning Up CC64">
+      <meta property="og:title" content="AiRace Tunnel - Great time waster">
     
     <meta property="og:locale" content="en_US">
-    <meta name="description" content="Cleaning Up CC64 | rmc's site">
-    <meta property="og:description" content="Cleaning Up CC64 | rmc's site">
+    <meta name="description" content="AiRace Tunnel - Great time waster | rmc's site">
+    <meta property="og:description" content="AiRace Tunnel - Great time waster | rmc's site">
     <link rel="canonical" href="https://ianskinner1982.github.io">
     <meta property="og:url" content="https://ianskinner1982.github.io">
     <meta property="og:site_name" content="rmc's site">
@@ -111,24 +111,15 @@ body {
     text-align: left;
     border-color: #FFFFFF;
     font-size: 30px;
-    font-size: 1.5vw;
-    padding-top: 2vw;
-    padding-left: 6vw;
+    font-size: 1vw;
+    padding-top: 2.2vw;
+    padding-left: 6.2vw;
 }
 .icon {
     padding-top:2.2vw;
     margin-left: -9.3vw;
     z-index: 2;
 }
-.launch {
-    padding-top: 2.1vw;
-    padding-left: .7vw;
-    font-size: 30px;
-    font-size: 1.5vw;
-    z-index: 2;
-    position: relative;
-}
-
 .titleimgoverlay {
   margin: 0% 2% 0%;
   opacity: 0.0;
@@ -265,130 +256,23 @@ body {
 
     <div id="content-wrap">
     <div class="text-center pt-3">
-  <h1>Cleaning Up CC64</h1>
-  <h3>2021-05-03</h3>
-  <h4>IanSkinner1982</h4>
+  <h1>AiRace Tunnel - Great time waster</h1>
+  <h3>Review published 2022-08-26</h3>
   <p><a href=/blog>&lt;- Back</a></p>
 </div>
 <div class="container">
   <hr>
-  <style>
-  code {
-    font-family: Consolas,"courier new";
-    color: crimson;
-    background-color: #f1f1f1;
-    padding: 2px;
-    font-size: 70%;
-  }
-  pre {
-    background-color: #f1f1f1;
-    padding: 2px;
-  }
-</style>
-<p>This article is to explain how I made Cookie Clicker C64 item buying more efficient. This probably isn’t the most interesting article, but you may enjoy it nonetheless.
-  <br>
-  Here is the layout of a page in the store:
-  <br>
-  <br>
-  <code>1. Print a page in the store
-    <br>
-    2. Buy certain items depending on the pressed key  (goes to sections 4-7)
-    <br>
-    3. Switch page if + or - is pressed
-    <br>
-    -------------------------
-    <br>
-    4. item 1 buying code
-    <br>
-    5. item 2 buying code
-    <br>
-    6. item 3 buying code
-    <br>
-    7. item 4 buying code
-    <br>
-  </code>
-  <br>
-  Now, this is for 1 page in a store. The store has over 5 pages… with 4 item buying routines each. Too much code, right? Well that's why I came up with an idea to make it better. First, let me explain how the store looks. You have 3 lines for each item. The setup is as follows:
-  <br>
-<pre>
-Item Name           Amount Owned           Ex.  Cursors                69
-Description of item                             Adds .1 cookies per second
-Price of item                                   1000c
-</pre>
-<br>
-I decided that I would put all the building info in a sequential and save it to a few arrays. (I'd have a name array, a price array, a description array and an amount array) It might not make sense why I did this, but you'll see why soon.
-Instead of printing a whole page, I'd print the values in the array. So...
-<br>
-<br>
-<code>
-  1. Select a range depending on the page selected. (0-3, 4-7, 8-12, etc)
-  <br>
-  2. Print the values in the range selected for each array
-  <br>
-  I will now add a for...next loop to handle all the menu printing. It will go through the range selected and print the desired values.
-</code>
-<br>
-<br>
-I have replaced all the page printing code with just 2 parts. (each page display would take 20 or so lines, meaning if I had 5 pages that would be 100 lines. With this new method, I need around 8-10 lines to load the array values, and 9 lines to print any selected page. With 5 pages, that is only 17-19 lines!) I can also add a whole new page just by adding one line of code.
-<br>
-Figuring out how to select an item with this new design was tough. I decided to assign a value to each item of the page. (x) If the input was within 1-4, then you will be sent to the buying routine.
-<br>
-<br>
-<code>
-  1. Reset x and read keyboard input
-  <br>
-  2. Exit on a change of the current page or menu
-  <br>
-  3. Enter buying routine if an item was selected. (if x=1-4)
-</code>
-<br>
-<br>
-This ended up taking 18 lines instead of 50 lines for all the pages. Not a big improvement, but it is still good to clean stuff up.
-<br>
-As mentioned earlier, there are four blocks of code for buying items per page. Each bit of code was 6 lines. 6*4*5 is 120 lines. (still assuming I need 5 pages) Yeesh.
-I have to chop that down.
-Before, it was like this for each item:
-<br>
-<br>
-<code>
-  1. Compare price and cookies
-  <br>
-  2. Subtract price
-  <br>
-  3. Add gain to gain.
-  <br>
-  4. Update amount owned.
-  <br>
-  5. Add 15% to price.
-  <br>
-  6. Update screen with new price and amount owned.
-</code>
-<br>
-<br>
-Now, once you have selected a item, it will do this:
-<br>
-<br>
-<code>
-  1. Load the item number. (y=i+x-1) (i is the low number in the range)
-  <br>
-  2. Compare price(y) with your total cookies. (see if you can buy it)
-  <br>
-  3. Subtract price(y) from your cookies. Add the gain to gain(y). Multiply price(y) by 1.15. Add one to the amount owned
-  <br>
-  4. Update the price and amount owned on the screen. (this takes up a few more lines to determine where the item you want updated is)
-  <br>
-  <br>
-  (What is the gain? With Cookie Clicker, an idle game, the game is always adding something to your total amount of cookies. This is your CpS, or in this case, Gain. I made it so each item has its own gain. (in this case, gain(y)) All gains are added, and that is the total gain. The total gain is added to the amount of cookies you have.)
-</code>
-<br>
-<br>
-Now we have one routine shared by all items. So instead of 120 lines, we end up with 12 lines to handle all the items. If I were to add a thousand more items, it would still only be 12 lines.
-<br>
-<br>
-In all, this took a week to figure out, and a few days to debug. In the end I got it to work, but I had to change a few things. All the ideas here still apply though.
-<br>
-Thanks for reading this extremely boring article!
-</p>
+  If you haven't played AiRace Tunnel from QubicGames, you're missing out.
+<br><br>
+AiRace Tunnel is a fairly straightforward game. The goal is to fly a plane through a series of tunnels, while avoiding obstacles within them. There are 6 tunnels of varying degrees of difficulty, 2 of which are infinite.
+<br><br>
+Normally a game like this might get boring after a while, but this one manages to stay fun. As you play, your plane moves faster and faster, and the obstacles become harder to avoid. At first it is fairly easy, but it will suddenly take a lot of concentration, and even the slightest wrong movement could make you crash.
+<br><br>
+Controls in this game are <i>really</i> well done. You've got touchscreen or button controls, both of which feel very responsive, and you can switch between left or right handed mode.<br>As a lefty, I love not having to hold the stylus in my jittery right hand and having to waste my good hand on hitting a few buttons. So many games have this issue, and as a result are hard for me to play. Thanks for fixing that, AiRace Tunnel!
+<br><br>
+The graphics in this game are fairly good. The tunnels are highly detailed 3d models and look awesome. The UI, however, leaves much to be desired. It gives off a very flat and cheap feel. Because of this, at a first glance this game looked like another piece of crap DSi shovelware to me.
+<br><br>
+Overall, this game is really good. Great gameplay, it looks fine, and controls amazing. But due to the UI looking like crap, I'll have to take a point off and give this one a 9/10.
 
 </div>
 

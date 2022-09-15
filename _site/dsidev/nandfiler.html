@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>EC file utility | rmc's site</title>
+    <title>NandFiler | rmc's site</title>
     <link rel="icon" type="image/png" href="/icon.png"/>
     <link rel="stylesheet" type="text/css" href="/assets/css/styledsi.css">
     <link id="pagestyle" rel="stylesheet" type="text/css" href="">
@@ -9,11 +9,11 @@
     <script src="/assets/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="/assets/js/main.js"></script>
     
-      <meta property="og:title" content="EC file utility">
+      <meta property="og:title" content="NandFiler">
     
     <meta property="og:locale" content="en_US">
-    <meta name="description" content="EC file utility | rmc's site">
-    <meta property="og:description" content="EC file utility | rmc's site">
+    <meta name="description" content="NandFiler | rmc's site">
+    <meta property="og:description" content="NandFiler | rmc's site">
     <link rel="canonical" href="https://ianskinner1982.github.io">
     <meta property="og:url" content="https://ianskinner1982.github.io">
     <meta property="og:site_name" content="rmc's site">
@@ -310,11 +310,18 @@ body {
     <div class="container">
       <div class="imageOne image">
         <img src="/assets/dsi/widebarnoprompt_u.png" style="width:75vw;">
-        <img src="/assets/dsi/widepromptnobar.png" style="width:75vw;height:40vw;">
+        <img src="/assets/dsi/widepromptnobar.png" style="width:75vw;height:65vw;">
         <img src="/assets/dsi/widebarnoprompt_d.png" style="width:75vw;">
       </div>
       <div class="othertext" style="width:73.5vw;">
-        <h1>TWL EC file utility</h1>EC file utility is used when developers can't connect to the DSi Shop. This app can view <code>ec.cfg</code>, delete <code>ec.cfg</code>, <code>shop.log</code> and <code>dev.kp</code>, and delete itself.<br>According to the document EC file utility came with, deleting <code>dev.kp</code> should fix any connection issues.<br><br>This application was only released to developers that had issues connecting to the DSi Shop, and sharing this among other developers was strictly prohibited. So much so that you had to completely delete the app after using it.
+        <h1>NandFiler</h1>NandFiler is a save manager and hex editor. Its purpose is to edit values in save files, or to test save corruption.
+It supports backing up/restoring save data from the SD card.
+<br><br>
+Exporting a save will store all of the files in the save to <code>sd:/&lt;TID&gt;_0000/</code>, and backing up a save will store the save as <code>sd:/&lt;TID&gt;_&lt;save type&gt;.sav</code>.
+<br><br>
+Oddly enough, all versions of NandFiler past v11280 contain an image of fish in romfs, named <code>fill.bmp</code>. This seems to have no purpose, though it is rather amusing.
+<br><br>
+Note: the CTR SDK versions of NandFiler appear to be the same (fish included), just with the version number stripped.<h3>001.bmp<br><img src="/assets/dsi/romfs/fill.bmp" style="width:50vw;"></h3>
       </div>
     </div>
     </ul>
@@ -323,7 +330,7 @@ body {
     <div class="container">
       <div class="imageOne image">
         <img src="/assets/dsi/thinbarnoprompt_u.png" style="width:20vw;">
-        <img src="/assets/dsi/thinpromptnobar.png" style="width:20vw;height:40vw;">
+        <img src="/assets/dsi/thinpromptnobar.png" style="width:20vw;height:65vw;">
         <img src="/assets/dsi/thinbarnoprompt_d.png" style="width:20vw;">
       </div>
       <div class="imageTwo">
@@ -333,15 +340,15 @@ body {
               <img src="/assets/dsi/homemenu.png" class="homeimg">
             </div>
             <div class="imageThree image3">
-              <div class="hometext" style="padding-top: 2.7vw;padding-left: 3.5vw;">EC file utility</div>
+              <div class="hometext" style="padding-top: 2.7vw;padding-left: 4.5vw;">NandFiler</div>
               <!--padding-top 2vw and 2.7vw for two and one line banners, respectively-->
               <div class="imageThree image3 homeicon">
-                <img src="/assets/dsi/ecconfigview.gif" width="13%" height="13%">
+                <img src="/assets/dsi/nandfiler.gif" width="13%" height="13%">
               </div>
             </div>
             <div class="othertext" style="text-align:left;padding-top:25%;margin-left:-15%;">
             <p>
-            <b>Source:</b><div style="font-size: 40px;font-size: 1vw;">Gigaleaks/generic.7z/sd.rar</div><br>
+            <b>Source:</b><div style="font-size: 40px;font-size: 1vw;">TwlSDK</div><br>
             <b>Downloads:</b>
             <table class="othertexts" style="solid; width: 100%;font-size: 3px;font-size: 1vw;">
             <tr>
@@ -349,8 +356,56 @@ body {
               <th><br>TAD</th>
             </tr>
             <tr>
-              <td><a href="https://archive.org/download/rmc-dsi/ecConfigView.20090303.srl">20090303</a></td>
-              <td><a href="https://archive.org/download/rmc-dsi/ecConfigView.20090303.tad">20090303</a></td>
+              <td><a href="https://archive.org/download/rmc-dsi/NandFiler.10126.srl">v10126</a></td>
+              <td><a href="https://archive.org/download/rmc-dsi/NandFiler.10126.tad">v10126</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://archive.org/download/rmc-dsi/NandFiler.10616.srl">v10616</a></td>
+              <td><a href="https://archive.org/download/rmc-dsi/NandFiler.10616.tad">v10616</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://archive.org/download/rmc-dsi/NandFiler.10769.srl">v10769</a></td>
+              <td><a href="https://archive.org/download/rmc-dsi/NandFiler.10769.tad">v10769</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://archive.org/download/rmc-dsi/NandFiler.11003.srl">v11003</a></td>
+              <td><a href="https://archive.org/download/rmc-dsi/NandFiler.11003.tad">v11003</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://archive.org/download/rmc-dsi/NandFiler.11015.srl">v11015</a></td>
+              <td><a href="https://archive.org/download/rmc-dsi/NandFiler.11015.tad">v11015</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://archive.org/download/rmc-dsi/NandFiler.11190.srl">v11190</a></td>
+              <td><a href="https://archive.org/download/rmc-dsi/NandFiler.11190.tad">v11190</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://archive.org/download/rmc-dsi/NandFiler.11270.srl">v11270</a></td>
+              <td><a href="https://archive.org/download/rmc-dsi/NandFiler.11270.tad">v11270</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://archive.org/download/rmc-dsi/NandFiler.11280.srl">v11280</a></td>
+              <td><a href="https://archive.org/download/rmc-dsi/NandFiler.11280.tad">v11280</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://archive.org/download/rmc-dsi/NandFiler.11288.srl">v11288</a></td>
+              <td><a href="https://archive.org/download/rmc-dsi/NandFiler.11288.tad">v11288</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://archive.org/download/rmc-dsi/NandFiler.11323.srl">v11323</a></td>
+              <td><a href="https://archive.org/download/rmc-dsi/NandFiler.11323.tad">v11323</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://archive.org/download/rmc-dsi/NandFiler.11364.srl">v11364</a></td>
+              <td><a href="https://archive.org/download/rmc-dsi/NandFiler.11364.tad">v11364</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://archive.org/download/rmc-dsi/NandFiler.11414.srl">v11414</a></td>
+              <td><a href="https://archive.org/download/rmc-dsi/NandFiler.11414.tad">v11414</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://archive.org/download/rmc-dsi/NandFiler.11437.srl">v11437</a></td>
+              <td><a href="https://archive.org/download/rmc-dsi/NandFiler.11437.tad">v11437</a></td>
             </tr>
             </table>
 

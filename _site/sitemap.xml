@@ -79,6 +79,9 @@
 <loc>http://localhost:4000/index1.html</loc>
 </url>
 <url>
+<loc>http://localhost:4000/dsidev/nandfiler.html</loc>
+</url>
+<url>
 <loc>http://localhost:4000/programs/ncxcore.html</loc>
 </url>
 <url>
@@ -228,6 +231,10 @@
 <url>
 <loc>http://localhost:4000/dsidev/dsishop/startup_u.html</loc>
 <lastmod>2022-08-24T14:09:40-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/dsidev/twljumpchecker.html</loc>
+<lastmod>2022-09-15T19:15:36-04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/gaming/htmls/DEBUG/startup.html</loc>

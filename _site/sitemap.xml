@@ -22,6 +22,9 @@
 <loc>http://localhost:4000/programs/archived/csharpcollection.html</loc>
 </url>
 <url>
+<loc>http://localhost:4000/dsidev/dsgamecardtosd.html</loc>
+</url>
+<url>
 <loc>http://localhost:4000/dsi.html</loc>
 </url>
 <url>
@@ -76,9 +79,6 @@
 <loc>http://localhost:4000/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/index1.html</loc>
-</url>
-<url>
 <loc>http://localhost:4000/dsidev/nandfiler.html</loc>
 </url>
 <url>
@@ -89,6 +89,15 @@
 </url>
 <url>
 <loc>http://localhost:4000/members/ninjacheetah.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/dsidev/notlaunch.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/dsidev/photochecker.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/dsidev/pictochat.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/programs/rngtool.html</loc>
@@ -116,6 +125,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/dsidev/twlnmenu.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/dsidev/wifiicon.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/programs/xware.html</loc>
@@ -239,6 +251,10 @@
 <url>
 <loc>http://localhost:4000/gaming/htmls/DEBUG/startup.html</loc>
 <lastmod>2022-09-13T23:28:53-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/index1.html</loc>
+<lastmod>2022-10-10T16:06:09-04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/pages/dsiware/</loc>

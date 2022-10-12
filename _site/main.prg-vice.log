@@ -1,0 +1,112 @@
+ 
+*** VICE Version 3.6.1 ***
+ 
+Welcome to x64sc, the free portable C64 Emulator.
+ 
+Current VICE team members:
+Martin Pottendorfer, Marco van den Heuvel, Fabrizio Gennari, Groepaz, 
+Errol Smith, Ingo Korb, Olaf Seibert, Marcus Sutton, Kajtar Zsolt, AreaScout, 
+Bas Wassink, Michael C. Martin, Christopher Phillips, David Hogan, 
+Empathic Qubit, Roberto Muscedere, June Tate-Gans, Pablo Roldan.
+ 
+This is free software with ABSOLUTELY NO WARRANTY.
+See the "About VICE" command for more info.
+ 
+random seed was: 0x632742fb
+command line was: x64sc
+Loading system file `/usr/local/share/vice/C64/kernal'.
+Loading system file `/usr/local/share/vice/C64/basic'.
+Loading system file `/usr/local/share/vice/C64/chargen'.
+Loading system file `/usr/local/share/vice/PRINTER/mps803'.
+Palette: Loading palette `/usr/local/share/vice/PRINTER/mps803.vpl'.
+Loading system file `/usr/local/share/vice/PRINTER/nl10-cbm'.
+Palette: Loading palette `/usr/local/share/vice/PRINTER/nl10.vpl'.
+NL10: Printer driver initialized.
+Palette: Loading palette `/usr/local/share/vice/PRINTER/1520.vpl'.
+Loading system file `/usr/local/share/vice/DRIVES/dos1540'.
+Loading system file `/usr/local/share/vice/DRIVES/dos1541'.
+Loading system file `/usr/local/share/vice/DRIVES/d1541II'.
+Loading system file `/usr/local/share/vice/DRIVES/dos1570'.
+Loading system file `/usr/local/share/vice/DRIVES/dos1571'.
+Loading system file `/usr/local/share/vice/DRIVES/dos1581'.
+DriveROM: Error - 2000 ROM image not found. Hardware-level 2000 emulation is not available.
+DriveROM: Error - 4000 ROM image not found. Hardware-level 4000 emulation is not available.
+DriveROM: Error - CMDHD ROM image not found. Hardware-level CMDHD emulation is not available.
+Loading system file `/usr/local/share/vice/DRIVES/dos2031'.
+Loading system file `/usr/local/share/vice/DRIVES/dos2040'.
+Loading system file `/usr/local/share/vice/DRIVES/dos3040'.
+Loading system file `/usr/local/share/vice/DRIVES/dos4040'.
+Loading system file `/usr/local/share/vice/DRIVES/dos1001'.
+Loading system file `/usr/local/share/vice/DRIVES/dos9000'.
+Drive: Finished loading ROM images.
+VIC-II: Initializing chip model "MOS8565" (63 cycles per line, 312 raster lines).
+using GTK3 backend: OpenGL
+GLX version: 1.4
+Getting matching framebuffer configs
+Found 112 matching FB configs.
+Obtained OpenGL 4.6 context
+	  Vendor: Intel
+	Renderer: Mesa Intel(R) UHD Graphics 600 (GLK 2)
+	 Version: 4.6 (Core Profile) Mesa 22.0.5
+	  Legacy: no
+Direct GLX rendering context obtained
+Swap control support. glXSwapIntervalMESA: 1 glXSwapIntervalEXT: 1 glXSwapIntervalSGI: 1
+Loading vertex shader: /usr/local/share/vice/GLSL/viewport.vert
+Loading fragment shader: /usr/local/share/vice/GLSL/builtin.frag
+Loading vertex shader: /usr/local/share/vice/GLSL/viewport.vert
+Loading fragment shader: /usr/local/share/vice/GLSL/builtin-interlaced.frag
+Loading vertex shader: /usr/local/share/vice/GLSL/viewport.vert
+Loading fragment shader: /usr/local/share/vice/GLSL/bicubic.frag
+Loading vertex shader: /usr/local/share/vice/GLSL/viewport.vert
+Loading fragment shader: /usr/local/share/vice/GLSL/bicubic-interlaced.frag
+Created render thread 0
+Render thread initialised
+Sound: Available sound devices: pulse alsa dummy fs dump wav voc iff aiff soundmovie
+Joystick: Linux joystick interface initialization...
+Joystick: Warning - Cannot open joystick device `/dev/input/js0'.
+Joystick: Warning - Cannot open joystick device `/dev/input/js1'.
+Joystick: Warning - Cannot open joystick device `/dev/input/js2'.
+Joystick: Warning - Cannot open joystick device `/dev/input/js3'.
+Joystick: Warning - Cannot open joystick device `/dev/input/js4'.
+Joystick: Warning - Cannot open joystick device `/dev/input/js5'.
+Joystick: Warning - Cannot open joystick device `/dev/input/js6'.
+Joystick: Warning - Cannot open joystick device `/dev/input/js7'.
+Keyboard: Loading keymap `/usr/local/share/vice/C64/gtk3_pos.vkm'.
+Main CPU: starting at ($FFFC).
+Main CPU: RESET.
+Sound: Opened device `pulse', speed 48000Hz, fragment size 2.67ms, buffer size 32.00ms
+reSID: MOS8580, filter on, sampling rate 48000Hz - resampling, pass to 21600Hz
+Sync reset
+Unit 8: RESET.
+Warning - Sync is 1001.111 ms behind
+Sync reset
+Warning - Sync is 1009.306 ms behind
+Sync reset
+Initiating render thread 0 shutdown
+Joining render thread 0 ...
+Joined render thread 0.
+
+Resources with non default values:
+LogFileName="main.prg-vice.log"
+SaveResourcesOnExit=1
+MonitorXPos=708
+MonitorYPos=20
+MonitorWidth=593
+MonitorHeight=722
+Window0Height=726
+Window0Width=1321
+Window0Xpos=45
+Window0Ypos=20
+KeymapIndex=1
+DriveSoundEmulation=1
+DriveSoundEmulationVolume=2000
+
+reconstructed commandline options (might be incomplete):
+-default -saveres -monitorxpos "708" -monitorypos "20" -monitorwidth "593" -monitorheight "722" -keymap "1" -drivesound -drivesoundvolume "2000"
+
+VICE thread initiating shutdown
+VICE thread is exiting
+VICE thread has been joined.
+Writing configuration file `/home/rmc/.config/vice/vicerc'.
+VIC-II: VSP Bug: safe channels are: 457. Emulation of memory corruption is disabled.
+Sound: Closing device `pulse'

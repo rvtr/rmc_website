@@ -2,6 +2,14 @@
   font-family: dsifont;
   src: url(/assets/dsi/nintendo_NTLGDB_001.ttf);
 }
+@font-face {
+  font-family: dsifont-bios;
+  src: url(/assets/dsi/nintendo-DS-BIOS.ttf);
+}
 body {
   font-family: dsifont;
+}
+code {
+  font-family: dsifont-bios;
+  font-size: 1.5vw;
 }

@@ -1,0 +1,20 @@
+I'm not sure the of the proper aspect ratio here, but i left some room for cropping.
+CARD.SRL looks to just be Card ROM Header Checker, that's what Unlaunch says at least.
+NAND.SRL is also the same
+ORG.SRL doesn't actually work, in order of appearance the messages are
+"セーブデー夕がこわれています
+セーブデー夕をつくりなおします"
+translated:
+"Save data is corrupted
+Recreate your save data"
+
+"初期化中です。
+電源を切らないでください。"
+translated:
+"Initializing.
+Do not turn off."
+
+"初期化が終ろしました。"
+translated:
+"Initialization finished."
+but then the app doesn't do anything, you can't interact with any buttons lol

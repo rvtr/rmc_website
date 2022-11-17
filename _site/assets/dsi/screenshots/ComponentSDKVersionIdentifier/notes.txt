@@ -1,0 +1,1 @@
+Only works on NAND, otherwise it will be an infinite loading screen.

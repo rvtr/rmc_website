@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>DSi Shop | rmc's site</title>
+    <title>DSi Shop Debug | rmc's site</title>
     <link rel="icon" type="image/png" href="/icon.png"/>
     <link rel="stylesheet" type="text/css" href="/assets/css/styledsi.css">
     <link id="pagestyle" rel="stylesheet" type="text/css" href="">
@@ -9,11 +9,11 @@
     <script src="/assets/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="/assets/js/main.js"></script>
     
-      <meta property="og:title" content="DSi Shop">
+      <meta property="og:title" content="DSi Shop Debug">
     
     <meta property="og:locale" content="en_US">
-    <meta name="description" content="DSi Shop | rmc's site">
-    <meta property="og:description" content="DSi Shop | rmc's site">
+    <meta name="description" content="DSi Shop Debug | rmc's site">
+    <meta property="og:description" content="DSi Shop Debug | rmc's site">
     <link rel="canonical" href="https://ianskinner1982.github.io">
     <meta property="og:url" content="https://ianskinner1982.github.io">
     <meta property="og:site_name" content="rmc's site">
@@ -285,28 +285,92 @@ body {
 </div>
 
     <div id="content-wrap">
-    <center>
-<iframe src="startup_u.html" width="256" height="192" style="border:0px solid black;">
-</iframe>
-<br>
-<iframe src="startup_d.html" width="256" height="192" style="border:0px solid black;">
-</iframe>
-</center>
-<div style="text-align:left;">
-<h2>This is an interactive demo of the developer DSi Shop.</h2>The developer DSi shop uses a modified version of the DSi Browser, and most of its content is local HTML/JS. Because the app is almost entirely HTML/JS, I was able to take the HTML pages from romfs and format them to work on your browser.<br><br>Sadly, many of the pages are missing- locked behind Nintendo's development servers or just straight up gone. I patched things up wherever possible, killing any dead links and linking to otherwise unlinked pages.<br>Features such as the console information and DSi specific operations are also missing/broken (as is to be expected when running a DSi app on a modern browser). I tried filling in the blanks where I could, but it still has a way to go.<br>If you want to help polish up the code, feel free to submit a PR <a href="https://github.com/IanSkinner1982/ianskinner1982.github.io/tree/master/dsidev/dsishop">here.</a><br>
-<h2>Download original app:</h2>
-I have found 3 different versions of this app. I am not sure what the specific differences between the apps are, though I will look into that.<br>
-I used the files from <i><b>shop.HNFC.Release.v1536</b></i> for my demo.
-<br><br>
-shop.HNFC.Release.v1536: <a href="https://archive.org/download/rmc-dsi/shop.HNFC.Release.v1536.srl">srl</a> | <a href="https://archive.org/download/rmc-dsi/shop.HNFC.Release.v1536.tad">tad</a><br>
+    <style>
+  .float-container {
+    border: 0px solid #fff;
+    font-size: 0;
+  }
 
-shop.HNFC.Release.14231: <a href="https://archive.org/download/rmc-dsi/shop.HNFC.Release.14231.srl">srl</a> | <a href="https://archive.org/download/rmc-dsi/shop.HNFC.Release.14231.tad">tad</a><br>
+  .float-child1 {
+    width: 40%;
+    height: 40%;
+    float: left;
+    padding: 1vw;
+  }
 
-shop.HNFC.Release.thumb: <a href="https://archive.org/download/rmc-dsi/shop.HNFC.Release.thumb.srl">srl</a> | <a href="https://archive.org/download/rmc-dsi/shop.HNFC.Release.thumb.tad">tad</a><br>
+  .float-child2 {
+    width: 20%;
+    height: 40%;
+    float: right;
+    padding: 1vw;
+  }
+</style>
+<div class="float-container">
+  <div class="float-child1">
+    <div class="container">
+      <div class="imageOne image">
+        <img src="/assets/dsi/widebarnoprompt_u.png" style="width:75vw;">
+        <img src="/assets/dsi/widepromptnobar.png" style="width:75vw;height:83vw;">
+        <img src="/assets/dsi/widebarnoprompt_d.png" style="width:75vw;">
+      </div>
+      <div class="othertext" style="width:73.5vw;">
+        <h1>DSi Shop Debug</h1>
+        This is a DSi Shop used for debugging.
+        <br>
+        The app features pages for downloading test programs/save data, testing all EC functions (ticket management,
+        <br>
+        All the info (along with an interactive web demo) has been placed <a href="dsishop/startup.html">here</a>.
+        <div style="text-align:center;"><h1>Screenshots:</h1>
 
-<br><br><span style="color:orange;">
-<i><b>shop.HNFC.Release.v1536.tad</b></i> is the only working version of the debug shop. It will only run if installed to NAND and booted via the home menu.<br>Using nds-bootstrap, unlaunch, or any similar apps will introduce problems like dead touch controls, a <b>293003</b> error, or cause the shop to whitescreen.</span>
-<br><br>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/NandSweeper/nandsweeper_sweep.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/NandSweeper/nandsweeper_dump.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div></div>
+      </div>
+    </div>
+    </ul>
+  </div>
+  <div class="float-child2">
+    <div class="container">
+      <div class="imageOne image">
+        <img src="/assets/dsi/thinbarnoprompt_u.png" style="width:20vw;">
+        <img src="/assets/dsi/thinpromptnobar.png" style="width:20vw;height:83vw;">
+        <img src="/assets/dsi/thinbarnoprompt_d.png" style="width:20vw;">
+      </div>
+      <div class="imageTwo">
+        <ul class="homeimg">
+          <div class="container">
+            <div class="imageTwo image2">
+              <img src="/assets/dsi/homemenu.png" class="homeimg">
+            </div>
+            <div class="imageThree image3">
+              <div class="hometext" style="padding-top: 2vw;padding-left: 2.9vw;">NINTENDO DSi™<br>Demonstration</div>
+              <!--padding-top 2vw and 2.7vw for two and one line banners, respectively-->
+              <div class="imageThree image3 homeicon">
+                <img src="/assets/dsi/icon/default.gif" width="13%" height="13%">
+              </div>
+            </div>
+            <div class="othertext" style="text-align:left;padding-top:25%;margin-left:-15%;">
+            <p>
+            <b>Source:</b><div style="font-size: 40px;font-size: 1vw;">Gigaleaks/platinum.7z/twl.7z/TwlToolsRED/tools/Mastering Batch File.zip/sample/NTRJ.srl</div><br>
+            <b>Downloads:</b>
+            <table class="othertexts" style="solid; width: 100%;font-size: 3px;font-size: 1vw;">
+            <tr>
+              <th><br>SRL</th>
+            </tr>
+            <tr>
+              <td><a href="https://archive.org/download/rmc-dsi/NandSweeper/NTRJ.srl">NTRJ</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://archive.org/download/rmc-dsi/NandSweeper/NTRJ-Secure.srl">NTRJ-Secure</a></td>
+            </tr>
+            </table>
+
+            </p>
+            </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 
     </div>

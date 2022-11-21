@@ -310,15 +310,38 @@ body {
     <div class="container">
       <div class="imageOne image">
         <img src="/assets/dsi/widebarnoprompt_u.png" style="width:75vw;">
-        <img src="/assets/dsi/widepromptnobar.png" style="width:75vw;height:98vw;">
+        <img src="/assets/dsi/widepromptnobar.png" style="width:75vw;height:347vw;">
         <img src="/assets/dsi/widebarnoprompt_d.png" style="width:75vw;">
       </div>
       <div class="othertext" style="width:73.5vw;">
-        <h1>Sytem Settings</h1>The majority of this info comes from TCRF, linked <a href="https://tcrf.net/Proto:Nintendo_DSi_System_Settings">here</a>. Go check them out, they're an amazing resource (but sadly no links there, which is why this exists).<br><br>Global controls:<br>L/R to change brightness, and START to reboot.
-        <h2>Version 5199</h2>The SDK 5199 version of System Settings is currently the earliest known build, and is found in the <code>TwlIPL</code><span style="color:red;">*</span>. It comes with the following settings<br><code> - Language</code>, lets you change your language<br><code> - Date & Time</code>, changes the date and time<br><code> - User Information</code>, lets you change your name, birthday, color, and message<br><code> - Touch Panel</code>, lets you calibrate the touch screen<br> <code>- Country</code>, lets you change your console's country<br><code> - Parental Control</code>, age restrict/pin lock games. This setting is missing page 3, and you can only select the ESRB for organization.<br><br><span style="color:red;">*I looked in TwlIPL and could only find the unversioned build. Either TCRF was wrong, or I missed it. Please let me know if you can find 5199 (ianskinner519@gmail.com).</span>
+        <h1>System Settings</h1>The majority of this info comes from TCRF, linked <a href="https://tcrf.net/Proto:Nintendo_DSi_System_Settings">here</a>. Go check them out, they're an amazing resource (but sadly no links there, which is why this exists).<br><br>Global controls:<br>L/R to change brightness, and START to reboot.
+        <h2>Version 5199</h2>The SDK 5199 version of System Settings is currently the earliest known build, and is found at <code>TwlIPL/trunk/bin/ARM9-TS/Release/forDebug/system.srl</code>. It comes with the following settings<br><code> - Language</code>, lets you change your language<br><code> - Date & Time</code>, changes the date and time<br><code> - User Information</code>, lets you change your name, birthday, color, and message<br><code> - Touch Panel</code>, lets you calibrate the touch screen<br> <code>- Country</code>, lets you change your console's country<br><code> - Parental Control</code>, age restrict/pin lock games. This setting is missing page 3, and you can only select the ESRB for organization.<br><br>
         <h2>Version 6291</h2>6291 is a big step down from 5199, and only comes with the following settings<br><code> - Language</code>, lets you change your language<br><code> - Date & Time</code>, changes the date and time<br><code> - User Information</code>, lets you change your name, birthday, color, and message<br><code> - Touch Panel</code>, lets you calibrate the touch screen<br><code> - Wireless</code>, lets you turn wireless communications on and off<br>
         <h2>Version 7739</h2>7739 is currently the most complete known build, and is found in the many unformatted DSi units. It is quite possibly left over from a factory install. It comes with the following settings<br><code> - Language</code>, lets you change your language<br><code> - Date & Time</code>, changes the date and time<br><code> - User Information</code>, lets you change your name, birthday, color, and message<br><code> - Touch Panel</code>, lets you calibrate the touch screen<br><code> - Wireless</code>, lets you turn wireless communications on and off<br><code> - Machine Clean Up</code>, formats the console<br><code>- Country</code>, lets you change your console's country<br><code> - Parental Control</code>, age restrict/pin lock games. This setting is missing page 3, and you can only select the ESRB for organization.<br><code> - EULA</code>, lets you agree or dissagree with the EULA, and set the agreed EULA version.<br><code> - Freesoft Box</code>, lets you change the number of free home menu slots. This feature does not seem to work properly, as the number is reset after the home menu is loaded.
-        <h2>Version ????</h2>This is an unversioned copy of System Settings from <code>TwlIPL/branches/20130304_launcher_save_app_tosd_Remodel/build/systemMenu_RED/MachineSettings/ARM9/bin/ARM9-TS.LTD.thumb/Release/</code>. It appears to be very similar to 7739, however it does not show the SDK/IPL version, and has graphical issues (screen flickering, and some text not displaying correctly).
+        <h2>Version ????</h2>This is an unversioned copy of System Settings found at <code>TwlIPL/branches/20130304_launcher_save_app_tosd_Remodel/build/systemMenu_RED/MachineSettings/ARM9/bin/ARM9-TS.LTD.thumb/Release/HNBE.tad</code>. It appears to be very similar to 7739, however it does not show the SDK/IPL version, and has graphical issues (screen flickering, and some text not displaying correctly). See the screenshots below for examples of those errors.
+        <div style="text-align:center;"><h1>Screenshots:</h1>
+
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/main.gif" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 36vw;"><img src="/assets/dsi/screenshots/MachineSettings/language_select.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+
+        <h3>The following two gifs show graphical bugs found in the app:</h3>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/glitch.gif" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/parental_control_glitch.gif" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/touch_panel_calibration.gif" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/user_info.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/color_select.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/color_select_1.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/eula.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/eula_yn.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/eula_ver.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/machine_clean_up.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/country_select.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/birthday.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/freesoft_box.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/freesoft_box_select.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/time_select.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/wireless.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div></div>
       </div>
     </div>
     </ul>
@@ -327,7 +350,7 @@ body {
     <div class="container">
       <div class="imageOne image">
         <img src="/assets/dsi/thinbarnoprompt_u.png" style="width:20vw;">
-        <img src="/assets/dsi/thinpromptnobar.png" style="width:20vw;height:98vw;">
+        <img src="/assets/dsi/thinpromptnobar.png" style="width:20vw;height:347vw;">
         <img src="/assets/dsi/thinbarnoprompt_d.png" style="width:20vw;">
       </div>
       <div class="imageTwo">
@@ -345,7 +368,7 @@ body {
             </div>
             <div class="othertext" style="text-align:left;padding-top:25%;margin-left:-15%;">
             <p>
-            <b>Source:</b><div style="font-size: 40px;font-size: 1vw;">Gigaleaks/platinum.7z/twl.7z/TwlIPL<br>TWL prototype units</div><br>
+            <b>Sources:</b><div style="font-size: 40px;font-size: 1vw;">- Gigaleaks/platinum.7z/twl.7z/TwlIPL<br>- TWL prototype and development units</div><br>
             <b>Downloads:</b>
             <table class="othertexts" style="solid; width: 100%;font-size: 3px;font-size: 1vw;">
             <tr>
@@ -355,6 +378,9 @@ body {
             <tr>
               <td><a href="https://archive.org/download/rmc-dsi/MachineSettings/HNBA.srl">????</a></td>
               <td><a href="https://archive.org/download/rmc-dsi/MachineSettings/HNBA.tad">????</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://archive.org/download/rmc-dsi/MachineSettings/HNBA.5199.srl">5199</a></td>
             </tr>
             <tr>
               <td><a href="https://archive.org/download/rmc-dsi/MachineSettings/HNBA.6291.srl">6291</a></td>
@@ -380,6 +406,8 @@ body {
     <div class="text-center p-3 align-items-center" style="font-size: 8px;">
         Copyright &copy; 2021-<span id="footerDate"></span> Ian M. Skinner <a href="/contactus" class="text-reset fw-bold">Contact me.</a>
     </div>
+    <!--<div align='center' hidden><a href='https://www.free-website-hit-counter.com'><img src='https://www.free-website-hit-counter.com/c.php?d=9&id=141120&s=39' border='0' alt='Free Website Hit Counter'></a><br / ><small><a href='https://www.free-website-hit-counter.com' title="Free Website Hit Counter">(page hits)</a></small></div>-->
+
 </footer>
 
   </footer>

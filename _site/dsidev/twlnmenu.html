@@ -310,12 +310,18 @@ body {
     <div class="container">
       <div class="imageOne image">
         <img src="/assets/dsi/widebarnoprompt_u.png" style="width:75vw;">
-        <img src="/assets/dsi/widepromptnobar.png" style="width:75vw;height:46vw;">
+        <img src="/assets/dsi/widepromptnobar.png" style="width:75vw;height:145vw;">
         <img src="/assets/dsi/widebarnoprompt_d.png" style="width:75vw;">
       </div>
       <div class="othertext" style="width:73.5vw;">
         <h1>TwlNmenu</h1>
 TwlNmenu is a title manager similar to DevMenu for 3DS. TwlNmenu can install programs in the TAD format, which is an installable format created by Nintendo, similar to the Wii's WADs.<h3>What's this "TAD" thing?</h3><i>"The installable format, TAD share many similarities to the WAD format, including the same offsets for title ID's and using the same devsign as WADs. A TAD can be resigned using Wii resigning tools and a RVL devkey. However, due to TwlNmenu's anti-tampering methods, the tool lets you not install resigned TAD files."</i> - <a href="https://wiki.raregamingdump.ca/index.php?title=TwlNmenu">RGDWiki</a><br><br>TADs are essentially SRLs (NDS ROMs) that have been packaged into an installable format. TAD files can be created with <code><a href="https://archive.org/download/rmc-dsi/maketad.exe">maketad.exe</a></code>, from the TwlSDK (<code>TwlSDK/tools/bin/maketad.exe</code>). Only apps that are installed to the <code>00030004</code> folder are able to be converted to TAD<h4 style="color:red;">Note: DO NOT install TADs on a retail DSi.</h4>Attempting to do so will just result in a <code>-2011</code> error, due to the TAD being unsigned. Resigning the TAD will not work as TwlNmenu protects against this. Additionally, <span style="color:red;">TwlNmenu will OVERWRITE WHAT IT'S TRYING TO INSTALL</span>, so if it fails, your apps may be deleted.<h3>How can I safely run a TAD?</h3>To run a TAD on retail hardware, you have to decrypt it and extract the SRL. You can use <a href="https://archive.org/download/rmc-dsi/decrypt_tad.py">this</a> python script to do so. Usage is <code>python3 decrypt_tad.py [path to file].tad</code><br>Rename the SRL to NDS, and it should work in emulators or on real hardware.
+
+        <div style="text-align:center;"><h1>Screenshots:</h1>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/TwlNmenu/twlnmenu_nand.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/TwlNmenu/twlnmenu_sd.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/TwlNmenu/twlnmenu_install.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/TwlNmenu/twlnmenu_2011.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);"></div></div>
       </div>
     </div>
     </ul>
@@ -324,7 +330,7 @@ TwlNmenu is a title manager similar to DevMenu for 3DS. TwlNmenu can install pro
     <div class="container">
       <div class="imageOne image">
         <img src="/assets/dsi/thinbarnoprompt_u.png" style="width:20vw;">
-        <img src="/assets/dsi/thinpromptnobar.png" style="width:20vw;height:46vw;">
+        <img src="/assets/dsi/thinpromptnobar.png" style="width:20vw;height:145vw;">
         <img src="/assets/dsi/thinbarnoprompt_d.png" style="width:20vw;">
       </div>
       <div class="imageTwo">
@@ -415,6 +421,8 @@ TwlNmenu is a title manager similar to DevMenu for 3DS. TwlNmenu can install pro
     <div class="text-center p-3 align-items-center" style="font-size: 8px;">
         Copyright &copy; 2021-<span id="footerDate"></span> Ian M. Skinner <a href="/contactus" class="text-reset fw-bold">Contact me.</a>
     </div>
+    <!--<div align='center' hidden><a href='https://www.free-website-hit-counter.com'><img src='https://www.free-website-hit-counter.com/c.php?d=9&id=141120&s=39' border='0' alt='Free Website Hit Counter'></a><br / ><small><a href='https://www.free-website-hit-counter.com' title="Free Website Hit Counter">(page hits)</a></small></div>-->
+
 </footer>
 
   </footer>

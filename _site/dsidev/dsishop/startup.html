@@ -293,9 +293,9 @@ body {
 </iframe>
 </center>
 <div style="text-align:left;">
-<h2>This is an interactive demo of the developer DSi Shop.</h2>The developer DSi shop uses a modified version of the DSi Browser, and most of its content is local HTML/JS. Because the app is almost entirely HTML/JS, I was able to take the HTML pages from romfs and format them to work on your browser.<br><br>Sadly, many of the pages are missing- locked behind Nintendo's development servers or just straight up gone. I patched things up wherever possible, killing any dead links and linking to otherwise unlinked pages.<br>Features such as the console information and DSi specific operations are also missing/broken (as is to be expected when you're running a DSi app on a PC). I tried filling in the blanks where I could, but it still has a way to go.<br>If you want to help polish up the code, feel free to submit a PR <a href="https://github.com/IanSkinner1982/ianskinner1982.github.io/tree/master/gaming/htmls">here.</a><br>
+<h2>This is an interactive demo of the developer DSi Shop.</h2>The developer DSi shop uses a modified version of the DSi Browser, and most of its content is local HTML/JS. Because the app is almost entirely HTML/JS, I was able to take the HTML pages from romfs and format them to work on your browser.<br><br>Sadly, many of the pages are missing- locked behind Nintendo's development servers or just straight up gone. I patched things up wherever possible, killing any dead links and linking to otherwise unlinked pages.<br>Features such as the console information and DSi specific operations are also missing/broken (as is to be expected when running a DSi app on a modern browser). I tried filling in the blanks where I could, but it still has a way to go.<br>If you want to help polish up the code, feel free to submit a PR <a href="https://github.com/IanSkinner1982/ianskinner1982.github.io/tree/master/dsidev/dsishop">here.</a><br>
 <h2>Download original app:</h2>
-I have found 3 different versions of this app. I am not sure what the differences between the apps are, though I will look into that.<br>
+I have found 3 different versions of this app. I am not sure what the specific differences between the apps are, though I will look into that.<br>
 I used the files from <i><b>shop.HNFC.Release.v1536</b></i> for my demo.
 <br><br>
 shop.HNFC.Release.v1536: <a href="https://archive.org/download/rmc-dsi/shop.HNFC.Release.v1536.srl">srl</a> | <a href="https://archive.org/download/rmc-dsi/shop.HNFC.Release.v1536.tad">tad</a><br>
@@ -304,10 +304,8 @@ shop.HNFC.Release.14231: <a href="https://archive.org/download/rmc-dsi/shop.HNFC
 
 shop.HNFC.Release.thumb: <a href="https://archive.org/download/rmc-dsi/shop.HNFC.Release.thumb.srl">srl</a> | <a href="https://archive.org/download/rmc-dsi/shop.HNFC.Release.thumb.tad">tad</a><br>
 
-<br><br>
-I have only gotten <i><b>shop.HNFC.Release.v1536.tad</b></i> to work. The other two versions produce a <b>293003</b> error (NAND install) or boot with broken touch controls (unlaunch & nds-bootstrap).
-<br>
-I have only gotten the first one to work on a DSi by installing it to NAND, but hiyaCFW may work as well (I haven't tested that yet). Using nds-bootstrap, unlaunch, or any similar apps will introduce the problems listed above, or cause the developer DSi Shop not to boot.
+<br><br><span style="color:orange;">
+<i><b>shop.HNFC.Release.v1536.tad</b></i> is the only working version of the debug shop. It will only run if installed to NAND and booted via the home menu.<br>Using nds-bootstrap, unlaunch, or any similar apps will introduce problems like dead touch controls, a <b>293003</b> error, or cause the shop to whitescreen.</span>
 <br><br>
 </div>
 
@@ -318,6 +316,8 @@ I have only gotten the first one to work on a DSi by installing it to NAND, but 
     <div class="text-center p-3 align-items-center" style="font-size: 8px;">
         Copyright &copy; 2021-<span id="footerDate"></span> Ian M. Skinner <a href="/contactus" class="text-reset fw-bold">Contact me.</a>
     </div>
+    <!--<div align='center' hidden><a href='https://www.free-website-hit-counter.com'><img src='https://www.free-website-hit-counter.com/c.php?d=9&id=141120&s=39' border='0' alt='Free Website Hit Counter'></a><br / ><small><a href='https://www.free-website-hit-counter.com' title="Free Website Hit Counter">(page hits)</a></small></div>-->
+
 </footer>
 
   </footer>

@@ -10,7 +10,7 @@ def generate_key(string):
     combine = key_hex + key_add
     return unhexlify(b"%032X" % combine)
 
-dsi_common_key = generate_key(b"00000000000000000000000000000000") # This does not seem to change the result of the program. Or if it does then I've just witnessed the most impossible event ever, where 10 sets of programs make with and without the common key all had identical SHA-256 hashes, all ran fine, all had everything in romfs working, and all had correct header info.
+dsi_common_key = generate_key(b"00000000000000000000000000000000") # This does not seem to change the result of the program. Or if it does then I've just witnessed the most impossible event ever, where 10 sets of programs made with and without the common key all had identical SHA-256 hashes, all ran fine, all had everything in romfs working, and all had correct header info, while still having data changed. With a one byte difference able to completely throw off the hash... no way this data isn't the same.
 wii_debug_key = generate_key(b"904F39596012A4189D7ADB21B705EB99")
 
 def align(val): #Tads have 64-byte alignment between sections

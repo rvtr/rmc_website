@@ -10,7 +10,7 @@ def generate_key(string):
     combine = key_hex + key_add
     return unhexlify(b"%032X" % combine)
 
-dsi_common_key = generate_key(b"9E0AE40596F6C109D934873DF3631750")
+dsi_common_key = generate_key(b"00000000000000000000000000000000")
 wii_debug_key = generate_key(b"904F39596012A4189D7ADB21B705EB99")
 
 def align(val): #Tads have 64-byte alignment between sections

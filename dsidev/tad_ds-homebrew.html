@@ -1,1 +1,54 @@
-Todo
+---
+title: EC file utility
+layout: dsiware
+---
+<style>
+  .float-container {
+    border: 0px solid #fff;
+    font-size: 0;
+  }
+
+  .float-child1 {
+    width: 40%;
+    height: 40%;
+    float: left;
+    padding: 1vw;
+  }
+
+  .float-child2 {
+    width: 20%;
+    height: 40%;
+    float: right;
+    padding: 1vw;
+  }
+</style>
+<div class="float-container">
+  <div class="float-child1">
+    <div class="container">
+      <div class="imageOne image">
+        <img src="/assets/dsi/widebarnoprompt_u.png" style="width:75vw;">
+        <img src="/assets/dsi/widepromptnobar.png" style="width:75vw;height:70vw;">
+        <img src="/assets/dsi/widebarnoprompt_d.png" style="width:75vw;">
+      </div>
+      <div class="othertext" style="width:73.5vw;">
+        <h2>What's this "TAD" thing?</h2>
+Not to be confused with the DSiWare <a href="https://problemkaputt.de/gbatek.htm#dsisdmmcdsiwarefilesonexternalsdcardbinakatadfiles">backup format,</a> TAD files are
+SRLs (DS programs) that have been packaged into an installable format. TADs are intended only for TwlNmenu (a title manager) on development/factory DSis and as such will only work on those. These share similarities with Wii WADs:<br><br>
+<i>"The installable format, TAD share many similarities to the WAD format, including the same offsets for title ID's and using the same devsign as WADs. A TAD can be resigned using Wii resigning tools and a RVL devkey. However, due to TwlNmenu's anti-tampering methods, the tool lets you not install resigned TAD files."</i> - <a href="https://wiki.raregamingdump.ca/index.php?title=TwlNmenu">RGDWiki</a>
+<br>
+<h2>How do I install a TAD?</h2>
+The only way to install a TAD directly is to use a developer DSi, real or emulated (there is a workaround for retail below). If you have one, open TwlNmenu and select your TADs from the SD card tab.
+<h4 style="color:red;">DO NOT install TADs on a retail DSi.</h4>Attempting to do so will just result in a <code>-2011</code> error, due to the TAD being signed for a developer unit. Resigning the TAD to retail will not work as TwlNmenu protects against this. Additionally, <span style="color:red;">TwlNmenu will OVERWRITE WHAT IT'S TRYING TO INSTALL</span>, so if it fails, your apps may be deleted.
+<h2>How can I safely run a TAD?</h2>
+To run a TAD on retail hardware, you have to decrypt it and extract the SRL. You can use <a href="https://archive.org/download/rmc-dsi/decrypt_tad.py">this</a> python script to do so. Usage is <code>python3 decrypt_tad.py [path to file].tad</code>
+<br>Rename the SRL to NDS, and it should work in emulators or on real hardware.
+<h2>How do I made a TAD?</h2>
+
+TAD files can be created with the command line tool <code>maketad.exe</code>, from the TwlSDK ( <code>TwlSDK/tools/bin/maketad.exe</code>). Only apps that are installed to the <code>00030004</code> (DSiWare) folder are able to be converted to the TAD format.<br><!--Note: makesrl.exe cannot be used to convert TADs back to SRL. This instead packages the TAD into and SRL-->
+        <div style="text-align:center;"><h1>Screenshots:</h1>
+
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/ecConfigView/ecconfigview.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div></div>
+      </div>
+    </div>
+  </div>
+  </div>

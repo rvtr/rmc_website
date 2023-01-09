@@ -1,0 +1,166 @@
+---
+title: DS Prototype Firmware
+layout: dsiware
+---
+<style>
+  .float-container {
+    border: 0px solid #fff;
+    font-size: 0;
+  }
+
+  .float-child1 {
+    width: 40%;
+    height: 40%;
+    float: left;
+    padding: 1vw;
+  }
+
+  .float-child2 {
+    width: 20%;
+    height: 40%;
+    float: right;
+    padding: 1vw;
+  }
+</style>
+<div class="float-container">
+  <div class="float-child1">
+    <div class="container">
+      <div class="imageOne image">
+        <img src="/assets/dsi/widebarnoprompt_u.png" style="width:75vw;">
+        <img src="/assets/dsi/widepromptnobar.png" style="width:75vw;height:83vw;">
+        <img src="/assets/dsi/widebarnoprompt_d.png" style="width:75vw;">
+      </div>
+      <div class="othertext" style="width:73.5vw;">
+        <span style="color:red;"><b>Note that there is a chance of bricking your console.</b></span> In addition, this will <span style="color:red;"><b>permanently break all wireless communications</b></span>, and may prevent some games from running. I am not liable for any damage caused through this guide. By following this guide, you accept that you, and you alone, are responsible for anything that happens to your console.
+
+<!-- all this is because I didn't want to make my "style.css" messier... maybe I should've just worked on that lmao -->
+<h2>Compatibility:</h2>
+<table style="font-family: arial, sans-serif;border-collapse: collapse;width: 100%;">
+  <tr style="border: 1px solid #dddddd;text-align: left;padding: 8px;">
+    <th></th>
+    <th style="border: 1px solid #dddddd;text-align: left;padding: 8px;">
+      040615
+    </th>
+    <th style="border: 1px solid #dddddd;text-align: left;padding: 8px;">
+      40820D
+    </th>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">
+      <b>DS Lite</b>
+    </td>
+    <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">
+      <span style="color:green;">Works</span>
+    </td>
+    <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">
+      <span style="color:orange;">Has issues*</span>
+    </td>
+  </tr>
+  <tr style="border: 1px solid #dddddd;text-align: left;padding: 8px;">
+    <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">
+      <b>DS Phat</b>
+    </td>
+    <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">
+      <span style="color:green;">Works</span>
+    </td>
+    <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">
+      <span style="color:grey;">Untested</span>
+    </td>
+  </tr>
+</table>
+<span style="color:orange;">*</span>the firmware itself runs fine, but the
+touchscreen won't work in games. Can be fixed by flashing a different firmware
+<h3>Requirements</h3>
+<ul>
+  <li>Flashcart</li>
+  <li>DS phat or DS lite</li>
+  <li>Screwdriver or tinfoil</li>
+  <li>
+    <a href="#">FlashMe</a>
+    <b>(I haven't tested this guide with flashme, but it should provide a layer of
+      brick protection)</b>
+  </li>
+</ul>
+<h3>Setup</h3>
+<ol type="1">
+  <li>
+    Download the <code><a href="#">040615</a></code> or <code><a href="#">40820D</a></code> prototype firmware.
+  </li>
+  <li>
+    There should be a <code>.bin</code> file in your downloaded firmware. Extract it and rename it to
+    <code>cfw.bin</code>.
+  </li>
+  <li>
+    Create a folder on the root of your flashcart's SD card called
+    <code>firmwares</code> and copy <code>cfw.bin</code> to that.
+  </li>
+<br>
+  <li>
+    Download <code><a href="#">fwManager.zip</a></code><span style="color:red">*</span> at the
+    bottom of this guide. (this is the tool we'll use to flash the firmware)
+  </li>
+  <li>
+    Extract <code>fwManager.nds</code> from <code>fwManager.zip</code> and copy it to the
+    root of your flashcart's SD card.
+  </li>
+</ol>
+<h3>Installation</h3>
+<ol type="1">
+  <li>
+    Launch your flashcart on your DS, then run <code>fwManager.nds</code>. Follow the
+    on screen instructions, but don't start writing to the console!
+  </li>
+  <li>
+    If you were start writing, you'd notice that nothing happens. This is
+    because the console memory is write protected. To disable it, open up the
+    battery cover. (see images in spoiler below)
+  </li>
+</ol>
+<div style="text-align:center;">
+<img src="https://cdn.discordapp.com/attachments/722604350320672778/1052683699365355611/SL1-phat.png" style="width:36%;height:auto;">
+<img src="https://cdn.discordapp.com/attachments/722604350320672778/1052985353079881728/image.png" style="width:50.4%;height:auto;">
+</div><br>
+<span style="color:red"><b>WARNING: Make sure to not short a DS Lite (can happen by touching the metal
+    point right next to<code>SL1</code>). Use an improvised tool that is insulated to the
+    sides and only leaves metal exposed at the tip.
+    <span class="bbcode-size-14">(thanks KleinesSinchen)</span></b></span>
+<ol>
+  3. Locate the <code>SL1</code> pin. You'll notice there are two metal pads that make up the <code>SL1</code>. We need to bridge them (connect them together). This can be done by holding a small flathead screwdriver (or another metallic material) to both pads.
+</ol>
+
+<span style="color:red"><b>ANOTHER WARNING: DO NOT remove the battery at any time during writing. You will BRICK YOUR CONSOLE (see the green text below for unbricking)</b></span>
+
+<ol>
+4. Once bridged, you may start writing. You must keep <code>SL1</code> bridged for the
+entire writing process.
+<br>
+5. When the writing is complete, unbridge <code>SL1</code> and
+reboot the console.
+</ol>
+Your console should now boot to the prototype firmware (it
+may take a couple seconds to load). If your console does not boot after a long
+period of time, you've likely bricked it. But don't worry,
+<span style="color:green"><b>YOU CAN UNBRICK YOUR CONSOLE!</b></span> Refer to
+<a href="https://gbatemp.net/blogs/i-fixed-a-ds-lite-with-another-ds-lite.15450/#ubs-comment-200532">this</a> blog entry for info on how to restore a bricked DS. It's pretty easy to do.
+<br>
+<div style="text-align:center;">
+<img src="https://cdn.discordapp.com/attachments/900463024966627329/1052952950558965830/image.png" style="width:49%;height:auto;">
+<img src="https://gbatemp.net/attachments/1671901496644-png.344202/" style="width:47.45%;height:auto;">
+</div>
+<br>
+<span style="color:red">*</span>I only included a compiled version because the
+original creator required you to build everything yourself. Credits go to them
+for creating the flashing tool
+<a href="https://github.com/CTurt/CFW-Suite">https://github.com/CTurt/CFW-Suite</a>
+<br><br>
+Guide written by <a href="https://github.com/IanSkinner1982/">IanSkinner1982/rmc</a> on 2022/12/24.
+<br>Huge thanks to KleinesSinchen on GBAtemp for helping to improve this guide!
+ 
+        <div style="text-align:center;">
+
+      </div>
+    </div>
+    </ul>
+  </div>
+</div>
+</div>

@@ -6,10 +6,18 @@
   font-family: dsifont-bios;
   src: url(/assets/dsi/nintendo-DS-BIOS.ttf);
 }
+@font-face {
+  font-family: dsifont-special;
+  src: url(/assets/dsi/NITROIPL_Gaiji.ttf);
+}
 body {
   font-family: dsifont;
 }
 code {
   font-family: dsifont-bios;
+  font-size: 1.5vw;
+}
+special {
+  font-family: dsifont-special;
   font-size: 1.5vw;
 }

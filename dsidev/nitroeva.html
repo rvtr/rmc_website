@@ -1,0 +1,156 @@
+---
+title: Nitro EVA
+layout: dsiware
+---
+<style>
+  .float-container {
+    border: 0px solid #fff;
+    font-size: 0;
+  }
+
+  .float-child1 {
+    width: 40%;
+    height: 40%;
+    float: left;
+    padding: 1vw;
+  }
+
+  .float-child2 {
+    width: 20%;
+    height: 40%;
+    float: right;
+    padding: 1vw;
+  }
+</style>
+<div class="float-container">
+  <div class="float-child1">
+    <div class="container">
+      <div class="imageOne image">
+        <img src="/assets/dsi/widebarnoprompt_u.png" style="width:75vw;">
+        <img src="/assets/dsi/widepromptnobar.png" style="width:75vw;height:240vw;">
+        <img src="/assets/dsi/widebarnoprompt_d.png" style="width:75vw;">
+      </div>
+      <div class="othertext" style="width:73.5vw;">
+        <h1>Nitro EVA</h1>
+        Nitro EVA, commonly known at NTR Aging, is a program to test and diagnose issues with DS consoles right off the assembly line. Nitro EVA has been used to test 3 generations of DS consoles (DS phat, DS lite, 3DS), with some small modifications between each version. The following is a list of each dumped version along with the console it was made for:<br>
+       <code> - v1.0, v5.1, v6.0</code> (used to test the DS phat)<br>
+       <code> - v8.0, v9.0, v10.0</code> (used to test the DS lite)<br>
+       <code> - v11.0, v11.1</code> (used to test the 3DS)<br>
+        <h2>Test list</h2>
+        This is a list of the tested that can be accessed from Nitro EVA's menu. The tests are categorized by which menu they are available in.<br>
+<b><code>EVALUATION MENU:</code></b><br>
+<code> - CPU</code>, Unkown Purpose<br>
+<code> - MIC</code>,Microphone tests and sampler<br>
+<code> - LCD</code>, Displays colored bars to test top screen<br>
+<code> - LCD-2</code>, Displays images to test top screen<br>
+<code> - ROM HEADER</code>, Display cartridge header info<br>
+<code> - KEY</code>, Displays button input values<br>
+<code> - EMI DEMO</code>, Model and rendering tests (need to confirm)<br>
+<code> - NTR CONFIG</code>, Displays the current system settings<br>
+<code> - 2D(MAIN)</code>, Displays images from list to top screen<br>
+<code> - 2D(SUB)</code>, Displays images from list to bottom screen<br>
+<code> - 2D(VC)</code>, Diplays images from 2D(MAIN/SUB) in sequential order<br>
+<code> - PMIC</code>, Tests power and backlight controls<br>
+<code> - KINSOKU CHK</code>, Graphical button tester<br>
+<code> - KEY TEST</code>, Displays button input values<br><br>
+
+<b><code> TEST PROGRAM:</code></b><br>
+<code> - SELF CHECKER</code>, Run full test on system<br>
+<code> - AGING</code>, Run full test on system<br>
+<code> - FLICKER ADJUSTER</code>, Displays thin bars, which cause flickering, to see if screens need to be adjusted<br>
+<code> - LCD UNIT CHECKER</code>, Displays thin bars, which cause flickering, to see if screens need to be adjusted<br>
+<code> - TP CALIBRATION</code>, Calibrates touch screen<br>
+<code> - TP ACCURACY</code>, Tests touch screen calibration<br>
+<code> - TEST TP JIG</code>, Tests touch screen calibration<br>
+<code> - IPL2 REWRITE</code>, Rewrites or sets system settings<br><br>
+
+<b><code>MISC MENU:</code></b><br>
+<code> - Test Screen</code>, Displays colored bars to test top screen<br>
+<code> - Test Sound</code>, Plays music and sound effects<br>
+<code> - Swap Display</code>, Swap bottom and top screens<br>
+<code> - Test Button</code>, Displays button input values<br>
+<code> - Test Nvram</code>, Reads and writes system settings<br>
+<code> - Dump Eeprom</code>, Displays a hex dump of the cartridge, and allows basic hex editing<br>
+<code> - TP Linearity</code>, Tests touch screen calibration<br>
+
+        <h2>Additional info</h2>
+         - Version 1.0 does not appear to have a menu to select specific tests, and attempting to exit to the menu will just turn the console off.<br>
+         - The Nitro EVA UI was used in many other test programs, such as <a href="/dsidev/mictester.html">Mic Tester</a>.
+        <div style="text-align:center;"><h1>Screenshots:</h1>
+        TODO
+
+  </div>
+      </div>
+    </div>
+    </ul>
+  </div>
+  <div class="float-child2">
+    <div class="container">
+      <div class="imageOne image">
+        <img src="/assets/dsi/thinbarnoprompt_u.png" style="width:20vw;">
+        <img src="/assets/dsi/thinpromptnobar.png" style="width:20vw;height:240vw;">
+        <img src="/assets/dsi/thinbarnoprompt_d.png" style="width:20vw;">
+      </div>
+      <div class="imageTwo">
+        <ul class="homeimg">
+          <div class="container">
+            <div class="imageTwo image2">
+              <img src="/assets/dsi/homemenu.png" class="homeimg">
+            </div>
+            <div class="imageThree image3">
+              <div class="hometext" style="padding-top: 2vw;padding-left: 2.9vw;">NINTENDO DS™<br>Demonstration</div>
+              <!--padding-top 2vw and 2.7vw for two and one line banners, respectively-->
+              <div class="imageThree image3 homeicon">
+                <img src="/assets/dsi/icon/default.png" width="13%" height="13%">
+              </div>
+            </div>
+            <div class="othertext" style="text-align:left;padding-top:25%;margin-left:-15%;">
+            <p>
+            <b>Source:</b><div style="font-size: 40px;font-size: 1vw;">Foxconn factories</div><br>
+            <b>Downloads:</b>
+            <table class="othertexts" style="solid; width: 100%;font-size: 3px;font-size: 1vw;">
+            <tr>
+              <th><br>SRL</th>
+            </tr>
+            <tr>
+              <td><a href="https://archive.org/download/rmc-dsi/Nitro%20EVA%20%28NTR%29/Nitro%20EVA%20%28NTR%29%20v1.0.nds">v1.0</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://archive.org/download/rmc-dsi/Nitro%20EVA%20%28NTR%29/Nitro%20EVA%20%28NTR%29%20v5.1.nds">v5.1</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://archive.org/download/rmc-dsi/Nitro%20EVA%20%28NTR%29/Nitro%20EVA%20%28NTR%29%20v6.0.nds">v6.0</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://archive.org/download/rmc-dsi/Nitro%20EVA%20%28USG%29/Nitro%20EVA%20%28USG%29%20v8.0.nds">v8.0</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://archive.org/download/rmc-dsi/Nitro%20EVA%20%28USG%29/Nitro%20EVA%20%28USG%29%20V9.0.nds">v9.0</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://archive.org/download/rmc-dsi/Nitro%20EVA%20%28USG%29/Nitro%20EVA%20%28USG%29%20v10.0.nds">v10.0</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://archive.org/download/rmc-dsi/Nitro%20EVA%20%28CTR%29/Nitro%20EVA%20%28CTR%29%20v11.0.nds">v11.0</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://archive.org/download/rmc-dsi/Nitro%20EVA%20%28CTR%29/Nitro%20EVA%20%28CTR%29%20v11.1.nds">v11.1</a></td>
+            </tr>
+
+            </table>
+
+            </p>
+            </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+

@@ -154,6 +154,10 @@
 <loc>http://localhost:4000/programs/xware.html</loc>
 </url>
 <url>
+<loc>http://localhost:4000/counter.html</loc>
+<lastmod>2023-02-15T19:16:50-05:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/dsidev/dsishop/NCL/ec/ec_deviceInfo_d.html</loc>
 <lastmod>2023-02-12T19:00:15-05:00</lastmod>
 </url>

@@ -1,5 +1,11 @@
 /* ---- common style ------------------------------- */
-
+@font-face {
+  font-family: dsifont;
+  src: url(/assets/dsi/nintendo_NTLGDB_001.ttf);
+}
+html * {
+  font-family: dsifont;
+}
 body {
 	margin  : 0 0 0 0;
 	padding : 0;

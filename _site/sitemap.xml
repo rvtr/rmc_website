@@ -28,7 +28,13 @@
 <loc>http://localhost:4000/contactus.html</loc>
 </url>
 <url>
+<loc>http://localhost:4000/dsidev/guide/ds-ique-firmware.html</loc>
+</url>
+<url>
 <loc>http://localhost:4000/dsidev/guide/ds-prototype-firmware.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/dsidev/guide/ds-wifi-board.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/dsidev/dsgamecardtosd.html</loc>

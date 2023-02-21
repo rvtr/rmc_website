@@ -7,3 +7,15 @@ plugins:
   - jekyll-seo-tag
 feed:
   posts_limit: 20
+  # Exclude  all files from `pages` in sitemap
+
+
+
+
+
+
+
+
+
+
+

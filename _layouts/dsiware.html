@@ -18,7 +18,8 @@
     <meta property="og:locale" content="en_US">
     <meta name="description" content="{{ page.title }} | {{ site.title }}">
     <meta property="og:description" content="{{ page.title }} | {{ site.title }}">
-    <meta property="og:url" content="https://ianskinner1982.github.io">
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
+    <meta property="og:url" content="https://ianskinner1982.github.io{{ page.url | replace:'index.html','' }}">
     <meta property="og:site_name" content="rmc's site">
     {% if page.custicon == true %}
       <meta property="og:image" content="{{ page.iconurl }}">

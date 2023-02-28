@@ -27,35 +27,41 @@ layout: dsiware
     <div class="container">
       <div class="imageOne image">
         <img src="/assets/dsi/widebarnoprompt_u.png" style="width:75vw;">
-        <img src="/assets/dsi/widepromptnobar.png" style="width:75vw;height:240vw;">
+        <img src="/assets/dsi/widepromptnobar.png" style="width:75vw;height:285vw;">
         <img src="/assets/dsi/widebarnoprompt_d.png" style="width:75vw;">
       </div>
       <div class="othertext" style="width:73.5vw;">
         <h1>F-WRITER</h1>
-        F-WRITER is used to flash Korean firmware onto NDS lites in the factories. This program features a UI similar to that of <a href="/dsidev/nitroeva.html">NTR Aging/Nitro EVA</a>. It comes with 4 major tests:
-<br><code> - SOUND</code>, Plays some simple sound effects and music to test the speakers
-<br><code> - NVRAM</code>, Reads and writes system settings
-<br><code> - PMIC</code>, Tests power and backlight controls
-<br><code> - IPL2 REWRITE</code>, Flashes Korean firmware to the DS lite
-<br><code> - USER INFO SET</code>, Sets the system settings to factory
-<br><code> - NTR CONFIG</code>, Displays the current system settings
-<br><br>This also comes with the standard NTR Aging tests like:
-<br><code> - Reception</code>
-<br><code> - COMM TEST</code>
-<br><code> - Port Checker</code>
-<br><code> - ROM HEADER</code>, Display cartridge header info
+        F-WRITER is used to flash Korean firmware<span style="color:red;">*</span> onto DS  lites in the factories. This program features a UI similar to that of <a href="/dsidev/nitroeva.html">NTR Aging/Nitro EVA</a>. It comes with the following tests:<br><br>
 
-        <h2>2008/12/01:</h2>
-        This later version has had nearly  feature stripped, with the exception of <code>SPEAKER TESTER</code>. It does not have the NTR Aging styled menu or any of the tests mentioned above.
+<b><code>EVALUATION MENU:</code></b><br>
+<code> - SOUND</code>, Plays some simple sound effects and music to test the speakers
+<br><code> - NVRAM</code>, Reads and writes system settings, and displays WiFi board + firmware  info
+<br><code> - PMIC</code>, Tests power and backlight controls<br><br>
+
+<b><code>TEST PROGRAM:</code></b><br>
+<code> - IPL2 REWRITE</code>, Flashes and sets up the Korean firmware on the DS lite
+<br><code> - USER INFO SET</code>, Sets the system settings to factory default<br><br>
+
+<b><code>EVALUATION MENU:</code></b><br>
+<code> - NTR CONFIG</code>, Displays the current system settings
+<br><code> - ROM HEADER</code>, Display cartridge header info<br>
+
+        <h2>Additional info</h2>
+         - A truncated version of the Korean firmware can be found in the ROM at <code>nitro:/Ipl2/link/USG_0611092130</code>. The build is dated 2006/11/09 21:30 (YYYY/MM/DD).<br>
+- <span style="color:red;">*</span>there may be other F-WRITER versions for other regions, however only the Korean version is known.
 
         <div style="text-align:center;"><h1>Screenshots:</h1>
-        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/Mic Tester/Mic Tester 20081201 - Speaker Checker.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
-        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/Mic Tester/Mic Tester 20070507_v4.0 - Speaker Checker.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
-        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/Mic Tester/Mic Tester 20070507_v4.0 - Speaker Checker START.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
-        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/Mic Tester/Mic Tester 20070507_v4.0 - Speaker Checker OK.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
-        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/Mic Tester/Mic Tester 20070507_v4.0 - Mic Test SWITCH PROMPT.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
-        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/Mic Tester/Mic Tester 20070507_v4.0 - Sound Test.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
-        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/Mic Tester/Mic Tester 20070507_v4.0 - Mic Test NG.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/F-WRITER/F-WRITER - Main Menu.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/F-WRITER/F-WRITER - Evaluation Menu - Nvram.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/F-WRITER/F-WRITER - Test Program - Ipl2 Rewrite.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/F-WRITER/F-WRITER - Test Program - Ipl2 Rewrite Overwrite.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/F-WRITER/F-WRITER - Test Program - Ipl2 Rewrite NG.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/F-WRITER/F-WRITER - Test Program - User Info Set.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/F-WRITER/F-WRITER - Test Program - User Info Set OK.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/F-WRITER/F-WRITER - Checker Menu - Set Sequence.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/F-WRITER/F-WRITER - Checker Menu - Configuration.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/F-WRITER/F-WRITER - Test Program - Ipl2 Rewrite Writing.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
 
   </div>
       </div>
@@ -66,7 +72,7 @@ layout: dsiware
     <div class="container">
       <div class="imageOne image">
         <img src="/assets/dsi/thinbarnoprompt_u.png" style="width:20vw;">
-        <img src="/assets/dsi/thinpromptnobar.png" style="width:20vw;height:240vw;">
+        <img src="/assets/dsi/thinpromptnobar.png" style="width:20vw;height:285vw;">
         <img src="/assets/dsi/thinbarnoprompt_d.png" style="width:20vw;">
       </div>
       <div class="imageTwo">
@@ -84,17 +90,14 @@ layout: dsiware
             </div>
             <div class="othertext" style="text-align:left;padding-top:25%;margin-left:-15%;">
             <p>
-            <b>Source:</b><div style="font-size: 40px;font-size: 1vw;">Unknown: Retrieved from forestofillusion website. No information on origin was released.</div><br>
+            <b>Source:</b><div style="font-size: 40px;font-size: 1vw;">Nintendo factories</div><br>
             <b>Downloads:</b>
             <table class="othertexts" style="solid; width: 100%;font-size: 3px;font-size: 1vw;">
             <tr>
               <th><br>SRL</th>
             </tr>
             <tr>
-              <td><a href="https://archive.org/download/rmc-dsi/Mic%20Tester/Mic%20Tester%20v4.0.nds">2007/05/07 (v4)</a></td>
-            </tr>
-            <tr>
-              <td><a href="https://archive.org/download/rmc-dsi/Mic%20Tester/Mic%20Tester%2020081201.nds">2008/12/01</a></td>
+              <td><a href="https://archive.org/download/rmc-dsi/F-WRITER/F-WRITER%20v1.0.nds">v1.0k</a></td>
             </tr>
             </table>
 

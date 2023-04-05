@@ -1,3 +1,6 @@
+// The following is a list of Nintendo DS cartridges with 512kb save chips. These chips can be taken from shovelware games to fix good ones, used to create an iQue DS firmware mod, or just to satisfy that guilty pleasure of mutilating a cartridge...
+// These chips appear to be M25PE40s.
+
 America's Test Kitchen - Let's Get Cooking
 Body Support Institute Diabetes
 DS Training for Adults Who Are Not Good at English - Eigo Zuke

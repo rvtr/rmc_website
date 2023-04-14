@@ -1,5 +1,5 @@
 ---
-title: DS Prototype Firmware
+title: DS lite iQue Firmware
 layout: dsiware
 ---
 <style>
@@ -27,149 +27,167 @@ layout: dsiware
     <div class="container">
       <div class="imageOne image">
         <img src="/assets/dsi/widebarnoprompt_u.png" style="width:95.5vw;">
-        <img src="/assets/dsi/widepromptnobar.png" style="width:95.5vw;height:172vw;">
+        <img src="/assets/dsi/widepromptnobar.png" style="width:95.5vw;height:452vw;">
         <img src="/assets/dsi/widebarnoprompt_d.png" style="width:95.5vw;">
       </div>
       <div class="othertext" style="width:93vw;">
-        <h1>Flashing DS prototype firmware to real hardware</h1>
-        <span style="color:red;"><b>Note that there is a chance of bricking your console.</b></span> In addition, this will <span style="color:red;"><b>permanently break all wireless communications</b></span>, and may prevent some games from running. I am not liable for any damage caused through this guide. By following this guide, you accept that you, and you alone, are responsible for anything that happens to your console.
+<h1>How to install iQue firmware on a non-iQue DS lite</h1>
 
-<!-- all this is because I didn't want to make my "style.css" messier... maybe I should've just worked on that lmao -->
-<h3>Compatibility:</h3>
-<table style="font-family: arial, sans-serif;border-collapse: collapse;width: 100%;">
-  <tr style="border: 1px solid #dddddd;text-align: left;padding: 8px;">
-    <th></th>
-    <th style="border: 1px solid #dddddd;text-align: left;padding: 8px;">
-      040615
-    </th>
-    <th style="border: 1px solid #dddddd;text-align: left;padding: 8px;">
-      40820D
-    </th>
-    <th style="border: 1px solid #dddddd;text-align: left;padding: 8px;">
-      X2B
-    </th>
-  </tr>
-  <tr>
-    <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">
-      <b>DS Lite</b>
-    </td>
-    <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">
-      <span style="color:green;">Works</span>
-    </td>
-    <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">
-      <span style="color:orange;">Has issues*</span>
-    </td>
-    <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">
-      <span style="color:green;">Works</span>
-    </td>
-  </tr>
-  <tr style="border: 1px solid #dddddd;text-align: left;padding: 8px;">
-    <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">
-      <b>DS Phat</b>
-    </td>
-    <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">
-      <span style="color:green;">Works</span>
-    </td>
-    <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">
-      <span style="color:grey;">Untested</span>
-    </td>
-    <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">
-      <span style="color:grey;">Untested</span>
-    </td>
-  </tr>
-</table>
-<span style="color:orange;">*</span>the firmware itself runs fine, but the
-touchscreen won't work in games. Can be fixed by flashing a different firmware
-<h3>Requirements</h3>
-<ul>
-  <li>Flashcart</li>
-  <li>DS phat or DS lite</li>
-  <li>Screwdriver or tinfoil</li>
-  <li>
-    <a href="https://web.archive.org/web/20141203031524/https://home.comcast.net/~olimar/flashme/">FlashMe</a>
-    <b>(I haven't tested this guide with flashme, but it should provide a layer of
-      brick protection)</b>
-  </li>
-</ul>
-<h3>Setup</h3>
-<ol type="1">
-  <li>
-    Download the <code><a href="/assets/dsi/proto-firm-040615.zip">040615</a></code>, <code><a href="/assets/dsi/proto-firm-40820D.zip">40820D</a></code>, or <code><a href="/assets/dsi/proto-firm-X2B.zip">X2B</a></code> prototype firmware.
-  </li>
-  <li>
-    There should be a <code>.bin</code> file in your downloaded firmware. Extract it and rename it to
-    <code>cfw.bin</code>.
-  </li>
-  <li>
-    Create a folder on the root of your flashcart's SD card called
-    <code>firmwares</code> and copy <code>cfw.bin</code> to that.
-  </li>
-<br>
-  <li>
-    Download <code><a href="/assets/dsi/fwManager.zip">fwManager.zip</a></code><span style="color:red">*</span> at the
-    bottom of this guide. (this is the tool we'll use to flash the firmware)
-  </li>
-  <li>
-    Extract <code>fwManager.nds</code> from <code>fwManager.zip</code> and copy it to the
-    root of your flashcart's SD card.
-  </li>
-</ol>
-<h3>Installation</h3>
-<ol type="1">
-  <li>
-    Launch your flashcart on your DS, then run <code>fwManager.nds</code>. Follow the
-    on screen instructions, but don't start writing to the console!
-  </li>
-  <li>
-    If you were start writing, you'd notice that nothing happens. This is
-    because the console memory is write protected. To disable it, open up the
-    battery cover. (see below images)
-  </li>
-</ol>
-<div style="text-align:center;">
-<img src="/assets/dsi/SL1-phat.png" style="width:36%;height:auto;">
-<img src="/assets/dsi/SL1-lite.png" style="width:50.4%;height:auto;">
-</div><br>
-<span style="color:red"><b>WARNING: Make sure to not short a DS Lite</span> (this can happen by touching the metal
-    point contacts right next to <code>SL1</code>). Use an improvised tool that is insulated to the
-    sides and only leaves metal exposed at the tip.</b>
-<ol>
-  3. Locate the <code>SL1</code> pin. You'll notice there are two metal pads that make up the <code>SL1</code>. We need to bridge them (connect them together). This can be done by holding a small flathead screwdriver (or another metallic material) to both pads.
-</ol>
-
-<span style="color:red"><b>ANOTHER WARNING: DO NOT remove the battery at any time during writing.</span> You will BRICK YOUR CONSOLE (see the green text below for unbricking)</b>
-
-<ol>
-4. Once bridged, you may start writing. You must keep <code>SL1</code> bridged for the
-entire writing process.
-<br>
-5. When the writing is complete, unbridge <code>SL1</code> and
-reboot the console.
-</ol>
-Your console should now boot to the prototype firmware (it
-may take a couple seconds to load). If your console does not boot after a long
-period of time, you've likely bricked it. But don't worry,
-<span style="color:green"><b>YOU CAN UNBRICK YOUR CONSOLE!</b></span> Refer to
-<a href="https://gbatemp.net/blogs/i-fixed-a-ds-lite-with-another-ds-lite.15450/#ubs-comment-200532">this</a> blog entry for info on how to restore a bricked DS.
+This guide will walk you through turning your world region DS lite into an iQue DS. You will do this by writing to and replacing a flash chip inside the WiFi board. The WiFi board can be removed and replaced with a non-iQue one at any time, restoring your console to “normal” firmware.
 <br><br>
-<div style="text-align:center;">
-<img src="/assets/dsi/proto-firm-40820D.png" style="width:49%;height:auto;">
-<img src="/assets/dsi/proto-firm-040615.png" style="width:47.45%;height:auto;">
+<b><span style="color:green;">This guide also works for installing korean firmware.</span></b> Please note that there isn't much use to installing korean or iQue firmware, besides being able to brag about having done this mod...
+<br><br>
+<b><span style="color:red;">THIS GUIDE WAS WRITTEN FOR DS LITE ONLY!</span></b> (this can be done with phat models but the WiFi boards are harder to remove and impossible to find replacement parts for, making this risky if you brick. I can provide assistance below for phats, but please don't ask for a proper guide...)
+
+<h3>Prerequisites:</h3>
+<ol>
+- a soldering iron and flux<br>
+- a DS lite WiFi board<br>
+- a DS cartridge with a 512kb flash save (see <a href="/assets/dsi/titles_with_512.txt">this list</a> for compatible donor carts)<br>
+- a DS flashcart<br>
+- experience working with small electronics<br>
+</ol>
+<hr>
+<h3>Step 1 - Fixing wireless:</h3>
+
+Each firmware copy contains WiFi board specific data that lets it connect wirelessly. This data cannot be moved from one WiFi board to another, or you will be unable to connect. To solve this, we will back up the original data and copy it over to the new firmware we’ll be flashing.
+
+<ol>
+1. Dump your DS firmware with <a href="https://kuribo64.net/get.php?id=TWCJjwloQLCYy3Zh">DSBF_dump.nds</a>. (use a flashcart for this)<br>
+2. Open the dumped firmware in a hex editor. It will be called something like <code>FWD7F1EE.BIN</code>, and is found on the root of your flashcart SD card.<br>
+3. Select offset <code>0x2A</code> to <code>0x1FF</code> and copy it.<br>
+<div style="padding-left:3%;">
+<img src="/assets/dsi/guide/ique_hex.png" style="width:50%;height:auto;"><br>
 </div>
-<br>
-<span style="color:red">*</span>I only included a compiled version because the
-original creator required you to build everything yourself. Credits go to them
-for creating the flashing tool
-<a href="https://github.com/CTurt/CFW-Suite">https://github.com/CTurt/CFW-Suite</a>
-<br><br>
-Guide originally written for GBAtemp on 2022/12/24. Instructions and testing by <a href="https://gbatemp.net/members/is1982.507976/">IanSkinner1982/rmc</a> (that's me!).
-<br>Huge thanks to<a href="https://gbatemp.net/threads/flashing-prototype-ds-firmware-on-real-hardware.623680/post-10032449"> KleinesSinchen on GBAtemp for guide suggestions!</a>
-<!--        TESTING: <special></special>-->
-        <div style="text-align:center;">
+4. Open an iQue firmware dump in the hex editor.<br>
+5. Select offset <code>0x2A</code> to <code>0x1FF</code>  on the iQue firmware and paste the data from before.<br>
+6. Save the edited iQue firmware to your SD as <code>ique.sav</code><br>
+</ol>
 
-      </div>
+<h3>Step 2 - Removing the WiFi board shell:</h3>
+We will now remove the bottom shield that protects the flash chip where firmware is stored.
+
+<div class="info">
+  <b>Your WiFi board different from the one below? That's okay!<br><br></b>
+There are two main types of DS lite WiFi boards. You may find you have the less common one shown below. If so, skip this section, as you'll need to find your own way of opening these up. I don't have any left to figure out a tutorial. However, the rest of the guide provides support for these boards.<br>
+<img src="/assets/dsi/ds-lite_wifi_board_2x_shell_front.jpg" style="width:26%;height:auto;">
+<img src="/assets/dsi/ds-lite_wifi_board_2x_shell_back.jpg" style="width:26%;height:auto;">
+</div>
+<ol>
+1. Melt one of the corners circled below with your soldering iron.<br>
+<img src="/assets/dsi/guide/back_remove.png" style="width:33.5%;height:auto;">
+<img src="/assets/dsi/ds-lite_wifi_board_1x_shell_back.jpg" style="width:15%;height:auto;"><br>
+2. While the solder is molten, gently pry up that corner of the shield until it is no longer making contact with the PCB.<br>
+<img src="/assets/dsi/guide/back_lift.png" style="width:30%;height:auto;"><br>
+3. Work your way around the rest of the corners. Be sure not to lift the shield up too far, otherwise you could pull apart the WiFi board.<br>
+4. Once you're down to one corner remaining, the shield should just slide off with heat.<br>
+<img src="/assets/dsi/guide/back_off.png" style="width:30%;height:auto;"><br>
+</ol>
+
+<h3>Step 3 - Removing the WiFi board flash chip:</h3>
+
+Now we will remove the flash chip with the original firmware. This is a delicate process, as there are multiple small capacitors near the chip, so take care not to burn/melt/tear them off.
+
+<ol>
+1. Apply a small amount of flux to the pins of the chip.<br>
+2. Insert a small flat tool between the chip and the board, then melt one side of the chip's pins.<br>
+<img src="/assets/dsi/guide/chip_lift.png" style="width:26%;height:auto;"><br>
+3. While the solder is molten, lift up the one side of the chip with your tool until it is no longer making contact with the PCB. Do NOT lift it so far that you bend off the pins on the other side.<br>
+4. Melt the solder on the other pins and slide the chip off the board.<br>
+<img src="/assets/dsi/guide/chip_off.png" style="width:26%;height:auto;"><br>
+</ol>
+
+<h3>Step 4 - Flashing the iQue firmware:</h3>
+
+We will now flash the iQue firmware to the DS cartridge flash chip. This is done by restoring it as a save file.
+
+<ol>
+1. Open gm9i on your flashcart.<br>
+2. Navigate to <code>ique.sav</code> and press <code>A</code>. (<code>ique.sav</code> was created in the first section)<br>
+3. Select <code>Restore save (Slot-1)</code> and press <code>A</code>.<br>
+4. gm9i will ask you to eject your flashcart and insert the DS game. Do so now.<br>
+5. Press <code>A</code> and wait for the firmware to be loaded.<br>
+</ol>
+
+If you get an error, your DS cart is not 512kb and this guide will not work. Refer to this list for compatible donor carts. If your cart was one of the ones on the list and still did not work, email me at <code>ianskinner519@gmail.com</code>
+
+<ol>
+4. After you’ve successfully flashed the firmware, eject your cartridge.<br>
+</ol>
+
+<h3>Step 5 - Removing the DS cartridge flash chip:</h3>
+
+This is done in the exact same way as removing the WiFi board’s save chip. Note that you will have to be more careful depending on your donor cart, as many of the boards are more populated and you’ve got a higher chance of melting something off.
+
+<ol>
+1. Apply a small amount of flux to the pins of the chip.<br>
+2. Insert a small flat tool between the chip and the board, then melt one side of the chip's pins.<br>
+3. While the solder is molten, lift up the one side of the chip with your tool until it is no longer making contact with the PCB. Do NOT lift it so far that you bend off the pins on the other side.<br>
+4. Melt the solder on the other pins and slide the chip off the board.<br>
+</ol>
+
+<h3>Step 6 - Attaching the new flash chip to the WiFi board:</h3>
+
+We will now take the 512kb save chip we flashed with iQue firmware and put it in the WiFi board.
+
+<ol>
+1. Start by placing your chip on the WiFi board. It needs the the right way around or it will not work. Most chips will have a small dimple located on the top. This must be facing the top left of the board (see image below for reference)<br><br>
+
+If your chip does not have this marking, notice how the text is lined up below and place the chip in the same orientation.<br>
+<img src="/assets/dsi/guide/1x_dimple.png" style="width:26%;height:auto;">
+
+<div class="info"><b>If your board is the less common one mentioned before, the dimple will be facing the bottom right, as is shown below:</b>
+<img src="/assets/dsi/guide/2x_dimple.png" style="width:26%;height:auto;">
+</div>
+
+2. Once your chip is aligned, firmly hold it on the board and solder any one pin.<br>
+3. Check that all other pins are properly lined up. If they are not, desolder the one pin and try again.<br>
+4. Solder the remaining pins onto the board<br>
+</ol>
+
+<h3>Step 7 - Testing the “iQue” WiFi board:</h3>
+
+Before closing the WiFi board, we must check to make sure there are no errors.
+
+<ol>
+1. Plug the WiFi board into the DS lite<br>
+2. Boot the console and test the following:<br>
+</ol>
+
+    Does it turn on?
+    Can it run games (DS and GBA)?
+    Do multiplayer games connect?
+    Does the touchscreen work? (note: you will need to calibrate the touchscreen the first time you use the firmware)
+
+<ol>
+3. If any of the above tests failed, stop following the guide and please reply to this thread with your issue or contact me at <code>ianskinner519@gmail.com</code><br>
+4. If all tests passed, please continue.<br>
+</ol>
+
+<h3>Step 8 - Reassembling the WiFi board (optional but recommended):</h3>
+
+We will finish off by placing the metal shield back of the WiFi board. While optional, this is recommended to keep your WiFi board safe.
+
+<ol>
+1. Line up the metal shield on the WiFi board and solder one pin down.<br>
+2. Check that everything is lined up, and adjust if needed.<br>
+3. Solder the remaining pins.<br>
+4. Celebrate, ‘cause you’re done! Welcome to your new iQue DS lite. <br>
+</ol>
+<hr>
+<h3>Notes for using the iQue firmware:</h3>
+<ol>
+- The touch screen will need to be calibrated after flashing, so don’t worry if the touch screen isn’t working properly at the start<br>
+- Some tools like fwManager will fail when flashing iQue firmware. Do not edit the firmware afterwards unless you are willing to risk bricking the WiFi board!
+</ol>
+<h3>Thanks to…</h3>
+<ol>
+- <code>xp</code>, for showing me how to fix wireless<br>
+- <code>ufo</code>, for this silly idea<br>
+- <code>Scarlett Haze</code>, for finding a list of donor carts<br>
+- <a href="http://imaginglabo.web.fc2.com/DSL-Fw.htm">this random blog</a>, for showing that WiFi board flash chips are compatible with cartridge saves
+</ol>
     </div>
-    </ul>
   </div>
 </div>
 </div>

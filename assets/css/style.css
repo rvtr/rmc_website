@@ -17,3 +17,8 @@ body {
     background-color: #babbbb;
     padding: 1%;
 }
+.info {
+  padding: 20px;
+  background-color: #2196F3;
+  color: white;
+}

@@ -27,12 +27,12 @@ layout: dsiware
     <div class="container">
       <div class="imageOne image">
         <img src="/assets/dsi/widebarnoprompt_u.png" style="width:95.5vw;">
-        <img src="/assets/dsi/widepromptnobar.png" style="width:95.5vw;height:172vw;">
+        <img src="/assets/dsi/widepromptnobar.png" style="width:95.5vw;height:233vw;">
         <img src="/assets/dsi/widebarnoprompt_d.png" style="width:95.5vw;">
       </div>
       <div class="othertext" style="width:93vw;">
         <h1>Flashing DS prototype firmware to real hardware</h1>
-        <span style="color:red;"><b>Note that there is a chance of bricking your console.</b></span> In addition, this will <span style="color:red;"><b>permanently break all wireless communications</b></span>, and may prevent some games from running. I am not liable for any damage caused through this guide. By following this guide, you accept that you, and you alone, are responsible for anything that happens to your console.
+        <span style="color:red;"><b>Note that there is a chance of bricking your console</span>, and  this may prevent some games from running. I am not liable for any damage caused through this guide. By following this guide, you accept that you, and you alone, are responsible for anything that happens to your console.</b>
 
 <!-- all this is because I didn't want to make my "style.css" messier... maybe I should've just worked on that lmao -->
 <h3>Compatibility:</h3>
@@ -80,51 +80,48 @@ layout: dsiware
 </table>
 <span style="color:orange;">*</span>the firmware itself runs fine, but the
 touchscreen won't work in games. Can be fixed by flashing a different firmware
-<h3>Requirements</h3>
-<ul>
-  <li>Flashcart</li>
-  <li>DS phat or DS lite</li>
-  <li>Screwdriver or tinfoil</li>
-  <li>
-    <a href="https://web.archive.org/web/20141203031524/https://home.comcast.net/~olimar/flashme/">FlashMe</a>
-    <b>(I haven't tested this guide with flashme, but it should provide a layer of
-      brick protection)</b>
-  </li>
-</ul>
-<h3>Setup</h3>
-<ol type="1">
-  <li>
-    Download the <code><a href="/assets/dsi/proto-firm-040615.zip">040615</a></code>, <code><a href="/assets/dsi/proto-firm-40820D.zip">40820D</a></code>, or <code><a href="/assets/dsi/proto-firm-X2B.zip">X2B</a></code> prototype firmware.
-  </li>
-  <li>
-    There should be a <code>.bin</code> file in your downloaded firmware. Extract it and rename it to
-    <code>cfw.bin</code>.
-  </li>
-  <li>
-    Create a folder on the root of your flashcart's SD card called
-    <code>firmwares</code> and copy <code>cfw.bin</code> to that.
-  </li>
-<br>
-  <li>
-    Download <code><a href="/assets/dsi/fwManager.zip">fwManager.zip</a></code><span style="color:red">*</span> at the
-    bottom of this guide. (this is the tool we'll use to flash the firmware)
-  </li>
-  <li>
-    Extract <code>fwManager.nds</code> from <code>fwManager.zip</code> and copy it to the
-    root of your flashcart's SD card.
-  </li>
+<h3>Prerequisites:</h3>
+<ol>
+  - Flashcart<br>
+  - DS phat or DS lite<br>
+  - Screwdriver or tinfoil<br>
 </ol>
-<h3>Installation</h3>
+<hr>
+<h3>Setup:</h3>
 <ol type="1">
-  <li>
-    Launch your flashcart on your DS, then run <code>fwManager.nds</code>. Follow the
-    on screen instructions, but don't start writing to the console!
-  </li>
-  <li>
-    If you were start writing, you'd notice that nothing happens. This is
+   1.  Download the <code><a href="/assets/dsi/proto-firm-040615.zip">040615</a></code>, <code><a href="/assets/dsi/proto-firm-40820D.zip">40820D</a></code>, or <code><a href="/assets/dsi/proto-firm-X2B.zip">X2B</a></code> prototype firmware.<br>
+    2. There should be a <code>.bin</code> file in your downloaded firmware. Extract it and rename it to
+    <code>proto.bin</code>.<br>
+    3. Create a folder on the root of your flashcart's SD card called
+    <code>firmwares</code> and copy <code>proto.bin</code> to that.
+<br>
+    4. Download <code><a href="/assets/dsi/fwManager.zip">fwManager.zip</a></code><span style="color:red">*</span> at the
+    bottom of this guide. (this is the tool we'll use to flash the firmware)<br>
+    5. Extract <code>fwManager.nds</code> from <code>fwManager.zip</code> and copy it to the
+    root of your flashcart's SD card.
+</ol>
+<h3>Fixing Wireless Communications​:</h3>
+
+Each firmware copy contains WiFi board specific data that lets it connect wirelessly. This data cannot be moved from one WiFi board to another, or you will be unable to connect online or in multiplayer games. To solve this, we will back up the original data and copy it over to the new firmware we’ll be flashing.
+
+<ol>
+1. Dump your DS firmware with <a href="https://kuribo64.net/get.php?id=TWCJjwloQLCYy3Zh">DSBF_dump.nds</a>. (use a flashcart for this)<br>
+2. Open the dumped firmware in a hex editor. It will be called something like <code>FWD7F1EE.BIN</code>, and is found on the root of your flashcart SD card.<br>
+3. Select offset <code>0x2A</code> to <code>0x1FF</code> and copy it.<br>
+<div style="padding-left:3%;">
+<img src="/assets/dsi/guide/ique_hex.png" style="width:50%;height:auto;"><br>
+</div>
+4. Open the prototype firmware (<code>proto.bin</code>) in the hex editor.<br>
+5. Select offset <code>0x2A</code> to <code>0x1FF</code>  on the prototype firmware and paste the data from before.<br>
+ 6. Save and overwrite the edited firmware.
+ </ol>
+<h3>Installation:</h3>
+<ol>
+    1. Launch your flashcart on your DS, then run <code>fwManager.nds</code>. Follow the
+    on screen instructions, but don't start writing to the console!<br>
+    2. If you were start writing, you'd notice that nothing happens. This is
     because the console memory is write protected. To disable it, open up the
     battery cover. (see below images)
-  </li>
 </ol>
 <div style="text-align:center;">
 <img src="/assets/dsi/SL1-phat.png" style="width:36%;height:auto;">
@@ -136,6 +133,7 @@ touchscreen won't work in games. Can be fixed by flashing a different firmware
 <ol>
   3. Locate the <code>SL1</code> pin. You'll notice there are two metal pads that make up the <code>SL1</code>. We need to bridge them (connect them together). This can be done by holding a small flathead screwdriver (or another metallic material) to both pads.
 </ol>
+<span style="color:green"><b>If you're unable to bride SL1 by hand for the duration of writing, you may want to consider soldering SL1 together.</span> This is most useful if you intend on doing a lot of flashing in the future.</b><br><br>
 
 <span style="color:red"><b>ANOTHER WARNING: DO NOT remove the battery at any time during writing.</span> You will BRICK YOUR CONSOLE (see the green text below for unbricking)</b>
 
@@ -157,6 +155,8 @@ period of time, you've likely bricked it. But don't worry,
 <img src="/assets/dsi/proto-firm-040615.png" style="width:47.45%;height:auto;">
 </div>
 <br>
+<hr>
+<br>
 <span style="color:red">*</span>I only included a compiled version because the
 original creator required you to build everything yourself. Credits go to them
 for creating the flashing tool
@@ -169,7 +169,6 @@ Guide originally written for GBAtemp on 2022/12/24. Instructions and testing by 
 
       </div>
     </div>
-    </ul>
   </div>
 </div>
 </div>

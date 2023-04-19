@@ -68,6 +68,9 @@
 <loc>http://localhost:4000/dsidev/ecconfigview.html</loc>
 </url>
 <url>
+<loc>http://localhost:4000/pages/photography/flowers.html</loc>
+</url>
+<url>
 <loc>http://localhost:4000/dsidev/dsishop/SMC/font_check/shopmock/fontlist_01_index.html</loc>
 </url>
 <url>
@@ -276,6 +279,10 @@
 <url>
 <loc>http://localhost:4000/googlecff76619519c1862.html</loc>
 <lastmod>2023-02-17T15:53:46-05:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/pages/photography/</loc>
+<lastmod>2023-04-17T18:09:25-04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/pages/studentportal/studentportal.html</loc>

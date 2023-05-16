@@ -27,12 +27,59 @@ layout: dsiware
     <div class="container">
       <div class="imageOne image">
         <img src="/assets/dsi/widebarnoprompt_u.png" style="width:75vw;">
-        <img src="/assets/dsi/widepromptnobar.png" style="width:75vw;height:40vw;">
+        <img src="/assets/dsi/widepromptnobar.png" style="width:75vw;height:105vw;">
         <img src="/assets/dsi/widebarnoprompt_d.png" style="width:75vw;">
       </div>
       <div class="othertext" style="width:73.5vw;">
-        <h1>TODO</h1>
+        	<h1>TWL EVA</h1>
+TWL EVA is a program used for quality control on DSi consoles right off the assembly line, and possibly to test them for repairing as well (thought because TWL EVA makes references to a "repair" mode).
+        <h2>Test list</h2>
+        This is a list of the tested that can be accessed from TWL EVA's menu by holding the <code>start</code> button on boot, or by cancelling the aging test if it autoboots that. The tests are categorized by which menu they are available in.<br><br>
+	<b><code>EVALUATION MENU:</code></b><br>
+	<code> - CPU</code>, Various CPU tests (more info needed)<br>
+	<code> - MIC</code>,Microphone tests and sampler<br>
+	<code> - LCD</code>, Displays colored bars to test top screen<br>
+	<code> - LCD-RED</code>, Displays lines and colors to test screens<br>
+	<code> - EMI DEMO</code>, Model and rendering tests (need to confirm) with Super Smash Bros. screenshots on the bottom screen<br>
+	<code> - KEY</code>, Displays button input values both graphically and by showing the registers<br>
+	<code> - NVRAM </code>, Reads and writes old DS config in NVRAM, and displays version info<br>
+	<code> - PMIC</code>,Tests power management chip (controls power and backlight)<br>
+	<code> - CAMERA</code>, Configures camera settings like exposure, sharpness, white balance, etc. Also allows for saving photos, basic camera tests, and viewing photos from those tests<br>
+	<code> - RTC</code>, Sets the RTC to the selected time<br>
+	<code> - PSRAM</code><br>
+	<code> - NAND</code>, Writes dummy files to NAND for testing, displays NAND chip info, and has the ability to read/write to NAND in hex<br>
+	<code> - SNDEX</code>, Sound tests<br>
+	<code> - TWL INFO</code>, Displays system info like configuration and manufacturer details for NAND, battery, PMIC, and camera<br>
+	<code> - SD</code>, SD read/write tests and displays SD card info<br>
+	<code> - MCU</code>, Manages LED  for WiFi, power, camera. Also controls brightness, volume, mic gain, and the resisters for all<br>
+	<code> - WRFU</code>, Check current and old mac addresses<br>
+	<code> - TP</code>, Touch sceen calibration<br>
+	<code> - INITIALIZER</code>, Formats  NAND, installs <code>.nand</code> and <code>.tad</code> files (will not work on retail, untested on dev. Installing with the <code>.nand</code> option will result in a brick that unlaunch can't protect against), writes HWInfo and MCU firmware<br><br>
 
+	<b><code> TEST PROGRAM:</code></b><br>
+	<code> - SELF CHECKER</code>, Run full test on system<br>
+	<code> - AGING</code>, Run full test on system<br>
+	<code> - FLICKER ADJUSTER</code>, Displays thin bars, which cause flickering, to see if screens need to be adjusted<br>
+	<code> - LCD UNIT CHECKER</code>, Displays thin bars, which cause flickering, to see if screens need to be adjusted<br>
+	<code> - TP CALIBRATION</code>, Calibrates touch screen<br>
+	<code> - TP ACCURACY</code>, Tests touch screen calibration<br>
+	<code> - CAMERA TEST</code>, Tests cameras and saves photos from the test to the SD card<br>
+	<code> - CAMERA ASSY</code>, Tests cameras and saves photos from the test to the SD card<br><br>
+
+	<b><code>MISC MENU:</code></b><br>
+	<code> - Test Sound</code>, Plays music and sound effects<br>
+	<code> - Sound Output</code>, Plays a tone in the left, right, or both speakers.<br>
+	<code> - Swap Display</code>, Swap bottom and top screens<br>
+	<code> - Dump Eeprom</code>, Displays button input values<br>
+	<code> - FS Viewer</code>, Browse and display file content in ROM, NAND, or the SD card in hexadecimal or plaintext<br>
+	<code> - RTC Set</code>, Sets the RTC to the selected time<br>
+	<code> - BarCode Menu</code>, Creates barcodes and and QR codes with the serial number and other console info<br>
+	<code> - Clear User Data</code>, Presumably clears user settings/photos/saves<br>
+	<code> - Boright Spot</code>, Unknown, this is greyed out and so we're unable to access it<br>
+
+	<h2>Additional info</h2>
+         - The <code>.tad</code> installer will not work on retail, possibly due to the same signing issue as <a href="/dsidev/twlnmenu.html">TwlNmenu</a> on retail (this is most likely true because TWL EVA throws up the same sign error of <code>-2011</code> as TwlNmenu does). I have not been able to try on a dev unit due to only having a retail copy of TWL EVA, so if you can test please email me at <a href="mailto:ianskinner519@gmail.com">ianskinner519@gmail.com</a>.<br>
+         - Different versions of TWL EVA may exclude certain functions. The above list is for all functions across each version of the program.
       </div>
     </div>
     </ul>
@@ -41,38 +88,41 @@ layout: dsiware
     <div class="container">
       <div class="imageOne image">
         <img src="/assets/dsi/thinbarnoprompt_u.png" style="width:20vw;">
-        <img src="/assets/dsi/thinpromptnobar.png" style="width:20vw;height:40vw;">
+        <img src="/assets/dsi/thinpromptnobar.png" style="width:20vw;height:105vw;">
         <img src="/assets/dsi/thinbarnoprompt_d.png" style="width:20vw;">
       </div>
       <div class="imageTwo">
         <ul class="homeimg">
           <div class="container">
             <div class="imageTwo image2">
-              <img src="/assets/dsi/homemenu_notitle.png" class="homeimg">
+              <img src="/assets/dsi/homemenu.png" class="homeimg">
             </div>
             <div class="imageThree image3">
-              <div class="hometext" style="padding-top: 2vw;padding-left: 2.9vw;"> </div>
+              <div class="hometext" style="padding-top: 2vw;padding-left: 2.9vw;">NINTENDO DSi™<br>Demonstration</div>
               <!--padding-top 2vw and 2.7vw for two and one line banners, respectively-->
               <div class="imageThree image3 homeicon">
-                <img src="" width="13%" height="13%">
+                <img src="/assets/dsi/icon/default.gif" width="13%" height="13%">
               </div>
             </div>
             <div class="othertext" style="text-align:left;padding-top:25%;margin-left:-15%;">
-            <p><br>
-            <b>Source:</b><div style="font-size: 40px;font-size: 1vw;">Where!?</div><br>
+            <p>
+            <b>Source:</b><div style="font-size: 40px;font-size: 1vw;">Foxconn</div><br>
             <b>Downloads:</b>
             <table class="othertexts" style="solid; width: 100%;font-size: 3px;font-size: 1vw;">
             <tr>
               <th><br>SRL</th>
-              <th><br>TAD</th>
             </tr>
             <tr>
-              <td><a href="https://archive.org/download/rmc-dsi/NotLaunch/NotLaunch_SYSTEM_ALL.srl">ALL</a></td>
-              <td><a href="https://archive.org/download/rmc-dsi/NotLaunch/NotLaunch_SYSTEM_ALL.tad">ALL</a></td>
+              <td><a href="https://archive.org/download/rmc-dsi/TWL%20EVA/TWL%20EVA%20v1.7.nds">v1.7</a></td>
             </tr>
             <tr>
-              <td><a href="https://archive.org/download/rmc-dsi/NotLaunch/NotLaunch_SYSTEM_America.srl">America</a></td>
-              <td><a href="https://archive.org/download/rmc-dsi/NotLaunch/NotLaunch_SYSTEM_America.tad">America</a></td>
+              <td><a href="https://archive.org/download/rmc-dsi/TWL%20EVA/TWL%20EVA%20v2.1.nds">v2.1</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://archive.org/download/rmc-dsi/TWL%20EVA/TWL%20EVA%20v3.0.nds">v3.0</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://archive.org/download/rmc-dsi/TWL%20EVA/TWL%20EVA%20v3.1.nds">v3.1</a></td>
             </tr>
             </table>
 

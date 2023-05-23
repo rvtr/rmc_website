@@ -1,5 +1,5 @@
 ---
-title: DS WiFi Board Firmware Locations
+title: X4 prototype DS lite
 layout: dsiware
 ---
 <style>
@@ -36,8 +36,8 @@ layout: dsiware
         <h1>X4 Prototype released</h1>
 A new prototype DS lite has been discovered by lasscat and ProtonX! Huge thanks to both for sharing the console and helping to get it preserved!
 <h3>Origin:</h3>
-<img src="https://cdn.discordapp.com/attachments/1062490330081022005/1109291958490382406/IMG_5446.jpg" style="width:50%;height:auto;">
-<img src="https://cdn.discordapp.com/attachments/1062490330081022005/1109291930963152896/IMG_5456.jpg" style="width:28%;height:auto;"><br><br>
+<img src="/assets/dsi/release/USG-CPU-X4/1.jpg" style="width:50%;height:auto;">
+<img src="/assets/dsi/release/USG-CPU-X4/2.jpg" style="width:28%;height:auto;"><br><br>
 The stickers on this console suggest it may have originated from Nintendo's Research and Engineering Department (RED). However, there are some doubts on whether or not the stickers are real:
 <p class="tab"><i>
 	"Don't quote me on anything because I could be totally wrong<br>
@@ -48,22 +48,22 @@ The stickers on this console suggest it may have originated from Nintendo's Rese
 The only other mention of this console before now was from an inactive account on Twitter which has posted almost nothing else, which just adds to sketchiness of the stickers.<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Just sold a DS Lite Prototype😁<br>Actually there are quite a lot differences between the prototype and the normal ones, I&#39;ve noted them on the pictures. <a href="https://t.co/SLSHCbyGnP">pic.twitter.com/SLSHCbyGnP</a></p>&mdash; Elune Bjergsen (@EluneBjergsen) <a href="https://twitter.com/EluneBjergsen/status/1656114947192127491?ref_src=twsrc%5Etfw">May 10, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <h3>Differences from retail:</h3>
 Whether or not the stickers are real, this console is most definitely a prototype. Opening it up reveals an X4 prototype motherboard, and the shell has telltale signs of a prototype. The back of the console, much like the X3 prototype photographed in <a href="https://fccid.io/BKEUSG-001/External-Photos/External-Photos-626995">FCC documents</a>, features a backwards Nintendo logo, as well as the "SLOT-2" text printed 3 times. In addition, parts of the shell are colored differently than any retail unit.<br>
-<img src="https://cdn.discordapp.com/attachments/1062490330081022005/1109291934939365447/IMG_5448.jpg" style="width:30%;height:auto;">
-<img src="https://cdn.discordapp.com/attachments/1062490330081022005/1109291960759496754/IMG_5440.jpg" style="width:30%;height:auto;">
-<img src="https://media.discordapp.net/attachments/1062490330081022005/1109291960449114205/IMG_5441.jpg" style="width:17%;height:auto;"><br><br>
+<img src="/assets/dsi/release/USG-CPU-X4/3.jpg" style="width:30%;height:auto;">
+<img src="/assets/dsi/release/USG-CPU-X4/4.jpg" style="width:30%;height:auto;">
+<img src="/assets/dsi/release/USG-CPU-X4/5.jpg" style="width:17%;height:auto;"><br><br>
 
 The X4 motherboard inside is mostly like the retail 01 motherboard, however there are two main differences:<br><br>
 &emsp;-<b>MIC1:</b> The board has some interesting through holes on the button side, along with a circle around them labelled "MIC1". These new holes connect to the microphone trace and ground. Curiously enough, "MIC1" is also present on the DS phat, and that is where the phat microphone connects. This suggests the prototype DS lite may have used phat microphones for testing. "MIC1" also appears to be included in the <a href="https://fccid.io/BKEUSG-001/Internal-Photos/Internal-Photos-1-626991">X3</a> and X2B boards.<br>
-<img src="https://cdn.discordapp.com/attachments/1062490330081022005/1108955057157836922/IMG_5408.png" style="width:14.6%;height:auto;">
-<img src="https://cdn.discordapp.com/attachments/1062490330081022005/1109291961661267988/IMG_5438.jpg" style="width:14.6%;height:auto;">
-<img src="https://cdn.discordapp.com/attachments/704065693813047368/1110025399129354280/Screenshot_2023-05-21_22-03-08.jpg" style="width:32.3%;height:auto;">
-<img src="https://cdn.discordapp.com/attachments/1062490330081022005/1108973598657482813/image.png" style="width:29.6%;height:auto;"><br>
+<img src="/assets/dsi/release/USG-CPU-X4/6.png" style="width:14.6%;height:auto;">
+<img src="/assets/dsi/release/USG-CPU-X4/7.jpg" style="width:14.6%;height:auto;">
+<img src="/assets/dsi/release/USG-CPU-X4/8.jpg" style="width:32.3%;height:auto;">
+<img src="/assets/dsi/release/USG-CPU-X4/9.png" style="width:29.6%;height:auto;"><br>
 
 <caption><b>Left to right: </b>"MIC1" is not visible on retail boards, only the ground hole remains.<br>The two holes above "P10" where "MIC1" leads.<br>The section of the shell made to fit the "MIC1" microphone.<br>The very same "MIC1" is present on DS phat boards for their microphones.</caption><br><br>
 
 &emsp;-<b>D9:</b> the X4 prototype is missing the "D9" diode for the D-Pad connectors. It is unknown why this was added later.<br>
-<img src="https://cdn.discordapp.com/attachments/704065693813047368/1110032599683977256/image.png" style="width:19.5%;height:auto;">
-<img src="https://cdn.discordapp.com/attachments/704065693813047368/1110033011405246465/image.png" style="width:19.5%;height:auto;"><br>
+<img src="/assets/dsi/release/USG-CPU-X4/10.png" style="width:19.5%;height:auto;">
+<img src="/assets/dsi/release/USG-CPU-X4/11.png" style="width:19.5%;height:auto;"><br>
 <caption><b>Left:</b> CPU-X4 proto board is missing "D9", <b>right:</b> CPU-10 retail board has "D9" (as does CPU-01)</caption>
 <br><br>
 The X4 is a later stage prototype, as not much else changed from the X4 to the first released DS lite motherboard revision- with the exclusion of "MIC1' and "D9" of course. Some of the labeling moved around a bit, but all the traces are the same, and all parts are in their proper places.

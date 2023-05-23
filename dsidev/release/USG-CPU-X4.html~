@@ -71,7 +71,7 @@ The X4 is a later stage prototype, as not much else changed from the X4 to the f
 The firmware was dumped as soon as the console was recieved, and dissapointingly it came back as the worldwide region with a builddate of 2006/03/08 11:19, which is <a href="https://tcrf.net/Nintendo_DS#Version_Reporting_.26_Revisions">the latest worldwide firmware</a> to have been released. The BIOS also matched retail, though, as one user stated, "not surprised since bios was finalized earlier than 2006".  Considering how the X3 board documents submitted to the FCC were in 2006, this would make much sense.<br><br>
 There might be an explanation for the very new retail firmware on the console: SL1.<br>
 The SL1 terminal on the DS lite, located by the volume switch, is used to write-protect the firmware. When SL1 is open, it is impossible to edit the firmware. This board's SL1 was soldered shut, meaning someone was tampering with the firmware. It may have been done by Nintendo (the ever handy FCC docs show that they did officially solder this shut on some prototypes) or it may just have been someone who purchased it at some point down the line. Big bummer either way.<br>
-<img src="https://cdn.discordapp.com/attachments/704065693813047368/1110048812053049365/image.png" style="width:20.5%;height:auto;">
+<img src="/assets/dsi/release/USG-CPU-X4/12.png" style="width:20.5%;height:auto;">
         <div style="text-align:center;"><h1>X4 Photos:</h1>
 <img src="/assets/dsi/release/USG-CPU-X4/IMG_5446.jpg" style="width:30%;height:auto;">
 <img src="/assets/dsi/release/USG-CPU-X4/IMG_5447.jpg" style="width:30%;height:auto;">
@@ -105,7 +105,9 @@ The SL1 terminal on the DS lite, located by the volume switch, is used to write-
 <img src="/assets/dsi/release/USG-CPU-X4/IMG_5437.jpg" style="width:30%;height:auto;"><br>
 
 <img src="/assets/dsi/release/USG-CPU-X4/IMG_5439.jpg" style="width:45%;height:auto;">
-<img src="/assets/dsi/release/USG-CPU-X4/IMG_5440.jpg" style="width:45%;height:auto;"><br><br>
+<img src="/assets/dsi/release/USG-CPU-X4/IMG_5440.jpg" style="width:45%;height:auto;"><br>
+<span style="font-size:0.5vw;">Thanks to Kaisaan, Garhoogin, and Kezerker for editing, as well as xprism and togemet2 for additional info.</span>
+</div>
     </div>
   </div>
         <img src="/assets/dsi/widebarnoprompt_d.png" style="width:94vw;margin-right:10%:margin-top:3%;">

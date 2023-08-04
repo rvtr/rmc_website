@@ -21,16 +21,18 @@ layout: dsiware
     float: right;
     padding: 1vw;
   }
+
+  .tab {
+    margin-left: 40px;
+  }
 </style>
 <div class="float-container">
   <div class="float-child1">
-    <div class="container">
-      <div class="imageOne image">
-        <img src="/assets/dsi/widebarnoprompt_u.png" style="width:95.5vw;">
-        <img src="/assets/dsi/widepromptnobar.png" style="width:95.5vw;height:452vw;">
-        <img src="/assets/dsi/widebarnoprompt_d.png" style="width:95.5vw;">
+    <div class="container" style="width:100%;">
+      <div class="" style="position:static;">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_u.png" style="width:94vw;position:static;">
       </div>
-      <div class="othertext" style="width:93vw;">
+      <div class="othertext" style="width:93vw;background-size: 100% 100%;background-image: url('https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_widepromptnobar.png');position:static;">
 <h1>How to install iQue firmware on a non-iQue DS lite</h1>
 
 This guide will walk you through turning your world region DS lite into an iQue DS. You will do this by writing to and replacing a flash chip inside the WiFi board. The WiFi board can be removed and replaced with a non-iQue one at any time, restoring your console to “normal” firmware.
@@ -43,7 +45,7 @@ This guide will walk you through turning your world region DS lite into an iQue 
 <ol>
 - a soldering iron and flux<br>
 - a DS lite WiFi board<br>
-- a DS cartridge with a 512kb flash save (see <a href="/assets/dsi/titles_with_512.txt">this list</a> for compatible donor carts)<br>
+- a DS cartridge with a 512kb flash save (see <a href="https://cdn.randommeaninglesscharacters.com/assets-dsi/titles_with_512.txt">this list</a> for compatible donor carts)<br>
 - a DS flashcart<br>
 - experience working with small electronics<br>
 </ol>
@@ -57,7 +59,7 @@ Each firmware copy contains WiFi board specific data that lets it connect wirele
 2. Open the dumped firmware in a hex editor. It will be called something like <code>FWD7F1EE.BIN</code>, and is found on the root of your flashcart SD card.<br>
 3. Select offset <code>0x2A</code> to <code>0x1FF</code> and copy it.<br>
 <div style="padding-left:3%;">
-<img src="/assets/dsi/guide/ique_hex.png" style="width:50%;height:auto;"><br>
+<img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-ique-firmware/ique_hex.png" style="width:50%;height:auto;"><br>
 </div>
 4. Open an iQue firmware dump in the hex editor.<br>
 5. Select offset <code>0x2A</code> to <code>0x1FF</code>  on the iQue firmware and paste the data from before.<br>
@@ -70,18 +72,18 @@ We will now remove the bottom shield that protects the flash chip where firmware
 <div class="info">
   <b>Your WiFi board different from the one below? That's okay!<br><br></b>
 There are two main types of DS lite WiFi boards. You may find you have the less common one shown below. If so, skip this section, as you'll need to find your own way of opening these up. I don't have any left to figure out a tutorial. However, the rest of the guide provides support for these boards.<br>
-<img src="/assets/dsi/ds-lite_wifi_board_2x_shell_front.jpg" style="width:26%;height:auto;">
-<img src="/assets/dsi/ds-lite_wifi_board_2x_shell_back.jpg" style="width:26%;height:auto;">
+<img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-ique-firmware/ds-lite_wifi_board_3_shell_front.jpg" style="width:26%;height:auto;">
+<img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-ique-firmware/ds-lite_wifi_board_3_shell_back.jpg" style="width:26%;height:auto;">
 </div>
 <ol>
 1. Melt one of the corners circled below with your soldering iron.<br>
-<img src="/assets/dsi/guide/back_remove.png" style="width:33.5%;height:auto;">
-<img src="/assets/dsi/ds-lite_wifi_board_1x_shell_back.jpg" style="width:15%;height:auto;"><br>
+<img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-ique-firmware/ds-lite_wifi_board_2_back_remove.png" style="width:33.5%;height:auto;">
+<img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-ique-firmware/ds-lite_wifi_board_2_shell_back.jpg" style="width:15%;height:auto;"><br>
 2. While the solder is molten, gently pry up that corner of the shield until it is no longer making contact with the PCB.<br>
-<img src="/assets/dsi/guide/back_lift.png" style="width:30%;height:auto;"><br>
+<img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-ique-firmware/ds-lite_wifi_board_2_back_lift.png" style="width:30%;height:auto;"><br>
 3. Work your way around the rest of the corners. Be sure not to lift the shield up too far, otherwise you could pull apart the WiFi board.<br>
 4. Once you're down to one corner remaining, the shield should just slide off with heat.<br>
-<img src="/assets/dsi/guide/back_off.png" style="width:30%;height:auto;"><br>
+<img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-ique-firmware/ds-lite_wifi_board_2_back_off.png" style="width:30%;height:auto;"><br>
 </ol>
 
 <h3>Step 3 - Removing the WiFi board flash chip:</h3>
@@ -91,10 +93,10 @@ Now we will remove the flash chip with the original firmware. This is a delicate
 <ol>
 1. Apply a small amount of flux to the pins of the chip.<br>
 2. Insert a small flat tool between the chip and the board, then melt one side of the chip's pins.<br>
-<img src="/assets/dsi/guide/chip_lift.png" style="width:26%;height:auto;"><br>
+<img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-ique-firmware/ds-lite_wifi_board_2_chip_lift.png" style="width:26%;height:auto;"><br>
 3. While the solder is molten, lift up the one side of the chip with your tool until it is no longer making contact with the PCB. Do NOT lift it so far that you bend off the pins on the other side.<br>
 4. Melt the solder on the other pins and slide the chip off the board.<br>
-<img src="/assets/dsi/guide/chip_off.png" style="width:26%;height:auto;"><br>
+<img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-ique-firmware/ds-lite_wifi_board_2_chip_off.png" style="width:26%;height:auto;"><br>
 </ol>
 
 <h3>Step 4 - Flashing the iQue firmware:</h3>
@@ -109,7 +111,7 @@ We will now flash the iQue firmware to the DS cartridge flash chip. This is done
 5. Press <code>A</code> and wait for the firmware to be loaded.<br>
 </ol>
 
-If you get an error, your DS cart is not 512kb and this guide will not work. Refer to this list for compatible donor carts. If your cart was one of the ones on the list and still did not work, email me at <code>ianskinner519@gmail.com</code>
+If you get an error, your DS cart is not 512kb and this guide will not work. Refer to this list for compatible donor carts. If your cart was one of the ones on the list and still did not work, shoot me an <a href="mailto:lillian@randommeaninglesscharacters.com">email</a>
 
 <ol>
 4. After you’ve successfully flashed the firmware, eject your cartridge.<br>
@@ -134,10 +136,10 @@ We will now take the 512kb save chip we flashed with iQue firmware and put it in
 1. Start by placing your chip on the WiFi board. It needs the the right way around or it will not work. Most chips will have a small dimple located on the top. This must be facing the top left of the board (see image below for reference)<br><br>
 
 If your chip does not have this marking, notice how the text is lined up below and place the chip in the same orientation.<br>
-<img src="/assets/dsi/guide/1x_dimple.png" style="width:26%;height:auto;">
+<img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-ique-firmware/ds-lite_wifi_board_2_dimple.png" style="width:26%;height:auto;">
 
 <div class="info"><b>If your board is the less common one mentioned before, the dimple will be facing the bottom right, as is shown below:</b>
-<img src="/assets/dsi/guide/2x_dimple.png" style="width:26%;height:auto;">
+<img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-ique-firmware/ds-lite_wifi_board_3_dimple.png" style="width:26%;height:auto;">
 </div>
 
 2. Once your chip is aligned, firmly hold it on the board and solder any one pin.<br>
@@ -160,7 +162,7 @@ Before closing the WiFi board, we must check to make sure there are no errors.
     Does the touchscreen work? (note: you will need to calibrate the touchscreen the first time you use the firmware)
 
 <ol>
-3. If any of the above tests failed, stop following the guide and please reply to this thread with your issue or contact me at <code>ianskinner519@gmail.com</code><br>
+3. If any of the above tests failed, stop following the guide and please reply to this thread with your issue or shoot me an <a href="mailto:lillian@randommeaninglesscharacters.com">email</a>.<br>
 4. If all tests passed, please continue.<br>
 </ol>
 
@@ -186,8 +188,9 @@ We will finish off by placing the metal shield back of the WiFi board. While opt
 - <code>ufo</code>, for this silly idea<br>
 - <code>Scarlett Haze</code>, for finding a list of donor carts<br>
 - <a href="http://imaginglabo.web.fc2.com/DSL-Fw.htm">this random blog</a>, for showing that WiFi board flash chips are compatible with cartridge saves
-</ol>
+</ol><br>
+      </div>
     </div>
+    <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_d.png" style="width:94vw;margin-right:10%:margin-top:3%;">
   </div>
-</div>
 </div>

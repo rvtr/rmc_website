@@ -2,35 +2,16 @@
 title: Prototype Settings
 layout: dsiware
 ---
-<style>
-  .float-container {
-    border: 0px solid #fff;
-    font-size: 0;
-  }
-
-  .float-child1 {
-    width: 40%;
-    height: 40%;
-    float: left;
-    padding: 1vw;
-  }
-
-  .float-child2 {
-    width: 20%;
-    height: 40%;
-    float: right;
-    padding: 1vw;
-  }
-</style>
 <div class="float-container">
   <div class="float-child1">
-    <div class="container">
-      <div class="imageOne image">
-        <img src="/assets/dsi/widebarnoprompt_u.png" style="width:75vw;">
-        <img src="/assets/dsi/widepromptnobar.png" style="width:75vw;height:347vw;">
-        <img src="/assets/dsi/widebarnoprompt_d.png" style="width:75vw;">
+    <div class="container" style="width:70%;">
+      <div class="" style="position:static;">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_u.png" style="width:76.2vw;position:static;">
       </div>
-      <div class="othertext" style="width:73.5vw;">
+
+
+
+      <div class="othertext" style="width:75vw;background-size: 100% 100%;background-image: url('https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_widepromptnobar.png');position:static;">
         <h1>Prototype System Settings</h1>The majority of this info comes from TCRF, linked <a href="https://tcrf.net/Proto:Nintendo_DSi_System_Settings">here</a>. Go check them out, they're an amazing resource (but sadly no links there, which is why this exists).<br><br>Global controls:<br>L/R to change brightness, and START to reboot.
         <h2>Version 5199</h2>The SDK 5199 version of System Settings is currently the earliest known build, and is found at <code>TwlIPL/trunk/bin/ARM9-TS/Release/forDebug/system.srl</code>. It comes with the following settings<br><code> - Language</code>, lets you change your language<br><code> - Date & Time</code>, changes the date and time<br><code> - User Information</code>, lets you change your name, birthday, color, and message<br><code> - Touch Panel</code>, lets you calibrate the touch screen<br> <code>- Country</code>, lets you change your console's country<br><code> - Parental Control</code>, age restrict/pin lock games. This setting is missing page 3, and you can only select the ESRB for organization.<br><br>
         <h2>Version 6291</h2>6291 is a big step down from 5199, and only comes with the following settings<br><code> - Language</code>, lets you change your language<br><code> - Date & Time</code>, changes the date and time<br><code> - User Information</code>, lets you change your name, birthday, color, and message<br><code> - Touch Panel</code>, lets you calibrate the touch screen<br><code> - Wireless</code>, lets you turn wireless communications on and off<br>
@@ -38,54 +19,75 @@ layout: dsiware
         <h2>Version ????</h2>This is an unversioned copy of System Settings found at <code>TwlIPL/branches/20130304_launcher_save_app_tosd_Remodel/build/systemMenu_RED/MachineSettings/ARM9/bin/ARM9-TS.LTD.thumb/Release/HNBE.tad</code>. It appears to be very similar to 7739, however it does not show the SDK/IPL version, and has graphical issues (screen flickering, and some text not displaying correctly). See the screenshots below for examples of those errors.
         <div style="text-align:center;"><h1>Screenshots:</h1>
 
-        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/main.gif" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
-        <div style="float: left;width: 36vw;"><img src="/assets/dsi/screenshots/MachineSettings/language_select.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/main.gif" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 36vw;"><img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/language_select.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+    <p style="visibility: hidden;">paddingpaddingpaddingwhydoIneedpaddingwhydidImakethis</p>
+        <h3>The following two GIFs show graphical bugs found in the app:</h3>
+        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/glitch.gif" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/parental_control_glitch.gif" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
 
-        <h3>The following two gifs show graphical bugs found in the app:</h3>
-        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/glitch.gif" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
-        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/parental_control_glitch.gif" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/touch_panel_calibration.gif" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/user_info.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/color_select.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/color_select_1.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/eula.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/eula_yn.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/eula_ver.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/machine_clean_up.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/country_select.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/birthday.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/freesoft_box.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/freesoft_box_select.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/time_select.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
+        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/wireless.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div></div>
 
-        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/touch_panel_calibration.gif" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
-        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/user_info.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
-        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/color_select.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
-        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/color_select_1.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
-        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/eula.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
-        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/eula_yn.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
-        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/eula_ver.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
-        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/machine_clean_up.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
-        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/country_select.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
-        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/birthday.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
-        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/freesoft_box.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
-        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/freesoft_box_select.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
-        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/time_select.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
-        <div style="float: left;width: 35vw;"><img src="/assets/dsi/screenshots/MachineSettings/wireless.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div></div>
-      </div>
+    <p style="visibility: hidden;">paddingpaddingpaddingwhydoIneedpaddingwhydidImakethis siteIamsodumb</p><span style="font-size: .1vw;">&nbsp;</span>
+
     </div>
-    </ul>
   </div>
-  <div class="float-child2">
-    <div class="container">
-      <div class="imageOne image">
-        <img src="/assets/dsi/thinbarnoprompt_u.png" style="width:20vw;">
-        <img src="/assets/dsi/thinpromptnobar.png" style="width:20vw;height:347vw;">
-        <img src="/assets/dsi/thinbarnoprompt_d.png" style="width:20vw;">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_d.png" style="width:76.2vw;margin-right:10%:margin-top:3%;">
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="float-container" style="float:right;">
+  <div class="float-child1">
+    <div class="container" style="width:70%;">
+      <div class="" style="position:static;">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_thinbarnoprompt_u.png" style="width:19.2vw;height:100%;position:static;">
       </div>
-      <div class="imageTwo">
+
+
+
+      <div class="othertext" style="width:18vw;background-size: 100% 100%;background-image: url('https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_thinpromptnobar.png');position:static;">
+        <!-- CONTENT HERE -->
+        <div class="imageTwo">
         <ul class="homeimg">
           <div class="container">
             <div class="imageTwo image2">
-              <img src="/assets/dsi/homemenu.png" class="homeimg">
+              <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_pink_homemenu.png" class="homeimg">
             </div>
             <div class="imageThree image3">
               <div class="hometext" style="padding-top: 2.7vw;padding-left: 4.8vw;">Settings</div>
               <!--padding-top 2vw and 2.7vw for two and one line banners, respectively-->
               <div class="imageThree image3 homeicon">
-                <img src="/assets/dsi/icon/machinesettings.gif" width="13%" height="13%">
+                <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/icon/program/machinesettings.gif" width="13%" height="13%">
               </div>
             </div>
-            <div class="othertext" style="text-align:left;padding-top:25%;margin-left:-15%;">
+            </div>
+            </ul>
+            </div>
+
             <p>
-            <b>Sources:</b><div style="font-size: 40px;font-size: 1vw;">- Gigaleaks/platinum.7z/twl.7z/TwlIPL<br>- TWL prototype and development units</div><br>
+            <b>Origin:</b><div style="font-size: 40px;font-size: 1vw;">- DSi dev units<br>- Gigaleaks (TwlIPL)</div><br>
+            <b>Dumped by:</b><div style="font-size: 40px;font-size: 1vw;">Voodooween and March42</div><br>
             <b>Downloads:</b>
             <table class="othertexts" style="solid; width: 100%;font-size: 3px;font-size: 1vw;">
             <tr>
@@ -93,28 +95,30 @@ layout: dsiware
               <th><br>TAD</th>
             </tr>
             <tr>
-              <td><a href="https://archive.org/download/rmc-dsi/MachineSettings/HNBA.srl">Versionless</a></td>
-              <td><a href="https://archive.org/download/rmc-dsi/MachineSettings/HNBA.tad">Versionless</a></td>
+              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/MachineSettings/HNBA.srl">Versionless</a></td>
+              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/MachineSettings/HNBA.tad">Versionless</a></td>
             </tr>
             <tr>
-              <td><a href="https://archive.org/download/rmc-dsi/MachineSettings/HNBA.5199-1025.srl">5199-1025</a></td>
+              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/MachineSettings/HNBA.5199-1025.srl">5199-1025</a></td>
             </tr>
             <tr>
-              <td><a href="https://archive.org/download/rmc-dsi/MachineSettings/HNBA.6291-1542.srl">6291-1542</a></td>
+              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/MachineSettings/HNBA.6291-1542.srl">6291-1542</a></td>
             </tr>
             <tr>
-              <td><a href="https://archive.org/download/rmc-dsi/MachineSettings/HNBA.7739-2095.srl">7739-2095</a></td>
+              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/MachineSettings/HNBA.7739-2095.srl">7739-2095</a></td>
             </tr>
             <tr>
-              <td><a href="https://archive.org/download/rmc-dsi/MachineSettings/HNBA.7739-2105.srl">7739-2105</a></td>
+              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/MachineSettings/HNBA.7739-2105.srl">7739-2105</a></td>
             </tr>
             </table>
 
             </p>
-            </div>
-        </ul>
-      </div>
-    </div>
+
+<span style="font-size: .1vw;">&nbsp;</span>
+
+
   </div>
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_thinbarnoprompt_d.png" style="width:19.2vw;margin-right:10%:margin-top:3%;">
 </div>
 </div>
+

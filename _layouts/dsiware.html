@@ -18,15 +18,36 @@
     <meta property="og:locale" content="en_US">
     <meta name="description" content="{{ page.title }} | {{ site.title }}">
     <meta property="og:description" content="{{ page.title }} | {{ site.title }}">
-    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
-    <meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html','' }}">
-    <meta property="og:site_name" content="rmc's site">
+    <!-- <link rel="canonical" href="{{ site.url }}{{ page.url }}"> -->
+    <!-- GRRRR I HATE GOOGLE SAYING MY CANONICALS ARE DUPLICATES!! Please someone smart help me... -->
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:site_name" content="rmc">
     {% if page.custicon == true %}
       <meta property="og:image" content="{{ page.iconurl }}">
     {% else %}
       <meta property="og:image" content="{{ site.url }}/icon.png">
     {% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+  .float-container {
+    border: 0px solid #fff;
+    font-size: 0;
+  }
+
+  .float-child1 {
+    width: 40%;
+    height: 40%;
+    float: left;
+    padding: 1vw;
+  }
+
+  .float-child2 {
+    width: 20%;
+    height: 40%;
+    float: right;
+    padding: 1vw;
+  }
+</style>
   </head>
   <body>
     {% include navdsi.html %}

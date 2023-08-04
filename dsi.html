@@ -2,7 +2,7 @@
 title: Blog
 layout: dsiware
 ---
-
+    <p style="visibility: hidden;">paddingpaddingpaddingwhydoIneedpaddingwhydidImakethis siteIamsodumb</p>
 <div class="text-center pt-3">
     <h2>Welcome to my blog!</h2>
     <p>I post some Nintendo repair and modding stuff sometimes.</p>
@@ -10,7 +10,7 @@ layout: dsiware
 <div class="container"><hr>
     {% for post in site.tags.stuff %}
         <p><a href="{{ post.url }}">{{ post.title }}</a> <a href="{{ post.alt }}">(alt)</a>, {{post.desc}}</p>
-        <p>{{ post.date | date: "%Y/%m/%d" }} (Ian Skinner)</p>
+        <p>{{ post.date | date: "%Y/%m/%d" }}</p>
         <hr>
     {% endfor %}
 </div>

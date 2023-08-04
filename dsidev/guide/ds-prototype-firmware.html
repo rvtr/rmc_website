@@ -21,16 +21,18 @@ layout: dsiware
     float: right;
     padding: 1vw;
   }
+
+  .tab {
+    margin-left: 40px;
+  }
 </style>
 <div class="float-container">
   <div class="float-child1">
-    <div class="container">
-      <div class="imageOne image">
-        <img src="/assets/dsi/widebarnoprompt_u.png" style="width:95.5vw;">
-        <img src="/assets/dsi/widepromptnobar.png" style="width:95.5vw;height:233vw;">
-        <img src="/assets/dsi/widebarnoprompt_d.png" style="width:95.5vw;">
+    <div class="container" style="width:100%;">
+      <div class="" style="position:static;">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_u.png" style="width:94vw;position:static;">
       </div>
-      <div class="othertext" style="width:93vw;">
+      <div class="othertext" style="width:93vw;background-size: 100% 100%;background-image: url('https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_widepromptnobar.png');position:static;">
         <h1>Flashing DS prototype firmware to real hardware</h1>
         <span style="color:red;"><b>Note that there is a chance of bricking your console</span>, and  this may prevent some games from running. I am not liable for any damage caused through this guide. By following this guide, you accept that you, and you alone, are responsible for anything that happens to your console.</b>
 
@@ -89,13 +91,13 @@ touchscreen won't work in games. Can be fixed by flashing a different firmware
 <hr>
 <h3>Setup:</h3>
 <ol type="1">
-   1.  Download the <code><a href="/assets/dsi/proto-firm-040615.zip">040615</a></code>, <code><a href="/assets/dsi/proto-firm-40820D.zip">40820D</a></code>, or <code><a href="/assets/dsi/proto-firm-X2B.zip">X2B</a></code> prototype firmware.<br>
+   1.  Download the <code><a href="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-prototype-firmware/proto-firm-040615.zip">040615</a></code>, <code><a href="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-prototype-firmware/proto-firm-40820D.zip">40820D</a></code>, or <code><a href="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-prototype-firmware/proto-firm-X2B.zip">X2B</a></code> prototype firmware.<br>
     2. There should be a <code>.bin</code> file in your downloaded firmware. Extract it and rename it to
     <code>proto.bin</code>.<br>
     3. Create a folder on the root of your flashcart's SD card called
     <code>firmwares</code> and copy <code>proto.bin</code> to that.
 <br>
-    4. Download <code><a href="/assets/dsi/fwManager.zip">fwManager.zip</a></code><span style="color:red">*</span> at the
+    4. Download <code><a href="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-prototype-firmware/fwManager.zip">fwManager.zip</a></code><span style="color:red">*</span> at the
     bottom of this guide. (this is the tool we'll use to flash the firmware)<br>
     5. Extract <code>fwManager.nds</code> from <code>fwManager.zip</code> and copy it to the
     root of your flashcart's SD card.
@@ -109,7 +111,7 @@ Each firmware copy contains WiFi board specific data that lets it connect wirele
 2. Open the dumped firmware in a hex editor. It will be called something like <code>FWD7F1EE.BIN</code>, and is found on the root of your flashcart SD card.<br>
 3. Select offset <code>0x2A</code> to <code>0x1FF</code> and copy it.<br>
 <div style="padding-left:3%;">
-<img src="/assets/dsi/guide/ique_hex.png" style="width:50%;height:auto;"><br>
+<img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-ique-firmware/ique_hex.png" style="width:50%;height:auto;"><br>
 </div>
 4. Open the prototype firmware (<code>proto.bin</code>) in the hex editor.<br>
 5. Select offset <code>0x2A</code> to <code>0x1FF</code>  on the prototype firmware and paste the data from before.<br>
@@ -124,8 +126,8 @@ Each firmware copy contains WiFi board specific data that lets it connect wirele
     battery cover. (see below images)
 </ol>
 <div style="text-align:center;">
-<img src="/assets/dsi/SL1-phat.png" style="width:36%;height:auto;">
-<img src="/assets/dsi/SL1-lite.png" style="width:50.4%;height:auto;">
+<img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-prototype-firmware/SL1-phat.png" style="width:36%;height:auto;">
+<img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-prototype-firmware/SL1-lite.png" style="width:50.4%;height:auto;">
 </div><br>
 <span style="color:red"><b>WARNING: Make sure to not short a DS Lite</span> (this can happen by touching the metal
     point contacts right next to <code>SL1</code>). Use an improvised tool that is insulated to the
@@ -151,8 +153,8 @@ period of time, you've likely bricked it. But don't worry,
 <a href="https://gbatemp.net/blogs/i-fixed-a-ds-lite-with-another-ds-lite.15450/#ubs-comment-200532">this</a> blog entry for info on how to restore a bricked DS.
 <br><br>
 <div style="text-align:center;">
-<img src="/assets/dsi/proto-firm-40820D.png" style="width:49%;height:auto;">
-<img src="/assets/dsi/proto-firm-040615.png" style="width:47.45%;height:auto;">
+<img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-prototype-firmware/proto-firm-40820D.png" style="width:49%;height:auto;">
+<img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-prototype-firmware/proto-firm-040615.png" style="width:47.45%;height:auto;">
 </div>
 <br>
 <hr>
@@ -162,13 +164,12 @@ original creator required you to build everything yourself. Credits go to them
 for creating the flashing tool
 <a href="https://github.com/CTurt/CFW-Suite">https://github.com/CTurt/CFW-Suite</a>
 <br><br>
-Guide originally written for GBAtemp on 2022/12/24. Instructions and testing by <a href="https://gbatemp.net/members/is1982.507976/">IanSkinner1982/rmc</a> (that's me!).
+Guide originally written for GBAtemp on 2022/12/24. Instructions and testing by <a href="https://gbatemp.net/members/is1982.507976/">IS1982/rmc</a> (that's me!).
 <br>Huge thanks to<a href="https://gbatemp.net/threads/flashing-prototype-ds-firmware-on-real-hardware.623680/post-10032449"> KleinesSinchen on GBAtemp for guide suggestions!</a>
 <!--        TESTING: <special></special>-->
-        <div style="text-align:center;">
-
+        <br><br>
       </div>
     </div>
+    <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_d.png" style="width:94vw;margin-right:10%:margin-top:3%;">
   </div>
-</div>
 </div>

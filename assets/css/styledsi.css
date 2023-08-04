@@ -1,14 +1,14 @@
 @font-face {
   font-family: dsifont;
-  src: url(/assets/dsi/nintendo_NTLGDB_001.ttf);
+  src: url(https://cdn.randommeaninglesscharacters.com/assets-dsi/font/nintendo_NTLGDB_001.ttf);
 }
 @font-face {
   font-family: dsifont-bios;
-  src: url(/assets/dsi/nintendo-DS-BIOS.ttf);
+  src: url(https://cdn.randommeaninglesscharacters.com/assets-dsi/font/nintendo-DS-BIOS.ttf);
 }
 @font-face {
   font-family: dsifont-special;
-  src: url(/assets/dsi/NITROIPL_Gaiji.ttf);
+  src: url(https://cdn.randommeaninglesscharacters.com/assets-dsi/font/NITROIPL_Gaiji.ttf);
 }
 body {
   font-family: dsifont;

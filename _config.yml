@@ -1,5 +1,5 @@
-name: rmc's site
-title: rmc's site
+name: rmc
+title: rmc
 url: https://randommeaninglesscharacters.com
 plugins:
   - jekyll-feed

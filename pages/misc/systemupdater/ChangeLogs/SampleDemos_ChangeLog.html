@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<title>Sample Demos Change Log</title>
+
+<link rel="stylesheet" href="/assets/css/systemupdater/nwdoc.css" type="text/css" />
+<link rel="stylesheet" href="/assets/css/systemupdater/release_note.css" type="text/css" />
+
+</head>
+<body class="nwdoc nwhiderightbar" nwai_levelbegin="2" nwai_levelend="2">
+  
+    <!-- ====================================================================== -->
+<h1>Sample Demos Change Log</h1>
+
+<h2>Contents</h2>
+
+<h3>CTR-SDK 11.6.0 (2017-09-19 - for System Updater 0.27.0)</h3><p><a href="#version_11_6_0_0">Update Details</a></p>
+<h4>Additions and Changes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_55-D02">55-D02: (FS) Added to the manual that nn::fs::ResultWriteProtected is not returned when the SD card is write-protected [SDK | Sample Demos]</a></li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_55-D01">55-D01: (BOSS) Fixed a bug that may prevent proper handling of task completion when a task error occurred with sample_datastore [Sample Demos]</a></li>
+</ul>
+
+
+<h3>Previous Revision Histories</h3>
+<p>For the previous change log, see <a href="SampleDemos_ChangeLog_old.html">here</a>.</p>
+
+<p>For change logs prior to CTR-SDK 7.2.1, see <a href="ChangeLog_CTR.html">here</a>.</p>
+
+<h2 id="version_11_6_0_0">Changes in CTR-SDK 11.6.0 (2017-09-19 - for System Updater 0.27.0)</h2>
+<h3 id="category_55_0">Additions and Changes</h3>
+<h3 id="note_55-D02" class="release_note"><span class="addition_style">Addition or Change</span> 55-D02: (FS) Added to the manual that nn::fs::ResultWriteProtected is not returned when the SD card is write-protected [SDK | Sample Demos]</h3>
+<p class="release_note">Added to the function reference and the sample demo that when accessing a write-protected SD card, <code>nn::fs::ResultOperationDenied</code> is returned instead of <code>nn::fs::ResultWriteProtected</code>.
+</p>
+<h3 id="category_55_0">Bug Fixes</h3>
+<h3 id="note_55-D01" class="release_note"><span class="bugfix_style">Bug Fix</span> 55-D01: (BOSS) Fixed a bug that may prevent proper handling of task completion when a task error occurred with <code>sample_datastore</code> [Sample Demos]</h3>
+<p class="release_note">Fixed a bug in the BOSS data store sample that prevented proper handling of task completion when a task error occurred.  This was caused by multiple calls to <code>nn::boss::Task::GetState</code> with <code>acknowledge=true</code>.
+</p>
+
+
+    <!-- ====================================================================== -->
+
+    
+  </body>
+    <footer style="text-align:right;">
+    <div style="position: fixed;bottom: 0;margin-bottom:1%;z-index: 4;">
+        <a class="fancy" href="/pages/misc/systemupdater/">Back to rmc's SystemUpdater info pages</a>
+    </div>
+</footer>
+</html>

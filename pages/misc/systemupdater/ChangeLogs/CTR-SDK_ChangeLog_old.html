@@ -1,0 +1,1283 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<title>CTR-SDK Change Log</title>
+<link rel="stylesheet" href="/assets/css/systemupdater/nwdoc.css" type="text/css" />
+<link rel="stylesheet" href="/assets/css/systemupdater/release_note.css" type="text/css" />
+</head>
+<body class="nwdoc nwhiderightbar" nwai_levelbegin="2" nwai_levelend="2">
+  
+    <!-- ====================================================================== -->
+<h1>CTR-SDK Change Log</h1>
+
+<h2>Contents</h2>
+
+<h3>CTR-SDK 11.5.2 (2016/10/28 - for System Updater 0.25.3)</h3><p><a href="#version_11_5_2_0">Update Details</a></p>
+<h4>Additions and Changes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_51-S01">51-S01:(TOOL) Added CFLUtility tool [SDK]</a></li>
+</ul>
+<h3>CTR-SDK 11.5.1 (2016-05-17 - for System Updater 0.25.0)</h3><p><a href="#version_11_5_1_0">Update Details</a></p>
+<h4>Additions and Changes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_49-S01">49-S01: (AC) Added a description of how to detect connections to Spot Pass communication hubs. [SDK]</a></li>
+<li><a href="#note_49-S02">49-S02: (CAMERA) Changed error handling for when <CODE>nn::camera::CTR::ResultFatalError</CODE> occurs. [SDK | Sample Demos]</a></li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_49-S03">49-S03: (GX) Invalidation of assertion failures when issuing graphics requests from outside the application core. [SDK]</a></li>
+</ul>
+<h3>CTR-SDK 11.5.0 (2016-05-09 - for System Updater 0.25.0)</h3><p><a href="#version_11_5_0_0">Update Details</a></p>
+<h4>Additions and Changes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_48-S02">48-S02: (BOSS) Clarified the conditions under which the BOSS task execution count is reduced. [SDK]</a></li>
+<li><a href="#note_48-S03"><span class="important_style">48-S03:  (CX) ★ Added a parameter for specifying the size of the target decompression buffer in the nn::cx::SecureUncompress function group. [SDK]</span></a></li>
+<li><a href="#note_48-S04">48-S04:  (DevEnv) Added alignment restriction definitions. [SDK]</a></li>
+<li><a href="#note_48-S06">48-S06:  (EC) Updated the eShop REST API manual. [SDK]</a></li>
+<li><a href="#note_48-S08"><span class="important_style">48-S08:  (EC) ★Deleted the information about submitting an application on OMAS from the description of the eShop jump functions. [SDK]</span></a></li>
+<li><a href="#note_48-S09">48-S09:  (EC) Added a description of the production environment to the Patch Manual. [SDK]</a></li>
+<li><a href="#note_48-S10">48-S10:  (EC) Added a validity check for download code IDs to the function for entering a download code. [SDK | Sample Demos]</a></li>
+<li><a href="#note_48-S11">48-S11:  (GX) Added information about how long to maintain initialization data to the descriptions of functions in the nn::gd::Resource class. [SDK]</a></li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_48-S01">48-S01:  (BOSS) Updated the boss::UnregisterStorage documentation. [SDK]</a></li>
+<li><a href="#note_48-S05"><span class="important_style">48-S05:  (EC) ★ Fixed a bug where pressing the HOME Button after jumping to DummyNintendoEShop would cause the system to freeze. [SDK | System Updater]</span></a></li>
+<li><a href="#note_48-S07">48-S07:  (EC) Fixed typos in the eShop REST API function references. [SDK]</a></li>
+<li><a href="#note_48-S12">48-S12:  (GX) Fixed a bug where the nn::gd::VertexInputStage class would freeze under some conditions. [SDK]</a></li>
+<li><a href="#note_48-S13">48-S13:  (GX) Fixed a bug in the nn::gd::VertexInputStage class that caused registers to be overwritten unexpectedly. [SDK]</a></li>
+<li><a href="#note_48-S14">48-S14:  (RDT) Fixed a bug where the RDT library stopped on an assertion when sending data. [SDK]</a></li>
+<li><a href="#note_48-S15">48-S15:  (SND) Fixed a bug where ADPCM audio data was not played correctly if played at the same time that the system was put to sleep. [SDK]</a></li>
+<li><a href="#note_48-S16">48-S16:  (SND) Fixed a bug where the values returned by the nn::snd::GetDspCycles function were incorrect. [SDK]</a></li>
+</ul>
+<h3>CTR-SDK 11.4.0 (2015-09-07 - for System Updater 0.24.66)</h3><p><a href="#version_11_4_0_0">Update Details</a></p>
+<h4>Additions and Changes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_37-S01">37-S01:  (BOSS) Changed a document related to BOSS. [SDK]</a></li>
+<li><a href="#note_37-S03">37-S03:  (CEC) Added a function that gets whether StreetPass box can be created. [SDK]</a></li>
+<li><a href="#note_37-S04">37-S04:  (CEC) Added information about icon data and description data formats. [SDK]</a></li>
+<li><a href="#note_37-S05">37-S05:  (DevEnv) Updated nn.h. [SDK]</a></li>
+<li><a href="#note_37-S06">37-S06:  (DevEnv) Added a definition for alignment restriction. [SDK | Sample Demos]</a></li>
+<li><a href="#note_37-S07">37-S07:  (DevEnv) Added and fixed the system mode description. [SDK]</a></li>
+<li><a href="#note_37-S09">37-S09:  (DevEnv) Added a library for standard linking [SDK]</a></li>
+<li><a href="#note_37-S10">37-S10:  (DLP) Added a warning in the patch manual to use when titles using fake clients are updated. [SDK]</a></li>
+<li><a href="#note_37-S12">37-S12:  (EC) Added the nn::ec::CTR::PurchaseConfirmationApplet::RequestShowDialog member variable reference. [SDK]</a></li>
+<li><a href="#note_37-S13"><span class="important_style">37-S13:  (EC)★ Added an eShop REST API feature that provides functions for listing and purchasing service items through the independent server. [SDK | System Updater | Sample Demos]</span></a></li>
+<li><a href="#note_37-S15">37-S15:  (EC) Added that Error 005-5637 will occur if the local ticket is not deleted when reverting downloadable content. [SDK]</a></li>
+<li><a href="#note_37-S16">37-S16:  (ERREULA) Added a description of the value that specifies the nn::erreula::CTR::Config structure&rsquo;s useLanguage member. [SDK]</a></li>
+<li><a href="#note_37-S17">37-S17:  (FS) Added an operation for searching multiple media when mounting save data. [SDK]</a></li>
+<li><a href="#note_37-S18">37-S18:  (FS) Updated the document about the rollback prevention feature. [SDK]</a></li>
+<li><a href="#note_37-S20">37-S20:  (HIO) Updated the IS HostIO library. [SDK]</a></li>
+<li><a href="#note_37-S21">37-S21:  (HIO) Added a descriptionn of the nn::hio::SerialChannel::Flush function. [SDK]</a></li>
+<li><a href="#note_37-S22">37-S22:  (NFP) Added 0x to the items that display hexadecimal tag information in NfpUtil. [SDK]</a></li>
+<li><a href="#note_37-S23">37-S23:  (NFP) Deleted nn::nfp::ResultDataAccessFailed. [SDK]</a></li>
+<li><a href="#note_37-S24">37-S24:  (NFP) Added a feature to rewrite NFP tag ROM regions in NoftWriter. [SDK]</a></li>
+<li><a href="#note_37-S25">37-S25:  (NFP) Added a feature to display the NFT file Character Name and Character ID in NoftWriter. [SDK]</a></li>
+<li><a href="#note_37-S26">37-S26:  (OS) Added a warning about excessively calling the nn::os::Thread::Sleep function. [SDK]</a></li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_37-S02">37-S02:  (CEC) Fixed a bug where the icon and title were broken in the StreetPass box imported with the CecBoxTool. [SDK]</a></li>
+<li><a href="#note_37-S08">37-S08:  (DevEnv) Fixed a bug where unbootable CCI files were created. [SDK]</a></li>
+<li><a href="#note_37-S11">37-S11:  (EC) Fixed a bug where downloadable content was not deleted when an EcDevTool shop account was deleted. [SDK]</a></li>
+<li><a href="#note_37-S14">37-S14:  (EC) Fixed the upper character limit to the Details Information and Legal/Disclaimer Information displayed when purchasing a service item. [SDK | System Updater | Sample Demos]</a></li>
+<li><a href="#note_37-S19">37-S19:  (HID) Fixed a bug where Circle Pad Pro operates unintentionally during search. [SDK | Sample Demos]</a></li>
+<li><a href="#note_37-S27">37-S27:  (SND) Fixed a bug that caused a deadlock when the sound library is under a high load. [SDK]</a></li>
+</ul>
+<h3>CTR-SDK 11.3.1 (2015-06-03 - for System Updater 0.24.51)</h3><p><a href="#version_11_3_1_0">Update Details</a></p>
+<h4>Additions and Changes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_34-S01">34-S01:  (ACT) Released a public API function to retrieve a ServiceToken V2. [SDK|Sample Demos]</a></li>
+<li><a href="#note_34-S04">34-S04:  (TOOL) Added tag information displayed in NfpUtil. [SDK]</a></li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_34-S02">34-S02:  (NFP) Added information to change log entry 27-S08. [SDK]</a></li>
+<li><a href="#note_34-S03">34-S03:  (SND) Fixed a bug that caused a deadlock when calling a function that sets an effect or performs an AUX bus operation. [SDK]</a></li>
+<li><a href="#note_34-S05">34-S05:  (Login Applet) Revised change log entry 27-U06. [SDK]</a></li>
+</ul>
+<h3>CTR-SDK 11.3.0 (2015-03-24 - for System Updater 0.24.38)</h3><p><a href="#version_11_3_0_0">Update Details</a></p>
+<h4>Additions and Changes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_29-S03">29-S03:  (BOSS) Updated BOSS related documentation. [SDK]</a></li>
+<li><a href="#note_29-S05">29-S05:  (DevEnv) Updated battery level and update notification icon data. [SDK]</a></li>
+<li><a href="#note_29-S06">29-S06:  (EC) Updated the Patch Manual, in line with the discontinuation of the feature, to receive patches in applications and addition of the shop jump feature. [SDK]</a></li>
+<li><a href="#note_29-S07"><span class="important_style">29-S07:  (EC) ★ Added an advance downloading feature. [SDK|System Updater]</span></a></li>
+<li><a href="#note_29-S08">29-S08:  (EC) Added a recommendation to display legal/disclaimer information independently in the application when purchasing a service item if the legal/disclaimer information exceeds the limit on the number of characters. [SDK]</a></li>
+<li><a href="#note_29-S09">29-S09:  (EC) Added a description to the Patch Manual related to the patch product codes. [SDK]</a></li>
+<li><a href="#note_29-S12">29-S12:  (NFP) Added to the reference that <CODE>ResultInvalidOperation</CODE> may be returned with specific functions when using the NFC reader/writer. [SDK]</a></li>
+<li><a href="#note_29-S13">29-S13:  (QTM) Deleted the Dynamic Stereoscopy Programming Guide. [SDK]</a></li>
+<li><a href="#note_29-S14">29-S14:  (TOOL) Added an Unmount feature to <CODE>NfpManager</CODE>. [SDK]</a></li>
+<li><a href="#note_29-S15">29-S15:  (TOOL) Made changes so that the screen display for the <CODE>NfpUtil</CODE> tool branches to CTR and SNAKE. [SDK]</a></li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_29-S01">29-S01:  (AC) Fixed a bug that caused the system to enter an undefined state when the <CODE>nn::ac::GetConnectResult</CODE> function was called before the connection to the access point had completed. [SDK]</a></li>
+<li><a href="#note_29-S02">29-S02:  (AC) Fixed a bug that invalidated the <CODE>nn::ndm::Initialize</CODE> function performed by the application. [SDK]</a></li>
+<li><a href="#note_29-S04">29-S04:  (CX) Fixed a bug that caused a buffer overrun with the <CODE>nn::cx::CompressHuffman</CODE> function. [SDK]</a></li>
+<li><a href="#note_29-S10">29-S10:  (GX) Fixed a bug that caused the screen to flicker because the <CODE>nngxWaitVSync</CODE> function did not wait for screen switching to synchronize. [SDK]</a></li>
+<li><a href="#note_29-S11">29-S11:  (GX) Made revisions so that a GL error is generated when <CODE>GL_RGBA8_OES</CODE> is specified in the display buffer. [SDK]</a></li>
+</ul>
+<h3>CTR-SDK 11.2.1 (2015-03-05 - for System Updater 0.24.33) </h3><p><a href="#version_11_2_1_0">Update Details</a></p>
+<h4>Additions and Changes </h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_28-S01">28-S01: (NFP) Added a function to replace non-supported characters in amiibo nicknames. [SDK|System Updater]</a></li>
+</ul>
+<h3>CTR-SDK 11.2.0 (2015-02-26 - for System Updater 0.24.32) </h3><p><a href="#version_11_2_0_0">Update Details</a></p>
+<h4>Additions and Changes </h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_27-S01">27-S01: (AC) Changed the error returned by the <code>conntest::ConnectionTest::GetLastResultCode</code> function when there is a security error. [SDK]</a></li>
+<li><a href="#note_27-S02">27-S02: (BOSS) Changed the timing to extract notification data from BOSS storage. [SDK|System Updater]</a></li>
+<li><a href="#note_27-S04">27-S04: (EC) Revised the EC Related Documents. [SDK]</a></li>
+<li><a href="#note_27-S05"><span class="important_style">27-S05: (EC) * Features that verified patch updates and downloaded from inside the application were made publicly unavailable. [SDK]</span></a></li>
+<li><a href="#note_27-S06">27-S06: (ENC) Made changes so that the enc library is linked by default. [SDK]</a></li>
+<li><a href="#note_27-S07"><span class="important_style">27-S07: (NFP) * Added NFC reader/writer support in the NFP library. [SDK|System Updater]</span></a></li>
+<li><a href="#note_27-S08">27-S08: (NFP) Made changes so that an assertion occurs if the NFP library is not finalized when transitioning from the application to the HOME Menu or an applet. [SDK]</a></li>
+<li><a href="#note_27-S11">27-S11: (TOOL) Added a DataStore download task notification data serial ID display feature to BossLotcheckTool. [SDK]</a></li>
+<li><a href="#note_27-S12">27-S12: (TOOL) Made changes so that a unique ID in the Dummy Nintendo eShop is displayed filled by zeros. [SDK]</a></li>
+<li><a href="#note_27-S14">27-S14: (TOOL) Added a feature to set the address for taxes in EcDevTool. [SDK]</a></li>
+<li><a href="#note_27-S15">27-S15: (TOOL) Improved the message displayed during a <code>ctr_makerom32</code> format error. [SDK]</a></li>
+<li><a href="#note_27-S16">27-S16: (TOOL) Added the NfpSdmcTool that can export and import from an NFP tag to an SD card. [SDK]</a></li>
+<li><a href="#note_27-S17">27-S17: (TOOL) Added a Config flag to forcibly generate a ResultNfcTargetError. [SDK|System Updater]</a></li>
+</ul>
+<h4>Bug Fixes </h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_27-S03">27-S03: (CEC) Added to the function reference that initialized functions must be called in advance to use functions or classes in the <code>nn::cec</code> namespace. [SDK]</a></li>
+<li><a href="#note_27-S09">27-S09: (OS) Fixed a bug that caused a fatal error during <code>nn::os::StackMemory</code> initialization. [SDK]</a></li>
+<li><a href="#note_27-S10">27-S10: (SND) Fixed a bug that caused the system to occasionally stop responding when transitioning to the HOME Menu during sound playback. [SDK]</a></li>
+<li><a href="#note_27-S13">27-S13: (TOOL) Made changes to the Dummy Nintendo eShop so that the page name of the jump destination in Nintendo eShop is displayed. [SDK]</a></li>
+</ul>
+<h3>CTR-SDK 11.1.1 (2015-02-16 - for System Updater 0.24.19) </h3><p><a href="#version_11_1_1_0">Update Details</a></p>
+<h4>Additions and Changes </h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_26-S01">26-S01: (ACT) Updated the Account System Developer&rsquo;s Guide. [SDK]</a></li>
+<li><a href="#note_26-S02">26-S02: (EC) Added that the YAML format used in specifying content list files is different from general YAML formats. [SDK]</a></li>
+<li><a href="#note_26-S03">26-S03: (EC) Added a description of <code>desc</code> files when creating a patch with extended application format.</a></li>
+<li><a href="#note_26-S04">26-S04: (GX) Added a function to get the base address being used in the <code>gr::Vertex</code> class. [SDK]</a></li>
+<li><a href="#note_26-S06">26-S06: (TOOL) Added an option to <code>ctr_loadrun32</code> to stop when the application exits unexpectedly. [SDK]</a></li>
+<li><a href="#note_26-S07">26-S07: (TOOL) Added an option to control the <code>ctr_loadrun32</code> termination code. [SDK]</a></li>
+</ul>
+<h4>Bug Fixes </h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_26-S05">26-S05: (TOOL) Fixed a bug that caused an unexpected exit with <code>ctr_loadrun32</code>. [SDK]</a></li>
+</ul>
+<h3>CTR-SDK 11.1.0 (2014-12-09 - for System Updater 0.24.4) </h3><p><a href="#version_11_1_0_0">Update Details</a></p>
+<h4>Additions and Changes </h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_23-S01">23-S01: (GX) Noted in the reference that the <code>nngxValidateState</code> function requests memory allocation. [SDK]</a></li>
+<li><a href="#note_23-S02">23-S02: (BOSS) Improved BossLotcheckTool error displays. [SDK]</a></li>
+<li><a href="#note_23-S04">23-S04: (TOOL) Made revisions to the UseOtherVariationSaveData documentation. [SDK]</a></li>
+<li><a href="#note_23-S05"><span class="important_style">23-S05: (NFP) ★ Added the NFP library. [SDK | System Updater | Sample Demos]</span></a></li>
+<li><a href="#note_23-S06">23-S06: (QTM) Made revisions to the Dynamic Stereoscopy Programming Guide. [SDK]</a></li>
+</ul>
+<h4>Bug Fixes </h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_23-S03">23-S03: (TOOL) Fixed a bug where a trailing slash in the ROMFS_ROOT specified for <code>ctr_makerom32</code> caused an error. [SDK]</a></li>
+</ul>
+<h4>Known Issues </h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_23-S07">23-S07: Under some conditions, the process does not return from the <code>ExtraPad</code> function that starts sampling.</a></li>
+</ul>
+<h3>CTR-SDK 11.0.2 (2014/11/21 - for System Updater 0.24.2)</h3><p><a href="#version_11_0_2_0">Update Details</a></p>
+<h4>Additions and Changes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_22-S01">22-S01:(EC) Noted that the string for the <CODE>disclaimer</CODE> member variable of the <CODE>nn::ec::CTR::ServiceDescription</CODE> structure must be no greater than 400 lines. [SDK]</a></li>
+<li><a href="#note_22-S02">22-S02: (HID) Added as an &quot;issue due to the specifications&quot; that on rare occasions input stops working from buttons other than the HOME Menu button. [SDK]</a></li>
+</ul>
+<h3>CTR-SDK 11.0.0 (2014/11/06 - for System Updater 0.24.0)</h3><p><a href="#version_11_0_0_0">Update Details</a></p>
+<h4>Additions and Changes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_20-S01">20-S01:(APPLET) Added in the reference that <CODE>nn::applet::CTR::PrepareToCloseApplication</CODE> does not need to be called during application shutdown. [SDK | Sample Demos]</a></li>
+<li><a href="#note_20-S05">20-S05:(GX) Added a mechanism for controlling whether the 3D depth value can be updated during matrix calculation. [SDK]</a></li>
+<li><a href="#note_20-S06">20-S06:(OS) Added in the reference that the <CODE>GetRunningTargetHardware</CODE> function cannot be used in master ROMs. [SDK]</a></li>
+<li><a href="#note_20-S07"><span class="important_style">20-S07:(QTM)★ Added the <CODE>qtm</CODE> library. [SDK | System Updater | Sample Demos]</span></a></li>
+<li><a href="#note_20-S08">20-S08:(TOOL) Loosened restrictions on the CXI size when creating LE files with <CODE>makerom</CODE>. [SDK]</a></li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_20-S02">20-S02:(CFG) Fixed a bug where mutual exclusion within the <CODE>cfg</CODE> library was flawed. [SDK]</a></li>
+<li><a href="#note_20-S03">20-S03:(EC) Fixed a bug where the session was not invalidated if <CODE>RequestDownloadAllOwnedContents</CODE> and <CODE>RequestRedeemUniqueContentSetAuto</CODE> required the session to be reinitialized. [SDK]</a></li>
+<li><a href="#note_20-S04">20-S04:(GX) Fixed a bug that prevented the framebuffer cache from being flushed appropriately before the <CODE>gr::RenderState</CODE> command was issued. [SDK]</a></li>
+</ul>
+<h3>CTR-SDK 10.1.0 (2014/10/15 - for System Updater 0.23.5)</h3><p><a href="#version_10_1_0_0">Update Details</a></p>
+<h4>Additions and Changes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_19-S01">19-S01:(APPLET) Made <CODE>nn::applet::CTR::GetInitialParam</CODE> a public function. [SDK]</a></li>
+<li><a href="#note_19-S02">19-S02:(DevEnv) Added a script for setting the environment variable CTRSDK_ROOT. [SDK]</a></li>
+<li><a href="#note_19-S03">19-S03:(EC) Updated EC-related documentation. [SDK]</a></li>
+<li><a href="#note_19-S04">19-S04: (EC) Added a template for patch icons. [SDK]</a></li>
+<li><a href="#note_19-S05">19-S05:(EC) Added a function to determine whether redundant purchases of downloadable content are allowed. [SDK | Sample Demos]</a></li>
+<li><a href="#note_19-S06">19-S06: (GX) Fixed a bug where vertex attribute settings could not be separately disabled after an interleaved array was used. [SDK]</a></li>
+<li><a href="#note_19-S07"><span class="important_style">19-S07: (OLV) ★ Integrated the OLV library into the SDK and Sample Demos. [SDK | System Updater | Sample Demos]</span></a></li>
+<li><a href="#note_19-S08">19-S08:(TOOL) Improved <CODE>makerom</CODE> error output. [SDK]</a></li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_19-S09">19-S09:(TOOL) Fixed a bug where the RSF file <CODE>Include</CODE> setting did not work correctly. [SDK]</a></li>
+</ul>
+<h3>CTR-SDK 10.0.2 (2014/09/10 - for System Updater 0.23.2)</h3><p><a href="#version_10_0_2_0">Update Details</a></p>
+<h4>Additions and Changes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_17-S01">17-S01:  (GX) Added a check for the restrictions related to the width and height when transferring the color buffer. [SDK]</a></li>
+</ul>
+<h3>CTR-SDK 10.0.1 (2014/09/08 - for System Updater 0.23.1)</h3><p><a href="#version_10_0_1_0">Update Details</a></p>
+<h4>Additions and Changes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_16-S01">16-S01:  (FS) Added the <CODE>nn::fs::SetSdmcEjectionFatal</CODE> function. [SDK]</a></li>
+<li><a href="#note_16-S02"><span class="important_style">16-S02:  (TOOL)★ Added <CODE>makebanner</CODE> support for SNAKE-specific applications. [SDK]</span></a></li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_16-S03">16-S03:  (TOOL) Fixed a bug where processing sometimes stopped when <CODE>SaveDataFiler</CODE> acted to destroy a save data file. [SDK]</a></li>
+</ul>
+<h3>CTR-SDK 10.0.0 (2014/08/27 - for System Updater 0.23.0)</h3><p><a href="#version_10_0_0_0">Update Details</a></p>
+<h4>Additions and Changes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_15-S01">15-S01:  (APPLET) Added the <CODE>nn::applet::CTR::CloseApplicationForTrial</CODE> function. [SDK]</a></li>
+<li><a href="#note_15-S02">15-S02:  (APPLET) Added an API to jump to the e-manual for the calling application. [SDK]</a></li>
+<li><a href="#note_15-S05">15-S05:  (CRYPTO) Added support for CBC mode. [SDK]</a></li>
+<li><a href="#note_15-S06">15-S06:  (DevEnv) Added support for environments in which only ARMCC 5.x is installed. [SDK | Sample Demos]</a></li>
+<li><a href="#note_15-S07"><span class="important_style">15-S07:  (DSP)★ Integrated <CODE>AacCodecKit</CODE>. [SDK | Sample Demos]</span></a></li>
+<li><a href="#note_15-S08">15-S08:  (EC) Added the <CODE>ResultAppletNeedsBalanceUpdate</CODE> error for detecting a change in the balance while the EC applet is displaying. [SDK | System Updater]</a></li>
+<li><a href="#note_15-S09">15-S09:  (EC) Updated the EC library documentation. [SDK]</a></li>
+<li><a href="#note_15-S10"><span class="important_style">15-S10:  (EC)★ The EC library now stops on an assertion if it is used without running <CODE>nn::ec::Initialize</CODE>. [SDK]</span></a></li>
+<li><a href="#note_15-S11">15-S11:  (EC) Added text about the differences in service item encryption keys to &quot;Differences Between Test Units and Retail Units.&quot; [SDK]</a></li>
+<li><a href="#note_15-S12">15-S12:  (GD) Added support in the <CODE>Resource::CreateTexture2DResource</CODE> function for default data for <CODE>LAYOUT_BLOCK_32</CODE> mode. [SDK]</a></li>
+<li><a href="#note_15-S13">15-S13:  (GR) Added a default constructor and an initialization function to the <CODE>gr::CommandBufferJumpHelper</CODE> class. [SDK]</a></li>
+<li><a href="#note_15-S15">15-S15:  (GX) Added four nngx Raw APIs. [SDK]</a></li>
+<li><a href="#note_15-S16">15-S16:  (GX) Added text to the manual about a bug fix related to the use of multiple textures. [SDK]</a></li>
+<li><a href="#note_15-S18"><span class="important_style">15-S18:  (HID)★ Changed the names from &quot;RightStick&quot; to &quot;CStick&quot; in the HID library. [SDK]</span></a></li>
+<li><a href="#note_15-S19">15-S19:  (OS) The <CODE>nn::os::IsRunOnSnake</CODE> and <CODE>nn::os::IsRunningAsExtApplication</CODE> functions now show up in the CTR Master Editor list of middleware when they are used. [SDK]</a></li>
+<li><a href="#note_15-S20">15-S20:  (OS) Added a callback feature for TLS destructor functions. [SDK]</a></li>
+<li><a href="#note_15-S21">15-S21:  (NFC) The NFC library is no longer publicly available. [SDK | Sample Demos]</a></li>
+<li><a href="#note_15-S23">15-S23:  (TOOL) Added the <CODE>-nt</CODE> option to <CODE>ctr_TexturePackager32</CODE>. [SDK]</a></li>
+<li><a href="#note_15-S24">15-S24:  (UDS) In the retail systems, the non-public functions for network searches now forcibly scan all channels. [SDK]</a></li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_15-S03">15-S03:  (CAMERA) Fixed a bug where applications that did not use the <CODE>camera</CODE> library were nevertheless detected by CTR Master Editor as using the library. [SDK]</a></li>
+<li><a href="#note_15-S04">15-S04:  (CFG) Fixed the <CODE>nn::cfg::CTR::GetLanguage</CODE> function so that it does not return undefined language code. [SDK]</a></li>
+<li><a href="#note_15-S14">15-S14:  (GR) Fixed a bug where more than the necessary number of vertex attributes might be set. [SDK]</a></li>
+<li><a href="#note_15-S17">15-S17:  (HID) Fixed a bug where applications that did not use <CODE>ExtraPad</CODE> were nevertheless detected by CTR Master Editor as using <CODE>ExtraPad</CODE> and <CODE>ir</CODE>. [SDK]</a></li>
+<li><a href="#note_15-S22">15-S22:  (TOOL) Fixed the operations of the <CODE>ctr_loadrun32</CODE> <CODE>-args</CODE> option. [SDK]</a></li>
+</ul>
+<h3>CTR-SDK 9.12.0 (2014/07/03 - for System Updater 0.22.34)</h3><p><a href="#version_9_12_0_0">Update Details</a></p>
+<h4>Additions and Changes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_08-S01">08-S01:  (APPLET) Expanded functionality now allows for separate settings for the upper and lower screens for whether to allow posting of screen captures when transitioning to the HOME Menu. [SDK | System Updater]</a></li>
+<li><a href="#note_08-S02">08-S02:  (EC) Revised the EC-related documentation [SDK].</a></li>
+<li><a href="#note_08-S04"><span class="important_style">08-S04:  (NFC)★ Deleted arguments from <CODE>nn::nfc::CTR::Mount</CODE>. [SDK | System Updater | Sample Demos]</span></a></li>
+<li><a href="#note_08-S05">08-S05:  (OS) ★ Made the <CODE>nn::os::IsRunOnSnake</CODE> function run faster. [SDK]</a></li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_08-S03">08-S03:  (GR) Fixed a bug where the texture cache flush command would not run correctly in specific texture unit situations. [SDK]</a></li>
+</ul>
+<h3>CTR-SDK 9.11.0 (2014/06/10 - for System Updater 0.22.7)</h3><p><a href="#version_9_11_0_0">Update Details</a></p>
+<h4>Additions and Changes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_07-S01">07-S01:  (APPLET) Deleted a reference to the <CODE>nn::applet::CTR::GetInitialParam</CODE> function [SDK].</a></li>
+<li><a href="#note_07-S02">07-S02:  (CAMERA) Made changes in CTR Master Editor to enable checking the use of the <CODE>nn::camera::Initialize</CODE> function [SDK].</a></li>
+<li><a href="#note_07-S03">07-S03:  (DBG) Eliminated the character-length restrictions on the output from <CODE>NN_LOG</CODE> macros [SDK].</a></li>
+<li><a href="#note_07-S04"><span class="important_style">07-S04:  (DevEnv) ★ Merged changes from CTR-SDK 7.2 through CTR-SDK 7.2.1 [SDK | System Updater].</span></a></li>
+<li><a href="#note_07-S05">07-S05:  (EC) Added an API function for re-downloading all items with the EC applet [SDK].</a></li>
+<li><a href="#note_07-S06">07-S06:  (EC) Added an API function for entering download codes for add-on content with the EC applet [SDK].</a></li>
+<li><a href="#note_07-S09">07-S09:  (GD) Added a function for resetting <CODE>Texture2D</CODE> objects set in texture units [SDK].</a></li>
+<li><a href="#note_07-S10"><span class="important_style">07-S10:  (GX) ★ Added the <CODE>nngxUpdateBufferLight</CODE> function [SDK].</span></a></li>
+<li><a href="#note_07-S11">07-S11:  (FND) Added atomic operation functions [SDK].</a></li>
+<li><a href="#note_07-S12">07-S12:  (FS) Added information about what to do if you want to use an expanded save data number that differs from the unique ID [SDK].</a></li>
+<li><a href="#note_07-S13"><span class="important_style">07-S13:  (OS) ★ Changed the specifications of the <CODE>nn::os::GetRunningTargetHardware</CODE> function [SDK | System Updater].</span></a></li>
+<li><a href="#note_07-S15">07-S15:  (TOOL) Made changes to BossLotCheckTool so that the content of DataStore task errors is shown as strings [SDK].</a></li>
+<li><a href="#note_07-S16">07-S16:  (TOOL) Added <CODE>PedometerChanger</CODE> [SDK].</a></li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_07-S07">07-S07:  (GD) Fixed a bug where the render block format configuration command was not output when the <CODE>OutputStage</CODE> module was reconfigured [SDK].</a></li>
+<li><a href="#note_07-S08">07-S08:  (GD) Fixed a problem in specifying the type of buffer to release with the <CODE>ReleaseTexture2DResource</CODE> function [SDK].</a></li>
+<li><a href="#note_07-S14">07-S14:  (TOOL) Fixed a problem that occurred when the <CODE>-lh</CODE> option was specified for <CODE>ctr_compress</CODE> [SDK].</a></li>
+</ul>
+<h3>CTR-SDK 9.10.0 (2014/04/30 - for System Updater 0.22.6)</h3><p><a href="#version_9_10_0_0">Update Details</a></p>
+<h4>New Features and Improvements</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_06-S01">06-S01:  (CAMERA) Improved the speed of nn::camera::Finalize [SDK | System Updater]</a></li>
+<li><a href="#note_06-S02"><span class="important_style">06-S02:  (DevEnv) ★ Merged changes from CTR-SDK 7.1 through CTR-SDK 7.2 [SDK | System Updater | Sample Demos]</span></a></li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_06-S03">06-S03:  (GX) Fixed assert in the nngxGetPhysicalAddr function [SDK]</a></li>
+<li><a href="#note_06-S04">06-S04:  (OS) Fixed a bug that prevented the Sleep function from waiting the proper amount of time [SDK | System Updater]</a></li>
+</ul>
+<h3>CTR-SDK 9.9.0 (2014/03/26 - for System Updater 0.22.5)</h3><p><a href="#version_9_9_0_0">Update Details</a></p>
+<h4>New Features and Improvements</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_05-S01">05-S01:  (DevEnv) Added information to the documentation about developing for SNAKE with a debugger [SDK | Sample Demos]</a></li>
+<li><a href="#note_05-S02"><span class="important_style">05-S02:  (NFC) ★ Added <CODE>ApplicationCode</CODE> to the <CODE>Format</CODE> parameters [SDK | System Updater | Sample Demos]</span></a></li>
+<li><a href="#note_05-S03"><span class="important_style">05-S03:  (OS) ★ Added the <CODE>os::CTR::IsRunningAsExtApplication</CODE> function [SDK | System Updater]</span></a></li>
+</ul>
+<h3>CTR-SDK 9.8.0 (2014/01/08 - for System Updater 0.22.3)</h3><p><a href="#version_9_8_0_0">Update Details</a></p>
+<h4>New Features and Improvements</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_03-S01"><span class="important_style">03-S01: (DevEnv) ★ Merged changes from CTR-SDK 7.0.1 through CTR-SDK 7.1 [SDK | System Updater | Sample Demos]</span></a></li>
+<li><a href="#note_03-S03"><span class="important_style">03-S03: (NFC) ★ Organized nfc-related code [SDK]</span></a></li>
+<li><a href="#note_03-S04"><span class="important_style">03-S04: (OS) ★ Changed specifications of nn::os::IsRunOnSnake function [SDK | System Updater]</span></a></li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_03-S02">03-S02: (NFC) Fixed a bug in the nfc library [SDK | System Updater]</a></li>
+</ul>
+<h3>CTR-SDK 9.7.0 (2013/09/30 - for System Updater 0.22.2)</h3><p><a href="#version_9_7_0_0">Update Details</a></p>
+<h4>New Features and Improvements</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_02-S01">02-S01:  (NFC) Added the <CODE>TagStream</CODE> class [SDK]</a></li>
+<li><a href="#note_02-S02">02-S02:   (NFC) Changed the functions in the NFC class to global functions [SDK]</a></li>
+<li><a href="#note_02-S03">02-S03:  (NFC) Added the <CODE>nn::nfc::ResetChip</CODE> function to reset the chip [SDK]</a></li>
+<li><a href="#note_02-S04">02-S04:   (NFC) Changed how corrupted tags are handled [SDK]</a></li>
+<li><a href="#note_02-S05">02-S05:  (OS) Added a feature that gets the execution environment for SNAKE [SDK | System Updater]</a></li>
+<li><a href="#note_02-S06"><span class="important_style">02-S06:  (DevEnv)★ Merged changes from CTR-SDK 6.0.1 System Updater 0.19.3 through CTR-SDK 7.0 [SDK | System Updater | Sample Demos]</span></a></li>
+</ul>
+<h3>CTR-SDK 9.6.0 (2013/07/25 - for System Updater 0.22.1)</h3><p><a href="#version_9_6_0_0">Update Details</a></p>
+<h4>New Features and Improvements</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_01-S01">01-S01:  (NFC) Added the NFC library to SNAKE to handle Near Field Communication (NFC) [SDK]</a></li>
+<li><a href="#note_01-S02">01-S02:  (OS) Added a Dequeue feature with a wait time to the <CODE>BlockingQueue</CODE> class [SDK | System Updater]</a></li>
+<li><a href="#note_01-S03">01-S03:  (OS) Added <CODE>desc</CODE> for extended applications [SDK]</a></li>
+</ul>
+<h4>Known Issues</h4>
+<ul style="list-style-type:none;">
+<li><a href="#note_01-S04">01-S04:  Using the Nintendo 3DS CPU profiler in the SNAKE-compatible version of PARTNER-CTR Debugger</a></li>
+<li><a href="#note_01-S05">01-S05:  Converting Windows fonts with FontConverter</a></li>
+</ul>
+
+<h3>Previous Revision Histories</h3>
+<p>For the previous change log, see <a href="CTR-SDK_ChangeLog_old.html">here</a>.</p>
+
+<p>For change logs prior to CTR-SDK 7.2.1, see <a href="ChangeLog_CTR.html">here</a>.</p>
+
+<h2 id="version_11_5_2_0">CTR-SDK 11.5.2 (2016/10/28 - for System Updater 0.25.3) Change Log</h2>
+<h3 id="category_51_0">Additions and Changes</h3>
+<h3 id="note_51-S01" class="release_note"><span class="addition_style">Additions and Changes</span>51-S01:(TOOL) Added CFLUtility tool [SDK]</h3>
+<p class="release_note">Added the CFLUtility tool that supports the creation of test environments, and debugging of applications that use Mii.
+</p>
+<h2 id="version_11_5_1_0">Changes in CTR-SDK 11.5.1 (2016-05-17 - for System Updater 0.25.0)</h2>
+<h3 id="category_49_0">Additions and Changes</h3>
+<h3 id="note_49-S01" class="release_note"><span class="addition_style">Additions and Changes</span>49-S01: (AC) Added a description of how to detect connections to Spot Pass communication hubs. [SDK]</h3>
+<p class="release_note">Added an indication for when detecting connections to Spot Pass connection hubs to the description of the <CODE>nn::ac::CTR::ApType</CODE> enumerated type.
+</p>
+<h3 id="note_49-S02" class="release_note"><span class="addition_style">Additions and Changes</span>49-S02: (CAMERA) Changed error handling for when <CODE>nn::camera::CTR::ResultFatalError</CODE> occurs. [SDK | Sample Demos]</h3>
+<p class="release_note">Changed the error handling for applications when <CODE>nn::camera::CTR::ResultFatalError</CODE> occurs. <br />
+The samples and documentation were updated as a result.</p>
+<h3 id="category_49_0">Bug Fixes</h3>
+<h3 id="note_49-S03" class="release_note"><span class="bugfix_style">Bug Fixes</span>49-S03: (GX) Invalidation of assert failures when issuing graphics requests from outside the application core. [SDK]</h3>
+<p class="release_note">Invalidated the assert failures that occurred when issuing commands outside the application code, which was added in CTR-SDK 11.5. <br />
+Added a reference to denote issues when issuing commands outside the application to the ongoing command list.</p>
+<h2 id="version_11_5_0_0">Changes in CTR-SDK 11.5.0 (2016-05-09 - for System Updater 0.25.0)</h2>
+<h3 id="category_48_0">Additions and Changes</h3>
+<h3 id="note_48-S02" class="release_note"><span class="addition_style">Additions and Changes</span> 48-S02:  (BOSS) Clarified the conditions under which the BOSS task execution count is reduced. [SDK]</h3>
+<p class="release_note">Clarified the conditions under which the BOSS task execution count is reduced in the function references for the <CODE>nn::boss::Task::Start</CODE> and <CODE>nn::boss::Task::StartBgImmediate</CODE> functions.
+</p>
+<h3 id="note_48-S03" class="release_note"><span class="addition_style">Additions and Changes</span><span class="important_style"> 48-S03:  (CX) ★ Added a parameter for specifying the size of the target decompression buffer in the nn::cx::SecureUncompress function group. [SDK]</span></h3>
+<p class="release_note">Functions in the <CODE>nn::cx::SecureUncompress</CODE> function group now take the size of the target decompression buffer as a parameter.
+</p>
+<h3 id="note_48-S04" class="release_note"><span class="addition_style">Additions and Changes</span> 48-S04:  (DevEnv) Added alignment restriction definitions. [SDK]</h3>
+<p class="release_note">Added definitions for usable memory type and memory size restrictions for the following libraries.
+</p>
+<ul class="release_note"><li> act
+</li>
+<li> hid
+</li>
+<li> http
+</li>
+<li> ir
+</li>
+<li> nfp
+</li>
+<li> ngc
+</li>
+<li> socket
+</li>
+</ul>
+<h3 id="note_48-S06" class="release_note"><span class="addition_style">Additions and Changes</span> 48-S06:  (EC) Updated the eShop REST API manual. [SDK]</h3>
+<p class="release_note">Updated the eShop REST API manual.
+</p>
+<h3 id="note_48-S08" class="release_note"><span class="addition_style">Additions and Changes</span><span class="important_style">48-S08:  (EC) ★Deleted the information about submitting an application on OMAS from the description of the eShop jump functions. [SDK]</span></h3>
+<p class="release_note">The descriptions of the <CODE>nn::applet::CTR::JumpToEShopTitlePage</CODE> and <CODE>nn::applet::CTR::JumpToEShopPatchPage</CODE> functions stated that an application had to be submitted on OMAS to use these functions. Deleted this information because an application no longer has to be submitted on OMAS to use these functions.
+</p>
+<h3 id="note_48-S09" class="release_note"><span class="addition_style">Additions and Changes</span> 48-S09:  (EC) Added a description of the production environment to the Patch Manual. [SDK]</h3>
+<p class="release_note">Added information about the production environment to the Patch Manual.
+</p>
+<h3 id="note_48-S10" class="release_note"><span class="addition_style">Additions and Changes</span> 48-S10:  (EC) Added a validity check for download code IDs to the function for entering a download code. [SDK | Sample Demos]</h3>
+<p class="release_note">The function used when entering download codes now checks whether the specified download code is valid.<br /> Valid download codes are 16-character alphanumeric strings that include a null terminator.<br /> Also, added the <CODE>ECARD_ID_LENGTH</CODE> definition for download code IDs to the header file, and updated the sample demos to use <CODE>ECARD_ID_LENGTH</CODE>.
+</p>
+<h3 id="note_48-S11" class="release_note"><span class="addition_style">Additions and Changes</span> 48-S11:  (GX) Added information about how long to maintain initialization data to the descriptions of functions in the nn::gd::Resource class. [SDK]</h3>
+<p class="release_note">Added information about how long to maintain initialization data to the descriptions of the <CODE>gd::Resource::CreateTexture2DResource</CODE> and <CODE>gd::Resource::CreateVertexBufferResource</CODE> functions.
+</p>
+<h3 id="category_48_0">Bug Fixes</h3>
+<h3 id="note_48-S01" class="release_note"><span class="bugfix_style">Bug Fix</span> 48-S01:  (BOSS) Updated the boss::UnregisterStorage documentation. [SDK]</h3>
+<p class="release_note">Added information about the behavior of tasks that are left over after BOSS storage is deleted to the <CODE>nn::boss::UnregisterStorage</CODE> function reference.
+</p>
+<h3 id="note_48-S05" class="release_note"><span class="bugfix_style">Bug Fix</span><span class="important_style"> 48-S05:  (EC) ★ Fixed a bug where pressing the HOME Button after jumping to DummyNintendoEShop would cause the system to freeze. [SDK | System Updater]</span></h3>
+<p class="release_note">Fixed a bug where pressing the HOME Button after jumping to DummyNintendoEShop would cause the system to freeze.<br /> Also, DummyNintendoEShop is now included with System Updater, so DummyNintendoEShop no longer must be installed separately to test eShop jumps.
+</p>
+<h3 id="note_48-S07" class="release_note"><span class="bugfix_style">Bug Fix</span> 48-S07:  (EC) Fixed typos in the eShop REST API function references. [SDK]</h3>
+<p class="release_note">Changed instances of &quot;the <CODE>EcAppletInitializeSession</CODE> function&quot; to &quot;the <CODE>EcApplet::RequestInitializeSession</CODE> function&quot; in the following function references.
+</p>
+<ul class="release_note"><li> nn::ec::CTR::ShowRedemptionConfirmationDialog
+</li>
+<li> nn::ec::CTR::ShowPurchaseConfirmationDialog
+</li>
+<li> nn::ec::CTR::RequestRecurringSubscription
+</li>
+</ul>
+<h3 id="note_48-S12" class="release_note"><span class="bugfix_style">Bug Fix</span> 48-S12:  (GX) Fixed a bug where the nn::gd::VertexInputStage class would freeze under some conditions. [SDK]</h3>
+<p class="release_note">Fixed a bug in the <CODE>nn::gd::VertexInputStage</CODE> class where using input slot 8 or above would cause rendering issues or cause the system to freeze.
+</p>
+<h3 id="note_48-S13" class="release_note"><span class="bugfix_style">Bug Fix</span> 48-S13:  (GX) Fixed a bug in the nn::gd::VertexInputStage class that caused registers to be overwritten unexpectedly. [SDK]</h3>
+<p class="release_note">Fixed a bug in the <CODE>nn::gd::VertexInputStage</CODE> class where write commands that unexpectedly overwrote certain registers were sometimes generated when generating rendering commands.
+</p>
+<h3 id="note_48-S14" class="release_note"><span class="bugfix_style">Bug Fix</span> 48-S14:  (RDT) Fixed a bug where the RDT library stopped on an assertion when used to send data. [SDK]</h3>
+<p class="release_note">There was a bug in the Development and Debug builds where the RDT library would stop on an assertion when used to send data.<br /> There was also another bug in the Release build where the process for sending data did not get completed correctly.<br /> These bugs have been fixed.
+</p>
+<h3 id="note_48-S15" class="release_note"><span class="bugfix_style">Bug Fix</span> 48-S15:  (SND) Fixed a bug where ADPCM audio data was not played correctly if played at the same time that the system was put to sleep. [SDK]</h3>
+<p class="release_note">Fixed a bug where the <CODE>AdpcmParam</CODE> parameter was not used correctly if the <CODE>nn::snd::CTR::Voice::SetAdpcmParam</CODE> function was called while the system was going to sleep.
+</p>
+<h3 id="note_48-S16" class="release_note"><span class="bugfix_style">Bug Fix</span> 48-S16:  (SND) Fixed a bug where the values returned by the nn::snd::GetDspCycles function were incorrect. [SDK]</h3>
+<p class="release_note">Fixed a bug where the number of cycles returned by the <CODE>nn::snd::GetDspCycles</CODE> function was larger than the number of cycles that were actually consumed.
+</p>
+<h2 id="version_11_4_0_0">Changes in CTR-SDK 11.4.0 (2015-09-07 - for System Updater 0.24.66)</h2>
+<h3 id="category_37_0">Additions and Changes</h3>
+<h3 id="note_37-S01" class="release_note"><span class="addition_style">Additions and Changes</span> 37-S01:  (BOSS) Changed a document related to BOSS. [SDK]</h3>
+<p class="release_note">Changed the following document related to BOSS.
+</p>
+<ul class="release_note"><li> Added in the BossLotcheckTool <B>Clear BOSS DB in the system</B> description that elaborated that save data must be deleted when debugging without any BOSS information registered.
+</li>
+<li> Added to the reference that <CODE>nn::boss::FgOnlyTask</CODE> must be specified in the <CODE>nn::boss::RegisterImmediateTask</CODE> function.
+</li>
+<li> Changed the <B>Application ID</B> notation in the <CODE>nn::boss::ResultStorageNotFound</CODE> class description to a more appropriate expression.
+</li>
+</ul>
+<h3 id="note_37-S03" class="release_note"><span class="addition_style">Additions and Changes</span> 37-S03:  (CEC) Added a function that gets whether a StreetPass box can be created. [SDK]</h3>
+<p class="release_note">Added a <CODE>nn::cec::MessageBox::CanCreateMessageBox</CODE> function that gets whether a StreetPass box can be created.
+</p>
+<h3 id="note_37-S04" class="release_note"><span class="addition_style">Additions and Changes</span> 37-S04:  (CEC) Added information about icon data and description data formats. [SDK]</h3>
+<p class="release_note">Added information about icon data and description data formats to the API reference.
+</p>
+<h3 id="note_37-S05" class="release_note"><span class="addition_style">Additions and Changes</span> 37-S05:  (DevEnv) Updated nn.h. [SDK]</h3>
+<p class="release_note">Updated <CODE>nn.h</CODE> to allow use by all CTR-SDK API functions by using an <CODE>include</CODE> statement.
+</p>
+<h3 id="note_37-S06" class="release_note"><span class="addition_style">Additions and Changes</span> 37-S06:  (DevEnv) Added a definition for alignment restriction. [SDK | Sample Demos]</h3>
+<p class="release_note">Added definitions for alignment and size restrictions for the following libraries.
+</p>
+<ul class="release_note"><li> aacdec
+</li>
+<li> aacenc
+</li>
+<li> act
+</li>
+<li> camera
+</li>
+<li> cec
+</li>
+<li> dlp
+</li>
+<li> fs
+</li>
+<li> gx
+</li>
+<li> hid
+</li>
+<li> http
+</li>
+<li> ir
+</li>
+<li> os
+</li>
+<li> rdt
+</li>
+<li> ro
+</li>
+<li> snd
+</li>
+<li> socket
+</li>
+<li> uds
+</li>
+</ul>
+<h3 id="note_37-S07" class="release_note"><span class="addition_style">Additions and Changes</span> <span class="important_style">37-S07:  (DevEnv) Added and fixed the system mode descriptions. [SDK]</h3>
+<p class="release_note">The following system mode additions and fixes were performed.
+</p>
+<ul class="release_note"><li> Added alert when system mode is set in the various functions that call system applets.
+</li>
+<li> Fixed the system mode description in <CODE>Config.html</CODE>.
+</li>
+</ul>
+<h3 id="note_37-S09" class="release_note"><span class="addition_style">Additions and Changes</span> 37-S09:  (DevEnv) Added a library for standard linking. [SDK]</h3>
+<p class="release_note">Added the following to the standard linked libraries in the CTR-SDK build system.
+</p>
+<ul class="release_note"><li> aacdec
+</li>
+<li> aacenc
+</li>
+<li> extrapad
+</li>
+<li> qtm
+</li>
+<li> webbrs
+</li>
+</ul>
+<h3 id="note_37-S10" class="release_note"><span class="addition_style">Additions and Changes</span> 37-S10:  (DLP) Added a warning in the patch manual to use when titles using fake clients are updated. [SDK]</h3>
+<p class="release_note">Added a warning in the patch manual to use when titles using fake clients are updated.
+</p>
+<h3 id="note_37-S12" class="release_note"><span class="addition_style">Additions and Changes</span> 37-S12:  (EC) Added the nn::ec::CTR::PurchaseConfirmationApplet::RequestShowDialog member variable reference. [SDK]</h3>
+<p class="release_note">Clarified that <CODE>nn::ec::CTR::PurchaseConfirmationApplet::RequestShowDialog</CODE> returns <CODE>Result::IsSuccess</CODE> when users select the purchase button in the EC applet.
+</p>
+<h3 id="note_37-S13" class="release_note"><span class="addition_style">Additions and Changes</span><span class="important_style"> 37-S13:  (EC)★ Added an eShop REST API feature that provides functions for listing and purchasing service items through the independent server. [SDK | System Updater | Sample Demos]</span></h3>
+<p class="release_note">Added an eShop REST API feature that provides functions for listing and purchasing service items through the independent server.<br /> In addition, the following was also added.
+</p>
+<ul class="release_note"><li> Manual containing required information for developing the independent server using the eShop REST API (<CODE>$CTR_SDK/documents/TechnicalNotes/EShopRestApiManual</CODE>).
+</li>
+<li> <CODE>eShop REST API ec/ServiceItemRestApi Demo</CODE>
+</li>
+</ul>
+<h3 id="note_37-S15" class="release_note"><span class="addition_style">Additions and Changes</span> 37-S15:  (EC) Added that Error 005-5637 will occur if the local ticket is not deleted when reverting downloadable content. [SDK]</h3>
+<p class="release_note">Clarified in <B>EDCK: Developing Applications That Support Downloadable Content</B> that Error <CODE>005-5637</CODE> occurs if local ticket is not deleted when reverting downloadable content.
+</p>
+<h3 id="note_37-S16" class="release_note"><span class="addition_style">Additions and Changes</span> 37-S16:  (ERREULA) Added a description of the value that specifies the <CODE>nn::erreula::CTR::Config</CODE> structure&rsquo;s <CODE>useLanguage</CODE> member. [SDK]</h3>
+<p class="release_note">Added a description of the value that specifies the <CODE>nn::erreula::CTR::Config</CODE> structure&rsquo;s <CODE>useLanguage</CODE> member.
+</p>
+<h3 id="note_37-S17" class="release_note"><span class="addition_style">Additions and Changes</span> 37-S17:  (FS) Added an operation for searching multiple media when mounting save data. [SDK]</h3>
+<p class="release_note">Added a point about searching multiple media when mounting other titles with the <CODE>nn::fs::MountSaveData</CODE> function, and a point about skipping from search with unformatted media.
+</p>
+<h3 id="note_37-S18" class="release_note"><span class="addition_style">Additions and Changes</span> 37-S18:  (FS) Updated the document for the rollback prevention feature. [SDK]</h3>
+<p class="release_note">Added a link to the rollback prevention feature in the <CODE>SaveDataFiler</CODE> description.
+</p>
+<h3 id="note_37-S20" class="release_note"><span class="addition_style">Additions and Changes</span> 37-S20:  (HIO) Updated the HostIO library manufactured by IS. [SDK]</h3>
+<p class="release_note">The <CODE>HostIO</CODE> of the IS library for the debugger has been updated to the 20150707 version.
+</p>
+<h3 id="note_37-S21" class="release_note"><span class="addition_style">Additions and Changes</span> 37-S21:  (HIO) Added a description of the nn::hio::SerialChannel::Flush function. [SDK]</h3>
+<p class="release_note">Added a description of the <CODE>nn::hio::SerialChannel::Flush</CODE> function on the host side.
+</p>
+<h3 id="note_37-S22" class="release_note"><span class="addition_style">Additions and Changes</span> 37-S22:  (NFP) Added 0x to items that display hexadecimal tag information in NfpUtil. [SDK]</h3>
+<p class="release_note">With this change, <CODE>0x</CODE> is added to items that display hexadecimal tag information in <CODE>NfpUtil</CODE>.
+</p>
+<h3 id="note_37-S23" class="release_note"><span class="addition_style">Additions and Changes</span> 37-S23:  (NFP) Deleted nn::nfp::ResultDataAccessFailed. [SDK]</h3>
+<p class="release_note">Deleted <CODE>nn::nfp::ResultDataAccessFailed</CODE> from <CODE>$CTR_SDK/include/nn/nfp/nfp_Result.h</CODE>.<br /> The NFP library function does not return <CODE>nn::nfp::ResultDataAccessFailed</CODE>.
+</p>
+<h3 id="note_37-S24" class="release_note"><span class="addition_style">Additions and Changes</span> 37-S24:  (NFP) Added a feature to rewrite NFP tag ROM regions in NoftWriter. [SDK]</h3>
+<p class="release_note">Added a feature to rewrite the NFP tag ROM regions in NoftWriter.<br /> For more information, see the CTR Tools NoftWriter description (<CODE>$CTR_SDK/documents/ctools/NoftWriter.html</CODE>).
+</p>
+<h3 id="note_37-S25" class="release_note"><span class="addition_style">Additions and Changes</span> 37-S25:  (NFP) Added a feature to display the NFT file Character Name and Character ID in NoftWriter. [SDK]</h3>
+<p class="release_note">Added a feature to display the NFT file Character Name and Character ID in NoftWriter.<br /> For more information, see the CTR Tools NoftWriter description (<CODE>$CTR_SDK/documents/ctools/NoftWriter.html</CODE>).
+</p>
+<h3 id="note_37-S26" class="release_note"><span class="addition_style">Additions and Changes</span> 37-S26:  (OS) Added a warning about excessively calling the nn::os::Thread::Sleep function. [SDK]</h3>
+<p class="release_note">Added that performance is reduced when the <CODE>nn::os::Thread::Sleep</CODE> function is called excessively within a short time interval and places a heavy load on the whole system.
+</p>
+<h3 id="category_37_0">Bug Fixes</h3>
+<h3 id="note_37-S02" class="release_note"><span class="bugfix_style">Bug Fix</span> 37-S02:  (CEC) Fixed a bug where the icon and title were broken in the StreetPass box imported with the CecBoxTool. [SDK]</h3>
+<p class="release_note">Fixed a bug where icon and title information could not be restored correctly when importing the StreetPass box with the CecBoxTool.
+</p>
+<h3 id="note_37-S08" class="release_note"><span class="bugfix_style">Bug Fix</span> 37-S08:  (DevEnv) Fixed a bug where unbootable CCI files are created. [SDK]</h3>
+<p class="release_note">Fixed a bug where correct CCI were not created when size exceeded 16 MB after static memory compression in <CODE>ctr_makerom</CODE>.
+</p>
+<h3 id="note_37-S11" class="release_note"><span class="bugfix_style">Bug Fix</span> 37-S11:  (EC) Fixed a bug where downloadable content is not deleted when an EcDevTool shop account is deleted. [SDK]</h3>
+<p class="release_note">Fixed a bug where downloadable content was not deleted when the EcDevTool shop account was deleted.
+</p>
+<h3 id="note_37-S14" class="release_note"><span class="bugfix_style">Bug Fix</span> 37-S14:  (EC) Fixed the upper character limit to Details Information and Legal/Disclaimer Information displayed when purchasing a service item. [SDK | System Updater | Sample Demos]</h3>
+<p class="release_note">Fixed the upper limit to the character count of the Details Information and Legal/Disclaimer Information displayed when purchasing a service item.<br /> For Details Information, 64 characters increased to 128 characters, and no limit for line breaks.<br /> For Legal/Disclaimer Information, 512 characters increased to 1024 characters, and no limit for line breaks.<br /> The EC library and ServiceItem sample was also fixed.
+</p>
+<h3 id="note_37-S19" class="release_note"><span class="bugfix_style">Bugs</span> 37-S19:  (HID) Fixed a bug where Circle Pad Pro operates unintentionally during search. [SDK | Sample Demos]</h3>
+<p class="release_note">There was a bug where the Circle Pad Pro operated unintentionally during search.<br /> To fix this bug, the working memory size passed to the <CODE>nn::hid::CTR::ExtraPad::Initialize</CODE> function was increased from 4,096 to 12,288 bytes.<br /> Also, along with the working memory size increase, it was verified that the<CODE> nn::hid::CTR::ExtraPad::Initialize</CODE> function can receive this size.
+</p>
+<h3 id="note_37-S27" class="release_note"><span class="bugfix_style">Bug Fix</span> 37-S27:  (SND) Fixed a bug that caused a deadlock when the sound library was under a high load. [SDK]</h3>
+<p class="release_note">Fixed a bug that caused a deadlock when the sound library function was called frequently within a short period of time.
+</p>
+<h2 id="version_11_3_1_0">Changes in CTR-SDK 11.3.1 (2015-06-03 - for System Updater 0.24.51)</h2>
+<h3 id="category_34_0">Additions and Changes</h3>
+<h3 id="note_34-S01" class="release_note"><span class="addition_style">Additions and Changes</span> 34-S01: (ACT) Released a public API function to retrieve a ServiceToken V2. [SDK | Sample Demos]</h3>
+<p class="release_note">Added a function to get a service token V2 with better security than the existing independent service tokens.
+</p>
+<h3 id="note_34-S04" class="release_note"><span class="addition_style">Additions and Changes</span> 34-S04: (TOOL) Added tag information displayed in NfpUtil. [SDK]</h3>
+<p class="release_note">Added a display of the following tag information in the NfpUtil tool.
+</p>
+<ul class="release_note"><li> NFPType
+</li>
+<li> characterID
+</li>
+<li> numberingID
+</li>
+<li> seriesID
+</li>
+<li> Mii Characters
+</li>
+<li> nickname
+</li>
+<li> font region
+</li>
+<li> country
+</li>
+</ul>
+<h3 id="category_34_0">Bug Fixes</h3>
+<h3 id="note_34-S02" class="release_note"><span class="bugfix_style">Bug Fix</span> 34-S02: (NFP) Added information to change log entry 27-S08. [SDK]</h3>
+<p class="release_note">Change log entry <a href="CTR-SDK_ChangeLog_old.html#note_27-S08">27-S08</a> did not include a description of the release build. Added that the NFP library is automatically finalized in a release build.
+</p>
+<h3 id="note_34-S03" class="release_note"><span class="bugfix_style">Bug Fix</span> 34-S03: (SND) Fixed a bug that caused a deadlock when calling a function that sets an effect or performs an AUX bus operation. [SDK]</h3>
+<p class="release_note">Fixed a bug introduced in the revisions to the SND library in CTR-SDK 11.2.0 where functions that set SND library effects or perform AUX bus operations would cause a deadlock when called at the same time from multiple threads (including sound threads).
+</p>
+<h3 id="note_34-S05" class="release_note"><span class="bugfix_style">Bug Fix</span> 34-S05: (Login Applet) Revised change log entry 27-U06. [SDK]</h3>
+<p class="release_note">Fixed an error in the description for change log entry <a href="SystemUpdater_ChangeLog_old.html#note_27-U06">27-U06</a>.
+</p>
+<h2 id="version_11_3_0_0">Changes in CTR-SDK 11.3.0 (2015-03-24 - for System Updater 0.24.38)</h2>
+<h3 id="category_29_0">Additions and Changes</h3>
+<h3 id="note_29-S03" class="release_note"><span class="addition_style">Additions and Changes</span> 29-S03:  (BOSS) Updated BOSS related documentation. [SDK]</h3>
+<p class="release_note">The following changes were made to the BOSS related documentation.
+</p>
+<ul class="release_note"><li> Supplemented the description of BOSS storage re-registration.
+</li>
+<li> Unified the terminology for releasing registration in the description of <CODE>boss::Unregister*</CODE>.
+</li>
+<li> Added a description in<CODE> nn::boss::NsData::GetHeaderInfo</CODE> and <CODE>nn::boss::NsData::ReadData</CODE> of the return values when NS data is corrupted.
+</li>
+</ul>
+<h3 id="note_29-S05" class="release_note"><span class="addition_style">Additions and Changes</span> 29-S05:  (DevEnv) Updated battery level and update notification icon data. [SDK]</h3>
+<p class="release_note">Updated the battery level and update notification icon data as follows.
+</p>
+<ul class="release_note"><li> <CODE>$CTR_SDK/resources/icon/BatteryLevelIcon</CODE>
+</li>
+<li> <CODE>$CTR_SDK/resources/icon/UpdateIndicator</CODE>
+</li>
+</ul>
+<h3 id="note_29-S06" class="release_note"><span class="addition_style">Additions and Changes</span> 29-S06:  (EC) Updated the Patch Manual in line with the discontinuation of the feature to receive patches in applications and addition of the shop jump feature. [SDK]</h3>
+<p class="release_note">Updated the Patch Manual (<CODE>$CTR_SDK/documents/TechnicalNotes/Patch/PatchManual.html</CODE>) in line with discontinuing the patch receiving feature in the application and adding the feature to jump to the patch page in Nintendo eShop.
+</p>
+<h3 id="note_29-S07" class="release_note"><span class="addition_style">Additions and Changes</span> <span class="important_style">29-S07:  (EC)★ Added an advance downloading feature. [SDK|System Updater]</span></h3>
+<p class="release_note">Added an advance downloading feature.<br /> For more information about advance downloading, see the 3DS Overviews package.<br />
+</p>
+<p class="release_note">
+With this change, added an option to set whether to display the e-manual during advance downloading.<br /> For more information about the build system, see (<CODE>$CTR_SDK/documents/SDKRules/BuildRules.html</CODE>) or the Guide to Developing a Build System (<CODE>$CTR_SDK/documents/TechnicalNotes/BuildSystemDevelopmentGuide/BuildSystemDevelopmentGuide.html</CODE>).
+</p>
+<h3 id="note_29-S08" class="release_note"><span class="addition_style">Additions and Changes</span> 29-S08:  (EC) Added a recommendation to display legal/disclaimer information independently in the application when purchasing a service item if the legal/disclaimer information exceeds the limit on the number of characters. [SDK]</h3>
+<p class="release_note">Added a recommendation in the ECDK: Developing Applications That Support Service Items section of the API Reference to display the disclaimer/legal information independently in the application if the disclaimer/legal information exceeds the 512 character limit. <br />In addition, also added to the reference for the disclaimer member variable for the <CODE>nn::ec::CTR::ServiceDescription</CODE> structure and the <CODE>nn::ec::CTR::PurchaseInfo</CODE> structure a recommendation to display independently in the application when there is a possibility the character limit will be exceeded.
+</p>
+<h3 id="note_29-S09" class="release_note"><span class="addition_style">Additions and Changes</span> 29-S09:  (EC) Added a description of the patch product codes to the Patch Manual. [SDK]</h3>
+<p class="release_note">Changed the description of patch product codes in the Patch Manual (<CODE>$CTR_SDK/documents/TechnicalNotes/Patch/PatchManual.html</CODE>) to be more concrete.
+</p>
+<h3 id="note_29-S12" class="release_note"><span class="addition_style">Additions and Changes</span> 29-S12:  (NFP) Added to the reference that <CODE>ResultInvalidOperation</CODE> may be returned with specific functions when using the NFC reader/writer. [SDK]</h3>
+<p class="release_note">Added to the API reference that <CODE>ResultInvalidOperation</CODE> may be returned with the following functions when using the NFC reader/writer.
+</p>
+<ul class="release_note"><li> nn::nfp::StartDetection
+</li>
+<li> nn::nfp::StopDetection
+</li>
+<li> nn::nfp::Mount
+</li>
+<li> nn::nfp::MountRom
+</li>
+</ul>
+<h3 id="note_29-S13" class="release_note"><span class="addition_style">Additions and Changes</span> 29-S13:  (QTM) Deleted the Dynamic Stereoscopy Programming Guide. [SDK]</h3>
+<p class="release_note">The contents of the Dynamic Stereoscopy Programming Guide (<CODE>$CTR_SDK/documents/TechnicalNotes/DynamicStereoscopyGuide</CODE>) were moved to the 3DS Programming Manual: Dynamic Stereoscopy Edition, and so this information was deleted from the CTR-SDK.
+</p>
+<h3 id="note_29-S14" class="release_note"><span class="addition_style">Additions and Changes</span> 29-S14:  (TOOL) Added an Unmount feature to <CODE>NfpManager</CODE>. [SDK]</h3>
+<p class="release_note">Added an <B>Unmount</B> feature to <CODE>NfpManager</CODE>.
+</p>
+<h3 id="note_29-S15" class="release_note"><span class="addition_style">Additions and Changes</span> 29-S15:  (TOOL) Made changes so that the screen display for the <CODE>NfpUtil</CODE> tool branches to CTR and SNAKE. [SDK]</h3>
+<p class="release_note">Made changes so that the screen display branches when executing the <CODE>NpfUtil</CODE> tool with CTR and when executing with SNAKE.
+</p>
+<h3 id="category_29_0">Bug Fixes</h3>
+<h3 id="note_29-S01" class="release_note"><span class="bugfix_style">Bug Fix</span> 29-S01:  (AC) Fixed a bug that caused the system to enter an undefined state when the <CODE>nn::ac::GetConnectResult</CODE> function was called before the connection to the access point had completed. [SDK]</h3>
+<p class="release_note">A bug caused the communication mode switching prohibition status to be released when the <CODE>nn::ac::GetConnectResult</CODE> function was called before the connection process to the access point completed. This bug has been fixed because<CODE> nn::uds::Initialize</CODE>, which was supposed to fail, succeeded and the state value internal state could become undefined.
+</p>
+<h3 id="note_29-S02" class="release_note"><span class="bugfix_style">Bug Fix</span> 29-S02:  (AC) Fixed a bug that invalidated the <CODE>nn::ndm::Initialize</CODE> function performed by the application. [SDK]</h3>
+<p class="release_note">A bug caused the <CODE>nn::ndm::Finalize</CODE> function to be called in excess in the API when the following functions were used with multiple threads simultaneously. This bug has been fixed because the <CODE>nn::ndm::Initialize</CODE> function performed by the application was invalidated.
+</p>
+<ul class="release_note"><li> nn::ac::CancelConnectAsync
+</li>
+<li> nn::ac::Connect
+</li>
+<li> nn::ac::GetConnectResult
+</li>
+<li> nn::ac::Finalize
+</li>
+</ul>
+<h3 id="note_29-S04" class="release_note"><span class="bugfix_style">Bug Fix</span> 29-S04:  (CX) Fixed a bug that caused a buffer overrun with the <CODE>nn::cx::CompressHuffman</CODE> function. [SDK]</h3>
+<p class="release_note">Fixed a bug that caused data exceeding the size of the buffer allocated by <CODE>nn::cx::CompressHuffman</CODE> to be written due to compression conditions.
+</p>
+<h3 id="note_29-S10" class="release_note"><span class="bugfix_style">Bug Fix</span> 29-S10:  (GX) Fixed a bug that caused the screen to flicker because the <CODE>nngxWaitVSync</CODE> function did not wait for screen switching to synchronize. [SDK]</h3>
+<p class="release_note">Fixed a bug that prevented <CODE>nngxWaitVSync</CODE> from waiting for screen switching synchronization due to timing dependencies that resulted in screen flicker.
+</p>
+<h3 id="note_29-S11" class="release_note"><span class="bugfix_style">Bug Fix</span> 29-S11:  (GX) Made revisions so that a GL error is generated when <CODE>GL_RGBA8_OES</CODE> is specified in the display buffer. [SDK]</h3>
+<p class="release_note">Although the <CODE>GL_RGBA8_OES</CODE> specification was removed from the display buffer, in implementation, the GL error was not generated and it remained enabled.<br /> Made changes so that a <CODE>GL_ERROR_8023_DMP</CODE> error is generated when an illegal format is specified.
+</p>
+<h2 id="version_11_2_1_0">Changes in CTR-SDK 11.2.1 (2015-03-05 - for System Updater 0.24.33) </h2>
+<h3 id="category_28_0">Additions and Changes </h3>
+<h3 id="note_28-S01" class="release_note"><span class="addition_style">Additions and Changes</span> 28-S01:  (NFP) Added a function to replace non-supported characters in amiibo nicknames. [SDK|System Updater] </h3>
+<p class="release_note">Added the <code>nn::nfp::ReplaceOtherRegionName</code> to replace characters not supported by the current region contained in an amiibo nickname with other characters. </p>
+<h2 id="version_11_2_0_0">Changes in CTR-SDK 11.2.0 (2015-02-26 - for System Updater 0.24.32) </h2>
+<h3 id="category_27_0">Additions and Changes </h3>
+<h3 id="note_27-S01" class="release_note"><span class="addition_style">Additions and Changes</span> 27-S01:  (AC) Changed the error returned by the <code>conntest::ConnectionTest::GetLastResultCode</code> function when there is a security error. [SDK] </h3>
+<p class="release_note">Made changes so that with the <code>conntest::ConnectionTest::GetLastResultCode</code> function, <code>003-14xx</code>, not <code>003-11xx</code>, is returned when there is a clear security error. </p>
+<h3 id="note_27-S02" class="release_note"><span class="addition_style">Additions and Changes</span> 27-S02:  (BOSS) Changed the timing to extract notification data from BOSS storage. [SDK|System Updater] </h3>
+<p class="release_note">Starting with CTR-SDK 10.1, Notifications data that is saved in BOSS storage is immediately moved to extended save data on the system. <br /> Before CTR-SDK 10.1, the move to extended save data on the system was made when the user opened the Notifications list. <br /> This change was actually made in CTR-SDK 10.1, but was accidentally omitted from the change log. </p>
+<h3 id="note_27-S04" class="release_note"><span class="addition_style">Additions and Changes</span> 27-S04:  (EC) Revised the EC Related Documents. [SDK] </h3>
+<p class="release_note">The following changes were made to the EC documentation. </p>
+<ul class="release_note"><li> Added to the Patch Manual ($CTR_SDK/documents/TechnicalNotes/Patch/PatchManual.html) that to use the ROM upload tool, an application must be made to OMAS and server settings must be made. </li>
+<li> Added to the Server Debugging section in the Patch Manual ($CTR_SDK/documents/TechnicalNotes/Patch/PatchManual.html) the error codes generated with development hardware when reverting without deleting patch rights. </li>
+<li> Added to the following manuals in the API Reference that shop behavior may differ between a production environment and a development environment. (For example, credit cards can be used in the development environment in the Korean region.) </li>
+<ul class="release_note"><li><i>ECDK: Developing Applications That Support Add-On Content</i> </li>
+<li><i>ECDK: Developing Applications That Support Service Items</i> </li>
+</ul>
+<li> Added that items that can only be redeemed are not search targets when <code>SELECTION_FILTER_PURCHASABLE</code> is specified in a <code>nn::ec::CTR::ContentSetCatalogFilter::SetSelectionFilter</code> member function as the search target range. </li>
+<li> Added that, with the error handling example of the <code>nn::ec::CTR::ResultError</code> class, errors were corrected so as not to be generated during development that targets only the <code>ec</code> modules. </li>
+</ul>
+<h3 id="note_27-S05" class="release_note"><span class="addition_style">Additions and Changes</span> <span class="important_style">27-S05:  (EC) * Features that verified patch updates and downloaded from inside the application were made publicly unavailable. [SDK]</span></h3>
+<p class="release_note">Made the features to verify patch updates and to download using an EC applet from inside the application unavailable to the public. <br /> With this change, a feature to jump to the Nintendo eShop patch page (the <code>nn::applet::JumpToEShopPatchPage</code> function) was added. <br /> For more information, see the Patch Manual ($CTR_SDK/documents/TechnicalNotes/Patch/PatchManual.html). </p>
+<h3 id="note_27-S06" class="release_note"><span class="addition_style">Additions and Changes</span> 27-S06:  (ENC) Made changes so that the enc library is linked by default. [SDK] </h3>
+<p class="release_note">Until now, when the enc library was used with the CTR-SDK build system, <code>libnn_enc</code> had to be added to the OMakefile LIBS variable, but this was changed so that it is added by default. </p>
+<h3 id="note_27-S07" class="release_note"><span class="addition_style">Additions and Changes</span> <span class="important_style">27-S07:  (NFP) * Added NFC reader/writer support in the NFP library. [SDK|System Updater]</span></h3>
+<p class="release_note">The NFP library supports the NFC reader/writer. <br /> With this change, the FangateFwUpdater tool to update and destroy the NFC reader/writer firmware was added. </p>
+<h3 id="note_27-S08" class="release_note"><span class="addition_style">Additions and Changes</span> 27-S08:  (NFP) Made changes so that an assertion occurs if the NFP library is not finalized when transitioning from the application to the HOME Menu or an applet. [SDK] </h3>
+<p class="release_note">Made changes so that, other than for the Release build, execution stops on an assertion if the NFP library is not finalized when transitioning from the application to the HOME Menu, system applet, or library applet. </p>
+<h3 id="note_27-S11" class="release_note"><span class="addition_style">Additions and Changes</span> 27-S11:  (TOOL) Added a DataStore download task notification data serial ID display feature to BossLotcheckTool. [SDK] </h3>
+<p class="release_note">Added a DataStore download task notification data serial ID display feature to BossLotcheckTool. </p>
+<h3 id="note_27-S12" class="release_note"><span class="addition_style">Additions and Changes</span> 27-S12:  (TOOL) Made changes so that a unique ID in the Dummy Nintendo eShop is displayed filled by zeros. [SDK] </h3>
+<p class="release_note">Made changes so that the 5-digit hexadecimal value is displayed as zeros when displaying the unique ID of the Dummy Nintendo eShop. </p>
+<h3 id="note_27-S14" class="release_note"><span class="addition_style">Additions and Changes</span> 27-S14:  (TOOL) Added a feature to set the address for taxes in EcDevTool. [SDK] </h3>
+<p class="release_note">Added a feature to EcDevTool to set the address for which tax is calculated when the country settings is the United States or Canada. <br /> This feature is for developers using eShop REST API. <br /> Developers using downloadable content or the ECSV library do not need to use this feature because addresses can be set on the EC applet. </p>
+<h3 id="note_27-S15" class="release_note"><span class="addition_style">Additions and Changes</span> 27-S15:  (TOOL) Improved the message displayed during a <code>ctr_makerom32</code> format error. [SDK] </h3>
+<p class="release_note">Improved the error content displayed when the <code>ctr_makerom32</code> RSF format specification was incorrect. </p>
+<h3 id="note_27-S16" class="release_note"><span class="addition_style">Additions and Changes</span> 27-S16:  (TOOL) Added the NfpSdmcTool that can export and import from an NFP tag to an SD card. [SDK] </h3>
+<p class="release_note">Added NfpSdmcTool to support application debugging using the NFP library. <br /> Data read from a tag can be exported to an SD card, and saved data can later be imported and written to a tag. </p>
+<h3 id="note_27-S17" class="release_note"><span class="addition_style">Additions and Changes</span> 27-S17:  (TOOL) Added a Config flag to forcibly generate a <code>ResultNfcTargetError</code>. [SDK|System Updater] </h3>
+<p class="release_note">Added a feature to the <b>Fangate Failure Emulation</b> item of the Config tool to forcibly get a <code>ResultNfcTargetError</code> with <code>nfp::GetConnectResult</code>. </p>
+<h3 id="category_27_0">Bug Fixes </h3>
+<h3 id="note_27-S03" class="release_note"><span class="bugfix_style">Bug Fix</span> 27-S03:  (CEC) Added to the function reference that initialized functions must be called in advance to use functions or classes in the <code>nn::cec</code> namespace. [SDK] </h3>
+<p class="release_note">Added to the function reference that initialized functions must be called in advance to use functions or classes in the <code>nn::cec</code> namespace. </p>
+<h3 id="note_27-S09" class="release_note"><span class="bugfix_style">Bug Fix</span> 27-S09:  (OS) Fixed a bug that caused a fatal error during <code>nn::os::StackMemory</code> initialization. [SDK] </h3>
+<p class="release_note">Fixed a bug that generated a fatal error when memory was quarantined and released repeatedly using the <code>nn::os::StackMemory</code> class. </p>
+<h3 id="note_27-S10" class="release_note"><span class="bugfix_style">Bug Fix</span> 27-S10:  (SND) Fixed a bug that caused the system to occasionally stop responding when transitioning to the HOME Menu during sound playback. [SDK] </h3>
+<p class="release_note">Fixed a bug that caused a very rare problem where the system stopped responding when performing a HOME Menu transition, system applet startup, power button transition, or transition to Sleep Mode during sound playback. </p>
+<h3 id="note_27-S13" class="release_note"><span class="bugfix_style">Bug Fix</span> 27-S13:  (TOOL) Made changes to the Dummy Nintendo eShop so that the page name of the jump destination in Nintendo eShop is displayed. [SDK] </h3>
+<p class="release_note">Made changes so that the jump destination page is displayed when starting the Dummy Nintendo eShop with a jump to Nintendo eShop. <br /> For more information, see $CTR_SDK/documents/ctools/DummyNintendoEShop.html. </p>
+<h2 id="version_11_1_1_0">Changes in CTR-SDK 11.1.1 (2015-02-16 - for System Updater 0.24.19) </h2>
+<h3 id="category_26_0">Additions and Changes </h3>
+<h3 id="note_26-S01" class="release_note"><span class="addition_style">Additions and Changes</span> 26-S01:  (ACT) Updated the Account System Developer&rsquo;s Guide. [SDK] </h3>
+<p class="release_note">The Account System Developer&rsquo;s Guide ($CTR_SDK/documents/TechnicalNotes/AccountSystemDevelopersGuide/index.html) was changed as follows. </p>
+<ul class="release_note"><li> Revised the description of using the service token. </li>
+<li> Added a PHP-version decode sample program. </li>
+</ul>
+<h3 id="note_26-S02" class="release_note"><span class="addition_style">Additions and Changes</span> 26-S02:  (EC) Added that the YAML format used in specifying content list files is different from general YAML formats. [SDK] </h3>
+<p class="release_note">Added to the ECDK: How to Create Data Titles section in the API Reference that the YAML format used to specify the content list file differs from the general YAML formal. </p>
+<h3 id="note_26-S03" class="release_note"><span class="addition_style">Additions and Changes</span> 26-S03:  (EC) Added a description of <code>desc</code> files when creating a patch with extended application format. </h3>
+<p class="release_note">Added to the Patch Manual ($CTR_SDK/documents/TechnicalNotes/Patch/PatchManual.html) information regarding <code>desc</code> file specification when creating a patch with an extended application format. </p>
+<h3 id="note_26-S04" class="release_note"><span class="addition_style">Additions and Changes</span> 26-S04:  (GX) Added a function to get the base address being used in the <code>gr::Vertex</code> class. [SDK] </h3>
+<p class="release_note">Added a function to get the base address of vertices and index arrays that had been retained in the <code>gr::Vertex</code> class. </p>
+<h3 id="note_26-S06" class="release_note"><span class="addition_style">Additions and Changes</span> 26-S06:  (TOOL) Added an option to <code>ctr_loadrun32</code> to stop when the application exits unexpectedly. [SDK] </h3>
+<p class="release_note">Added the <code>--exit-exception (-ee)</code> option to <code>ctr_loadrun32</code>. <br /> When this option is set and the application executed, <code>ctr_loadrun32</code> also exits when the application unexpectedly exits. </p>
+<h3 id="note_26-S07" class="release_note"><span class="addition_style">Additions and Changes</span> 26-S07:  (TOOL) Added an option to control the <code>ctr_loadrun32</code> termination code. [SDK] </h3>
+<p class="release_note">Added the <code>--return-value (-r)</code> option to <code>ctr_loadrun32</code>. <br /> When characters in the format of &quot;<code><i>EXIT_RETURN_VALUE &lt;number (integer of 0 or greater in decimal notation)&gt;</i></code>&quot; are output in the NN_LOG from the application side, <code>loadrun</code> exits with <code><i>&lt;number&gt;</i></code> as the return value. </p>
+<h3 id="category_26_0">Bug Fixes </h3>
+<h3 id="note_26-S05" class="release_note"><span class="bugfix_style">Bug Fix</span> 26-S05:  (TOOL) Fixed a bug that caused an unexpected exit with <code>ctr_loadrun32</code>. [SDK] </h3>
+<p class="release_note">Fixed a bug that caused an unexpected exit with an exception when the log file was not specified with the <code>-L</code> or <code>-log</code> option with <code>ctr_loadrun32</code>. </p>
+<h2 id="version_11_1_0_0">Changes in CTR-SDK 11.1.0 (2014-12-09 - for System Updater 0.24.4) </h2>
+<h3 id="category_23_0">Additions and Changes </h3>
+<h3 id="note_23-S01" class="release_note"><span class="addition_style">Additions and Changes</span> 23-S01:  (GX) Noted in the reference that the <code>nngxValidateState</code> function requests memory allocation. [SDK] </h3>
+<p class="release_note">Clarified in the reference for the <code>nngxValidateState</code>, <code>glDrawArrays</code>, and <code>glDrawElements</code> functions that a management region is secured in the library when the functions are called. <br /></p>
+<h3 id="note_23-S02" class="release_note"><span class="addition_style">Additions and Changes</span> 23-S02:  (BOSS) Improved BossLotcheckTool error displays. [SDK] </h3>
+<p class="release_note">Made changes so that the FS detailed error is displayed with a <code>nn::boss::FS_UNKNOWN_ERROR</code> error is generated with BossLotcheckTool. <br /></p>
+<h3 id="note_23-S04" class="release_note"><span class="addition_style">Additions and Changes</span> 23-S04:  (TOOL) Made revisions to the UseOtherVariationSaveData documentation. [SDK] </h3>
+<p class="release_note">Added details to the <code>ctr_makerom</code> reference about <code>UseOtherVariationSaveData</code> when setting <code>AccessibleSaveDataIds</code>. <br /> Also, added that to access extended save data, we recommend explicitly specifying <code>AccessibleSaveDataIds</code> or <code>ExtSaveDataNumber</code>. <br /></p>
+<h3 id="note_23-S05" class="release_note"><span class="addition_style">Additions and Changes</span> <span class="important_style">23-S05:  (NFP) ★ Added the NFP library. [SDK | System Updater | Sample Demos]</span></h3>
+<p class="release_note">Added the NFP library, which provides features for writing to amiibo. <br /> Added NFP sample demos and tools. <br /></p>
+<h3 id="note_23-S06" class="release_note"><span class="addition_style">Additions and Changes</span> 23-S06:  (QTM) Made revisions to the Dynamic Stereoscopy Programming Guide. [SDK] </h3>
+<p class="release_note">Added a note about embedding to Chapter 5 and a description of exclusive locations to Section 6.5 about the addition of a <code>DynamicStereoCamera</code> class feature. <br /></p>
+<h3 id="category_23_0">Bug Fixes </h3>
+<h3 id="note_23-S03" class="release_note"><span class="bugfix_style">Bug Fix</span> 23-S03:  (TOOL) Fixed a bug where a trailing slash in the ROMFS_ROOT specified for <code>ctr_makerom32</code> caused an error. [SDK] </h3>
+<p class="release_note">Fixed a bug that caused an inappropriate error to be displayed when a folder segment symbol was at the end of a <code>ctr_makerom32</code> <code>ROMFS_ROOT</code> specification and an <code>Include</code> statement was in the RSF file. <br /></p>
+<h3 id="category_23_0">Known Issues </h3>
+<h3 id="note_23-S07" class="release_note"><span class="knownissue_style">Known Issues</span> 23-S07:  Under some conditions, the process does not return from the <code>ExtraPad</code> function that starts sampling. </h3>
+<p class="release_note">If the following series of steps is repeated 10 times, on the 10th time the process will not return from <code>nn::hid::CTR::ExtraPad::StartSampling</code>. <br /> 1. Transition to the HOME Menu while using ExtraPad.<br />2. Endg an application by using the HOME Menu.<br />3. Restart the application and call the <code>nn::hid::CTR::ExtraPad::StartSampling</code> function.<br />4. Return to step 1. <br /></p>
+<p class="release_note">This bug occurs only with SNAKE. <br /> This bug occurs in applications that use ExtraPad and do not call the <code>nn::hid::CTR::ExtraPad::StopSampling</code> function before transitioning to the HOME Menu. <br /></p>
+<p class="release_note">To prevent this bug, call the <code>nn::hid::CTR::ExtraPad::StopSampling</code> function before transitioning to the HOME Menu to stop the ExtraPad sampling. <br /> This bug will be fixed in a future SDK release. <br />
+</p>
+<h2 id="version_11_0_2_0">Changes in CTR-SDK 11.0.2 (2014-11-21 - for System Updater 0.24.2)</h2>
+<h3 id="category_22_0">Additions and Changes</h3>
+<h3 id="note_22-S01" class="release_note"><span class="addition_style">Additions and Changes</span> 22-S01:(EC) Noted that the string for the <CODE>disclaimer</CODE> member variable of the <CODE>nn::ec::CTR::ServiceDescription</CODE> structure must be no greater than 400 lines. [SDK]</h3>
+<p class="release_note">Added instructions to set a string that fits within 400 lines for the <CODE>disclaimer</CODE> variable of the <CODE>nn::ec::CTR::ServiceDescription</CODE> structure.<br />
+</p>
+<h3 id="note_22-S02" class="release_note"><span class="addition_style">Additions and Changes</span> 22-S02: (HID) Added as an &quot;issue due to the specifications&quot; that on rare occasions input stops working from buttons other than the HOME Menu button. [SDK]</h3>
+<p class="release_note">On rare occasions, input stops working from buttons other than the HOME Menu button on PARTNER-CTR Capture and PARTNER-CTR Capture Debugger. This problem has been added as a known issue to the document <I>Symptoms Due to Design Limitations of Specifications</I> (<CODE>$CTR_SDK/documents/ReleaseNotes/knownIssues.html</CODE>).<br />If this occurs, you can restore functionality using either of these procedures.<br />
+</p>
+<ul class="release_note"><li> Transition to sleep and then wake back up.
+</li>
+<li> Change the headphone connection state.
+</li>
+<ul class="release_note"><li> If headphones are attached, remove them.
+</li>
+<li> If headphones are not attached, plug them in.
+</li>
+</ul></ul>
+<h2 id="version_11_0_0_0">CTR-SDK 11.0.0 (2014/11/06 - for System Updater 0.24.0) Changes</h2>
+<h3 id="category_20_0">Additions and Changes</h3>
+<h3 id="note_20-S01" class="release_note"><span class="addition_style">Additions and Changes</span> 20-S01:(APPLET) Added in the reference that <CODE>nn::applet::CTR::PrepareToCloseApplication</CODE> does not need to be called during application shutdown. [SDK | Sample Demos]</h3>
+<p class="release_note">Calling the <CODE>nn::applet::CTR::PrepareToCloseApplication</CODE> function during application shutdown is no longer required. Calls within the sample demos have been removed, and this change is documented in the API Reference Manual.
+</p>
+<h3 id="note_20-S05" class="release_note"><span class="addition_style">Additions and Changes</span> 20-S05:(GX) Added a mechanism for controlling whether the 3D depth value can be updated during matrix calculation. [SDK]</h3>
+<p class="release_note">Previously, the 3D depth value was retrieved and used during matrix calculation by the <CODE>StereoCamera</CODE> class.<br />In implementations that perform multiple matrix calculations per frame, if the 3D depth value fluctuates in the middle of these calculations, problems could manifest in the rendered results.<br />To support even this type of implementation, an argument was added to the member functions that perform matrix calculations that disables retrieval of the 3D depth value, and a separate <CODE>Update3DVolume</CODE> function that updates the 3D depth value was also added.
+</p>
+<h3 id="note_20-S06" class="release_note"><span class="addition_style">Additions and Changes</span> 20-S06:(OS) Added in the reference that the <CODE>GetRunningTargetHardware</CODE> function cannot be used in master ROMs. [SDK]</h3>
+<p class="release_note">The man page for <CODE>nn::os::CTR::GetRunningTargetHardware</CODE> explains that this function cannot be used in ROMs submitted for mastering.
+</p>
+<h3 id="note_20-S07" class="release_note"><span class="addition_style">Additions and Changes</span>  <span class="important_style">20-S07:(QTM)★ Added the <CODE>qtm</CODE> library. [SDK | System Updater | Sample Demos]</span></h3>
+<p class="release_note">Added a new <CODE>qtm</CODE> library that provides face-tracking functionality.<br />Added sample demos (<CODE>DynamicStereoCamera</CODE> and <CODE>TrackingSimple</CODE>) for the <CODE>qtm</CODE> library.
+</p>
+<h3 id="note_20-S08" class="release_note"><span class="addition_style">Additions and Changes</span> 20-S08:(TOOL) Loosened restrictions on the CXI size when creating LE files with <CODE>makerom</CODE>. [SDK]</h3>
+<p class="release_note"><CODE>makerom</CODE> can now accept CXI files that exceed 16 MB during LE file creation.
+</p>
+<h3 id="category_20_0">Bug Fixes</h3>
+<h3 id="note_20-S02" class="release_note"><span class="bugfix_style">Bug Fixes</span>20-S02:(CFG) Fixed a bug where mutual exclusion within the <CODE>cfg</CODE> library was flawed. [SDK]</h3>
+<p class="release_note">Fixed a mutual exclusion bug in the <CODE>cfg</CODE> library that caused a fatal error if attempts were made to access from multiple threads.
+</p>
+<h3 id="note_20-S03" class="release_note"><span class="bugfix_style">Bug Fixes</span>20-S03:(EC) Fixed a bug where the session was not invalidated if <CODE>RequestDownloadAllOwnedContents</CODE> and <CODE>RequestRedeemUniqueContentSetAuto</CODE> required the session to be reinitialized. [SDK]</h3>
+<p class="release_note">Fixed a bug that caused the session not to be invalidated if the <CODE>EcApplet::RequestDownloadAllOwnedContents</CODE> or <CODE>EcApplet::RequestRedeemUniqueContentSetAuto</CODE> function resulted in a &quot;must reinitialize session&quot; error.
+</p>
+<h3 id="note_20-S04" class="release_note"><span class="bugfix_style">Bug Fixes</span>20-S04:(GX) Fixed a bug that prevented the framebuffer cache from being flushed appropriately before the <CODE>gr::RenderState</CODE> command was issued. [SDK]</h3>
+<p class="release_note">Fixed a bug that prevented the framebuffer flush commands from being issued in the order stipulated by the hardware specifications when <CODE>nn::gr::RenderState::MakeCommand</CODE> was called.
+</p>
+<h2 id="version_10_1_0_0">Changes in CTR-SDK 10.1.0 (2014/10/15 - for System Updater 0.23.5)</h2>
+<h3 id="category_19_0">Additions and Changes</h3>
+<h3 id="note_19-S01" class="release_note"><span class="addition_style">Additions and Changes</span> 19-S01:(APPLET) Made <CODE>nn::applet::CTR::GetInitialParam</CODE> a public function. [SDK]</h3>
+<p class="release_note">Made a public function of <CODE>nn::applet::CTR::GetInitialParam</CODE>, which gets the application startup parameter.
+</p>
+<h3 id="note_19-S02" class="release_note"><span class="addition_style">Additions and Changes</span> 19-S02:(DevEnv) Added a script for setting the environment variable CTRSDK_ROOT. [SDK]</h3>
+<p class="release_note">Added a script for setting the environment variable <CODE>CTRSDK_ROOT</CODE>.
+</p>
+<h3 id="note_19-S03" class="release_note"><span class="addition_style">Additions and Changes</span> 19-S03:(EC) Updated EC-related documentation. [SDK]</h3>
+<p class="release_note">The following changes were made to the EC library documentation.
+</p>
+<ul class="release_note"><li> Added to the description of the <CODE>nn::ec::CTR::ResultAppletCloseApplicationRequested</CODE> class, pointing out that this <CODE>Result</CODE> is only generated when the battery level has dropped to zero.
+</li>
+<li> Added text about line feeds inside the applet to the member functions of the <CODE>nn::ec::CTR::ServiceDescription</CODE> structure and the <CODE>nn::ec::CTR::PurchaseInfo</CODE> structure.
+</li>
+<li> In the Developing Applications That Support Downloadable Content section, noted the need to delete licenses in the development hardware when downloadable content is reverted.
+</li>
+<li> Made changes to the Developing Applications That Support Service Items section in line with the changes since System Updater 0.23.5 to the behavior when the system is formatted.
+</li>
+<li> Added to the Developing Applications That Support Downloadable Content section, the Developing Applications That Support Service Items section, and the reference for the <CODE>ec::CTR::Server::GetBalance</CODE> function, in each case noting that the balance can change even while the application is running, due to a purchase or an addition to the balance made by another device or by Theme Shop.
+</li>
+<li> Added to the Configuring Access to the Development Server section, noting that when an 005-4701 error has occurred the DNS must be set in order to format the system and delete the Nintendo Network ID.
+</li>
+<li> Added to the Patch Manual, adding a way to upload the patch ROM to the server.
+</li>
+<li> Added to the Patch Manual, noting that there are also restrictions on the use of the account server when enforcing patches.
+</li>
+<li> Noted that, effective from System Updater 0.23.5, the license information for downloadable content and service items is deleted from CTR systems to which an NNID has been registered when the user acts to format the system or delete the NNID.
+</li>
+</ul>
+<h3 id="note_19-S04" class="release_note"><span class="addition_style">Additions and Changes</span> 19-S04: (EC) Added a template for patch icons. [SDK]</h3>
+<p class="release_note">Added a template for patch icons to <CODE>$CTR_SDK/documents/TechnicalNotes/Patch/resources</CODE>, and added a description about the template to the <I>Patch Manual</I> (<CODE>$CTR_SDK/documents/TechnicalNotes/Patch/resources/PatchManual.html</CODE>) 
+</p>
+<h3 id="note_19-S05" class="release_note"><span class="addition_style">Additions and Changes</span> 19-S05:(EC) Added a function to determine whether redundant purchases of downloadable content are allowed. [SDK | Sample Demos]</h3>
+<p class="release_note">Added the function <CODE>ec::IsContentOverlapAllowed</CODE>, which gets the determination of whether to allow redundant purchases of content when sets of downloadable content are being purchased. In step with this, added a process that uses this function to <CODE>SampleDemos/ec/Purchase</CODE>.
+</p>
+<h3 id="note_19-S06" class="release_note"><span class="addition_style">Additions and Changes</span> 19-S06: (GX) Fixed a bug where vertex attribute settings could not be separately disabled after an interleaved array was used. [SDK]</h3>
+<p class="release_note">Fixed a bug where the <CODE>gr::Vertex::DisableAttr</CODE> function could not be used to separately disable vertex attribute settings after interleaved arrays had been used with the <CODE>gr::Vertex::EnableInterleavedArray</CODE> function.
+</p>
+<h3 id="note_19-S07" class="release_note"><span class="addition_style">Additions and Changes</span>  <span class="important_style">19-S07: (OLV) ★ Integrated the OLV library into the SDK and Sample Demos. [SDK | System Updater | Sample Demos]</span></h3>
+<p class="release_note">Integrated the OLV library into the SDK and Sample Demos to call the Miiverse Post application.<br /> In step with this, added the Miiverse Post application to System Updater.
+</p>
+<h3 id="note_19-S08" class="release_note"><span class="addition_style">Additions and Changes</span> 19-S08:(TOOL) Improved <CODE>makerom</CODE> error output. [SDK]</h3>
+<p class="release_note">Improved error output when <CODE>ctr_makerom</CODE> is run and there is a defective RSF file.
+</p>
+<h3 id="category_19_0">Bug Fixes</h3>
+<h3 id="note_19-S09" class="release_note"><span class="bugfix_style">Bug Fixes</span>19-S09:(TOOL) Fixed a bug where the RSF file <CODE>Include</CODE> setting did not work correctly. [SDK]</h3>
+<p class="release_note">Fixed a bug where the build would sometimes fail when <CODE>Include</CODE> was specified in the RSF file.
+</p>
+<h2 id="version_10_0_2_0">Changes in CTR-SDK 10.0.2 (2014/09/10 - for System Updater 0.23.2)</h2>
+<h3 id="category_17_0">Additions and Changes</h3>
+<h3 id="note_17-S01" class="release_note"><span class="addition_style">Additions and Changes</span> 17-S01:  (GX) Added a check for the restrictions related to the width and height when transferring the color buffer. [SDK]</h3>
+<p class="release_note">An error is now generated when values for which the hardware is not guaranteed to operate are specified for the size (the width and the height) of the original image and the transferred image by the <CODE>nngxTransferRenderImage</CODE> and <CODE>nngxAddB2LTransferCommand</CODE> functions.<br /> For more information, see the API reference pages for these functions.
+</p>
+<h2 id="version_10_0_1_0">Changes in CTR-SDK 10.0.1 (2014/09/08 - for System Updater 0.23.1)</h2>
+<h3 id="category_16_0">Additions and Changes</h3>
+<h3 id="note_16-S01" class="release_note"><span class="addition_style">Additions and Changes</span> 16-S01:  (FS) Added the <CODE>nn::fs::SetSdmcEjectionFatal</CODE> function. [SDK]</h3>
+<p class="release_note">Added the <CODE>nn::fs::SetSdmcEjectionFatal</CODE> function to automatically trigger an SD card removal error when an SD card is not inserted in the system.  This was actually changed in CTR-SDK 10.0 but was omitted from the change log.
+</p>
+<h3 id="note_16-S02" class="release_note"><span class="addition_style">Additions and Changes</span><span class="important_style">16-S02:  (TOOL)★ Added <CODE>makebanner</CODE> support for SNAKE-specific applications. [SDK]</span></h3>
+<p class="release_note"><CODE>makebanner</CODE> has been changed so you can now set the <CODE>SNAKEOnly</CODE> flag in the BSF file to indicate that the application is a SNAKE-specific application.
+</p>
+<h3 id="category_16_0">Bug Fixes</h3>
+<h3 id="note_16-S03" class="release_note"><span class="bugfix_style">Bug Fix</span> 16-S03:  (TOOL) Fixed a bug where processing sometimes stopped when <CODE>SaveDataFiler</CODE> acted to destroy a save data file. [SDK]</h3>
+<p class="release_note">Fixed a bug where <CODE>SaveDataFiler</CODE> would stop under certain conditions when it acted to destroy a save data file.
+</p>
+<h2 id="version_10_0_0_0">Changes in CTR-SDK 10.0.0 (2014/08/27 - for System Updater 0.23.0)</h2>
+<h3 id="category_15_0">Additions and Changes</h3>
+<h3 id="note_15-S01" class="release_note"><span class="addition_style">Additions and Changes</span> 15-S01:  (APPLET) Added the <CODE>nn::applet::CTR::CloseApplicationForTrial</CODE> function. [SDK]</h3>
+<p class="release_note">Added the <CODE>nn::applet::CTR::CloseApplicationForTrial</CODE> function to automatically end applications running as demoware (SA/NW) on retail kiosks.<br /> This function cannot be used with downloadable demoware and regular applications.
+</p>
+<h3 id="note_15-S02" class="release_note"><span class="addition_style">Additions and Changes</span> 15-S02:  (APPLET) Added an API to jump to the e-manual for the calling application. [SDK]</h3>
+<p class="release_note">Added the <CODE>nn::applet::CTR::JumpToManual</CODE> API to jump to the e-manual for the calling application.
+</p>
+<h3 id="note_15-S05" class="release_note"><span class="addition_style">Additions and Changes</span> 15-S05:  (CRYPTO) Added support for CBC mode. [SDK]</h3>
+<p class="release_note">Added support for CBC-mode encryption.
+</p>
+<h3 id="note_15-S06" class="release_note"><span class="addition_style">Additions and Changes</span> 15-S06:  (DevEnv) Added support for an environment where only ARMCC 5.x is installed. [SDK | Sample Demos]</h3>
+<p class="release_note">You can now build without setting <CODE>CTRSDK_RVCT_VER=5</CODE> when only ARMCC 5.x is installed.
+</p>
+<h3 id="note_15-S07" class="release_note"><span class="addition_style">Additions and Changes</span> <span class="important_style">15-S07:  (DSP)★ Integrated <CODE>AacCodecKit</CODE>. [SDK | Sample Demos]</span></h3>
+<p class="release_note">Integrated into this package the content of <CODE>AacCodecKit</CODE> for encoding and decoding AAC data.
+</p>
+<h3 id="note_15-S08" class="release_note"><span class="addition_style">Additions and Changes</span> 15-S08:  (EC) Added the <CODE>ResultAppletNeedsBalanceUpdate</CODE> error for detection of a change in the balance while the EC applet is displaying. [SDK|System Updater]</h3>
+<p class="release_note">To prevent money from being credited twice, for example when a timeout error is generated while money is being added to the balance, the <CODE>ResultAppletNeedsBalanceUpdate</CODE> error has been added as a way to detect changes to the balance while the EC applet is displaying.<br /> This error is generated if the balance is changed in the Wii U Nintendo Shop while the CTR is processing the balance.<br /> When the application receives this error, it must reinitialize the session.
+</p>
+<h3 id="note_15-S09" class="release_note"><span class="addition_style">Additions and Changes</span> 15-S09:  (EC) Updated the EC library documentation. [SDK]</h3>
+<p class="release_note">The following changes were made to the EC library documentation.
+</p>
+<ul class="release_note"><li> Noted that you cannot use the feature for downloading <CODE>cia.out</CODE> from the BTS server.
+</li>
+<li> Added notes to consider when calling the EC applet.
+</li>
+<li> Added an actual DNS address to set when developing applications using the ECDK.
+</li>
+<li> Added that an error occurs if a balance of under 1000 is added using the EC applet.
+</li>
+<li> Added a version of System Updater that supports the feature for adding a new Download Play child system from a patch.
+</li>
+<li> Added a note about the procedure for debugging titles that support service items.
+</li>
+<li> Noted that depending on when a session is initialized, the item information that is referenced might not be the latest information.
+</li>
+<li> Clarified the timing of errors returned from the authentication server when a patch is forced.
+</li>
+<li> Added notes about compatibility when the save data from a different eShop account is used, and about the synchronization of licenses for consumable service items.
+</li>
+<li> Added a way to determine whether the OpenSSL in use can be used with the ECSV library.
+</li>
+<li> Clarified that <CODE>AddOnContent.rsf</CODE> is used with <CODE>ctr_makeMetaDataContent</CODE>.
+</li>
+<li> Deleted the comments about <CODE>ECTicketInfo</CODE> in <CODE>ecsv.h</CODE>.
+</li>
+<li> Noted the unavailability of the <CODE>ECExtendedTicketInfo</CODE> structure's <CODE>deviceId</CODE> member variable.
+</li>
+<li> Added details about the license information that is obtainable using the <CODE>EC_VerifyExtendedTicket</CODE> function.
+</li>
+<li> Added information about the character width when using the <CODE>nn::ec::CTR::PriceIndication</CODE> structure to show balance and price information.
+</li>
+<li> Added information about what happens when the <CODE>nn::ec::CTR::EcApplet::RequestRedeemUniqueContentSetAuto</CODE> function is running.
+</li>
+<li> Added text about the handling of &quot;initial purchase only&quot; services items to the description of the <CODE>nn::ec::CTR::ServiceItem::IsPurchasable</CODE> function.
+</li>
+<li> Added a note to the <CODE>nn::fs::GetAddOnContentRequiredMemorySize</CODE> function about operating on unlicensed content.
+</li>
+</ul>
+<h3 id="note_15-S10" class="release_note"><span class="addition_style">Additions and Changes</span> <span class="important_style">15-S10:  (EC)★ The EC library now stops on an assertion if it is used without running <CODE>nn::ec::Initialize</CODE>. [SDK]</span></h3>
+<p class="release_note">Now when you call the EC library API without running <CODE>nn::ec::Initialize</CODE>, an assertion is thrown and a message displays saying &quot;The EC library is not initialized.&quot;<br /> This feature only works for non-Release builds.<br /> Also added <CODE>nn::ec::Finalize</CODE> for finalizing the library. If you call <CODE>ec::Finalize</CODE> and later do not make a new call to <CODE>nn::ec::Initialize</CODE>, the EC library stops on this same assertion.
+</p>
+<h3 id="note_15-S11" class="release_note"><span class="addition_style">Additions and Changes</span> 15-S11:  (EC) Added text about the differences in service item encryption keys to &quot;Differences Between Test Units and Retail Units.&quot; [SDK]</h3>
+<p class="release_note">Added text about the differences in service item encryption keys to &quot;Differences Between Test Units and Retail Units.&quot; <CODE> ($CTR_SDK/documents/TechnicalNotes/AboutHardwareDifference/AboutHardwareDifference.xlsx)</CODE>
+</p>
+<h3 id="note_15-S12" class="release_note"><span class="addition_style">Additions and Changes</span> 15-S12:  (GD) Added support for data initialization in <CODE>LAYOUT_BLOCK_32</CODE> mode to the <CODE>Resource::CreateTexture2DResource</CODE> function. [SDK]</h3>
+<p class="release_note">When you specify default data for the texture resource in the <CODE>CreateTexture2DResource</CODE> function, there is no longer an error if you specify something other than <CODE>LAYOUT_BLOCK_8</CODE> because that restriction has been removed.
+</p>
+<h3 id="note_15-S13" class="release_note"><span class="addition_style">Additions and Changes</span> 15-S13:  (GR) Added a default constructor and an initialization function to the <CODE>gr::CommandBufferJumpHelper</CODE> class. [SDK]</h3>
+<p class="release_note">Added a default constructor to the <CODE>gr::CommandBufferJumpHelper</CODE> class and an initialization function for setting the starting address of the command buffer to write to.
+</p>
+<h3 id="note_15-S15" class="release_note"><span class="addition_style">Additions and Changes</span> 15-S15:  (GX) Added the four <CODE>nngx RAW</CODE> APIs. [SDK]</h3>
+<p class="release_note">Added nngx Raw APIs corresponding to each of the existing nngx APIs.
+</p>
+<ul class="release_note"><li> nngxAddCmdlistRaw
+</li>
+<li> nngxCopyCmdlistRaw
+</li>
+<li> nngxAddJumpCommandRaw
+</li>
+<li> nngxAddSubroutineCommandRaw
+</li>
+</ul>
+<h3 id="note_15-S16" class="release_note"><span class="addition_style">Additions and Changes</span> 15-S16:  (GX) Added text to the manual about a bug fix related to the use of multiple textures. [SDK]</h3>
+<p class="release_note">Added text to <CODE>$CTR_SDK/documents/SNAKE/index.html</CODE> stating that a bug involving the use of multiple textures had been fixed.
+</p>
+<h3 id="note_15-S18" class="release_note"><span class="addition_style">Additions and Changes</span> <span class="important_style">15-S18:  (HID)★ Changed the name from &quot;RightStick&quot; to &quot;CStick&quot; in the HID library. [SDK]</span></h3>
+<p class="release_note">Changed the following function and class names in the HID library.<br /> The functions from before the name change remain, but at compile time they generate a #1361-D warning.
+</p>
+<ul class="release_note"><li> nn::hid::CTR::InitializeRightStick -&gt; nn::hid::CTR::InitializeCStick
+</li>
+<li> nn::hid::CTR::InitializeRightStickForRawData -&gt; nn::hid::CTR::InitializeCStickForRawData
+</li>
+<li> nn::hid::CTR::FinalizeRightStick -&gt; nn::hid::CTR::FinalizeCStick
+</li>
+<li> nn::hid::CTR::RightStick class -&gt; nn::hid::CTR::CStick class
+</li>
+<li> Member functions in the <CODE>nn::hid::CTR::PadReaderEiu</CODE> class
+</li>
+<ul class="release_note"><li> SetRightStickClamp -&gt; SetCStickClamp
+</li>
+<li> GetRightStickClamp -&gt; GetCStickClamp
+</li>
+<li> GetRightStickClampMode -&gt; GetCStickClampMode
+</li>
+<li> SetRightStickClampMode -&gt; SetCStickClampMode
+</li>
+<li> NormalizeRightStick -&gt; NormalizeCStick
+</li>
+<li> NormalizeRightStickWithScale -&gt; NormalizeCStickWithScale
+</li>
+<li> SetNormalizeRightStickScaleSettings -&gt; SetNormalizeCStickScaleSettings
+</li>
+<li> GetNormalizeRightStickScaleSettings -&gt; GetNormalizeCStickScaleSettings
+</li>
+</ul></ul>
+<h3 id="note_15-S19" class="release_note"><span class="addition_style">Additions and Changes</span> 15-S19:  (OS) The <CODE>nn::os::IsRunOnSnake</CODE> and <CODE>nn::os::IsRunningAsExtApplication</CODE> functions now show up in the CTR Master Editor list of middleware when they are used. [SDK]</h3>
+<p class="release_note">When applications that use <CODE>nn::os::IsRunOnSnake</CODE> or <CODE>nn::os::IsRunningAsExtApplication</CODE> are loaded to CTR Master Editor, the functions show up in the list of middleware. The functions are represented in this list by strings that correspond to the APIs being used.
+</p>
+<h3 id="note_15-S20" class="release_note"><span class="addition_style">Additions and Changes</span> 15-S20:  (OS) Added a callback feature for TLS destructor functions. [SDK]</h3>
+<p class="release_note">Added a feature to thread local storage for calling destructor functions.
+</p>
+<h3 id="note_15-S21" class="release_note"><span class="addition_style">Additions and Changes</span> 15-S21:  (NFC) The NFC library is no longer publicly available. [SDK | Sample Demos]</h3>
+<p class="release_note">The NFC library is no longer publicly available.
+</p>
+<h3 id="note_15-S23" class="release_note"><span class="addition_style">Additions and Changes</span> 15-S23:  (TOOL) Added the <CODE>-nt</CODE> option to <CODE>ctr_TexturePackager32</CODE>. [SDK]</h3>
+<p class="release_note">The specification calls for the embedding of a timestamp in each texture file included in the texture package file.<br /> The <CODE>-nt</CODE> option has been added as a way to select not to embed this timestamp.<br /> When this option is specified, <CODE>0</CODE> is written to the region that would normally hold the timestamp. 
+</p>
+<h3 id="note_15-S24" class="release_note"><span class="addition_style">Additions and Changes</span> 15-S24:  (UDS) Changed the private network search function such that it forcibly scans all channels on production hardware. [SDK]</h3>
+<p class="release_note">The non-public functions that were kept for compatibility that can specify channels when searching for networks have been changed so that they now forcibly scan all channels when running on retail systems.
+</p>
+<h3 id="category_15_0">Bug Fixes</h3>
+<h3 id="note_15-S03" class="release_note"><span class="bugfix_style">Bug Fix</span> 15-S03:  (CAMERA) Fixed a bug where applications that did not use the <CODE>camera</CODE> library were nevertheless detected by CTR Master Editor as using the library. [SDK]</h3>
+<p class="release_note">Fixed a bug where even though an application did not use the <CODE>camera</CODE> library, <CODE>CameraInitialize</CODE> and <CODE>CameraActivate</CODE> would be detected by CTR Master Editor if C++ exceptions were enabled.
+</p>
+<h3 id="note_15-S04" class="release_note"><span class="bugfix_style">Bug Fix</span> 15-S04:  (CFG) Fixed the <CODE>nn::cfg::CTR::GetLanguage</CODE> function so that it does not return undefined language code. [SDK]</h3>
+<p class="release_note">Fixed the <CODE>nn::cfg::CTR::GetLanguage</CODE> function so it does not return undefined language code.<br /> If a language not supported by this version of the CTR-SDK is configured in the System Settings, the default language for the region is returned.
+</p>
+<h3 id="note_15-S14" class="release_note"><span class="bugfix_style">Bug Fix</span> 15-S14:  (GR) Fixed a bug where more than the necessary number of vertex attributes could be configured. [SDK]</h3>
+<p class="release_note">Fixed a bug where the command for setting the number of vertex attributes would not be issued correctly if a single <CODE>gr::Vertex</CODE> object was being reused with a changed number of valid vertex attributes.
+</p>
+<h3 id="note_15-S17" class="release_note"><span class="bugfix_style">Bug Fix</span> 15-S17:  (HID) Fixed a bug where applications that did not use <CODE>ExtraPad</CODE> were nevertheless detected by CTR Master Editor as using <CODE>ExtraPad</CODE> and <CODE>ir</CODE>. [SDK]</h3>
+<p class="release_note">Fixed a bug where even though an application did not use <CODE>ExtraPad</CODE>, CTR Master Editor would detect <CODE>ExtraPad</CODE> and <CODE>ir</CODE> if C++ exceptions were enabled. 
+</p>
+<h3 id="note_15-S22" class="release_note"><span class="bugfix_style">Bug Fix</span> 15-S22:  (TOOL) Fixed the operations of the <CODE>-args</CODE> option for <CODE>ctr_loadrun32</CODE>. [SDK]</h3>
+<p class="release_note">Corrected the inappropriate message that displayed when the <CODE>-args</CODE> option was specified for <CODE>ctr_loadrun32</CODE> without specifying a program.<br /> Also changed what happens when the <CODE>-args</CODE> option is specified with a non-supported CTR application for the program argument. The process used to stop on an error, but now it continues with a warning.
+</p>
+<h2 id="version_9_12_0_0">Changes in CTR-SDK 9.12.0 (2014/07/03 - for System Updater 0.22.34)</h2>
+<h3 id="category_8_0">Additions and Changes</h3>
+<h3 id="note_08-S01" class="release_note"><span class="addition_style">Additions and Changes</span> 08-S01:  (APPLET) Expanded functionality now allows for separate settings for the upper and lower screens for whether to allow posting of screen captures when transitioning to the HOME Menu. [SDK | System Updater]</h3>
+<p class="release_note">Added two types of flags to <CODE>applet::ScreenCapturePostPermission</CODE> to specify permissions individually for the upper and lower screens.
+</p>
+<ul class="release_note"><li> SCREEN_CAPTURE_POST_ENABLE_UPPER_LCD
+</li>
+<li> SCREEN_CAPTURE_POST_ENABLE_LOWER_LCD
+</li>
+</ul>
+<h3 id="note_08-S02" class="release_note"><span class="addition_style">Additions and Changes</span> 08-S02:  (EC) Revised the EC-related documentation [SDK].</h3>
+<p class="release_note">The following changes were made to the EC-related documentation.
+</p>
+<ul class="release_note"><li> Added notes on the debugging procedures for applications that require a Nintendo Network ID to the &quot;Debugging&quot; section of &quot;ECDK: Developing Applications That Support Service Items.&quot; 
+</li>
+<li> Noted in &quot;ECDK: How to Create Data Titles&quot; that <CODE>ctr_makeMetaDataContent</CODE> makes use of <CODE>AddOnContent.rsf</CODE>.
+</li>
+<li> Added the &quot;Cautions When Calling the EC Applet&quot; section to &quot;ECDK: Developing Applications That Support Downloadable Content.&quot;
+</li>
+<li> Noted in the description field for the <CODE>nn::ec::CTR::ContentSetCatalog::Retrieve</CODE> member function that, depending on the session initialization timing, item information that is not the latest information might be accessed.
+</li>
+<li> Added a recommendation to add some margin when using the <CODE>nn::ec::CTR::PriceIndication</CODE> structure to show balance/price information because the character width could change in the future.
+</li>
+<li> Deleted a comment about <CODE>ECTicketInfo</CODE> (which had already been removed) from the definition of the <CODE>ECExtendedTicketInfo</CODE> structure in the <CODE>ecsv.h</CODE> file.
+</li>
+<li> Noted the timing at which errors return from the authentication server when patches are enforced in the &quot;Patch Enforcement&quot; section of the &quot;Patch Manual.&quot;
+</li>
+<li> Noted the version of System Updater that supports a feature to add a new Download Play client from a patch in the patch manual.
+</li>
+</ul>
+<h3 id="note_08-S04" class="release_note"><span class="addition_style">Additions and Changes</span><span class="important_style"> 08-S04:  (NFC)★ Deleted arguments from <CODE>nn::nfc::CTR::Mount</CODE>. [SDK | System Updater | Sample Demos]</span></h3>
+<p class="release_note">Deleted the <CODE>makerCode</CODE> argument from the <CODE>nn::nfc::CTR::Mount</CODE> function. The <CODE>nfc</CODE> sample demo has been changed accordingly. 
+</p>
+<h3 id="note_08-S05" class="release_note"><span class="addition_style">Additions and Changes</span> 08-S05:  (OS) ★ Made the <CODE>nn::os::IsRunOnSnake</CODE> function run faster. [SDK]</h3>
+<p class="release_note">Made the <CODE>nn::os::IsRunOnSnake</CODE> function faster.
+</p>
+<h3 id="category_8_0">Bug Fixes</h3>
+<h3 id="note_08-S03" class="release_note"><span class="bugfix_style">Bug Fix</span> 08-S03:  (GR) Fixed a bug where the texture cache flush command would not run correctly in specific texture unit situations. [SDK]</h3>
+<p class="release_note">The write command for both texture unit activation and texture cache flushing applies to the <CODE>0x80</CODE> register. The hardware requires the texture unit to already be enabled when the latter is executed, but the GR library was not handling this well enough. This bug was fixed so that the commands for texture unit activation and texture cache flushing are executed separately.
+</p>
+<h2 id="version_9_11_0_0">Changes in CTR-SDK 9.11.0 (2014/06/10 - for System Updater 0.22.7)</h2>
+<h3 id="category_7_0">Additions and Changes</h3>
+<h3 id="note_07-S01" class="release_note"><span class="addition_style">Additions and Changes</span> 07-S01:  (APPLET) Deleted a reference to the <CODE>nn::applet::CTR::GetInitialParam</CODE> function [SDK].</h3>
+<p class="release_note">Normally applications do not need to use the <CODE>nn::applet::CTR::GetInitialParam</CODE> function, so it was removed from the API reference. This change actually occurred in CTR-SDK 9.10 but was accidentally omitted from the change log.
+</p>
+<h3 id="note_07-S02" class="release_note"><span class="addition_style">Additions and Changes</span> 07-S02:  (CAMERA) Made changes in CTR Master Editor to enable checking the use of the <CODE>nn::camera::Initialize</CODE> function [SDK].</h3>
+<p class="release_note">Made changes so that the <CODE>NINTENDO:CameraInitialize</CODE> is now displayed in the middleware list when applications using the <CODE>nn::camera::Initialize function</CODE> are loaded into CTR Master Editor.
+</p>
+<h3 id="note_07-S03" class="release_note"><span class="addition_style">Additions and Changes</span> 07-S03:  (DBG) Eliminated the character-length restrictions on the output from <CODE>NN_LOG</CODE> macros [SDK].</h3>
+<p class="release_note">The <CODE>NN_LOG</CODE> and <CODE>NN_LOGV</CODE> macros were limited to outputting strings of no more than <CODE>NN_DBG_PRINTF_BUFFER_LENGTH</CODE> characters in length, but this restriction has been removed. Strings of any length can now be output. This change actually occurred in CTR-SDK 9.10 but was accidentally omitted from the change log.
+</p>
+<h3 id="note_07-S04" class="release_note"><span class="addition_style">Additions and Changes</span><span class="important_style"> 07-S04:  (DevEnv) ★ Merged changes from CTR-SDK 7.2 through CTR-SDK 7.2.1 [SDK | System Updater].</span></h3>
+<p class="release_note">Merged changes from CTR-SDK 7.2 through CTR-SDK 7.2.1.
+
+For more information, see <a href="ChangeLog_CTR.html">here</a>.
+</p>
+<h3 id="note_07-S05" class="release_note"><span class="addition_style">Additions and Changes</span> 07-S05:  (EC) Added an API function for re-downloading all items with the EC applet [SDK].</h3>
+<p class="release_note">Added the <CODE>nn::ec::CTR::EcApplet::RequestDownloadAllOwnedContents</CODE> function, which re-downloads all items with the EC applet, to make it easier to implement re-download capability for add-on content. This change actually occurred in CTR-SDK 7.2 but was accidentally omitted from the change log.
+</p>
+<h3 id="note_07-S06" class="release_note"><span class="addition_style">Additions and Changes</span> 07-S06:  (EC) Added an API function for entering download codes for add-on content with the EC applet [SDK].</h3>
+<p class="release_note">Added the <CODE>nn::ec::CTR::EcApplet::RequestRedeemUniqueContentSetAuto</CODE> function. This function makes a request to the EC applet to enter the download voucher and redeems it for a single content set with the associated ID, making it easier to implement the redemption of download vouchers for add-on content. This change actually occurred in CTR-SDK 7.2 but was accidentally omitted from the change log.
+</p>
+<h3 id="note_07-S09" class="release_note"><span class="addition_style">Additions and Changes</span> 07-S09:  (GD) Added a function for resetting <CODE>Texture2D</CODE> objects set in texture units [SDK].</h3>
+<p class="release_note">Added the <CODE>gd::TextureStage::ClearTextureUnit</CODE> function, which removes <CODE>texture2D</CODE> objects set with the <CODE>gd::TextureStage::SetTexture</CODE> function and restores the texture unit to a state where nothing is set.
+</p>
+<h3 id="note_07-S10" class="release_note"><span class="addition_style">Additions and Changes</span><span class="important_style"> 07-S10:  (GX) ★ Added the <CODE>nngxUpdateBufferLight</CODE> function [SDK]</span>.</h3>
+<p class="release_note">Added the <CODE>nngxUpdateBufferLight</CODE> function, which handles caching operations much faster than the <CODE>nngxUpdateBuffer</CODE> function in extended applications. For more information, see the API references for <CODE>nngxUpdateBuffer</CODE> and <CODE>nngxUpdateBufferLight</CODE>.
+</p>
+<h3 id="note_07-S11" class="release_note"><span class="addition_style">Additions and Changes</span> 07-S11:  (FND) Added atomic operation functions [SDK].</h3>
+<p class="release_note">Added functions for atomic operations to the <CODE>nn::fnd</CODE> library. This change actually occurred in CTR-SDK 7.0 but was accidentally omitted from the change log.
+</p>
+<h3 id="note_07-S12" class="release_note"><span class="addition_style">Additions and Changes</span> 07-S12:  (FS) Added information about what to do if you want to use an expanded save data number that differs from the unique ID [SDK].</h3>
+<p class="release_note">Added information about what to do if you want to use an expanded save data number that differs from the application's unique ID in the ID list (<CODE>$CTR_SDK/documents/TechnicalNotes/IdCatalog/IdCatalog.html</CODE>). This change actually occurred in CTR-SDK 7.2 but was accidentally omitted from the change log.
+</p>
+<h3 id="note_07-S13" class="release_note"><span class="addition_style">Additions and Changes</span><span class="important_style"> 07-S13:  (OS) ★ Changed the specifications of the <CODE>nn::os::GetRunningTargetHardware</CODE> function [SDK | System Updater].</span></h3>
+<p class="release_note">Starting with CTR-SDK 9.11, the <CODE>nn::os::GetRunningTargetHardware</CODE> function will be for debugging only. It will no longer be available for use in products. Use the <CODE>nn::os::IsRunOnSnake</CODE> function if you want to determine whether the device using the product is SNAKE.
+</p>
+<p class="release_note">
+Also, when running programs compiled with CTR-SDK 9.11 or earlier in SNAKE environments, the <CODE>nn::os::GetRunningTargetHardware</CODE> function might return unexpected values (such as it is running on SNAKE), so make revisions so that programs compiled with CTR-SDK 9.11 or earlier return only values for the CTR environment. For programs compiled with CTR-SDK 9.11 or later, continue to include all values, including those for SNAKE.
+</p>
+<h3 id="note_07-S15" class="release_note"><span class="addition_style">Additions and Changes</span> 07-S15:  (TOOL) Made changes to BossLotCheckTool so that the content of DataStore task errors is shown as strings [SDK].</h3>
+<p class="release_note">Made changes so the content of each error appears in <CODE>TaskResultCode</CODE> as a string when DataStore task errors occur in BossLotCheckTool. This change actually occurred in CTR-SDK 9.10 but was accidentally omitted from the change log.
+</p>
+<h3 id="note_07-S16" class="release_note"><span class="addition_style">Additions and Changes</span> 07-S16:  (TOOL) Added <CODE>PedometerChanger</CODE> [SDK].</h3>
+<p class="release_note">Added <CODE>PedometerChanger</CODE>, a tool for viewing, importing, and exporting pedometer information. This change actually occurred in CTR-SDK 9.10 but was accidentally omitted from the change log.
+</p>
+<h3 id="category_7_0">Bug Fixes</h3>
+<h3 id="note_07-S07" class="release_note"><span class="bugfix_style">Bug Fix</span> 07-S07:  (GD) Fixed a bug where the render block format configuration command was not output when the <CODE>OutputStage</CODE> module was reconfigured [SDK].</h3>
+<p class="release_note">Fixed a bug where the render block format configuration command was not being issued when <CODE>System::ForceDirty(System::MODULE_OUTPUT)</CODE> was called to put the <CODE>OutputStage</CODE> module into a reconfigured state, and then the rendering command was issued. This change actually occurred in CTR-SDK 9.10 but was accidentally omitted from the change log.
+</p>
+<h3 id="note_07-S08" class="release_note"><span class="bugfix_style">Bug Fix </span>07-S08:  (GD) Fixed a problem in specifying the type of buffer to release with the <CODE>ReleaseTexture2DResource</CODE> function [SDK].</h3>
+<p class="release_note">Fixed a bug where the buffer to be released with the <CODE>ReleaseTexture2DResource</CODE> function was incorrectly specified as being a vertex buffer (<CODE>NN_GX_MEM_VERTEXBUFFER</CODE>), so it is now specified as a texture buffer (<CODE>NN_GX_MEM_TEXTURE</CODE>).  
+</p>
+<h3 id="note_07-S14" class="release_note"><span class="bugfix_style">Bugs Fix </span>07-S14:  (TOOL) Fixed a problem that occurred when the <CODE>-lh</CODE> option was specified for <CODE>ctr_compress</CODE> [SDK].</h3>
+<p class="release_note">Fixed a bug where the tool crashed on some file content when specifying the <CODE>-lh</CODE> option for <CODE>ctr_compress</CODE> to compress a small size file.
+</p>
+<h2 id="version_9_10_0_0">Changes in CTR-SDK 9.10.0 (2014/04/30 - for System Updater 0.22.6)</h2>
+<h3 id="category_6_0">New Features and Improvements</h3>
+<h3 id="note_06-S01" class="release_note"><span class="addition_style">New Features and Improvements</span> 06-S01:  (CAMERA) Improved the speed of nn::camera::Finalize [SDK | System Updater]</h3>
+<p class="release_note">Improved the speed of the <CODE>nn::camera::Finalize</CODE> function.
+</p>
+<h3 id="note_06-S02" class="release_note"><span class="addition_style">New Features and Improvements</span><span class="important_style"> 06-S02:  (DevEnv) ★ Merged changes from CTR-SDK 7.1 through CTR-SDK 7.2 [SDK | System Updater | Sample Demos]</span></h3>
+<p class="release_note">Merged changes from CTR-SDK 7.1 through CTR-SDK 7.2.
+
+For more information, click <a href="ChangeLog_CTR.html">here</a>.
+</p>
+<h3 id="category_6_0">Bug Fixes</h3>
+<h3 id="note_06-S03" class="release_note"><span class="bugfix_style">Bug Fix</span> 06-S03:  (GX) Fixed the assert in the nngxGetPhysicalAddr function [SDK]</h3>
+<p class="release_note">Fixed a bug where the <CODE>nngxGetPhysicalAddr</CODE> function would cause an assert when passed an address near the end of the device memory.
+</p>
+<h3 id="note_06-S04" class="release_note"><span class="bugfix_style">Bug Fix</span> 06-S04:  (OS) Fixed a bug that prevented the Sleep function from waiting the proper amount of time [SDK | System Updater]</h3>
+<p class="release_note">Fixed a bug where the <CODE>nn::os::Thread::Sleep</CODE> function would end before the specified amount of time while the application was running as an extended application.
+</p>
+<h2 id="version_9_9_0_0">Changes in CTR-SDK 9.9.0 (2014/03/26 - for System Updater 0.22.5)</h2>
+<h3 id="category_5_0">New Features and Improvements</h3>
+<h3 id="note_05-S01" class="release_note"><span class="addition_style">New Features and Improvements</span> 05-S01: (DevEnv) Added information to the documentation about developing for SNAKE with a debugger [SDK | Sample Demos]</h3>
+<p class="release_note">Added information to the documentation about the IS-RAY-DEBUGGER and IS-CTR-DEBUGGER software.
+</p>
+<h3 id="note_05-S02" class="release_note"><span class="addition_style">New Features and Improvements</span><span class="important_style">05-S02: (NFC) ★ Added <CODE>ApplicationCode</CODE> to the <CODE>Format</CODE> parameters [SDK | System Updater | Sample Demos]</span></h3>
+<p class="release_note">Added <CODE>ApplicationCode</CODE> to the <CODE>nn::nfc::CTR::Format</CODE> parameters to distinguish among applications. The sample demos have been changed accordingly.
+</p>
+<h3 id="note_05-S03" class="release_note"><span class="addition_style">New Features and Improvements</span><span class="important_style">05-S03: (OS) ★ Added the <CODE>os::CTR::IsRunningAsExtApplication</CODE> function [SDK | System Updater]</span></h3>
+<p class="release_note">Added the <CODE>os::CTR::IsRunningAsExtApplication</CODE> function, which gets whether an extended application is currently running.
+</p>
+<h2 id="version_9_8_0_0">Changes in CTR-SDK 9.8.0 (2014/01/08 - for System Updater 0.22.3)</h2>
+<h3 id="category_3_0">New Features and Improvements</h3>
+<h3 id="note_03-S01" class="release_note"><span class="addition_style">New Features and Improvements</span><span class="important_style">03-S01: (DevEnv) ★ Merged changes from CTR-SDK 7.0.1 through CTR-SDK 7.1 [SDK | System Updater | Sample Demos]</span></h3>
+<p class="release_note">Merged changes from CTR-SDK 7.0.1 through CTR-SDK 7.1
+</p>
+<p class="release_note">For more information, click <a href="ChangeLog_CTR.html">here</a>.
+</p>
+<h3 id="note_03-S03" class="release_note"><span class="addition_style">New Features and Improvements</span><span class="important_style">03-S03: (NFC) ★ Organized nfc-related code [SDK]</span></h3>
+<p class="release_note">Organized and revised NFC-related code as follows.
+</p>
+<ul class="release_note"><li> Renamed <CODE>State</CODE> structure to <CODE>NfcState</CODE>.
+</li>
+<li> Renamed <CODE>GetStatus</CODE> to <CODE>GetNfcState</CODE>.
+</li>
+<li> Added a process to check whether <CODE>NfcState</CODE> is correct at the beginning of each API function.
+</li>
+<li> Added a process to check whether <CODE>Initialize</CODE> has been called at the beginning of each API function in the <CODE>NfcTagStream</CODE> class.
+</li>
+</ul>
+<h3 id="note_03-S04" class="release_note"><span class="addition_style">New Features and Improvements</span><span class="important_style">03-S04: (OS) ★ Changed specifications of the nn::os::IsRunOnSnake function [SDK | System Updater]</span></h3>
+<p class="release_note">To maintain consistency with the CTR-SDK 7.x environment, changed the feature numbers used in the libraries of the <CODE>nn::os::IsRunOnSnake</CODE> function. This change requires applications that call the <CODE>nn::os::IsRunOnSnake</CODE> function to be recompiled using CTR-SDK 9.8.
+</p>
+<h3 id="category_3_0">Bug Fixes</h3>
+<h3 id="note_03-S02" class="release_note"><span class="bugfix_style">Bug Fix</span>03-S02: (NFC) Fixed a bug in the nfc library [SDK | System Updater]</h3>
+<p class="release_note">Fixed the following bugs in the <CODE>nfc</CODE> library.
+</p>
+<ul class="release_note"><li> Bug where first <CODE>ActivateEvent</CODE> takes more than 1 second to complete
+</li>
+<li> Bug that prevents ISO 15693 tags (eAmusementPass, etc.) from being correctly retrieved
+</li>
+</ul>
+<h2 id="version_9_7_0_0">Changes in CTR-SDK 9.7.0 (2013/09/30 - for System Updater 0.22.2)</h2>
+<h3 id="category_2_0">New Features and Improvements</h3>
+<h3 id="note_02-S01" class="release_note"><span class="addition_style">New Features and Improvements</span> 02-S01:  (NFC) Added the <CODE>TagStream</CODE> class [SDK]</h3>
+<p class="release_note">Added the <CODE>TagStream</CODE> class, which is used for file access inside tags.
+</p>
+<h3 id="note_02-S02" class="release_note"><span class="addition_style">New Features and Improvements</span> 02-S02:   (NFC) Changed the functions in the NFC class to global functions [SDK]</h3>
+<p class="release_note">Basic functions that previously required an instance of NFC were changed to global functions.
+</p>
+<h3 id="note_02-S03" class="release_note"><span class="addition_style">New Features and Improvements</span> 02-S03:  (NFC) Added the <CODE>nn::nfc::ResetChip</CODE> function to reset the chip [SDK]</h3>
+<p class="release_note">Added a feature to reset the chip when problems occur that depend on the state of the NFC chip.
+</p>
+<p class="release_note">This function can go unused without a problem.
+</p>
+<h3 id="note_02-S04" class="release_note"><span class="addition_style">New Features and Improvements</span> 02-S04:   (NFC) Changed how corrupted tags are handled [SDK]</h3>
+<p class="release_note">Corrupted data format tags (NDEF) were being put in the DEACTIVATE state, but this was changed to be the same as other corrupted tags, which are put in the ACTIVATE state and the error is returned when advancing to the MOUNT state.
+</p>
+<p class="release_note">See the programming manual (<CODE>$CTR_SDK/documents/TechnicalNotes/NfcProgrammingManual/NfcProgrammingManual.pdf</CODE>) for details.
+</p>
+<h3 id="note_02-S05" class="release_note"><span class="addition_style">New Features and Improvements</span> 02-S05:  (OS) Added a feature that gets the execution environment for SNAKE [SDK | System Updater]</h3>
+<p class="release_note">Added the <CODE>nn::os::CTR::IsRunOnSnake</CODE> function to get whether an application is running on a SNAKE system. Also, added SNAKE support to the <CODE>nn::os::CTR::GetRunningTargetHardware</CODE> function.
+</p>
+<h3 id="note_02-S06" class="release_note"><span class="addition_style">New Features and Improvements</span><span class="important_style"> 02-S06:  (DevEnv)★ Merged changes from CTR-SDK 6.0.1 System Updater 0.19.3 through CTR-SDK 7.0 [SDK | System Updater | Sample Demos]</span></h3>
+<p class="release_note">Merged changes from CTR-SDK 6.0.1 System Updater 0.19.3 through CTR-SDK 7.0
+</p>
+<p class="release_note">For more information, click <a href="ChangeLog_CTR.html">here</a>.
+</p>
+<h2 id="version_9_6_0_0">Changes in CTR-SDK 9.6.0 (2013/07/25 - for System Updater 0.22.1)</h2>
+<h3 id="category_1_0">New Features and Improvements</h3>
+<h3 id="note_01-S01" class="release_note"><span class="addition_style">New Features and Improvements</span> 01-S01:  (NFC) Added the NFC library to SNAKE to handle Near Field Communication (NFC) [SDK]</h3>
+<p class="release_note">However, currently dedicated hardware is required to use it. See <CODE>$CTR_SDK/documents/SNAKE/index.html</CODE> for details. 
+</p>
+<h3 id="note_01-S02" class="release_note"><span class="addition_style">New Features and Improvements</span> 01-S02:  (OS) Added a Dequeue feature with a wait time to the <CODE>BlockingQueue</CODE> class [SDK | System Updater]</h3>
+<p class="release_note">Added a Dequeue feature with a wait time to the <CODE>BlockingQueue</CODE> class.
+</p>
+<h3 id="note_01-S03" class="release_note"><span class="addition_style">New Features and Improvements</span> 01-S03:  (OS) Added <CODE>desc</CODE> for extended applications [SDK]</h3>
+<p class="release_note">Added <CODE>ExtApplication.desc</CODE>. 
+</p>
+<p class="release_note">Using this <CODE>desc</CODE> enables the application to use 96 MB of memory, which makes the application start faster.  
+</p>
+<h3 id="category_1_0">Known Issues</h3>
+<h3 id="note_01-S04" class="release_note"><span class="knownissue_style">Known Issue</span> 01-S04:  Using the Nintendo 3DS CPU profiler in the SNAKE-compatible version of PARTNER-CTR Debugger</h3>
+<p class="release_note">Only standard applications can be profiled with the SNAKE-compatible PARTNER-CTR Debugger and Nintendo 3DS CPU profiler combination.
+</p>
+<p class="release_note">The profile feature cannot be used with extended applications.
+</p>
+<h3 id="note_01-S05" class="release_note"><span class="knownissue_style">Known Issue</span> 01-S05:  Converting Windows fonts with FontConverter</h3>
+<p class="release_note"><CODE>FontConverter</CODE> is sometimes unable to convert Windows fonts correctly if the following settings have been made.
+</p>
+<ul class="release_note"><li> Vector fonts (marked with &quot;(V)&quot; in the font list) are used.
+</li>
+</ul>
+<ul class="release_note"><li> A large font size is set. (The size that causes the problem could vary depending on the font.)
+</li>
+</ul>
+<ul class="release_note"><li> Two levels of gradation are set for the number of gradations under Advanced Settings (applies to both the A4 and LA4 settings).
+</li>
+</ul>
+
+
+    <!-- ====================================================================== -->
+
+    
+  </body>
+    <footer style="text-align:right;">
+    <div style="position: fixed;bottom: 0;margin-bottom:1%;z-index: 4;">
+        <a class="fancy" href="/pages/misc/systemupdater/">Back to rmc's SystemUpdater info pages</a>
+    </div>
+</footer>
+</html>

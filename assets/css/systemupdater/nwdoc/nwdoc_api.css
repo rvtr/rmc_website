@@ -1,0 +1,76 @@
+body.nwapiref h1 a,
+body.nwapiref h2 a
+{
+    text-decoration:        none;
+}
+
+body.nwapiref td.defc a,
+body.nwapiref th.defc a
+{
+    text-decoration:        none;
+}
+
+body.nwapiref pre.definition
+{
+}
+
+body.nwapiref ul, 
+body.nwapiref ol, 
+body.nwapiref p, 
+body.nwapiref table, 
+body.nwapiref pre, 
+body.nwapiref div.inheritctrl,
+body.nwapiref div.section, 
+body.nwapiref div.description, 
+body.nwapiref dl
+{
+    margin-left:            25px;
+    margin-right:           2em;
+}
+
+body.nwapiref table
+{
+    border-left-style:      none;
+    border-right-style:     none;
+    margin-top:             0;
+}
+
+body.nwapiref th, 
+body.nwapiref th
+{
+    padding:                0.2em 0.4em;
+}
+
+body.nwapiref div.inheritctrl
+{
+    font-size:              75%;
+}
+
+body.nwapiref div.note
+{
+    background-color:       #FEFEFE;
+
+    margin:                 0.8em 3em;
+    padding:                1em;
+
+    border-width:           1px;
+    border-color:           #884;
+    border-style:           solid;
+}
+
+body.nwapiref td.category
+{
+    background-color:       #EEEEEE;
+    color:                  black;
+}
+
+body.nwapiref table img
+{
+    margin:                 0;
+    padding:                0;
+}
+
+body.nwapiref td.attr,
+body.nwapiref th.attr
+{
+}

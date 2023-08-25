@@ -1,0 +1,519 @@
+@media screen
+{
+
+/* --------------------------------- 
+    左バー / API バー
+   --------------------------------- */
+
+/* 背景 */
+div#nw_left_bar
+{
+    background-color        : #F8F8FF;
+}
+
+div#nw_left_bar_content
+{
+    background              : #F8F8FF;
+    padding-top             : 80px;
+}
+
+div#nw_api_bar
+{
+    background-color        : #E0E8FF;
+}
+
+div#nw_api_bar_header
+{
+    padding                 : 1px 0 1px 0;
+    
+    border-color            : #DDD;
+    border-style            : solid;
+    border-width            : 1px 1px 1px 1px;
+    
+    background-color        : #FFF;
+}
+
+
+/* 内容 */
+div.nw_side_bar div.nwgi
+{
+    padding                 : 1px 0 1px 0;
+    
+    border-color            : #DDD;
+    border-style            : solid;
+    border-width            : 1px 1px 1px 1px;
+
+    background-color        : #FFF;
+}
+
+div.nw_side_bar * + div.nwgi
+{
+    margin-top              : 15px;
+}
+
+div.nw_side_bar div.nwgi > ul
+{
+    font-size               : 80%;
+    margin                  : 5px;
+}
+
+div.nw_side_bar div.nwgi > ul ul
+{
+    margin                  : 0 0 0;
+}
+
+div.nw_side_bar div.nwgi ul
+{
+    list-style-type         : none;
+    padding                 : 0;
+}
+
+div.nw_side_bar div.nwgi li
+{
+    margin                  : 0;
+    padding                 : 0px 0 0;
+}
+
+div.nw_side_bar div.nwgi > ul > li > a,
+div.nw_side_bar div.nwgi > ul > li > span
+{
+    background-color        : #D4D4D4;
+    padding                 : 1px 10px;
+    color                   : #000;
+    font-weight             : bold;
+    
+    display                 : block;
+}
+
+div#nw_api_bar div.nwgi > ul > li > a
+{
+    padding                 : 1px 10px;
+}
+
+div#nw_left_bar div.nwgi > ul > li > ul
+{
+    margin                  : 0 0 4px;
+}
+
+div#nw_api_bar div.nwgi > ul > li > ul
+{
+    margin                  : 2px 0 4px;
+}
+
+div#nw_api_bar div.nwgi > ul > li > ul li
+{
+    padding                 : 0;
+}
+
+div#nw_left_bar div.nwgi > ul > li > ul > li
+{
+    border-color            : #FFF;
+    border-width            : 0 0 1px;
+    border-style            : solid;
+}
+
+div.nw_side_bar div.nwgi > ul > li > ul > li > a,
+div.nw_side_bar div.nwgi > ul > li > ul > li > span
+{
+    padding                 : 0 10px;
+}
+
+div#nw_left_bar div.nwgi > ul > li > ul > li > a,
+div#nw_left_bar div.nwgi > ul > li > ul > li > span
+{
+    padding                 : 0 25px 0 20px;
+}
+
+div.nw_side_bar div.nwgi > ul > li > ul > li > ul ,
+div.nw_side_bar div.nwgi > ul > li > ul > li > ul > li > ul
+{
+    margin                  : 0px 0 8px;
+}
+
+div.nw_side_bar div.nwgi > ul > li > ul > li > ul > li > a,
+div.nw_side_bar div.nwgi > ul > li > ul > li > ul > li > span
+{
+    padding                 : 0 30px;
+}
+
+div.nw_side_bar div.nwgi > ul > li > ul > li > ul > li > ul > li > a,
+div.nw_side_bar div.nwgi > ul > li > ul > li > ul > li > ul > li > span
+{
+    padding                 : 0 40px;
+}
+
+div.nw_side_bar div.nwgi > ul > li > ul > li > ul > li > ul > li > ul > li > a,
+div.nw_side_bar div.nwgi > ul > li > ul > li > ul > li > ul > li > ul > li > span
+{
+    padding                 : 0 50px;
+}
+
+div.nw_side_bar div.nwgi > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > a,
+div.nw_side_bar div.nwgi > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > span
+{
+    padding                 : 0 60px;
+}
+
+div.nw_side_bar div.nwgi li a
+{
+    display                 : block;
+    text-decoration         : none;
+    border                  : 1px solid #FFF;
+}
+
+div.nw_side_bar div.nwgi li a.focused
+{
+    background-color        : #EEE;
+    border                  : 1px solid #888;
+}
+
+div.nw_side_bar div.nwgi li a:hover,
+div.nw_side_bar div.nwgi li a.focused:hover
+{
+    background-color        : #EEF;
+}
+
+div.nw_side_bar div.nwgi li a.linktopdf
+{
+    background-image        : url(image/icon_pdf.png);
+    background-repeat       : no-repeat;
+    background-position     : right center;
+}
+
+div.nw_side_bar div.nwgi li a.linktochm
+{
+    background-image        : url(image/icon_chm.png);
+    background-repeat       : no-repeat;
+    background-position     : right center;
+}
+
+/* API 暫定目次 */
+div#nw_api_bar div.nwgi_cats
+{
+    margin                  : 3px 0px;
+    
+    font-family             : monospace;
+    font-size               : 11px;
+    text-align              : center;
+}
+
+div#nw_api_bar div.nwgi_cats a
+{
+    text-decoration         : none;
+    
+    padding                 : 0 0;
+}
+
+div#nw_api_bar div.nwgi_cats a:hover
+{
+    background-color        : #EEF;
+}
+
+div#nw_api_bar hr
+{
+    margin                  : 5px;
+    
+    border-color            : #003;
+    border-width            : 0 0 1px;
+    border-style            : solid;
+}
+
+
+/* --------------------------------- 
+    右
+   --------------------------------- */
+div#nw_right_bar
+{
+    background-color        : #FFF;
+    border-color            : #EEE;
+    border-width            : 1px 0 0 1px;
+    border-style            : solid;
+}
+
+div#nw_right_bar div.nwai ul
+{
+    list-style-type         : none;
+    padding                 : 0;
+    margin                  : 0;
+}
+
+div#nw_right_bar div.nwai > ul
+{
+    margin                  : 10px 0;
+}
+
+div#nw_right_bar div.nwai li
+{
+    padding                 : 0;
+    margin                  : 5px 0;
+}
+
+div#nw_right_bar div.nwai > ul > li > a
+{
+    padding                 : 0 0 0 15px;
+}
+
+div#nw_right_bar div.nwai > ul > li > ul > li > a
+{
+    padding                 : 0 0 0 30px;
+}
+
+div#nw_right_bar div.nwai > ul > li > ul > li > ul > li > a
+{
+    padding                 : 0 0 0 40px;
+}
+
+div#nw_right_bar div.nwai > ul > li > ul > li > ul > li > ul > li > a
+{
+    padding                 : 0 0 0 50px;
+}
+
+div#nw_right_bar div.nwai > ul > li > ul > li > ul > li > ul > li > ul > li > a
+{
+    padding                 : 0 0 0 60px;
+}
+
+div#nw_right_bar div.nwai > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > a
+{
+    padding                 : 0 0 0 70px;
+}
+
+div#nw_right_bar div.nwai li a
+{
+    display                 : block;
+    text-decoration         : none;
+}
+
+div#nw_right_bar div.nwai li a:hover
+{
+    background-color        : #EEF !important;
+}
+
+div#nw_right_bar div.nwai li a.focused
+{
+    background-color        : #EEE;
+}
+
+body.nws_right_bar_hidden div#nw_right_bar_toggle
+{
+    border-color            : #EEE;
+    border-width            : 0 1px 0 0;
+    border-style            : solid;
+}
+
+/* --------------------------------- 
+    トグル
+   --------------------------------- */
+
+/* 左バートグル */
+div#nw_left_bar_toggle
+{
+    background              : #FFFFFF url(image/toggle_left.png) repeat-y left top;
+}
+
+body.nwapiref div#nw_left_bar_toggle
+{
+    background              : #E0E8FF url(image/toggle_leftonapi.png) repeat-y left top;
+}
+
+div#nw_left_bar_toggle_tab
+{
+    position                : absolute;
+    top                     : 40px;
+    
+    width                   : 13px;
+    height                  : 124px;
+    
+    background              : url(image/tab_left.png) no-repeat left top;
+    cursor                  : pointer;
+}
+
+body.nwapiref div#nw_left_bar_toggle_tab
+{
+    background              : url(image/tab_leftonapi.png) no-repeat left top;
+}
+
+div#nw_left_bar_toggle_tab:hover
+{
+    background-image        : url(image/tab_left_hover.png);
+}
+
+body.nwapiref div#nw_left_bar_toggle_tab:hover
+{
+    background-image        : url(image/tab_leftonapi_hover.png);
+}
+
+/* Chrome など、開閉が使用できない場合 */
+div#nw_left_bar_toggle_tab.toggle_unabled
+{
+    display                 : none;
+}
+
+/* API バートグル */
+div#nw_api_bar_toggle
+{
+    background              : url(image/toggle_api.png) repeat-y left top;
+}
+
+div#nw_api_bar_toggle_tab
+{
+    position                : absolute;
+    top                     : 44px;
+    
+    width                   : 13px;
+    height                  : 124px;
+    
+    background              : url(image/tab_api.png) no-repeat left top;
+    cursor                  : pointer;
+}
+
+div#nw_api_bar_toggle_tab:hover
+{
+    background-image        : url(image/tab_api_hover.png);
+}
+
+/* 右バートグル */
+div#nw_right_bar_toggle
+{
+}
+
+div#nw_right_bar_toggle_tab
+{
+    position                : absolute;
+    top                     : 0px;
+    
+    width                   : 13px;
+    height                  : 116px;
+    
+    background              : url(image/tab_right.png) no-repeat right top;
+    cursor                  : pointer;
+}
+
+div#nw_right_bar_toggle_tab:hover
+{
+    background-image        : url(image/tab_right_hover.png);
+}
+
+/* --------------------------------- 
+    コントロールパネル
+   ------------------------------ */
+
+div#nw_ctrl_panel
+{
+    position                : fixed;
+    right                   : 0px;
+    bottom                  : 0px;
+    width                   : 183px;
+    height                  : 34px;
+    background-color        : #E0E8FF;
+    
+    border-color            : #E6ECFF #B9C6F0 #B9C6F0 #E6ECFF;
+    border-width            : 1px;
+    border-style            : solid;
+    
+    z-index                 : 10;
+    
+    display                 : none;
+}
+
+div#nw_ctrl_panel div.nw_ctrl_align
+{
+    position                : fixed;
+    bottom                  : 4px;
+    width                   : 34px;
+    height                  : 26px;
+    background-repeat       : no-repeat;
+    background-position     : left top;
+    cursor                  : pointer;
+}
+
+div#nw_ctrl_align_left
+{
+    right                   : 136px;
+    background-image        : url(image/align_left.png);
+}
+div#nw_ctrl_align_center
+{
+    right                   : 96px;
+    background-image        : url(image/align_center.png);
+}
+div#nw_ctrl_align_right
+{
+    right                   : 56px;
+    background-image        : url(image/align_right.png);
+}
+div#nw_ctrl_align_wide
+{
+    right                   : 16px;
+    background-image        : url(image/align_wide.png);
+}
+div#nw_ctrl_align_left:hover
+{
+    background-image        : url(image/align_left_hover.png);
+}
+div#nw_ctrl_align_center:hover
+{
+    background-image        : url(image/align_center_hover.png);
+}
+div#nw_ctrl_align_right:hover
+{
+    background-image        : url(image/align_right_hover.png);
+}
+div#nw_ctrl_align_wide:hover
+{
+    background-image        : url(image/align_wide_hover.png);
+}
+
+div#nw_align_state
+{
+    position                : fixed;
+    right                   : 0;
+    bottom                  : 0;
+    width                   : 24px;
+    height                  : 15px;
+    background-color        : #E0E8FF;
+    background-repeat       : no-repeat;
+    background-position     : left top;
+    
+    border-color            : #E6ECFF #B9C6F0 #B9C6F0 #E6ECFF;
+    border-width            : 1px;
+    border-style            : solid;
+    
+    z-index                 : 10;
+    
+    cursor                  : pointer;
+}
+
+body.nws_align_left div#nw_align_state
+{
+    background-image        : url(image/icon_align_left.png);
+}
+body.nws_align_center div#nw_align_state
+{
+    background-image        : url(image/icon_align_center.png);
+}
+body.nws_align_right div#nw_align_state
+{
+    background-image        : url(image/icon_align_right.png);
+}
+body.nws_align_wide div#nw_align_state
+{
+    background-image        : url(image/icon_align_wide.png);
+}
+/* --------------------------------- 
+    スクリプトなし
+   ------------------------------ */
+
+body.nwdoc.nwnoscript
+{
+    background-color        : #F8F8FF;
+}
+
+body.nwdoc.nwnoscript.nwapiref
+{
+    background-color        : #E0E8FF;
+}
+
+}
+
+} /* @media screen */

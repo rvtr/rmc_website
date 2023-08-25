@@ -1,0 +1,306 @@
+@media screen
+{
+
+/* ============================================================================
+    基本スタイル
+============================================================================ */
+body.nwdoc
+{
+    margin:                 0;
+    padding:                2em;
+
+    line-height:            1.3;
+    font-size:              90%;
+}
+
+/* 見出し */
+body.nwdoc h1
+{
+    margin:                 0em 0em 0.8em;
+    padding:                0em 0em 0em;
+
+    border-width:           0px 0px 2px;
+    border-style:           solid;
+    border-color:           #CD202C;
+
+    font-size:              200%;
+    font-weight:            bold;
+    color:                  #224499;
+}
+
+body.nwdoc h2
+{
+    margin:                 3.5em 0em 0.8em;
+    padding:                0.3em 0.3em 0.3em 0.5em;
+
+    border-width:           0px 0px 1px 5px;
+    border-style:           solid;
+    border-color:           #CD202C;
+
+    background:             url(image/h2bg.png);
+    background-position:    left;
+    background-repeat:      repeat-y;
+
+    font-size:              125%;
+    font-weight:            bold;
+    color:                  #224499;
+}
+
+body.nwdoc h3
+{
+    margin:                 2em 1em 0.8em;
+    padding:                0em 0em 0em 0.5em;
+
+    border-width:           0px 0px 1px 0px;
+    border-style:           solid;
+    border-color:           #CD202C;
+
+    font-size:              110%;
+    font-weight:            bold;
+    color:                  #224499;
+}
+
+body.nwdoc h4
+{
+    margin:                 2em 3em 0.8em;
+    padding:                0em 0em 0em 0.5em;
+
+    border-width:           0px 0px 0px 10px;
+    border-style:           solid;
+    border-color:           #CD202C;
+
+    font-size:              100%;
+    font-weight:            bold;
+    color:                  #224499;
+}
+
+/* 段落 */
+body.nwdoc p, 
+body.nwdoc pre,
+body.nwdoc dl
+{
+    margin:                 0.8em 3em;
+
+    font-size:              100%;
+    font-weight:            normal;
+}
+
+body.nwdoc pre
+{
+    padding:                0.5em;
+
+    border:                 1px solid black;
+
+    font-family:            monospace;
+    line-height:            1em;
+}
+
+/* リスト */
+body.nwdoc ul,
+body.nwdoc ol
+{
+    margin:                 0.8em 4em;
+    padding:                0em 0em 0em 1em;
+
+    font-size:              100%;
+    font-weight:            normal;
+    line-height:            1.5;
+}
+
+body.nwdoc ol li,
+body.nwdoc ul li
+{
+    margin:                 0.0em 0.5em 0.3em;
+
+    line-height:            1.3;
+}
+
+body.nwdoc ul ul li,
+body.nwdoc ul ol li,
+body.nwdoc ol ul li,
+body.nwdoc ol ol li
+{
+    margin:                 0.0em 0.5em 0.2em;
+}
+
+body.nwdoc ul br,
+body.nwdoc ol br
+{
+    margin:                 0;
+}
+
+body.nwdoc ul ul,
+body.nwdoc ul ol,
+body.nwdoc ol ul,
+body.nwdoc ol ol
+{
+    margin:                 0.2em 0.5em 1em;
+}
+
+body.nwdoc ul p,
+body.nwdoc ol p,
+body.nwdoc ul table,
+body.nwdoc ol table
+{
+    margin-left:            0.5em;
+    margin-right:           0.5em;
+}
+
+/* テーブル */
+body.nwdoc table
+{
+    border-collapse:        collapse;
+    border-left-style:      hidden;
+    border-right-style:     hidden;
+
+    width:                  auto;
+
+    background-color:       #FAFAFA;
+
+    margin:                 1em 3em;
+    font-size:              100%;
+    font-weight:            normal;
+}
+
+body.nwdoc th,
+body.nwdoc td
+{
+    padding:                0.2em 0.6em;
+
+    border:                 1px solid black;
+}
+
+body.nwdoc th,
+body.nwdoc thead
+{
+    background-color:       #EEEEEE;
+
+    text-align:             left;
+}
+
+body.nwdoc thead
+{
+    border-bottom:          3px double black;
+}
+
+body.nwdoc th[scope="row"] 
+{
+    border-right:           3px double black;
+}
+
+body.nwdoc th[scope="col"] 
+{
+    border-bottom:          3px double black;
+}
+
+body.nwdoc td p,
+body.nwdoc th p
+{
+    margin:                 0.8em 0em 0.8em;
+}
+
+a
+{
+    margin:                 0;
+}
+
+/* ============================================================================
+    
+============================================================================ */
+body.nwdoc div#nwsign
+{
+    font-size:              80%;
+    color:                  #333;
+}
+
+body.nwdoc div#nwversion
+{
+    margin:                 0;
+
+    text-align:             right;
+    font-size:              80%;
+}
+
+body.nwdoc div.warning
+{
+    background-color:       #FFA;
+
+    margin:                 0.8em 3em;
+    padding:                1em;
+
+    border-width:           1px;
+    border-color:           #884;
+    border-style:           solid;
+}
+
+body.nwdoc div.warning *
+{
+    margin:                 0em;
+}
+
+body.nwdoc div.warning strong
+{
+    color:                  red;
+    font-weight:            bold;
+}
+
+body.nwdoc h1 + div#nwversion
+{
+    margin-top:             -1.5em;
+}
+
+body.nwdoc h2.important
+{
+    border-width:           0px 0px 2px 7px;
+    border-color:           red;
+}
+
+body.nwdoc h3.important
+{
+    border-width:           0px 0px 2px 0px;
+    border-color:           red;
+}
+
+/* フッター類 */
+body.nwdoc div#nwfooter
+{
+    padding:                0;
+    margin:                 5em 0 0;
+
+    border-width:           1px 0px 0px 0px;
+    border-color:           black;
+    border-style:           dotted;
+
+    font-size:              80%;
+}
+
+body.nwdoc div#nwfooter div.confidential_logo
+{
+    margin:                 1em 0;
+
+    font-weight:            bold;
+    color:                  red;
+}
+
+body.nwdoc div#nwfooter div.confidential_ja
+{
+    margin:                 1em 0;
+
+    background-color:       #FF0;
+    padding:                0;
+}
+
+body.nwdoc div#nwfooter div.confidential_en
+{
+    margin:                 1em 0;
+}
+
+body.nwdoc div#nwfooter div.copyright
+{
+    margin:                 1em 0 0;
+
+    text-align:             right;
+}
+
+
+} /* @media screen */

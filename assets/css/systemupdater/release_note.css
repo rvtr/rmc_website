@@ -1,0 +1,64 @@
+.release_note span.addition_style
+{
+    background-color    : #DDFFDD;
+    color               : black;
+    font-size           : 75%;
+    padding             : 2px;
+    margin              : 0 5px 0 0;
+    vertical-align      : middle;
+}
+
+.release_note span.bugfix_style
+{
+    background-color    : #DDDDFF;
+    color               : black;
+    font-size           : 75%;
+    padding             : 2px;
+    margin              : 0 5px 0 0;
+    vertical-align      : middle;
+}
+
+.release_note span.knownissue_style
+{
+    background-color    : #FFCC99;
+    color               : black;
+    font-size           : 75%;
+    padding             : 2px;
+    margin              : 0 5px 0 0;
+    vertical-align      : middle;
+}
+
+.release_note span.modification_style
+{
+    background-color    : #FFDDDD;
+    color               : black;
+    font-size           : 75%;
+    padding             : 2px;
+    margin              : 0 5px 0 0;
+    vertical-align      : middle;
+}
+
+.release_note span.red_strong
+{
+    color               : red;
+    font-weight         : bold;
+}
+
+span.important_style
+{
+    background-color    : lavenderblush;
+    color               : crimson;
+    font-weight         : bold;
+}
+
+.release_note span.important_style
+{
+    background-color    : lavenderblush;
+    color               : crimson;
+    font-weight         : bold;
+}
+
+body.nwdoc h3.release_note
+{
+    border              : none;
+}

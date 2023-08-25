@@ -1,0 +1,1011 @@
+﻿<HTML>
+<HEAD>
+<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=utf-8" />
+<META http-equiv="Content-Style-Type" content="text/css">
+<TITLE>CTR-SDK Change Log for E-Commerce</TITLE>
+<style>
+.fancy {
+  margin: 3.5em 0em 0.8em;
+  padding: 0.3em 0.3em 0.3em 0.5em;
+  border-width: 0px 0px 1px 5px;
+  border-style: solid;
+  border-color: #730800;
+  background: #ffbcb8;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+  background-position: left;
+  background-repeat: repeat-y;
+  font-size: 100%;
+  font-weight: bold;
+  color: #224499;
+}
+</style>
+</HEAD>
+<BODY style="padding-bottom: 1600px;">
+<hr />
+<H1>CTR-SDK Change Log for E-Commerce</H1>
+<hr />
+<DL>
+<DT>
+<A href="#sdk_7_0_0_Release">■ CTR-SDK 7.0.0 Release</A> (2013/08/23)</DT>
+<DD><A href="#note40-01">Note 40-01: (EC) Revised the price notation information conversion feature [SDK]</A></DD>
+<DD><A href="#KnownIssues_7_0_0_Release">Known Issues in the SDK 7.0.0 Release</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_6_0_0_SampleDemos">■ CTR-SDK 6.0.0 Sample Demos</A> (2013/04/11)</DT>
+<DD><A href="#note39-01">Note 39-01: (PATCH) Changed the unique ID of the Sample Demo [Sample Demos]</A></DD>
+<DD><A href="#note39-02">Note 39-02: (PATCH) Fixed Bugs in the Sample Demos [Sample Demos]</A></DD>
+<DD><A href="#KnownIssues_6_0_0_SampleDemos">Known Issues in the SDK 6.0.0&nbsp;Sample Demos</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_5_2_0_Release">■ CTR-SDK 5.2.0&nbsp;Release</A> (2013/03/26)</DT>
+<DD><A href="#note38-01">Note 38-01:(DevEnv) Added to the data incorporated in patches [SDK]</A></DD>
+<DD><A href="#KnownIssues_5_2_0_Release">Known Issues in the SDK 5.2.0&nbsp;Release</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_5_2_0_SystemUpdater%200.18.5">■ CTR-SDK 5.2.0&nbsp;System Updater 0.18.5</A> (2013/03/26)</DT>
+<DD><A href="#note37-01">Note 37-01:(EC) Expanded the scope of data that can be patched [System Updater]</A></DD>
+<DD><A href="#KnownIssues_5_2_0_SystemUpdater%200.18.5">Known Issues in the SDK 5.2.0&nbsp;System Updater 0.18.5 </A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_5_1_1_SystemUpdater%200.18.4">■ CTR-SDK 5.1.1&nbsp;System Updater 0.18.4</A> (2013/02/28)</DT>
+<DD><A href="#note36-01">Note 36-01:(EC) Updated the EC applet [System Updater]</A></DD>
+<DD><A href="#KnownIssues_5_1_1_SystemUpdater%200.18.4">Known Issues in the SDK 5.1.1&nbsp;System Updater 0.18.4 </A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_5_1_0_Release">■ CTR-SDK 5.1.0&nbsp;Release</A> (2013/02/07)</DT>
+<DD><A href="#note35-01">Note 35-01: (DevEnv) Fixed a bug that set the default stack size to 16 KB [SDK]</A></DD>
+<DD><A href="#KnownIssues_5_1_0_Release">Known Issues in the SDK 5.1.0 Release</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_5_0_0_SampleDemos">■ CTR-SDK 5.0.0 Sample Demos</A> (2012/12/18)</DT>
+<DD><A href="#note34-01">Note 34-01:(EC) Revised the Purchase Demo [Sample Demos]</A></DD>
+<DD><A href="#note34-02">Note 34-02:(EC) Revised the Purchase, ContentListUp, and RichPromotion Demos [Sample Demos]</A></DD>
+<DD><A href="#KnownIssues_5_0_0_SampleDemos">Known Issues in the SDK 5.0.0&nbsp;Sample Demos</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_4_2_1_Release">■ CTR-SDK 4.2.1 Release</A> (2012/06/27)</DT>
+<DD><A href="#note33-01">Note 33-01: (EC) Format change for item redemption numbers [SDK]</A></DD>
+<DD><A href="#KnownIssues_4_2_1_Release">Known Issues in the SDK 4.2.1 Release</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_4_2_1_SystemUpdater%200.17.19">■ CTR-SDK 4.2.1 System Updater 0.17.19</A> (2012/06/27)</DT>
+<DD><A href="#note32-01">Note 32-01: (EC) Changed the EC applet [System Updater]</A></DD>
+<DD><A href="#KnownIssues_4_2_1_SystemUpdater%200.17.19">Known Issues in the SDK 4.2.1 System Updater 0.17.19</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_4_2_1_SampleDemos">■ CTR-SDK 4.2.1&nbsp;Sample Demos</A> (2012/06/27)</DT>
+<DD><A href="#note31-01">Note 31-01: (EC) Format change for item redemption numbers [Sample Demos]</A></DD>
+<DD><A href="#KnownIssues_4_2_1_SampleDemos">Known Issues in the SDK 4.2.1 Sample Demos</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_4_2_0_Release">■ CTR-SDK 4.2.0&nbsp;Release</A> (2012/05/29)</DT>
+<DD><A href="#note30-01">Note 30-01: (DevEnv) Improved the search content in the Result search field [SDK]</A></DD>
+<DD><A href="#note30-02">Note 30-02: (EC) Revised the <CODE>Server::ConvertPrice</CODE> function [SDK]</A></DD>
+<DD><A href="#note30-03">Note 30-03: (EC) Revised the upper limit for the data title version [SDK]</A></DD>
+<DD><A href="#note30-04">Note 30-04: (PATCH) Added the debug method for the patch update process to the reference [SDK]</A></DD>
+<DD><A href="#KnownIssues_4_2_0_Release">Known Issues in the SDK 4.2.0 Release</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_4_2_0_SystemUpdater%200.17.17">■ CTR-SDK 4.2.0 System Updater 0.17.17</A> (2012/05/29)</DT>
+<DD><A href="#note29-01">Note 29-01: (EC) Fixed a bug that prevented some content from being mounted when the data title was updated [System Updater]</A></DD>
+<DD><A href="#KnownIssues_4_2_0_SystemUpdater%200.17.17">Known Issues in the SDK 4.2.0 System Updater 0.17.17</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_4_2_0_SampleDemos">■ CTR-SDK 4.2.0 Sample Demos</A> (2012/05/29)</DT>
+<DD><A href="#note28-01">Note 28-01: (EC) Revised the <CODE>ContentsListUp</CODE> demo [Sample Demos]</A></DD>
+<DD><A href="#note28-02">Note 28-02: (EC) Revised the <CODE>RichPromotion</CODE> demo [Sample Demos]</A></DD>
+<DD><A href="#note28-03">Note 28-03: (PATCH) Revised the demos [Sample Demos]</A></DD>
+<DD><A href="#KnownIssues_4_2_0_SampleDemos">Known Issues in the SDK 4.2.0 Sample Demos</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_4_1_0_Release">■ CTR-SDK 4.1.0&nbsp;Release</A> (2012/05/02)</DT>
+<DD><A href="#note27-01">Note 27-01:(EC) Revised description about DNS server addresses [SDK]</A></DD>
+<DD><A href="#note27-02">Note 27-02:(EC) Added patch features [SDK | Sample Demos]</A></DD>
+<DD><A href="#note27-03">Note 27-03:(EC) Removed support for Taiwan market English data [SDK]</A></DD>
+<DD><A href="#note27-04">Note 27-04:(EC) Added description about creating/using multiple data titles [SDK]</A></DD>
+<DD><A href="#note27-05">Note 27-05:(EC) Added references for adding/updating add-on content [SDK]</A></DD>
+<DD><A href="#KnownIssues_4_1_0_Release">Known Issues in the SDK 4.1.0&nbsp;Release</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_4_1_0_SystemUpdater%200.17.6">■ CTR-SDK 4.1.0&nbsp;System Updater 0.17.6</A> (2012/05/02)</DT>
+<DD><A href="#note26-01">Note 26-01:(System Settings) Added feature for displaying patches (data updates) on the Add-On Content Management screen [System Updater]</A></DD>
+<DD><A href="#KnownIssues_4_1_0_SystemUpdater%200.17.6">Known Issues in the SDK 4.1.0&nbsp;System Updater 0.17.6</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_4_1_0_SampleDemos">■ CTR-SDK 4.1.0&nbsp;Sample Demos</A> (2012/05/02)</DT>
+<DD><A href="#note25-01">Note 25-01:(EC) Added demo of providing sale information to users about add-on content in an original, application-specific mechanism [Sample Demos]</A></DD>
+<DD><A href="#note25-02">Note 25-02:(EC) Added support in sample demos for North America, Europe, Korea and Taiwan markets [Sample Demos]</A></DD>
+<DD><A href="#note25-03">Note 25-03:(EC) Revised so that the data title icon index now starts from 1 [Sample Demos]</A></DD>
+<DD><A href="#note25-04">Note 25-04:(EC) Added comment about buffer usage and revised the buffer size [Sample Demos]</A></DD>
+<DD><A href="#note25-05">Note 25-05:(EC) Added patch features [SDK | Sample Demos]</A></DD>
+<DD><A href="#note25-06">Note 25-06:(EC) Revisions to use correct item code format [Sample Demos]</A></DD>
+<DD><A href="#note25-07">Note 25-07:(EC) Revised error handling when mounting add-on content [Sample Demos]</A></DD>
+<DD><A href="#KnownIssues_4_1_0_SampleDemos">Known Issues in the SDK 4.1.0&nbsp;Sample Demos</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_4_0_2_SystemUpdater%200.17.4">■ CTR-SDK 4.0.2 System Updater 0.17.4</A> (2012/03/30)</DT>
+<DD><A href="#note24-01">Note 24-01: (EC) Fixed problem of <CODE>ec::Server::GetDateTime</CODE> returning lost time [SDK | System Updater]</A></DD>
+<DD><A href="#KnownIssues_4_0_2_SystemUpdater%200.17.4">Known Issues in the SDK 4.0.2&nbsp;System Updater 0.17.4</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_4_0_2_Release">■ CTR-SDK 4.0.2 Release</A> (2012/03/19)</DT>
+<DD><A href="#note23-01">Note 23-01: (EC) Added function for creating filters for specified items [SDK]</A></DD>
+<DD><A href="#KnownIssues_4_0_2_Release">Known Issues in the SDK 4.0.2 Release</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_4_0_2_SystemUpdater%200.17.3">■ CTR-SDK 4.0.2 System Updater 0.17.3</A> (2012/03/19)</DT>
+<DD><A href="#note22-01">Note 22-01: (EC) Fixed bug that returned invalid <CODE>ResultAppletSdBroken</CODE> when downloading [System Updater]</A></DD>
+<DD><A href="#KnownIssues_4_0_2_SystemUpdater%200.17.3">Known Issues in the SDK 4.0.2&nbsp;System Updater 0.17.3</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_4_0_1_SystemUpdater%200.17.2">■ CTR-SDK 4.0.1&nbsp;System Updater 0.17.2</A> (2012/02/29)</DT>
+<DD><A href="#note21-01">Note 21-01: (EC) Fixed bug when updating data titles [System Updater]</A></DD>
+<DD><A href="#KnownIssues_4_0_1_SystemUpdater%200.17.2">Known Issues in the SDK 4.0.1&nbsp;System Updater 0.17.2</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_4_0_0_Release">■ CTR-SDK 4.0.0&nbsp;Release</A> (2012/02/20)</DT>
+<DD><A href="#note20-01">Note 20-01: (EC) Made changes so that metadata can also be created for Asian markets [SDK]</A></DD>
+<DD><A href="#note20-02">Note 20-02: (EC) Added a PIN code input feature [SDK | System Updater]</A></DD>
+<DD><A href="#note20-03">Note 20-03: (EC) Added features to purchase multiple items in batch [SDK | System Updater]</A></DD>
+<DD><A href="#note20-04">Note 20-04: (EC) Revised the method to handle errors surrounding the add-on content archive [SDK]</A></DD>
+<DD><A href="#KnownIssues_4_0_0_Release">Known Issues in the SDK 4.0.0 Release</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_4_0_0_SystemUpdater%200.17.1">■ CTR-SDK 4.0.0&nbsp;System Updater 0.17.1</A> (2012/02/20)</DT>
+<DD><A href="#note19-01">Note 19-01: (EC) Fixed a bug that caused all downloaded content to be deleted when add-on content on the server was updated or added [System Updater]</A></DD>
+<DD><A href="#note19-02">Note 19-02: (EC) Added a PIN code input feature [SDK | System Updater]</A></DD>
+<DD><A href="#note19-03">Note 19-03: (EC) Added features to purchase multiple items in batch [SDK | System Updater]</A></DD>
+<DD><A href="#note19-04">Note 19-04: (EC) Fixed the progress display when updating add-on content [System Updater]</A></DD>
+<DD><A href="#KnownIssues_4_0_0_SystemUpdater%200.17.1">Known Issues in the SDK 4.0.0&nbsp;System Updater 0.17.1</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_4_0_0_SampleDemos">■ CTR-SDK 4.0.0 Sample Demos</A> (2012/02/20)</DT>
+<DD><A href="#note18-01">Note 18-01: (EC) Made revisions so that when purchasing add-on content, the application does not request that input of the parental control PIN code [Sample Demos]</A></DD>
+<DD><A href="#KnownIssues_4_0_0_SampleDemos">Known Issues in the SDK 4.0.0 Sample Demos</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_3_3_1_Release">■ CTR-SDK 3.3.1&nbsp;Release</A> (2012/01/25)</DT>
+<DD><A href="#note17-01">Note 17-01: (DevEnv) Changed build rules for add-on content to allow specification of company code [SDK]</A></DD>
+<DD><A href="#KnownIssues_3_3_1_Release">Known Issues in the SDK 3.3.1&nbsp;Release</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_3_3_0_Release">■ CTR-SDK 3.3.0  Release</A> (2011/12/22)</DT>
+<DD><A href="#note16-01">Note 16-01: (EC) Regarding use of <CODE>EcApplication.desc</CODE> [SDK]</A></DD>
+<DD><A href="#note16-02">Note 16-02: (EC) Fixed the <CODE>nn::ec::Initialize</CODE> function bug [SDK]</A></DD>
+<DD><A href="#note16-03">Note 16-03: (EC) Enhanced the regional language check when creating metadata [SDK]</A></DD>
+<DD><A href="#KnownIssues_3_3_0_Release">Known Issues in the SDK 3.3.0 Release</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_3_3_0_SampleDemos">■ CTR-SDK 3.3.0  Sample Demos</A> (2011/12/22)</DT>
+<DD><A href="#note15-01">Note 15-01: (EC) Revised the <CODE>ContentsListUp</CODE> demo [Sample Demos]</A></DD>
+<DD><A href="#note15-02">Note 15-02: (EC) Revised the <CODE>Purchase</CODE> demos [Sample Demos]</A></DD>
+<DD><A href="#note15-03">Note 15-03: (EC) Added demo to create add-on content directly using tools [Sample Demos]</A></DD>
+<DD><A href="#KnownIssues_3_3_0_SampleDemos">Known Issues in the SDK 3.3.0 Sample Demos</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_3_2_5_Release">■ CTR-SDK 3.2.5&nbsp;Release</A> (2011/11/25)</DT>
+<DD><A href="#note14-01">Note 14-01: (EC) Revised size calculation [SDK]</A></DD>
+<DD><A href="#note14-02">Note 14-02: Restricted number of instances of add-on content that could be mounted at one time, and number of <CODE>MetaDataReader</CODE> instances. [SDK]</A></DD>
+<DD><A href="#KnownIssues_3_2_5_Release">Known Issues in the SDK 3.2.5&nbsp;Release</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_3_2_4_Release">■ CTR-SDK 3.2.4&nbsp;Release</A> (2011/11/11)</DT>
+<DD><A href="#note13-01">Note 13-01: (EC) Removed the <CODE>ECardCatalogFilter::OrderByAttribute</CODE> function</A></DD>
+<DD><A href="#note13-02">Note 13-02: (EC) Revised the <CODE>GetAccountId</CODE> function [SDK]</A></DD>
+<DD><A href="#note13-03">Note 13-03: (EC) Removed <CODE>ResultAcNotConnected</CODE> and added <CODE>ResultAcNotConnectedError</CODE> [SDK]</A></DD>
+<DD><A href="#note13-04">Note 13-04: (EC) Added <CODE>ResultNewSessionRequired</CODE> [SDK]</A></DD>
+<DD><A href="#note13-05">Note 13-05: (EC) Revised the <CODE>Server::ConvertPrice</CODE> function [SDK]</A></DD>
+<DD><A href="#note13-06">Note 13-06: (EC) Removed the <CODE>ServiceItemCatalogFilter::OrderByAttribute</CODE> function [SDK]</A></DD>
+<DD><A href="#note13-07">Note 13-07: (EC) Revised the documentation [SDK]</A></DD>
+<DD><A href="#KnownIssues_3_2_4_Release">Known Issues in the SDK 3.2.4&nbsp;Release</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_3_2_4_SystemUpdater%200.16.12">■ CTR-SDK 3.2.4&nbsp;System Updater 0.16.12</A> (2011/11/11)</DT>
+<DD><A href="#note12-01">Note 12-01: (EC) Fixed bug where value calculated by the <CODE>nn::ec::DataTitle::CalculateRequiredSizeOf</CODE> function was too small [System Updater]</A></DD>
+<DD><A href="#KnownIssues_3_2_4_SystemUpdater%200.16.12">Known Issues in the SDK 3.2.4&nbsp;System Updater 0.16.12</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_3_2_3_Release">■ CTR-SDK 3.2.3&nbsp;Release</A> (2011/11/04)</DT>
+<DD><A href="#note11-01">Note 11-01: (EC) Removed declaration of <CODE>HasMountedAddOnContent</CODE> function [SDK]</A></DD>
+<DD><A href="#note11-02">Note 11-02: (EC) Revised handling of add-on content versions [SDK]</A></DD>
+<DD><A href="#note11-03">Note 11-03: (EC) Made micro-versions of add-on content optional [SDK]</A></DD>
+<DD><A href="#KnownIssues_3_2_3_Release">Known Issues in the SDK 3.2.3&nbsp;Release</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_3_2_3_SystemUpdater%200.16.9">■ CTR-SDK 3.2.3&nbsp;System Updater 0.16.9</A> (2011/11/04)</DT>
+<DD><A href="#note10-01">Note 10-01: (EC) Fixed bug where correct content information could not be obtained when the size was larger than 1,024 [System Updater]</A></DD>
+<DD><A href="#note10-02">Note 10-02: (EC) Data title purchase and update progress now displayed [System Updater]</A></DD>
+<DD><A href="#note10-03">Note 10-03: (EC) Added check for whether local data title version is newer [System Updater]</A></DD>
+<DD><A href="#note10-04">Note 10-04: (EC) Revised kit so that the same <CODE>ReferenceId</CODE> cannot be used to purchase different service items [System Updater]</A></DD>
+<DD><A href="#KnownIssues_3_2_3_SystemUpdater%200.16.9">Known Issues in the SDK 3.2.3&nbsp;System Updater 0.16.9</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_3_2_3_SampleDemos">■ CTR-SDK 3.2.3&nbsp;Sample Demos</A> (2011/11/04)</DT>
+<DD><A href="#note9-01">Note 9-01: (EC) Support for blocking of HOME Button while preloading EC applet [Sample Demos]</A></DD>
+<DD><A href="#note9-02">Note 9-02: (EC) Removed micro-versions from ec/DataTitle [Sample Demos]</A></DD>
+<DD><A href="#note9-03">Note 9-03: (EC) Revised ec/DataTitle versions [Sample Demos]</A></DD>
+<DD><A href="#KnownIssues_3_2_3_SampleDemos">Known Issues in the SDK 3.2.3&nbsp;Sample Demos</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_3_2_2_Release">■ CTR-SDK 3.2.2&nbsp;Release</A> (2011/10/28)</DT>
+<DD><A href="#note8-01">Note 8-01: (EC) Revised <CODE>ContentSetGroupCatalog::Retrieve</CODE> function [SDK]</A></DD>
+<DD><A href="#note8-02">Note 8-02: (EC) Fixed bug where <CODE>DataTitle::DeleteContents</CODE> returned an unexpected result [SDK | System Updater]</A></DD>
+<DD><A href="#note8-03">Note 8-03: (EC) Fixed bug where the <CODE>ECardInfo::Retrieve</CODE> function succeeded even when the session was invalid [SDK]</A></DD>
+<DD><A href="#note8-04">Note 8-04: (EC) Added feature to <CODE>EcRightTool</CODE> to delete licenses [SDK]</A></DD>
+<DD><A href="#note8-05">Note 8-05: (EC) Removed <CODE>ResultAcNotConnectedError</CODE> and added <CODE>ResultAcNotConnected</CODE> [SDK]</A></DD>
+<DD><A href="#note8-06">Note 8-06: (EC) Fixed bug where error type of <CODE>ResultError</CODE> was not determined correctly [SDK]</A></DD>
+<DD><A href="#note8-07">Note 8-07: (EC) Added result for when the catalog buffer is too small [SDK | System Updater]</A></DD>
+<DD><A href="#KnownIssues_3_2_2_Release">Known Issues in the SDK 3.2.2&nbsp;Release</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_3_2_2_SystemUpdater%200.16.8">■ CTR-SDK 3.2.2&nbsp;System Updater 0.16.8</A> (2011/10/28)</DT>
+<DD><A href="#note7-01">Note 7-01: (EC) Fixed bug where <CODE>ContentInfo::IsOnDevice</CODE> did not return correct results [System Updater]</A></DD>
+<DD><A href="#note7-02">Note 7-02: (EC) Fixed bug where <CODE>DataTitle::DeleteContents</CODE> returned an unexpected result [SDK | System Updater]</A></DD>
+<DD><A href="#note7-03">Note 7-03: (EC) Added result for when the catalog buffer is too small [SDK | System Updater]</A></DD>
+<DD><A href="#KnownIssues_3_2_2_SystemUpdater%200.16.8">Known Issues in the SDK 3.2.2&nbsp;System Updater 0.16.8</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_3_2_1_Release">■ CTR-SDK 3.2.1&nbsp;Release</A> (2011/10/21)</DT>
+<DD><A href="#note6-01">Note 6-01: (EC) Revised error-type determination by <CODE>ResultError</CODE> [SDK]</A></DD>
+<DD><A href="#note6-02">Note 6-02: (EC) Revised determination of whether SD cards are write protected [SDK]</A></DD>
+<DD><A href="#note6-03">Note 6-03: (EC) Revised <CODE>ec::ServiceItemCatalog::Retrieve</CODE> function [SDK]</A></DD>
+<DD><A href="#note6-04">Note 6-04: (EC) Support for North American and European regions [SDK | System Updater]</A></DD>
+<DD><A href="#KnownIssues_3_2_1_Release">Known Issues in the SDK 3.2.1&nbsp;Release</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_3_2_1_SystemUpdater%200.16.7">■ CTR-SDK 3.2.1&nbsp;System Updater 0.16.7</A> (2011/10/21)</DT>
+<DD><A href="#note5-01">Note 5-01: (EC) Support for North American and European regions [SDK | System Updater]</A></DD>
+<DD><A href="#KnownIssues_3_2_1_SystemUpdater%200.16.7">Known Issues in the SDK 3.2.1&nbsp;System Updater 0.16.7</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_3_2_1_SampleDemos">■ CTR-SDK 3.2.1&nbsp;Sample Demos</A> (2011/10/21)</DT>
+<DD><A href="#note4-01">Note 4-01: (EC) Error handling for add-on content mounting and file operations [Sample Demos]</A></DD>
+<DD><A href="#KnownIssues_3_2_1_SampleDemos">Known Issues in the SDK 3.2.1&nbsp;Sample Demos</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_3_2_0_Release">■ CTR-SDK 3.2.0&nbsp;Release</A> (2011/10/14)</DT>
+<DD><A href="#note3-01">Note 3-01: (EC) Removed <CODE>HasMountedAddOnContent</CODE> function [SDK]</A></DD>
+<DD><A href="#note3-02">Note 3-02: (EC) Fixed bug where <CODE>SELECTION_FILTER_PURCHASABLE</CODE> specification was ignored [SDK]</A></DD>
+<DD><A href="#note3-03">Note 3-03: (EC) Invalidation of <CODE>Session</CODE> objects [SDK]</A></DD>
+<DD><A href="#note3-04">Note 3-04: (EC) Function to obtain account ID [SDK | System Updater]</A></DD>
+<DD><A href="#note3-05">Note 3-05: (EC) Downloading and deletion while content is mounted are prohibited [SDK | System Updater]</A></DD>
+<DD><A href="#note3-06">Note 3-06: (EC) Added function to get service-item licenses [SDK | System Updater]</A></DD>
+<DD><A href="#note3-07">Note 3-07: (EC) Added functions to search for service items [SDK | System Updater]</A></DD>
+<DD><A href="#note3-08">Note 3-08: (EC) Revised the documentation [SDK]</A></DD>
+<DD><A href="#note3-09">Note 3-09: (EC) Added a function for getting number of blocks [SDK]</A></DD>
+<DD><A href="#note3-10">Note 3-10: (EC) Support for Parental Controls [SDK]</A></DD>
+<DD><A href="#note3-11">Note 3-11: (EC) Determine whether a data title has never been initialized [SDK]</A></DD>
+<DD><A href="#note3-12">Note 3-12: (EC) Added functions to find items that can be redeemed for a download voucher [SDK]</A></DD>
+<DD><A href="#note3-13">Note 3-13: (EC) Changed specifications for required content [SDK]</A></DD>
+<DD><A href="#note3-14">Note 3-14: (EC) Added function to create required-attribute names [SDK]</A></DD>
+<DD><A href="#KnownIssues_3_2_0_Release">Known Issues in the SDK 3.2.0&nbsp;Release</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_3_2_0_SystemUpdater%200.16.6">■ CTR-SDK 3.2.0&nbsp;System Updater 0.16.6</A> (2011/10/14)</DT>
+<DD><A href="#note2-01">Note 2-01: (EC) Function to obtain account ID [SDK | System Updater]</A></DD>
+<DD><A href="#note2-02">Note 2-02: (EC) Downloading and deletion while content is mounted are prohibited [SDK | System Updater]</A></DD>
+<DD><A href="#note2-03">Note 2-03: (EC) Added function to get service-item licenses [SDK | System Updater]</A></DD>
+<DD><A href="#note2-04">Note 2-04: (EC) Added functions to search for service items [SDK | System Updater]</A></DD>
+<DD><A href="#note2-05">Note 2-05: (EC) Revised size calculation for downloading and updating add-on content [System Updater]</A></DD>
+<DD><A href="#note2-06">Note 2-06: (EC) Changed location of add-on content files [System Updater]</A></DD>
+<DD><A href="#KnownIssues_3_2_0_SystemUpdater%200.16.6">Known Issues in the SDK 3.2.0&nbsp;System Updater 0.16.6</A></DD>
+</DL>
+<DL>
+<DT>
+<A href="#sdk_3_2_0_SampleDemos">CTR-SDK 3.2.0 Sample Demos</A> (2011/10/14)</DT>
+<DD><A href="#note1-01">Note 1-01: (EC) Revised the demo for managing add-on content [Sample Demos]</A></DD>
+<DD><A href="#note1-02">Note 1-02: (EC) Revised the demo for purchasing add-on content [Sample Demos]</A></DD>
+<DD><A href="#KnownIssues_3_2_0_SampleDemos">Known Issues in the SDK 3.2.0 Sample Demos</A></DD>
+</DL>
+<DL></DL>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_7_0_0_Release">■ CTR-SDK Version 7.0.0 Release</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2013/08/23)</P></DIV>
+<hr />
+<H3><A name="note40-01">Note 40-01: (EC) Revised the price notation information conversion feature [SDK].</A></H3>
+<P><description>Currencies that <CODE>nn::ec::Server::ConvertPrice</CODE> did not support are now supported.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_7_0_0_Release">Known Issues With the SDK 7.0.0 Release</A></H3>
+<P> None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_6_0_0_SampleDemos">■ CTR-SDK Version 6.0.0&nbsp;Sample Demos</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2013/04/11)</P></DIV>
+<hr />
+<H3><A name="note39-01">Note 39-01: (PATCH) Changed the unique ID of the Sample Demo [Sample Demos].</A></H3>
+<P><description>Along with changes to the sample demos, the unique ID of the <CODE>patch</CODE> sample demo was changed to avoid confusion with demos with a server patch from the CTR-SDK 4 series.<br /> This change actually occurred in CTR-SDK 5.0 but was accidentally omitted from the change log.<br /></description></P>
+<hr />
+<H3><A name="note39-02">Note 39-02: (PATCH) Fixed Bugs in the Sample Demos [Sample Demos].</A></H3>
+<P><description>Fixed a bug where an error was displayed if the timestamp was updated under certain conditions.<br /> In addition, functionality did not match sample demo documentation. This was also fixed.<br /> This change actually occurred in CTR-SDK 5.0 but was accidentally omitted from the change log.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_6_0_0_SampleDemos">Known Issues with SDK 6.0.0&nbsp;Sample Demos</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_5_2_0_Release">■ CTR-SDK Version 5.2.0&nbsp;Release</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2013/03/26)</P></DIV>
+<hr />
+<H3><A name="note38-01">Note 38-01:(DevEnv) Added to the data incorporated in patches [SDK]</A></H3>
+<P><description>Patches now also contain e-manual and Download Play child data when created with the CTR-SDK build system.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_5_2_0_Release">Known Issues with SDK 5.2.0&nbsp;Release</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_5_2_0_SystemUpdater%200.18.5">■ CTR-SDK Version 5.2.0&nbsp;System Updater 0.18.5</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2013/03/26)</P></DIV>
+<hr />
+<H3><A name="note37-01">Note 37-01:(EC) Expanded the scope of data that can be patched [System Updater]</A></H3>
+<P><description>Patches can now also be used to update e-manual and Download Play child data.<br /> For more information, see the Patch Manual: <CODE>$CTR_SDK/documents/TechnicalNotes/Patch/PatchManual.html</CODE>.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_5_2_0_SystemUpdater%200.18.5">Known Issues with SDK 5.2.0&nbsp;System Updater 0.18.5 </A></H3>
+<P> None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_5_1_1_SystemUpdater%200.18.4">■ CTR-SDK Version 5.1.1&nbsp;System Updater 0.18.4</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2013/02/28)</P></DIV>
+<hr />
+<H3><A name="note36-01">Note 36-01:(EC) Updated the EC applet [System Updater]</A></H3>
+<P><description>The following changes were made to the EC applet.<br />
+        <ul>
+<li>Corrected the invalid error code that was generated when the EC applet was started and the SD card had no <CODE>Nintendo3DS</CODE> folder and no free space. <br /> (009-4079 → 009-4077)</li>
+<li>Fixed the problem that the error code was given as <CODE>-1</CODE> when duplicated content was purchased and the returned <CODE>Result</CODE> was <CODE>nn::ec::ResultAppletDuplicateContentIndex</CODE>.</li>
+<li>Fixed the black line that showed at the bottom of icons on the purchase screen in some cases, depending on the scroll position.</li>
+        </ul>
+      </description></P>
+<hr />
+<H3><A name="KnownIssues_5_1_1_SystemUpdater%200.18.4">Known Issues with SDK 5.1.1&nbsp;System Updater 0.18.4 </A></H3>
+<P> None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_5_1_0_Release">■ CTR-SDK Version 5.1.0&nbsp;Release</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2013/02/07)</P></DIV>
+<hr />
+<H3><A name="note35-01">Note 35-01: (DevEnv) Fixed a bug that set the default stack size to 16 KB [SDK]</A></H3>
+<P><description>Fixed a bug that set the default stack size to 16 KB when EcApplication.desc was used.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_5_1_0_Release">Known Issues with SDK 5.1.0 Release</A></H3>
+<P> None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_5_0_0_SampleDemos">■ CTR-SDK Version 5.0.0&nbsp;Sample Demos</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2012/12/18)</P></DIV>
+<hr />
+<H3><A name="note34-01">Note 34-01:(EC) Revised the Purchase Demo [Sample Demos]</A></H3>
+<P><description>Added a description of the differences in the filters used for purchasing and redeeming items to the comments.<br /> Fixed the error that occurred when you transitioned to the redeem-item process after setting the filter in the purchase-item process.<br /> Added a sample demo for how to handle situations where there is no data title yet at the time when the application sale has started.<br /></description></P>
+<hr />
+<H3><A name="note34-02">Note 34-02:(EC) Revised the Purchase, ContentListUp, and RichPromotion Demos [Sample Demos]</A></H3>
+<P><description>Added a precaution about the mounted numbers of add-on content and metadata to the comments in the source code.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_5_0_0_SampleDemos">Known Issues with SDK 5.0.0&nbsp;SampleDemos</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_4_2_1_Release">■ CTR-SDK Version 4.2.1 Release</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2012/06/27)</P></DIV>
+<hr />
+<H3><A name="note33-01">Note 33-01:(EC) Changed the Format for Item Download Code [SDK]</A></H3>
+<P><description>Changed the characters that can be used for the item download code from numerals only to alphanumeric characters.<br /> In line with this, the following functions have been revised to convert all lowercase letters that were input in the number to uppercase letters and then send them to the Nintendo eShop server.<br />
+        <ul>
+          <li><CODE>ECardInfo::Retrieve</CODE></li>
+          <li><CODE>EcApplet::RequestRedeemContentSet</CODE></li>
+          <li><CODE>EcApplet::RequestRedeemServiceItem</CODE></li>
+        </ul>
+      </description></P>
+<hr />
+<H3><A name="KnownIssues_4_2_1_Release">Known Issues in the SDK 4.2.1 Release</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_4_2_1_SystemUpdater%200.17.19">■ CTR-SDK Version 4.2.1 System Updater 0.17.19</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2012/06/27)</P></DIV>
+<hr />
+<H3><A name="note32-01">Note 32-01: (EC) Changed the EC applet [System Updater]</A></H3>
+<P><description>The following changes were made to the EC applet.<br />
+        <ul>
+          <li>Support for format change of item redemption number</li>
+          <li>Changed so that age confirmation is performed when adding to the balance</li>
+        </ul>
+      </description></P>
+<hr />
+<H3><A name="KnownIssues_4_2_1_SystemUpdater%200.17.19">Known Issues in the SDK 4.2.1 System Updater 0.17.19</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_4_2_1_SampleDemos">■ CTR-SDK Version 4.2.1 SampleDemos</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2012/06/27)</P></DIV>
+<hr />
+<H3><A name="note31-01">Note 31-01: (EC) Format change for item redemption numbers [Sample Demos]</A></H3>
+<P><description>In line with the change to allow alphanumeric characters be used for the item redemption number, revised the number input portion.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_4_2_1_SampleDemos">Known Issues in the SDK 4.2.1 SampleDemos</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_4_2_0_Release">■ CTR-SDK Version 4.2.0 Release</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2012/05/29)</P></DIV>
+<hr />
+<H3><A name="note30-01">Note 30-01: (DevEnv) Improved the search content in the Result search field [SDK]</A></H3>
+<P><description>Of the Result values belonging to <CODE>nn::ec</CODE>, made improvements so that the portion of error codes that could not be properly searched for, can now be searched for.<br /></description></P>
+<hr />
+<H3><A name="note30-02">Note 30-02: (EC) Revised the <CODE>Server::ConvertPrice</CODE> function [SDK]</A></H3>
+<P><description>Fixed a bug that prevented proper conversion of prices that had only one digit after the decimal in the <CODE>ec::Server::ConvertPrice</CODE> function.<br /></description></P>
+<hr />
+<H3><A name="note30-03">Note 30-03: (EC) Revised the upper limit for the data title version [SDK]</A></H3>
+<P><description>The reference stated that the upper limit for data title versions was 1023, which was a mistake. This has been changed to the correct value of 4095.<br /></description></P>
+<hr />
+<H3><A name="note30-04">Note 30-04: (PATCH) Added the debug method for the patch update process to the reference [SDK]</A></H3>
+<P><description>Added the debug method for patch update processing using <CODE>cia.out</CODE> to the patch manual located in <CODE>$CTR_SDK/documents/TechnicalNotes/Patch/PatchManual.html</CODE>.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_4_2_0_Release">Known Issues in the SDK 4.2.0 Release</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_4_2_0_SystemUpdater%200.17.17">■ CTR-SDK Version 4.2.0 System Updater 0.17.17</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2012/05/29)</P></DIV>
+<hr />
+<H3><A name="note29-01">Note 29-01: (EC) Fixed a bug that prevented some content from being mounted when the data title was updated [System Updater]</A></H3>
+<P><description>Fixed a bug that prevented some content from being mounted when a data title was updated.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_4_2_0_SystemUpdater%200.17.17">Known Issues in the SDK 4.2.0 System Updater 0.17.17</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_4_2_0_SampleDemos">■ CTR-SDK Version 4.2.0 SampleDemos</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2012/05/29)</P></DIV>
+<hr />
+<H3><A name="note28-01">Note 28-01: (EC) Revised the <CODE>ContentsListUp</CODE> demo [Sample Demos]</A></H3>
+<P><description>Fixed a bug that displayed undefined strings when displaying strings in a content file on the screen.<br /></description></P>
+<hr />
+<H3><A name="note28-02">Note 28-02: (EC) Revised the <CODE>RichPromotion</CODE> demo [Sample Demos]</A></H3>
+<P><description>Fixed a bug that displayed undefined strings when displaying strings in a content file on the screen.<br /> Also, fixed the bug that caused the application to stop when listing up content, depending how screen transition were made.<br /></description></P>
+<hr />
+<H3><A name="note28-03">Note 28-03: (PATCH) Revised the demos [Sample Demos]</A></H3>
+<P><description>In the demos, made changes so that the version is shown to the user.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_4_2_0_SampleDemos">Known Issues in the SDK 4.2.0 SampleDemos</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_4_1_0_Release">■ CTR-SDK Version 4.1.0&nbsp;Release</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2012/05/02)</P></DIV>
+<hr />
+<H3><A name="note27-01">Note 27-01:(EC) Revised description about DNS server addresses [SDK]</A></H3>
+<P><description>Revised the description about the DNS server address settings required for accessing the development server, referring readers to the latest information at WarioWorld.com.<br /></description></P>
+<hr />
+<H3><A name="note27-02">Note 27-02:(EC) Added patch features [SDK | Sample Demos]</A></H3>
+<P><description>Added features for CTR application patches.<br /></description></P>
+<hr />
+<H3><A name="note27-03">Note 27-03:(EC) Removed support for Taiwan market English data [SDK]</A></H3>
+<P><description>Changed <CODE>ctr_makeMetaDataContent</CODE> so it can no longer create Taiwan market English-language data.<br /></description></P>
+<hr />
+<H3><A name="note27-04">Note 27-04:(EC) Added description about creating/using multiple data titles [SDK]</A></H3>
+<P><description>Added a description about the creation and use of multiple data titles.<br /></description></P>
+<hr />
+<H3><A name="note27-05">Note 27-05:(EC) Added references for adding/updating add-on content [SDK]</A></H3>
+<P><description>Added text about adding and updating add-on content to the following API references and to the <I>Developing Applications That Support Add-On Content</I> document.<br />
+        <ul>
+          <li>ContentSetCatalog::Retrieve</li>
+          <li>ContentSetGroupCatalog::Retrieve</li>
+          <li>ServiceItemCatalog::Retrieve</li>
+          <li>ECardItemCatalog::Retrieve</li>
+        </ul>
+      </description></P>
+<hr />
+<H3><A name="KnownIssues_4_1_0_Release">Known Issues in the SDK 4.1.0&nbsp;Release</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_4_1_0_SystemUpdater%200.17.6">■ CTR-SDK Version 4.1.0&nbsp;System Updater 0.17.6</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2012/05/02)</P></DIV>
+<hr />
+<H3><A name="note26-01">Note 26-01:(System Settings) Added feature for displaying patches (data updates) on the Add-On Content Management screen [System Updater]</A></H3>
+<P><description>Patches (data updates) are now displayed on the Add-On Content Management screen.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_4_1_0_SystemUpdater%200.17.6">Known Issues in the SDK 4.1.0&nbsp;System Updater 0.17.6</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_4_1_0_SampleDemos">■ CTR-SDK Version 4.1.0&nbsp;Sample Demos</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2012/05/02)</P></DIV>
+<hr />
+<H3><A name="note25-01">Note 25-01:(EC) Added demo of providing sale information to users about add-on content in an original, application-specific mechanism [Sample Demos]</A></H3>
+<P><description>Added the <CODE>RichPromotion</CODE> demo, showing use of the EC library to provide sale information to users about add-on content in an original, application-specific mechanism.<br /> This demo is also a reference for when creating applications that involve the purchase and management of add-on content and handle numerous data titles with different variations.<br /></description></P>
+<hr />
+<H3><A name="note25-02">Note 25-02:(EC) Added support in sample demos for North America, Europe, Korea and Taiwan regions [Sample Demos]</A></H3>
+<P><description>The EC-related sample demos now support running on the systems in the North America, Europe, Korea and Taiwan regions.<br /> Depending on the market region, there are restrictions on the country settings in the System Settings.<br /> See the sample demo documentation for more information.<br /></description></P>
+<hr />
+<H3><A name="note25-03">Note 25-03:(EC) Revised so that the data title icon index now starts from 1 [Sample Demos]</A></H3>
+<P><description>In the XML of content created by IMAS, the icon index starts from <CODE>1</CODE>.<br /> In line with this, the icon index for <CODE>DataTitle</CODE> has been revised to also start from <CODE>1</CODE>.<br /></description></P>
+<hr />
+<H3><A name="note25-04">Note 25-04:(EC) Added comment about buffer usage and revised the buffer size [Sample Demos]</A></H3>
+<P><description>Added a comment prompting that an appropriate value be set for the buffer size passed to functions like <CODE>nn::ec::ContentSetCatalog</CODE> and <CODE>nn::ec::ECardCatalog</CODE>.<br /> In line with this, also revised the buffer size.<br /></description></P>
+<hr />
+<H3><A name="note25-05">Note 25-05:(EC) Added patch features [SDK | Sample Demos]</A></H3>
+<P><description>Added features for CTR application patches.<br /></description></P>
+<hr />
+<H3><A name="note25-06">Note 25-06:(EC) Revisions to use correct item code format [Sample Demos]</A></H3>
+<P><description>The following revisions were made relating to the item codes in the EC demos:<br />
+        <ul>
+<li>In the <CODE>Purchase</CODE> demo, changed the data title being purchased.<br />This data title defines item code in the correct format.</li>
+<li>In the <CODE>ServiceItem</CODE> demo, changed the service item being purchased.<br />This service item defines item code in the correct format.</li>
+<li>The server-side demo of the <CODE>ServiceItem</CODE> demo was revised to handle item code in the correct format.</li>
+        </ul>
+      </description></P>
+<hr />
+<H3><A name="note25-07">Note 25-07:(EC) Revised error handling when mounting add-on content [Sample Demos]</A></H3>
+<P><description>When errors occur when add-on content is being mounted, <CODE>ContentListUp</CODE> demo now shows the method for error handling.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_4_1_0_SampleDemos">Known Issues in the SDK 4.1.0&nbsp;Sample Demos</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_4_0_2_SystemUpdater%200.17.4">■ CTR-SDK Version 4.0.2 System Updater 0.17.4</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2012/03/30)</P></DIV>
+<hr />
+<H3><A name="note24-01">Note 24-01: (EC) Fixed problem of <CODE>ec::Server::GetDateTime</CODE> returning lost time [SDK | System Updater]</A></H3>
+<P><description>
+        <CODE>ec::Server::GetDateTime</CODE> was late by the amount of time the system had been put to sleep. That problem was fixed.<br/>
+        With this bug fix, communication with the external server happens on every call to <CODE>GetDateTime</CODE>.<br/>
+        This was actually changed in CTR-SDK 4.0.2 but was accidentally omitted from the Change Log.<br/>
+      </description></P>
+<hr />
+<H3><A name="KnownIssues_4_0_2_SystemUpdater%200.17.4">Known Issues in the SDK 4.0.2&nbsp;System Updater 0.17.4</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_4_0_2_Release">■ CTR-SDK Version 4.0.2 Release</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2012/03/19)</P></DIV>
+<hr />
+<H3><A name="note23-01">Note 23-01: (EC) Added function for creating filters for specified items [SDK]</A></H3>
+<P><description>
+        Added a function for creating filters that can be used to specify and search for certain items from catalogs.<br />
+      </description></P>
+<hr />
+<H3><A name="KnownIssues_4_0_2_Release">Known Issues in the SDK 4.0.2 Release</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_4_0_2_SystemUpdater%200.17.3">■ CTR-SDK Version 4.0.2 System Updater 0.17.3</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2012/03/19)</P></DIV>
+<hr />
+<H3><A name="note22-01">Note 22-01: (EC) Fixed bug that returned invalid <CODE>ResultAppletSdBroken</CODE> when downloading [System Updater]</A></H3>
+<P><description>
+        During downloading, <CODE>ResultAppletSdBroken</CODE> would be returned if some error happened to arise. That problem was fixed.<br />
+        This change was actually included in System Updater 0.17.1 supporting CTR-SDK 4.0, but was accidentally omitted from the Change Log.<br />
+      </description></P>
+<hr />
+<H3><A name="KnownIssues_4_0_2_SystemUpdater%200.17.3">Known Issues in the SDK 4.0.2&nbsp;System Updater 0.17.3</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_4_0_1_SystemUpdater%200.17.2">■ CTR-SDK Version 4.0.1&nbsp;System Updater 0.17.2</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2012/02/29)</P></DIV>
+<hr />
+<H3><A name="note21-01">Note 21-01: (EC) Fixed bug when updating data titles [System Updater]</A></H3>
+<P><description>Fixed a bug that prevented proper determination of content updates when updating data titles.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_4_0_1_SystemUpdater%200.17.2">Known Issues in the SDK 4.0.1&nbsp;System Updater 0.17.2</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_4_0_0_Release">■ CTR-SDK Version 4.0.0 Release</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2012/02/20)</P></DIV>
+<hr />
+<H3><A name="note20-01">Note 20-01: (EC) Made changes so that metadata can also be created for Asian markets [SDK]</A></H3>
+<P><description>Supported creating metadata even in the Asian regions (China, Korea, Taiwan) using <CODE>ctr_makeMetaDataContent</CODE>.<br /></description></P>
+<hr />
+<H3><A name="note20-02">Note 20-02: (EC) Added a PIN code input feature [SDK | System Updater]</A></H3>
+<P><description>This is the PIN code to release parental controls that was required to be input from traditional applications, and changes were made so that the EC applet provides an input screen as needed.<br /> See the reference for the <CODE>EcApplet</CODE> class for details.<br /> In line with this, the arguments of traditional functions that required input of the PIN code, such as <CODE>EcApplet::RequestPurchaseContentSet</CODE>, have been changed.<br /></description></P>
+<hr />
+<H3><A name="note20-03">Note 20-03: (EC) Added features to purchase multiple items in batch [SDK | System Updater]</A></H3>
+<P><description>Added features to allow batch purchase and download of multiple content sets or service items.<br /> See the references for the <CODE>EcApplet::RequestPurchaseContentSets</CODE> and <CODE>EcApplet::RequestPurchaseServiceItems</CODE> functions for details.<br /></description></P>
+<hr />
+<H3><A name="note20-04">Note 20-04: (EC) Revised the method to handle errors surrounding the add-on content archive [SDK]</A></H3>
+<P><description>Made changes to recommend using error display that uses the error code for special errors that normally do not occur, as the error handling for the add-on content archive.<br /> See <CODE>$CTR_SDK/documents/api_private/ECommerceKit/nn/fs/briefing/aboutFsErrorHandling.html</CODE> for details.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_4_0_0_Release">Known Issues in the SDK 4.0.0 Release</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_4_0_0_SystemUpdater%200.17.1">■ CTR-SDK Version 4.0.0&nbsp;System Updater 0.17.1</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2012/02/20)</P></DIV>
+<hr />
+<H3><A name="note19-01">Note 19-01: (EC) Fixed a bug that caused all downloaded content to be deleted when add-on content on the server was updated or added [System Updater]</A></H3>
+<P><description>Fixed a bug that caused all downloaded content to be deleted when add-on content on the server was updated or added.<br /> There is no need to handle this on the application-side.<br /></description></P>
+<hr />
+<H3><A name="note19-02">Note 19-02: (EC) Added a PIN code input feature [SDK | System Updater]</A></H3>
+<P><description>This is the PIN code to release parental controls that was required to be input from traditional applications, and changes were made so that the EC applet provides an input screen as needed.<br /> See the reference for the <CODE>EcApplet</CODE> class for details.<br /> In line with this, the arguments of traditional functions that required input of the PIN code, such as <CODE>EcApplet::RequestPurchaseContentSet</CODE>, have been changed.<br /></description></P>
+<hr />
+<H3><A name="note19-03">Note 19-03: (EC) Added features to purchase multiple items in batch [SDK | System Updater]</A></H3>
+<P><description>Added features to allow batch purchase and download of multiple content sets or service items.<br /> See the references for the <CODE>EcApplet::RequestPurchaseContentSets</CODE> and <CODE>EcApplet::RequestPurchaseServiceItems</CODE> functions for details.<br /></description></P>
+<hr />
+<H3><A name="note19-04">Note 19-04: (EC) Fixed the progress display when updating add-on content [System Updater]</A></H3>
+<P><description>Fixed a bug that prevented the EC applet progress display from being displayed correctly when updating add-on content.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_4_0_0_SystemUpdater%200.17.1">Known Issues in the SDK 4.0.0&nbsp;System Updater 0.17.1</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_4_0_0_SampleDemos">■ CTR-SDK Version 4.0.0&nbsp;Sample Demos</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2012/02/20)</P></DIV>
+<hr />
+<H3><A name="note18-01">Note 18-01: (EC) Made revisions so that when purchasing add-on content, the application does not request that input of the parental control PIN code [Sample Demos]</A></H3>
+<P><description>Added a PIN code input feature to the EC applet when use of Nintendo eShop has been restricted with parental controls.<br /> In line with this, deleted the PIN code input feature that was used in the <CODE>Purchase</CODE> and <CODE>ServiceItem</CODE> demos.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_4_0_0_SampleDemos">Known Issues in the SDK 4.0.0 Sample Demos</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_3_3_1_Release">■ CTR-SDK Version 3.3.1&nbsp;Release</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2012/01/25)</P></DIV>
+<hr />
+<H3><A name="note17-01">Note 17-01: (DevEnv) Changed build rules for add-on content to allow specification of company code [SDK]</A></H3>
+<P><description>Changed the build rules for add-on content to allow the specification of a company code.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_3_3_1_Release">Known Issues in the SDK 3.3.1&nbsp;Release</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_3_3_0_Release">■ CTR-SDK Version 3.3.0 Release</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2011/12/22)</P></DIV>
+<hr />
+<H3><A name="note16-01">Note 16-01: (EC) Regarding use of <CODE>EcApplication.desc</CODE> [SDK]</A></H3>
+<P><description>To use the EC library, it is necessary to create a binary by specifying <CODE>EcApplication.desc</CODE> in <CODE>ctr_makerom</CODE>. This fact was added to <CODE>Readme-ECommerceKit.html</CODE> and the API reference.<br /></description></P>
+<hr />
+<H3><A name="note16-02">Note 16-02: (EC) Fixed the <CODE>nn::ec::Initialize</CODE> function bug [SDK]</A></H3>
+<P><description>Fixed a bug that caused a fatal error when the <CODE>nn::ec::Initialize</CODE> function was called multiple times.<br /> Nothing is done with the second and subsequent calls to  the <CODE>nn::ec::Initialize</CODE> function.<br /></description></P>
+<hr />
+<H3><A name="note16-03">Note 16-03: (EC) Enhanced the regional language check when creating metadata [SDK]</A></H3>
+<P><description>Fixed the problem that allowed metadata to be created successfully even with an invalid regional language (JPN_en, etc.) when creating metadata using <CODE>ctr_makeMetaDataContent</CODE>.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_3_3_0_Release">Known Issues in the SDK 3.3.0 Release</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_3_3_0_SampleDemos">■ CTR-SDK Version 3.3.0 Sample Demos</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2011/12/22)</P></DIV>
+<hr />
+<H3><A name="note15-01">Note 15-01: (EC) Revised the <CODE>ContentsListUp</CODE> demo [Sample Demos]</A></H3>
+<P><description>Made the following revisions to the <CODE>ec/ContentsListUp</CODE> demo.<br />
+        <ul>
+<li>Added a process to determine whether a session is valid to error handling</li>
+<li>Deleted SceneInitializeSession</li>
+<li>Made documentation revisions</li>
+        </ul>
+      </description></P>
+<hr />
+<H3><A name="note15-02">Note 15-02: (EC) Revised the <CODE>Purchase</CODE> demos [Sample Demos]</A></H3>
+<P><description>Made the following revisions to the <CODE>ec/Purchase</CODE> demo.<br />
+        <ul>
+<li>Added a process to determine whether a session is valid to error handling</li>
+<li>Revised the process for when overflow occurred in the string encoding process</li>
+<li>Added process to verify string length of the filter when setting an item filter</li>
+<li>Fixed bug related to access outside the region</li>
+<li>Made changes so ac::Connect is performed by each tool rather than with SceneConnect</li>
+<li>Made changes so that there is a transition to SceneConnect when there is an error that should be handled by the application or when there is an implementation error</li>
+        </ul>
+      </description></P>
+<hr />
+<H3><A name="note15-03">Note 15-03: (EC) Added demo to create add-on content directly using tools [Sample Demos]</A></H3>
+<P><description>Added the <CODE>ec/DataTitleRaw</CODE> demo to create add-on content by directly using Windows tools such as <CODE>makerom</CODE> or <CODE>makecia</CODE>.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_3_3_0_SampleDemos">Known Issues in the SDK 3.3.0 Sample Demos</A></H3>
+<knownissues>
+      <description>
+        <ul>
+          <li>With the <CODE>Purchase</CODE> demo, the page number that is referenced when purchasing an item is also referenced when using the item download code.<br />
+              This can be avoided by switching to the first page after purchasing an item, quitting, and then using the download code.</li>
+        </ul>
+      </description>
+    </knownissues><hr />
+<H2 style="line-height: 0"><A name="sdk_3_2_5_Release">■ CTR-SDK Version 3.2.5&nbsp;Release</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2011/11/25)</P></DIV>
+<hr />
+<H3><A name="note14-01">Note 14-01: (EC) Revised size calculation [SDK]</A></H3>
+<P><description>Fixed error in calculation of the region sizes returned by the following interfaces.<br />
+        <ul>
+<li><CODE>DataTitle::CalculateNumRequiredBlocksOf</CODE></li>
+<li><CODE>ContentInfo::GetOccupiedSize</CODE></li>
+<li><CODE>ContentInfo::GetNumOccupiedBlocks</CODE></li>
+<li><CODE>ContentSet::CalculateNumRequiredBlocks</CODE></li>
+        </ul>
+      </description></P>
+<hr />
+<H3><A name="note14-02">Note 14-02: Restricted number of instances of add-on content that could be mounted at one time, and number of <CODE>MetaDataReader</CODE> instances. [SDK]</A></H3>
+<P><description>Mounting add-on content and creating a valid instance of <CODE>MetaDataReader</CODE> consumes a resource that is shared by the system as a whole.<br /> Added information that no more than two instances of add-on content should be mounted at one time, and that no more than one valid instance of <CODE>MetaDataReader</CODE> should exist at one time.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_3_2_5_Release">Known Issues in the SDK 3.2.5&nbsp;Release</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_3_2_4_Release">■ CTR-SDK Version 3.2.4&nbsp;Release</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2011/11/11)</P></DIV>
+<hr />
+<H3><A name="note13-01">Note 13-01: (EC) Removed the <CODE>ECardCatalogFilter::OrderByAttribute</CODE> function</A></H3>
+<P><description>Removed <CODE>OrderByAttribute</CODE> function because it is not supported by <CODE>ECardCatalog</CODE>.<br /></description></P>
+<hr />
+<H3><A name="note13-02">Note 13-02: (EC) Revised the <CODE>GetAccountId</CODE> function [SDK]</A></H3>
+<P><description>Fixed bug where the <CODE>GetAccountId</CODE> function returned <CODE>nim::ResultAccountNotCreated</CODE> when it should have returned <CODE>ec::ResultAccountNotCreated</CODE>.<br /></description></P>
+<hr />
+<H3><A name="note13-03">Note 13-03: (EC) Removed <CODE>ResultAcNotConnected</CODE> and added <CODE>ResultAcNotConnectedError</CODE> [SDK]</A></H3>
+<P><description>In CTR-SDK 3.2.2, we removed <CODE>ResultAcNotConnectedError</CODE> and added <CODE>ResultAcNotConnected</CODE>, but the situation in which this result occurs changed again so that it is necessary to display an error code. We have therefore removed <CODE>ResultAcNotConnected</CODE> and added <CODE>ResultAcNotConnectedError</CODE> back.<br /></description></P>
+<hr />
+<H3><A name="note13-04">Note 13-04: (EC) Added <CODE>ResultNewSessionRequired</CODE> [SDK]</A></H3>
+<P><description>There were some cases where if a call to the applet failed (for example, due to network disconnection), subsequent calls to functions of classes holding <CODE>Session</CODE> objects would fail, even if the <CODE>Session</CODE> object was valid.<br /> Changed these functions to return <CODE>ResultNewSessionRequired</CODE> in these cases.<br /></description></P>
+<hr />
+<H3><A name="note13-05">Note 13-05: (EC) Revised the <CODE>Server::ConvertPrice</CODE> function [SDK]</A></H3>
+<P><description>Fixed bug where the display prices obtained from <CODE>Server::ConvertPrice</CODE> did not include the decimal portion (&quot;.00&quot;) for currencies displaying decimal places, such as US dollars.<br /></description></P>
+<hr />
+<H3><A name="note13-06">Note 13-06: (EC) Removed the <CODE>ServiceItemCatalogFilter::OrderByAttribute</CODE> function [SDK]</A></H3>
+<P><description>Removed the <CODE>OrderByAttribute</CODE> function because it is not supported by <CODE>ServiceItemCatalog</CODE>.<br /></description></P>
+<hr />
+<H3><A name="note13-07">Note 13-07: (EC) Revised the documentation [SDK]</A></H3>
+<P><description>Revised the EC documentation as follows.<br />
+        <ul>
+<li>Revised the <CODE>Readme-ECommerceKit.html</CODE> package structure.</li>
+<li>Added note about applet processing after calling the <CODE>EcApplet::Preload</CODE> function.</li>
+<li>Added information that <CODE>ECardInfo::Retrieve</CODE> returns <CODE>ResultECardInvalidIdError</CODE> when the download-voucher ID that was entered does not exist.</li>
+<li>Revised return values of API functions calling ECApplet applets.</li>
+        </ul>
+This was actually changed in CTR-SDK 3.2.3 but was accidentally omitted from the change log.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_3_2_4_Release">Known Issues in the SDK 3.2.4&nbsp;Release</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_3_2_4_SystemUpdater%200.16.12">■ CTR-SDK Version 3.2.4&nbsp;System Updater 0.16.12</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2011/11/11)</P></DIV>
+<hr />
+<H3><A name="note12-01">Note 12-01: (EC) Fixed bug where value calculated by the <CODE>nn::ec::DataTitle::CalculateRequiredSizeOf</CODE> function was too small [System Updater]</A></H3>
+<P><description>Fixed error in calculation performed by the <CODE>nn::ec::DataTitle::CalculateRequiredSizeOf</CODE> function, where the value could be too small depending on the number of pieces of content defined in add-on content.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_3_2_4_SystemUpdater%200.16.12">Known Issues in the SDK 3.2.4&nbsp;System Updater 0.16.12</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_3_2_3_Release">■ CTR-SDK Version 3.2.3&nbsp;Release</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2011/11/04)</P></DIV>
+<hr />
+<H3><A name="note11-01">Note 11-01: (EC) Removed declaration of <CODE>HasMountedAddOnContent</CODE> function [SDK]</A></H3>
+<P><description>The <CODE>HasMountedAddOnContent</CODE> function was removed in CTR-SDK 3.2, but the header declaration remained, and documentation of this function remained in the reference. These were removed in this release.<br /></description></P>
+<hr />
+<H3><A name="note11-02">Note 11-02: (EC) Revised handling of add-on content versions [SDK]</A></H3>
+<P><description>Removed major and minor versions from add-on content versions, merging them into a single value called the &quot;data title version.&quot;<br /> Past versions of the build tools will no longer be able to build add-on content, so revise your code making reference to the sample demos.<br /></description></P>
+<hr />
+<H3><A name="note11-03">Note 11-03: (EC) Made micro-versions of add-on content optional [SDK]</A></H3>
+<P><description>In past releases, it was mandatory to specify a micro-version of add-on content, even though they were not needed by add-on content developers. This was changed to optional in this release.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_3_2_3_Release">Known Issues in the SDK 3.2.3&nbsp;Release</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_3_2_3_SystemUpdater%200.16.9">■ CTR-SDK Version 3.2.3&nbsp;System Updater 0.16.9</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2011/11/04)</P></DIV>
+<hr />
+<H3><A name="note10-01">Note 10-01: (EC) Fixed bug where correct content information could not be obtained when the size was larger than 1,024 [System Updater]</A></H3>
+<P><description>Fixed a bug where the <CODE>ContentInfo::IsOwned</CODE> function would fail to return the correct Boolean value when information about content with a size greater than 1,024 was obtained.<br /></description></P>
+<hr />
+<H3><A name="note10-02">Note 10-02: (EC) Data title purchase and update progress now displayed [System Updater]</A></H3>
+<P><description>Revised the process to download new data titles and updates of existing ones so that it now displays detailed progress.<br /></description></P>
+<hr />
+<H3><A name="note10-03">Note 10-03: (EC) Added check for whether local data title version is newer [System Updater]</A></H3>
+<P><description>Added the <CODE>nn::ec::CTR::ResultAppletInvalidVersion</CODE> function, and revised test to check whether the local version is newer than the version on the server. This is possible in certain circumstances, such as a developer environment.<br /> This state will generally never occur in a production environment.<br /></description></P>
+<hr />
+<H3><A name="note10-04">Note 10-04: (EC) Revised kit so that the same <CODE>ReferenceId</CODE> cannot be used to purchase different service items [System Updater]</A></H3>
+<P><description>Once a given <CODE>ReferenceId</CODE> has been used to purchase a service, it will no longer be possible to enter it into a shop service.<br /> Starting with this version, an error will appear before purchase, preventing such purchases from moving forward.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_3_2_3_SystemUpdater%200.16.9">Known Issues in the SDK 3.2.3&nbsp;System Updater 0.16.9</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_3_2_3_SampleDemos">■ CTR-SDK Version 3.2.3&nbsp;Sample Demos</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2011/11/04)</P></DIV>
+<hr />
+<H3><A name="note9-01">Note 9-01: (EC) Support for blocking of HOME Button while preloading EC applet [Sample Demos]</A></H3>
+<P><description>It is no longer possible to navigate to the HOME Menu while preloading the EC applet.<br /></description></P>
+<hr />
+<H3><A name="note9-02">Note 9-02: (EC) Removed micro-versions from ec/DataTitle [Sample Demos]</A></H3>
+<P><description>Removed micro-versions from add-on content, because it is not necessary to specify them.<br /></description></P>
+<hr />
+<H3><A name="note9-03">Note 9-03: (EC) Revised ec/DataTitle versions [Sample Demos]</A></H3>
+<P><description>Removed major and minor versions from add-on content data titles. Data titles now use a single unified version system. The DataTitle demo was modified to support this change.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_3_2_3_SampleDemos">Known Issues in the SDK 3.2.3&nbsp;Sample Demos</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_3_2_2_Release">■ CTR-SDK Version 3.2.2&nbsp;Release</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2011/10/28)</P></DIV>
+<hr />
+<H3><A name="note8-01">Note 8-01: (EC) Revised <CODE>ContentSetGroupCatalog::Retrieve</CODE> function [SDK]</A></H3>
+<P><description>Fixed bug where the <CODE>Session</CODE> in use would not automatically be invalidated if the <CODE>ContentSetGroupCatalog::Retrieve</CODE> function returned a <CODE>ResultError</CODE> object whose <CODE>ResultError::RequiresNewSession</CODE> function returned <CODE>true</CODE>.<br /></description></P>
+<hr />
+<H3><A name="note8-02">Note 8-02: (EC) Fixed bug where <CODE>DataTitle::DeleteContents</CODE> returned an unexpected result [SDK | System Updater]</A></H3>
+<P><description>Fixed a bug where <CODE>DataTitle::DeleteContents</CODE> would return an unexpected result if the index of content that did not exist in the title or if an index of 0 was specified.<br /></description></P>
+<hr />
+<H3><A name="note8-03">Note 8-03: (EC) Fixed bug where the <CODE>ECardInfo::Retrieve</CODE> function succeeded even when the session was invalid [SDK]</A></H3>
+<P><description>Fixed bug where the <CODE>ECardInfo::Retrieve</CODE> function would succeed even when the session was invalid.<br /></description></P>
+<hr />
+<H3><A name="note8-04">Note 8-04: (EC) Added feature to <CODE>EcRightTool</CODE> to delete licenses [SDK]</A></H3>
+<P><description>Modified <CODE>EcRightTool</CODE> to be able to delete locally imported data-title licenses.<br /></description></P>
+<hr />
+<H3><A name="note8-05">Note 8-05: (EC) Removed <CODE>ResultAcNotConnectedError</CODE> and added <CODE>ResultAcNotConnected</CODE> [SDK]</A></H3>
+<P><description>Removed <CODE>ResultAcNotConnectedError</CODE> defined as a result when an automatic connection was disconnected, and added <CODE>ResultAcNotConnected</CODE> in its place.<br /> It is consequently no longer necessary to display an error code when this result is returned.<br /></description></P>
+<hr />
+<H3><A name="note8-06">Note 8-06: (EC) Fixed bug where error type of <CODE>ResultError</CODE> was not determined correctly [SDK]</A></H3>
+<P><description>Fixed bug where the <CODE>ResultError::RequiresNewSession</CODE> and <CODE>ResultError::IndicatesServiceNotAvailable</CODE> functions did not determine the error correctly.<br /></description></P>
+<hr />
+<H3><A name="note8-07">Note 8-07: (EC) Added result for when the catalog buffer is too small [SDK | System Updater]</A></H3>
+<P><description>Added a <CODE>ResultOutOfCatalogMemory</CODE> result for when the buffer passed to the <CODE>ContentSetCatalog</CODE> or other catalog is too small.<br /> The <CODE>ResultOutOfCatalogMemory</CODE> result is returned when it is possible to determine that the buffer is too small from local information only.<br /> In contrast, the <CODE>ResultOutOfCatalogMemoryError</CODE> result is returned when the response from the server could not be stored. The error code must be displayed in the error and EULA applets.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_3_2_2_Release">Known Issues in the SDK 3.2.2&nbsp;Release</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_3_2_2_SystemUpdater%200.16.8">■ CTR-SDK Version 3.2.2 System Updater 0.16.8</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2011/10/28)</P></DIV>
+<hr />
+<H3><A name="note7-01">Note 7-01: (EC) Fixed bug where <CODE>ContentInfo::IsOnDevice</CODE> did not return correct results [System Updater]</A></H3>
+<P><description>Fixed bug where <CODE>ContentInfo::IsOnDevice</CODE> returned an incorrect value when a portion of content was downloaded.<br /></description></P>
+<hr />
+<H3><A name="note7-02">Note 7-02: (EC) Fixed bug where <CODE>DataTitle::DeleteContents</CODE> returned an unexpected result [SDK | System Updater]</A></H3>
+<P><description>Fixed a bug where <CODE>DataTitle::DeleteContents</CODE> would return an unexpected result if the index of content that did not exist in the title or if an index of 0 was specified.<br /></description></P>
+<hr />
+<H3><A name="note7-03">Note 7-03: (EC) Added result for when the catalog buffer is too small [SDK | System Updater]</A></H3>
+<P><description>Added a <CODE>ResultOutOfCatalogMemory</CODE> result for when the buffer passed to the <CODE>ContentSetCatalog</CODE> or other catalog is too small.<br /> The <CODE>ResultOutOfCatalogMemory</CODE> result is returned when it is possible to determine that the buffer is too small from local information only.<br /> In contrast, the <CODE>ResultOutOfCatalogMemoryError</CODE> result is returned when the response from the server could not be stored. The error code must be displayed in the error and EULA applets.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_3_2_2_SystemUpdater%200.16.8">Known Issues in the SDK 3.2.2&nbsp;System Updater 0.16.8</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_3_2_1_Release">■ CTR-SDK Version 3.2.1&nbsp;Release</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2011/10/21)</P></DIV>
+<hr />
+<H3><A name="note6-01">Note 6-01: (EC) Revised error-type determination by <CODE>ResultError</CODE> [SDK]</A></H3>
+<P><description>Changed <CODE>RequiresNewSession</CODE> function of <CODE>ResultError</CODE> object wrapping <CODE>ResultFsMediaWriteProtectedError</CODE> to return <CODE>true</CODE>.<br /> Changed <CODE>IndicatesServiceNotAvailable</CODE> function of <CODE>ResultError</CODE> object wrapping <CODE>ResultInfraNeedsUpdateError</CODE> to return <CODE>true</CODE>.<br /></description></P>
+<hr />
+<H3><A name="note6-02">Note 6-02: (EC) Revised determination of whether SD cards are write protected [SDK]</A></H3>
+<P><description>There were cases when <CODE>ResultFsMediaAccessFailedError</CODE> was returned if the process could not proceed due to the SD card being write protected. Revised this so that <CODE>ResultFsMediaWriteProtectedError</CODE> is returned instead.<br /></description></P>
+<hr />
+<H3><A name="note6-03">Note 6-03: (EC) Revised <CODE>ec::ServiceItemCatalog::Retrieve</CODE> function [SDK]</A></H3>
+<P><description>Fixed issue where <CODE>ec::ServiceItemCatalog::Retrieve</CODE> function did not check whether the service title was included in the session.<br /></description></P>
+<hr />
+<H3><A name="note6-04">Note 6-04: (EC) Support for North American and European regions [SDK | System Updater]</A></H3>
+<P><description>System Updater was modified to include EC applets for the North American and European regions.<br /> <CODE>EcCountryTool</CODE> was also added to reflect the country setting of the system in the account on the eShop server.<br /> Added notes on changing region or country settings to &quot;aboutAocAppDevelopment.html&quot;.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_3_2_1_Release">Known Issues in the SDK 3.2.1&nbsp;Release</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_3_2_1_SystemUpdater%200.16.7">■ CTR-SDK Version 3.2.1 System Updater 0.16.7</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2011/10/21)</P></DIV>
+<hr />
+<H3><A name="note5-01">Note 5-01: (EC) Support for North American and European regions [SDK | System Updater]</A></H3>
+<P><description>System Updater was modified to include EC applets for the North American and European regions.<br /> <CODE>EcCountryTool</CODE> was also added to reflect the country setting of the system in the account on the eShop server.<br /> Added notes on changing region or country settings to &quot;aboutAocAppDevelopment.html&quot;.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_3_2_1_SystemUpdater%200.16.7">Known Issues in the SDK 3.2.1&nbsp;System Updater 0.16.7</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_3_2_1_SampleDemos">■ CTR-SDK Version 3.2.1&nbsp;Sample Demos</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2011/10/21)</P></DIV>
+<hr />
+<H3><A name="note4-01">Note 4-01: (EC) Error handling for add-on content mounting and file operations [Sample Demos]</A></H3>
+<P><description>Changed handling of file-system errors when using <CODE>ec/ContentsListUp</CODE> to mount add-on content or perform file operations on it.<br /> Refer to this error-handling documentation when using add-on content.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_3_2_1_SampleDemos">Known Issues in the SDK 3.2.1&nbsp;Sample Demos</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_3_2_0_Release">■ CTR-SDK Version 3.2.0&nbsp;Release</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2011/10/14)</P></DIV>
+<hr />
+<H3><A name="note3-01">Note 3-01: (EC) Removed <CODE>HasMountedAddOnContent</CODE> function [SDK]</A></H3>
+<P><description>Removed <CODE>HasMountedAddOnContent</CODE> function, because API functions that must not be called when add-on content is mounted were revised so that they return an error if called when add-on content is being mounted.<br /></description></P>
+<hr />
+<H3><A name="note3-02">Note 3-02: (EC) Fixed bug where <CODE>SELECTION_FILTER_PURCHASABLE</CODE> specification was ignored [SDK]</A></H3>
+<P><description>Fixed bug where <CODE>nn::ec::ContentSetCatalogFilter::SetSelectionFilter</CODE> function ignored specification of <CODE>SELECTION_FILTER_PURCHASABLE</CODE>.<br /></description></P>
+<hr />
+<H3><A name="note3-03">Note 3-03: (EC) Invalidation of <CODE>Session</CODE> objects [SDK]</A></H3>
+<P><description>Changed classes holding <CODE>Session</CODE> objects to automatically invalidate the <CODE>Session</CODE> object if a member function returns an error stating that <CODE>Session</CODE> initialization is required.<br /> Also added a <CODE>Session::Invalidate</CODE> function to explicitly invalidate <CODE>Session</CODE> objects.<br /></description></P>
+<hr />
+<H3><A name="note3-04">Note 3-04: (EC) Function to obtain account ID [SDK | System Updater]</A></H3>
+<P><description>Added <CODE>GetAccountId</CODE> function to API to obtain the account ID.<br /></description></P>
+<hr />
+<H3><A name="note3-05">Note 3-05: (EC) Downloading and deletion while content is mounted are prohibited [SDK | System Updater]</A></H3>
+<P><description>Changed API so that an error is returned when trying to download content to or delete content from a data title while content from that same data title is mounted.<br /></description></P>
+<hr />
+<H3><A name="note3-06">Note 3-06: (EC) Added function to get service-item licenses [SDK | System Updater]</A></H3>
+<P><description>Added a function to the API for getting the license of a service item.<br /> See the <CODE>ServiceTitle</CODE> reference for details.<br /></description></P>
+<hr />
+<H3><A name="note3-07">Note 3-07: (EC) Added functions to search for service items [SDK | System Updater]</A></H3>
+<P><description>Added functions to search for service items to the API.<br /> See the references for <CODE>ServiceItem</CODE>, <CODE>ServiceItemCatalogFilter</CODE>, and <CODE>ServiceItemCatalog</CODE> for details.<br /></description></P>
+<hr />
+<H3><A name="note3-08">Note 3-08: (EC) Revised the documentation [SDK]</A></H3>
+<P><description>Added explanation that data titles are <CODE>.cia</CODE> files in the <B>Developing Applications That Support Add-On Content</B> documentation (&quot;aboutEcAppDevelopment.html&quot;).<br /> Added explanation that building samples creates <CODE>.cia</CODE> files.<br /> Added description of samples to serve as reference and added descriptions about sample documentation.<br /></description></P>
+<hr />
+<H3><A name="note3-09">Note 3-09: (EC) Added a function for getting number of blocks [SDK]</A></H3>
+<P><description>Added a function to get the number of blocks occupied by content, and a function for getting the number of free blocks needed to import content.<br /> See the API references for <CODE>ContentInfo::GetNumOccupiedBlocks</CODE>, <CODE>ContentSet::CalculateNumRequiredBlocks</CODE>, and <CODE>DataTitle::CalculateNumRequiredBlocks</CODE> for details.<br /></description></P>
+<hr />
+<H3><A name="note3-10">Note 3-10: (EC) Support for Parental Controls [SDK]</A></H3>
+<P><description>Changed functions for purchasing items to return an error if Parental Controls restrict the use of Nintendo eShop, and a valid PIN code is not passed to the function.<br /></description></P>
+<hr />
+<H3><A name="note3-11">Note 3-11: (EC) Determine whether a data title has never been initialized [SDK]</A></H3>
+<P><description>Modified the <CODE>DataTitle::Initialize</CODE> function to return <CODE>ResultDataTitleNotOwned</CODE> if called on a data title that has never been initialized.<br /></description></P>
+<hr />
+<H3><A name="note3-12">Note 3-12: (EC) Added functions to find items that can be redeemed for a download voucher [SDK]</A></H3>
+<P><description>Added functions to find items that can be redeemed for a download voucher.<br /> See the references for the <CODE>ECardInfo</CODE>, <CODE>ECardItem</CODE>, and <CODE>ECardCatalog</CODE> classes for details.<br /></description></P>
+<hr />
+<H3><A name="note3-13">Note 3-13: (EC) Changed specifications for required content [SDK]</A></H3>
+<P><description>Changed specifications for required content.<br /> See the <CODE>ctr_MakeMataDataContent</CODE> reference for details on this change.<br /></description></P>
+<hr />
+<H3><A name="note3-14">Note 3-14: (EC) Added function to create required-attribute names [SDK]</A></H3>
+<P><description>Added <CODE>AttributeName::MakeNecessary</CODE> function for creating attribute names for required attributes.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_3_2_0_Release">Known Issues in the SDK 3.2.0&nbsp;Release</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_3_2_0_SystemUpdater%200.16.6">■ CTR-SDK Version 3.2.0 System Updater 0.16.6</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2011/10/14)</P></DIV>
+<hr />
+<H3><A name="note2-01">Note 2-01: (EC) Function to obtain account ID [SDK | System Updater]</A></H3>
+<P><description>Added <CODE>GetAccountId</CODE> function to API to obtain the account ID.<br /></description></P>
+<hr />
+<H3><A name="note2-02">Note 2-02: (EC) Downloading and deletion while content is mounted are prohibited [SDK | System Updater]</A></H3>
+<P><description>Changed API so that an error is returned when trying to download content to or delete content from a data title while content from that same data title is mounted.<br /></description></P>
+<hr />
+<H3><A name="note2-03">Note 2-03: (EC) Added function to get service-item licenses [SDK | System Updater]</A></H3>
+<P><description>Added a function to the API for getting the license of a service item.<br /> See the <CODE>ServiceTitle</CODE> reference for details.<br /></description></P>
+<hr />
+<H3><A name="note2-04">Note 2-04: (EC) Added functions to search for service items [SDK | System Updater]</A></H3>
+<P><description>Added functions to search for service items to the API.<br /> See the references for <CODE>ServiceItem</CODE>, <CODE>ServiceItemCatalogFilter</CODE>, and <CODE>ServiceItemCatalog</CODE> for details.<br /></description></P>
+<hr />
+<H3><A name="note2-05">Note 2-05: (EC) Revised size calculation for downloading and updating add-on content [System Updater]</A></H3>
+<P><description>Revised the method for calculating size when downloading new add-on content, downloading content, and updating add-on content.<br /></description></P>
+<hr />
+<H3><A name="note2-06">Note 2-06: (EC) Changed location of add-on content files [System Updater]</A></H3>
+<P><description>The location of related files when importing add-on content was changed.<br /> This change makes add-on content that has already been imported unusable.<br /> If you are using System Updater 0.16.6 for CTR-SDK 3.2, delete the add-on content from the Dev Menu, and then import it again.<br /></description></P>
+<hr />
+<H3><A name="KnownIssues_3_2_0_SystemUpdater%200.16.6">Known Issues in the SDK 3.2.0&nbsp;System Updater 0.16.6</A></H3>
+<P>None.</P>
+<hr />
+<H2 style="line-height: 0"><A name="sdk_3_2_0_SampleDemos">■ CTR-SDK Version 3.2.0&nbsp;Sample Demos</A></H2>
+<DIV style="text-align: right"><P style="line-height: 0">(2011/10/14)</P></DIV>
+<hr />
+<H3><A name="note1-01">Note 1-01: (EC) Revised demo for managing add-on content [Sample Demos]</A></H3>
+<P><description>Made the following revisions to the <CODE>ec/ContentsListUp</CODE> demo.<br />
+        <ul>
+<li>Now sets UniqueID of application correctly.</li>
+<li>No longer monitors for removal/insertion of SD card from Title screen.</li>
+<li>Fixed bug where navigation to next page and other actions were possible when there was no purchased content.</li>
+<li>Fixed bug where display was incorrect when there were four pieces of purchased add-on content.</li>
+<li>The content size is now displayed in blocks.</li>
+        </ul>
+      </description></P>
+<hr />
+<H3><A name="note1-02">Note 1-02: (EC) Revised demo for purchasing add-on content [Sample Demos]</A></H3>
+<P><description>Made the following revisions to the <CODE>ec/Purchase</CODE> demo.<br />
+        <ul>
+<li>Items are now obtained four at a time, because items were not displayed due to lack of memory.</li>
+<li>Before, the determination of whether an item could be purchased was made after obtaining only one piece of content from the item. This was changed so that now, all content is obtained before making the determination.</li>
+<li>Added feature to filter items by attribute.</li>
+<li>Added scene of adding to account balance.</li>
+<li>Attributes are now specified based on the language obtained from the required content.</li>
+        </ul>
+      </description></P>
+<hr />
+<H3><A name="KnownIssues_3_2_0_SampleDemos">Known Issues in the SDK 3.2.0&nbsp;Sample Demos</A></H3>
+<P>None.</P>
+<hr />
+</BODY>
+  <footer style="text-align:right;">
+    <div style="position: fixed;bottom: 0;margin-bottom:1%;z-index: 4;">
+        <a class="fancy" href="/pages/misc/systemupdater/">Back to rmc's SystemUpdater info pages</a>
+    </div>
+</footer>
+</HTML>

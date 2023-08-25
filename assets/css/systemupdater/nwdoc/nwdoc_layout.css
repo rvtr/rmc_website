@@ -1,0 +1,333 @@
+@media screen
+{
+
+/* --------------------------------- 
+    標準状態
+   --------------------------------- */
+
+body.nwddoc
+{
+    padding                 : 0;
+    margin                  : 0;
+}
+
+/* 左バー */
+div#nw_left_bar
+{
+    position                : fixed;
+    top                     : 0;
+    left                    : 0;
+    
+    width                   : 300px;
+    
+    overflow                : auto;
+    
+    z-index                 : 1;
+}
+
+div#nw_left_bar_content
+{
+    margin                  : 0 0 0 25px;
+    padding-bottom          : 25px;
+    width                   : 250px;
+}
+
+div#nw_left_bar_toggle
+{
+    position                : fixed;
+    top                     : 0;
+    left                    : 300px;
+    
+    width                   : 25px;
+
+    z-index                 : 1;
+}
+
+/* API バー */
+div#nw_api_bar
+{
+    position                : fixed;
+    top                     : 0;
+    left                    : 325px;
+    
+    width                   : 225px;
+
+    z-index                 : 1;
+}
+
+div#nw_api_bar_header
+{
+    margin                  : 10px 25px 10px 0px;
+}
+
+div#nw_api_bar_content
+{
+    margin                  : 0 0 0 0;
+    padding-bottom          : 25px;
+
+    width                   : 200px;
+}
+
+div#nw_api_bar_content_wrapper
+{    
+    overflow                : auto;
+
+}
+
+div#nw_api_bar_toggle
+{
+    position                : fixed;
+    top                     : 0;
+    left                    : 550px;
+    
+    width                   : 25px;
+
+    z-index                 : 1;
+}
+
+/* ボディ */
+div#nw_bodyarea
+{
+    position                : absolute;
+    top                     : 0;
+    left                    : 325px;
+    right                   : 0px;
+    
+    padding                 : 32px 0 0;
+    margin                  : 0 32px 0 0;
+}
+
+body.nwapiref div#nw_bodyarea
+{
+    left                    : 575px;
+}
+
+/* 右バー(ボディ内) */
+div#nw_right_bar_wrapper
+{
+    position                : relative;
+    float                   : right;
+    
+    width                   : 262px;
+    
+}
+
+div#nw_right_bar
+{
+    position                : absolute;
+    top                     : 0;
+    left                    : 12px;
+    
+    width                   : 250px;
+    overflow                : auto;
+    z-index                 : 1;
+}
+
+div#nw_right_bar_content
+{
+}
+
+div#nw_right_bar_toggle
+{
+    position                : absolute;
+    top                     : 0px;
+    left                    : 0px;
+    
+    width                   : 12px;
+}
+
+
+body.nws_right_fixed div#nw_right_bar
+{
+    position                : fixed;
+    left                    : auto;
+    margin-left             : 12px;
+}
+
+body.nws_right_fixed div#nw_right_bar_toggle
+{
+    position                : fixed;
+    left                    : auto;
+}
+
+/* 内容 */
+div#nw_content
+{
+    margin-right            : 275px;
+}
+
+body.nwapiref.nwshowrightbar div#nw_content
+{
+    margin-right            : 275px;
+}
+
+body.nwapiref div#nw_content,
+body.nwhiderightbar div#nw_content,
+body.nwapiref.nwhiderightbar div#nw_content
+{
+    margin-right            : 0;
+}
+
+div#nw_content > h2:first-child
+{
+    margin-top              : 0;
+}
+
+
+/* --------------------------------- 
+    左バー非表示 (nws_left_bar_hidden)
+   --------------------------------- */
+body.nws_left_bar_hidden div#nw_bodyarea
+{
+    left                    : 40px;
+}
+
+body.nws_left_bar_hidden.nwapiref div#nw_bodyarea
+{
+    left                    : 290px;
+}
+
+body.nws_left_bar_hidden div#nw_left_bar
+{
+    width                   : 15px;
+    overflow                : hidden;
+}
+
+body.nws_left_bar_hidden div#nw_left_bar_content
+{
+}
+
+body.nws_left_bar_hidden div#nw_left_bar_toggle
+{
+    left                    : 15px;
+}
+
+body.nws_left_bar_hidden div#nw_api_bar
+{
+    left                    : 40px;
+}
+
+body.nws_left_bar_hidden div#nw_api_bar_toggle
+{
+    left                    : 265px;
+}
+
+/* --------------------------------- 
+    API バー非表示 (nws_api_bar_hidden)
+   --------------------------------- */
+
+body.nws_api_bar_hidden.nwapiref div#nw_bodyarea
+{
+    left                    : 350px;
+}
+
+body.nws_api_bar_hidden div#nw_api_bar
+{
+    width                   : 0px;
+    overflow                : hidden;
+}
+
+body.nws_api_bar_hidden div#nw_api_bar_toggle
+{
+    left                    : 325px;
+}
+
+/* --------------------------------- 
+    左バー非表示 かつ API バー非表示
+   --------------------------------- */
+
+body.nws_left_bar_hidden.nws_api_bar_hidden.nwapiref div#nw_bodyarea
+{
+    left                    : 65px;
+}
+
+body.nws_left_bar_hidden.nws_api_bar_hidden div#nw_api_bar_toggle
+{
+    left                    : 40px;
+}
+
+/* --------------------------------- 
+    右バー非表示
+   --------------------------------- */
+
+body.nws_right_bar_hidden div#nw_content,
+body.nwapiref.nwshowrightbar.nws_right_bar_hidden div#nw_content
+{
+    margin-right            : 25px;
+}
+
+body.nws_right_bar_hidden div#nw_right_bar_wrapper
+{
+    width                   : 25px;
+}
+
+body.nws_right_bar_hidden div#nw_right_bar
+{
+    display                 : none;
+}
+
+/* --------------------------------- 
+    ドキュメントアライメント
+   --------------------------------- */
+
+body.nwddoc.nws_align_left div#nw_body,
+body.nwddoc.nws_align_center div#nw_body,
+body.nwddoc.nws_align_right div#nw_body
+{
+    max-width               : 1000px;
+}
+
+body.nwddoc.nws_align_wide div#nw_body
+{
+    max-width               : none;
+}
+
+body.nwddoc.nws_align_center div#nw_body
+{
+    margin                  : 0 auto;
+}
+
+body.nwddoc.nws_align_right div#nw_body
+{
+    float          : right;
+}
+
+/* --------------------------------- 
+    スクリプトなし
+   ------------------------------ */
+
+body.nwdoc.nwnoscript
+{
+    padding                 : 0;
+    margin                  : 0;
+}
+
+body.nwdoc.nwnoscript div#nw_left_bar
+{
+    position                : static;
+    width                   : auto;
+    overflow                : inherit;
+}
+
+body.nwdoc.nwnoscript div#nw_left_bar_content
+{
+    margin                  : 0 0 0 10px;
+}
+
+body.nwdoc.nwnoscript div#nw_api_bar
+{
+    position                : static;
+    width                   : auto;
+    margin                  : 10px 10px 0;
+    padding                 : 0;
+    overflow                : inherit;
+}
+
+body.nwdoc.nwnoscript div#nw_api_bar_content
+{
+    margin                  : 0;
+    padding                 : 0 0 25px;
+}
+
+
+} /* @media screen */

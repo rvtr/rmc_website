@@ -1,8 +1,8 @@
-# IanSkinner1982.github.io
+# randommeaninglesscharacters.com
 
-Nintendo DSi development and factory program documentation, as well some personal stuff (no doubt also related to the DS in some way).
+Nintendo DSi development and factory program documentation, as well as some DSi and 3DS guides and additional information.
 
-https://ianskinner1982.github.io/dsidev/
+https://randommeaninglesscharacters.com/
 
 # License
 This website and the content within it is covered by two licenses. Below is an explanation of which license are used, and which one applies to what:

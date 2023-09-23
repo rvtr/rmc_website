@@ -1,0 +1,141 @@
+---
+title: Various DSi dev NANDs
+layout: dsiware
+---
+<style>
+  .float-container {
+    border: 0px solid #fff;
+    font-size: 0;
+  }
+
+  .float-child1 {
+    width: 40%;
+    height: 40%;
+    float: left;
+    padding: 1vw;
+  }
+
+  .float-child2 {
+    width: 20%;
+    height: 40%;
+    float: right;
+    padding: 1vw;
+  }
+
+  .tab {
+    margin-left: 40px;
+  }
+  table, th {
+    border:1px solid black;
+  }
+</style>
+<div class="float-container">
+  <div class="float-child1">
+    <div class="container" style="width:100%;">
+      <div class="" style="position:static;">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_u.png" style="width:94vw;position:static;">
+      </div>
+      <div class="othertext" style="width:93vw;background-size: 100% 100%;background-image: url('https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_widepromptnobar.png');position:static;">
+<h1>Various DSi dev NANDs</h1>
+
+<p>
+The following 7 NAND dumps are from various DSi development units (and one retail), some of which were used for developing the Classroom DSi and MangaON, respectively. Each console is briefly explained below, along with downloads links for each backup. Many thanks to <a href="https://www.instagram.com/collection_nintendo/" target="_blank">@collection_nintendo</a> on Instagram for providing the dumps.<br><br>
+Additional thanks to MaxiBash and xprism for finding deleted content in the dumps and researching these consoles. Please check out <a href="#" target="_blank">MaxiBash's blog article</a> for a bit more backstory to each DSi.
+</p>
+<table>
+  <tr>
+    <th><div style="text-align:center;">Table of contents</div></th>
+  </tr>
+  <tr>
+    <td>- <a href="#classroom">Development mode Classroom DSis</a></td>
+  </tr>
+  <tr>
+    <td>- <a href="#mangaon">MangaON development DSi</a></td>
+  </tr>
+  <tr>
+    <td>- <a href="#altron">Altron development DSi</a></td>
+  </tr>
+  <tr>
+    <td>- <a href="#dealers-and-explainers">"For dealers and explainers" DSi</a></td>
+  </tr>
+</table>
+<hr>
+<h2 id="classroom">Development mode Classroom DSis (v1.3J_dev)</h2>
+<p>
+These are dumps of 4 different <a href="https://wiki.raregamingdump.ca/index.php/Nintendo_DS_Classroom" target="_blank">Classroom DSis</a> in development mode. Very little is known about them, though they may have been used to test and develop classroom software. 5 of these are known to exist and were sold on Yahoo Auctions Japan around June of 2023. Those units were labelled as K04 through to K08. @collection_nintendo managed to win 4 of the 5 consoles, only missing K05.<br><br>
+Almost every DSi contains a program called "camera KART". We believe it is sort of augmented reality test, with KART standing for Kyoshitsuji Augmented Reality Test. We haven't completely figured out what it does, and likely never will with just the 3 of us (<a href="https://discord.gg/se9yQBeX3e" target="_blank">help us</a>), though we have a rough idea from seeing the program run. The bottom screen has a camera recognition value (shown as <code>recog</code>) which increases when it sees recognizable patterns. It responds well to images of tiles, static, and QR codes, giving a recognition of as high as 40. When the recognition is high enough, it will display a model from NitroFS on the top screen.<br>
+<img src="https://cdn.discordapp.com/attachments/1147618292794662952/1147645117709156352/image.png" style="width:20%;height:auto;" alt="KART screenshot">
+<img src="https://cdn.discordapp.com/attachments/1147618292794662952/1148287553229824010/image.png" style="width:21%;height:auto;" alt="KART screenshot"><br><br>
+We don't have the patterns required to get a high enough recongnition to see the models in action, but we did extract and view the models externally. From left to right, "man_02", "pika", and "megafuture".<br>
+<img src="https://cdn.discordapp.com/attachments/704065693813047368/1155030443670913124/man_02.png" style="width:15%;height:auto;" alt="man_02 model">
+<img src="https://cdn.discordapp.com/attachments/704065693813047368/1155030443381497966/pika.png" style="width:15%;height:auto;" alt="pika model">
+<img src="https://cdn.discordapp.com/attachments/1147618292794662952/1154411874872463400/ezgif.com-crop.gif" style="width:38%;height:auto;" alt="megafuture model">
+
+<h3>Downloads</h3>
+<a href="https://cdn.randommeaninglesscharacters.com/releases/VJF100031225_v1.3J_dev_K04.zip">Classroom DSi K04 NAND</a><br>
+<a href="https://cdn.randommeaninglesscharacters.com/releases/VJF100031225_v1.3J_dev_K04_extracted.7z">Classroom DSi K04 NAND (extracted contents)</a><br>
+<a href="https://cdn.randommeaninglesscharacters.com/releases/VJF100031058_v1.3J_dev_K06.zip">Classroom DSi K06 NAND</a><br>
+<a href="https://cdn.randommeaninglesscharacters.com/releases/VJF100031058_v1.3J_dev_K06_extracted.7z">Classroom DSi K06 NAND (extracted contents)</a><br>
+<a href="https://cdn.randommeaninglesscharacters.com/releases/VJF100031485_v1.3J_dev_K07.zip">Classroom DSi K07 NAND</a><br>
+<a href="https://cdn.randommeaninglesscharacters.com/releases/VJF100031485_v1.3J_dev_K07_extracted.7z">Classroom DSi K07 NAND (extracted contents)</a><br>
+<a href="https://cdn.randommeaninglesscharacters.com/releases/VJF100030679_v1.3J_dev_K08.zip">Classroom DSi K08 NAND</a><br>
+<a href="https://cdn.randommeaninglesscharacters.com/releases/VJF100030679_v1.3J_dev_K08_extracted.7z">Classroom DSi K08 NAND (extracted contents)</a><br>
+<a href="https://cdn.randommeaninglesscharacters.com/releases/KART_all_versions.zip">All KART versions</a><br>
+
+
+
+<h3>Photos</h3>
+<img src="https://cdn.discordapp.com/attachments/704065693813047368/1155020753889132654/classroom_front.png" style="width:30%;height:auto;" alt="Classroom top">
+<img src="https://cdn.discordapp.com/attachments/704065693813047368/1155020754165960744/classroom_back.png" style="width:30%;height:auto;" alt="Classroom bottom"><br>
+<img src="https://cdn.discordapp.com/attachments/704065693813047368/1155020754434400266/classroom_open.jpg" style="width:35%;height:auto;" alt="Classroom turned on">
+</p>
+<hr>
+<h2 id="mangaon">MangaON development DSi (v1.0J_dev)</h2>
+<p>
+This DSi was used for the development of <a href="https://web.archive.org/web/20090205212450/http://nintendo.joystiq.com/2008/12/22/japan-now-to-have-two-wiiware-manga-services/" target="_blank">MangaON</a>, Sunsoft's unreleased service for WiiWare and DSiWare that would have distributed comics and manga. Articles from that time mention Dragon Ball and One Piece manga being offered, as well as others from Shonen Jump later on. The DSi we found would have been on display at <a href="https://www.inside-games.jp/article/img/2008/12/20/32805/62896.html" target="_blank">Jump Festa 2009</a> for people to try and learn about MangaOn.<br>While somewhat hard to see, photos of the event show the DSis in action. In fact, there's a chance this exact unit (or the very edge of it at least) is shown here:<br>
+<img src="https://www.inside-games.jp/imgs/zoom/62896.jpg" style="width:70%;height:auto;" alt="Jump Festa MangaON stand">
+<br><br>
+The MangaON DSi used to have the MangaOn service installed, though it was overwritten by the home menu, suggesting that someone updated the console after the event was over. <br>
+Only the first of 1.4mb of 16.3mb are still present, or roughly 10%. We have the build date from 2008/12/17 at 18:52:11, banner, arm7/9 binaries, and part of the file that holds the comic data (comic.bin), though we can't check the comic because there is not documentation on the format. We have about 1mb of 12mb for the comic data, so if someone figures out the format we believe the first couple pages may be recoverable.
+<br><br>
+The MangaON DSi also has the oldest known version of <a href="/dsidev/nandfiler.html">NandFiler</a> with a unique banner design and layout.<br>
+<img src="https://cdn.discordapp.com/attachments/704065693813047368/1155010221916295218/output.gif" alt="NandFiler icon"><br><img src="https://cdn.discordapp.com/attachments/1147618292794662952/1147965611717177395/image.png" alt="NandFiler screenshot">
+<h3>Downloads</h3>
+<a href="https://cdn.randommeaninglesscharacters.com/releases/VJF100001242_v1.0J_dev_Jump_Festa_2009_-_MangaON.zip">MangaON DSi NAND</a><br>
+<a href="https://cdn.randommeaninglesscharacters.com/releases/VJF100001242_v1.0J_dev_Jump_Festa_2009_-_MangaON_extracted.7z">MangaON DSi NAND (extracted contents)</a><br>
+<a href="https://cdn.discordapp.com/attachments/1147618292794662952/1147968935870865530/what_the_fuck_is_this.nds">MangaON app</a><br>
+<a href="https://cdn.discordapp.com/attachments/1147618292794662952/1147971146868867242/comic.bin">Partial comic.bin</a><br>
+<a href="https://cdn.discordapp.com/attachments/704065693813047368/1155010222465753168/NandFiler.srl">NandFiler</a>
+<h3>Photos</h3>
+<img src="https://cdn.discordapp.com/attachments/704065693813047368/1155017837681844234/mangaon_front.png" style="width:30%;height:auto;" alt="MangaON top">
+<img src="https://cdn.discordapp.com/attachments/704065693813047368/1155017837400838155/mangaon_back.png" style="width:30%;height:auto;" alt="MangaON bottom"><br>
+<img src="https://cdn.discordapp.com/attachments/704065693813047368/1155017837983842304/mangaon_open.png" style="width:35%;height:auto;" alt="MangaON turned on">
+</p>
+<hr>
+<h2 id="altron">Altron development DSi (v1.2J_dev)</h2>
+<p>
+This is a development console owned by Altron. They never made anything for the DSi, so this DSi has nothing of interest on it beyond the usual prototype home menu and settings, and as expected those have already been dumped from other development units.
+<h3>Downloads</h3>
+<a href="https://cdn.randommeaninglesscharacters.com/releases/VJF100025460_v1.2J_dev_Altron.zip">Altron DSi NAND</a><br>
+<a href="https://cdn.randommeaninglesscharacters.com/releases/VJF100025460_v1.2J_dev_Altron_extracted.7z">Altron DSi NAND (extracted contents)</a><br>
+</p>
+<hr>
+<h2 id="dealers-and-explainers">"For dealers and explainers" DSi (v1.4.5J)</h2>
+<p>
+We don't know anything about this DSi. It has text printed on the back that says 「販売店様 説明員用」, or "For Dealers And Explainers" in english. It runs a normal retail firmware and so it isn't as interesting as we had hoped, though the text on the shell is still somewhat of a mystery.
+<h3>Downloads</h3>
+<a href="https://cdn.randommeaninglesscharacters.com/releases/TJH101232355_v1.4.5J_For_dealers_and_explainers.zip">For dealers and explainers DSi NAND</a><br>
+<h3>Photos</h3>
+<img src="https://cdn.discordapp.com/attachments/704065693813047368/1155034856623964260/for-dealers-and-explainers_front.png" style="width:30%;height:auto;" alt="For dealers and explainers top">
+<img src="https://cdn.discordapp.com/attachments/704065693813047368/1155034856972107796/for-dealers-and-explainers_back.png" style="width:30%;height:auto;" alt="For dealers and explainers bottom"><br>
+<img src="https://cdn.discordapp.com/attachments/704065693813047368/1155034857253117962/for-dealers-and-explainers_open.png" style="width:35%;height:auto;" alt="For dealers and explainers turned on">
+</p>
+<div style="text-align:center;">
+<span style="font-size:1vw;">Thanks to <a href="https://twitter.com/Kezerker" target="_blank">Kezerker</a> for editing!</span>
+<br>
+</div>
+      </div>
+    </div>
+    <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_d.png" style="width:94vw;margin-right:10%:margin-top:3%;">
+  </div>
+</div>

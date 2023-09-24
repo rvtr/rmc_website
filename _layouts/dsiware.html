@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <title>{{ page.title }} | {{ site.title }}</title>
-    <meta name="keywords" content="dsi, nintendo, twl, ntr, nds, prototype, development, dev, gigaleak, panda, factory" />
     <link rel="icon" type="image/png" href="/icon.png"/>
     <link rel="stylesheet" type="text/css" href="/assets/css/styledsi.css">
 
@@ -15,10 +14,9 @@
     {% else %}
       <meta property="og:title" content="{{ page.title }}">
     {% endif %}
-    <meta property="og:locale" content="en_US">
     <meta name="description" content="{{ page.title }} | {{ site.title }}">
     <meta property="og:description" content="{{ page.title }} | {{ site.title }}">
-    <!-- <link rel="canonical" href="{{ site.url }}{{ page.url }}"> -->
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     <!-- GRRRR I HATE GOOGLE SAYING MY CANONICALS ARE DUPLICATES!! Please someone smart help me... -->
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:site_name" content="rmc">

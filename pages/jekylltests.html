@@ -25,15 +25,24 @@ Layout: dsiware
   DESC:      Program description as seen on index.html
 -->
 {% endcomment %}
+<<<<<<< Updated upstream
+=======
+
+
+<!-- Check all DS program info -->
+>>>>>>> Stashed changes
 <style>
 table, th, td {
   border:1px solid black;
 }
 </style>
+<<<<<<< Updated upstream
 
 <!-- Check all DS program info -->
 <!--
 
+=======
+>>>>>>> Stashed changes
 {% for CHECK in site.data.dsinfo %}
     <hr>
     {% if CHECK.PUBLISHED == "TRUE" %}
@@ -42,6 +51,7 @@ table, th, td {
       <table><tr><td>Is selected</td><td>False!</td></tr></table>
     {% endif %}
 {% endfor %}
+<<<<<<< Updated upstream
 -->
 
 <!-- because I keep deleting my local copy -->
@@ -51,3 +61,5 @@ table, th, td {
       fi<br>
       wget -O "{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}_{{ ENTRY.VERSION }}{{ ENTRY.DATE }}.{{ ENTRY.TYPE }}" "<a href="{{ site.appurl }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}_{{ ENTRY.VERSION }}{{ ENTRY.DATE }}.{{ ENTRY.TYPE }}">{{ site.appurl }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}_{{ ENTRY.VERSION }}{{ ENTRY.DATE }}.{{ ENTRY.TYPE }}</a>"<br>
 {% endfor %}
+=======
+>>>>>>> Stashed changes

@@ -1,3 +1,7 @@
+---
+title: Index
+layout: dsiware
+---
 <style>
 body {
   font-family: dsifont;
@@ -17,102 +21,120 @@ body {
 
 
 
-.program_prompt_container {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: #0057e3;
-}
-.program_prompt {
-width:50%;
-height:auto
-}
-.program_icon_container {
-        z-index: 1;
-        margin: 30px;
-        background: #009938;
-}
-.program_icon {
-    position: relative;
-}
-.program_text_container {
-    z-index:2;
-}
-.program_container {
-width: 25%;
-height: auto;
-}
 
-.program_container_2 {
-        position: relative;
-        margin: 30px;
-}
 
 
 .flex-container {
   display: flex;
   flex-wrap: wrap;
   background-color: blue;
-  gap: 10%;
+  gap: 4%;
   text-align: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
+.parent_or_guardian {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 200px;
+  padding-top: 20px;
+}
+.prompt {
+  position: relative;
+  top: 0;
+  left: 0;
+  border: 1px red solid;
+  width: 100%;
+  z-index: 1;
+}
+.prompt_two_a_new_hover {
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  border: 1px green solid;
+  width: 100%;
+  opacity: 0;
+  z-index: 2;
+}
+.prompt_two_a_new_hover:hover {
+  opacity: 1.0;
+}
+
+.flexception {
+  position: absolute;
+  border: 1px orange solid;
+  display: inline-flex;
+  flex-direction: column;
+  z-index: 2;
+  align-items: stretch;
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.flexceptionception {
+  border: 1px blue solid;
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.flexceptionception_the_flexening {
+  display: inline-flex;
+  border: 1px green solid;
+  flex-direction: column;
+}
+
+.prompt_header {
+  padding-left: 10px;
+  text-align: left;
+  font-size: 12px;
+}
+
+.prompt_title {
+  height: 34px;
+}
+
+.prompt_info {
+  padding-top: 3px;
+  text-align: left;
+  font-size: 12px;
+}
+
 </style>
 
-<body>
+wgrhtebdfsgdeqt4y53wu6ejrydtbfghzsaewt4y5u6erjydfgnhrwy5u46i57rktyjthxxxxxxxxxxxxxxxxxzcxsdfd
 <div class="flex-container">
-
-
-<div class="program_container">
-    <div class="program_container_2">
-        <div class="program_prompt_container">
-            <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_prompt.png" class="program_prompt">
+{% for ENTRY in site.data.dsinfo %}
+    {% if ENTRY.PUBLISHED == "TRUE" %}
+<div class="parent_or_guardian">
+  <div class="flexception">
+    <div class="flexceptionception">
+      <div>
+        <img src="{{ site.imgurl }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif" width="52px" height="52px">
+      </div>
+      <div class="prompt_header">
+        <div class="flexceptionception_the_flexening">
+          <div class="prompt_title">
+          {{ ENTRY.TITLE }}
+          </div>
+          <div>
+            Target:</b>
+            {% if ENTRY.SYSTEM == "TWL/DSi" %}
+             <span style="color:#ff0000;">{{ ENTRY.SYSTEM }}</span>
+            {% else %}
+             <span style="color:#3399ff;">{{ ENTRY.SYSTEM }}</span>
+            {% endif %}
+          </div>
         </div>
-        <div class="program_prompt_container program_icon_container">
-            <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/icon/program/default.gif" width="100%" height="100%" class="">
-        </div>
+      </div>
     </div>
-</div>
-
-<div class="program_container">
-    <div class="program_container_2">
-        <div class="program_prompt_container">
-            <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_prompt.png" class="program_prompt">
-        </div>
-        <div class="program_prompt_container program_icon_container">
-            <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/icon/program/default.gif" width="100%" height="100%" class="">
-        </div>
+    <div class="prompt_info">
+      <i>{{ ENTRY.DESC }}</i>
     </div>
+  </div>
+  <img class="prompt" src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_prompt.png" />
+  <a href="/dsidev/{{ ENTRY.PROGRAM | downcase }}.html"><img class="prompt_two_a_new_hover" src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_prompthover.png" /></a>
 </div>
-
-<div class="program_container">
-    <div class="program_container_2">
-        <div class="program_prompt_container">
-            <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_prompt.png" class="program_prompt">
-        </div>
-        <div class="program_prompt_container program_icon_container">
-            <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/icon/program/default.gif" width="100%" height="100%" class="">
-        </div>
-    </div>
+    {% endif %}
+{% endfor %}
 </div>
-
-<div class="program_container">
-    <div class="program_container_2">
-        <div class="program_prompt_container">
-            <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_prompt.png" class="program_prompt">
-        </div>
-        <div class="program_prompt_container program_icon_container">
-            <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/icon/program/default.gif" width="100%" height="100%" class="">
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-</div>
-</body>

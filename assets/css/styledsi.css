@@ -1,17 +1,19 @@
 @font-face {
   font-family: dsifont;
-  src: url(https://cdn.randommeaninglesscharacters.com/assets-dsi/font/nintendo_NTLGDB_001.ttf);
+  src: url(/assets/font/nintendo_NTLGDB_001.ttf);
 }
 @font-face {
   font-family: dsifont-bios;
-  src: url(https://cdn.randommeaninglesscharacters.com/assets-dsi/font/nintendo-DS-BIOS.ttf);
+  src: url(/assets/font/nintendo-DS-BIOS.ttf);
 }
 @font-face {
   font-family: dsifont-special;
-  src: url(https://cdn.randommeaninglesscharacters.com/assets-dsi/font/NITROIPL_Gaiji.ttf);
+  src: url(/assets/font/NITROIPL_Gaiji.ttf);
 }
 code {
   font-family: dsifont-bios;
+  font-size: 20px;
+  color: green;
 }
 special {
   font-family: dsifont-special;
@@ -108,6 +110,7 @@ body {
     border-color: #FFFFFF
     width: auto;
     height: auto;
+    margin-left:-0.3vw;
 }
 .image3 {
   position: relative;
@@ -178,10 +181,9 @@ body {
   margin: 0% 2% 0%
 }
 .homeimg {
-  margin: 6% 5% 0%;
   text-align: center;
-  float: right;
-  width: 16vw;
+  /*float: right;*/
+  width: 96%;
   height: auto;
   margin-bottom: 5vw;
 }
@@ -189,8 +191,8 @@ body {
     position: absolute;
     text-align: center;
     border-color: #FFFFFF;
-    font-size: 40px;
-    font-size: 1.1vw;
+    font-size: 0.9vw;
+    width: 100%;
 }
 .hometext_long {
     position: absolute;
@@ -200,15 +202,17 @@ body {
     font-size: .82vw;
 }
 .homeicon {
-    padding-top: 6.99vw;
-    margin-left: -1.59vw;
+    padding-top:37%;
+    padding-left:1.5%
     z-index: 2;
+    margin-right:0.3vw;
 }
 .othertext {
     position: absolute;
     text-align: left;
+    width: 100%;
     border-color: #FFFFFF;
     font-size: 15px;
     padding-top: 1vw;
-    padding-left: 1.2vw;
+    padding-left: 1vw;
 }

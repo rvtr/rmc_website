@@ -1,136 +1,27 @@
 ---
-title: TwlNmenu
-layout: dsiware
+layout: devinfo
+app: TwlNmenu
 ---
-<div class="float-container">
-  <div class="float-child1">
-    <div class="container" style="width:70%;">
-      <div class="" style="position:static;">
-        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_u.png" style="width:76.2vw;position:static;">
-      </div>
-
-
-
-      <div class="othertext" style="width:75vw;background-size: 100% 100%;background-image: url('https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_widepromptnobar.png');position:static;">
-         <h1>TwlNmenu</h1>
-TwlNmenu is a title manager similar to DevMenu for 3DS. TwlNmenu can install programs in the TAD format, which is an installable format created by Nintendo, similar to the Wii's WADs.<h3>What's this "TAD" thing?</h3><i>"The installable format, TAD share many similarities to the WAD format, including the same offsets for title ID's and using the same devsign as WADs. A TAD can be resigned using Wii resigning tools and a RVL devkey. However, due to TwlNmenu's anti-tampering methods, the tool lets you not install resigned TAD files."</i> - <a href="https://wiki.raregamingdump.ca/index.php?title=TwlNmenu">RGDWiki</a><br><br>TADs are essentially SRLs (NDS ROMs) that have been packaged into an installable format. TAD files can be created with <code><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/maketad.exe">maketad.exe</a></code>, from the TwlSDK (<code>TwlSDK/tools/bin/maketad.exe</code>). Only apps that are installed to the <code>00030004</code> folder are able to be converted to TAD<h4 style="color:red;">Note: DO NOT install TADs on a retail DSi.</h4>Attempting to do so will just result in a <code>-2011</code> error, due to the TAD being unsigned. Resigning the TAD will not work as TwlNmenu protects against this. Additionally, <span style="color:red;">TwlNmenu will OVERWRITE WHAT IT'S TRYING TO INSTALL</span>, so if it fails, your apps may be deleted.<h3>How can I safely run a TAD?</h3>To run a TAD on retail hardware, you have to decrypt it and extract the SRL. You can use <a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/decrypt_tad.py">this</a> python script to do so. Usage is <code>python3 decrypt_tad.py [path to file].tad</code><br>Rename the SRL to NDS, and it should work in emulators or on real hardware.
-
-        <div style="text-align:center;"><h1>Screenshots:</h1>
-        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/TwlNmenu/twlnmenu_nand.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);"></div>
-        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/TwlNmenu/twlnmenu_sd.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
-        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/TwlNmenu/twlnmenu_install.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);"></div>
-        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/TwlNmenu/twlnmenu_2011.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);"></div></div>
-
-    <p style="visibility: hidden;">paddingpaddingpaddingwhydoIneedpaddingwhydidImakethis siteIamsodumb</p><span style="font-size: .1vw;">&nbsp;</span>
-
-    </div>
+TwlNmenu is a title manager similar to DevMenu for 3DS. TwlNmenu can install programs in the TAD format, which is an installable format created by Nintendo, similar to the Wii's WADs. <h3>What's this "TAD" thing?</h3>
+<div style="padding-left:2%;">
+  <i>"The installable format, TAD share many similarities to the WAD format, including the same offsets for title ID's and using the same devsign as WADs. A TAD can be resigned using Wii resigning tools and a RVL devkey. However, due to TwlNmenu's anti-tampering methods, the tool lets you not install resigned TAD files."</i> - <a href="https://wiki.raregamingdump.ca/index.php?title=TwlNmenu">RGDWiki</a>
+</div>
+<br>
+<br>TADs are essentially SRLs (NDS ROMs) that have been packaged into an installable format. TAD files can be created with <code>
+  <a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/maketad.exe">maketad.exe</a>
+</code>, from the TwlSDK (<code>TwlSDK/tools/bin/maketad.exe</code>). Only apps that are installed to the <code>00030004</code> folder are able to be converted to TAD <h4 style="color:red;">Note: DO NOT install TADs on a retail DSi.</h4>Attempting to do so will just result in a <code>-2011</code> error, due to the TAD being unsigned. Resigning the TAD will not work as TwlNmenu protects against this (error code <code>7</code>). Additionally, <span style="color:red;">TwlNmenu will OVERWRITE WHAT IT'S TRYING TO INSTALL</span>, so if it fails, your apps may be deleted. <h3>How can I safely run a TAD?</h3>To run a TAD on retail hardware, you have to decrypt it and extract the SRL. You can use <a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/decrypt_tad.py">this</a> python script to do so. Usage is <code>python3 decrypt_tad.py [path to file].tad</code>
+<br>Rename the SRL to NDS, and it should work in emulators or on real hardware. <div style="text-align:center;">
+  <h1>Screenshots:</h1>
+  <div style="float: left;width: 35vw;">
+    <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/TwlNmenu/twlnmenu_nand.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);">
   </div>
-        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_d.png" style="width:76.2vw;margin-right:10%:margin-top:3%;">
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-<div class="float-container" style="float:right;">
-  <div class="float-child1">
-    <div class="container" style="width:70%;">
-      <div class="" style="position:static;">
-        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_thinbarnoprompt_u.png" style="width:19.2vw;height:100%;position:static;">
-      </div>
-
-
-
-      <div class="othertext" style="width:18vw;background-size: 100% 100%;background-image: url('https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_thinpromptnobar.png');position:static;">
-        <!-- CONTENT HERE -->
-        <div class="imageTwo">
-        <ul class="homeimg">
-          <div class="container">
-            <div class="imageTwo image2">
-              <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_pink_homemenu.png" class="homeimg">
-            </div>
-            <div class="imageThree image3">
-              <div class="hometext" style="padding-top: 2.7vw;padding-left: 4.5vw;">TwlNmenu</div>
-              <!--padding-top 2vw and 2.7vw for two and one line banners, respectively-->
-              <div class="imageThree image3 homeicon">
-                <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/icon/program/twlnmenu.gif" width="13%" height="13%">
-              </div>
-            </div>
-            </div>
-            </ul>
-            </div>
-
-            <p>
-            <b>Origin:</b><div style="font-size: 40px;font-size: 1vw;">Nintendo Developer Portal (Twl SDK)</div><br>
-            <b>Dumped by:</b><div style="font-size: 40px;font-size: 1vw;">N/A</div><br>
-            <b>Downloads:</b>
-            <table class="othertexts" style="solid; width: 100%;font-size: 3px;font-size: 1vw;">
-            <tr>
-              <th><br>SRL</th>
-              <th><br>TAD</th>
-            </tr>
-            <tr>
-              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/TwlNmenu/TwlNmenu.10126.srl">v10126</a>&emsp;&emsp;&emsp;</td>
-              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/TwlNmenu/TwlNmenu.10126.tad">v10126</a></td>
-            </tr>
-            <tr>
-              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/TwlNmenu/TwlNmenu.10616.srl">v10616</a></td>
-              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/TwlNmenu/TwlNmenu.10616.tad">v10616</a></td>
-            </tr>
-            <tr>
-              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/TwlNmenu/TwlNmenu.10769.srl">v10769</a></td>
-              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/TwlNmenu/TwlNmenu.10769.tad">v10769</a></td>
-            </tr>
-            <tr>
-              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/TwlNmenu/TwlNmenu.11003.srl">v11003</a></td>
-              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/TwlNmenu/TwlNmenu.11003.tad">v11003</a></td>
-            </tr>
-            <tr>
-              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/TwlNmenu/TwlNmenu.11015.srl">v11015</a></td>
-              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/TwlNmenu/TwlNmenu.11015.tad">v11015</a></td>
-            </tr>
-            <tr>
-              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/TwlNmenu/TwlNmenu.11190.srl">v11190</a></td>
-              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/TwlNmenu/TwlNmenu.11190.tad">v11190</a></td>
-            </tr>
-            <tr>
-              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/TwlNmenu/TwlNmenu.11270.srl">v11270</a></td>
-              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/TwlNmenu/TwlNmenu.11270.tad">v11270</a></td>
-            </tr>
-            <tr>
-              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/TwlNmenu/TwlNmenu.11288.srl">v11288</a></td>
-              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/TwlNmenu/TwlNmenu.11288.tad">v11288</a></td>
-            </tr>
-            <tr>
-              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/TwlNmenu/TwlNmenu.11323.srl">v11323</a></td>
-              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/TwlNmenu/TwlNmenu.11323.tad">v11323</a></td>
-            </tr>
-            <tr>
-              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/TwlNmenu/TwlNmenu.11364.srl">v11364</a></td>
-              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/TwlNmenu/TwlNmenu.11364.tad">v11364</a></td>
-            </tr>
-            <tr>
-              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/TwlNmenu/TwlNmenu.11414.srl">v11414</a></td>
-              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/TwlNmenu/TwlNmenu.11414.tad">v11414</a></td>
-            </tr>
-            <tr>
-              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/TwlNmenu/TwlNmenu.11437.srl">v11437</a></td>
-              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/TwlNmenu/TwlNmenu.11437.tad">v11437</a></td>
-            </tr>
-            </table>
-
-            </p>
-
-<span style="font-size: .1vw;">&nbsp;</span>
-
-
+  <div style="float: left;width: 35vw;">
+    <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/TwlNmenu/twlnmenu_sd.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;">
   </div>
-        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_thinbarnoprompt_d.png" style="width:19.2vw;margin-right:10%:margin-top:3%;">
+  <div style="float: left;width: 35vw;">
+    <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/TwlNmenu/twlnmenu_install.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);">
+  </div>
+  <div style="float: left;width: 35vw;">
+    <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/TwlNmenu/twlnmenu_2011.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);">
+  </div>
 </div>
-</div>
-

@@ -1,6 +1,8 @@
 name: rmc
 title: rmc
 url: https://randommeaninglesscharacters.com
+imgurl: https://cdn.randommeaninglesscharacters.com/img-dsi/
+appurl: https://cdn.randommeaninglesscharacters.com/rmc-prg/
 plugins:
   - jekyll-feed
   - jekyll-sitemap

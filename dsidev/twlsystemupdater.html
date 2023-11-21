@@ -2,11 +2,11 @@
 layout: devinfo
 app: TwlSystemUpdater
 ---
-<i>Some of the information and screenshots here are from <a href="https://wiki.raregamingdump.ca/index.php/SystemUpdater">Rare Gaming Dump.</a></i>
+<i>Some screenshots and information are from <a href="https://wiki.raregamingdump.ca/index.php/SystemUpdater">Rare Gaming Dump.</a></i>
 <br><br>
-Twl SystemUpdater is a tool used to update DSi development hardware such as IS-TWL-DEBUGGERs and pandas. This does not work on retail units, causing the same <code>-2011</code> error as <a href="/dsidev/twlnmenu.html">TwlNmenu</a> and bricking the console.
-<h2>TADs in RomFS:</h2>
-The SystemUpdaters contain the complete development firmware as TAD files for every region in NitroFS. These are sorted into three folders:
+Twl SystemUpdater is a tool used to update DSi development hardware such as the IS-TWL-DEBUGGER or a panda. This does not work on retail units, causing the same <code>-2011</code> error as <a href="/dsidev/twlnmenu.html">TwlNmenu</a> and bricking the console.
+<h2>TADs in NitroFS</h2>
+Twl SystemUpdater works by loading a set of firmware TADs and <a href="https://dsibrew.org/wiki/Nand:/shared1/TWLCFG0.dat">TWLCFG0.dat</a>/<a href="https://dsibrew.org/wiki/Nand:/shared1/TWLCFG1.dat">TWLCFG1.dat</a> from NitroFS to install onto the target hardware. The updaters are multi-region, so each one contains full sets of firmware TADs for every region. The TADs are sorted into three main folders.
 <br><br>
 <b><code>NitroFS:/data/debugger/</code></b><br>
 These TADs are for the IS-TWL-DEBUGGER.<br>
@@ -27,10 +27,59 @@ These are TADs that are common between both the IS-TWL-DEBUGGER and panda units.
 <code> - HNHx</code>, Nintendo DS Cart Whitelist<br>
 <code> - <a href="/dsidev/nandfiler.html">NandFiler</a></code><br>
 <code> - <a href="/dsidev/twlnmenu.html">TwlNmenu</a></code><br><br>
-
-These TAD files have been encrypted with a different key than ones created with <a href="{{ site.appurl }}maketad.exe">maketad.exe</a>, so the only way to get the decrypted SRLs is by running the SystemUpdater and then extracting the contents from NAND.
-<h2>Mysterious ".nand" file:</h2>
-There another file in RomFS called <code>menu_launcher.nand</code> (found in <code>NitroFS/data/common/</code>). There has been no mention of this or other <code>.nand</code> files online, though there a reference <a href="/dsidev/twl_eva">TWL EVA</a>, which has an option at "<code>Evaluation Menu --> Initializer --> Import *.nand --> menu-lauchner</code>" that makes the <code>.nand</code> file seem like an installable format. <code>menu_launcher.nand</code> has ACSII values for <code>2435.8325</code> at the end, which is very similar to the version numbers of the <a href="/dsidev/launcher.html">prototype home menu/launcher</a> (<code>1541-6291</code>, and <code>2235-7985</code>), suggesting that this may be a later revision of that prototype. However, this is currently just speculation. <!-- The TwlIPL CVS repository from the gigaleaks might reveal what the <code>.nand</code> file is for. -->
+The SystemUpdater chooses whether to install from the <code>debugger</code>or <code>standalone</code> folder based off of the RAM size. 16 MB is TWL CONSOLE (panda and IS-TWL-CAPTURE), while 32 MB is IS_TWL_DEBUGGER.<br><i> - Source: <a href="https://wiki.raregamingdump.ca/index.php/SystemUpdater">RGD</a></i>
+<br><br>
+All the TAD files in NitroFS have been created with <code>maketad_updater</code>, a modified version of <a href="man/maketad.html">maketad</a>. This uses a different key to encrypt the TADs (normally the Wii dev key is used), so the only way to get the decrypted SRLs is by running the SystemUpdater and then extracting the contents from NAND.
+<h2>Additional ".nand" file</h2>
+There another file in NitroFS called <code>menu_launcher.nand</code> (found in <code>NitroFS/data/common/</code>). Judging from the menu-launcher source code in TwlIPL (TwlIPL/trunk/build/nandfirm/menu-launcher/), this appears to be the <a href="https://dsibrew.org/wiki/Stage2">stage2 bootloader</a>. The <code>.nand</code> file has a version number at the bottom showing that it is SDK 2435, IPL 8325. This is the same as every retail DSi.
+<h2>Changelog</h2>
+This is from an official readme included with the Twl SystemUpdater. You can read the full version <a href="man/twlsystemupdater.html">here</a>.
+<table class="history twl">
+	<tr>
+		<th class="twl">Revision Date</th>
+		<th class="twl">Version</th>
+		<th class="twl">Updated Content</th>
+	</tr>
+	<tr>
+		<td class="date twl">2010/03/04</td>
+		<td class="version twl">1.4a</td>
+		<td class="twl">
+			<CODE>TwlNmenu</CODE> and <CODE>NandFiler</CODE> were updated to the version included in TWL-SDK 5.4.<br>［Korean version only] DSi camera was updated.<br>［Korean version only] Updated version data to Ver 1.4.1K_dev.<br>［Chinese version only] Updated version data to Ver 1.4.1C_dev.
+		</td>
+	</tr>
+	<tr>
+		<td class="date twl">2009/08/17</td>
+		<td class="version twl">1.4</td>
+		<td class="twl">
+			Added support for DSi Menu version 1.4. Updated <CODE>TwlNmenu</CODE> and <CODE>NandFiler</CODE> to versions bundled with TWL-SDK 5.3. Added China and Korea to the selectable regions.
+		</td>
+	</tr>
+	<tr>
+		<td class="date twl">2009/06/30</td>
+		<td class="version twl">1.3a</td>
+		<td class="twl">Added an option to update without installing <CODE>TwlNmenu</CODE> or <CODE>NandFiler</CODE>.</td>
+	</tr>
+	<tr>
+		<td class="date twl">2009/04/28</td>
+		<td class="version twl">1.3</td>
+		<td class="twl">Added support for DSi Menu version 1.3. Updated <CODE>TwlNmenu</CODE> and <CODE>NandFiler</CODE> to versions bundled with TWL-SDK 5.1 patch 4.</td>
+	</tr>
+	<tr>
+		<td class="date twl">2009/01/15</td>
+		<td class="version twl">1.2</td>
+		<td class="twl">Added support for DSi Menu version 1.2. Updated <CODE>TwlNmenu</CODE> and <CODE>NandFiler</CODE> to versions bundled with TWL-SDK 5.1 PR2.</td>
+	</tr>
+	<tr>
+		<td class="date twl">2008/11/13</td>
+		<td class="version twl">1.0c</td>
+		<td class="twl">DSi Camera, DSi Sound, and the TWL-SDK tools <CODE>TwlNmenu</CODE> and <CODE>NandFiler</CODE> are now all installed by default.</td>
+	</tr>
+	<tr>
+		<td class="date twl">2008/10/08</td>
+		<td class="version twl">1.0b</td>
+		<td class="twl">Added support for DSi Menu version 1.0.</td>
+	</tr>
+</table>
 <div style="text-a<code>gn:center;"><h1>Screenshots:</h1>
         <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/img-dsi/TwlSystemUpdater/region_select.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);"></div>
         <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/img-dsi/TwlSystemUpdater/updating.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>

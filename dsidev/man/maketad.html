@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="GENERATOR" content="IBM WebSphere Studio Homepage Builder Version 7.0.0.0 for Windows">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>maketad</title>
+<link rel="stylesheet" href="files/nitro.css" type="text/css">
+<style type="text/css">
+<!--
+.sample_source{
+  background-color : #e8e8e8;
+}
+H3{
+  color : teal;
+}
+.command_list{
+  margin-bottom : 16pt;
+}
+.command_desc{
+  }
+.command_item{
+  margin-top : 16pt;
+  background-color : #e8e8e8;
+}
+.blockquoted_table {
+  border : 1px;
+  width : 80%;
+}
+TD,TH{
+  border-color	: #c0d8d8;
+  padding       : 1pt 4pt 1pt 4pt;
+  border-width  : 1px;
+  border-style  : solid;
+}
+-->
+</style>
+</head>
+<body>
+<h1 align="left">maketad</h1>
+<h2>Description</h2>
+
+<p>　<code>maketad</code> is a tool for generating TAD files (<code>.tad</code>) from the specified SRL file. TAD files are used to import applications into the system memory.</p>
+<p>
+TAD files for TWL that are created with this tool can only be imported 
+into TWL development kits. The TWL-SDK environment cannot be used to 
+create TAD files that can run on retail TWL hardware.
+</p>
+<p>
+<code>openssl</code> for cygwin version 0.9.8b-1 or later is required in order to use <code>maketad</code>.
+</p>
+
+<h2>Using the Tool</h2>
+<h3>Start Command</h3>
+<p><code>% maketad [OPTION]... SRLFILE [-o outputFile]</code></p>
+<p><code>SRLFILE</code> is the ROM file to import into NAND Flash. Specify an <code>.srl</code> file.</p>
+<p>Use the <code><b>-n</b></code> option to output an SRL with an 
+encapsulated TAD file rather than just a TAD file. Once the DS card to 
+which this SRL has been written is inserted in the DS card slot of the 
+TWL unit, you can import from the encapsulated TAD file by starting the 
+TwlNmenu imported into system save memory.</p>
+<p>With the <code><b>-o</b></code> option, the file name of the output file can be designated. If nothing is specified and the <code><b>-n</b></code> option is <i>not</i> specified, the title name saved in the SRL file with a TAD extension is created. If the <code><b>-n</b></code> option is specified, the title name saved in the SRL file with a TAD.SRL extension is created.</p>
+<p>The <code><b>-s</b></code> option allows outputting a TAD with a reserved gamecode (eg. system titles). This feature is unlisted from the help menu.</p>
+<p>The <code><b>-h</b></code> option displays simple instructions.</p>
+<h2>Return Values</h2>
+<p>
+Returns 0 when execution completes normally.<br>
+The following are possible reasons for the function to fail.
+</p>
+<ul>
+<li>OpenSSL for Cygwin version 0.9.8b-1 or later is not installed
+</li><li>Nothing is specified with the -o option
+</li><li>An unknown option was found
+</li><li>Characters other than those from ASCII code 0x21 through 0x7e are included for the game code
+</li><li>A code reserved by the system is being used in the game code
+</li><li>The file is not of the type *.srl
+</li><li>The SRL file cannot be opened or read
+</li><li>An SRL file has not been specified
+</li><li>A TAD file cannot be output
+</li><li>The SRL filename is too long
+</li></ul>
+<h2>Revision History</h2>
+<p>
+2023/11/21 Added download links, the -s option, changed dependancy information, and listed maketad_updater.<br>
+2009/11/10 Added <b>Return Values</b>.<br>
+2008/10/16 Added the -n option. Added information about <code>openssl</code>.<br>
+2008/09/16 Added information about ROM operations on development hardware/mass production hardware.<br>
+2008/04/25 Standardized terminology related to the NAND application version.<br>
+2008/03/19 Made descriptions compliant with the terminology.<br>
+2007/12/07 Initial version.
+</p>
+<hr><p>CONFIDENTIAL</p>
+</body></html>

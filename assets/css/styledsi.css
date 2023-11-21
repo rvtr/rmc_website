@@ -216,3 +216,57 @@ body {
     padding-top: 1vw;
     padding-left: 1vw;
 }
+/* TWL SDK CSS, woah! */
+    table.twl
+    {
+      margin-top      : 2pt;
+      margin-bottom   : 2pt;
+      /* margin-left: auto;
+      margin-right: auto; */
+      padding-left    : 0pt;
+      padding-right   : 0pt;
+      position      : relative;
+      left        : 12px;
+      font-family     : Arial;
+      font-size     : 10pt;
+      border-style    : none none none none;
+      width       : 80%;
+    }
+
+    table.history td.date /* special case for history table */
+    {
+      text-align      : center;
+      width       : 100;
+    }
+
+    table.history td.version /* special case for history table */
+    {
+      text-align      : center;
+      width       : 100;
+    }
+
+    th.twl,td.twl
+    {
+      padding       : 2pt;
+      border-width    : 2pt;
+      border-style    : none none none none;
+      font-style      : normal;
+    }
+
+    th.twl
+    {
+      background      : #cdd;
+      font-weight     : bold;
+    }
+
+    td.twl
+    {
+      background      : #ddf;
+      font-weight     : normal;
+    }
+
+    td.center
+    {
+      text-align      : center;
+    }
+

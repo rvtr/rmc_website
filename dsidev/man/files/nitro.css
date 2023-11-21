@@ -1,0 +1,208 @@
+BODY {
+  color			: black;
+  font-family		: Arial;
+  font-size		: 10pt;
+}
+H2 {
+  font-size		: 20px;
+  border-top-style	: none;
+  border-left-style	: double;
+  border-left-width	: 8px;
+  border-bottom-style	: solid;
+  margin-left		: 1px;
+  margin-top		: 30px;
+  margin-bottom		: 10px;
+  border-bottom-width	: 2px;
+  font-weight		: bold;
+  position		: relative;
+  padding-left		: 10px;
+  border-left-color	: #a000ff;
+  border-bottom-color	: violet;
+}
+H1 {
+  font-size		: 36px;
+  font-family		: Arial;
+  border-bottom-width	: 5px;
+  border-bottom-style	: solid;
+  border-bottom-color	: #a000ff;
+  padding-bottom		: 1px;
+  margin-bottom		: 20px;
+  letter-spacing		: normal;
+  font-weight		: bold;
+}
+TABLE {
+  margin-top		: 2pt;
+  margin-bottom		: 2pt;
+  margin-left		: 0pt;
+  margin-right		: 0pt;
+  padding-left		: 0pt;
+  padding-right		: 0pt;
+  position		: relative;
+  left			: 12px;
+  font-family		: Arial;
+  font-size		: 10pt;
+  border-style		: none none none none;
+  width			: 95%;
+}
+TD,TH {
+  padding			: 2pt;
+  border-width		: 2pt;
+  border-style		: none none none none;
+  font-style		: normal;
+  text-align		: left;
+}
+TD {
+  background		: #e8f4f4;
+  font-weight		: normal;
+}
+TH {
+  background		: #c0d8d8;
+  font-weight		: bold;
+}
+A:LINK {
+  color				: #0000cc;
+  background		: inherit;
+  text-decoration	: none;
+}
+
+A:VISITED {
+  color				: #666622;
+  background		: inherit;
+  text-decoration	: none;
+}
+
+A:HOVER {
+  color				: #0000cc;
+  background		: #d0e0f0;
+  text-decoration	: underline;
+}
+
+A:ACTIVE {
+  color				: #cc0088;
+  background		: inherit;
+  text-decoration	: underline;
+}
+P {
+  position		: relative;
+  left			: 12px;
+  top			: auto;
+  font-family		: Arial;
+  font-size		: 10pt;
+  padding-right		: 10px;
+  margin-right		: 6px;
+  border-right-width	: 8px;
+}
+CODE {
+  font-family		: "Courier New", monospace;
+  position		: normal;
+  left			: 12px;
+  font-size		: 10pt;
+}
+PRE {
+  position		: relative;
+  left			: 12px;
+}
+H3 {
+  left : 6px;
+  position		: relative;
+  margin-top : 15pt;
+}
+H4{
+  position : relative;
+  left : 6px;
+}
+H5{
+  position : relative;
+  left : 6px;
+}
+table.arguments th, span.argument, table.members th, span.member
+{
+	font-style			: oblique;
+	font-weight			: bold;
+}
+table.arguments th, table.members th
+{
+	width				: 13%;
+	background			: #e8f4f4;
+}
+table.arguments td, table.members td
+{
+	width				: 87%;
+}
+code.src pre
+{
+	font-family		: monospace;
+	position		: normal;
+	left			: 12px;
+	font-size		: 10pt;
+	white-space		: pre;
+	margin			: 0.5em 2em;
+	padding			: 0.5em;
+	background-color	: #eee;
+}
+h3.inline
+{
+	font-size: 1.2em;
+	border-bottom: 1px solid violet;
+	padding-left: 1em;
+	margin: 2em 0 0.5em 0
+}
+h4.inline
+{
+	font-size: 1em;
+	text-decoration: underline;
+	padding-left: 1em;
+	margin: 2em 0 0.5em 0
+	width: auto;
+}
+
+
+table.table, table.table td, table.table th
+{
+	border: solid 1px yellowgreen;
+	border-collapse: collapse;
+	background-color: white;
+}
+
+table.table
+{
+	width: auto;
+	margin: 1em;
+	position	: static;
+	font-family	: Arial;
+}
+
+table.table td, table.table th
+{
+	padding: 0.2em;
+}
+
+table.table td.number, table.table th.number
+{
+	text-align: right;
+}
+
+table.table tbody tr th
+{
+	background-color: #EFFFD3;
+	text-align: left;
+	font-weight: normal;
+}
+
+table.table thead tr th,
+table.table tbody tr th.category
+{
+	background-color: #B6CE86;
+	padding: 0 0.2em;
+}
+
+table.table caption
+{
+	font-weight: bold;
+	padding: 0.4em;
+}
+
+.float_left
+{
+	float:	left;
+}

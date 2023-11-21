@@ -1,0 +1,367 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<title>Readme for TWL System Updater</title>
+	<style type="text/css">
+	<!--
+		body
+		{
+			font-family			: Arial;
+			font-size			: 10pt;
+			background-color	: #fff;
+			color				: #111;
+		}
+
+		h1
+		{
+			font-size			: 36px;
+			font-family			: Arial;
+			border-bottom-width	: 5px;
+			border-bottom-style	: solid;
+			border-bottom-color	: #48f;
+			padding-bottom		: 1px;
+			margin-bottom		: 20px;
+			letter-spacing		: normal;
+			font-weight			: bold;
+		}
+
+		h2
+		{
+			font-size			: 20px;
+			border-top-style	: none;
+			border-left-style	: double;
+			border-left-width	: 8px;
+			border-bottom-style	: solid;
+			margin-left			: 1px;
+			margin-top			: 30px;
+			margin-bottom		: 10px;
+			border-bottom-width	: 2px;
+			font-weight			: bold;
+			position			: relative;
+			padding-left		: 10px;
+			border-left-color	: #4af;
+			border-bottom-color	: #4af;
+		}
+
+		h3
+		{
+			left				: 12px;
+			position			: relative;
+		}
+
+		p
+		{
+			position			: relative;
+			left				: 12px;
+			top					: auto;
+			font-family			: Arial;
+			font-size			: 10pt;
+			padding-right		: 10px;
+			margin-right		: 6px;
+			border-right-width	: 8px;
+		}
+
+		p.warning
+		{
+			color				: red;
+		}
+
+		p.date
+		{
+			text-align			: right;
+		}
+
+		ul,ol
+		{
+			font-family			: Arial;
+			font-size			: 10pt;
+			background-color	: #fff;
+			color				: #111;
+		}
+
+		li
+		{
+			padding-bottom		: 8px;
+		}
+
+		table
+		{
+			margin-top			: 2pt;
+			margin-bottom		: 2pt;
+			margin-left			: 0pt;
+			margin-right		: 0pt;
+			padding-left		: 0pt;
+			padding-right		: 0pt;
+			position			: relative;
+			left				: 12px;
+			font-family			: Arial;
+			font-size			: 10pt;
+			border-style		: none none none none;
+			width				: 80%;
+		}
+
+		table.history td.date /* special case for history table */
+		{
+			text-align			: center;
+			width				: 100;
+		}
+
+		table.history td.version /* special case for history table */
+		{
+			text-align			: center;
+			width				: 100;
+		}
+
+		th,td
+		{
+			padding				: 2pt;
+			border-width		: 2pt;
+			border-style		: none none none none;
+			font-style			: normal;
+		}
+
+		th
+		{
+			background			: #cdd;
+			font-weight			: bold;
+		}
+
+		td
+		{
+			background			: #ddf;
+			font-weight			: normal;
+		}
+
+		td.center
+		{
+			text-align			: center;
+		}
+
+		a
+		{
+			text-decoration		: none;
+		}
+
+		a:hover
+		{
+			background			: #d0e0f0;
+			text-decoration		: underline;
+		}
+
+		a:active
+		{
+			color				: red;
+		}
+
+		code
+		{
+			font-family			: "Courier New", monospace;
+			font-size			: 10pt;
+			position			: static;
+			left				: 12px;
+		}
+
+		pre
+		{
+			position			: relative;
+			left				: 12px;
+		}
+	-->
+	</style>
+</head>
+
+<body>
+<h1>Readme for TWL-System Updater Version 1.4a</h1>
+<p class="date">2010/03/04</p>
+
+<!-- ====================================================================== -->
+<h2 id="SS0">Introduction</h2>
+<p>
+System Updater is a program for updating the System Menu (DSi Menu) of TWL development kits. It can be used on IS-TWL-DEBUGGER, IS-TWL-CAPTURE, and TWL test units. Because you can select any region while running the program, you can also use System Updater to switch the region setting of your development kits.
+</p>
+<p class="warning">
+<B>Note:</B> System Updater was created with multi-region specifications, so it can be run on the development kits for all regions.
+</p>
+
+<!-- ====================================================================== -->
+<h2 id="SS1">Notes</h2>
+<p>
+Please keep the following points in mind when using System Updater.
+</p>
+<ul>
+	<li>
+		Update to the latest version of the IS-TWL-DEBUGGER software before using this program on the IS-TWL-DEBUGGER hardware.
+	</li>
+	<li>
+		When the System Menu is updated, the unit is automatically initialized. Any game data or save data stored in system NAND memory is erased.
+	</li>
+	<li>
+		When this program is used on a TWL test unit, updating cannot begin if there is insufficient remaining battery life, as indicated by a steady red battery indicator LED. If battery life is extremely low (a blinking red battery indicator LED), then updating cannot begin until the battery has been recharged to a certain extent, even if the AC adapter is connected.
+	</li>
+	<li>
+		Once updated by System Updater, the development kit System Menu (DSi Menu) cannot import or export NAND applications from the System Settings Software Management screen. The System Settings Software Management screen can be used only to delete NAND applications or display their contents.
+	</li>
+</ul>
+
+<!-- ====================================================================== -->
+<h2 id="SS2">Procedure for Updating the System Menu (IS-TWL-DEBUGGER)</h2>
+<p>
+To update the System Menu of IS-TWL-DEBUGGER, follow this procedure.
+</p>
+<ol>
+	<li>
+		Power on the IS-TWL-DEBUGGER hardware and launch the IS-TWL-DEBUGGER software.
+	</li>
+	<li>
+		Select <B>File</B> &rarr; <B>Load File</B>, load <CODE>SystemUpdater.srl</CODE>, and execute a hardware reset.
+	</li>
+	<li>
+		The IS-TWL-DEBUGGER software displays this message: <b>SystemUpdater was loaded. Follow the LCD screen instructions.</b> 
+	</li>
+	<li>
+		Use the IS-TWL-DEBUGGER hardware controller to select the applicable region.
+	</li>
+	<li>
+		A confirmation screen displays the region you selected. Press the A Button to begin the update. <font color="red">DO NOT turn off the power before the update is completed.</font>
+	</li>
+	<li>
+		When the update ends successfully, the upper screen displays <b>Update Success!</b>. If the update fails, the upper screen displays <b>Update Failure!</b>. Contact <A href="mailto:support@noa.com">support@noa.com</A> and provide the string displayed on the lower screen.
+	</li>
+	<li>
+		Power off the IS-TWL-DEBUGGER hardware.
+	</li>
+	<li>
+		Power on the IS-TWL-DEBUGGER hardware again and configure the DSi Menu initial settings. You cannot proceed with the initial settings if the touch screen's calibration information is invalid. In this case, display the calibration menu by restarting while holding down the L Button, R Button, and START. This allows you to calibrate the system.
+	</li>
+	<li>
+		Start System Settings from the DSi Menu and confirm the DSi Menu version number shown in the lower-right portion of the upper screen.
+	</li>
+</ol>
+
+<!-- ====================================================================== -->
+<h2 id="SS3">Procedure for Updating the System Menu (IS-TWL-CAPTURE and TWL Test Units)</h2>
+<p>
+To update the System Menu of IS-TWL-CAPTURE or a TWL test unit, you must write <CODE>SystemUpdater.srl</CODE> to a TWL Flash Card.
+</p>
+<ol>
+	<li>
+		Power on the IS-TWL-DEBUGGER hardware and launch the IS-TWL-DEBUGGER software.
+	</li>
+	<li>
+		Select <B>File</B> &rarr; <B>Load File</B> and load <CODE>SystemUpdater.srl</CODE>. <font color="red">Do not select</font> either of these options: <B>Run TWL-CPUs after loading (X)</B> or <B>Reset TWL-CPUs after loading</B>.
+	</li>
+	<li>
+		Insert a TWL Flash Card into the IS-TWL-DEBUGGER hardware.
+	</li>
+	<li>
+		Select <B>Tools</B> &rarr; <B>DS Flash Card</B> and write the loaded System Updater program to the TWL Flash Card.
+	</li>
+	<li>
+		With System Updater written to the TWL Flash Card, insert the card into the IS-TWL-CAPTURE hardware or the TWL test unit. This same method can also be used to update the System Menu of IS-TWL-DEBUGGER hardware.
+	</li>
+	<li>
+		Subsequent steps are the same as steps 4-8 of <B>Procedure for Updating the System Menu (IS-TWL-DEBUGGER)</B>.
+	</li>
+</ol>
+
+<!-- ====================================================================== -->
+<h2 id="SS4">Version Number Notation</h2>
+<p>
+The version number is displayed in System Settings as follows (&quot;*.*&quot; indicates the version). Because the version number is used for development hardware, &quot;_dev&quot; is shown at the end.
+</p>
+<table>
+	<tr>
+		<th>Region</th>
+		<th>Version Number Notation</th>
+	</tr>
+	<tr>
+		<td class="center">Japan</td>
+		<td class="center">Ver *.*J_dev</td>
+	</tr>
+	<tr>
+		<td class="center">America</td>
+		<td class="center">Ver *.*U_dev</td>
+	</tr>
+	<tr>
+		<td class="center">Europe</td>
+		<td class="center">Ver *.*E_dev</td>
+	</tr>
+	<tr>
+		<td class="center">Australia</td>
+		<td class="center">Ver *.*A_dev</td>
+	</tr>
+	<tr>
+		<td class="center">China</td>
+		<td class="center">Ver *.*C_dev</td>
+	</tr>
+	<tr>
+		<td class="center">Korea</td>
+		<td class="center">Ver *.*K_dev</td>
+	</tr>
+</table>
+
+<!-- ====================================================================== -->
+<h2 id="SS5">System Updater Optional Features</h2>
+<p>
+System Updater has the following optional features.
+</p>
+<ul>
+	<li>
+		On the confirmation screen displayed after you select the region, you can update the system without installing the two tools <CODE>TwlNmenu</CODE> and <CODE>NandFiler</CODE> by <B>holding down the SELECT button while you press the A Button</B> to begin the update.
+	</li>
+</ul>
+
+<!-- ====================================================================== -->
+<h2 id="HISTORY">Revision History</h2>
+<table class="history">
+	<tr>
+		<th>Revision Date</th>
+		<th>Version</th>
+		<th>Updated Content</th>
+	</tr>
+	<tr>
+		<td class="date">2010/03/04</td>
+		<td class="version">1.4a</td>
+		<td>
+			<CODE>TwlNmenu</CODE> and <CODE>NandFiler</CODE> were updated to the version included in TwlSDK 5.4.<br>［Korean version only] DSi camera was updated.<br>［Korean version only] Updated version data to Ver 1.4.1K_dev.<br>［Chinese version only] Updated version data to Ver 1.4.1C_dev.
+		</td>
+	</tr>
+	<tr>
+		<td class="date">2009/08/17</td>
+		<td class="version">1.4</td>
+		<td>
+			Added support for DSi Menu version 1.4. Updated <CODE>TwlNmenu</CODE> and <CODE>NandFiler</CODE> to versions bundled with TWL-SDK 5.3. Added China and Korea to the selectable regions.
+		</td>
+	</tr>
+	<tr>
+		<td class="date">2009/06/30</td>
+		<td class="version">1.3a</td>
+		<td>Added an option to update without installing <CODE>TwlNmenu</CODE> or <CODE>NandFiler</CODE>.</td>
+	</tr>
+	<tr>
+		<td class="date">2009/04/28</td>
+		<td class="version">1.3</td>
+		<td>Added support for DSi Menu version 1.3. Updated <CODE>TwlNmenu</CODE> and <CODE>NandFiler</CODE> to versions bundled with TWL-SDK 5.1 patch 4.</td>
+	</tr>
+	<tr>
+		<td class="date">2009/01/15</td>
+		<td class="version">1.2</td>
+		<td>Added support for DSi Menu version 1.2. Updated <CODE>TwlNmenu</CODE> and <CODE>NandFiler</CODE> to versions bundled with TWL-SDK 5.1 PR2.</td>
+	</tr>
+	<tr>
+		<td class="date">2008/11/13</td>
+		<td class="version">1.0c</td>
+		<td>DSi Camera, DSi Sound, and the TWL-SDK tools <CODE>TwlNmenu</CODE> and <CODE>NandFiler</CODE> are now all installed by default.</td>
+	</tr>
+	<tr>
+		<td class="date">2008/10/08</td>
+		<td class="version">1.0b</td>
+		<td>Added support for DSi Menu version 1.0.</td>
+	</tr>
+</table>
+
+<hr><p>TWL-06-0022-001-F<br>CONFIDENTIAL</p></body>
+</html>

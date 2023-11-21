@@ -24,9 +24,10 @@ layout: dsiware
 .flex-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 4%;
+  gap: 20px;
   text-align: center;
   justify-content: space-evenly;
+  padding-left: 10px;
 }
 .parent_or_guardian {
   position: relative;
@@ -151,7 +152,7 @@ Go to really moist coochie dot x y z
           </div>
           <div>
             Target:</b>
-            {% if ENTRY.SYSTEM == "TWL/DSi" %}
+            {% if ENTRY.SYSTEM == "TWL (DSi)" %}
              <span style="color:#ff0000;">{{ ENTRY.SYSTEM }}</span>
             {% else %}
              <span style="color:#3399ff;">{{ ENTRY.SYSTEM }}</span>

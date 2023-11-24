@@ -29,7 +29,7 @@ These are TADs that are common between both the IS-TWL-DEBUGGER and panda units.
 <code> - <a href="/dsidev/twlnmenu.html">TwlNmenu</a></code> (optional install)<br><br>
 The SystemUpdater chooses whether to install from the <code>debugger</code>or <code>standalone</code> folder based off of the RAM size. 16 MB is TWL CONSOLE (panda and IS-TWL-CAPTURE), while 32 MB is IS_TWL_DEBUGGER.<br><i> - Source: <a href="https://wiki.raregamingdump.ca/index.php/SystemUpdater">RGD</a></i>
 <br><br>
-All the TAD files in NitroFS have been created with <code>maketad_updater</code>, a modified version of <a href="man/maketad.html">maketad</a>. This uses a different key to encrypt the TADs (normally the Wii dev key is used), so the only way to get the decrypted SRLs is by running the SystemUpdater and then extracting the contents from NAND.
+All the TAD files in NitroFS have been created with <code>maketad_updater</code>, a modified version of <a href="/dsidev/man/maketad.html" target="_blank">maketad</a>. This uses a different key to encrypt the TADs (normally the Wii dev key is used), so the only way to get the decrypted SRLs is by running the SystemUpdater and then extracting the contents from NAND.
 <h2>Additional ".nand" file</h2>
 There another file in NitroFS called <code>menu_launcher.nand</code> (found in <code>NitroFS/data/common/</code>). Judging from the menu-launcher source code in TwlIPL (TwlIPL/trunk/build/nandfirm/menu-launcher/), this appears to be the <a href="https://dsibrew.org/wiki/Stage2">stage2 bootloader</a>. The <code>.nand</code> file has a version number at the bottom showing that it is SDK 2435, IPL 8325. This is the same as every retail DSi.
 <h2>Changelog</h2>

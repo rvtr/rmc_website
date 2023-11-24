@@ -8,7 +8,7 @@ TwlNmenu is a title manager similar to DevMenu for 3DS. TwlNmenu can install pro
 </div>
 <br>
 <br>TADs are essentially SRLs (NDS ROMs) that have been packaged into an installable format. TAD files can be created with <code>
-  <a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/maketad.exe">maketad.exe</a>
+  <a href="/dsidev/man/maketad.html" target="_blank">maketad.exe</a>
 </code>, from the TwlSDK (<code>TwlSDK/tools/bin/maketad.exe</code>). Only apps that are installed to the <code>00030004</code> folder are able to be converted to TAD <h4 style="color:red;">Note: DO NOT install TADs on a retail DSi.</h4>Attempting to do so will just result in a <code>-2011</code> error, due to the TAD being unsigned. Resigning the TAD will not work as TwlNmenu protects against this (error code <code>7</code>). Additionally, <span style="color:red;">TwlNmenu will OVERWRITE WHAT IT'S TRYING TO INSTALL</span>, so if it fails, your apps may be deleted. <h3>How can I safely run a TAD?</h3>To run a TAD on retail hardware, you have to decrypt it and extract the SRL. You can use <a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/decrypt_tad.py">this</a> python script to do so. Usage is <code>python3 decrypt_tad.py [path to file].tad</code>
 <br>Rename the SRL to NDS, and it should work in emulators or on real hardware. <div style="text-align:center;">
   <h1>Screenshots:</h1>

@@ -5,6 +5,9 @@
 
 IN PROGRESS
 - Use flex for things (or anything else to make the site not completely suck)
+	~~- Index~~
+	- Info page
+	- Nav bar
 
 
 
@@ -13,6 +16,7 @@ IN PROGRESS
 
 
 # Notes
+Learned these are stage2 bootloaders. Sometimes the SDK/IPL revision is appended to the end of the file.
 
 .nand files in TwlIPL:
 - /Users/lillianskinner/Downloads/platinum/twl/TwlIPL/branches/20080724_SDK500rc_branch/build/systemMenu_tools/SystemUpdater/SDK_5_0_RC_temp/menu_launcher-FINALROM.dev.nand

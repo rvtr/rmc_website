@@ -127,24 +127,6 @@ body {
     padding-top: 2.2vw;
     padding-left: 6.2vw;
 }
-.text1point5-oopsiesididntplanaheadsoimstupidlycrammingthisinhere {
-    position: absolute;
-    text-align: left;
-    border-color: #FFFFFF;
-    font-size: 30px;
-    font-size: 1vw;
-    padding-top: 3.7vw;
-    padding-left: 6.2vw;
-}
-.text2-electricboogaloo {
-    position: absolute;
-    text-align: left;
-    border-color: #FFFFFF;
-    font-size: 30px;
-    font-size: 1vw;
-    padding-top: 6.5vw;
-    padding-left: 1.6vw;
-}
 .icon {
     padding-top:2.2vw;
     margin-left: -9.3vw;
@@ -216,7 +198,31 @@ body {
     padding-top: 1vw;
     padding-left: 1vw;
 }
-/* TWL SDK CSS, woah! */
+/* ======================= For listing options in a program! ======================= */
+table.menu {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+th.menuheader {
+  background-color: #feb0fc;
+  border: 2px solid #e488b1;
+  text-align: left;
+  padding: 4px;
+}
+td.menuitem {
+  background-color: #cecece;
+  border: 1px solid #999999;
+  text-align: left;
+  padding: 6px;
+}
+td.menuitem:nth-of-type(1) {
+  background-color: #b2b2b2;
+  font-family: dsifont-bios;
+  font-size: 20px;
+}
+
+/* ======================= TWL SDK CSS, woah! ======================= */
     table.twl
     {
       margin-top      : 2pt;

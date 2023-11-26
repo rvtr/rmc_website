@@ -200,9 +200,9 @@ body {
 }
 /* ======================= For listing options in a program! ======================= */
 table.menu {
-  font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
+  background-color: #b2b2b2;
 }
 th.menuheader {
   background-color: #feb0fc;
@@ -219,7 +219,12 @@ td.menuitem {
 td.menuitem:nth-of-type(1) {
   background-color: #b2b2b2;
   font-family: dsifont-bios;
-  font-size: 20px;
+}
+td.menuitem2 {
+  background-color: #cecece;
+  border: 1px solid #999999;
+  text-align: left;
+  padding: 6px;
 }
 
 /* ======================= TWL SDK CSS, woah! ======================= */

@@ -11,13 +11,18 @@
       <meta property="og:description" content="DS(i) development software documentation and preservation.">
       <meta name="keywords" content="dsi, ds, nintendo, dev" />
     {% else %}
-      {% assign ENTRY = site.data.dsinfo | find:"PROGRAM",page.app %}
+{% for ENTRY in site.data.dsinfo %}
+  {% if ENTRY.PROGRAM == page.app %}
+    {% if ENTRY.PUBLISHED == "TRUE" %}
       <title>{{ page.app }} | {{ site.title }}</title>
       <meta property="og:title" content="{{ page.app }}">
       <meta property="og:image" content="{{ site.imgurl }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif">
       <meta name="description" content="{{ ENTRY.DESC }} for {{ ENTRY.SYSTEM }}">
       <meta property="og:description" content="{{ ENTRY.DESC }} for {{ ENTRY.SYSTEM }}">
       <meta name="keywords" content="dsi, ds, nintendo, dev, {{ page.app }}" />
+    {% endif %}
+  {% endif %}
+{% endfor %}
     {% endif %}
     <link rel="icon" type="image/png" href="/icon.png"/>
     <link rel="stylesheet" type="text/css" href="/assets/css/styledsi.css">

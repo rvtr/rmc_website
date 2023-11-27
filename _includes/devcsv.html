@@ -4,8 +4,9 @@ function warnFaketad() {
 }
 </script>
 <!-- Get first entry in CSV for the desired program. The credit/banner/name/origin should be the same across all files, listing multiple items in each line if there are differences. -->
-{% assign ENTRY = site.data.dsinfo | find:"PROGRAM",page.app %}
-
+{% for ENTRY in site.data.dsinfo %}
+  {% if ENTRY.PROGRAM == page.app %}
+    {% if ENTRY.PUBLISHED == "TRUE" %}
 <!--
 <div class="imageTwo" style="position:relative;width:100%;height:14vw;">
   <div class="homeimg">
@@ -97,3 +98,6 @@ function warnFaketad() {
   </div>
 
 </div>
+    {% endif %}
+  {% endif %}
+{% endfor %}

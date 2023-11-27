@@ -3,7 +3,6 @@ Title: Stuff
 Layout: dsiware
 app: TwlNmenu
 ---
-{% comment %}
 <!--
   Notes on the CSV values:
   PROGRAM:   Name as seen in rmc-dsi directory
@@ -25,24 +24,19 @@ app: TwlNmenu
   TITLE:     Program title
   DESC:      Program description as seen on index.html
 -->
-{% endcomment %}
 
-      {% assign ENTRY = site.data.dsinfo | find:"PROGRAM",page.app %}
-      <p>{{ page.app }} | {{ site.title }}<br>
+{% for ENTRY in site.data.dsinfo %}
+  {% if ENTRY.PROGRAM == page.app %}
+    {% if ENTRY.PUBLISHED == "TRUE" %}
+        <p>{{ page.app }} | {{ site.title }}<br>
       {{ page.app }}<br>
       {{ site.imgurl }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif<br>
       {{ ENTRY.DESC }} for {{ ENTRY.SYSTEM }}<br>
       {{ ENTRY.DESC }} for {{ ENTRY.SYSTEM }}<br>
       dsi, ds, nintendo, dev, {{ page.app }}</p>
-      <hr>
-      {% assign ENTRY = site.data.dsinfo | find:"PROGRAM","TwlNmenu" %}
-      <p>{{ page.app }} | {{ site.title }}<br>
-      {{ page.app }}<br>
-      {{ site.imgurl }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif<br>
-      {{ ENTRY.DESC }} for {{ ENTRY.SYSTEM }}<br>
-      {{ ENTRY.DESC }} for {{ ENTRY.SYSTEM }}<br>
-      dsi, ds, nintendo, dev, {{ page.app }}</p>
-      <h1>^ Attempt to figure out why things are broken ^</h1>
+    {% endif %}
+  {% endif %}
+{% endfor %}
 
 <!-- Check all DS program info -->
 <style>

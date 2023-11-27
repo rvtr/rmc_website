@@ -2,13 +2,14 @@
 layout: dsiware
 ---
 dfytughkjgfdyfgiufdyrtfguiohgfdtyrtfgilhvkj
-
+{% for ENTRY in site.data.dsinfo %}
+  {% if ENTRY.PROGRAM == page.app %}
+    {% if ENTRY.PUBLISHED == "TRUE" %}
 <div class="devinfo-container">
 <!-- MAIN CONTENT -->
    <div class="devinfo-container-main">
       <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;">
       <div style="background-image: url('https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;">
-        {% assign ENTRY = site.data.dsinfo | find:"PROGRAM",page.app %}
       <div class="devinfo-main" style="position:relative;">
         <div style="text-align:right;"><a href="https://github.com/rvtr/rvtr.github.io/edit/master/dsidev/{{ ENTRY.PROGRAM | downcase }}.html" target="_blank">Edit</a></div>
         <div style="text-align: left;font-size: 30px"><b>{{ ENTRY.TITLE }}</b></div><br>
@@ -42,3 +43,6 @@ dfytughkjgfdyfgiufdyrtfguiohgfdtyrtfgilhvkj
    </div>
 
 </div>
+    {% endif %}
+  {% endif %}
+{% endfor %}

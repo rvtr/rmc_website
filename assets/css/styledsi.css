@@ -19,6 +19,61 @@ code {
 special {
   font-family: dsifont-special;
 }
+/* nav bar */
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  width:95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav-bracket img {
+  width: 1.5vw;
+}
+.nav-content {
+  width: 90%;
+}
+.nav-content-container {
+  display: flex;
+  width:100%;
+  padding-top: 1vw;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+.nav-content-box {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.nav-content-box-main {
+  width:6vw;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.nav-content-box-sub {
+  width:6vw;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  z-index: 3;
+}
+.nav-content-box-sub:hover {
+  opacity: 1.0;
+}
+.nav-content-box-icon {
+  width: 3.2vw;
+  position: absolute;
+  top: 20%;
+  left: 23%;
+  z-index:2;
+}
+
 .info {
   padding: 10px;
   background-color: #e6ebf2;
@@ -33,175 +88,7 @@ body {
   background-image: url('https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_dsi_background.jpg');
   font-family: dsifont;
 }
-.nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  padding-left: 3.5%;
-  width: auto;
-  height: auto;
-  text-align: center;
-  position: relative;
-  /*  overflow: hidden; */
-}
-.navstd {
-  float: left;
-}
-.navalt {
-  float: right;
-}
-.container {
-    position: relative;
-}
-.imageOne {
-    z-index: 0;
-}
-.imageTwo {
-    z-index: 1;
-}
-.imageThree {
-  z-index: 2;
-}
-.imageFour {
-  z-index: 3;
-}
-.image {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-}
-.navimgoverlay {
-  opacity: 0.0;
-  text-align: center;
-  float: left;
-  padding-top: .6vw;
-  width: 6vw;
-  height: auto;
-}
-.navimgoverlay:hover {
-  opacity: 1.0;
-  width: 6vw;
-}
-.navimg {
-  text-align: center;
-  float: left;
-  padding-top: .6vw;
-  width: 6vw;
-  height: auto;
-  position: static;
-}
-.navicon {
-  text-align: center;
-  float: left;
-  padding-top: 2.1vw;
-  padding-left: 1.38vw;
-  width: 3.2vw;
-  height: auto;
-}
-.navedge {
-  text-align: center;
-  float: left;
-  margin: 1%;
-  width: 1.5vw;
-  height: auto;
-}
-.navpadding li {
-  padding-top: 1.5%;
-}
-.image2 {
-    position: absolute;
-    border-color: #FFFFFF
-    width: auto;
-    height: auto;
-    margin-left:-0.3vw;
-}
-.image3 {
-  position: relative;
-    border-color: #FFFFFF
-    width: auto;
-    height: auto;
-}
-.text {
-    position: absolute;
-    text-align: left;
-    border-color: #FFFFFF;
-    font-size: 30px;
-    font-size: 1vw;
-    padding-top: 2.2vw;
-    padding-left: 6.2vw;
-}
-.icon {
-    padding-top:2.2vw;
-    margin-left: -9.3vw;
-    z-index: 2;
-}
-.titleimgoverlay {
-  margin: 0% 2% 0%;
-  opacity: 0.0;
-  text-align: center;
-  float: left;
-  width: 16vw;
-  height: auto;
-}
-.titleimgoverlay:hover {
-  opacity: 1.0;
-}
-.titleimg {
-  margin: 0% 2% 0%;
-  text-align: center;
-  float: left;
-  width: 16vw;
-  height: auto;
-  margin-bottom: 10vw;
-}
-.titleedge {
-  text-align: center;
-  float: left;
-  margin: 1%;
-  width: 18vw;
-  height: auto;
-}
-.titlepadding li {
-  padding-top: 1.5%;
-  margin: 0% 2% 0%
-}
-.homeimg {
-  text-align: center;
-  /*float: right;*/
-  width: 96%;
-  height: auto;
-  margin-bottom: 5vw;
-}
-.hometext {
-    position: absolute;
-    text-align: center;
-    border-color: #FFFFFF;
-    font-size: 0.9vw;
-    width: 100%;
-}
-.hometext_long {
-    position: absolute;
-    text-align: left;
-    border-color: #FFFFFF;
-    font-size: 40px;
-    font-size: .82vw;
-}
-.homeicon {
-    padding-top:37%;
-    padding-left:1.5%
-    z-index: 2;
-    margin-right:0.3vw;
-}
-.othertext {
-    position: absolute;
-    text-align: left;
-    width: 100%;
-    border-color: #FFFFFF;
-    font-size: 15px;
-    padding-top: 1vw;
-    padding-left: 1vw;
-}
-
+/* devinfo layout CSS. Shocking, I know! */
 .devinfo-container {
   display: flex;
   justify-content: space-around;

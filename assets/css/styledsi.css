@@ -14,6 +14,7 @@ code {
   font-family: dsifont-bios;
   font-size: 20px;
   color: green;
+  word-wrap: break-word;
 }
 special {
   font-family: dsifont-special;
@@ -40,6 +41,7 @@ body {
   width: auto;
   height: auto;
   text-align: center;
+  position: relative;
   /*  overflow: hidden; */
 }
 .navstd {
@@ -86,6 +88,7 @@ body {
   padding-top: .6vw;
   width: 6vw;
   height: auto;
+  position: static;
 }
 .navicon {
   text-align: center;
@@ -197,6 +200,168 @@ body {
     font-size: 15px;
     padding-top: 1vw;
     padding-left: 1vw;
+}
+
+.devinfo-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 10px;
+}
+.devinfo-container-main {
+  position: relative;
+  width: 75%;
+  font-size: 15px
+}
+.devinfo-container-sub {
+  position: relative;
+  width: 19%;
+}
+.devinfo-container-sub2 {
+  display: none;
+}
+.devinfo-main {
+  margin-left:10px;
+  margin-right:10px;
+}
+.devinfo-sub {
+  padding-top:10px;
+  padding-bottom:10px;
+}
+.devinfo-sub2 {
+  margin-left:auto;
+  margin-right:auto;
+  border: 2px solid blue;
+}
+.devcsv-table {
+  /*font-size: 1vw;*/
+}
+.devcsv-container {
+  display: grid;
+  grid-template-columns: 30% auto;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;   gap: 10px;
+  border: 2px solid yellow;
+  font-size: 2vw;
+}
+.devcsv-preview-container { grid-area: 1 / 1 / 2 / 3; }
+.devcsv-info { grid-area: 2 / 1 / 3 / 2; }
+.devcsv-info2 { grid-area: 2 / 2 / 3 / 3;margin-top: -18.5%; }
+.devcsv-download { grid-area: 1 / 3 / 3 / 4; } 
+
+
+/* ======================= mobile only settings ======================= */
+@media only screen and (min-width: 1000px) {
+  .devcsv-container {
+    grid-template-columns: auto;
+    padding: 5px;
+    border: 2px solid yellow;
+    font-size: 1vw;
+  }
+  .devcsv-preview-container { grid-area: 1 / 1 / 2 / 2; }
+  .devcsv-info { grid-area: 2 / 1 / 3 / 2; }
+  .devcsv-info2 { grid-area: 3 / 1 / 4 / 2;margin-top: -41px; }
+  .devcsv-download { grid-area: 4 / 1 / 5 / 2; } 
+}
+@media only screen and (max-width: 1000px) {
+  .devinfo-container {
+  flex-direction: column;
+  }
+  .devinfo-container-main {
+    padding-bottom: 20px;
+    width: 100%
+  }
+  .devinfo-container-sub {
+    display: none;
+    width: 25%;
+  }
+  .devinfo-container-sub2 {
+    display: block;
+  }
+}
+/* ======================= for index.html ======================= */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: center;
+  justify-content: space-evenly;
+  padding-left: 10px;
+}
+.parent_or_guardian {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 200px;
+  padding-top: 20px;
+}
+.prompt {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+.prompt_two_a_new_hover {
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  width: 100%;
+  opacity: 0;
+  z-index: 2;
+}
+.prompt_two_a_new_hover:hover {
+  opacity: 1.0;
+}
+
+.flexception {
+  position: absolute;
+  display: inline-flex;
+  flex-direction: column;
+  z-index: 2;
+  align-items: stretch;
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.flexceptionception {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.flexceptionception_the_flexening {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.prompt_header {
+  padding-left: 10px;
+  text-align: left;
+  font-size: 12px;
+}
+
+.prompt_title {
+  height: 34px;
+}
+
+.prompt_info {
+  padding-top: 3px;
+  text-align: left;
+  font-size: 12px;
+}
+/* ======================= for program pages ======================= */
+.screenshot {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+.screenshot img {
+  width: 256px;
+  border: 5px solid white;
+  box-shadow: 0px 0px 2px 5px rgb(217,217,217,1);
 }
 /* ======================= For listing options in a program! ======================= */
 table.menu {

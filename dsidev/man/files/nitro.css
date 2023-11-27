@@ -66,7 +66,7 @@ A:LINK {
 }
 
 A:VISITED {
-  color				: #666622;
+  /*color				: #666622;*/
   background		: inherit;
   text-decoration	: none;
 }

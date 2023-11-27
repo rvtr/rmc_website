@@ -1,75 +1,7 @@
 ---
 layout: dsiware
 ---
-dfytughkjgfdyfgiufdyrtfguiohgfdtyrtfgilhvkjchxtzsdguhovjfxdr6t87ughvkjcgxfdrtyiohgdy7r68t9y
-<style>
-.devinfo-container {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  padding: 10px;
-}
-.devinfo-container-main {
-  position: relative;
-  width: 75%;
-  font-size: 15px
-}
-.devinfo-container-sub {
-  position: relative;
-  width: 19%;
-}
-.devinfo-container-sub2 {
-  display: none;
-}
-.devinfo-main {
-  margin-left:10px;
-  margin-right:10px;
-}
-.devinfo-sub {
-  padding-top:10px;
-  padding-bottom:10px;
-}
-.devinfo-sub2 {
-  margin-left:auto;
-  margin-right:auto;
-  border: 2px solid blue;
-}
-.devcsv-table {
-  /*font-size: 1vw;*/
-}
-
-@media only screen and (max-width: 1000px) {
-  .devinfo-container {
-  flex-direction: column;
-  }
-  .devinfo-container-main {
-    padding-bottom: 20px;
-    width: 100%
-  }
-  .devinfo-container-sub {
-    display: none;
-    width: 25%;
-  }
-  .devinfo-container-sub2 {
-    display: block;
-  }
-  .devcsv--
-}
-
-/* for program pages */
-.screenshot {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-bottom: 20px;
-}
-.screenshot img {
-  width: 384px;
-  border: 5px solid white;
-  box-shadow: 0px 0px 2px 5px rgb(217,217,217,1);
-}
-</style>
+dfytughkjgfdyfgiufdyrtfguiohgfdtyrtfgilhvkj
 
 <div class="devinfo-container">
 <!-- MAIN CONTENT -->
@@ -77,12 +9,14 @@ dfytughkjgfdyfgiufdyrtfguiohgfdtyrtfgilhvkjchxtzsdguhovjfxdr6t87ughvkjcgxfdrtyio
       <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;">
       <div style="background-image: url('https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;">
         {% assign ENTRY = site.data.dsinfo | find:"PROGRAM",page.app %}
+        
       <div class="devinfo-main" style="position:relative;">
-        <h1>{{ ENTRY.TITLE }}</h1>
+        <div style="text-align:right;"><a href="https://github.com/rvtr/rvtr.github.io/edit/master/dsidev/{{ ENTRY.PROGRAM | downcase }}.html" target="_blank">Edit</a></div>
+        <div style="text-align: left;font-size: 30px"><b>{{ ENTRY.TITLE }}</b></div><br>
         {{ content }}
       </div>
       </div>
-      <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_d.png" style="width: 100%;display:block;">
+      <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_d.png" style="width: 100%;display: block;">
    </div>
 
 
@@ -109,36 +43,3 @@ dfytughkjgfdyfgiufdyrtfguiohgfdtyrtfgilhvkjchxtzsdguhovjfxdr6t87ughvkjcgxfdrtyio
    </div>
 
 </div>
-
-<!--
-<div class="float-container">
-  <div class="float-child1">
-    <div class="container" style="width:70%;">
-      <div class="" style="position:static;">
-        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_u.png" style="width:76.2vw;position:static;">
-      </div>
-      <div class="othertext" style="width:75.2vw;background-size: 100%;background-image: url('https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_widepromptnobar.png');position:static;">
-      {% assign ENTRY = site.data.dsinfo | find:"PROGRAM",page.app %}
-      <h1>{{ ENTRY.TITLE }}</h1>
-        {{ content }}
-    <p style="visibility: hidden;">paddingpaddingpaddingwhydoIneedpaddingwhydidImakethis siteIamsodumb</p><span style="font-size: .1vw;">&nbsp;</span>
-      </div>
-    </div>
-    <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_d.png" style="width:76.2vw;margin-right:10%:margin-top:3%;">
-  </div>
-</div>
-
-<div class="float-container" style="float:right;">
-  <div class="float-child1">
-    <div class="container" style="width:70%;">
-      <div class="" style="position:static;">
-        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_thinbarnoprompt_u.png" style="width:19.2vw;height:100%;position:static;">
-      </div>
-      <div class="othertext" style="width:18.2vw;background-size: 100%;background-image: url('https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_thinpromptnobar.png');position:static;">
-        % include devcsv.html %}
-        <span style="font-size: .1vw;">&nbsp;</span>
-      </div>
-      <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_thinbarnoprompt_d.png" style="width:19.2vw;margin-right:10%:margin-top:3%;">
-    </div>
-  </div>
--->

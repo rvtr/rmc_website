@@ -3,6 +3,8 @@ title: rmc
 url: https://randommeaninglesscharacters.com
 imgurl: https://cdn.randommeaninglesscharacters.com/img-dsi/
 appurl: https://cdn.randommeaninglesscharacters.com/rmc-prg/
+releaseurl: https://cdn.randommeaninglesscharacters.com/assets-dsi/release/
+releaseurl_alt: https://cdn.randommeaninglesscharacters.com/releases/
 plugins:
   - jekyll-feed
   - jekyll-sitemap

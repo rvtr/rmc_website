@@ -2,11 +2,11 @@
 - [X] Make index generate cards for every program in CSV (exclude duplicates)
 - [X] Add TWL or NTR option in CSV
 - [X] Reorder CSV to make more sense
-- [] Make things mobile friendly and usable:
+- [X] Make things mobile friendly and usable:
 	- [X] Index
 	- [X] Info page
 	- [X] Nav bar
-	- [] Release pages
+	- [X] Release pages
 	- [X] Copyright
 - [] Rewrite pages
 	- [] TwlNmenu
@@ -15,4 +15,4 @@
 - [X] Make ~~good~~ mediocre 404 page with appropriately themed error
 - [] Contact page
 - [] Unmark incomplete pages as listed in CSV
-- [] Smaller image sizes
+- [X] Smaller image sizes

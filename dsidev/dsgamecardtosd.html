@@ -1,92 +1,17 @@
 ---
-title: DS Game Card To SD
-layout: dsiware
+layout: devinfo
+app: DSGameCardToSD
 ---
-<div class="float-container">
-  <div class="float-child1">
-    <div class="container" style="width:70%;">
-      <div class="" style="position:static;">
-        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_u.png" style="width:76.2vw;position:static;">
-      </div>
-
-
-
-      <div class="othertext" style="width:75vw;background-size: 100% 100%;background-image: url('https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_widepromptnobar.png');position:static;">
-        <h1>DS Game Card To SD</h1>
-	DS Game Card To SD dumps the inserted cartridge to the SD card as
-<code>sd:/&lt;title id&gt;_&lt;yyyy/mm/dd&gt;_&lt;hh/mm/ss&gt;.dmp</code>
-        <div style="text-align:center;"><h1>Screenshots:</h1>
-
-        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/DSGameCardToSD/dsgamecardtosd.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
-        <div style="float: left;width: 36vw;"><img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/DSGameCardToSD/dsgamecardtosd_load_infinite.gif" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div></div>
-
-    <p style="visibility: hidden;">paddingpaddingpaddingwhydoIneedpaddingwhydidImakethis siteIamsodumb</p><span style="font-size: .1vw;">&nbsp;</span>
-
-    </div>
-  </div>
-        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_d.png" style="width:76.2vw;margin-right:10%:margin-top:3%;">
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-<div class="float-container" style="float:right;">
-  <div class="float-child1">
-    <div class="container" style="width:70%;">
-      <div class="" style="position:static;">
-        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_thinbarnoprompt_u.png" style="width:19.2vw;height:100%;position:static;">
-      </div>
-
-
-
-      <div class="othertext" style="width:18vw;background-size: 100% 100%;background-image: url('https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_thinpromptnobar.png');position:static;">
-        <!-- CONTENT HERE -->
-        <div class="imageTwo">
-        <ul class="homeimg">
-          <div class="container">
-            <div class="imageTwo image2">
-              <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_pink_homemenu.png" class="homeimg">
-            </div>
-            <div class="imageThree image3">
-              <div class="hometext" style="padding-top: 2.7vw;padding-left: 1.4vw;">DS Game Card To SD</div>
-              <!--padding-top 2vw and 2.7vw for two and one line banners, respectively-->
-              <div class="imageThree image3 homeicon">
-                <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/icon/program/dsgamecardtosd.gif" width="13%" height="13%">
-              </div>
-            </div>
-            </div>
-            </ul>
-            </div>
-
-            <p>
-            <b>Origin:</b><div style="font-size: 40px;font-size: 1vw;">Gigaleaks (ctr_tools_red.zip)</div><br>
-            <b>Dumped by:</b><div style="font-size: 40px;font-size: 1vw;">N/A</div><br>
-            <b>Downloads:</b>
-            <table class="othertexts" style="solid; width: 100%;font-size: 3px;font-size: 1vw;">
-            <tr>
-              <th><br>SRL</th>
-            </tr>
-            <tr>
-              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/DSGameCardToSD/DSGameCardToSD.srl">ver0</a></td>
-            </tr>
-            <tr>
-              <td><a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/DSGameCardToSD/DSGameCardToSD_ver1.srl">ver1</a></td>
-            </tr>
-            </table>
-
-            </p>
-
-<span style="font-size: .1vw;">&nbsp;</span>
-
-
-  </div>
-        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_thinbarnoprompt_d.png" style="width:19.2vw;margin-right:10%:margin-top:3%;">
-</div>
-</div>
-
+DS Game Card To SD is a tool used to dump cartridges to the SD card. Backups are named in the following format:<br>
+<code>sdmc: / &lt;title id&gt;_&lt;yyyymmdd&gt;_&lt;hhmmss&gt;.dmp</code><br>
+<br>
+Backups made with DS Game Card To SD are incomplete due to lacking the secure area. Comments in the source code reveal that Nintendo thought the secure area could not be dumped. To make up for this, DS Game Card To SD will patch the backup with external dumps of the secure area from the SD card.<br>
+<code>sdmc:/&lt;title id&gt;_secure1.dmp</code> (for both NTR and TWL  ROMs)<br>
+<code>sdmc:/&lt;title id&gt;_secure2.dmp</code> (for TWL ROMs only)<br>
+<br>
+This tool can be useful in dumping TWL development cartridges (only if they are dev-signed however). Some homebrew backup software will improperly dump the ARM7/9i binaries, resulting in a bad dump. DS Game Card To SD appears to dump the ARM7/9i binaries properly, meaning the secure area dump from a homebrew tool and the binaries from DS Game Card To SD could be combined to create a good backup.
+        <h1 style="text-align: center;">Screenshots:</h1>
+        <div class="screenshot">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/DSGameCardToSD/dsgamecardtosd.png">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/DSGameCardToSD/dsgamecardtosd_load_infinite.gif">
+    	</div>

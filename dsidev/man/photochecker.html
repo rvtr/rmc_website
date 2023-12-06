@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="GENERATOR" content="IBM WebSphere Studio Homepage Builder Version 7.0.0.0 for Windows">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>PhotoChecker</title>
+<link rel="stylesheet" href="photochecker_files/nitro.css" type="text/css">
+<style type="text/css">
+<!--
+.sample_source{
+  background-color : #e8e8e8;
+}
+H3{
+  color : teal;
+}
+pre
+{
+  display: compact;
+  font-family	: "Courier New", monospace;
+  font-weight	: normal;
+  font-size     : normal;
+
+/*  margin		: 0pt 0pt 6pt 50pt;*/
+  padding		: 2pt 8pt 2pt 8pt;
+  background-color	: #eee;
+
+  border-style		: solid;
+  border-width		: 1px;
+}
+.command_list{
+  margin-bottom : 16pt;
+}
+.command_desc{
+  }
+.command_item{
+  margin-top : 16pt;
+  background-color : #e8e8e8;
+}
+.blockquoted_table {
+  border : 1px;
+  width : 80%;
+}
+TD,TH{
+  border-color	: #c0d8d8;
+  padding       : 1pt 4pt 1pt 4pt;
+  border-width  : 1px;
+  border-style  : solid;
+}
+div.screen
+{
+    float: left;
+    padding: 2px;
+    background-color: black;
+    margin: 0 0.5em 1em 1em;
+}
+ol, ul
+{
+    padding-left: 4em;
+    margin-left: 0pt;
+}
+
+div.screen img.main
+{
+    margin-bottom: 10px;
+}
+.warning
+{
+    color: red;
+}
+table
+{
+    left: 0;
+}
+table.plain td
+{
+    border: none;
+    background-color: transparent;
+}
+-->
+</style>
+</head>
+<body>
+
+<h1 align="left">PhotoChecker</h1>
+
+
+<h2>Overview</h2>
+<p>
+<code>PhotoChecker</code> is a TWL application that checks the photo region in the TWL system.<br>Using this tool, you can check whether any illegal files exist that were not written via the TCL library.
+</p>
+
+
+<h2>Execution</h2>
+<h3></h3>
+<p>
+Run it in one of the following ways.
+</p>
+<ul>
+<li>Use the IS-TWL-DEBUGGER software to run <code>PhotoChecker.srl</code>
+</li><li>Write <code>PhotoChecker.srl</code> to a TWL Game Card and then run it
+</li></ul>
+<p>
+When it runs, the images that exist in and below <code>photo:</code> appear on the upper screen, and the filenames appear one after the other on the lower screen. If any item in or under <code>photo:</code> is in an illegal state, the upper screen turns red. If everything is in normal state, the upper screen turns green. <br>The following are considered illegal states.
+</p>
+<ul>
+<li>When the management file does not exist (perhaps because the 
+Nintendo DSi Cameras have never been activated) but the other files 
+exist
+</li><li>When the management file is invalid
+</li><li>When the written file existed without going through the Nintendo DSi Camera and TCL
+</li><li>When the file written via the Nintendo DSi Camera and TCL was deleted without going through the Nintendo DSi Camera
+</li></ul>
+<p>
+Specifically, the following error messages are displayed.<br> <br>
+<table border="1" width="100%">
+<tbody><tr><td width="350"><em>None of the files in the management file could be found.</em></td>
+<td width="650">The file(s) registered with the management file could not be found.</td></tr>
+<tr><td width="350"><em>No management file was found, but other files are present.</em></td>
+<td width="650">Files and/or directories other than the management file were found, even though the management file does not exist.</td></tr>
+<tr><td width="350"><em>One or more files were detected that aren't in the management file.</em></td>
+<td width="650">File(s) not registered with the management file were found.</td></tr>
+<tr><td width="350"><em>There are one or more files with illegal path names.</em></td>
+<td width="650">A filename was found that does not conform to the Nintendo DSi Camera naming restrictions.</td></tr>
+<tr><td width="350"><em>There are one or more directories with illegal path names.</em></td>
+<td width="650">A directory name was found that does not conform to the Nintendo DSi Camera naming restrictions.</td></tr>
+<tr><td width="350"><em>There is a problem with the contents of this management file.</em></td>
+<td width="650">The contents of the management file were invalid.</td></tr>
+<tr><td width="350"><em>This picture's dimensions are invalid.</em></td>
+<td width="650">The size of a successfully decoded image was different from the size fixed by the Nintendo DSi Cameras (640x480).</td></tr>
+<tr><td width="350"><em>This JPEG file has not been signed.</em></td>
+<td width="650">Either the image did not have a digital signature, or the image had a digital signature but could not be decoded.</td></tr>
+<tr><td width="350"><em>Memory allocation error.</em></td>
+<td width="650">This error does not normally occur.</td></tr>
+<tr><td width="350"><em>Could not open JPEG file.</em></td>
+<td width="650">This error does not normally occur.</td></tr>
+<tr><td width="350"><em>Could not read JPEG file.</em></td>
+<td width="650">This error does not normally occur.</td></tr>
+<tr><td width="350"><em>Could not read management file.</em></td>
+<td width="650">This error does not normally occur.</td></tr>
+<tr><td width="350"><em>Could not open directory.</em></td>
+<td width="650">This error does not normally occur.</td></tr>
+<tr><td width="350"><em>There was an error returning information for a file system entry.</em></td>
+<td width="650">This error does not normally occur.</td></tr>
+<tr><td width="350"><em>Could not fully verify the photo region in memory.</em></td>
+<td width="650">This error does not normally occur.</td></tr>
+</tbody></table>
+
+</p><h2>Location</h2>
+<p>
+<code>$TwlSDK/bin/ARM9-TS/Release/PhotoChecker.srl</code><br>
+</p>
+
+<h2>Revision History</h2>
+<p>
+2009/09/01 Revised error messages.<br>2009/05/18 Added a description of error messages.<br>2009/03/13 Initial version.
+</p>
+
+
+<hr><p>CONFIDENTIAL</p>
+
+</body></html>

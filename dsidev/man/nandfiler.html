@@ -1,0 +1,359 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="GENERATOR" content="IBM WebSphere Studio Homepage Builder Version 7.0.0.0 for Windows">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>NandFiler</title>
+<link rel="stylesheet" href="files/nitro.css" type="text/css">
+<style type="text/css">
+<!--
+.sample_source{
+  background-color : #e8e8e8;
+}
+H3{
+  color : teal;
+}
+pre
+{
+  display: compact;
+  font-family	: "Courier New", monospace;
+  font-weight	: normal;
+  font-size     : normal;
+
+/*  margin		: 0pt 0pt 6pt 50pt;*/
+  padding		: 2pt 8pt 2pt 8pt;
+  background-color	: #eee;
+
+  border-style		: solid;
+  border-width		: 1px;
+}
+.command_list{
+  margin-bottom : 16pt;
+}
+.command_desc{
+  }
+.command_item{
+  margin-top : 16pt;
+  background-color : #e8e8e8;
+}
+.blockquoted_table {
+  border : 1px;
+  width : 80%;
+}
+TD.table,TH.table{
+  border-color	: #c0d8d8;
+  padding       : 1pt 4pt 1pt 4pt;
+  border-width  : 1px;
+  border-style  : solid;
+}
+div.screen
+{
+    float: left;
+    padding: 2px;
+    background-color: black;
+    margin: 0 0.5em 1em 1em;
+}
+ol, ul
+{
+    padding-left: 4em;
+    margin-left: 0pt;
+}
+
+div.screen img.main
+{
+    margin-bottom: 10px;
+}
+.warning
+{
+    color: red;
+}
+table
+{
+    left: 0;
+}
+table.plain td
+{
+    border: none;
+    background-color: transparent;
+}
+-->
+</style>
+</head>
+<body>
+<h1 align="left">NandFiler</h1>
+<h2>Overview</h2>
+<p>The <code>NandFiler</code> tool manipulates data in the system memory
+ (NAND). You can use it to delete, browse, and edit photo data, as well 
+as the save data of the NAND application stored in Wii system memory. By
+ using an SD Card, you can also use this tool to import and export save 
+data.
+</p>
+
+<h2>Execution</h2>
+<p>
+Run it in the following ways.
+</p>
+<ul>
+<li>Using the IS-TWL-DEBUGGER software to run <code>NandFiler.srl</code>
+</li><li>Using the IS-TWL-DEBUGGER software to import and then run <code>NandFiler.tad</code>
+</li><li>Writing <code>NandFiler.srl</code> to a DS Game Card and then running it
+</li><li>Using TWL Nmenu to import and then run <code>NandFiler.tad</code>
+</li></ul>
+<p>
+If you are running the TWL Nmenu using the IS-TWL-DEBUGGER software, a 
+"Please wait a moment" dialog box appears, and you will no longer be 
+able to perform operations in the IS-TWL-DEBUGGER software. To exit, 
+click <b>Force Quit</b> in the dialog box.
+</p>
+
+<h2>Mode</h2>
+<p>There are three modes in NandFiler.</p>
+<ul>
+	<li>Filer mode: Lets you traverse directories and check file sizes, timestamps, and attributes</li>
+	<li>View mode: Lets you browse file contents</li>
+	<li>Edit mode: Lets you edit file contents</li>
+</ul>
+
+<h2>Filer Mode</h2>
+<div class="screen"><img class="main" src="nandfiler_files/Filer_0.png"></div>
+<div class="screen"><img class="main" src="nandfiler_files/Filer_1.png"></div>
+<p>
+The <code>NandFiler</code> tool starts in Filer mode by default.<br>In 
+Filer mode, after you select either photo data, NAND application save 
+data that has been already imported in the system, or SD Card data, you 
+can browse and operate on that directory tree.<br><font color="#ff0000">When
+ you are browsing the contents of an SD Card, file and directory names 
+will not appear if they use characters that cannot be converted to 
+Shift_JIS.</font> <br clear="left">
+
+The following table shows what operations you can perform.
+
+</p>
+<table class="table">
+<tbody>
+<tr><th>Button</th><th>Operation
+</th></tr><tr><td>SELECT</td><td>Displays a list of operations
+</td></tr><tr><td>←→</td><td>Switches pages for the displayed items.
+</td></tr><tr><td>↑↓</td><td>Selects files and so on.
+</td></tr><tr><td>A</td><td>Confirms an item.
+</td></tr><tr><td>B</td><td>Cancels the selected archive or file.<br>Moves to the parent directory.
+</td></tr><tr><td>X</td><td>Opens a submenu when a file or archive is selected.
+</td></tr></tbody>
+</table>
+
+<h3>Title Selection</h3>
+<p>
+This is the state immediately after startup. The left side of the screen
+ displays links to the Game Code of the installed NAND application 
+(blue), and to photo data and the SD Card (purple).<br>Selecting a Game 
+Code switches to archive selection in the center of the screen. 
+Selecting a link to photo data or an SD Card switches to file selection 
+on the right side of the screen. The following operations can be 
+selected on the submenu displayed by pressing the X Button.
+</p><ul>
+	<li>Export ... Export data</li>
+	<li>Fill ... Fill the photo region</li>
+</ul>
+<p></p>
+
+<h4>Export</h4>
+<p>
+Copies files from the application's save data region or the PHOTO directory to the SD Card.<br>A directory is created on the SD Card (named either [<code>4-digit game code_4-digit version</code>] or [<code>PHOTO</code>]), and then the data is copied there.
+    
+</p>
+
+<h4>Fill</h4>
+<p>
+Writes photo data to the PHOTO directory, leaving the photo region with zero available memory.<br>The photo data written using this process cannot be viewed with the Nintendo DSi Camera.<br>This process may take 30 seconds or more to complete.<br>
+</p>
+
+
+<h3><a name="Archive">Archive Selection</a></h3>
+<p>
+Selecting a Game Code under Title Selection moves here. For Archive Selection, you can choose <code>Public</code>, <code>Private</code>, or <code>SBanner</code>.
+ These are links to the public save data, private save data, and 
+sub-banner of the NAND application selected under Title Selection.<br>The following operations can be selected on the submenu displayed by pressing the X Button.
+</p>
+<ul>
+	<li>Backup: Backs up save data</li>
+	<li>Break: Destroys the save data region</li>
+	<li>Format: Formats the save data region or sub-banner</li>
+</ul>
+<p>
+However, the Backup and Break features do not exist in the sub-banner submenu.
+</p>
+
+<h4>Backup</h4>
+<p>
+Backs up save data on the SD card. The data backed up here can be imported using the <code>Restore</code> operation, described below.<br><code>Backup</code> differs from the <code>Export</code>
+ operation described above in that the entire file system of the save 
+data region is copied to the SD card, but with Export, data is copied in
+ file units.
+</p>
+ 
+<h4>Break</h4>
+<p>
+Destroys the FAT system region of the save data.  Use this for debugging an assumed problem with the save data region causing <a href="file:///Users/lillianskinner/Downloads/twlsetup/TwlSDK/TwlSDK/man/en_US/fs/fs_result_const.html"><code>FS_RESULT_BAD_FORMAT</code></a> to occur.<br> This tool can restore the destroyed save data region through any of the methods described below.
+</p>
+
+    <ul>
+	    <li>Execute Backup before using Break and then use Restore after Break</li>
+<li>Run Format (files in the save data are deleted)</li>
+<li>Reimport the application in question on the TWL Nmenu</li>
+<li>Re-import using the IS-TWL-DEBUGGER software: Select <b>File → Load File → TAD</b> and the <b>Control imports</b> option</li>
+    </ul>
+<p>
+To restore while the application is running, use <a href="file:///Users/lillianskinner/Downloads/twlsetup/TwlSDK/TwlSDK/man/en_US/na/archive/NA_FormatTitleArchive.html"><code>NA_FormatTitleArchive</code></a>.
+</p>
+
+<h4>Format</h4>
+<p>
+Initializes the save data and sub-banner. Restoration is possible if save data or sub-banner data becomes invalid using a break.
+</p>
+
+<h3>File Selection</h3>
+<p>
+If PHOTO or SD have been selected under Title Selection, selecting any save data under Archive Selection moves to here.<br>A list of directories (yellow) and files (white) are displayed under File Selection.<br>When
+ a directory is selected, press the A Button to browse the contents of 
+that directory. When a file is selected, press the A Button to switch to
+ View mode.<br>
+
+Following is the meaning of the information that is displayed at the top of the screen in File Selection.
+
+<table class="table">
+<tbody>
+<tr><td>Size</td><td>File size.
+</td></tr><tr><td>CTime</td><td>The time the file was created.
+</td></tr><tr><td>MTime</td><td>The time the file was last modified.
+</td></tr><tr><td>ATime</td><td>The time the file was last accessed.
+</td></tr><tr><td>Attr</td><td>File attributes <br>REA: Read-only files<br>HID: Hidden files<br>SYS: System files<br>VOL: Volume level<br>PRO: Protected files<br>ARC: Archives
+</td></tr><tr><td>Very bottom of screen</td><td>Full path to the selected file.
+</td></tr></tbody>
+</table>
+
+
+The following operations can be selected on the submenu displayed by pressing the X Button.
+</p><ul>
+<li>Import: Imports Save Data</li>
+	<li>Delete: Deletes files and directories</li>
+	<li>Restore: Restores save data</li>
+</ul>
+<p></p>
+
+<h4>Import</h4>
+<p>
+This operation is valid for directories created with the <code>Export</code> operation. Note, however, that exported PHOTO directories cannot be imported.<br>This
+ operation copies data to the save data region of system memory. 
+Provided the data does not exceed the size of the save data region of 
+system memory, the data copied over by <code>Export</code> can be imported even if they have been altered.
+</p>
+
+<h4>Delete</h4>
+<p>
+Deletes a file or directory. If a directory is selected, files and directories inside the directory are deleted recursively.
+</p>
+ 
+<h4>Restore</h4>
+<p>
+This operation is only valid for save data backup files created using 
+the Backup feature. The backup file on the SD card is imported to system
+ NAND memory.<br>Note that importing backup files will fail in the cases given below.
+    </p><ul>
+	    <li>When the backup file has been modified</li>
+	    <li>When the backup file name has been changed</li>
+	    <li>When the corresponding application has been deleted</li>
+	    <li>When the save data save size of the application in question has changed</li>
+    </ul>
+<p></p>
+
+
+
+<h2>View Mode</h2>
+<p>
+</p><div class="screen"><img class="main" src="nandfiler_files/Viewer_0.png"></div>
+
+In View mode, you can view file contents. The displayed filename and addresses are shown on the upper screen. <br>The content of the file (binary values and corresponding characters) is shown on the lower screen.<br> <br>
+<p></p>
+
+<br clear="left">
+
+
+<p>
+The following specifications apply to the display of characters.
+</p><ul>
+<li><code>0x00</code> can be replaced by <code>0x20</code> (by a space)</li>
+<li><code>0x20</code> to <code>0x7A</code> conform to ASCII code</li>
+<li>Other regions display hiragana and katakana (font incorporated as sample)</li>
+</ul>
+<p></p>
+
+The following table shows what operations you can perform.
+
+<table class="table">
+<tbody>
+<tr><th>Button</th><th>Operation
+</th></tr><tr><td>←→</td><td>Scrolls one page at a time.
+</td></tr><tr><td>↑↓</td><td>Scrolls (one line at a time).
+</td></tr><tr><td>A</td><td>Switches to Edit mode.
+</td></tr><tr><td>B</td><td>Switches to <code>Filer</code> mode.<br>If file has been edited in Edit mode, it will be saved.
+</td></tr></tbody>
+</table>
+
+
+<h2>Edit Mode</h2>
+
+<p>
+</p><div class="screen"><img class="main" src="nandfiler_files/Editor_0.png"></div>
+Edit mode lets you edit files.<br>Take note of the following restrictions.
+<p></p>
+
+<br clear="left">
+<h4>Editing restrictions</h4>
+<ul>
+<li>There is no support for changes in file size.</li>
+<li>When the file being edited is larger than 14M, if regions near the 
+start and the end of the file are edited at the same time, earlier 
+changes will not be reflected.</li>
+</ul>
+
+<h3>Non-Editing State</h3>
+<p>This state occurs when entering Edit mode.</p>
+<table class="table">
+<tbody>
+<tr><th>Button</th><th>Operation
+</th></tr><tr><td>←→↑↓</td><td>Moves the cursor
+</td></tr><tr><td>A</td><td>Switches to the editing state
+</td></tr><tr><td>B</td><td>Switches to View mode
+</td></tr></tbody>
+</table>
+
+<h3>Editing State</h3>
+
+<table class="table">
+<tbody>
+<tr><th>Button</th><th>Operation
+</th></tr><tr><td>←→↑↓</td><td>Moves the cursor
+</td></tr><tr><td>B</td><td>Switches to the non-editing state<br>
+</td></tr><tr><td>L, R</td><td>Increase, Decrease value
+</td></tr></tbody>
+</table>
+
+<p>
+Pressing the L or R Buttons in the editing state will change the value at the current cursor position.<br>Locations
+ where any edits have been made will appear in green. The cursor can be 
+moved freely even in the editing state, but the horizontal range of 
+movement is reduced compared to the non-editing state.<br>To save edits, select <b>Yes</b> from the choices displayed when you press the B Button in View mode.<br>
+</p>
+<h2>Location</h2>
+<p><code>$TwlSDK/bin/ARM9-TS/Rom/NandFiler.srl<br> $TwlSDK/bin/ARM9-TS/Rom/NandFiler.tad</code></p>
+
+<h2>See Also</h2>
+
+<h2>Revision History</h2>
+<p>
+2009/12/25 Added photo region fill feature.<br>2009/11/30 Removed the <code>Delete</code> and <code>Size0</code> features from Archive Selection. There is no longer any need to support these errors.<br>2009/05/20
+ Noted that non-Shift_JIS filenames on an SD Card are not displayed; 
+added sub-banners to Archive Selection; and added the <code>Delete</code>, <code>Size0</code>, and <code>Format</code> features. <br>2009/02/18 Added text related to the <code>Break</code> feature and <code>FS_RESULT_BAD_FORMAT</code>. <br>2008/01/13 Added text for the <code>Import</code> and <code>Export</code> features. <br>2008/12/08 Mentioned restrictions when editing. <br>2008/11/26 Complied with added screenshots and changes to operations. <br>2008/10/21 Added text for the <code>Backup</code> and <code>Restore</code> features. <br>2008/09/16 Added text for the <code>Break</code> feature. <br>2008/07/18 In <b>Location</b>, changed "Release" to "Rom." <br>2008/07/14 Changed terminology. <br>2008/07/07 Initial version.
+</p>
+<hr><p>CONFIDENTIAL</p>
+</body></html>

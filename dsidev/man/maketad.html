@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="GENERATOR" content="IBM WebSphere Studio Homepage Builder Version 7.0.0.0 for Windows">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>maketad</title>
+<link rel="stylesheet" href="files/nitro.css" type="text/css">
+<style type="text/css">
+<!--
+.sample_source{
+  background-color : #e8e8e8;
+}
+H3{
+  color : teal;
+}
+.command_list{
+  margin-bottom : 16pt;
+}
+.command_desc{
+  }
+.command_item{
+  margin-top : 16pt;
+  background-color : #e8e8e8;
+}
+.blockquoted_table {
+  border : 1px;
+  width : 80%;
+}
+TD,TH{
+  border-color	: #c0d8d8;
+  padding       : 1pt 4pt 1pt 4pt;
+  border-width  : 1px;
+  border-style  : solid;
+}
+-->
+</style>
+</head>
+<body>
+<h1><i><a href="/"><--- Back to main site</a></i></h1>
+<h1 align="left">maketad</h1>
+<p>
+<i><u>NOTE: This is an edited version of the official README. See the revision history below for a list of changes.</u></i>
+</p>
+<h2>Description</h2>
+
+<p>　<code>maketad</code> is a tool for generating TAD files (<code>.tad</code>) from the specified SRL file. TAD files are used to import applications into the system memory.</p>
+<p>
+TAD files for TWL that are created with this tool can only be imported 
+into TWL development kits. The TWL-SDK environment cannot be used to 
+create TAD files that can run on retail TWL hardware.
+</p>
+<h2>Downloads</h2>
+<p>
+Standard <code>maketad</code> application. These create TAD files to be imported to development hardware through <a href="/dsidev/twlnmenu.html">TwlNmenu</a>. Output TADs will be encrypted with the Wii debug key (<code>A1604A6A7123B529AE8BEC32C816FCAA</code>).
+</p>
+<ul>
+  <li><a href="https://cdn.randommeaninglesscharacters.com/tools/maketad/maketad-20081027.exe">maketad-20081027.exe</a></li>
+  <li><a href="https://cdn.randommeaninglesscharacters.com/tools/maketad/maketad-20081027-1.exe">maketad-20081027-1.exe</a></li>
+  <li><a href="https://cdn.randommeaninglesscharacters.com/tools/maketad/maketad-20090318.exe">maketad-20090318.exe</a></li>
+  <li><a href="https://cdn.randommeaninglesscharacters.com/tools/maketad/maketad-20090604.exe">maketad-20090604.exe</a></li>
+  <li><a href="https://cdn.randommeaninglesscharacters.com/tools/maketad/maketad-20090604-1.exe">maketad-20090604-1.exe</a></li>
+  <li><a href="https://cdn.randommeaninglesscharacters.com/tools/maketad/maketad-20090604-2.exe">maketad-20090604-2.exe</a></li>
+  <li><a href="https://cdn.randommeaninglesscharacters.com/tools/maketad/maketad-20090604-3.exe">maketad-20090604-3.exe</a></li>
+</ul>
+<p>
+Updater <code>maketad</code> application. These create TAD files to be used when compiling <a href="/dsidev/twlsystemupdater.html">Twl SystemUpdater</a>. Output TADs are encrypted with an unknown key and so they cannot be decrypted.
+</p>
+<ul>
+  <li><a href="https://cdn.randommeaninglesscharacters.com/tools/maketad/maketad_updater-20050422.exe">maketad_updater-20050422.exe</a></li>
+  <li><a href="https://cdn.randommeaninglesscharacters.com/tools/maketad/maketad_updater-20080523.exe">maketad_updater-20080523.exe</a></li>
+</ul>
+<p>
+Dependancies for <code>maketad</code>.
+</p>
+<ul>
+  <li><a href="https://cdn.randommeaninglesscharacters.com/tools/maketad/cygcrypto-0.9.8.dll">cygcrypto-0.9.8.dll</a></li>
+  <li><a href="https://cdn.randommeaninglesscharacters.com/tools/maketad/cyggcc_s-1.dll">cyggcc_s-1.dll</a></li>
+  <li><a href="https://cdn.randommeaninglesscharacters.com/tools/maketad/cygwin1.dll">cygwin1.dll</a></li>
+  <li><a href="https://cdn.randommeaninglesscharacters.com/tools/maketad/cygz.dll">cygz.dll</a></li>
+</ul>
+<p>
+Additional tools. These are not required, but are recommended for working with TAD files.
+<ul>
+  <li><a href="https://cdn.randommeaninglesscharacters.com/tools/maketad/split_tad_console-20090401.exe">split_tad_console-20090401.exe</a> (usage: <code>split_tad_console.exe TADFILE</code>, where TADFILE is a TAD file to decrypt to SRL)</li>
+</ul>
+</p>
+<h2>Using the Tool</h2>
+<h3>Start Command</h3>
+<p><code>% maketad [OPTION]... SRLFILE [-o outputFile]</code></p>
+<p><code>SRLFILE</code> is the ROM file to import into NAND Flash. Specify an <code>.srl</code> file.</p>
+<p>Use the <code><b>-n</b></code> option to output an SRL with an 
+encapsulated TAD file rather than just a TAD file. Once the DS card to 
+which this SRL has been written is inserted in the DS card slot of the 
+TWL unit, you can import from the encapsulated TAD file by starting the 
+TwlNmenu imported into system save memory.</p>
+<p>With the <code><b>-o</b></code> option, the file name of the output file can be designated. If nothing is specified and the <code><b>-n</b></code> option is <i>not</i> specified, the title name saved in the SRL file with a TAD extension is created. If the <code><b>-n</b></code> option is specified, the title name saved in the SRL file with a TAD.SRL extension is created.</p>
+<p>The <code><b>-s</b></code> option allows outputting a TAD with a reserved gamecode (eg. system titles). This feature is unlisted from the help menu.</p>
+<p>The <code><b>-h</b></code> option displays simple instructions.</p>
+<h2>Return Values</h2>
+<p>
+Returns 0 when execution completes normally.<br>
+The following are possible reasons for the function to fail.
+</p>
+<ul>
+<li>The provided DLLs (see download section) were not found
+</li><li>Nothing is specified with the <code>-o</code> option
+</li><li>An unknown option was found
+</li><li>Characters other than those from ASCII code <code>0x21</code> through <code>0x7e</code> are included for the game code
+</li><li>A code reserved by the system is being used in the game code (please use <code>-s</code> to bypass the error)
+</li><li>The file is not of the type <code>*.srl</code>
+</li><li>The SRL file cannot be opened or read
+</li><li>An SRL file has not been specified
+</li><li>A TAD file cannot be output
+</li><li>The SRL filename is too long
+</li></ul>
+<h2>Revision History</h2>
+<p>
+2023/11/24 Added download links, changed dependancy information, and listed <code>maketad_updater</code> + <code>split_tad_console</code>.<br>
+2023/11/21 Added the <code>-s</code> option<br>
+2009/11/10 Added <b>Return Values</b>.<br>
+2008/10/16 Added the <code>-n</code> option. Added information about <code>openssl</code>.<br>
+2008/09/16 Added information about ROM operations on development hardware/mass production hardware.<br>
+2008/04/25 Standardized terminology related to the NAND application version.<br>
+2008/03/19 Made descriptions compliant with the terminology.<br>
+2007/12/07 Initial version.
+</p>
+<hr><p>CONFIDENTIAL</p>
+</body></html>

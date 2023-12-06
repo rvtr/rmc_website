@@ -1,0 +1,249 @@
+---
+layout: devinfo
+app: MachineSettings
+---
+<i>The majority of this information comes from TCRF, linked <a href="https://tcrf.net/Proto:Nintendo_DSi_System_Settings">here</a>. Go check them out, they're an amazing resource.</i><br><br>
+MachineSettings is a prototype version of the SystemSettings. It can be found installed or deleted in prototypes, development units, and in some retail NANDs, and there is source code for it in TwlIPL (gigaleaks). MachineSettings is missing some features present in the release version such as data management, internet, and system updates.
+<br><br>
+These prototypes have graphical bugs where the screens may flicker or cut off text. This is normal. See the screenshots section for examples.
+<br><br>
+<b>Global controls:</b> L/R to change brightness, and START to reboot.
+
+        <h2>Version 1025-5199</h2>
+        This version of MachineSettings is currently the earliest known build, and is from TwlIPL at <br><code>TwlIPL / trunk / bin / ARM9-TS / Release / forDebug / system.srl</code><br><br>It comes with the following settings:<br><br>
+
+        <table class="menu">
+            <tr>
+                <th class="menuheader">Option</th>
+                <th class="menuheader">Purpose</th>
+            </tr>
+            <tr>
+                <td class="menuitem">LANGUAGE</td>
+                <td class="menuitem">Change the console language.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">DATE & TIME</td>
+                <td class="menuitem">Change the date and time.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">USER INFORMATION</td>
+                <td class="menuitem">Change username, birthday, color, and message.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">TOUCH PANEL</td>
+                <td class="menuitem">Calibrate the touch screen.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">COUNTRY</td>
+                <td class="menuitem">Change the console's country (note: this is not region changing).</td>
+            </tr>
+            <tr>
+                <td class="menuitem">PARENTAL CONTROL</td>
+                <td class="menuitem">Age restrict and pin lock software. This setting is missing page 3, and you can only select the ESRB for organization.</td>
+            </tr>
+        </table><br>
+
+        <h2>Version 1542-6291</h2>
+        1542-6291 was recovered from the <a href="https://wiki.raregamingdump.ca/index.php/DSi_CPU-X4_Prototype">TWL-CPU-X4</a> prototype. This is the least complete build and only comes with the following settings:<br><br>
+
+        <table class="menu">
+            <tr>
+                <th class="menuheader">Option</th>
+                <th class="menuheader">Purpose</th>
+            </tr>
+            <tr>
+                <td class="menuitem">LANGUAGE</td>
+                <td class="menuitem">Change the console language.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">DATE & TIME</td>
+                <td class="menuitem">Change the date and time.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">USER INFORMATION</td>
+                <td class="menuitem">Change username, birthday, color, and message.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">TOUCH PANEL</td>
+                <td class="menuitem">Calibrate the touch screen.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">WIRELESS</td>
+                <td class="menuitem">Toggle wireless communications.</td>
+            </tr>
+        </table><br>
+
+        <h2>Version 2095-7739 and 2105-7739</h2>
+        Both of the <code>xxxx-7739</code> MachineSettings are found in some unformatted DSi units, quite possibly left over from a factory install. <code>2095-7739</code> and onwards are the most complete builds and come with the following settings:<br><br>
+
+        <table class="menu">
+            <tr>
+                <th class="menuheader">Option</th>
+                <th class="menuheader">Purpose</th>
+            </tr>
+            <tr>
+                <td class="menuitem">LANGUAGE</td>
+                <td class="menuitem">Change the console language.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">DATE & TIME</td>
+                <td class="menuitem">Change the date and time.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">USER INFORMATION</td>
+                <td class="menuitem">Change username, birthday, color, and message.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">TOUCH PANEL</td>
+                <td class="menuitem">Calibrate the touch screen.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">WIRELESS</td>
+                <td class="menuitem">Toggle wireless communications.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">MACHINE CLEAN UP</td>
+                <td class="menuitem">Clear user settings and format the console.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">COUNTRY</td>
+                <td class="menuitem">Change the console's country (note: this is not region changing).</td>
+            </tr>
+            <tr>
+                <td class="menuitem">PARENTAL CONTROL</td>
+                <td class="menuitem">Age restrict and pin lock software.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">EULA</td>
+                <td class="menuitem">Agree or dissagree to the EULA and set the agreed EULA version.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">FREESOFT BOX</td>
+                <td class="menuitem">Changes the number of free home menu slots. This feature does not work properly as the number is reset each time the home menu is loaded.</td>
+            </tr>
+        </table><br>
+
+        <h2>Version 2725-9336</h2>
+        TAD files for this version were embedded in object files from TwlIPL at <br><code>TwlIPL / trunk / build / systemMenu_tools / TWLCaptureSystemWriter / ARM9.TWL / data /</code><br><br>This is present in every TwlIPL branch and tag past 2009/04/01.<br><br>
+        Interestingly <code>2725-9336</code> comes in two versions. One is a development encrypted TAD, and the other is a retail encrypted TAD (this works on retail consoles with <a href="/dsidev/twlnmenu.html">TwlNmenu</a>). The development version is very limited with only 5 options, while the retail version has all options present:<br><br>
+
+        <table class="menu">
+            <tr>
+                <th class="menuheader">Option</th>
+                <th class="menuheader">Purpose</th>
+            </tr>
+            <tr>
+                <td class="menuitem">LANGUAGE</td>
+                <td class="menuitem">Change the console language.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">DATE & TIME</td>
+                <td class="menuitem">Change the date and time.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">USER INFORMATION</td>
+                <td class="menuitem">Change username, birthday, color, and message.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">TOUCH PANEL</td>
+                <td class="menuitem">Calibrate the touch screen.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">WIRELESS</td>
+                <td class="menuitem">Toggle wireless communications.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">MACHINE CLEAN UP</td>
+                <td class="menuitem">Clear user settings and format the console <b>(not present on dev)</b>.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">COUNTRY</td>
+                <td class="menuitem">Change the console's country <b>(not present on dev)</b>.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">PARENTAL CONTROL</td>
+                <td class="menuitem">Age restrict and pin lock software <b>(not present on dev)</b>.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">EULA</td>
+                <td class="menuitem">Agree or dissagree to the EULA and set the agreed EULA version <b>(not present on dev)</b>.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">FREESOFT BOX</td>
+                <td class="menuitem">Changes the number of free home menu slots. This feature does not work properly as the number is reset each time the home menu is loaded <b>(not present on dev)</b>.</td>
+            </tr>
+        </table><br>
+
+        <h2>Version ---- - ----</h2>
+        This is an unversioned copy of MachineSettings from TwlIPL at<br><code style="word-wrap: break-word;">TwlIPL / branches / 20130304_launcher_save_app_tosd_Remodel / build / systemMenu_RED / MachineSettings / ARM9 / bin / ARM9-TS.LTD.thumb / Release / HNBE.tad</code><br><br>It comes with the following settings:<br><br>
+
+        <table class="menu">
+            <tr>
+                <th class="menuheader">Option</th>
+                <th class="menuheader">Purpose</th>
+            </tr>
+            <tr>
+                <td class="menuitem">LANGUAGE</td>
+                <td class="menuitem">Change the console language.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">DATE & TIME</td>
+                <td class="menuitem">Change the date and time.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">USER INFORMATION</td>
+                <td class="menuitem">Change username, birthday, color, and message.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">TOUCH PANEL</td>
+                <td class="menuitem">Calibrate the touch screen.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">WIRELESS</td>
+                <td class="menuitem">Toggle wireless communications.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">MACHINE CLEAN UP</td>
+                <td class="menuitem">Clear user settings and format the console.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">COUNTRY</td>
+                <td class="menuitem">Change the console's country (note: this is not region changing).</td>
+            </tr>
+            <tr>
+                <td class="menuitem">PARENTAL CONTROL</td>
+                <td class="menuitem">Age restrict and pin lock software.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">EULA</td>
+                <td class="menuitem">Agree or dissagree to the EULA and set the agreed EULA version.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">FREESOFT BOX</td>
+                <td class="menuitem">Changes the number of free home menu slots. This feature does not work properly as the number is reset each time the home menu is loaded.</td>
+            </tr>
+        </table><br>
+
+    <h1 style="text-align: center;">Screenshots:</h1>
+    <div class="screenshot">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/main.gif">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/language_select.png">
+    </div>
+    <div class="screenshot">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/glitch.gif">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/parental_control_glitch.gif">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/touch_panel_calibration.gif">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/user_info.png">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/color_select.png">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/color_select_1.png">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/eula.png">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/eula_yn.png">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/eula_ver.png">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/machine_clean_up.png">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/country_select.png">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/birthday.png">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/freesoft_box.png">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/freesoft_box_select.png">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/time_select.png">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/MachineSettings/wireless.png">
+    </div>

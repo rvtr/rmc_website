@@ -1,0 +1,421 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="GENERATOR" content="IBM WebSphere Studio Homepage Builder Version 7.0.0.0 for Windows">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>TWL Nmenu</title>
+<link rel="stylesheet" href="twlnmenu_files/nitro.css" type="text/css">
+<style type="text/css">
+<!--
+.sample_source{
+  background-color : #e8e8e8;
+}
+H3{
+  color : teal;
+}
+pre
+{
+  display: compact;
+  font-family	: "Courier New", monospace;
+  font-weight	: normal;
+  font-size     : normal;
+
+/*  margin		: 0pt 0pt 6pt 50pt;*/
+  padding		: 2pt 8pt 2pt 8pt;
+  background-color	: #eee;
+
+  border-style		: solid;
+  border-width		: 1px;
+}
+.command_list{
+  margin-bottom : 16pt;
+}
+.command_desc{
+  }
+.command_item{
+  margin-top : 16pt;
+  background-color : #e8e8e8;
+}
+.blockquoted_table {
+  border : 1px;
+  width : 80%;
+}
+TD,TH{
+  border-color	: #c0d8d8;
+  padding       : 1pt 4pt 1pt 4pt;
+  border-width  : 1px;
+  border-style  : solid;
+}
+div.screen
+{
+    float: left;
+    padding: 2px;
+    background-color: black;
+    margin: 0 0.5em 1em 1em;
+}
+ol, ul
+{
+    padding-left: 4em;
+    margin-left: 0pt;
+}
+
+div.screen img.main
+{
+    margin-bottom: 10px;
+}
+.warning
+{
+    color: red;
+}
+table
+{
+    left: 0;
+}
+table.plain td
+{
+    border: none;
+    background-color: transparent;
+}
+-->
+</style>
+</head>
+<body>
+
+<h1 align="left">TWL Nmenu</h1>
+
+
+<h2>Overview</h2>
+<p>
+　<code>TwlNmenu</code> is a TWL application that manages NAND 
+applications in the TWL system. It can install NAND applications from 
+TAD files on SD Cards or DS cards in the TWL system. It can start or 
+delete NAND applications stored in the TWL system.
+</p>
+
+
+<h2>Execution</h2>
+<h3></h3>
+<p>
+It can be run in the following ways:
+</p>
+<ul>
+<li>Use the IS-TWL-DEBUGGER software to run <code>TwlNmenu.srl</code>.
+</li><li>Use the IS-TWL-DEBUGGER software to import and then run <code>TwlNmenu.tad</code>.
+</li><li>Write <code>TwlNmenu.srl</code> to a DS Game Card and then run it.
+</li><li>Use TWL Nmenu to import and then run <code>TwlNmenu.tad</code>.
+</li></ul>
+<p>
+If running the TWL Nmenu using the IS-TWL-DEBUGGER software, a "Please 
+wait a moment" dialog box will be displayed, and you'll no longer be 
+able to perform operations within the IS-TWL-DEBUGGER software. To exit,
+ click <b>Force Quit</b> in the dialog box.
+</p>
+
+<h2>Storing TAD Files on a DS Card</h2>
+<p>
+NAND applications can be imported from a TAD file stored on a DS card when in <b>Card</b> mode. This is a description of how to prepare the DS card to be used at this time.
+</p>
+<p>
+There are two methods.
+</p>
+
+<h5>Using the <code>-n</code> Option with <code>maketad</code></h5>
+<p>
+Although the <a href="file:///Users/lillianskinner/Downloads/twlsetup/TwlSDK/TwlSDK/man/en_US/tools/maketad.html"><code>maketad</code></a> tool creates TAD files, using the <code>-n</code>
+ option creates an SRL file that contains a TAD file instead of creating
+ just a TAD file. Access the TAD file contained in the SRL file in <b>Card</b> mode by writing the SRL created with this option to a DS card.
+</p>
+
+<h5>Creating an Original SRL File</h5>
+<p>
+Access a TAD file included in the ROM-FS of an SRL file in <b>Card</b> mode by creating an SRL file that meets the following conditions and then writing it to a DS card.
+</p>
+<ul>
+<li>It must be NITRO ROM.
+</li><li>The company code must be "YZ".
+</li></ul>
+
+
+<h2>Using the Tool</h2>
+<p>
+Once you are in TWL Nmenu, the upper screen will display some basic 
+instructions and information about the currently selected file. The 
+lower screen is used for displaying and selecting items in the list. 
+Although display is usually in English, if the system language is 
+Japanese (that is, if the market is Japan), some messages may appear in 
+Japanese.<br>The TWL Nmenu is divided into three modes: <b>NAND</b>, <b>SD</b>, and <b>Card</b>. However, the <b>Card</b>
+ mode is not available when Twl Nmenu is started as a card application. 
+You can switch to the inactive mode either by touching the gray area at 
+the top of the lower screen, or by pressing ← or → on the +Control Pad.
+</p>
+
+<h4>NAND Mode</h4>
+<div class="screen"><img class="main" src="twlnmenu_files/NAND_main_0.png"><br><img src="twlnmenu_files/NAND_sub_0.png"></div>
+<div class="screen"><img class="main" src="twlnmenu_files/NAND_main_1.png"><br><img src="twlnmenu_files/NAND_sub_1.png"></div>
+<p>
+In NAND mode, a list of NAND applications that are installed on the TWL 
+system is displayed. In this mode, you can start or delete the selected 
+NAND application.
+</p>
+<p>
+Each item in the list displayed on the lower screen shows information about a NAND application in the following format:
+</p>
+<table class="plain" style="width:0"><tbody><tr><td>
+<pre>03. 01 4BNA (3031 34424e41) Ver.1.0
+    -- ----  ---- --------      ---
+    1  2     3    4             5
+</pre>
+</td></tr></tbody></table>
+<table class="plain" style="width:25em"><tbody><tr><td>
+<ol>
+<li>Company Code (ASCII)
+</li><li>Game Code (ASCII)
+</li><li>Company Code (Hexadecimal)
+</li><li>Game Code (Hexadecimal)
+</li><li>NAND application version number
+</li></ol>
+</td></tr></tbody></table>
+<p>
+Light blue items in the list, for which "deleted" appears to the right, 
+indicate NAND applications that have been deleted. Red items in the 
+list, for which "error" appears to the right, indicate NAND applications
+ that are invalid. You should delete and then reimport these items.
+</p>
+
+<br clear="left">
+
+<p>
+The controls for this mode are shown in the table below.
+</p>
+
+<table class="table">
+<tbody>
+<tr><th>Button</th><th>Operations
+</th></tr><tr><td>←→  </td><td>Mode Switching
+</td></tr><tr><td>↑↓  </td><td>Selects NAND applications.
+</td></tr><tr><td>START</td><td>Starts the selected NAND application.
+</td></tr><tr><td>Y</td><td>Clears the private save data of the selected NAND application.
+</td></tr><tr><td>X</td><td>Deletes the selected NAND application.
+</td></tr><tr><td>R + X</td><td>Deletes all NAND applications of the same type as the selected one.
+</td></tr><tr><td>L</td><td>Moves to the next page on the upper screen.
+</td></tr><tr><td>SELECT</td><td>Toggles between showing and hiding the description of the controls.
+</td></tr></tbody>
+</table>
+
+<p>
+The following information is shown on the upper screen:
+</p>
+
+<p>
+Page １
+</p>
+<table class="table">
+<tbody>
+<tr><th colspan="2">Item</th><th>Description
+</th></tr><tr><th colspan="2">Hardware</th><td>Displays information related to the TWL system.
+</td></tr><tr><th>&nbsp;&nbsp;
+</th><td>BoxCount</td><td>•&nbsp;<code>used</code> indicates the number of installed NAND applications.<br>•&nbsp;<code>free</code> indicates the remaining number of NAND applications that can be installed.
+</td></tr><tr><th colspan="2">Media</th><td>Displays information related to the system memory.
+</td></tr><tr><th rowspan="2">&nbsp;&nbsp;
+</th><td>Free</td><td>Displays the available space in blocks and KB.
+</td></tr><tr><td>Total</td><td>Displays the total space in blocks and KB.
+</td></tr></tbody>
+</table>
+
+<p>
+Page ２
+</p>
+<table class="table">
+<tbody>
+<tr><th colspan="2">Item</th><th>Description
+</th></tr><tr><th colspan="2">Title</th><td>Displays information related to the selected NAND application.
+</td></tr><tr><th rowspan="8">&nbsp;&nbsp;
+</th><td>CompanyCode</td><td>Displays the Company Code in ASCII and hexadecimal.
+</td></tr><tr><td>InitialCode</td><td>Displays the Game Code in ASCII and hexadecimal.
+</td></tr><tr><td>GameVersion</td><td>Displays the game version.
+</td></tr><tr><td>TitleSize</td><td>Displays the space occupied by the NAND application in units of blocks and kilobytes.
+</td></tr><tr><td>AppSize</td><td>Displays the size of the SRL in blocks and KB.
+</td></tr><tr><td>PublicSave</td><td>Displays the size of the public save data in blocks and KB.
+</td></tr><tr><td>PrivateSave</td><td>Displays the size of the private save data in blocks and KB.
+</td></tr><tr><td>SubBanner</td><td>Displays the size of the sub-banner 
+in blocks and in KB. When a sub-banner is configured, a fixed size of 16
+ KB is displayed. Otherwise, 0 KB is displayed.
+</td></tr></tbody>
+</table>
+<p>
+The size occupied by the NAND application, <code>TitleSize</code>, is 
+calculated using the following formula. This is not the sum of the 
+displayed block counts, but rather the sum of the byte counts which is 
+then converted into a block count.
+</p>
+<table class="plain" style="width:0"><tbody><tr><td>
+<pre>Size (in KB) occupied by a NAND application = SRL size (in KB) rounded up to 16 KB + 
+                           the public save data size (in KB) + 
+                           the private save data size (in KB) + 
+                           the sub-banner size (in KB) + 
+                           16 KB 
+Size (in blocks) occupied by a NAND application = Size (in KB) occupied by the NAND application rounded up to 128 KB
+</pre>
+</td></tr></tbody></table>
+
+<h5>Starting NAND Applications</h5>
+<p>
+Press START to run the selected NAND application. Once the NAND 
+application is started, TWL Nmenu will give up all control. To return to
+ TWL Nmenu, you must run TWL Nmenu again.
+</p>
+
+<h5>Deleting NAND Applications</h5>
+<p>
+Press the X Button to uninstall the selected NAND application from NAND.
+ Even if a NAND application is deleted, information about the fact that 
+it used to be installed remains within the TWL system. For applications 
+in this state, only the Game Code will be displayed in light blue within
+ the list on the lower screen. Furthermore, performing a <i>delete</i> operation on applications in this state will remove all traces of them.
+</p>
+
+<h5>Clearing the Private Save Data of NAND Applications</h5>
+<p>
+All private save data of the selected NAND application is deleted. The 
+TWL system provides a feature that allows the user to back up NAND 
+applications to SD Cards. However, the private save data region will not
+ be backed up by this feature. Because the private save data is not 
+backed up, it will be cleared when the system memory is restored from a 
+backup. For this reason, NAND applications must consider the case in 
+which only the private save data is cleared. This situation can be 
+recreated by using TWL Nmenu to clear the private save data.
+</p>
+
+<h5>Deleting NAND Applications of the Same Type</h5>
+<p>
+When deleting NAND applications of the same type, delete all NAND 
+applications that are the same as the selected NAND application from the
+ perspective of whether the NAND applications have been deleted. For 
+example, if an undeleted NAND application has been selected, all 
+undeleted NAND applications will be deleted.
+</p>
+
+
+<br clear="all">
+
+<h4>SD Mode<br>Card Mode</h4>
+<div class="screen"><img class="main" src="twlnmenu_files/SD_main_0.png"><br><img src="twlnmenu_files/SD_sub_0.png"></div>
+<div class="screen"><img class="main" src="twlnmenu_files/SD_main_1.png"><br><img src="twlnmenu_files/SD_sub_1.png"></div>
+<p>
+In <b>SD</b> mode and <b>Card</b> mode, the files on the SD Card or DS Card will be displayed on the lower screen.<br> In this mode, you can import TAD files.<font color="#ff0000"> File and directory names are not displayed if they use characters that cannot be converted to Shift_JIS.</font>
+</p>
+<p>
+<b>Card</b> mode can be used only when Twl Nmenu has been started as a 
+NAND application. Furthermore, a DS card must be inserted into the card 
+slot before Twl Nmenu is started. A DS card inserted after starting Twl 
+Nmenu will not be recognized.
+</p>
+<p>
+Each item in the list displayed on the lower screen shows information about a NAND application in the following format:
+</p>
+<table class="plain" style="width:0"><tbody><tr><td>
+<pre>05. 866,240  backupSample.tad
+    -------  ----------------
+    1        2
+</pre>
+</td></tr></tbody></table>
+<table class="plain" style="width:30em"><tbody><tr><td>
+<ol>
+<li>File size or TAD file size in the directory
+</li><li>File name or directory name
+</li></ol>
+</td></tr></tbody></table>
+
+<br clear="left">
+
+<p>
+The controls for this mode are shown in the table below.
+</p>
+
+<table class="table">
+<tbody>
+<tr><th>Button</th><th>Operation
+</th></tr><tr><td>←→  </td><td>Switches modes.
+</td></tr><tr><td>↑↓  </td><td>Selects a file or directory.
+</td></tr><tr><td>A</td><td>Imports a TAD file when a TAD file is selected.<br>Moves to the given directory when a directory is selected.
+</td></tr><tr><td>B</td><td>Moves up one directory.
+</td></tr><tr><td>X</td><td>Moves to the root directory.
+</td></tr><tr><td>R + A</td><td>Imports all .tad files within the directory.
+</td></tr><tr><td>L</td><td>Moves to the next page on the upper screen.
+</td></tr><tr><td>SELECT</td><td>Toggles between showing and hiding the description of the controls.
+</td></tr></tbody>
+</table>
+
+<p>
+The following information is shown on the upper screen:
+</p>
+
+<p>
+Page １
+</p>
+<table class="table">
+<tbody>
+<tr><th colspan="2">Item</th><th>Description
+</th></tr><tr><th colspan="2">Hardware</th><td>Displays information related to the TWL system.
+</td></tr><tr><th>&nbsp;&nbsp;
+</th><td>BoxCount</td><td>•&nbsp;<code>used</code> indicates the number of installed NAND applications.<br>•&nbsp;<code>free</code> indicates the remaining number of NAND applications that can be installed.
+</td></tr><tr><th colspan="2">Media</th><td>Displays media-related information. This is always 0 in <b>Card</b> mode.
+</td></tr><tr><th rowspan="2">&nbsp;&nbsp;
+</th><td>Free</td><td>Displays the available space in blocks and KB.
+</td></tr><tr><td>Total</td><td>Displays the total space in blocks and KB.
+</td></tr></tbody>
+</table>
+
+<p>
+Page ２
+</p>
+<table class="table">
+<tbody>
+<tr><th colspan="2">File</th><td>Displays information related to the selected file.
+</td></tr><tr><th rowspan="6">&nbsp;&nbsp;
+</th><td>CompanyCode</td><td>Displays the Company Code in ASCII and hexadecimal.
+</td></tr><tr><td>InitialCode</td><td>Displays the Game Code in ASCII and hexadecimal.
+</td></tr><tr><td>GameVersion</td><td>Displays the game version and the version that has been imported in the system memory.
+</td></tr><tr><td>FileName</td><td>Displays the file name.
+</td></tr><tr><td>LastUpdate</td><td>Displays the date last modified on the SD Card. This is always 0 in <b>Card</b> mode.
+</td></tr></tbody>
+</table>
+
+<h5>Importing TAD Files</h5>
+<p>
+Install a TAD file created with <a href="file:///Users/lillianskinner/Downloads/twlsetup/TwlSDK/TwlSDK/man/en_US/tools/maketad.html"><code>maketad</code></a> in the TWL system. If a NAND application having the same game code is already installed, it will be overwritten.<br>Save
+ data is initialized if any of the following are changed: the size of 
+the public save data region, the size of the private save data region, 
+or the presence of a sub-banner.
+</p>
+
+<h5>Importing TwlNmenu and NandFiler</h5>
+<p>
+When <code>TwlNmenu.tad</code> or <code>NandFiler.tad</code> is imported from the <code>$TwlSDK/bin/ARM9-TS/Rom</code> directory, the following error may be displayed.
+</p>
+<table class="plain" style="width:0"><tbody><tr><td>
+<pre>Failed to import ****.tad.
+The data may be corrupt. (-1022)
+</pre>
+</td></tr></tbody></table>
+<p>
+In this case, you can normally install it by re-importing it.
+</p>
+<h2>Location</h2>
+<p>
+<code>$TwlSDK/bin/ARM9-TS/Rom/TwlNmenu.srl</code><br> <code>$TwlSDK/bin/ARM9-TS/Rom/TwlNmenu.tad</code><br>
+</p>
+
+
+<h2>See Also</h2>
+
+
+<h2>Revision History</h2>
+<p>
+2009/08/20 Added a note regarding initialization of save data.<br>2009/05/27 Added a note about importing <code>TwlNmenu.tad</code> and <code>NandFiler.tad</code> files.<br>2009/05/22 Added SubBanner in NAND mode. Explained how <code>TitleSize</code> is calculated. <br>2009/04/30 Added a cautionary note about file and directory names in SD mode. <br>2008/10/16 Added information related to Card mode and displaying Japanese. <br>2008/07/11 Added support for a <code>TwlNmenu</code> update. <br>2008/04/25 Deleted ROM mode, Backup, and Restore. <br>2008/03/19 Made descriptions compliant with the terminology. Adjusted phrasing.<br>2007/12/20 Initial version.
+</p>
+
+
+<hr><p>CONFIDENTIAL</p>
+
+</body></html>

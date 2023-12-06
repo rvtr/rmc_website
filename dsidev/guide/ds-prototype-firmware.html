@@ -2,37 +2,11 @@
 title: Flashing DS Prototype Firmware
 layout: dsiware
 ---
-<style>
-  .float-container {
-    border: 0px solid #fff;
-    font-size: 0;
-  }
-
-  .float-child1 {
-    width: 40%;
-    height: 40%;
-    float: left;
-    padding: 1vw;
-  }
-
-  .float-child2 {
-    width: 20%;
-    height: 40%;
-    float: right;
-    padding: 1vw;
-  }
-
-  .tab {
-    margin-left: 40px;
-  }
-</style>
-<div class="float-container">
-  <div class="float-child1">
-    <div class="container" style="width:100%;">
-      <div class="" style="position:static;">
-        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_u.png" style="width:94vw;position:static;">
-      </div>
-      <div class="othertext" style="width:93vw;background-size: 100% 100%;background-image: url('https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_widepromptnobar.png');position:static;">
+   <div class="devinfo-container-main releasepage">
+      <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
+      <div style="background-image: url('https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;">
+      <div class="devinfo-main" style="position:relative;">
+        <div style="text-align:right;"><a href="https://github.com/rvtr/rvtr.github.io/edit/master{{ page.url }}" target="_blank">Edit</a></div>
         <h1>Flashing DS prototype firmware to real hardware</h1>
         <span style="color:red;"><b>Note that there is a chance of bricking your console</span>, and  this may prevent some games from running. I am not liable for any damage caused through this guide. By following this guide, you accept that you, and you alone, are responsible for anything that happens to your console.</b>
 
@@ -81,7 +55,7 @@ layout: dsiware
   </tr>
 </table>
 <span style="color:orange;">*</span>the firmware itself runs fine, but the
-touchscreen won't work in games. Can be fixed by flashing a different firmware
+touchscreen won't work in games. This is likely due to using prototype touchscreen configuration.
 <h3>Prerequisites:</h3>
 <ol>
   - Flashcart<br>
@@ -164,12 +138,11 @@ original creator required you to build everything yourself. Credits go to them
 for creating the flashing tool
 <a href="https://github.com/CTurt/CFW-Suite">https://github.com/CTurt/CFW-Suite</a>
 <br><br>
-Guide originally written for GBAtemp on 2022/12/24. Instructions and testing by <a href="https://gbatemp.net/members/is1982.507976/">IS1982/rmc</a> (that's me!).
-<br>Huge thanks to<a href="https://gbatemp.net/threads/flashing-prototype-ds-firmware-on-real-hardware.623680/post-10032449"> KleinesSinchen on GBAtemp for guide suggestions!</a>
-<!--        TESTING: <special></special>-->
+Guide originally written for GBAtemp on 2022/12/24. Instructions and testing by <a href="https://gbatemp.net/members/rvtr.507976/">rvtr / rmc</a> (that's me!).
+<br>Thanks to<a href="https://gbatemp.net/threads/flashing-prototype-ds-firmware-on-real-hardware.623680/post-10032449"> KleinesSinchen on GBAtemp for guide suggestions!</a>
         <br><br>
       </div>
-    </div>
-    <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_d.png" style="width:94vw;margin-right:10%:margin-top:3%;">
-  </div>
-</div>
+      </div>
+      <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
+   </div>
+

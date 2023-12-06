@@ -1,0 +1,20 @@
+# Todo
+- [X] Make index generate cards for every program in CSV (exclude duplicates)
+- [X] Add TWL or NTR option in CSV
+- [X] Reorder CSV to make more sense
+- [X] Make things mobile friendly and usable:
+	- [X] Index
+	- [X] Info page
+	- [X] Nav bar
+	- [X] Release pages
+	- [X] Copyright
+- [ ] Rewrite pages
+	- [ ] TwlNmenu (skip for now)
+	- [ ] NandFiler (skip for now)
+	- [X] DS Game Card To SD
+- [X] Make ~~good~~ mediocre 404 page with appropriately themed error
+- [ ] Contact page
+- [X] Unmark incomplete pages as listed in CSV
+- [X] Smaller image sizes
+- [ ] Make all screenshots use screenshot class
+- [X] Fix generated home menu preview

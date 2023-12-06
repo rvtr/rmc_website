@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="IBM WebSphere Studio Homepage Builder Version 7.0.0.0 for Windows">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>WMTestTool</title>
+<link rel="stylesheet" href="WMTestTool_files/nitro.css" type="text/css">
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<h1 align="left">WMTestTool</h1>
+<h2>Overview</h2>
+<code>WMTestTool</code> is a program made to test the TWL and DS 
+wireless features. When the program is started, the MAC address is 
+displayed in the lower portion of the screen. The MAC address is the 
+value obtained with <a href="file:///Users/lillianskinner/Downloads/twlsetup/TwlSDK/TwlSDK/man/en_US/os/ownerInfo/OS_GetMacAddress.html"><code>OS_GetMacAddress</code></a>. The following four items will be displayed on the main menu:
+<table border="1" width="100%">
+  <tbody>
+	<tr>
+<td width="200"><b>Scan Test</b></td>
+      <td width="800">
+		Can perform a check on the GGID and TGID. <br> Uses <a href="file:///Users/lillianskinner/Downloads/twlsetup/TwlSDK/TwlSDK/man/en_US/wm/wm/WM_StartScan.html"><code>WM_StartScan</code></a>. When using a wireless LAN access point, the SSID will be displayed in the GGID field.
+      </td>
+    </tr>
+	<tr>
+<td width="200"><b>ScanEx Test</b></td>
+      <td width="800">
+		Can perform a check on the GGID and TGID. <br> Uses <a href="file:///Users/lillianskinner/Downloads/twlsetup/TwlSDK/TwlSDK/man/en_US/wm/wm/WM_StartScanEx.html"><code>WM_StartScanEx</code></a>. When using a wireless LAN access point, the SSID will be displayed in the GGID field.
+      </td>
+    </tr>
+	<tr>
+<td width="200"><b>MeasureChannel Test</b></td>
+      <td width="800">
+		Displays the usage rate of a designated channel. This rate will be a 
+value from 0-100, and larger values indicate more crowding. <br> Uses <a href="file:///Users/lillianskinner/Downloads/twlsetup/TwlSDK/TwlSDK/man/en_US/wm/wm/WM_MeasureChannel.html"><code>WM_MeasureChannel</code></a>.
+      </td>
+    </tr>
+    <tr>
+<td width="200"><b>Noise Mode</b></td>
+      <td width="800">
+		Transmits jamming on a designated channel. <br> Uses a command for non-public testing.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h2>Scan Test</h2>
+Select items by pressing Up and Down on the +Control Pad. Pressing Left 
+and Right on the +Control Pad will change the parameters. Start the scan
+ by pressing the A Button, and end it with the B Button.
+<table border="1" width="100%">
+  <tbody>
+	<tr>
+<td width="200"><b>Channel</b></td>
+      <td width="800">
+		When set to seek, this scans through channels 1, 7, and 13. <br> When a value between 1 and 13 is designated, only that channel will be searched. <br> However, even in that case the parent devices on a number of neighboring channels may be found.
+	  </td>
+	</tr>
+	<tr>
+<td width="200"><b>MaxChannelTime</b></td>
+      <td width="800">
+		Maximum amount of time to search on a single channel. <br> This time can be configured in the range of 10-300 milliseconds.
+	  </td>
+	</tr>
+  </tbody>
+</table>
+
+<h2>ScanEx Test</h2>
+Select items by pressing Up and Down on the +Control Pad. Pressing Left 
+and Right on the +Control Pad will change the parameters. Start ScanEx 
+by pressing the A Button, and end it with the B Button.
+<table border="1" width="100%">
+  <tbody>
+	<tr>
+<td width="200"><b>Channel</b></td>
+      <td width="800">
+		Designates a channel to scan. <br> When set to 1, 7, or 13, <code>0x1041</code> is configured to the channelList of <a href="file:///Users/lillianskinner/Downloads/twlsetup/TwlSDK/TwlSDK/man/en_US/wm/wm/WMScanExParam.html"><code>WMScanExParam</code></a>. <br>
+ When a value between 1 and 13 is designated, only that channel will be 
+searched. However, even in that case the parent devices on a number of 
+neighboring channels may be found. <br> When the ScanType is Active, all channels from 1 to 13 are designated.
+	  </td>
+	</tr>
+	<tr>
+<td width="200"><b>MaxChTime</b></td>
+      <td width="800">
+		Maximum amount of time to search on a single channel. <br> This time can be configured in the range of 10-300 milliseconds. <br> When the ScanType is Active, this value is fixed at 50 milliseconds.
+	  </td>
+	</tr>
+	<tr>
+<td width="200"><b>ScanType</b></td>
+      <td width="800">
+		Configures the ScanType. <br> Be aware that the DS parent device can only be found in Passive mode.
+	  </td>
+	</tr>
+  </tbody>
+</table>
+
+<h2>MeasureChannel Test</h2>
+Select items by pressing Up and Down on the +Control Pad. Pressing Left 
+and Right on the +Control Pad will change the parameters. Start 
+MeasureChannel with the A Button, and end it with the B Button.
+<table border="1" width="100%">
+  <tbody>
+	<tr>
+<td width="200"><b>Channel</b></td>
+      <td width="800">
+		Designates the channel on which to execute MeasureChannel. <br> Keep in mind that this will have an effect on the usage rates of neighboring channels.
+	  </td>
+	</tr>
+	<tr>
+<td width="200"><b>MeasureTime</b></td>
+      <td width="800">
+		Configures the scan time (in milliseconds). <br> A value of 10-1000 in increments of 10 can be configured.
+	  </td>
+	</tr>
+  </tbody>
+</table>
+
+<h2>Noise Mode</h2>
+Select items by pressing Up and Down on the +Control Pad. Pressing Left 
+and Right on the +Control Pad will change the parameters. Start noise 
+generation with the A Button, and end it with the B Button. Once noise 
+generation has started, the number of times noise is generated or not 
+generated will be displayed.
+<table border="1" width="100%">
+  <tbody>
+	<tr>
+<td width="200"><b>Channel</b></td>
+      <td width="800">
+		Configures the channel that generates the noise. <br> A value of 1-13 can be configured here. <br> Keep in mind that this will influence a number of neighboring channels.
+	  </td>
+	</tr>
+	<tr>
+<td width="200"><b>Noise rate</b></td>
+      <td width="800">
+		Configures the noise generation rate. <br> Noise generation or non-generation is determined randomly for each frequency interval. <br> Make sure that this rate is the amount of time that the radio waves are being emitted rather than the strength of those waves. <br>
+ Changes can be made even after noise generation starts. Note that a 
+noise rate of 100 percent is an extreme case and this state is not 
+sustainable in a real environment.
+	  </td>
+	</tr>
+	<tr>
+<td width="200"><b>Frequency</b></td>
+      <td width="800">
+		Cycle (in milliseconds) that determines whether noise is generated or not generated. A value from 5-50 can be configured here.
+	  </td>
+	</tr>
+  </tbody>
+</table>
+<h2>Location</h2>
+<p><code>$TwlSDK/bin/ARM9-TS/Rom/WMTestTool.srl</code></p>
+
+<h2>See Also</h2>
+
+<h2>Revision History</h2>
+
+<p>
+2008/09/29 Transplanted from NITRO-SDK.<br> 2005/08/04 Added a note regarding the noise rate.<br> 2005/07/08 Changed the display for the wireless LAN access point.<br> 2005/03/03 Initial version.
+</p>
+<hr><p>CONFIDENTIAL</p>
+</body></html>

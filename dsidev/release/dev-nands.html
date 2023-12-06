@@ -2,43 +2,11 @@
 title: Classroom + MangaON DSi dev NANDs
 layout: dsiware
 ---
-<style>
-  .float-container {
-    border: 0px solid #fff;
-    font-size: 0;
-  }
-
-  .float-child1 {
-    width: 40%;
-    height: 40%;
-    float: left;
-    padding: 1vw;
-  }
-
-  .float-child2 {
-    width: 20%;
-    height: 40%;
-    float: right;
-    padding: 1vw;
-  }
-
-  .tab {
-    margin-left: 40px;
-  }
-
-  table,
-  th {
-    border: 1px solid black;
-  }
-</style>
-<div class="float-container">
-  <div class="float-child1">
-    <div class="container" style="width:100%;">
-      <div class="" style="position:static;">
-        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_u.png" style="width:94vw;position:static;">
-      </div>
-      <div class="othertext" style="width:93vw;background-size: 100% 100%;background-image: url('https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_widepromptnobar.png');position:static;">
-      <div style="width:98.5%;">
+   <div class="devinfo-container-main releasepage">
+      <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
+      <div style="background-image: url('https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;">
+      <div class="devinfo-main" style="position:relative;">
+        <div style="text-align:right;"><a href="https://github.com/rvtr/rvtr.github.io/edit/master{{ page.url }}" target="_blank">Edit</a></div>
         <h1>Classroom + MangaON DSi dev NANDs</h1>
         <p> The following 8 NAND dumps are from various DSi development units (and 2 retail), some of which were used for developing the Classroom DSi and MangaON. Each console is briefly explained below, along with downloads links for each backup. A development cartridge containing the KART program has also been included in this release. <br>Many thanks to <a href="https://www.instagram.com/collection_nintendo/" target="_blank">@collection_nintendo</a> on Instagram for providing the dumps. <br>
           <br> Additional thanks to MaxiBash and xp for finding deleted content in the dumps and researching these consoles. Please check out <a href="https://gbatemp.net/blogs/release-nintendo-dsi-development-units-with-a-hint-of-classrooms-and-mangas.19460/" target="_blank">MaxiBash's blog article</a> for a bit more backstory to each DSi.
@@ -78,13 +46,15 @@ layout: dsiware
         <h2 id="classroom">Development mode Classroom DSis (v1.3J_dev)</h2>
         <p> These are dumps of 4 different <a href="https://wiki.raregamingdump.ca/index.php/Nintendo_DS_Classroom" target="_blank">Classroom DSis</a> in development mode. Very little is known about them, though they may have been used to test and develop classroom software. 5 of these are known to exist and were sold on Yahoo Auctions Japan around June of 2023. Those units were labelled as K04 through to K08. @collection_nintendo managed to win 4 of the 5 consoles, only missing K05. <br>
           <br> Almost every DSi contains a program called "camera KART". We believe it is sort of augmented reality test, with KART standing for Kyoshitsuji Augmented Reality Test. We haven't completely figured out what it does, and likely never will with just the 3 of us (<a href="https://discord.gg/se9yQBeX3e" target="_blank">help us</a>), though we have a rough idea from seeing the program run. The bottom screen has a camera recognition value (shown as <code>recog</code>) which increases when it sees recognizable patterns. It responds well to images of tiles, static, and QR codes, giving a recognition of as high as 40. When the recognition is high enough, it will display a model from NitroFS on the top screen. <br>
-          <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/KART_with_cake.png" style="width:auto;height:20%;" alt="KART screenshot">
-          <br>
-          <br> We don't have the patterns required to get a high enough recongnition to see the models in action, but we did extract and view the models externally. From first to last, "man_02", "pika", and "cube". <br>
-          <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/man_02.png" style="width:25%;height:auto;" alt="man_02 model">
-          <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/pika.png" style="width:25%;height:auto;" alt="pika model">
-          <br>
-          <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/cube.gif" style="width:50%;height:auto;" alt="cube model">
+          <div class="screenshot">
+          <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/KART_with_cake.png" alt="KART screenshot">
+          </div>
+          We don't have the patterns required to get a high enough recongnition to see the models in action, but we did extract and view the models externally. From first to last, "man_02", "pika", and "cube". <br><br>
+          <div class="screenshot">
+          <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/man_02.png" alt="man_02 model">
+          <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/pika.png" alt="pika model">
+          <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/cube.gif" alt="cube model">
+          </div>
         <h3>Downloads</h3>
         <a href="https://cdn.randommeaninglesscharacters.com/releases/VJF100031225_v1.3J_dev_K04.zip">Classroom DSi K04 NAND</a>
         <br>
@@ -105,43 +75,49 @@ layout: dsiware
         <a href="https://cdn.randommeaninglesscharacters.com/releases/NAND_KART_all_versions.zip">All KART versions</a>
         <br>
         <h3>Photos</h3>
-        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/classroom_front.png" style="width:49%;height:auto;" alt="Classroom top">
-        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/classroom_back.png" style="width:49%;height:auto;" alt="Classroom bottom">
-        <br>
-        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/classroom_open.jpg" style="width:60%;height:auto;" alt="Classroom turned on">
+        <div class="screenshot">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/classroom_front.png" alt="Classroom top">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/classroom_back.png" alt="Classroom bottom">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/classroom_open.jpg" alt="Classroom turned on">
+        </div>
         </p>
         <hr>
         <h2 id="kart">KART development cartridge</h2>
         <p>This copy of KART was flashed to a TWL development cartrdidge. It appears to be a later build than the NAND versions from before, including features such as swapping cameras (X button), freezing the camera (START, SELECT, or B button), and changing the frame rate (Y button). You can also toggle a blank pixel in the center of the camera with the left shoulder button.
         <br>
-        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/KART_with_cat.png" style="width:auto;height:20%;" alt="KART screenshot">
-        <br>
+        <div class="screenshot">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/KART_with_cat.png" alt="KART screenshot">
+        </div>
         There are no models inside of this KART, and the layout slightly changed by removing the "CAMERA KART" text and TIME.
         <br>
         <br>
         We tried dumping KART through multiple tools, some made specifically for TWL dev carts, though nothing worked properly. Each dump had some section that was corrupt, as seen below. The first table is a dump from <a href="/dsidev/dsgamecardtosd.html">DS Game Card to SD</a>, and the second table is from <a href="https://github.com/DS-Homebrew/GodMode9i" target="_blank">GodMode9i</a>.
-        <br>
-        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/KART_dsgcsd_failure.png" style="width:auto;height:10%;" alt="KART bad regions with DS Game Card to SD">
-        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/KART_gm9i_failure.png" style="width:auto;height:10%;" alt="KART bad regions with GodMode9i">
-        <br>
+        <br><br>
+        <div class="screenshot">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/KART_dsgcsd_failure.png" alt="KART bad regions with DS Game Card to SD">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/KART_gm9i_failure.png" alt="KART bad regions with GodMode9i">
+        </div>
         While each dump by itself is incomplete, there is enough good data between the two to piece together a working dump. Huge thanks to xp and MaxiBash for figuring this out. This combined dump works perfectly and should match the original data on the cartridge.
         <h3>Downloads</h3>
         <a href="https://cdn.randommeaninglesscharacters.com/releases/Cartridge_KART.zip">KART development cartridge dump</a>
         <h3>Photos</h3>
-        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/KART_front.png" style="width:20%;height:auto;" alt="KART cartridge top">
-        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/KART_back.png" style="width:21.6%;height:auto;" alt="KART cartridge bottom">
-        <br>
+        <div class="screenshot">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/KART_front.png" alt="KART cartridge top">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/KART_back.png" alt="KART cartridge bottom">
+        </div>
         </p>
         <hr>
         <h2 id="mangaon">MangaON development DSi (v1.0J_dev)</h2>
         <p> This DSi was used for the development of <a href="https://web.archive.org/web/20090205212450/http://nintendo.joystiq.com/2008/12/22/japan-now-to-have-two-wiiware-manga-services/" target="_blank">MangaON</a>, Sunsoft's unreleased service for WiiWare and DSiWare that would have distributed comics and manga. Articles from that time mention Dragon Ball and One Piece manga being offered, as well as others from Shonen Jump later on. The DSi we found would have been on display at <a href="https://www.inside-games.jp/article/img/2008/12/20/32805/62896.html" target="_blank">Jump Festa 2009</a> for people to try and learn about MangaOn. <br>While somewhat hard to see, photos of the event show the DSis in action. In fact, there's a chance this exact unit (or the very edge of it at least) is shown here: <br>
-          <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/mangaon_in_real_life.jpg" style="width:70%;height:auto;" alt="Jump Festa MangaON stand">
-          <br>
-          <br> The MangaON DSi used to have the MangaON service installed, though it was overwritten by the home menu, suggesting that someone updated the console after the event was over. <br> Only the first of 1.4mb of 16.3mb are still present, or roughly 10%. We have the build date from 2008/12/17 at 18:52:11, banner, arm7/9 binaries, and part of the file that holds the comic data (comic.bin), though we can't check the comic because there is not documentation on the format. We have about 1mb of 12mb for the comic data, so if someone figures out the format we believe the first couple pages may be recoverable. <br>
-          <br> The MangaON DSi also has the oldest known version of <a href="/dsidev/nandfiler.html">NandFiler</a> with a unique banner design and layout. <br>
+          <div class="screenshot">
+          <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/mangaon_in_real_life.jpg" alt="Jump Festa MangaON stand">
+          </div>
+          The MangaON DSi used to have the MangaON service installed, though it was overwritten by the home menu, suggesting that someone updated the console after the event was over. <br> Only the first of 1.4mb of 16.3mb are still present, or roughly 10%. We have the build date from 2008/12/17 at 18:52:11, banner, arm7/9 binaries, and part of the file that holds the comic data (comic.bin), though we can't check the comic because there is not documentation on the format. We have about 1mb of 12mb for the comic data, so if someone figures out the format we believe the first couple pages may be recoverable. <br>
+          <br> The MangaON DSi also has the oldest known version of <a href="/dsidev/nandfiler.html">NandFiler</a> with a unique banner design and layout. <br><br>
+          <div class="screenshot">
           <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/nandfiler.gif" alt="NandFiler icon">
-          <br>
-          <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/nandfiler.png" style="width:auto;height:20%;" alt="NandFiler screenshot">
+          <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/nandfiler.png" alt="NandFiler screenshot">
+        </div>
         <h3>Downloads</h3>
         <a href="https://cdn.randommeaninglesscharacters.com/releases/VJF100001242_v1.0J_dev_Jump_Festa_2009_-_MangaON.zip">MangaON DSi NAND</a>
         <br>
@@ -153,10 +129,11 @@ layout: dsiware
         <br>
         <a href="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/NandFiler_1.0J.srl">NandFiler</a>
         <h3>Photos</h3>
-        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/mangaon_front.png" style="width:49%;height:auto;" alt="MangaON top">
-        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/mangaon_back.png" style="width:49%;height:auto;" alt="MangaON bottom">
-        <br>
-        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/mangaon_open.png" style="width:60%;height:auto;" alt="MangaON turned on">
+        <div class="screenshot">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/mangaon_front.png" alt="MangaON top">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/mangaon_back.png" alt="MangaON bottom">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/mangaon_open.png" alt="MangaON turned on">
+        </div>
         </p>
         <hr>
         <h2 id="altron">Altron development DSi (v1.2J_dev)</h2>
@@ -174,10 +151,11 @@ layout: dsiware
         <a href="https://cdn.randommeaninglesscharacters.com/releases/TJH101232355_v1.4.5J_For_dealers_and_explainers.zip">For dealers and explainers DSi NAND</a>
         <br>
         <h3>Photos</h3>
-        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/for-dealers-and-explainers_front.png" style="width:49%;height:auto;" alt="For dealers and explainers top">
-        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/for-dealers-and-explainers_back.png" style="width:49%;height:auto;" alt="For dealers and explainers bottom">
-        <br>
-        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/for-dealers-and-explainers_open.png" style="width:60%;height:auto;" alt="For dealers and explainers turned on">
+        <div class="screenshot">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/for-dealers-and-explainers_front.png" alt="For dealers and explainers top">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/for-dealers-and-explainers_back.png" alt="For dealers and explainers bottom">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/release/classroom/for-dealers-and-explainers_open.png" alt="For dealers and explainers turned on">
+        </div>
         </p>
         <hr>
         <h2 id="nzone">Nintendo Zone Box DSi (v1.4.1J)</h2>
@@ -192,7 +170,5 @@ layout: dsiware
         </div>
       </div>
       </div>
-    </div>
-    <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_d.png" style="width:94vw;margin-right:10%:margin-top:3%;">
-  </div>
-</div>
+      <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
+   </div>

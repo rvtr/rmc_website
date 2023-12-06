@@ -1,21 +1,111 @@
+@import '/assets/bootstrap/css/bootstrap.min.css';
+
 @font-face {
   font-family: dsifont;
-  src: url(https://cdn.randommeaninglesscharacters.com/assets-dsi/font/nintendo_NTLGDB_001.ttf);
+  src: url(/assets/font/nintendo_NTLGDB_001.ttf);
 }
 @font-face {
   font-family: dsifont-bios;
-  src: url(https://cdn.randommeaninglesscharacters.com/assets-dsi/font/nintendo-DS-BIOS.ttf);
+  src: url(/assets/font/nintendo-DS-BIOS.ttf);
 }
 @font-face {
   font-family: dsifont-special;
-  src: url(https://cdn.randommeaninglesscharacters.com/assets-dsi/font/NITROIPL_Gaiji.ttf);
+  src: url(/assets/font/NITROIPL_Gaiji.ttf);
 }
 code {
   font-family: dsifont-bios;
+  font-size: 20px;
+  color: green;
+  word-wrap: break-word;
 }
 special {
   font-family: dsifont-special;
 }
+/* https://github.com/gbdev/pandocs/issues/507 */
+.pixelate {
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+/* nav bar */
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  width:95%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1vw;
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+.nav-bracket img {
+  width: 1.5vw;
+}
+.nav-content {
+  width: 90%;
+}
+.nav-content-container {
+  display: flex;
+  width:100%;
+  padding-top: 1vw;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+.nav-content-box {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.nav-content-box-main {
+  width:6vw;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.nav-content-box-sub {
+  width:6vw;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  z-index: 3;
+}
+.nav-content-box-sub:hover {
+  opacity: 1.0;
+}
+.nav-content-box-icon {
+  width: 3.2vw;
+  position: absolute;
+  top: 20%;
+  left: 23%;
+  z-index:2;
+  -ms-interpolation-mode: auto;
+  image-rendering: auto;
+  image-rendering: auto;
+}
+/* NCX navbar */
+.navbar {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+.nav-link:focus, .nav-link:hover img {
+  color: #ffffff;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #000000;
+}
+
 .info {
   padding: 10px;
   background-color: #e6ebf2;
@@ -30,185 +120,332 @@ body {
   background-image: url('https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_dsi_background.jpg');
   font-family: dsifont;
 }
-.nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  padding-left: 3.5%;
-  width: auto;
-  height: auto;
+/* devinfo layout CSS. Shocking, I know! */
+.devinfo-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 10px;
+}
+.devinfo-container-main {
+  position: relative;
+  width: 75%;
+  font-size: 15px
+}
+.devinfo-container-sub {
+  position: relative;
+  width: 19%;
+}
+.devinfo-container-sub2 {
+  display: none;
+}
+.devinfo-main {
+  margin-left:10px;
+  margin-right:10px;
+}
+.devinfo-sub {
+  padding-top:10px;
+  padding-bottom:10px;
+}
+.devinfo-sub2 {
+  margin-left:auto;
+  margin-right:auto;
+  border: 2px solid blue;
+}
+.devcsv-table {
+  /*font-size: 1vw;*/
+  border-spacing: 0;
+}
+.tadding {
+  padding: 0px 5px 0px 5px;
+}
+.devcsv-container {
+  display: grid;
+  grid-template-columns: 30% auto;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;   gap: 10px;
+  font-size: 2vw;
+}
+.devcsv-preview-container { grid-area: 1 / 1 / 2 / 3;width:100%; }
+.devcsv-info { grid-area: 2 / 1 / 3 / 2; }
+.devcsv-info2 { grid-area: 2 / 2 / 3 / 3;margin-top: -18.5%; }
+.devcsv-download { grid-area: 1 / 3 / 3 / 4; } 
+.preview-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.preview-flex {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.preview-text {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  /*  overflow: hidden; */
+  width: 95%;
+  height: 42%;
+
 }
-.navstd {
-  float: left;
+.preview-icon {
+  margin-top: 6.75%;
+  margin-left: 0.25%;
+  width: 12.7%;
 }
-.navalt {
-  float: right;
+.scroller {
+  color:green;
+  padding-top:1vw;
 }
-.container {
-    position: relative;
+.releasepage {
+  margin: auto;
+  width: 97%;
+  padding: 10px;
 }
-.imageOne {
-    z-index: 0;
+/* ======================= mobile only settings ======================= */
+@media only screen and (min-width: 990px) {
+  .devcsv-container {
+    grid-template-columns: auto;
+    padding: 5px;
+    font-size: 1vw;
+  }
+  .devcsv-preview-container { grid-area: 1 / 1 / 2 / 2; }
+  .devcsv-info { grid-area: 2 / 1 / 3 / 2; }
+  .devcsv-info2 { grid-area: 3 / 1 / 4 / 2;margin-top: -41px; }
+  .devcsv-download { grid-area: 4 / 1 / 5 / 2; } 
+  .photo img {
+    height: 300px;
+    width: auto;
+  }
 }
-.imageTwo {
-    z-index: 1;
+@media only screen and (max-width: 990px) {
+  .devinfo-container {
+  flex-direction: column;
+  padding-top: 55px;
+  }
+  .devinfo-container-main {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    width: 100%
+  }
+  .devinfo-container-sub {
+    display: none;
+    width: 25%;
+  }
+  .devinfo-container-sub2 {
+    display: block;
+  }
+  .nav-container {
+    display: none;
+  }
+  .navbar {
+    display: block;
+  }
+  .preview-text {
+    font-size: 20px
+  }
+  .scroller {
+    padding-top: 55px;
+  }
+  .fourohfour {
+    padding-top: 55px;
+  }
+  .releasepage {
+    padding-top: 65px;
+  }
+  .photo img {
+    height: auto;
+    width: 200px;
+  }
 }
-.imageThree {
+/* ======================= for index.html ======================= */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: center;
+  justify-content: space-evenly;
+  padding-left: 10px;
+}
+.parent_or_guardian {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 200px;
+  padding-top: 20px;
+}
+.prompt {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+.prompt_two_a_new_hover {
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  width: 100%;
+  opacity: 0;
   z-index: 2;
 }
-.imageFour {
-  z-index: 3;
-}
-.image {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-}
-.navimgoverlay {
-  opacity: 0.0;
-  text-align: center;
-  float: left;
-  padding-top: .6vw;
-  width: 6vw;
-  height: auto;
-}
-.navimgoverlay:hover {
-  opacity: 1.0;
-  width: 6vw;
-}
-.navimg {
-  text-align: center;
-  float: left;
-  padding-top: .6vw;
-  width: 6vw;
-  height: auto;
-}
-.navicon {
-  text-align: center;
-  float: left;
-  padding-top: 2.1vw;
-  padding-left: 1.38vw;
-  width: 3.2vw;
-  height: auto;
-}
-.navedge {
-  text-align: center;
-  float: left;
-  margin: 1%;
-  width: 1.5vw;
-  height: auto;
-}
-.navpadding li {
-  padding-top: 1.5%;
-}
-.image2 {
-    position: absolute;
-    border-color: #FFFFFF
-    width: auto;
-    height: auto;
-}
-.image3 {
-  position: relative;
-    border-color: #FFFFFF
-    width: auto;
-    height: auto;
-}
-.text {
-    position: absolute;
-    text-align: left;
-    border-color: #FFFFFF;
-    font-size: 30px;
-    font-size: 1vw;
-    padding-top: 2.2vw;
-    padding-left: 6.2vw;
-}
-.text1point5-oopsiesididntplanaheadsoimstupidlycrammingthisinhere {
-    position: absolute;
-    text-align: left;
-    border-color: #FFFFFF;
-    font-size: 30px;
-    font-size: 1vw;
-    padding-top: 3.7vw;
-    padding-left: 6.2vw;
-}
-.text2-electricboogaloo {
-    position: absolute;
-    text-align: left;
-    border-color: #FFFFFF;
-    font-size: 30px;
-    font-size: 1vw;
-    padding-top: 6.5vw;
-    padding-left: 1.6vw;
-}
-.icon {
-    padding-top:2.2vw;
-    margin-left: -9.3vw;
-    z-index: 2;
-}
-.titleimgoverlay {
-  margin: 0% 2% 0%;
-  opacity: 0.0;
-  text-align: center;
-  float: left;
-  width: 16vw;
-  height: auto;
-}
-.titleimgoverlay:hover {
+.prompt_two_a_new_hover:hover {
   opacity: 1.0;
 }
-.titleimg {
-  margin: 0% 2% 0%;
-  text-align: center;
-  float: left;
-  width: 16vw;
+
+.flexception {
+  position: absolute;
+  display: inline-flex;
+  flex-direction: column;
+  z-index: 2;
+  align-items: stretch;
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.flexceptionception {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.flexceptionception_the_flexening {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.prompt_header {
+  padding-left: 10px;
+  text-align: left;
+  font-size: 12px;
+}
+
+.prompt_title {
+  height: 34px;
+}
+
+.prompt_info {
+  padding-top: 3px;
+  text-align: left;
+  font-size: 12px;
+}
+/* ======================= for program pages ======================= */
+.screenshot {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+.screenshot img {
+  width: 300px;
   height: auto;
-  margin-bottom: 10vw;
+  border: 5px solid white;
+  box-shadow: 0px 0px 2px 5px rgb(217,217,217,1);
+  align-self: center;
 }
-.titleedge {
-  text-align: center;
-  float: left;
-  margin: 1%;
-  width: 18vw;
-  height: auto;
+.photo {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 20px;
 }
-.titlepadding li {
-  padding-top: 1.5%;
-  margin: 0% 2% 0%
+.photo img {
+  border: 5px solid white;
+  box-shadow: 0px 0px 2px 5px rgb(217,217,217,1);
+  align-self: center;
 }
-.homeimg {
-  margin: 6% 5% 0%;
-  text-align: center;
-  float: right;
-  width: 16vw;
-  height: auto;
-  margin-bottom: 5vw;
+/* I am so fucking done */
+
+/* ======================= For listing options in a program! ======================= */
+table.menu {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #b2b2b2;
 }
-.hometext {
-    position: absolute;
-    text-align: center;
-    border-color: #FFFFFF;
-    font-size: 40px;
-    font-size: 1.1vw;
+th.menuheader {
+  background-color: #feb0fc;
+  border: 2px solid #e488b1;
+  text-align: left;
+  padding: 4px;
 }
-.hometext_long {
-    position: absolute;
-    text-align: left;
-    border-color: #FFFFFF;
-    font-size: 40px;
-    font-size: .82vw;
+td.menuitem {
+  background-color: #cecece;
+  border: 1px solid #999999;
+  text-align: left;
+  padding: 6px;
 }
-.homeicon {
-    padding-top: 6.99vw;
-    margin-left: -1.59vw;
-    z-index: 2;
+td.menuitem:nth-of-type(1) {
+  background-color: #b2b2b2;
+  font-family: dsifont-bios;
 }
-.othertext {
-    position: absolute;
-    text-align: left;
-    border-color: #FFFFFF;
-    font-size: 15px;
-    padding-top: 1vw;
-    padding-left: 1.2vw;
+td.menuitem2 {
+  background-color: #cecece;
+  border: 1px solid #999999;
+  text-align: left;
+  padding: 6px;
 }
+
+/* ======================= TWL SDK CSS, woah! ======================= */
+    table.twl
+    {
+      margin-top      : 2pt;
+      margin-bottom   : 2pt;
+      /* margin-left: auto;
+      margin-right: auto; */
+      padding-left    : 0pt;
+      padding-right   : 0pt;
+      position      : relative;
+      left        : 12px;
+      font-family     : Arial;
+      font-size     : 10pt;
+      border-style    : none none none none;
+      width       : 80%;
+    }
+
+    table.history td.date /* special case for history table */
+    {
+      text-align      : center;
+      width       : 100;
+    }
+
+    table.history td.version /* special case for history table */
+    {
+      text-align      : center;
+      width       : 100;
+    }
+
+    th.twl,td.twl
+    {
+      padding       : 2pt;
+      border-width    : 2pt;
+      border-style    : none none none none;
+      font-style      : normal;
+    }
+
+    th.twl
+    {
+      background      : #cdd;
+      font-weight     : bold;
+    }
+
+    td.twl
+    {
+      background      : #ddf;
+      font-weight     : normal;
+    }
+
+    td.center
+    {
+      text-align      : center;
+    }
+

@@ -3,27 +3,27 @@
   <head>
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:site_name" content="Random Meaningless Characters (rmc)">
-    {% if page.app == null %}
+    {% if page.app == null -%}
       <title>{{ page.title }} | rmc</title>
       <meta property="og:title" content="{{ page.title }}">
       <meta property="og:image" content="{{ site.url }}/icon.png">
       <meta name="description" content="DS(i) development software documentation and preservation.">
       <meta property="og:description" content="DS(i) development software documentation and preservation.">
       <meta name="keywords" content="dsi, ds, nintendo, dev" />
-    {% else %}
-{% for ENTRY in site.data.dsinfo %}
-  {% if ENTRY.PROGRAM == page.app %}
-    {% if ENTRY.PUBLISHED == "TRUE" %}
+    {%- else -%}
+{%- for ENTRY in site.data.dsinfo -%}
+  {%- if ENTRY.PROGRAM == page.app -%}
+    {%- if ENTRY.PUBLISHED == "TRUE" -%}
       <title>{{ page.app }} | {{ site.title }}</title>
       <meta property="og:title" content="{{ page.app }}">
       <meta property="og:image" content="{{ site.imgurl }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif">
       <meta name="description" content="{{ ENTRY.DESC }} for {{ ENTRY.SYSTEM }}">
       <meta property="og:description" content="{{ ENTRY.DESC }} for {{ ENTRY.SYSTEM }}">
       <meta name="keywords" content="dsi, ds, nintendo, dev, {{ page.app }}" />
-    {% endif %}
-  {% endif %}
-{% endfor %}
-    {% endif %}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+    {%- endif %}
     <link rel="icon" type="image/png" href="/icon.png"/>
     <link rel="stylesheet" type="text/css" href="/assets/css/styledsi.css">
     <link id="pagestyle" rel="stylesheet" type="text/css" href="">

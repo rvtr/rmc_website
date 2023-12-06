@@ -1,8 +1,6 @@
-# randommeaninglesscharacters.com
+# [randommeaninglesscharacters.com](https://randommeaninglesscharacters.com/)
 
-Nintendo DSi development/factory program documentation, as well as some DSi and 3DS guides and additional information.
-
-https://randommeaninglesscharacters.com/
+Nintendo DSi development/factory software preservation.
 
 # License
 This website and the content within it is covered by two licenses. Below is an explanation of the licenses used, and what each license applies to.

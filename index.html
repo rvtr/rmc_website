@@ -2,20 +2,28 @@
 title: Index
 layout: dsiware
 ---
-
 <marquee class="scroller"><code style="font-size:40px;" scrollamount="10">Greetings to ufo, lasscat, togemet2, Rolfie, HudU, xp, Haifisch, MaxiBash, NinjaCheetah, DamiDoop, scalr, pancake, and collection_nintendo! Thanks to everyone  across the web who has dumped, mirrored, or documented these programs. This entire website  was designed and created by me, and me alone (unless you count stack overflow). Sure, it's barely working, but at least it looks nicer and has more information than any other public sites. Y'all need to remember that there's more than just TwlNmenu and NandFiler. Also just include damn links! These programs don't do any good when you can't download and use them. Oh well, at least I've fixed that now... unless you're on my GBAtemp branch. Sorry for the stripped down site. I don't have much of a choice with silly terms of service and DMCA stuff.</code></marquee>
+
 <!-- ^ Real chads up here. -->
 <div style="margin:1%;">
 <div class="info" style="margin-top:1vw;margin-left:auto;margin-right:auto;width:60%;color:black">
 <h4><a href="/dsidev/release/dev-nands.html">Various development NANDs released</a></h4>
 8 new NANDs and 1 dev cart have been jointly released with <a href="https://www.instagram.com/collection_nintendo/" target="_blank">@collection_nintendo</a>, me, MaxiBash, and xp. These NAND dumps are mainly consist of test Classroom DSis, used later in development for attempt at augmented reality. Check it out!
 </div><br>
+   <div class="devinfo-container-main releasepage">
+      <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
+      <div style="background-image: url('https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;">
+      <div class="devinfo-main" style="position:relative;"><br>
 <h2>Welcome to the DS(i) dev app archive!</h2>
 
 <p>This website is aimed at documenting every single Nintendo DS(i) development and factory test program ever released. Many programs have been leaked or dumped, but they're rarely discussed publicly and I worry that they will get lost to time. This site exists to ensure that these apps are always available, along with some documentation.
 <br><br>
 If you want to support this project, send me programs/documents/information via <a href="mailto:lillian@randommeaninglesscharacters.com">my email</a>, or join the discussion in my <a href="https://discord.gg/se9yQBeX3e">discord server</a>. I'm happy to answer any questions you have (no matter how silly they may be), so don't be afraid to shoot me a message.<br><br>Also check out some of my guides and info pages linked in the nav bar!
-<br><hr><br></p>
+</p>
+      </div>
+      </div>
+      <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
+   </div>
 </div>
 <!--
 RGD, your articles are crap,
@@ -78,8 +86,8 @@ Edit: woah this sucks. But the message still goes hard.
       <i>{{ ENTRY.DESC }}</i>
     </div>
   </div>
-  <img class="prompt" src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_prompt.png" />
-  <a href="/dsidev/{{ ENTRY.PROGRAM | downcase }}.html"><img class="prompt_two_a_new_hover" src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_prompthover.png" /></a>
+  <img class="prompt" src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_prompt.png">
+  <a href="/dsidev/{{ ENTRY.PROGRAM | downcase }}.html"><img class="prompt_two_a_new_hover" src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_prompthover.png"></a>
 </div>
     {% endif %}
 {% endfor %}

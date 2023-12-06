@@ -2,4 +2,4 @@
 layout: devinfo
 app: sd2photo
 ---
-SD to Photo is a tool that copies all photos from the SD card to the photo region of NAND. It preserves the filepaths, so <code>sd:/DCIM/100NIN02/HNI_0001.JPG</code> will be stored in NAND as <code>photo:/DCIM/100NIN02/HNI_0001.JPG</code>.<br><br>The app will first display a black screen (loading), switch to red (copying photos), and end on blue (finished).
+SD to Photo is a tool that copies all photos from the SD card to the photo region of NAND while also preserving directories. For example, an image at <code>sd: / DCIM / 100NIN02 / HNI_0001.JPG</code> will be stored in NAND as <code>photo: / DCIM / 100NIN02 / HNI_0001.JPG</code>.<br>This applies to images outside of the DCIM directory, so an image at <code>sd: / testdir / amongus.png</code> will be stored as <code>photo: / testdir / amongus.png</code><br><br>The app will first display a black screen (loading), switch to red (copying photos), and end on blue (finished).

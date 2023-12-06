@@ -2,9 +2,16 @@
 layout: devinfo
 app: DSGameCardToSD
 ---
-	DS Game Card To SD dumps the inserted cartridge to the SD card as
-<code>sd:/&lt;title id&gt;_&lt;yyyy/mm/dd&gt;_&lt;hh/mm/ss&gt;.dmp</code>
-        <div style="text-align:center;"><h1>Screenshots:</h1>
-
-        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/DSGameCardToSD/dsgamecardtosd.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
-        <div style="float: left;width: 36vw;"><img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/DSGameCardToSD/dsgamecardtosd_load_infinite.gif" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div></div>
+DS Game Card To SD is a tool used to dump cartridges to the SD card. Backups are named in the following format:<br>
+<code>sdmc: / &lt;title id&gt;_&lt;yyyymmdd&gt;_&lt;hhmmss&gt;.dmp</code><br>
+<br>
+Backups made with DS Game Card To SD are incomplete due to lacking the secure area. Comments in the source code reveal that Nintendo thought the secure area could not be dumped. To make up for this, DS Game Card To SD will patch the backup with external dumps of the secure area from the SD card.<br>
+<code>sdmc:/&lt;title id&gt;_secure1.dmp</code> (for both NTR and TWL  ROMs)<br>
+<code>sdmc:/&lt;title id&gt;_secure2.dmp</code> (for TWL ROMs only)<br>
+<br>
+This tool can be useful in dumping TWL development cartridges (only if they are dev-signed however). Some homebrew backup software will improperly dump the ARM7/9i binaries, resulting in a bad dump. DS Game Card To SD appears to dump the ARM7/9i binaries properly, meaning the secure area dump from a homebrew tool and the binaries from DS Game Card To SD could be combined to create a good backup.
+        <h1 style="text-align: center;">Screenshots:</h1>
+        <div class="screenshot">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/DSGameCardToSD/dsgamecardtosd.png">
+        <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/DSGameCardToSD/dsgamecardtosd_load_infinite.gif">
+    	</div>

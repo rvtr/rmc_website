@@ -5,6 +5,7 @@ app: TwlSystemUpdater
 <i>Some screenshots and information are from <a href="https://wiki.raregamingdump.ca/index.php/SystemUpdater">Rare Gaming Dump.</a></i>
 <br><br>
 Twl SystemUpdater is a tool used to update DSi development hardware such as the IS-TWL-DEBUGGER or a panda. This does not work on retail units, causing the same <code>-2011</code> error as <a href="/dsidev/twlnmenu.html">TwlNmenu</a> and bricking the console.
+<br><br>
 <h2>TADs in NitroFS</h2>
 Twl SystemUpdater works by loading a set of firmware TADs and <a href="https://dsibrew.org/wiki/Nand:/shared1/TWLCFG0.dat">TWLCFG0.dat</a>/<a href="https://dsibrew.org/wiki/Nand:/shared1/TWLCFG1.dat">TWLCFG1.dat</a> from NitroFS to install onto the target hardware. The updaters are multi-region, so each one contains full sets of firmware TADs for every region. The TADs are sorted into three main folders.
 <br><br>
@@ -29,11 +30,11 @@ These are TADs that are common between both the IS-TWL-DEBUGGER and panda units.
 <code> - <a href="/dsidev/twlnmenu.html">TwlNmenu</a></code> (optional install)<br><br>
 The SystemUpdater chooses whether to install from the <code>debugger</code>or <code>standalone</code> folder based off of the RAM size. 16 MB is TWL CONSOLE (panda and IS-TWL-CAPTURE), while 32 MB is IS_TWL_DEBUGGER.<br><i> - Source: <a href="https://wiki.raregamingdump.ca/index.php/SystemUpdater">RGD</a></i>
 <br><br>
-All the TAD files in NitroFS have been created with <code>maketad_updater</code>, a modified version of <a href="/dsidev/man/maketad.html" target="_blank">maketad</a>. This uses a different key to encrypt the TADs (normally the Wii dev key is used), so the only way to get the decrypted SRLs is by running the SystemUpdater and then extracting the contents from NAND.
+All the TAD files in NitroFS have been created with <code>maketad_updater</code>, a modified version of <a href="/dsidev/man/maketad.html" target="_blank">maketad</a>. This uses a different key to encrypt the TADs (normally the Wii dev key is used), so the only way to get the decrypted SRLs is by running the SystemUpdater and then extracting the contents from NAND.<br><br>
 <h2>Additional ".nand" file</h2>
-There another file in NitroFS called <code>menu_launcher.nand</code> (found in <code>NitroFS/data/common/</code>). Judging from the menu-launcher source code in TwlIPL (TwlIPL/trunk/build/nandfirm/menu-launcher/), this appears to be the <a href="https://dsibrew.org/wiki/Stage2">stage2 bootloader</a>. The <code>.nand</code> file has a version number at the bottom showing that it is SDK 2435, IPL 8325. This is the same as every retail DSi.
+There another file in NitroFS called <code>menu_launcher.nand</code> (found in <code>NitroFS/data/common/</code>). Judging from the menu-launcher source code in TwlIPL (TwlIPL/trunk/build/nandfirm/menu-launcher/), this appears to be the <a href="https://dsibrew.org/wiki/Stage2">stage2 bootloader</a>. The <code>.nand</code> file has a version number at the bottom showing that it is SDK 2435, IPL 8325. This is the same as every retail DSi.<br><br>
 <h2>Changelog</h2>
-This is from an official readme included with the Twl SystemUpdater. You can read the full version <a href="man/twlsystemupdater.html">here</a>.
+This is from an official readme included with the Twl SystemUpdater. You can read the full version <a href="man/twlsystemupdater.html" target="_blank">here</a>.
 <table class="history twl">
 	<tr>
 		<th class="twl">Revision Date</th>
@@ -80,8 +81,9 @@ This is from an official readme included with the Twl SystemUpdater. You can rea
 		<td class="twl">Added support for DSi Menu version 1.0.</td>
 	</tr>
 </table>
-<div style="text-a<code>gn:center;"><h1>Screenshots:</h1>
-        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/img-dsi/TwlSystemUpdater/region_select.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);"></div>
-        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/img-dsi/TwlSystemUpdater/updating.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);padding-bottom:2vw;"></div>
-        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/img-dsi/TwlSystemUpdater/update_success.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);"></div>
-        <div style="float: left;width: 35vw;"><img src="https://cdn.randommeaninglesscharacters.com/img-dsi/TwlSystemUpdater/update_fail.png" style="width:30vw;filter:drop-shadow(0.25rem 0.25rem 0.5rem #000000);"></div></div>
+<div style="text-align:center;"><h1>Screenshots:</h1></div>
+        <div class="screenshot">
+        <img src="https://cdn.randommeaninglesscharacters.com/img-dsi/TwlSystemUpdater/region_select.png">
+        <img src="https://cdn.randommeaninglesscharacters.com/img-dsi/TwlSystemUpdater/updating.png">
+        <img src="https://cdn.randommeaninglesscharacters.com/img-dsi/TwlSystemUpdater/update_success.png">
+        <img src="https://cdn.randommeaninglesscharacters.com/img-dsi/TwlSystemUpdater/update_fail.png"></div>

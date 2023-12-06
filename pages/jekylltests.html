@@ -1,7 +1,7 @@
 ---
 Title: Stuff
 Layout: dsiware
-app: TwlNmenu
+app: test_entry
 ---
 <!--
   Notes on the CSV values:
@@ -24,6 +24,12 @@ app: TwlNmenu
   TITLE:     Program title
   DESC:      Program description as seen on index.html
 -->
+<!--
+Just some idiot notes: 
+  --port XXXX     : set port so multiple jekyll hosts
+  --host 0.0.0.0  : localhost available on network
+-->
+
 
 {% for ENTRY in site.data.dsinfo %}
   {% if ENTRY.PROGRAM == page.app %}
@@ -38,6 +44,91 @@ app: TwlNmenu
   {% endif %}
 {% endfor %}
 
+<style>
+
+
+</style>
+
+{% for ENTRY in site.data.dsinfo -%}
+  {%- if ENTRY.PROGRAM == page.app -%}
+    {%- if ENTRY.PUBLISHED == "TRUE" -%}
+<div style="width:300px;">
+<div class="preview-container">
+  <div class="preview-flex">
+    <div class="preview-text">
+      {{ ENTRY.BANNER }}<br>{{ ENTRY.BANNER1 }}
+    </div>
+    <div class="preview-icon">
+      <img src="{{ site.imgurl }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif" style="width: 100%;object-fit: cover;">
+    </div>
+  </div>
+  {%- if ENTRY.TARGET == "CARD" -%}
+  <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_pink_homemenu_card.png" class="pixelate" style="width:100%;">
+  {%- else -%}
+  <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_pink_homemenu_card.png" class="pixelate" style="width:100%;">
+  {%- endif -%}
+</div>
+</div>
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor %}
+<!--
+{% for ENTRY in site.data.dsinfo -%}
+  {%- if ENTRY.PROGRAM == page.app -%}
+    {%- if ENTRY.PUBLISHED == "TRUE" -%}
+    <div>
+{%- if ENTRY.TARGET == "CARD" -%}
+<div class="preview-bg">
+<img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_pink_homemenu_card.png" class="pixelate">
+</div>
+{%- else -%}
+<div class="preview-bg">
+<img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_pink_homemenu_nand.png" class="pixelate">
+</div>
+{%- endif -%}
+  <div class="preview-container">
+  <div class="preview-text">
+    {{ ENTRY.BANNER }}<br>{{ ENTRY.BANNER1 }}
+  </div>
+  <div class="preview-icon">
+    <img src="{{ site.imgurl }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif">
+  </div>
+  </div>
+</div>
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor %}
+-->
+<!--
+  {% assign ENTRY = site.data.dsinfo | find:"PROGRAM",page.app %}
+<div class="imageTwo" style="position:relative;width:100%;height:14vw;">
+  <div class="homeimg">
+    <div class="container">
+      <div class="imageTwo image2">
+        {% if ENTRY.TARGET == "CARD" %}
+          <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_pink_homemenu_card.png" class="homeimg">
+        {% else %}
+          <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_pink_homemenu_nand.png" class="homeimg">
+        {% endif %}
+      </div>
+      <div class="imageThree image3" style="">
+        {% if ENTRY.BANNER1 == "" %}
+          <div class="hometext" style="padding-top: 2.15vw;">{{ ENTRY.BANNER }}</div>
+        {% else %}
+          <div class="hometext" style="padding-top: 1.5vw;">{{ ENTRY.BANNER }}<br>{{ ENTRY.BANNER1 }}</div>
+        {% endif %}
+      </div>
+          <div class="imageThree image3 homeicon" style="">
+            <img src="{{ site.imgurl }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif" width="12.5%" height="12.5%">
+          </div>
+      </div>
+  </div>
+</div>
+-->
+
+
+
+
 <!-- Check all DS program info -->
 <style>
 table, th, td {
@@ -51,11 +142,11 @@ table, th, td {
     {% if CHECK.PUBLISHED == "TRUE" %}
       <table><tr><td>Is selected</td><td>True!</td></tr><tr><td>Name</td><td>{{ CHECK.PROGRAM }}</td></tr><tr><td>Ver</td><td>{{ CHECK.VERSION }}</td></tr><tr><td>Date</td><td>{{ CHECK.DATE }}</td></tr><tr><td>Type</td><td>{{ CHECK.TYPE }}</td></tr><tr><td>Faketad</td><td>{{ CHECK.FAKETAD }}</td></tr><tr><td>Target</td><td>{{ CHECK.TARGET }}</td></tr><tr><td>System</td><td>{{ CHECK.SYSTEM }}</td></tr><tr><td>Origin</td><td>{{ CHECK.ORIGIN }}</td></tr><tr><td>Credit</td><td>{{ CHECK.CREDIT }}</td></tr><tr><td>Banner</td><td>{{ CHECK.BANNER }}</td></tr><tr><td>Banner1</td><td>{{ CHECK.BANNER1 }}</td></tr><tr><td>Icon Alt</td><td>{{ CHECK.ICON_ALT }}</td></tr><tr><td>Danger</td><td>{{ CHECK.DANGER }}</td></tr><tr><td>Published</td><td>{{ CHECK.PUBLISHED }}</td></tr><tr><td>Title</td><td>{{ CHECK.TITLE }}</td></tr><tr><td>Desc</td><td>{{ CHECK.DESC }}</td></tr></table>
     {% else %}
-      <table><tr><td>Is selected</td><td>False!</td></tr></table>
+      <table><tr><td>Is selected</td><td>False!</td></tr><tr><td>Name</td><td>{{ CHECK.PROGRAM }}</td></tr></table>
     {% endif %}
 {% endfor %}
 
-<!-- because I keep deleting my local copy 
+<!-- because I keep deleting my local copy of the CDN
 {% for ENTRY in site.data.dsinfo %}
       if [ ! -d "{{ ENTRY.PROGRAM }}" ]; then<br>
         mkdir "{{ ENTRY.PROGRAM }}"<br>
@@ -63,3 +154,4 @@ table, th, td {
       wget -O "{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}_{{ ENTRY.VERSION }}{{ ENTRY.DATE }}.{{ ENTRY.TYPE }}" "<a href="{{ site.appurl }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}_{{ ENTRY.VERSION }}{{ ENTRY.DATE }}.{{ ENTRY.TYPE }}">{{ site.appurl }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}_{{ ENTRY.VERSION }}{{ ENTRY.DATE }}.{{ ENTRY.TYPE }}</a>"<br>
 {% endfor %}
 -->
+

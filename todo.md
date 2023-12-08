@@ -16,5 +16,5 @@
 - [ ] Contact page
 - [X] Unmark incomplete pages as listed in CSV
 - [X] Smaller image sizes
-- [ ] Make all screenshots use screenshot class
+- [X] Make all screenshots use screenshot class
 - [X] Fix generated home menu preview

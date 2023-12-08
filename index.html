@@ -58,8 +58,8 @@ Edit: woah this sucks. But the message still goes hard.
 -->
 
 <div class="flex-container">
-{% for ENTRY in site.data.dsinfo %}
-    {% if ENTRY.PUBLISHED == "TRUE" %}
+{% for ENTRY in site.data.dsinfo -%}
+    {%- if ENTRY.PUBLISHED == "TRUE" -%}
 <div class="parent_or_guardian">
   <div class="flexception">
     <div class="flexceptionception">
@@ -72,12 +72,12 @@ Edit: woah this sucks. But the message still goes hard.
           {{ ENTRY.TITLE }}
           </div>
           <div>
-            Target:</b>
-            {% if ENTRY.SYSTEM == "TWL (DSi)" %}
+            <b>Target: </b>
+            {%- if ENTRY.SYSTEM == "TWL (DSi)" -%}
              <span style="color:#ff0000;">{{ ENTRY.SYSTEM }}</span>
-            {% else %}
+            {%- else -%}
              <span style="color:#3399ff;">{{ ENTRY.SYSTEM }}</span>
-            {% endif %}
+            {%- endif -%}
           </div>
         </div>
       </div>
@@ -89,6 +89,6 @@ Edit: woah this sucks. But the message still goes hard.
   <img class="prompt" src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_prompt.png">
   <a href="/dsidev/{{ ENTRY.PROGRAM | downcase }}.html"><img class="prompt_two_a_new_hover" src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_prompthover.png"></a>
 </div>
-    {% endif %}
-{% endfor %}
+    {%- endif -%}
+{%- endfor %}
 </div>

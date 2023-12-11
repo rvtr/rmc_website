@@ -3,7 +3,9 @@ title: rmc
 url: https://randommeaninglesscharacters.com
 shopurl: https://shop.randommeaninglesscharacters.com
 imgurl: https://cdn.randommeaninglesscharacters.com/img-dsi/
-appurl: https://cdn.randommeaninglesscharacters.com/rmc-prg/
+appurl: https://cdn.randommeaninglesscharacters.com/rmc-dsi/
+# appurl: https://archive.org/download/rmc-dsi_v2/
+# if CDN goes all silly skibidi style
 releaseurl: https://cdn.randommeaninglesscharacters.com/assets-dsi/release/
 releaseurl_alt: https://cdn.randommeaninglesscharacters.com/releases/
 plugins:

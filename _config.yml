@@ -1,6 +1,7 @@
 name: rmc
 title: rmc
 url: https://randommeaninglesscharacters.com
+target: whatever # set to "STRIPPED" for no links version (also unlisted to google)
 shopurl: https://shop.randommeaninglesscharacters.com
 imgurl: https://cdn.randommeaninglesscharacters.com/img-dsi/
 appurl: https://cdn.randommeaninglesscharacters.com/rmc-dsi/

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    {% if site.target == "STRIPPED" -%}
+    <meta name="robots" content="noindex">
+    {%- endif %}
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:site_name" content="Random Meaningless Characters (rmc)">
     {% if page.app == null -%}

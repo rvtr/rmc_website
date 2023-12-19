@@ -18,3 +18,4 @@
 - [X] Smaller image sizes
 - [X] Make all screenshots use screenshot class
 - [X] Fix generated home menu preview
+- [ ] Fix blog images

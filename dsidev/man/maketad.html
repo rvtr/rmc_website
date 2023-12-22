@@ -36,7 +36,7 @@ TD,TH{
 </style>
 </head>
 <body>
-<h1><i><a href="/"><--- Back to main site</a></i></h1>
+<span style="font-size:40px;"><i><a href="/"><--- BACK TO MAIN SITE</a></i></span><hr>
 <h1 align="left">maketad</h1>
 <p>
 <i><u>NOTE: This is an edited version of the official README. See the revision history below for a list of changes.</u></i>
@@ -45,9 +45,9 @@ TD,TH{
 
 <p>　<code>maketad</code> is a tool for generating TAD files (<code>.tad</code>) from the specified SRL file. TAD files are used to import applications into the system memory.</p>
 <p>
-TAD files for TWL that are created with this tool can only be imported 
-into TWL development kits. The TWL-SDK environment cannot be used to 
-create TAD files that can run on retail TWL hardware.
+TAD files that are created with this tool can only be imported 
+into TWL development kits. <code>maketad</code> cannot be used to 
+create TAD files that run on retail TWL hardware.
 </p>
 <h2>Downloads</h2>
 <p>
@@ -63,14 +63,14 @@ Standard <code>maketad</code> application. These create TAD files to be imported
   <li><a href="https://cdn.randommeaninglesscharacters.com/tools/maketad/maketad-20090604-3.exe">maketad-20090604-3.exe</a></li>
 </ul>
 <p>
-Updater <code>maketad</code> application. These create TAD files to be used when compiling <a href="/dsidev/twlsystemupdater.html">Twl SystemUpdater</a>. Output TADs are encrypted with an unknown key and so they cannot be decrypted.
+Updater <code>maketad</code> application. These create the TAD files used in <a href="/dsidev/twlsystemupdater.html">Twl SystemUpdater</a>. Output TADs are specially encrypted with the debugger common key (<code>A2FDDDF2E423574AE7ED8657B5AB19D3</code>) and so they will not work on development units.
 </p>
 <ul>
   <li><a href="https://cdn.randommeaninglesscharacters.com/tools/maketad/maketad_updater-20050422.exe">maketad_updater-20050422.exe</a></li>
   <li><a href="https://cdn.randommeaninglesscharacters.com/tools/maketad/maketad_updater-20080523.exe">maketad_updater-20080523.exe</a></li>
 </ul>
 <p>
-Dependancies for <code>maketad</code>.
+Dependencies for <code>maketad</code>.
 </p>
 <ul>
   <li><a href="https://cdn.randommeaninglesscharacters.com/tools/maketad/cygcrypto-0.9.8.dll">cygcrypto-0.9.8.dll</a></li>
@@ -79,9 +79,10 @@ Dependancies for <code>maketad</code>.
   <li><a href="https://cdn.randommeaninglesscharacters.com/tools/maketad/cygz.dll">cygz.dll</a></li>
 </ul>
 <p>
-Additional tools. These are not required, but are recommended for working with TAD files.
+Additional tools for decrypting TADs. These are not required, but are highly recommended.
 <ul>
-  <li><a href="https://cdn.randommeaninglesscharacters.com/tools/maketad/split_tad_console-20090401.exe">split_tad_console-20090401.exe</a> (usage: <code>split_tad_console.exe TADFILE</code>, where TADFILE is a TAD file to decrypt to SRL)</li>
+  <li><a href="https://cdn.randommeaninglesscharacters.com/tools/maketad/split_tad_console-20090401.exe">split_tad_console-20090401.exe</a> - Official Nintendo program but only supports development encrypted TADs. Usage: <code>split_tad_console.exe TADFILE</code></li>
+  <li><a href="https://gist.github.com/rvtr/f1069530129b7a57967e3fc4b30866b4">decrypt_tad.py</a> - Unofficial program but supports development, retail, and update encrypted TADs. Usage: <code>python decrypt_tad.py TADFILE</code>
 </ul>
 </p>
 <h2>Using the Tool</h2>
@@ -102,19 +103,21 @@ Returns 0 when execution completes normally.<br>
 The following are possible reasons for the function to fail.
 </p>
 <ul>
-<li>The provided DLLs (see download section) were not found
-</li><li>Nothing is specified with the <code>-o</code> option
-</li><li>An unknown option was found
-</li><li>Characters other than those from ASCII code <code>0x21</code> through <code>0x7e</code> are included for the game code
-</li><li>A code reserved by the system is being used in the game code (please use <code>-s</code> to bypass the error)
-</li><li>The file is not of the type <code>*.srl</code>
-</li><li>The SRL file cannot be opened or read
-</li><li>An SRL file has not been specified
-</li><li>A TAD file cannot be output
-</li><li>The SRL filename is too long
-</li></ul>
+<li>The provided DLLs (see download section) were not found</li>
+<li>Nothing is specified with the <code>-o</code> option</li>
+<li>An unknown option was found</li>
+<li>Characters other than those from ASCII code <code>0x21</code> through <code>0x7e</code> are included for the game code</li>
+<li>A code reserved by the system is being used in the game code (please use <code>-s</code> to bypass the error)</li>
+<li>The SRL file is not a NAND application</li>
+<li>The file is not of the type <code>*.srl</code></li>
+<li>The SRL file cannot be opened or read</li>
+<li>An SRL file has not been specified</li>
+<li>A TAD file cannot be output</li>
+<li>The SRL filename is too long</li>
+</ul>
 <h2>Revision History</h2>
 <p>
+2023/12/22 Added debugger common key for <code>maketad_updater</code> and linked to script for TAD decryption.<br>
 2023/11/24 Added download links, changed dependancy information, and listed <code>maketad_updater</code> + <code>split_tad_console</code>.<br>
 2023/11/21 Added the <code>-s</code> option<br>
 2009/11/10 Added <b>Return Values</b>.<br>

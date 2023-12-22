@@ -2,15 +2,73 @@
 layout: devinfo
 app: TwlNmenu
 ---
-TwlNmenu is a title manager similar to DevMenu for 3DS. TwlNmenu can install programs in the TAD format, which is an installable format created by Nintendo, similar to the Wii's WADs. <h3>What's this "TAD" thing?</h3>
-<div style="padding-left:2%;">
-  <i>"The installable format, TAD share many similarities to the WAD format, including the same offsets for title ID's and using the same devsign as WADs. A TAD can be resigned using Wii resigning tools and a RVL devkey. However, due to TwlNmenu's anti-tampering methods, the tool lets you not install resigned TAD files."</i> - <a href="https://wiki.raregamingdump.ca/index.php?title=TwlNmenu">RGDWiki</a>
-</div>
-<br>
-<br>TADs are essentially SRLs (NDS ROMs) that have been packaged into an installable format. TAD files can be created with <code>
-  <a href="/dsidev/man/maketad.html" target="_blank">maketad.exe</a>
-</code>, from the TwlSDK (<code>TwlSDK/tools/bin/maketad.exe</code>). Only apps that are installed to the <code>00030004</code> folder are able to be converted to TAD <h4 style="color:red;">Note: DO NOT install TADs on a retail DSi.</h4>Attempting to do so will just result in a <code>-2011</code> error, due to the TAD being unsigned. Resigning the TAD will not work as TwlNmenu protects against this (error code <code>7</code>). Additionally, <span style="color:red;">TwlNmenu will OVERWRITE WHAT IT'S TRYING TO INSTALL</span>, so if it fails, your apps may be deleted. <h3>How can I safely run a TAD?</h3>To run a TAD on retail hardware, you have to decrypt it and extract the SRL. You can use <a href="https://cdn.randommeaninglesscharacters.com/rmc-dsi/decrypt_tad.py">this</a> python script to do so. Usage is <code>python3 decrypt_tad.py [path to file].tad</code>
-<br>Rename the SRL to NDS, and it should work in emulators or on real hardware. 
+TwlNmenu is a tool used to manage NAND apps on the DSi. It has 3 modes: NAND, SD, and CARD. 
+<h2>NAND</h2>
+In NAND mode you can boot, delete, and get info for programs installed to NAND. Only user programs are visible (anything in <code>nand:/title/00030004/</code>). The controls are as follows:
+        <table class="menu">
+            <tr>
+                <th class="menuheader">Button</th>
+                <th class="menuheader">Purpose</th>
+            </tr>
+            <tr>
+                <td class="menuitem">START</td>
+                <td class="menuitem">Boot the selected program.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">X</td>
+                <td class="menuitem">Delete the selected program. Deleting once will remove the app + tmd but keep the ticket as "proof" it was installed. Press <b>X</b> again to fully remove the program.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">R + X</td>
+                <td class="menuitem">Delete all programs of the same type. For example, pressing <b>R + X</b> on a broken program will delete all broken programs, and pressing <b>R + X</b> on an installed program will remove all installed programs.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">Y</td>
+                <td class="menuitem">Delete the private save data of the selected program.</td>
+            </tr>
+        </table>
+The top screen will display information such as the company code, game code, and sizes of the app and save data. NAND mode also displays the status of installed programs. This is shown by highlighting the program name in a specific color.
+        <table class="menu">
+            <tr>
+                <th class="menuheader">Color</th>
+                <th class="menuheader">Status</th>
+            </tr>
+            <tr>
+                <td class="menuitem"><span style="color:black;">Black</span></td>
+                <td class="menuitem">The title is installed without errors.</td>
+            </tr>
+            <tr>
+                <td class="menuitem"><span style="color:blue;">Blue</span></td>
+                <td class="menuitem">The title was deleted from NAND (has a leftover ticket, but no app + tmd).</td>
+            </tr>
+            <tr>
+                <td class="menuitem"><span style="color:red;">Red</span></td>
+                <td class="menuitem">The title is broken (bad app), or it was installed improperly (has an app + tmd, but missing/bad ticket).</td>
+            </tr>
+        </table>
+<h2>SD</h2>
+SD mode allows you to install 
+
+
+
+        <table class="menu">
+            <tr>
+                <th class="menuheader">Button</th>
+                <th class="menuheader">Purpose</th>
+            </tr>
+            <tr>
+                <td class="menuitem">A</td>
+                <td class="menuitem">Install the selected TAD.</td>
+            </tr>
+            <tr>
+                <td class="menuitem">R + A</td>
+                <td class="menuitem">Install all TADs in the current directory.</td>
+            </tr>
+        </table>
+
+
+
+<h2>CARD</h2>
 
 <h1 style="text-align: center;">Screenshots:</h1>
 <div class="screenshot">

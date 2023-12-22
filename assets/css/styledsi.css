@@ -21,6 +21,9 @@ code {
 special {
   font-family: dsifont-special;
 }
+h2 {
+  padding-top:20px;
+}
 /* https://github.com/gbdev/pandocs/issues/507 */
 .pixelate {
   -ms-interpolation-mode: nearest-neighbor;
@@ -371,6 +374,7 @@ table.menu {
   border-collapse: collapse;
   width: 100%;
   background-color: #b2b2b2;
+  margin-bottom: 20px;
 }
 th.menuheader {
   background-color: #feb0fc;
@@ -387,6 +391,7 @@ td.menuitem {
 td.menuitem:nth-of-type(1) {
   background-color: #b2b2b2;
   font-family: dsifont-bios;
+  font-size: 20px;
 }
 td.menuitem2 {
   background-color: #cecece;

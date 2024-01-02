@@ -45,6 +45,7 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
+    json (2.7.1)
     kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -79,12 +80,13 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  jekyll (~> 4.2)
+  jekyll (>= 4.3)
   jekyll-feed
   jekyll-redirect-from
   jekyll-seo-tag
   jekyll-sitemap
-  webrick (~> 1.7)
+  json
+  webrick (>= 1.8)
 
 BUNDLED WITH
    2.4.17

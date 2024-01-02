@@ -11,7 +11,7 @@ A few months ago I came across a <a href="http://imaginglabo.web.fc2.com/DSL-Fw.
 <br><br>
 Because the board and cart use the same chip, the cart can be tricked into reading/writing to the flash chip on the board as if it were just another save chip. This is done by removing the cart's chip, then wiring a plug for the board (<a href="https://www.mouser.ca/ProductDetail/Molex/52991-0308?qs=q8ECNkb1%2FvOSJkJQ%2F5wghA%3D%3D">Molex 52991-0308</a>) to the save chip pads. Pins 5, 7, 9, 11, 13, 17, 27, and 29 of the connector lead directly to the flash chip, so as far as the cart is concerned, the save chip is connected like normal!
 <br>
-<img src="/assets/dsi/blog/UTL-FIRM-WRITER.jpg" style="width:50%;height:auto;">
+<img src="https://cdn.randommeaninglesscharacters.com/blog/2023-04-13-wifi-board-flasher/UTL-FIRM-WRITER.jpg" style="width:50%;height:auto;">
 <br>
 So now the cart can read/write to boards... but what's the point in all of this? Couldn't you just read/write to your firmware with a plain old DS lite?
 <br><br>
@@ -23,15 +23,15 @@ An addition, I've found that fwManager will improperly flash my custom iQue boar
 <br><br>
 If you couldn't tell already, I loved this idea and wanted to create my own board. Sadly the blog's breakout board for the connector wasn't available anywhere, so I had to make a mock up PCB and get a friend to create some gerber files. I got the PCBs printed, got the connector, and then I got to putting it together. I'm not going to talk about the process since it was pretty boring (just soldering a few wires lol) so I'll just jump to the finished product. Warning... it looks AWFUL.
 <br>
-<img src="/assets/dsi/blog/20230413_221212.jpg" style="width:25%;height:auto;">
-<img src="/assets/dsi/blog/20230413_221138.jpg" style="width:21%;height:auto;">
-<img src="/assets/dsi/blog/20230413_221012.jpg" style="width:28%;height:auto;">
+<img src="https://cdn.randommeaninglesscharacters.com/blog/2023-04-13-wifi-board-flasher/20230413_221212.jpg" style="width:25%;height:auto;">
+<img src="https://cdn.randommeaninglesscharacters.com/blog/2023-04-13-wifi-board-flasher/20230413_221138.jpg" style="width:21%;height:auto;">
+<img src="https://cdn.randommeaninglesscharacters.com/blog/2023-04-13-wifi-board-flasher/20230413_221012.jpg" style="width:28%;height:auto;">
 <br>
-<img src="/assets/dsi/blog/20230413_221101.jpg" style="width:43.8%;height:auto;">
+<img src="https://cdn.randommeaninglesscharacters.com/blog/2023-04-13-wifi-board-flasher/20230413_221101.jpg" style="width:43.8%;height:auto;">
 <br>
 Yeah wow that is pretty bad... but not as bad as the inside of the cart! I used some shovelware game I found in the $1 bin. I had previously taken the save chip from it for the iQue stuff, and I ripped up one of the traces. I figured this project would be a good way to make use of the cart even after pretty well ruining it.
 <br>
-<img src="/assets/dsi/blog/20230413_221320.jpg" style="width:43.8%;height:auto;">
+<img src="https://cdn.randommeaninglesscharacters.com/blog/2023-04-13-wifi-board-flasher/20230413_221320.jpg" style="width:43.8%;height:auto;">
 <br>
 Notice that far away red wire? Yeah... that's there because of the ripped up trace. It went all the way to some hole on the other end of the board. Silly me. At least I was still able to solder onto it.
 <br><br>

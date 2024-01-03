@@ -12,8 +12,8 @@ redirect_from: /dsidev/index.html
 8 new NANDs and 1 dev cart have been jointly released with <a href="https://www.instagram.com/collection_nintendo/" target="_blank">@collection_nintendo</a>, me, MaxiBash, and xp. These NAND dumps are mainly consist of test Classroom DSis, used later in development for attempt at augmented reality. Check it out!
 </div><br>
    <div class="devinfo-container-main releasepage">
-      <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
-      <div style="background-image: url('https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;">
+      <img src="{{ site.imgui }}menu/dsi_red_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
+      <div style="background-image: url('{{ site.imgui }}menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;">
       <div class="devinfo-main" style="position:relative;"><br>
 <h2>Welcome to the DS(i) dev app archive!</h2>
 
@@ -23,7 +23,7 @@ If you want to support this project, send me programs/documents/information via 
 </p>
       </div>
       </div>
-      <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
+      <img src="{{ site.imgui }}menu/dsi_red_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
    </div>
 </div>
 <!--
@@ -65,7 +65,7 @@ Edit: woah this sucks. But the message still goes hard.
   <div class="flexception">
     <div class="flexceptionception">
       <div>
-        <img src="{{ site.imgurl }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif" width="52px" height="52px">
+        <img src="{{ site.imgdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif" width="52px" height="52px">
       </div>
       <div class="prompt_header">
         <div class="flexceptionception_the_flexening">
@@ -87,8 +87,8 @@ Edit: woah this sucks. But the message still goes hard.
       <i>{{ ENTRY.DESC }}</i>
     </div>
   </div>
-  <img class="prompt" src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_prompt.png">
-  <a href="/dsidev/{{ ENTRY.PROGRAM | downcase }}.html"><img class="prompt_two_a_new_hover" src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_prompthover.png"></a>
+  <img class="prompt" src="{{ site.imgui }}menu/dsi_red_prompt.png">
+  <a href="/dsidev/{{ ENTRY.PROGRAM | downcase }}.html"><img class="prompt_two_a_new_hover" src="{{ site.imgui }}menu/dsi_prompthover.png"></a>
 </div>
     {%- endif -%}
 {%- endfor %}

@@ -19,7 +19,7 @@
     {%- if ENTRY.PUBLISHED == "TRUE" -%}
       <title>{{ page.app }} | {{ site.title }}</title>
       <meta property="og:title" content="{{ page.app }}">
-      <meta property="og:image" content="{{ site.imgurl }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif">
+      <meta property="og:image" content="{{ site.imgdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif">
       <meta name="description" content="{{ ENTRY.DESC }} for {{ ENTRY.SYSTEM }}">
       <meta property="og:description" content="{{ ENTRY.DESC }} for {{ ENTRY.SYSTEM }}">
       <meta name="keywords" content="dsi, ds, nintendo, dev, {{ page.app }}" />

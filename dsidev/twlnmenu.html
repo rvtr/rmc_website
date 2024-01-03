@@ -2,8 +2,8 @@
 layout: devinfo
 app: TwlNmenu
 ---
-TwlNmenu is a tool used to manage NAND apps on the DSi. It has 3 modes: NAND, SD, and CARD. 
-<h2>NAND</h2>
+TwlNmenu is a tool used to manage installed software on the NAND. It can install programs in the TAD format (similar to the Wii's WADs) as well as boot and delete programs. TwlNmenu has three modes: NAND, SD, and CARD. 
+<h2>NAND mode</h2>
 In NAND mode you can boot, delete, and get info for programs installed to NAND. Only user programs are visible (anything in <code>nand:/title/00030004/</code>). The controls are as follows:
         <table class="menu">
             <tr>
@@ -46,8 +46,18 @@ The top screen will display information such as the company code, game code, and
                 <td class="menuitem">The title is broken (bad app), or it was installed improperly (has an app + tmd, but missing/bad ticket).</td>
             </tr>
         </table>
-<h2>SD</h2>
-SD mode allows you to install 
+<h2>SD mode</h2>
+SD mode allows you to select and install TAD files to NAND from the SD card.
+<br><br>
+<h4>Quick explaination of TADs</h4>
+TADs are essentially SRLs (NDS ROMs) that have been packaged into an installable format. TADs are very similar to the Wii's WADs, sharing the same offsets and signing. A <a href="https://github.com/rvtr/TwlIPL/commit/baca65d35d5d62d815c88e6374b895d5b0755277">commit in TwlIPL</a> explains the similarity by showing that TADs were derived from WADs.
+<br><br>
+TAD files are created with <a href="https://randommeaninglesscharacters.com/dsidev/man/maketad.html" target="_blank">maketad</a> from the TWL SDK. Only NAND apps such as DSiWare can be coverted into TADs.
+<br><br>
+Signing in TADs is very important when installing. If a TAD is not signed for the target console (eg. dev signing on a retail DSi) then <code>TwlNmenu</code> will fail. Anything created with the standard <code>maketad</code> will be dev signed and only work on dev units, though there is also a <code>maketad_updater</code> used for updater signing in <a href="">Twl SystemUpdater</a>.
+<br><br>
+<h4>Using SD mode</h4>
+
 
 
 
@@ -68,13 +78,13 @@ SD mode allows you to install
 
 
 
-<h2>CARD</h2>
+<h2>CARD mode</h2>
 
 <h1 style="text-align: center;">Screenshots:</h1>
 <div class="screenshot">
-    <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/TwlNmenu/twlnmenu_nand.png">
-    <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/TwlNmenu/twlnmenu_sd.png">
-    <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/TwlNmenu/twlnmenu_install.png">
-    <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/screenshots/TwlNmenu/twlnmenu_2011.png">
+    <img src="{{ site.imgdir }}{{ page.app }}/screenshots/twlnmenu_nand.png">
+    <img src="{{ site.imgdir }}{{ page.app }}/screenshots/twlnmenu_sd.png">
+    <img src="{{ site.imgdir }}{{ page.app }}/screenshots/twlnmenu_install.png">
+    <img src="{{ site.imgdir }}{{ page.app }}/screenshots/twlnmenu_2011.png">
 </div>
 

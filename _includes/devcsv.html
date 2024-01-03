@@ -18,13 +18,13 @@ function warnFaketad() {
       {{ ENTRY.BANNER }}<br>{{ ENTRY.BANNER1 }}
     </div>
     <div class="preview-icon">
-      <img src="{{ site.imgurl }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif" style="width: 100%;object-fit: cover;">
+      <img src="{{ site.imgdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif" style="width: 100%;object-fit: cover;">
     </div>
   </div>
   {%- if ENTRY.TARGET == "CARD" -%}
-  <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_pink_homemenu_card.png" class="" style="width:100%;">
+  <img src="{{ site.imgui }}menu/dsi_pink_homemenu_card.png" class="" style="width:100%;">
   {%- else -%}
-  <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_pink_homemenu_nand.png" class="" style="width:100%;">
+  <img src="{{ site.imgui }}menu/dsi_pink_homemenu_nand.png" class="" style="width:100%;">
   {%- endif -%}
 </div>
 </div>
@@ -53,29 +53,29 @@ function warnFaketad() {
         <tr>
         {%- case ENTRY.DANGER -%}
           {%- when "high" -%}
-            <td class="tadding"><a href="{{ site.appurl }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}_{{ ENTRY.VERSION }}{{ ENTRY.DATE }}.{{ ENTRY.TYPE }}" onclick="return confirm(`WARNING:\n\nTHIS PROGRAM WILL PERMANENTLY BRICK YOUR CONSOLE. Do not run this program unless in an emulator.\n\nBy clicking ''OK'' to download, you accept that you and you alone are responsible for any damages caused to your devices. I may provide this software, but running it is ultimately up to you, and so I will not be held responsible for the outcomes of your actions.\n\nPlease press ''Cancel'' if you do not agree to this or would not like to download the software.`)">{{ ENTRY.VERSION }}{{ ENTRY.DATE }}</a></td>
+            <td class="tadding"><a href="{{ site.appdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}_{{ ENTRY.VERSION }}{{ ENTRY.DATE }}.{{ ENTRY.TYPE }}" onclick="return confirm(`WARNING:\n\nTHIS PROGRAM WILL PERMANENTLY BRICK YOUR CONSOLE. Do not run this program unless in an emulator.\n\nBy clicking ''OK'' to download, you accept that you and you alone are responsible for any damages caused to your devices. I may provide this software, but running it is ultimately up to you, and so I will not be held responsible for the outcomes of your actions.\n\nPlease press ''Cancel'' if you do not agree to this or would not like to download the software.`)">{{ ENTRY.VERSION }}{{ ENTRY.DATE }}</a></td>
           {%- when "medium" -%}
-            <td class="tadding"><a href="{{ site.appurl }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}_{{ ENTRY.VERSION }}{{ ENTRY.DATE }}.{{ ENTRY.TYPE }}" onclick="return confirm(`WARNING:\n\nThis program has a risk of permanently bricking your console. Only use if you know what you are doing.\n\nBy clicking ''OK'' to download, you accept that you and you alone are responsible for any damages caused to your devices. I may provide this software, but running it is ultimately up to you, and so I will not be held responsible for the outcomes of your actions.\n\nPlease press ''Cancel'' if you do not agree to this or would not like to download the software.`)">{{ ENTRY.VERSION }}{{ ENTRY.DATE }}</a></td>
+            <td class="tadding"><a href="{{ site.appdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}_{{ ENTRY.VERSION }}{{ ENTRY.DATE }}.{{ ENTRY.TYPE }}" onclick="return confirm(`WARNING:\n\nThis program has a risk of permanently bricking your console. Only use if you know what you are doing.\n\nBy clicking ''OK'' to download, you accept that you and you alone are responsible for any damages caused to your devices. I may provide this software, but running it is ultimately up to you, and so I will not be held responsible for the outcomes of your actions.\n\nPlease press ''Cancel'' if you do not agree to this or would not like to download the software.`)">{{ ENTRY.VERSION }}{{ ENTRY.DATE }}</a></td>
           {%- else -%}
-            <td class="tadding"><a href="{{ site.appurl }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}_{{ ENTRY.VERSION }}{{ ENTRY.DATE }}.{{ ENTRY.TYPE }}">{{ ENTRY.VERSION }}{{ ENTRY.DATE }}</a></td>
+            <td class="tadding"><a href="{{ site.appdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}_{{ ENTRY.VERSION }}{{ ENTRY.DATE }}.{{ ENTRY.TYPE }}">{{ ENTRY.VERSION }}{{ ENTRY.DATE }}</a></td>
         {%- endcase -%}
       {%- endif -%}
       {%- if ENTRY.TYPE == "tad" -%}
         {%- case ENTRY.DANGER -%}
           {%- when "high" -%}
-            <td class="tadding"><a href="{{ site.appurl }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}_{{ ENTRY.VERSION }}{{ ENTRY.DATE }}.{{ ENTRY.TYPE }}" onclick="return confirm(`WARNING:\n\nTHIS PROGRAM WILL PERMANENTLY BRICK YOUR CONSOLE. Do not run this program unless in an emulator.\n\nBy clicking ''OK'' to download, you accept that you and you alone are responsible for any damages caused to your devices. I may provide this software, but running it is ultimately up to you, and so I will not be held responsible for the outcomes of your actions.\n\nPlease press ''Cancel'' if you do not agree to this or would not like to download the software.`)">(tad)</a>
+            <td class="tadding"><a href="{{ site.appdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}_{{ ENTRY.VERSION }}{{ ENTRY.DATE }}.{{ ENTRY.TYPE }}" onclick="return confirm(`WARNING:\n\nTHIS PROGRAM WILL PERMANENTLY BRICK YOUR CONSOLE. Do not run this program unless in an emulator.\n\nBy clicking ''OK'' to download, you accept that you and you alone are responsible for any damages caused to your devices. I may provide this software, but running it is ultimately up to you, and so I will not be held responsible for the outcomes of your actions.\n\nPlease press ''Cancel'' if you do not agree to this or would not like to download the software.`)">(tad)</a>
               {%- if ENTRY.FAKETAD == "True" -%}
                 <a href="#" onclick="warnFaketad()">(!)</a>
               {%- endif -%}
             </td>
           {%- when "medium" -%}
-            <td class="tadding"><a href="{{ site.appurl }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}_{{ ENTRY.VERSION }}{{ ENTRY.DATE }}.{{ ENTRY.TYPE }}" onclick="return confirm(`WARNING:\n\nThis program has a risk of permanently bricking your console. Only use if you know what you are doing.\n\nBy clicking ''OK'' to download, you accept that you and you alone are responsible for any damages caused to your devices. I may provide this software, but running it is ultimately up to you, and so I will not be held responsible for the outcomes of your actions.\n\nPlease press ''Cancel'' if you do not agree to this or would not like to download the software.`)">(tad)</a>
+            <td class="tadding"><a href="{{ site.appdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}_{{ ENTRY.VERSION }}{{ ENTRY.DATE }}.{{ ENTRY.TYPE }}" onclick="return confirm(`WARNING:\n\nThis program has a risk of permanently bricking your console. Only use if you know what you are doing.\n\nBy clicking ''OK'' to download, you accept that you and you alone are responsible for any damages caused to your devices. I may provide this software, but running it is ultimately up to you, and so I will not be held responsible for the outcomes of your actions.\n\nPlease press ''Cancel'' if you do not agree to this or would not like to download the software.`)">(tad)</a>
           {%- if ENTRY.FAKETAD == "True" -%}
             <a href="#" onclick="warnFaketad()">(!)</a>
           {%- endif -%}
             </td>
           {%- else -%}
-            <td class="tadding"><a href="{{ site.appurl }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}_{{ ENTRY.VERSION }}{{ ENTRY.DATE }}.{{ ENTRY.TYPE }}">(tad)</a>
+            <td class="tadding"><a href="{{ site.appdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}_{{ ENTRY.VERSION }}{{ ENTRY.DATE }}.{{ ENTRY.TYPE }}">(tad)</a>
             {% if ENTRY.FAKETAD == "True" %}
               <a href="#" onclick="warnFaketad()">(!)</a>
             {%- endif -%}

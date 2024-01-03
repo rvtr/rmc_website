@@ -2,10 +2,16 @@ name: rmc
 title: rmc
 url: https://randommeaninglesscharacters.com
 target: whatever # set to "STRIPPED" for no links version (also unlisted to google)
+
 shopurl: https://shop.randommeaninglesscharacters.com
-imgurl: https://cdn.randommeaninglesscharacters.com/img-dsi/
-appurl: https://cdn.randommeaninglesscharacters.com/rmc-dsi/
-# appurl: https://archive.org/download/rmc-dsi_v2/
+imgdir: https://cdn.randommeaninglesscharacters.com/dsi-photos/
+appdir: https://cdn.randommeaninglesscharacters.com/dsi-devapps/
+toolsdir: https://cdn.randommeaninglesscharacters.com/tools/
+guidedir: https://cdn.randommeaninglesscharacters.com/guide/
+blogdir: https://cdn.randommeaninglesscharacters.com/blog/
+
+imgui: https://cdn.randommeaninglesscharacters.com/ui-images/
+# appdir: https://archive.org/download/rmc-dsi_v2/
 # if CDN goes all silly skibidi style
 releaseurl: https://cdn.randommeaninglesscharacters.com/assets-dsi/release/
 releaseurl_alt: https://cdn.randommeaninglesscharacters.com/releases/

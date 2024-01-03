@@ -3,8 +3,8 @@ title: Flashing DS Prototype Firmware
 layout: dsiware
 ---
    <div class="devinfo-container-main releasepage">
-      <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
-      <div style="background-image: url('https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;">
+      <img src="{{ site.imgui }}menu/dsi_red_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
+      <div style="background-image: url('{{ site.imgui }}menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;">
       <div class="devinfo-main" style="position:relative;">
         <div style="text-align:right;"><a href="https://github.com/rvtr/rvtr.github.io/edit/master{{ page.url }}" target="_blank">Edit</a></div>
         <h1>Flashing DS prototype firmware to real hardware</h1>
@@ -65,13 +65,13 @@ touchscreen won't work in games. This is likely due to using prototype touchscre
 <hr>
 <h3>Setup:</h3>
 <ol type="1">
-   1.  Download the <code><a href="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-prototype-firmware/proto-firm-040615.zip">040615</a></code>, <code><a href="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-prototype-firmware/proto-firm-40820D.zip">40820D</a></code>, or <code><a href="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-prototype-firmware/proto-firm-X2B.zip">X2B</a></code> prototype firmware.<br>
+   1.  Download the <code><a href="{{ site.guidedir }}ds-prototype-firmware/proto-firm-040615.zip">040615</a></code>, <code><a href="{{ site.guidedir }}ds-prototype-firmware/proto-firm-40820D.zip">40820D</a></code>, or <code><a href="{{ site.guidedir }}ds-prototype-firmware/proto-firm-X2B.zip">X2B</a></code> prototype firmware.<br>
     2. There should be a <code>.bin</code> file in your downloaded firmware. Extract it and rename it to
     <code>proto.bin</code>.<br>
     3. Create a folder on the root of your flashcart's SD card called
     <code>firmwares</code> and copy <code>proto.bin</code> to that.
 <br>
-    4. Download <code><a href="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-prototype-firmware/fwManager.zip">fwManager.zip</a></code><span style="color:red">*</span> at the
+    4. Download <code><a href="{{ site.guidedir }}ds-prototype-firmware/fwManager.zip">fwManager.zip</a></code><span style="color:red">*</span> at the
     bottom of this guide. (this is the tool we'll use to flash the firmware)<br>
     5. Extract <code>fwManager.nds</code> from <code>fwManager.zip</code> and copy it to the
     root of your flashcart's SD card.
@@ -85,7 +85,7 @@ Each firmware copy contains WiFi board specific data that lets it connect wirele
 2. Open the dumped firmware in a hex editor. It will be called something like <code>FWD7F1EE.BIN</code>, and is found on the root of your flashcart SD card.<br>
 3. Select offset <code>0x2A</code> to <code>0x1FF</code> and copy it.<br>
 <div style="padding-left:3%;">
-<img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-ique-firmware/ique_hex.png" style="width:50%;height:auto;"><br>
+<img src="{{ site.guidedir }}ds-ique-firmware/ique_hex.png" style="width:50%;height:auto;"><br>
 </div>
 4. Open the prototype firmware (<code>proto.bin</code>) in the hex editor.<br>
 5. Select offset <code>0x2A</code> to <code>0x1FF</code>  on the prototype firmware and paste the data from before.<br>
@@ -100,8 +100,8 @@ Each firmware copy contains WiFi board specific data that lets it connect wirele
     battery cover. (see below images)
 </ol>
 <div style="text-align:center;">
-<img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-prototype-firmware/SL1-phat.png" style="width:36%;height:auto;">
-<img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-prototype-firmware/SL1-lite.png" style="width:50.4%;height:auto;">
+<img src="{{ site.guidedir }}ds-prototype-firmware/SL1-phat.png" style="width:36%;height:auto;">
+<img src="{{ site.guidedir }}ds-prototype-firmware/SL1-lite.png" style="width:50.4%;height:auto;">
 </div><br>
 <span style="color:red"><b>WARNING: Make sure to not short a DS Lite</span> (this can happen by touching the metal
     point contacts right next to <code>SL1</code>). Use an improvised tool that is insulated to the
@@ -127,8 +127,8 @@ period of time, you've likely bricked it. But don't worry,
 <a href="https://gbatemp.net/blogs/i-fixed-a-ds-lite-with-another-ds-lite.15450/#ubs-comment-200532">this</a> blog entry for info on how to restore a bricked DS.
 <br><br>
 <div style="text-align:center;">
-<img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-prototype-firmware/proto-firm-40820D.png" style="width:49%;height:auto;">
-<img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/guide/ds-prototype-firmware/proto-firm-040615.png" style="width:47.45%;height:auto;">
+<img src="{{ site.guidedir }}ds-prototype-firmware/proto-firm-40820D.png" style="width:49%;height:auto;">
+<img src="{{ site.guidedir }}ds-prototype-firmware/proto-firm-040615.png" style="width:47.45%;height:auto;">
 </div>
 <br>
 <hr>
@@ -143,6 +143,6 @@ Guide originally written for GBAtemp on 2022/12/24. Instructions and testing by 
         <br><br>
       </div>
       </div>
-      <img src="https://cdn.randommeaninglesscharacters.com/assets-dsi/menu/dsi_red_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
+      <img src="{{ site.imgui }}menu/dsi_red_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
    </div>
 

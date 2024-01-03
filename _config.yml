@@ -13,8 +13,7 @@ blogdir: https://cdn.randommeaninglesscharacters.com/blog/
 imgui: https://cdn.randommeaninglesscharacters.com/ui-images/
 # appdir: https://archive.org/download/rmc-dsi_v2/
 # if CDN goes all silly skibidi style
-releaseurl: https://cdn.randommeaninglesscharacters.com/assets-dsi/release/
-releaseurl_alt: https://cdn.randommeaninglesscharacters.com/releases/
+releasedir: https://cdn.randommeaninglesscharacters.com/releases/
 plugins:
   - jekyll-feed
   - jekyll-sitemap

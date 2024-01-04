@@ -7,7 +7,7 @@ app: TwlSystemUpdater
 Twl SystemUpdater is a tool used to update DSi development hardware such as the IS-TWL-DEBUGGER or a panda. This does not work on retail units, causing the same <code>-2011</code> error as <a href="/dsidev/twlnmenu.html">TwlNmenu</a> and bricking the console.
 <br><br>
 <h2>TADs in NitroFS</h2>
-Twl SystemUpdater works by loading a set of firmware TADs and <a href="https://dsibrew.org/wiki/Nand:/shared1/TWLCFG0.dat">TWLCFG0.dat</a>/<a href="https://dsibrew.org/wiki/Nand:/shared1/TWLCFG1.dat">TWLCFG1.dat</a> from NitroFS to install onto the target hardware. The updaters are multi-region, so each one contains full sets of firmware TADs for every region. The TADs are sorted into three main folders.
+Twl SystemUpdater works by loading a set of firmware TADs and <a href="https://dsibrew.org/wiki/Nand:/shared1/TWLCFG0.dat" target="_blank">TWLCFG0.dat</a>/<a href="https://dsibrew.org/wiki/Nand:/shared1/TWLCFG1.dat" target="_blank">TWLCFG1.dat</a> from NitroFS to install onto the target hardware. The updaters are multi-region, so each one contains full sets of firmware TADs for every region. The TADs are sorted into three main folders.
 <br><br>
 <b><code>NitroFS:/data/debugger/</code></b><br>
 These TADs are for the IS-TWL-DEBUGGER.<br>
@@ -28,11 +28,11 @@ These are TADs that are common between both the IS-TWL-DEBUGGER and panda units.
 <code> - HNHx</code>, Nintendo DS Cart Whitelist<br>
 <code> - <a href="/dsidev/nandfiler.html">NandFiler</a></code> (optional install)<br>
 <code> - <a href="/dsidev/twlnmenu.html">TwlNmenu</a></code> (optional install)<br><br>
-The SystemUpdater chooses whether to install from the <code>debugger</code>or <code>standalone</code> folder based off of the RAM size. 16 MB is TWL CONSOLE (panda and IS-TWL-CAPTURE), while 32 MB is IS_TWL_DEBUGGER.<br><i> - Source: <a href="https://wiki.raregamingdump.ca/index.php/SystemUpdater">RGD</a></i>
+The SystemUpdater chooses whether to install from the <code>debugger</code>or <code>standalone</code> folder based off of the RAM size. 16 MB is TWL CONSOLE (panda and IS-TWL-CAPTURE), while 32 MB is IS_TWL_DEBUGGER.<br><i> - Source: <a href="https://wiki.raregamingdump.ca/index.php/SystemUpdater" target="_blank">RGD</a></i>
 <br><br>
-All the TAD files in NitroFS have been created with <code>maketad_updater</code>, a modified version of <a href="/dsidev/man/maketad.html" target="_blank">maketad</a>. This uses a different key to encrypt the TADs (normally the Wii dev key is used), so the only way to get the decrypted SRLs is by running the SystemUpdater and then extracting the contents from NAND.<br><br>
+All the TAD files in NitroFS have been created with <code>maketad_updater</code>, a modified version of <a href="/dsidev/man/maketad.html" target="_blank">maketad</a>. Instead of using the normal Wii development key for encryption, <code>maketad_updater</code> uses the debugger common key (<code>A2FDDDF2E423574AE7ED8657B5AB19D3</code>). As a result these TADs can't be installed with TwlNmenu and can only be decrypted with {{ site.decrypt_tad }}.<br><br>
 <h2>Additional ".nand" file</h2>
-There another file in NitroFS called <code>menu_launcher.nand</code> (found in <code>NitroFS/data/common/</code>). Judging from the menu-launcher source code in TwlIPL (TwlIPL/trunk/build/nandfirm/menu-launcher/), this appears to be the <a href="https://dsibrew.org/wiki/Stage2">stage2 bootloader</a>. The <code>.nand</code> file has a version number at the bottom showing that it is SDK 2435, IPL 8325. This is the same as every retail DSi.<br><br>
+There another file in NitroFS called <code>menu_launcher.nand</code> (found in <code>NitroFS/data/common/</code>). Judging from the menu-launcher source code in <a href="{{ site.twlipl }}/tree/master/build/nandfirm/menu-launcher/" target="_blank">TwlIPL</a>, this appears to be the <a href="https://dsibrew.org/wiki/Stage2" target="_blank">stage2 bootloader</a>. The <code>.nand</code> file has a version number at the bottom showing that it is SDK 2435, IPL 8325. This is the same as every retail DSi.<br><br>
 <h2>Changelog</h2>
 This is from an official readme included with the Twl SystemUpdater. You can read the full version <a href="man/twlsystemupdater.html" target="_blank">here</a>.
 <table class="history twl">

@@ -15,9 +15,9 @@
 	- [ ] TwlNmenu
 	- [ ] NandFiler (skip for now)
 	- [X] DS Game Card To SD
-	- [ ] Main page text
+	- [X] Main page text
 	- [ ] Add new version to MachineSettings
-	- [ ] Debugger key for TADs with SystemUpdater and maketad
+	- [X] Debugger key for TADs with SystemUpdater and maketad
 - [X] Make ~~good~~ mediocre 404 page with appropriately themed error
 - [ ] Contact page
 - [X] Smaller image sizes

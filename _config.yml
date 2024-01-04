@@ -1,19 +1,31 @@
 name: rmc
 title: rmc
 url: https://randommeaninglesscharacters.com
-target: whatever # set to "STRIPPED" for no links version (also unlisted to google)
 
+#==================================================================================#
+#                LINKS AND PATHS (for a slightly more modular site)                #
+#==================================================================================#
+#     internal links/paths
 shopurl: https://shop.randommeaninglesscharacters.com
 imgdir: https://cdn.randommeaninglesscharacters.com/dsi-photos/
 appdir: https://cdn.randommeaninglesscharacters.com/dsi-devapps/
+releasedir: https://cdn.randommeaninglesscharacters.com/releases/
 toolsdir: https://cdn.randommeaninglesscharacters.com/tools/
 guidedir: https://cdn.randommeaninglesscharacters.com/guide/
 blogdir: https://cdn.randommeaninglesscharacters.com/blog/
+releasedir: https://cdn.randommeaninglesscharacters.com/releases/
 
 imgui: https://cdn.randommeaninglesscharacters.com/ui-images/
+
+#     external links
 # appdir: https://archive.org/download/rmc-dsi_v2/
-# if CDN goes all silly skibidi style
-releasedir: https://cdn.randommeaninglesscharacters.com/releases/
+decrypt_tad: <a href="https://gist.github.com/rvtr/f1069530129b7a57967e3fc4b30866b4/">decrypt_tad.py</a>
+twlipl: https://github.com/rvtr/TwlIPL/
+twltoolsred: https://github.com/rvtr/TwlToolsRED/
+# Note on github links:
+#   - tree/<commithash>/path/to/file.txt
+#   - tree/master/path/to/file.txt
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap

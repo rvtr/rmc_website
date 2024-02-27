@@ -1,0 +1,35 @@
+---
+title: Running TADs on a retail DSi
+layout: dsiware
+---
+   <div class="devinfo-container-main releasepage">
+      <img src="{{ site.imgui }}menu/dsi_red_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
+      <div style="background-image: url('{{ site.imgui }}menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;">
+      <div class="devinfo-main" style="position:relative;">
+        <div style="text-align:right;"><a href="https://github.com/rvtr/rvtr.github.io/edit/master{{ page.url }}" target="_blank">Edit</a></div>
+<h1>How to run TADs on a retail DSi</h1>
+
+TADs are a format used to install DSiWare titles onto Nintendo DSi development units (see: <a href="/dsidev/twlnmenu.html">TwlNmenu</a>. The format is nearly identical to the WAD on Wii. Sadly nearly all TADs are made exclusively for developers and won't install on normal consoles...
+<br><br>
+<b><span style="color:green;">Thankfully we have decryption tools! Just use these to turn your TADs into normal DSi ROMs (<code>.nds</code>, <code>.srl</code>, <code>.dsi</code>).</span></b> 
+<br><br>
+
+<h3><code>split_tad_console.exe</code></h3>
+<p>An unofficial program but supports development, retail, and update encrypted TADs. This is made for <b>Python v3</b> only!<br>USAGE: <code>python decrypt_tad.py TADFILE</code><br>
+<ul>
+  <li><a href="https://gist.github.com/rvtr/f1069530129b7a57967e3fc4b30866b4">decrypt_tad.py</a></li>
+</ul>
+</p>
+
+<h3><code>split_tad_console.exe</code></h3>
+<p>This is the official Nintendo tool for extracting TADs. This is make for <b>Windows</b> only!<br>USAGE: <code>split_tad_console.exe TADFILE</code><br>
+<ul>
+  <li><a href="https://cdn.randommeaninglesscharacters.com/tools/maketad/split_tad_console-20090401.exe">split_tad_console-20090401.exe</a></li>
+</ul>
+</p>
+<p><span style="color:green;">Once your DSi ROMs have been extracted, run them in an emulator or on real hardware like nomal!</span></p>
+      </div>
+      </div>
+      <img src="{{ site.imgui }}menu/dsi_red_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
+   </div>
+

@@ -9,14 +9,14 @@ url: https://randommeaninglesscharacters.com
 shopurl: https://shop.randommeaninglesscharacters.com
 
 # https://cdn.randommeaninglesscharacters.com/guide/
-imgdir: /S3/dsi-photos/
-appdir: /S3/dsi-devapps/
-releasedir: /S3/releases/
-toolsdir: /S3/tools/
-guidedir: /S3/guide/
-blogdir: /S3/blog/
-releasedir: /S3/releases/
-imgui: /S3/ui-images/
+imgdir: https://cdn.randommeaninglesscharacters.com/dsi-photos/
+appdir: https://cdn.randommeaninglesscharacters.com/dsi-devapps/
+releasedir: https://cdn.randommeaninglesscharacters.com/releases/
+toolsdir: https://cdn.randommeaninglesscharacters.com/tools/
+guidedir: https://cdn.randommeaninglesscharacters.com/guide/
+blogdir: https://cdn.randommeaninglesscharacters.com/blog/
+releasedir: https://cdn.randommeaninglesscharacters.com/releases/
+imgui: https://cdn.randommeaninglesscharacters.com/ui-images/
 
 #     external links
 # appdir: https://archive.org/download/rmc-dsi_v2/

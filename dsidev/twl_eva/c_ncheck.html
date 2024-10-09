@@ -1,0 +1,30 @@
+---
+layout: devinfo
+app: TWL_EVA_NCHECK
+altname: NCHECK
+category: [TWL EVA]
+sequence: TRUE
+redirect_from: /dsidev/twl_eva_ncheck.html
+group: true
+---
+<b>NCHECK</b> verifies the installed firmware like <a href="/dsidev/twl_eva_pcheck.html">PCHECK</a>, though NCHECK is for the final firmware rather than factory firmware. NCHECK will check HWInfo, installed apps, and the factory log. This is the final stage of factory testing, and when complete the DSi will be ready to leave the factory.<br><br>Below is the function list for NCHECK.
+<table class="functionlist"><tr><td><pre>
+32-01	CHECK INITIALIZE
+32-02	CHECK SHOW COUNTRY
+32-18	CHECK NCHECK CONFIG
+32-03	CHECK TEST LOG
+32-10	CHECK IMPORT VER.
+32-11	CHECK LAST LINE LOG
+32-04	CHECK REGION
+32-05	CHECK SER.NO
+32-12	CHECK RED LNCH EXIST
+32-06	CHECK WRFU
+32-14	CHECK PLSOFT VER.
+32-09	CHECK INITIAL SET
+32-15	CHECK USER APP TITLEID
+32-17	CHECK EXTRA PACKAGEID
+35-11	MCU CHECK CALIB
+12-05	TP ACCURACY
+31-07	WRITE OK LOG
+31-10	LOG EXPORT SD 
+</td></tr></table>

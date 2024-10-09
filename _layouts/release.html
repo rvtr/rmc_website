@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% if site.target == "STRIPPED" -%}
+    <meta name="robots" content="noindex">
+    {%- endif %}
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:site_name" content="Random Meaningless Characters (rmc)">
+    {% if page.app == null -%}
+      <title>{{ page.title }} | rmc</title>
+      <meta property="og:title" content="{{ page.title }}">
+      <meta property="og:image" content="{{ site.url }}/icon.png">
+      <meta name="description" content="DS(i) development software documentation and preservation.">
+      <meta property="og:description" content="DS(i) development software documentation and preservation.">
+      <meta name="keywords" content="dsi, ds, nintendo, dev" />
+    {%- else -%}
+{%- for ENTRY in site.data.dsinfo -%}
+  {%- if ENTRY.PROGRAM == page.app -%}
+    {%- if ENTRY.PUBLISHED == "TRUE" -%}
+      <title>{{ page.app }} | {{ site.title }}</title>
+      <meta property="og:title" content="{{ page.app }}">
+      <meta property="og:image" content="{{ site.imgdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif">
+      <meta name="description" content="{{ ENTRY.DESC }} for {{ ENTRY.SYSTEM }}">
+      <meta property="og:description" content="{{ ENTRY.DESC }} for {{ ENTRY.SYSTEM }}">
+      <meta name="keywords" content="dsi, ds, nintendo, dev, {{ page.app }}" />
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+    {%- endif %}
+    <link rel="icon" type="image/png" href="/icon.png"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/styledsi.css">
+    <link id="pagestyle" rel="stylesheet" type="text/css" href="">
+    <link rel="alternate" type="application/atom+xml" href="{{ site.url }}/feed.xml">
+    <script src="/assets/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <!-- GRRRR I HATE GOOGLE SAYING MY CANONICALS ARE DUPLICATES!! Please someone smart help me... -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+  .float-container {
+    border: 0px solid #fff;
+    font-size: 0;
+  }
+
+  .float-child1 {
+    width: 40%;
+    height: 40%;
+    float: left;
+    padding: 1vw;
+  }
+
+  .float-child2 {
+    width: 20%;
+    height: 40%;
+    float: right;
+    padding: 1vw;
+  }
+</style>
+  </head>
+  <body>
+    {% include navdsi.html %}
+    {% include navncx.html %}
+    <div id="content-wrap">
+      <div class="devinfo-container-main releasepage">
+        <img src="{{ site.imgui }}menu/dsi_red_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
+        <div style="background-image: url('{{ site.imgui }}menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;">
+          <div class="devinfo-main" style="position:relative;">
+            <div style="text-align:right;"><a href="https://github.com/rvtr/rvtr.github.io/edit/master{{ page.url }}" target="_blank">Edit</a></div>
+            {{ content }}
+          </div>
+        </div>
+        <img src="{{ site.imgui }}menu/dsi_red_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
+      </div>
+    </div>
+  </body>
+  <footer>
+  {% include footerdsi.html %}
+  </footer>
+</html>

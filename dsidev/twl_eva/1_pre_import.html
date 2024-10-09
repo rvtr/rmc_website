@@ -1,0 +1,58 @@
+---
+layout: devinfo
+app: TWL_EVA_PRE_IMPORT
+altname: PRE_IMPORT
+category: [TWL EVA]
+sequence: TRUE
+redirect_from: /dsidev/twl_eva_pre_import.html
+group: true
+---
+When a DSi has gone through the factory's <a target="_blank" href="/dsidev/twlboardchecker.html">BOARD</a> testing, it is left with no firmware and only the <a href="/dsidev/sdmc_launcher.html">SDMC Launcher</a> bootloader. This bootloader is used to launch <b>PRE_IMPORT</b> off of the SD card. PRE_IMPORT will then install factory firmware and a bootloader that is functionally like the release version.
+<br><br>Factory firmware is like any other prototype firmware except for the fact that it contains an autoboot only <a href="./launcher.html">Launcher</a>. This means that it has no accessible menu and is only able to run inserted cartridges. Autobooting is all prototype firmware needs since it is just used to launch other versions of TWL EVA. This firmware is deleted once <a href="/dsidev/twl_eva_import.html">IMPORT</a> installs the final firmware, but headers can often still be found in unused DSis. Below is a list of all the titles and versions that make up factory firmware for retail and dev consoles.<br><br>
+<table class="menu" style="width:100%">
+  <tr>
+    <th class="menuheader">Version</th>
+    <th class="menuheader">DSHashTable</th>
+    <th class="menuheader">Launcher</th>
+    <th class="menuheader">Settings</th>
+    <th class="menuheader">sysmenuVersion</th>
+    <th class="menuheader">wlanfirm</th>
+    <th class="menuheader">stage2 bootloader</th>
+  </tr>
+  <tr>
+    <td class="menuitem">0.1A (prod)</td>
+    <td class="menuitem">v2105-7739</td>
+    <td class="menuitem">v2235-7985</td>
+    <td class="menuitem">v2105-7739</td>
+    <td class="menuitem">v2105-7739</td>
+    <td class="menuitem">v2105-7739</td>
+    <td class="menuitem">v2262-8067</td>
+  </tr>
+  <tr>
+    <td class="menuitem">0.1A (dev)</td>
+    <td class="menuitem">v2095-7739</td>
+    <td class="menuitem">v2235-7985</td>
+    <td class="menuitem">v2095-7739</td>
+    <td class="menuitem">v2095-7739</td>
+    <td class="menuitem">v2095-7739</td>
+    <td class="menuitem">v2262-8067</td>
+  </tr>
+</table>
+The process list for PRE_IMPORT is shown below. The HWInfos created at this stage are dummy files.
+<table class="functionlist"><tr><td><pre>
+26-05	LOAD Pass/Fail.nbfs
+26-03	CHECK SD NO WRITE PROTECT
+09-07	RTC FAT TO RAW
+31-12	LOG BACKUP TO MMEM
+28-01	LOG NORMAL FORMAT
+31-11	BOARD LOG RAW TO FAT
+28-08	MAKE TWLCFG.dat
+29-06	INIT HWINFO_S.dat
+29-07	INIT HWINFO_N.dat
+</td></tr></table>
+<div class="screenshot">
+  <img src="{{ site.imgdir }}{{ page.app }}/screenshots/pre_import_main.png">
+  <img src="{{ site.imgdir }}{{ page.app }}/screenshots/pre_import_romheader.png">
+  <img src="{{ site.imgdir }}{{ page.app }}/screenshots/pre_import_installing.png">
+  <img src="{{ site.imgdir }}{{ page.app }}/screenshots/pre_import_filelist.png">
+</div>

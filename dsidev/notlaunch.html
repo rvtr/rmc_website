@@ -2,6 +2,16 @@
 layout: devinfo
 app: NotLaunch
 ---
-	These are used to demonstrate how applications installed to NAND can be hidden from the home menu through a flag. This flag is used for hiding things such as the WiFi Firmware and DS Cart Whitelist since they are not bootable.
-
-	The NotLaunch programs will not appear on the home menu when installed, and the apps do nothing when run.
+	These are used to demonstrate how applications installed to NAND can be hidden from the home menu through a build flag. This flag is used for hiding things such as the WiFi Firmware and DS Cart Whitelist since they are not bootable, and the Nintendo Zone app.
+	<br><br>
+	The NotLaunch programs will not appear on the home menu when installed, and the apps do nothing when run. This is the entire program code:<br><br>
+<table class="code-div"><tr><td><pre>
+void TwlMain(void)
+{
+    OS_Init();
+    
+    
+    
+    OS_Terminate();
+}
+</td></tr></table>

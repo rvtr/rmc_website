@@ -1,0 +1,59 @@
+---
+layout: devinfo
+app: CTRBoardChecker
+---
+The CTR CPU Board Sequencer is a tool used in the prouction of the 3DS. The Sequencer is made to run on a DSi called the "<a href="https://www.youtube.com/watch?v=uW0eMsbVxzE" target="_blank">factory DSi</a>", an all white kiosk dev unit. The Sequencer allows the factory DSi to act as an interface for various factory hardware. Factory workers will run tests, view the 3DS status, and diagnose errors through the Sequencer. It's hard to tell how many parts of the factory process may have used the Sequencer and factory DSi, but the known ones have been documented below.<br><br>The Sequencer app is built off of the same code as <a href="/dsidev/twl_eva_pre_import.html">TWL EVA</a> and looks similar, but it does not have any of the normal TWL EVA functions.
+
+<h2>Initial 3DS hardware testing</h2>
+When a 3DS motherboard first comes off of the assembly line, it is placed in a machine called the "CPU Board Tester". The CPU Board Tester has a series of probes that make contact test points on the 3DS in order to make sure there are no shorts or missing traces. The Sequencer and the DSi get all of their diagnostic data from the probes.
+<div class="screenshot">
+	<a href="{{ site.imgdir }}{{ page.app }}/external/image-084.jpg" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/external/image-084.jpg"></a>
+	<a href="{{ site.imgdir }}{{ page.app }}/external/image-093.jpg" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/external/image-093.jpg"></a>
+	<a href="{{ site.imgdir }}{{ page.app }}/external/image-098.jpg" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/external/image-098.jpg"></a>
+</div>
+<h2>3DS audio testing</h2>
+When the 3DS is assembled and ready for audio testing, it is put through the "Completed Interface Checker." This machine, is similar to the CPU Board Tester. The 3DS audio jack is hooked up to the Interface Checker, and a test cartridge is inserted in the back of the 3DS. Wires attached to an SPI port on the cartridge allow it to communicate with the factory hardware. Here the 3DS runs the tests by itself, and the DSi simply monitors and controls the audio for the Interface Checker. 
+<div class="screenshot">
+	<a href="{{ site.imgdir }}{{ page.app }}/external/image-177.jpg" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/external/image-177.jpg"></a>
+	<a href="{{ site.imgdir }}{{ page.app }}/external/image-187.jpg" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/external/image-187.jpg"></a>
+	<a href="{{ site.imgdir }}{{ page.app }}/external/image-200.jpg" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/external/image-200.jpg"></a>
+	<a href="{{ site.imgdir }}{{ page.app }}/external/mic_error.jpg" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/external/mic_error.jpg"></a>
+</div>
+<h2>Internal factory hardware photos</h2>
+Photos from official factory documentation are poor quality, and it is very rare for any parts of the factory hardware to be shared online. Thankfully a couple good photos have surfaced in addition to the bad ones, so we can get an okay idea of what the boxes looked like.
+<div class="screenshot">
+	<a href="{{ site.imgdir }}{{ page.app }}/external/image-086.jpg" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/external/image-086.jpg"></a>
+	<a href="{{ site.imgdir }}{{ page.app }}/external/image-087.jpg" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/external/image-087.jpg"></a>
+	<a href="{{ site.imgdir }}{{ page.app }}/external/image-088.jpg" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/external/image-088.jpg"></a>
+	<a href="{{ site.imgdir }}{{ page.app }}/external/image-101.jpg" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/external/image-101.jpg"></a>
+</div>
+
+The CTRC-MAIN-ANALOG board (pictured below) is where the CTR CPU Board Checker cartridge is stored. A ribbon cable connects the CTRC-MAIN-ANALOG to the DUMMY02 passthrough cart, allowing the factory DSi to read the cartridge and communicate with the hardware.
+
+<div class="screenshot">
+	<a href="{{ site.imgdir }}{{ page.app }}/external/CTRC-MAIN-ANALOG-01_front.jpg" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/external/CTRC-MAIN-ANALOG-01_front.jpg"></a>
+	<a href="{{ site.imgdir }}{{ page.app }}/external/CTRC-MAIN-ANALOG-01_back.jpg" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/external/CTRC-MAIN-ANALOG-01_back.jpg"></a>
+	<a href="{{ site.imgdir }}{{ page.app }}/external/passthrough.jpeg" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/external/passthrough.jpeg"></a>
+	<a href="{{ site.imgdir }}{{ page.app }}/external/analog_location.png" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/external/analog_location.png"></a>
+</div>
+
+The TWLC-PWR board is likely the factory hardware's power adapter. There are two known versions of this board, TWLC and RVLC.
+<br>TWLC may be for the CTR CPU Board Squencer (tests run using DSi, and the DSi product code is TWL).
+<br>RVLC is probably for <a href="/dsidev/rvlboardchecker.html">RVL CPU Board Sequencer</a>, the tool to test Wiis (the Wii's product code is RVL).
+
+<div class="screenshot">
+	<a href="{{ site.imgdir }}{{ page.app }}/external/TWLC-PWR-01_front.jpg" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/external/TWLC-PWR-01_front.jpg"></a>
+	<a href="{{ site.imgdir }}{{ page.app }}/external/TWLC-PWR-01_back.jpg" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/external/TWLC-PWR-01_back.jpg"></a>
+	<a href="{{ site.imgdir }}{{ page.app }}/external/TWLC-PWR-01_front.jpg" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/external/RVLC-PWR-01_front.jpg"></a>
+	<a href="{{ site.imgdir }}{{ page.app }}/external/pwr_location.png" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/external/pwr_location.png"></a>
+
+</div>
+<h2>Screenshots</h2>
+<div class="screenshot">
+	<a href="{{ site.imgdir }}{{ page.app }}/screenshots/main.BMP" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/screenshots/main.BMP"></a>
+	<a href="{{ site.imgdir }}{{ page.app }}/screenshots/board_checker_list.BMP" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/screenshots/board_checker_list.BMP"></a>
+	<a href="{{ site.imgdir }}{{ page.app }}/screenshots/insert_trs.BMP" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/screenshots/insert_trs.BMP"></a>
+	<a href="{{ site.imgdir }}{{ page.app }}/screenshots/push_power.BMP" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/screenshots/push_power.BMP"></a>
+	<a href="{{ site.imgdir }}{{ page.app }}/screenshots/close.BMP" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/screenshots/close.BMP"></a>
+	<a href="{{ site.imgdir }}{{ page.app }}/screenshots/scan.BMP" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/screenshots/scan.BMP"></a>
+</div>

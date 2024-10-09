@@ -9,42 +9,63 @@ function warnFaketad() {
     {%- if ENTRY.PUBLISHED == "TRUE" -%}
 
 <div class="devcsv-container">
-  
+ 
+{%- if ENTRY.TARGET != "Stage2" -%} 
   <div class="devcsv-preview-container">
-<div style="">
-<div class="preview-container">
-  <div class="preview-flex">
-    <div class="preview-text">
-      {{ ENTRY.BANNER }}<br>{{ ENTRY.BANNER1 }}
-    </div>
-    <div class="preview-icon">
-      <img src="{{ site.imgdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif" style="width: 100%;object-fit: cover;">
+    <div style="">
+      <div class="preview-container">
+        <div class="preview-flex">
+          <div class="preview-text">
+            {{ ENTRY.BANNER }}<br>{{ ENTRY.BANNER1 }}
+          </div>
+          <div class="preview-icon">
+            <img src="{{ site.imgdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif" style="width: 100%;object-fit: cover;">
+          </div>
+        </div>
+        {%- if ENTRY.TARGET == "CARD" -%}
+        <img src="{{ site.imgui }}menu/dsi_pink_homemenu_card.png" class="" style="width:100%;">
+        {%- else -%}
+        <img src="{{ site.imgui }}menu/dsi_pink_homemenu_nand.png" class="" style="width:100%;">
+        {%- endif -%}
+      </div>
     </div>
   </div>
-  {%- if ENTRY.TARGET == "CARD" -%}
-  <img src="{{ site.imgui }}menu/dsi_pink_homemenu_card.png" class="" style="width:100%;">
-  {%- else -%}
-  <img src="{{ site.imgui }}menu/dsi_pink_homemenu_nand.png" class="" style="width:100%;">
   {%- endif -%}
-</div>
-</div>
-  </div> 
-  
   <div class="devcsv-info">
     <b><u>Source:</u></b><br>{{ ENTRY.ORIGIN }}
   </div>
+  {%- if ENTRY.UNDUMPED == "TRUE" -%}
+  <div class="devcsv-info2">
+    <br><br><b><u>Dumped by:</u></b><br>Currently undumped!
+  </div>
+  {%- else -%}
   <div class="devcsv-info2">
     <br><br><b><u>Dumped by:</u></b><br>{{ ENTRY.CREDIT }}
   </div>
-
   <div class="devcsv-download">
   <table class="devcsv-table">
   <tr>
     <th style="text-align: left;"><u><b>Downloads:</b></u></th>
   <tr>
   <tr>
+  {%- if ENTRY.TARGET == "Stage2" -%}
+  <th class=""><b>NAND</b></th>
+  {%- for ENTRY in site.data.dsinfo -%}
+    {%- if ENTRY.PROGRAM == page.app -%}
+  </tr>
+        <tr>
+            <td class="tadding"><a href="{{ site.appdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}_{{ ENTRY.VERSION }}{{ ENTRY.DATE }}.{{ ENTRY.TYPE }}" onclick="return confirm(`WARNING:\n\nTHIS PROGRAM WILL PERMANENTLY BRICK YOUR CONSOLE. Do not run this program unless in an emulator.\n\nBy clicking ''OK'' to download, you accept that you and you alone are responsible for any damages caused to your devices. I may provide this software, but running it is ultimately up to you, and so I will not be held responsible for the outcomes of your actions.\n\nPlease press ''Cancel'' if you do not agree to this or would not like to download the software.`)">{{ ENTRY.VERSION }}{{ ENTRY.DATE }}</a></td>
+    {%- endif -%}
+  {%- endfor -%}
+  {%- else -%}
     <th class=""><b>SRL</b></th>
+  <!-- Do not include TAD list for CARD apps (impossible to be TADs). 
+  	   Twl SystemUpdater is an exception to this but we'll handle that
+  	   later somehow. -->
+  {%- if ENTRY.TARGET == "NAND" -%}
     <th class=""><b>TAD</b></th>
+  {%- endif -%}
+  
   {%- for ENTRY in site.data.dsinfo -%}
     {%- if ENTRY.PROGRAM == page.app -%}
 
@@ -84,9 +105,10 @@ function warnFaketad() {
       {%- endif -%}
     {%- endif -%}
   {%- endfor -%}
+  {%- endif -%}
   </table>
   </div>
-
+  {%- endif -%}
 </div>
     {%- endif -%}
   {%- endif -%}

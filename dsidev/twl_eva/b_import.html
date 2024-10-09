@@ -1,0 +1,49 @@
+---
+layout: devinfo
+app: TWL_EVA_IMPORT
+altname: IMPORT
+category: [TWL EVA]
+sequence: TRUE
+redirect_from: /dsidev/twl_eva_import.html
+group: true
+---
+After <a href="/dsidev/twl_eva_prepare.html">PREPARE</a> has created and signed HWInfo (required for final firmware to boot), <b>IMPORT</b> is used to install the final firmware, write all system files like <code>dev.kp</code> and <code>TWLFontTable.dat</code>, and install the release <a target="_blank" href="https://docs.randommeaninglesscharacters.com/stage2.html">stage2</a> bootloader. IMPORT also erases the factory firmware. There is a different copy of IMPORT used for every region and firmware version.
+<br><br>
+As an example, <a target="_blank" href="https://wiki.raregamingdump.ca/index.php/Nintendo_DS_Classroom">Classroom DSis</a> had a unique version of IMPORT.<br>
+Below is a normal Japanese v1.4.0 log. You can see the IMPORT type is "JPN" on the last line. That means the installed firmware was for a normal Japanese DSi:
+<table class="functionlist"><tr><td><pre>
+0,IMPORT,START,1.0, , , ,Sys=1.4.0 Pre=U1,
+0,IMPORT,USRAPP,1.0, , , ,1.HNGJ 2.KGUJ 3.K2DJ 4.KNDJ 5.KNRJ  ...,
+0,IMPORT,USRAPP2,1.0, , , ,6.KD4J ,
+0,IMPORT,OK,1.0, , , ,UTL IMPORT JPN,
+</td></tr></table>
+Another log is from a Japanese Classroom DSi which instead shows an IMPORT type of "JPN_A". Notice how the bundled apps (USRAPP) also change because of the firmware.
+<table class="functionlist"><tr><td><pre>
+0,IMPORT,START,1.0, , , ,Sys=1.4.0 Pre=UA1,
+0,IMPORT,USRAPP,1.0, , , ,1.KPEJ 2.KD4J 3.KD3J 4.KD5J 5.HNGJ  ...,
+0,IMPORT,USRAPP2,1.0, , , ,6.KGUJ ,
+0,IMPORT,OK,1.0, , , ,UTL IMPORT JPN_A,
+</td></tr></table>
+
+Below is the function list for IMPORT to show the steps involved in installing the final firmware:
+<table class="functionlist"><tr><td><pre>
+32-16	CHECK SER.NO 1stCHAR
+28-11	IMPORT INITIALIZE
+31-16	WRITE START LOG
+29-11	WRITE FONT DATA
+29-18	WRITE DEV.KP
+29-19	WRITE UPDATER.LOG
+28-04	WRITE SDMC-LNC
+28-09	IMPORT TAD FILES
+28-10	DELETE TAD FILES
+28-12	CHECK TAD FILES
+28-05	LOAD MENU LAUNCHER
+28-06	WRITE MENU LAUNCHER
+29-20	WRITE WRAP.BIN
+31-18	WRITE USER TITLEID LOG
+31-06	WRITE OK LOG
+</td></tr></table>
+<div class="screenshot">
+	<img src="{{ site.imgdir }}{{ page.app }}/screenshots/import_version.png">
+    <img src="{{ site.imgdir }}{{ page.app }}/screenshots/import_installing.png">
+</div>

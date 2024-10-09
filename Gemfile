@@ -15,3 +15,4 @@ end
 
 gem "webrick", ">= 1.8"
 gem "json"
+gem "google-protobuf", ">= 4.27.5"

@@ -1,0 +1,34 @@
+---
+layout: devinfo
+app: TWL_EVA_TP_CAL
+altname: TP_CAL
+category: [TWL EVA]
+sequence: TRUE
+redirect_from: /dsidev/twl_eva_tp_cal.html
+group: true
+---
+<b>TP_CAL</b> is used to test the DSi touch screen in the factory. There are 3 TP_CAL modes listed in all TWL EVA versions. 
+<ul>
+<li><b>TP CALIBRATION</b>, calibrates the touch screen.</li>
+<li><b>TP ACCURACY</b> is then used to test the calibration.</li>
+<li><b>TEST TP JIG</b> requires you to touch markers on the screens and has extremely low tolerances. Perhaps this was meant to be used in a factory <i>jig</i> that allows for precisely touching the DSi touch screen?</li>
+</ul>
+Below is a list of tests contained in each TP_CAL mode:
+<br><br>
+<table class="functionlist"><tr><td><pre>
+TP CALIBRATION:
+25-06	OPEN SHORT CHECK
+12-02	TP CALIBRATION
+26-05	LOAD Pass/Fail.nbfs
+38-01	CARD REMOVE TEST
+
+TP ACCURACY:
+12-05	TP ACCURACY
+
+TEST TP JIG:
+12-06	TP ACCURACY
+</td></tr></table>
+<div class="screenshot">
+	<img src="{{ site.imgdir }}{{ page.app }}/screenshots/tp_cal.png">
+    <img src="{{ site.imgdir }}{{ page.app }}/screenshots/tp_jig.png">
+</div>

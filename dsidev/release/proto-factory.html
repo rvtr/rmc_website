@@ -1,0 +1,46 @@
+---
+title: X6 DSi and factory firmwares
+layout: release
+releaseslug: factoryproto
+---
+    <h1>X6 DSi and factory firmwares</h1>
+    <p>Today we're happy to release a prototype DSi and 3 other motherboards with prototype firmware. Huge thanks to MarioDS64 for sharing his X6 DSi, HudsonU for his factory firmware, and Kelly for helping me get ahold of my two boards.
+    <h2>TWL-CPU-X6</h2>
+    This retail prototype DSi has an X6 motherboard and an X4 battery board. The white parts of the shell are slightly different from the released color, and there is no printing on the shell. The sides of the shell have slight notches where there used to be wires, but these have since been removed.
+    <br><br>
+    The X6 is running the v2235-7985 factory (prototype) firmware. When a DSi first comes off of the assembly line, it has the factory firmware <a href="/dsidev/twl_eva_pre_import.html" target="_blank">installed</a> to allow it to boot factory test cartridges. The firmware has no menu and only autoboots inserted cartridges. If no cartridge is found then there will just be a white screen. There is a prototype <a href="/dsidev/machinesettings.html" target="_blank">MachineSettings</a> also included, though it is inaccessible.<br><br>
+    Parts of this firmware have been found in brand new DSis, but this is the first time finding the complete firmware and having it installed.<br><br>
+    <h4>Download</h4>
+    <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/AAAMPP3EH529_v2235-7985_prod_X6_MarioDS64.zip">X6 DSi NAND</a>
+    <div class="screenshot">
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_top.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_top.jpg"></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_bottom.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_bottom.jpg"></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_open.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_open.jpg"></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_whahoo.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_whahoo.jpg"></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_back.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_back.jpg"></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_right.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_right.jpg"></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_left.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_left.jpg"></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_mobo_attached.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_mobo_attached.jpg"></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_mobo_front.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_mobo_front.jpg"></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_mobo_back.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_mobo_back.jpg"></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_compare_top.png" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_compare_top.png"></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_screen.png" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_screen.png"></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_sub_comp_back.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_sub_comp_back.jpg"></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_sub_comp_front.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6/X6_sub_comp_front.jpg"></a>
+    </div>
+
+    <h2>Additional prototype/factory firmware dumps</h2>
+    There were 3 more DSis found with the factory firmware. These are not prototypes, but they're still interesting to look at. Each one contains a complete deleted final firmware (my two having 1.4.4U and 1.4.3U, and HudsonU's having 1.4.4U). These may have been returned to the factory due to being bricked or damaged, and the boards were reused. The logs didn't have any useful information so it is impossible to know. 
+    <br><br>
+    <h4>Download</h4>
+    <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/NOSERIAL_v2235-7985_prod_HudsonU.zip">HudsonU's factory firmware NAND</a><br>
+    <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/NOSERIAL_v2235-7985_prod_03Y12504_rmc.zip">rmc's factory firmware NAND (03Y12504)</a><br>
+    <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/NOSERIAL_v2235-7985_prod_17622504_rmc.zip">rmc's factory firmware NAND (17622504)</a>
+    <div class="screenshot">
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/factory/03Y12504_front.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/factory/03Y12504_front.jpeg"></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/factory/03Y12504_back.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/factory/03Y12504_back.jpeg"></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/factory/03Y12504_cartridge.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/factory/03Y12504_cartridge.jpeg"></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/factory/17622504_front.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/factory/17622504_front.jpeg"></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/factory/17622504_back.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/factory/17622504_back.jpeg"></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/factory/17622504_cartridge.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/factory/17622504_cartridge.jpeg"></a>
+    </div>

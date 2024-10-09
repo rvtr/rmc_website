@@ -1,0 +1,26 @@
+---
+layout: devinfo
+app: TWLBoardChecker
+altname: BOARD
+category: [TWL EVA]
+sequence: TRUE
+redirect_from: /dsidev/twlboardchecker.html
+group: true
+---
+<b>BOARD</b> is the first phase of DSi testing in the factory. A bare DSi motherboard would be placed in a special box, and hardware tests would be performed to ensure there are no shorts or other faults. All of these tests would be controlled externally by a DS lite running the TWL CPU Board Sequencer app. While we don't have photos of the DSi testing hardware, you can see a similar thing with the <a href="/dsidev/ctrboardchecker.html">CTR BOARD</a> process below, where a DSi would control tests on a 3DS motherboard.
+<div class="screenshot">
+	<img src="{{ site.imgdir }}CTRBoardChecker/external/image-084.jpg">
+	<img src="{{ site.imgdir }}CTRBoardChecker/external/image-093.jpg">
+	<img src="{{ site.imgdir }}CTRBoardChecker/external/image-098.jpg">
+</div>
+TWL CPU Board Sequencer would also format the NAND and flash the <a href="/dsidev/sdmc_launcher.html">SDMC Launcher</a> bootloader, allowing the DSi to run apps of off an SD card. This makes it possible to move onto the <a href="/dsidev/twl_eva_pre_import.html">PRE_IMPORT</a> stage and write factory firmware afterwards.
+<h2>Screenshots</h2>
+<div class="screenshot">
+	<img src="{{ site.imgdir }}{{ page.app }}/screenshots/main.BMP">
+	<img src="{{ site.imgdir }}{{ page.app }}/screenshots/dsi_watch.BMP">
+	<img src="{{ site.imgdir }}{{ page.app }}/screenshots/dsi_watch_light.BMP">
+	<img src="{{ site.imgdir }}{{ page.app }}/screenshots/dsi_insert.BMP">
+	<img src="{{ site.imgdir }}{{ page.app }}/screenshots/dsi_close.BMP">
+	<img src="{{ site.imgdir }}{{ page.app }}/screenshots/sdmc_launcher.BMP">
+	<img src="{{ site.imgdir }}{{ page.app }}/screenshots/tests.BMP">
+</div>

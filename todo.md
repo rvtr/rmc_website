@@ -4,7 +4,7 @@
 	- [X] Add TWL or NTR option in CSV
 	- [X] Reorder CSV to make more sense
 	- [X] Unmark incomplete pages as listed in CSV
-	- [ ] Add field for if source code exits
+	- [ ] Add field for if source code exits (link to TwlIPL git?)
 - [X] Make things mobile friendly and usable:
 	- [X] Index
 	- [X] Info page
@@ -23,4 +23,6 @@
 - [X] Smaller image sizes
 - [X] Make all screenshots use screenshot class
 - [X] Fix generated home menu preview
+- [ ] Fix generated home menu preview... again but for mobile
 - [ ] Fix blog images
+- [ ] Exclude unpublished apps from category lists

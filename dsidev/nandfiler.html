@@ -4,13 +4,21 @@ app: NandFiler
 BANNER2: NandFiler
 BANNER3:
 ---
-NandFiler is a save manager and hex editor. Its purpose is to edit save files, or to corrupt save data for testing purposes. Game saves are selected from leftmost column on the bottom screen where they're listed by the 4 character TID of the game they belong to. You can also view the photo region of NAND and the SD card, the latter of which is needed to import saves.<br>A help menu is provided by pressing <code>SELECT</code>.
+NandFiler is a save manager and hex editor. It is used to edit, backup, and restore save files, or to corrupt save data for testing purposes. Testing corruption was usually required as Nintendo DSiWare lotchecks made sure developers had proper error handling in place. Game saves are selected from leftmost column on the bottom screen where they're listed by the 4 character TID of the game they belong to. You can also view the photo region of NAND and the SD card, the latter of which is needed to import saves.<br>A help menu is provided by pressing <code>SELECT</code>.
 <br><br>
 Exporting a save will store all of the files in the save to <code>sd:/&lt;TID&gt;_0000/</code>, and backing up a save will store the save as <code>sd:/&lt;TID&gt;_&lt;save type&gt;.sav</code>.
 <br><br>
 Oddly enough, all versions of NandFiler past v11280 contain an image of fish in romfs, named <code>fill.bmp</code>. This seems to have no purpose, though it is rather amusing.
 <br><br>
-Note: the CTR SDK versions of NandFiler appear to be the same (fish included), just with the version number stripped.<div style="text-align:center;"><h3>fill.bmp</h3><div class="photo"><img src="{{ site.imgdir }}{{ page.app }}/romfs/fill.bmp"></div>
-        <h1>Screenshots:</h1>
-        <div class="screenshot"><img src="{{ site.imgdir }}{{ page.app }}/screenshots/nandfiler_browse.png">
-        <img src="{{ site.imgdir }}{{ page.app }}/screenshots/nandfiler_hex.png"></div></div>
+The CTR SDK included a copy of NandFiler for legacy development, but it appears to be the same (fish included), just with the version number stripped.
+
+<div style="text-align:center;"><h3>fill.bmp</h3>
+	<div class="photo">
+		<img src="{{ site.imgdir }}{{ page.app }}/romfs/fill.bmp">
+	</div>
+</div>
+
+<div class="screenshot">
+	<img src="{{ site.imgdir }}{{ page.app }}/screenshots/nandfiler_browse.png">
+	<img src="{{ site.imgdir }}{{ page.app }}/screenshots/nandfiler_hex.png">
+</div>

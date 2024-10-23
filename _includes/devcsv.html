@@ -13,7 +13,7 @@ function warnFaketad() {
 {%- if ENTRY.TARGET != "Stage2" -%} 
   <div class="devcsv-preview-container">
     <div style="">
-      <div class="preview-container">
+      <div class="preview-container colorbox">
         <div class="preview-flex">
           <div class="preview-text">
             {{ ENTRY.BANNER }}<br>{{ ENTRY.BANNER1 }}
@@ -23,9 +23,9 @@ function warnFaketad() {
           </div>
         </div>
         {%- if ENTRY.TARGET == "CARD" -%}
-        <img src="{{ site.imgui }}menu/dsi_pink_homemenu_card.png" class="" style="width:100%;">
+        <img src="{{ site.imgui }}menu/green/dsi_homemenu_card.png" class="" style="width:100%;">
         {%- else -%}
-        <img src="{{ site.imgui }}menu/dsi_pink_homemenu_nand.png" class="" style="width:100%;">
+        <img src="{{ site.imgui }}menu/green/dsi_homemenu_nand.png" class="" style="width:100%;">
         {%- endif -%}
       </div>
     </div>

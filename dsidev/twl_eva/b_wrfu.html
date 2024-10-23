@@ -1,0 +1,81 @@
+---
+layout: devinfo
+app: WRFUTester
+altname: WRFU
+category: [TWL EVA]
+sequence: TRUE
+redirect_from: /dsidev/wrfutester.html
+group: true
+---
+<!--<i>All photos courtesy of Voodooween.</i>-->
+<i>I should probably get permission to use these photos.</i>
+<br><br>
+<b>WRFU</b> is a factory wireless tester for the DSi. WRFU is built off of the TWL EVA base, though the menu has been completely stripped and it resembles nothing like other TWL EVAs. The tool is able to boot up into two modes, <b>ART</b> and <a href="https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter" target="_blank">UART</a>. ART appears to let the cartridge be used standalone, but UART requires the IS-SPI-USB-ADAPTER:
+<div class="screenshot">
+	<a href="{{ site.imgdir }}WRFUTester/external/WRFU_SPI_USB_F.jpg" target="_blank"><img src="{{ site.imgdir }}WRFUTester/external/WRFU_SPI_USB_F.jpg"></a>
+	<a href="{{ site.imgdir }}WRFUTester/external/WRFU_SPI_USB_B.jpg" target="_blank"><img src="{{ site.imgdir }}WRFUTester/external/WRFU_SPI_USB_B.jpg"></a>
+</div>
+
+The SPI-USB is plugged into the back of the WRFU cart, allowing it to communicate with the WRFU Tester box.
+<div class="screenshot">
+	<a href="{{ site.imgdir }}WRFUTester/external/WRFU_BOX_O.jpg" target="_blank"><img src="{{ site.imgdir }}WRFUTester/external/WRFU_BOX_O.jpg"></a>
+	<a href="{{ site.imgdir }}WRFUTester/external/WRFU_BOX_I.jpg" target="_blank"><img src="{{ site.imgdir }}WRFUTester/external/WRFU_BOX_I.jpg"></a>
+	<a href="{{ site.imgdir }}WRFUTester/external/WRFU_BOX_I-2.jpg" target="_blank"><img src="{{ site.imgdir }}WRFUTester/external/WRFU_BOX_I-2.jpg"></a>
+	<a href="{{ site.imgdir }}WRFUTester/external/WRFU_CART.jpg" target="_blank"><img src="{{ site.imgdir }}WRFUTester/external/WRFU_CART.jpg"></a>
+</div>
+
+It's hard to tell what WRFU does, but piecing together function names in WRFU tester we can make an educated guess. WRFU tester works by...
+<ul>
+	<li>Testing scanning WiFi connections (<code>NET_*</code>)</li>
+	<li>Loading a download play SRL(<code>RFU_*</code>)</li>
+	<li>Testing the DSi firmware and wireless module(<code>TESTER_*</code>)</li>
+</ul>
+Information from the actual test list ends there, but strings after the list have <code>OS_DoApplicationJump</code>, implying that the WRFU Tester boots the download play app from the RFU tests. However, it's impossible to confirm any of this without a proper disassembly.
+<br><br>
+<table class="functionlist"><tr><td><pre>
+NET_SetConnectChannel_C
+NET_SetSignalType
+NET_SetSignalRate
+NET_SetSignalChannel
+NET_SetBeaconPeriod
+NET_SetBssId
+NET_SetScanTimeH
+NET_SetScanTimeot
+NET_GetAllowedConnectChannel
+RFU_Init
+RFU_End
+RFU_TestSignalOn
+RFU_TestSignalOff
+RFU_MPReset
+RFU_MPParentStart
+RFU_MPChildScan
+RFU_MPChildStart
+RFU_MPChildGet
+RFU_MPFERStartNum
+RFU_MPFERDataNum
+RFU_MPFEREndNum
+TESTER_GetVersion
+TESTER_GetBuildDate
+TESTER_GetRFMacAddress
+TESTER_GetModuleId
+TESTER_GetFirmwareType
+TESTER_GetFirmwareVersion
+TESTER_GetRegionU
+TESTER_GetSerialNumber
+TESTER_GetTimeCounter
+TESTER_ClearSubLCD
+TESTER_LogClearInfo
+TESTER_LogInitialize
+TESTER_LogSetComposition
+TESTER_LogSetPCVersion
+TESTER_LogSetErrorCode
+TESTER_LogSetMeasurementData
+TESTER_LogWrite
+TESTER_SetTargetRole
+TESTER_GetTargetRole
+TESTER_ApplicationRestart
+TESTER_ARTStart
+TESTER_PowerOff
+TESTER_PMBackLightOn
+TESTER_PMBackLightOff
+</td></tr></table>

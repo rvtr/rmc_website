@@ -1,14 +1,10 @@
 ---
 title: Flashing DS Prototype Firmware
-layout: dsiware
+layout: release
 ---
-   <div class="devinfo-container-main releasepage">
-      <img src="{{ site.imgui }}menu/dsi_red_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
-      <div style="background-image: url('{{ site.imgui }}menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;">
-      <div class="devinfo-main" style="position:relative;">
-        <div style="text-align:right;"><a href="https://github.com/rvtr/rvtr.github.io/edit/master{{ page.url }}" target="_blank">Edit</a></div>
-        <h1>Flashing DS prototype firmware to real hardware</h1>
-        <span style="color:red;"><b>Note that there is a chance of bricking your console</span>, and  this may prevent some games from running. I am not liable for any damage caused through this guide. By following this guide, you accept that you, and you alone, are responsible for anything that happens to your console.</b>
+
+<h1>Flashing DS prototype firmware to real hardware</h1>
+<p><span style="color:red;"><b>Note that there is a chance of bricking your console</span>, and  this may prevent some games from running. I am not liable for any damage caused through this guide. By following this guide, you accept that you, and you alone, are responsible for anything that happens to your console.</b></span>
 
 <!-- all this is because I didn't want to make my "style.css" messier... maybe I should've just worked on that lmao -->
 <h3>Compatibility:</h3>
@@ -54,8 +50,8 @@ layout: dsiware
     </td>
   </tr>
 </table>
-<span style="color:orange;">*</span>the firmware itself runs fine, but the
-touchscreen won't work in games. This is likely due to using prototype touchscreen configuration.
+<p><span style="color:orange;">*</span>the firmware itself runs fine, but the
+touchscreen won't work in games. This is likely due to using prototype touchscreen configuration.</p>
 <h3>Prerequisites:</h3>
 <ol>
   - Flashcart<br>
@@ -78,7 +74,7 @@ touchscreen won't work in games. This is likely due to using prototype touchscre
 </ol>
 <h3>Fixing Wireless Communications​:</h3>
 
-Each firmware copy contains WiFi board specific data that lets it connect wirelessly. This data cannot be moved from one WiFi board to another, or you will be unable to connect online or in multiplayer games. To solve this, we will back up the original data and copy it over to the new firmware we’ll be flashing.
+<p>Each firmware copy contains WiFi board specific data that lets it connect wirelessly. This data cannot be moved from one WiFi board to another, or you will be unable to connect online or in multiplayer games. To solve this, we will back up the original data and copy it over to the new firmware we’ll be flashing.</p>
 
 <ol>
 1. Dump your DS firmware with <a href="https://kuribo64.net/get.php?id=TWCJjwloQLCYy3Zh">DSBF_dump.nds</a>. (use a flashcart for this)<br>
@@ -103,15 +99,15 @@ Each firmware copy contains WiFi board specific data that lets it connect wirele
 <img src="{{ site.guidedir }}ds-prototype-firmware/SL1-phat.png" style="width:36%;height:auto;">
 <img src="{{ site.guidedir }}ds-prototype-firmware/SL1-lite.png" style="width:50.4%;height:auto;">
 </div><br>
-<span style="color:red"><b>WARNING: Make sure to not short a DS Lite</span> (this can happen by touching the metal
+<p><span style="color:red"><b>WARNING: Make sure to not short a DS Lite</span> (this can happen by touching the metal
     point contacts right next to <code>SL1</code>). Use an improvised tool that is insulated to the
-    sides and only leaves metal exposed at the tip.</b>
+    sides and only leaves metal exposed at the tip.</b></span>
 <ol>
   3. Locate the <code>SL1</code> pin. You'll notice there are two metal pads that make up the <code>SL1</code>. We need to bridge them (connect them together). This can be done by holding a small flathead screwdriver (or another metallic material) to both pads.
 </ol>
-<span style="color:green"><b>If you're unable to bride SL1 by hand for the duration of writing, you may want to consider soldering SL1 together.</span> This is most useful if you intend on doing a lot of flashing in the future.</b><br><br>
+<p><span style="color:green"><b>If you're unable to bride SL1 by hand for the duration of writing, you may want to consider soldering SL1 together.</span> This is most useful if you intend on doing a lot of flashing in the future.</b><br><br>
 
-<span style="color:red"><b>ANOTHER WARNING: DO NOT remove the battery at any time during writing.</span> You will BRICK YOUR CONSOLE (see the green text below for unbricking)</b>
+<span style="color:red"><b>ANOTHER WARNING: DO NOT remove the battery at any time during writing.</span> You will BRICK YOUR CONSOLE (see the green text below for unbricking)</b></span>
 
 <ol>
 4. Once bridged, you may start writing. You must keep <code>SL1</code> bridged for the
@@ -120,12 +116,11 @@ entire writing process.
 5. When the writing is complete, unbridge <code>SL1</code> and
 reboot the console.
 </ol>
-Your console should now boot to the prototype firmware (it
+<p>Your console should now boot to the prototype firmware (it
 may take a couple seconds to load). If your console does not boot after a long
 period of time, you've likely bricked it. But don't worry,
 <span style="color:green"><b>YOU CAN UNBRICK YOUR CONSOLE!</b></span> Refer to
-<a href="https://gbatemp.net/blogs/i-fixed-a-ds-lite-with-another-ds-lite.15450/#ubs-comment-200532">this</a> blog entry for info on how to restore a bricked DS.
-<br><br>
+<a href="https://gbatemp.net/blogs/i-fixed-a-ds-lite-with-another-ds-lite.15450/#ubs-comment-200532">this</a> blog entry for info on how to restore a bricked DS.</p>
 <div style="text-align:center;">
 <img src="{{ site.guidedir }}ds-prototype-firmware/proto-firm-40820D.png" style="width:49%;height:auto;">
 <img src="{{ site.guidedir }}ds-prototype-firmware/proto-firm-040615.png" style="width:47.45%;height:auto;">
@@ -133,16 +128,10 @@ period of time, you've likely bricked it. But don't worry,
 <br>
 <hr>
 <br>
-<span style="color:red">*</span>I only included a compiled version because the
+<p><span style="color:red">*</span>I only included a compiled version because the
 original creator required you to build everything yourself. Credits go to them
 for creating the flashing tool
 <a href="https://github.com/CTurt/CFW-Suite">https://github.com/CTurt/CFW-Suite</a>
 <br><br>
 Guide originally written for GBAtemp on 2022/12/24.
-<br>Thanks to<a href="https://gbatemp.net/threads/flashing-prototype-ds-firmware-on-real-hardware.623680/post-10032449"> KleinesSinchen on GBAtemp for guide suggestions!</a>
-        <br><br>
-      </div>
-      </div>
-      <img src="{{ site.imgui }}menu/dsi_red_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
-   </div>
-
+<br>Thanks to<a href="https://gbatemp.net/threads/flashing-prototype-ds-firmware-on-real-hardware.623680/post-10032449"> KleinesSinchen on GBAtemp for guide suggestions!</a></p>

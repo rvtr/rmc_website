@@ -3,7 +3,7 @@ title: Index
 layout: dsiware
 redirect_from: /dsidev/index.html
 ---
-<marquee class="scroller"><code style="font-size:40px;" scrollamount="10">Greetings to ufo, lasscat, togemet2, Rolfie, HudU, xp, Haifisch, MaxiBash, RedBees, NinjaCheetah, DamiDoop, scalr, pancake, and collection_nintendo! Thanks to everyone across the web who has dumped, mirrored, or documented these programs. This entire website was designed by me, and me alone (unless you count stack overflow (and if you ignore DamiDoop the icon maker)). Sure, it's barely working, but at least it looks nicer and has more information than any other public sites. Y'all need to remember that there's more than just TwlNmenu and NandFiler. Also just include damn links! These programs don't do any good when you can't download and use them. Oh well, at least I've fixed that now. Now you can run all official DS brickers and NAND editing tools... oh. Maybe there's a reason not everything gets shared. Stay safe and enjoy the site!</code></marquee>
+<marquee class="scroller"><code style="font-size:40px;" scrollamount="10">The website by junkers for junkers. Greetings to ufo, lasscat, togemet2, Rolfie, HudU, xp, Haifisch, MaxiBash, RedBees, NinjaCheetah, DamiDoop, scalr, pancake, Kelly, MarioDS64, MrPinball64, and collection_nintendo! Thanks to everyone across the web who has dumped, mirrored, or documented these programs. This entire website was designed by me, and me alone (unless you count stack overflow (and if you ignore DamiDoop the icon maker)). Sure, it's barely working, but at least it looks nicer and has more information than any other public sites. Y'all need to remember that there's more than just TwlNmenu and NandFiler. Also just include damn links! These programs don't do any good when you can't download and use them. Oh well, at least I've fixed that now. Now you can run all official DS brickers and NAND editing tools... oh. Maybe there's a reason not everything gets shared. Good luck staying safe! In other news, this site is fully self hosted! No more big companies limiting what I can do!</code></marquee>
 
 <!-- ^ Real sigmas up here. -->
 <div style="margin:1%;">
@@ -11,57 +11,67 @@ redirect_from: /dsidev/index.html
 <h4>News: <a href="/dsidev/release/proto-factory.html">X6 DSi and factory firmwares released!</a></h4>
 Photos and a NAND dump of an X6 prototype DSi have just been released, along with multiple other dumps containing prototype firmware used in the production of every DSi!
 </div><br>
-   <div class="devinfo-container-main releasepage">
-      <img src="{{ site.imgui }}menu/dsi_red_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
+   <div class="devinfo-container-main releasepage colorbox">
+      <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
       <div style="background-image: url('{{ site.imgui }}menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;">
       <div class="devinfo-main" style="position:relative;"><br>
 <h2 style="padding-top:0;">Welcome to random meaningless characters!</h2>
 
 <p>
-  Welcome! This site is focused on documenting every single DS/DSi factory and development app, as well as prototype firmwares and hardware. We have the largest collection of apps publicly available, the most accurate information, and things you'll have never heard of. We also do prototype/dev releases, so if you have any cartridges or development units, <a href="/contact.html">get in touch</a>! 
+  Welcome! This site is focused on documenting every single DS/DSi factory and development app, as well as prototype firmwares and hardware. We have the largest collection of apps publicly available, the most accurate information, and things you'll have never heard of. We also do prototype/dev releases, so if you have any cartridges or development units, <a href="/contact.html">get in touch</a>
   <br><br>
   Also, if you have time to contribute, please check out the edit button on the top of each page!
+
+  <br><br>
+  Testing area:
+  <br>
+  {{ "now" | date: "%Y-%m-%d %H:%M" }}
 </p>
       </div>
       </div>
-      <img src="{{ site.imgui }}menu/dsi_red_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
+      <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
    </div>
 </div>
 
 <!-- I retract all previous negative statements about RGD -->
 
 <div class="flex-container">
+{% assign i = 0 %}
 {% for ENTRY in site.data.dsinfo -%}
     {%- if ENTRY.PUBLISHED == "TRUE" -%}
-<div class="parent_or_guardian">
-  <div class="flexception">
-    <div class="flexceptionception">
-      <div>
-        <img src="{{ site.imgdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif" width="52px" height="52px">
-      </div>
-      <div class="prompt_header">
-        <div class="flexceptionception_the_flexening">
-          <div class="prompt_title">
-          {{ ENTRY.TITLE }}
+      <div class="parent_or_guardian colorbox{{ i }}">
+        <div class="flexception">
+          <div class="flexceptionception">
+            <div>
+              <img src="{{ site.imgdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif" width="52px" height="52px">
+            </div>
+            <div class="prompt_header">
+              <div class="flexceptionception_the_flexening">
+                <div class="prompt_title">
+                {{ ENTRY.TITLE }}
+                </div>
+                <div>
+                  <b>Target: </b>
+                  {%- if ENTRY.SYSTEM == "TWL (DSi)" -%}
+                   <span style="color:#ff0000;">{{ ENTRY.SYSTEM }}</span>
+                  {%- else -%}
+                   <span style="color:#3399ff;">{{ ENTRY.SYSTEM }}</span>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <b>Target: </b>
-            {%- if ENTRY.SYSTEM == "TWL (DSi)" -%}
-             <span style="color:#ff0000;">{{ ENTRY.SYSTEM }}</span>
-            {%- else -%}
-             <span style="color:#3399ff;">{{ ENTRY.SYSTEM }}</span>
-            {%- endif -%}
+          <div class="prompt_info">
+            <i>{{ ENTRY.DESC }}</i>
           </div>
         </div>
+        <img class="prompt" src="{{ site.imgui }}menu/green/dsi_prompt.png">
+        <a href="/dsidev/{{ ENTRY.PROGRAM | downcase }}.html"><img class="prompt_two_a_new_hover" src="{{ site.imgui }}menu/dsi_prompthover.png"></a>
       </div>
-    </div>
-    <div class="prompt_info">
-      <i>{{ ENTRY.DESC }}</i>
-    </div>
-  </div>
-  <img class="prompt" src="{{ site.imgui }}menu/dsi_red_prompt.png">
-  <a href="/dsidev/{{ ENTRY.PROGRAM | downcase }}.html"><img class="prompt_two_a_new_hover" src="{{ site.imgui }}menu/dsi_prompthover.png"></a>
-</div>
+      {% assign i = i | plus:1 %}
+      {%- if i == 4 -%}
+        {% assign i = 0 %}
+      {%- endif -%}
     {%- endif -%}
 {%- endfor %}
 </div>

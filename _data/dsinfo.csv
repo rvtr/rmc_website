@@ -324,7 +324,7 @@
 "WMTestTool","v0","_20051102","srl","","","CARD","NTR (DS)","- Nintendo Developer Portal (TWL SDK)","N/A","NINTENDO DS™","WMtest","","","","","WM test","WiFi module tester"
 "WMTestTool","v0","_20090115","srl","","","CARD","NTR (DS)","- Nintendo Developer Portal (TWL SDK)","N/A","NINTENDO DS™","WMtest","","","","","WM test","WiFi module tester"
 "WMTestTool","v0","_20110330","srl","","","CARD","NTR (DS)","- Nintendo Developer Portal (TWL SDK)","N/A","NINTENDO DS™","WMtest","","","","","WM test","WiFi module tester"
-"WRFUTester","v0.60","_20080821","srl","","","CARD","TWL (DSi)","- Foxconn","N/A","NINTENDO DSi™","Demonstration","","","","","WRFU Tester","DSi wireless testing"
+"WRFUTester","v0.60","_20080821","srl","","","CARD","TWL (DSi)","- Foxconn","N/A","NINTENDO DSi™","Demonstration","","","TRUE","","WRFU Tester","DSi wireless testing"
 "WRFUTester","v2.01","_20090518","srl","","","CARD","TWL (DSi)","- Foxconn","N/A","NINTENDO DSi™","Demonstration","","","","","WRFU Tester","DSi wireless testing"
 "WRFUTester","v3.01","_20100617","srl","","","CARD","TWL (DSi)","- Foxconn","N/A","NINTENDO DSi™","Demonstration","","","","","WRFU Tester","DSi wireless testing"
 "test_entry","v1.2.3","_20240313","tad","","true","NAND","TWL (DSi)","- Foxconn","Lillian","Demonstration","Nintendo","","high","","","Test Entry","A test of the CSV"

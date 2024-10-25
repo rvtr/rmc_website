@@ -10,7 +10,11 @@
     {% if page.app == null -%}
       <title>{{ page.title }} | rmc</title>
       <meta property="og:title" content="{{ page.title }}">
-      <meta property="og:image" content="{{ site.url }}/icon.png">
+      {% if page.preview == null -%}
+        <meta property="og:image" content="{{ site.imgdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif">
+      {%- else -%}
+        <meta property="og:image" content="{{ site.imgdir }}{{ ENTRY.PROGRAM }}{{ page.preview }}">
+      {%- endif %}
       <meta name="description" content="DS(i) development software documentation and preservation.">
       <meta property="og:description" content="DS(i) development software documentation and preservation.">
       <meta name="keywords" content="dsi, ds, nintendo, dev" />
@@ -20,7 +24,11 @@
       {%- if ENTRY.PUBLISHED == "TRUE" -%}
         <title>{{ page.app }} | {{ site.title }}</title>
         <meta property="og:title" content="{{ page.app }}">
-        <meta property="og:image" content="{{ site.imgdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif">
+        {% if page.preview == null -%}
+          <meta property="og:image" content="{{ site.imgdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif">
+        {%- else -%}
+          <meta property="og:image" content="{{ site.imgdir }}{{ ENTRY.PROGRAM }}{{ page.preview }}">
+        {%- endif %}
         <meta name="description" content="{{ ENTRY.DESC }} for {{ ENTRY.SYSTEM }}">
         <meta property="og:description" content="{{ ENTRY.DESC }} for {{ ENTRY.SYSTEM }}">
         <meta name="keywords" content="dsi, ds, nintendo, dev, {{ page.app }}" />

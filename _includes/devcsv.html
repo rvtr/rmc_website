@@ -69,7 +69,7 @@ function warnFaketad() {
   {%- for ENTRY in site.data.dsinfo -%}
     {%- if ENTRY.PROGRAM == page.app -%}
 
-      {%- if ENTRY.TYPE == "srl" -%}
+      {%- if ENTRY.TYPE == "srl" or ENTRY.TYPE == "zip" -%}
   </tr>
         <tr>
         {%- case ENTRY.DANGER -%}

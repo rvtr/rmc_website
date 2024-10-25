@@ -37,7 +37,7 @@ if (new Date().getMonth() == 5) {
   colorFor = 'green';
   seasonal = true;
 } else {
-  var randomColor = Math.floor(Math.random() * 5) + 1;
+  var randomColor = Math.floor(Math.random() * 7) + 1;
 
   switch (randomColor) {
     case 1:
@@ -78,6 +78,22 @@ if (new Date().getMonth() == 5) {
       colorTre = 'red';
       colorFor = 'red';
       colorOtr = 'background-color: #fb1830;border: 2px solid #ba0020;color:white;';
+      seasonal = true;
+      break;
+    case 6:
+      colorOne = 'blue';
+      colorTwo = 'blue';
+      colorTre = 'blue';
+      colorFor = 'blue';
+      colorOtr = 'background-color: #62caff;border: 2px solid #3a98e1;color:black;';
+      seasonal = true;
+      break;
+    case 7:
+      colorOne = 'orange';
+      colorTwo = 'orange';
+      colorTre = 'orange';
+      colorFor = 'orange';
+      colorOtr = 'background-color: #fbd39a;border: 2px solid #fb7900;color:black;';
       seasonal = true;
       break;
   }

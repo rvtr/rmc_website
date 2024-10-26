@@ -22,8 +22,8 @@
   {%- for ENTRY in site.data.dsinfo -%}
     {%- if ENTRY.PROGRAM == page.app -%}
       {%- if ENTRY.PUBLISHED == "TRUE" -%}
-        <title>{{ page.app }} | {{ site.title }}</title>
-        <meta property="og:title" content="{{ page.app }}">
+        <title>{{ ENTRY.TITLE }} | {{ site.title }}</title>
+        <meta property="og:title" content="{{ ENTRY.TITLE }}">
         {% if page.preview == null -%}
           <meta property="og:image" content="{{ site.imgdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif">
         {%- else -%}

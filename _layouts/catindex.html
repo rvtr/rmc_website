@@ -1,0 +1,53 @@
+---
+layout: dsiware
+---
+ <div id="content-wrap">
+   <div class="devinfo-container-main releasepage colorbox">
+     <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
+     <div style="background-image: url('{{ site.imgui }}menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;width: 100%;">
+       <div class="devinfo-main" style="position:relative;">
+         <div style="text-align:right;"><a href="https://github.com/rvtr/rvtr.github.io/edit/master{{ page.url }}" target="_blank">Edit</a></div>
+	      <!-- Generate list for programs sets like TWL EVA -->
+			{% for sc in page.category -%}
+         <!-- I am NOT happy with liquid right now -->
+         <h1>{% assign first_char = sc | slice: 0 %}{{ first_char | upcase }}{{ sc | remove_first: first_char }}</h1>
+			<table class="category-table">
+			  <tr>
+			  	<th class="colordiv category-header" style="/*dummystyle*/">
+				  <a href="/dsidev/{{ sc  | replace: ' ', '_' | downcase }}/index.html">{{ first_char | upcase }}{{ sc | remove_first: first_char }}</a> programs
+				</th>
+			  </tr>
+			  <tr>
+			  	<td style="line-height: 1.9;">
+			  	<!-- I enjoy eliptical indentation -->
+			  	  {% assign i = 0 %}
+			        {%- for page in site.pages -%}
+				           {% for TEST in site.data.dsinfo -%}
+					             {%- if TEST.PROGRAM == page.app -%}
+						               {%- if TEST.PUBLISHED == "TRUE" -%}
+						                   {%- if page.group == true -%}
+						     	                {%- for pc in page.category -%}
+						     	                   {%- if pc == sc %}
+						     	                        {%- if i != 0 and page.sequence == true %}
+						     	                         <!-- Overly fancy arrows to show an order in a list. Counter to not display on the first loop -->
+						     	                          -->
+						      	                      {% endif -%}
+						      	                     {% assign i = i | plus: 1 %}
+						      	                   <a class="category-list" href="{{ page.url }}">{{ page.altname }}</a>
+						      	                {% endif -%}
+						    	                {%- endfor -%}
+						    	             {%- endif -%}
+						    	         {%- endif -%}
+					             {%- endif -%}
+				         {%- endfor %}
+			    	{%- endfor -%}
+			    </td>
+			  </tr>
+			</table>
+			{%- endfor %}
+         {{ content }}
+       </div>
+     </div>
+     <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
+   </div>
+ </div>

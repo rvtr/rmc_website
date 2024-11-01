@@ -4,7 +4,7 @@ app: SDMC_Launcher
 preview: /preview.png
 ---
 
-This is a special <a href="https://dsibrew.org/wiki/Stage2" target="_blank">stage2</a> bootloader that boots an SRL off of the SD card. Only used in factories, this bootloader is installed on every DSi when it enters the <a href="/dsidev/twlboardchecker.html">BOARD</a> phase of testing. This allows the DSi to run tools like <a href="/dsidev/twlboardchecker.html">PRE_IMPORT</a> that will install an actual firmware. SDMC Launcher is found in most copies of TWL EVA and is treated as a fallback bootloader in case certain NAND writing operations fail. <br>SRLs must be signed for the target console in order to be booted.
+This is a special <a href="https://dsibrew.org/wiki/Stage2" target="_blank">stage2</a> bootloader that boots an SRL off of the SD card. Only used in factories, this bootloader is installed on every DSi when it enters the <a href="/dsidev/twlboardchecker.html">BOARD</a> phase of testing. This allows the DSi to run tools like <a href="/dsidev/twl_eva_pre_import.html">PRE_IMPORT</a> that will install an actual firmware. SDMC Launcher is found in most copies of TWL EVA and is treated as a fallback bootloader in case certain NAND writing operations fail. <br>SRLs must be signed for the target console in order to be booted.
 <br><br>
 The source code for SDMC Launcher can be found in <a target="_blank" href="https://github.com/rvtr/TwlIPL/tree/trunk/build/nandfirm/sdmc-launcher">TwlIPL</a>.
 <div class="screenshot">

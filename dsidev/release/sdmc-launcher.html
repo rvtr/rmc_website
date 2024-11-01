@@ -1,0 +1,22 @@
+---
+title: SDMC Launcher DSi
+layout: release
+releaseslug: sdmclauncher
+preview: /photos/launcher.png
+---
+    <h1>SDMC Launcher DSi</h1>
+    <p>Thanks to <b>BrolyBroMan</b> we're releasing a DSi NAND with the <a href="/dsidev/sdmc_launcher.html">SDMC Launcher</a> bootloader. This bootloader is installed during the first stage of factory testing (the <a href="/dsidev/twlboardchecker.html">BOARD</a> test) when the DSi has no firmware or any other data in NAND. SDMC Launcher will load SRLs off of the SD card, and is the only way to boot software early on.
+    <div class="screenshot">
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/launcher.png" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/launcher.png" alt="SDMC Launcher main screen"></a>
+    </div>
+    The specific NAND we have originally passed factory testing, got sold to a customer, then was later returned to the factory and went through the BOARD test a second time. The only change was the addition of SDMC Launcher, with the original v1.4.4U firmware and system files left intact.
+    <h3>Download</h3>
+    The original NAND dump had a bad MBR, so most tools will refuse to decrypt it. The "fixed" version of the NAND has been edited to have the correct MBR.
+        <br><br>
+    <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/TW739103942_SDMC_Launcher_prod_BrolyBroMan.zip">SDMC Launcher NAND</a><br>
+    <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/TW739103942_SDMC_Launcher_prod_BrolyBroMan_fixed_MBR.zip">SDMC Launcher NAND (fixed)</a>
+    <br><br>
+    <div class="screenshot">
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/board_front.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/board_front.jpg" alt="DSi motherboard front"></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/board_back.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/board_back.jpg" alt="DSi motherboard back"></a>
+    </div>

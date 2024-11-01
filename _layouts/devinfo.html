@@ -1,6 +1,21 @@
 ---
 layout: dsiware
 ---
+<!-- 
+
+		Do you remember a reaaaaaally long time ago when you first created dsinfo.csv?
+		And remember how everything duplicated a bajillion times?
+
+		This is why there's currently "if ENTRY.PUBLISHED == 'TRUE'"
+		The first entry for a set of programs will have PUBLISHED set to TRUE.
+		That makes sure that only ONE content is made for ONE entry of the same program.
+
+		Let's uhhhh maybe fix that later. Do something that doesn't require needing this PUBLISHED flag.
+		It also prevents unpublished pages from showing content, even though they'll still be generated.
+
+		(I was genuinely confused on what this was for during the last few months and had no idea)
+
+-->
 {% for ENTRY in site.data.dsinfo -%}
   {%- if ENTRY.PUBLISHED == "TRUE" -%}
 	{%- if ENTRY.PROGRAM == page.app -%}
@@ -16,8 +31,9 @@ layout: dsiware
 		{% for sc in page.category -%}
 		<table class="category-table">
 		  <tr>
+		  	<!-- dummystyle gets replaced with the CSS for the current theme in /theme.js -->
 		  	<th class="colordiv category-header" style="/*dummystyle*/">
-			  Other {{ sc }} programs
+			  Other <!--<a href="/dsidev/{{ sc  | replace: ' ', '_' | downcase }}/index.html">{{ sc }}</a>-->{{ sc }} programs
 			</th>
 		  </tr>
 		  <tr>

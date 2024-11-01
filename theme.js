@@ -21,14 +21,14 @@ if (new Date().getMonth() == 5) {
   colorTre = 'white';
   colorFor = 'blue';
   seasonal = true;
-} else if (new Date().getMonth() == 10) {
+/* } else if (new Date().getMonth() == 10) {
   // October
   colorOne = 'black';
   colorTwo = 'white';
   colorTre = 'black';
   colorFor = 'white';
   colorOtr = 'background-color: #ffffff;border: 2px solid #c6c6c6;';
-  seasonal = true;
+  seasonal = true; */
 } else if (new Date().getMonth() == 11) {
   // Christmas
   colorOne = 'red';

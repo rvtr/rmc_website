@@ -8,8 +8,6 @@
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:site_name" content="Random Meaningless Characters (rmc)">
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Random Meaningless Characters (rmc)">
-    <meta property="twitter:description" content="DS(i) development software documentation and preservation.">
     {% if page.app == null -%}
       <title>{{ page.title }} | rmc</title>
       <meta property="og:title" content="{{ page.title }}">
@@ -20,8 +18,8 @@
         <meta property="og:image" content="{{ site.imgdir }}{{ ENTRY.PROGRAM }}{{ page.preview }}">
         <meta property="twitter:image" content="{{ site.imgdir }}{{ ENTRY.PROGRAM }}{{ page.preview }}">
       {%- endif %}
-      <meta name="description" content="DS(i) development software documentation and preservation.">
-      <meta property="og:description" content="DS(i) development software documentation and preservation.">
+      <meta name="description" content="{{ page.excerpt }}">
+      <meta property="og:description" content="{{ page.excerpt }}">
       <meta name="keywords" content="dsi, ds, nintendo, dev" />
     {%- else -%}
   {%- for ENTRY in site.data.dsinfo -%}
@@ -38,6 +36,8 @@
        {%- endif %}
         <meta name="description" content="{{ ENTRY.DESC }} for {{ ENTRY.SYSTEM }}">
         <meta property="og:description" content="{{ ENTRY.DESC }} for {{ ENTRY.SYSTEM }}">
+        <meta property="twitter:description" content="{{ ENTRY.DESC }} for {{ ENTRY.SYSTEM }}">
+        <meta property="twitter:title" content="{{ page.excerpt }}">
         <meta name="keywords" content="dsi, ds, nintendo, dev, {{ page.app }}" />
       {%- endif -%}
     {%- endif -%}

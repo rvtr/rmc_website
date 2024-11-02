@@ -13,13 +13,15 @@
       <meta property="og:title" content="{{ page.title }}">
       {% if page.preview == null -%}
         <meta property="og:image" content="{{ site.imgdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif">
-        <meta property="twitter:image" content="{{ site.imgdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif">
+        <!-- No "twitter" preview if just app icon -->
       {%- else -%}
-        <meta property="og:image" content="{{ site.imgdir }}{{ ENTRY.PROGRAM }}{{ page.preview }}">
-        <meta property="twitter:image" content="{{ site.imgdir }}{{ ENTRY.PROGRAM }}{{ page.preview }}">
+        <meta property="og:image" content="{{ site.imgdir }}{{ page.preview }}">
+        <meta property="twitter:image" content="{{ site.imgdir }}{{ page.preview }}">
       {%- endif %}
-      <meta name="description" content="{{ page.excerpt }}">
-      <meta property="og:description" content="{{ page.excerpt }}">
+      <meta name="description" content="{{ page.description }}">
+      <meta property="og:description" content="{{ page.description }}">
+      <meta property="twitter:description" content="{{ page.description }}">
+      <meta property="twitter:title" content="{{ page.title }}">
       <meta name="keywords" content="dsi, ds, nintendo, dev" />
     {%- else -%}
   {%- for ENTRY in site.data.dsinfo -%}
@@ -29,7 +31,7 @@
         <meta property="og:title" content="{{ ENTRY.TITLE }}">
         {% if page.preview == null -%}
           <meta property="og:image" content="{{ site.imgdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif">
-          <meta property="twitter:image" content="{{ site.imgdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif">
+          <!-- No "twitter" preview if just app icon -->
         {%- else -%}
           <meta property="og:image" content="{{ site.imgdir }}{{ ENTRY.PROGRAM }}{{ page.preview }}">
           <meta property="twitter:image" content="{{ site.imgdir }}{{ ENTRY.PROGRAM }}{{ page.preview }}">
@@ -37,7 +39,7 @@
         <meta name="description" content="{{ ENTRY.DESC }} for {{ ENTRY.SYSTEM }}">
         <meta property="og:description" content="{{ ENTRY.DESC }} for {{ ENTRY.SYSTEM }}">
         <meta property="twitter:description" content="{{ ENTRY.DESC }} for {{ ENTRY.SYSTEM }}">
-        <meta property="twitter:title" content="{{ page.excerpt }}">
+        <meta property="twitter:title" content="{{ ENTRY.TITLE }}">
         <meta name="keywords" content="dsi, ds, nintendo, dev, {{ page.app }}" />
       {%- endif -%}
     {%- endif -%}

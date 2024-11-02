@@ -7,14 +7,14 @@
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:site_name" content="Random Meaningless Characters (rmc)">
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Random Meaningless Characters (rmc)">
+    <meta property="twitter:title" content="{{ page.title }}">
     <meta property="twitter:description" content="DS(i) development software documentation and preservation.">
     {% if page.app == null -%}
       <title>{{ page.title }} | rmc</title>
       <meta property="og:title" content="{{ page.title }}">
       {% if page.preview == null -%}
         <meta property="og:image" content="{{ site.url }}/icon.png">
-        <meta property="twitter:image" content="{{ site.url }}/icon.png">
+        <!-- No "twitter" preview if just app icon -->
       {%- else -%}
         <meta property="og:image" content="{{ site.releasedir }}{{ page.releaseslug }}{{ page.preview }}">
         <meta property="twitter:image" content="{{ site.releasedir }}{{ page.releaseslug }}{{ page.preview }}">

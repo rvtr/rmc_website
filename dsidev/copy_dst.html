@@ -1,0 +1,20 @@
+---
+layout: devinfo
+app: copy_dst
+altname: RepaireToolRESTORE
+category: [TwlIPL test]
+catdesc: [A collection of tests used in the development of the DSi. Many of these are internal equivalents to TWL EVA's tests.]
+sequence: FALSE
+group: true
+---
+<b>Repaire Tool RESTORE</b> is used to restore the NAND from SD backups made by <a href="/dsidev/copy_org.html">Repaire Tool BACKUP</a>. The process is as follows:
+<ul>
+<li>Restore RTC and HWInfo</li>
+<li>Restore the WiFi board firmware</li>
+<li>Restore user settings</li>
+<li>Restore <code>nand:/shared2/</code></li>
+<li>Restore photos</li>
+<li>Restore installed titles</li>
+<li>Set up shop config</li>
+<li>Restore saves</li>
+</ul>

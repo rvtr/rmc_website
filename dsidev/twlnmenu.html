@@ -52,7 +52,7 @@ SD mode allows you to select and install TAD files to NAND from the SD card.
 <h4>Quick explaination of TADs</h4>
 TADs are essentially SRLs (NDS ROMs) that have been packaged into an installable format. TADs are very similar to the Wii's WADs, sharing the same offsets and signing. A <a href="https://github.com/rvtr/TwlIPL/commit/baca65d35d5d62d815c88e6374b895d5b0755277">commit in TwlIPL</a> explains the similarity by showing that TADs were derived from WADs.
 <br><br>
-TAD files are created with <a href="https://randommeaninglesscharacters.com/dsidev/man/maketad.html" target="_blank">maketad</a> from the TWL SDK. Only NAND apps such as DSiWare can be coverted into TADs.
+TAD files are created with <a href="/dsidev/man/maketad.html" target="_blank">maketad</a> from the TWL SDK. Only NAND apps such as DSiWare can be coverted into TADs.
 <br><br>
 Signing in TADs is very important when installing. If a TAD is not signed for the target console (eg. dev signing on a retail DSi) then <code>TwlNmenu</code> will fail. Anything created with the standard <code>maketad</code> will be dev signed and only work on dev units, though there is also a <code>maketad_updater</code> used for updater signing in <a href="">Twl SystemUpdater</a>.
 <br><br>

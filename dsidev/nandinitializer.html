@@ -1,0 +1,23 @@
+---
+layout: devinfo
+app: NandInitializer
+altname: NandInitializer
+category: [TwlIPL test]
+catdesc: [A collection of tests used in the development of the DSi. Many of these are internal equivalents to TWL EVA's tests.]
+sequence: FALSE
+group: true
+---
+<b>NandInitializer</b> is a collection of tests used to set up a DSi NAND. It allows for creating system files, installing firmware and a bootloader, formatting NAND, region changing, and more. NandInitializer seems to be most directly related to <a href="/dsidev/twl_eva_pre_import.html">TWL EVA</a>, possibly being the main inspiration or starting point. There are 3 versions available:<br><br>
+<ul>
+    <li><b>NandInitializerRed:</b> a fully featured version of the app. This is only meant for Nintendo's Research and Engineering Department.</li>
+    <li><b>NandInitializerProduction:</b> an automatic version of the app. Menu selection is disabled and you are limited to the pre-determined test order.</li>
+    <li><b>NandInitializer:</b> a very limited version of the app. You are only able to change HWInfo, and test/cleanup the NAND.</li>
+</ul>
+There are no compiled versions of NandInitializer, but the below documents have a photo of the production version running.<br><br>
+<ul>
+    <li><code>ctr.7z/sources/firmware/CTR/twl_os/build/hw_tests/<a href="{{ site.imgdir }}{{ page.app }}/external/TEG2検査手順.pdf" target="_blank">TEG2検査手順.doc</a></code></li>
+    <li><code>ctr.7z/sources/firmware/CTR/twl_os/build/hw_tests/<a href="{{ site.imgdir }}{{ page.app }}/external/TS検査手順.pdf" target="_blank">TS検査手順.doc</a></code></li>
+</ul>
+<div class="screenshot">
+    <img src="{{ site.imgdir }}{{ page.app }}/external/running_on_ctr-mother.jpg">
+</div>

@@ -20,6 +20,7 @@ if (new Date().getMonth() == 5) {
   colorTwo = 'pink';
   colorTre = 'white';
   colorFor = 'blue';
+  colorOtr = 'background-color: #62caff;border: 2px solid #3a98e1;color:black;';
   seasonal = true;
 /* } else if (new Date().getMonth() == 10) {
   // October
@@ -35,6 +36,7 @@ if (new Date().getMonth() == 5) {
   colorTwo = 'green';
   colorTre = 'red';
   colorFor = 'green';
+  colorOtr = 'background-color: #2ec429;border: 2px solid #1e8b00;';
   seasonal = true;
 } else {
   var randomColor = Math.floor(Math.random() * 7) + 1;

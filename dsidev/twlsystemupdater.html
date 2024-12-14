@@ -1,13 +1,13 @@
 ---
 layout: devinfo
 app: TwlSystemUpdater
+preview: /preview.png
 ---
 <i>Some screenshots and information are from <a href="https://wiki.raregamingdump.ca/index.php/SystemUpdater">Rare Gaming Dump.</a></i>
 <br><br>
 Twl SystemUpdater is a tool used to update DSi development hardware such as the IS-TWL-DEBUGGER or a panda. This does not work on retail units, causing the same <code>-2011</code> error as <a href="/dsidev/twlnmenu.html">TwlNmenu</a> and bricking the console.
-<br><br>
 <h2>TADs in NitroFS</h2>
-Twl SystemUpdater works by loading a set of firmware TADs and <a href="https://dsibrew.org/wiki/Nand:/shared1/TWLCFG0.dat" target="_blank">TWLCFG0.dat</a>/<a href="https://dsibrew.org/wiki/Nand:/shared1/TWLCFG1.dat" target="_blank">TWLCFG1.dat</a> from NitroFS to install onto the target hardware. The updaters are multi-region, so each one contains full sets of firmware TADs for every region. The TADs are sorted into three main folders.
+Twl SystemUpdater works by loading a set of firmware TADs and <a href="https://dsibrew.org/wiki/Nand:/shared1/TWLCFG0.dat" target="_blank">TWLCFG0.dat</a>/<a href="https://dsibrew.org/wiki/Nand:/shared1/TWLCFG1.dat" target="_blank">TWLCFG1.dat</a> from NitroFS to install onto the target hardware. The updaters are multi-region, so each one contains full sets of firmware TADs for every region. If a different region is installed, HWInfo will be updated accordingly. The TADs are sorted into three main folders.
 <br><br>
 <b><code>NitroFS:/data/debugger/</code></b><br>
 These TADs are for the IS-TWL-DEBUGGER.<br>
@@ -32,9 +32,17 @@ The SystemUpdater chooses whether to install from the <code>debugger</code>or <c
 <br><br>
 All the TAD files in NitroFS have been created with <code>maketad_updater</code>, a modified version of <a href="/dsidev/man/maketad.html" target="_blank">maketad</a>. Instead of using the normal Wii development key for encryption, <code>maketad_updater</code> uses the debugger common key (<code>A2FDDDF2E423574AE7ED8657B5AB19D3</code>). As a result these TADs can't be installed with TwlNmenu and can only be decrypted with {{ site.decrypt_tad }}.<br><br>
 <h2>Additional stage2 file</h2>
-There another file in NitroFS called <code>menu_launcher.nand</code>. This is the stage2 bootloader used in every development DSi. There is source code for this stage2 in <a href="{{ site.twlipl }}/tree/trunk/build/nandfirm/menu-launcher/" target="_blank">TwlIPL</a>.
+There another file in NitroFS called <code>menu_launcher.nand</code>. This is the stage2 bootloader used in every development DSi. 
+<h2>Source code</h2>
+There are multiple versions of the SystemUpdater source code in TwlIPL.<br><br>
+<ul>
+  <li><a href="{{ site.twlipl }}/tree/trunk/build/systemMenu_tools/SystemUpdater">SystemUpdater</a>: a limited SystemUpdater which is only able to install the region free/prototype firmware.</li>
+  <li><a href="{{ site.twlipl }}/tree/trunk/build/systemMenu_tools/SystemUpdaterRegionSelect">SystemUpdaterRegionSelect</a>: the SDK release of the SystemUpdater which allows installing multiple regions.</li>
+  <li><a href="{{ site.twlipl }}/tree/trunk/build/tests/CustomSystemUpdater">CustomSystemUpdater</a>: similar to the limited SystemUpdater, but it allows for installing different single regions.</li>
+</ul>
+In an <a href="{{ site.twlipl }}/tree/670a75721d822ccce8502451b15d73ef1ba16d93/build/systemMenu_RED/SystemUpdater/data">old commit</a> of the SystemUpdater's source code there is a complete v1206-5614 firmware.
 <h2>Changelog</h2>
-This is from an official readme included with the Twl SystemUpdater. You can read the full version <a href="man/twlsystemupdater.html" target="_blank">here</a>.
+This is from an official readme included with the Twl SystemUpdater. You can read the full version <a href="man/twlsystemupdater.html" target="_blank">here</a>.<br><br>
 <table class="history twl">
 	<tr>
 		<th class="twl">Revision Date</th>

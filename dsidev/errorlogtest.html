@@ -1,0 +1,35 @@
+---
+layout: devinfo
+app: ErrorLogTest
+altname: ErrorLogTest
+category: [TwlIPL test]
+catdesc: [A collection of tests used in the development of the DSi. Many of these are internal equivalents to TWL EVA's tests.]
+sequence: FALSE
+group: true
+---
+
+<b>ErrorLogTest</b> is used to break the system menu log in <code>nand:/sys/log/sysmenu.log</code>. This is done by fulling the log with fun spam messages like shown below:<br><br>
+
+<div class="code-div"><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+	ERRORLOG_Write( 0x80000 );
+	ERRORLOG_Printf( "this is overflow message!\nthis is overflow message!\nthis is overflow message!\n"
+						"this is overflow message!\nthis is overflow message!\nthis is overflow message!\n"
+						"this is overflow message!\nthis is overflow message!\nthis is overflow message!\n"
+						"this is overflow message!\nthis is overflow message!\nthis is overflow message!\n"
+						"this is overflow message!\nthis is overflow message!\nthis is overflow message!\n"
+						"this is overflow message!\nthis is overflow message!\nthis is overflow message!\n" );
+							
+/*	
+	ERRORLOG_Write( (u64)0x77700040051LL );
+	ERRORLOG_Printf( "%d hyoooo nyoronyoro\naboooon dogaaaaaaaan", 2+5 );
+	
+
+	ERRORLOG_Printf( "menuRedIplManager.cpp [l.73] RED FATAL 0" );
+	ERRORLOG_Printf( "this is too long long long long long long long long long long long long string.\n"
+						"this is too long long long long long long long long long long long long string.\n"
+						"this is too long long long long long long long long long long long long string.\n"
+						"this is too long long long long long long long long long long long long string.\n" );
+						*/
+						
+/*	
+</TD></TR></TABLE></div>

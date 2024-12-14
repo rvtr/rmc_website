@@ -1,0 +1,53 @@
+---
+layout: devinfo
+app: auto_preinst_rom
+altname: auto_preinst_rom
+category: [TwlIPL test]
+catdesc: [A collection of tests used in the development of the DSi. Many of these are internal equivalents to TWL EVA's tests.]
+sequence: FALSE
+group: true
+---
+<b>auto_preinst_rom</b> is a tool made to install bundled apps on a DSi, such DSi + Internet, DSi Browser, and Flipnote Studio. This tool can also delete the bundled apps, and delete the certificate file. The bundled apps meant to be used can be found in the source code. The SD apps (cooperation, HHWA, and HPCA) do not appear to be officially released anywhere, and there are no other mentions of them.
+<br><br>
+<div class="code-div"><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+For retail consoles:
+      ROM
+      0x00030004484e474a, 0 , 0 , rom:/tads/TWL-HNGJ-v256.tad,
+      0x000300044b32444a, 0 , 0 , rom:/tads/TWL-K2DJ-v0.tad,
+      0x000300044b47554a, 0 , 0 , rom:/tads/TWL-KGUJ-v257.tad,
+
+      SD
+      0x00030004434f5041, 0 , 0 , sdmc:/sdtads/en_CooperationA.tad,
+      0x0003001548485741, 0 , 0 , sdmc:/sdtads/en_HHWA.Release.tad,
+      0x0003000548504341, 0 , 0 , sdmc:/sdtads/en_HPCA.Release.tad,
+
+For development consoles:
+      ROM
+      0x0003000434424e41, 0 , 0 , rom:/tads_dev/backupSample.tad,
+      0x00030004344a4541, 0 , 0 , rom:/tads_dev/encodeSD.tad,
+      0x0003000434534e41, 0 , 0 , rom:/tads_dev/nandAppSample.tad,
+
+      SD
+      0x0003000434424e41, 0 , 0 , sdmc:/sdtaddevs/en_backupSample.tad,
+      0x0003000444534943, 0 , 0 , sdmc:/sdtaddevs/en_chavitt.tad,
+      0x00030004344a4541, 0 , 0 , sdmc:/sdtaddevs/en_encodeSD.tad,
+      0x0003000434534e41, 0 , 0 , sdmc:/sdtaddevs/en_nandAppSample.tad,
+</TD></TR></TABLE></div>
+
+There is also an option to download titles from the shop servers. Most of the TIDs here are dummy apps, similar to other dummy TIDs used in test apps.
+<br><br>
+<div class="code-div"><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  {0x000300044b47554a, 2, FALSE }, // KGUJ
+  {0x000300044b32444a, 2, FALSE }, // K2DJ
+  {0x00030004484e474a, 2, FALSE }, // HNGJ
+  {0x00030004346b6941, 2, FALSE }, // 4kiA
+  {0x00030004346b6a41, 2, FALSE }, // 4kjA
+  {0x00030004346b6b41, 2, FALSE }, // 4kkA
+  {0x00030004346b6c41, 2, FALSE }, // 4klA
+  {0x0003000434656241, 2, FALSE }, // 4ebA
+  {0x0003000434657541, 2, FALSE }, // 4euA
+  {0x0003000430484141, 2, FALSE }, // 0HAA
+  {0x0003000430484941, 2, FALSE }, // 0HIA
+  {0x000300044b58374a, 2, FALSE }, // KX7J
+  {0x000300044b53394a, 2, FALSE }  // KS9J
+</TD></TR></TABLE></div>

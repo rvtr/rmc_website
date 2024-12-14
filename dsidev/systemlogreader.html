@@ -1,0 +1,117 @@
+---
+layout: devinfo
+app: SystemLogReader
+altname: SystemLogReader
+category: [TwlIPL test]
+catdesc: [A collection of tests used in the development of the DSi. Many of these are internal equivalents to TWL EVA's tests.]
+sequence: FALSE
+group: true
+---
+
+<b>SystemLogReader</b> is a tool that copies the system log from <code>nand:/sys/log/sysmenu.log</code> to the SD card. It is intended to be used through ntrboot, for when the system menu will not load and log recovery is not possible another way. There are full instructions on flashing and using ntrboot. Part of the translated guide is below, and the rest can be found in the source code:
+<ul style="list-style-type:none;">
+　<li><b>2-1.</b> <u>Startup of SystemLogReader</u><br>
+　　Insert the DS flash card to which SystemLogReader was written in step 1 into the card slot of the main unit.<br>
+　　Also, insert an SD card into the SD card slot of the main unit.</li>
+　<li><b>2-2.</b><br>
+　　Place the magnet near the X button of the main unit in the position where the sleep mode is activated when the main unit is in normal operation,<br>
+　　Press and hold down the "SELECT + START + X" buttons and turn on the power.</li>
+　<li><b>2-3.</b><br>
+　　System Log Writer starts via <a href="/dsidev/nandfirmwriter_ntrboot.html">NAND FIRM WRITER</a> and outputs the error log file to the SD card.<br>
+　　The program outputs the error log file to the SD card and stops.<br>
+　　The error log cannot be checked on the launched program.</li>
+</ul>  
+
+The SystemLogReader instructions also include an explaination of the log format, and give some examples of log errors.
+<br><br>
+<div class="code-div"><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  |-----------------------------------------------------------------|
+  | 　#FFT date [day of week] time                                  |
+  | 　title: Initial code of the program where the error occurred   |
+  | 　Details of the error                                          |
+  |-----------------------------------------------------------------|
+
+　- Wireless module failure
+　　#FFT 00-01-29[SAT] 00:02:07
+　　title: HNAJ
+　　menuRedIplManager.cpp [l.466] WLFIRM 2 (00030015484e424a) 
+
+　- Camera module failure (including “CAMERA **” other than the following)
+　　#FFT 00-01-01[SAT] 00:12:08
+　　title: HNAJ
+　　menuCameraManager.cpp [l.369] CAMERA INIT 8
+
+　- NAND degradation problem
+　　#FFT 00-01-29[SAT] 00:02:07
+　　title: HNAJ
+　　menuSystem.cpp [l.709] RED FATAL 0000000000000002 (BT 00030015484e424a)
+    err:FATAL_ERROR_NAND
+
+　- HWInfo secure corruption
+　　#FFT 00-01-01[SAT] 00:12:08
+　　title: HNAJ
+　　menuSystem.cpp [l.709] RED FATAL 0000000000000008 (BT 00030015484e424a)
+　　err:FATAL_ERROR_HWINFO_SECURE
+
+　- Shared font file corruption
+　　#FFT 00-01-03[MON] 17:56:18
+　　title: HNBJ
+　　stgSystem.cpp [l.704]                     
+</TD></TR></TABLE></div>
+The error codes in the SystemLogReader instructions appear to be outdated, so they should only be used to understand the format. A complete list of the proper RED FATAL codes can be found from this array. 
+<br><br>
+<div class="code-div"><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+static char * FatalErrorCode[] = {
+	"FATAL_ERROR_UNDEFINED",
+	"FATAL_ERROR_NAND",
+	"FATAL_ERROR_HWINFO_NORMAL",
+	"FATAL_ERROR_HWINFO_SECURE",
+	"FATAL_ERROR_TWLSETTINGS",
+	"FATAL_ERROR_SHARED_FONT",
+	"FATAL_ERROR_WLANFIRM_AUTH",
+	"FATAL_ERROR_WLANFIRM_LOAD",
+	"FATAL_ERROR_TITLE_LOAD_FAILED",
+	"FATAL_ERROR_TITLE_POINTER_ERROR",
+	"FATAL_ERROR_AUTHENTICATE_FAILED",
+	"FATAL_ERROR_ENTRY_ADDRESS_ERROR",
+	"FATAL_ERROR_TITLE_BOOTTYPE_ERROR",
+	"FATAL_ERROR_SIGN_DECRYPTION_FAILED",
+	"FATAL_ERROR_SIGN_COMPARE_FAILED",
+	"FATAL_ERROR_HEADER_HASH_CALC_FAILED",
+	"FATAL_ERROR_TITLEID_COMPARE_FAILED",
+	"FATAL_ERROR_VALID_SIGN_FLAG_OFF",
+	"FATAL_ERROR_CHECK_TITLE_LAUNCH_RIGHTS_FAILED",
+	"FATAL_ERROR_MODULE_HASH_CHECK_FAILED",
+	"FATAL_ERROR_MODULE_HASH_CALC_FAILED",
+	"FATAL_ERROR_MEDIA_CHECK_FAILED",
+	"FATAL_ERROR_DL_MAGICCODE_CHECK_FAILED",
+	"FATAL_ERROR_DL_SIGN_DECRYPTION_FAILED",
+	"FATAL_ERROR_DL_HASH_CALC_FAILED",
+	"FATAL_ERROR_DL_SIGN_COMPARE_FAILED",
+	"FATAL_ERROR_WHITELIST_INITDB_FAILED",
+	"FATAL_ERROR_WHITELIST_NOTFOUND",
+	"FATAL_ERROR_DHT_PHASE1_FAILED",
+	"FATAL_ERROR_DHT_PHASE2_FAILED",
+	"FATAL_ERROR_LANDING_TMP_JUMP_FLAG_OFF",
+	"FATAL_ERROR_TWL_BOOTTYPE_UNKNOWN",
+	"FATAL_ERROR_NTR_BOOTTYPE_UNKNOWN",
+	"FATAL_ERROR_PLATFORM_UNKNOWN",
+	"FATAL_ERROR_LOAD_UNFINISHED",
+	"FATAL_ERROR_LOAD_OPENFILE_FAILED",
+	"FATAL_ERROR_LOAD_MEMALLOC_FAILED",
+	"FATAL_ERROR_LOAD_SEEKFILE_FAILED",
+	"FATAL_ERROR_LOAD_READHEADER_FAILED",
+	"FATAL_ERROR_LOAD_LOGOCRC_ERROR",
+	"FATAL_ERROR_LOAD_READDLSIGN_FAILED",
+	"FATAL_ERROR_LOAD_RELOCATEINFO_FAILED",
+	"FATAL_ERROR_LOAD_READMODULE_FAILED",
+	"FATAL_ERROR_NINTENDO_LOGO_CHECK_FAILED",
+	"FATAL_ERROR_SYSMENU_VERSION",
+	"FATAL_ERROR_DHT_PHASE1_CALC_FAILED",
+	"FATAL_ERROR_LOAD_UNKNOWN_BOOTTYPE",
+	"FATAL_ERROR_LOAD_AUTH_HEADER_FAILED",
+	"FATAL_ERROR_LOAD_NEVER_STARTED",
+	"FATAL_ERROR_EJECT_CARD_AFTER_LOAD_START",
+	"FATAL_ERROR_TITLEID_COMPARE_FAILED_NTR",
+};
+</TD></TR></TABLE></div>

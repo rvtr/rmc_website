@@ -32,15 +32,20 @@ function warnFaketad() {
   </div>
   {%- endif -%}
   <div class="devcsv-info">
-    <b><u>Source:</u></b><br>{{ ENTRY.ORIGIN }}
+    <b><u>Origin:</u></b><br>{{ ENTRY.ORIGIN }}
   </div>
+  {%- if ENTRY.SOURCE != "" -%}
+  <div class="devcsv-info1">
+    <b><u>Source code:</u></b><br> - View on <a href="{{ ENTRY.SOURCE }}" target="_blank">GitHub</a>
+  </div>
+  {%- endif -%}
   {%- if ENTRY.UNDUMPED == "TRUE" -%}
   <div class="devcsv-info2">
-    <br><br><b><u>Dumped by:</u></b><br>Currently undumped!
+    <b><u>Dumped by:</u></b><br>Currently undumped!
   </div>
   {%- else -%}
   <div class="devcsv-info2">
-    <br><br><b><u>Dumped by:</u></b><br>{{ ENTRY.CREDIT }}
+    <b><u>Dumped by:</u></b><br>{{ ENTRY.CREDIT }}
   </div>
   <div class="devcsv-download">
   <table class="devcsv-table">

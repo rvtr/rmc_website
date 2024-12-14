@@ -36,6 +36,11 @@ layout: dsiware
 			  Other <!--<a href="/dsidev/{{ sc  | replace: ' ', '_' | downcase }}/index.html">{{ sc }}</a>-->{{ sc }} programs
 			</th>
 		  </tr>
+		  {%- if page.catdesc -%}
+			  <tr class="category-footer">
+	          <td><i>{{ page.catdesc }}</i></td>
+	        </tr>
+	     {%- endif -%}
 		  <tr>
 		  	<td style="line-height: 1.9;">
 		  	<!-- I enjoy eliptical indentation -->
@@ -46,14 +51,22 @@ layout: dsiware
 					               {%- if TEST.PUBLISHED == "TRUE" -%}
 					                   {%- if page.group == true -%}
 					     	                {%- for pc in page.category -%}
-					     	                   {%- if pc == sc %}
-					     	                        {%- if i != 0 and page.sequence == true %}
+					     	                   {%- if pc == sc -%}
+					     	                        {%- if i != 0 and page.sequence == true -%}
 					     	                         <!-- Overly fancy arrows to show an order in a list. Counter to not display on the first loop -->
 					     	                          -->
-					      	                      {% endif -%}
+					     	                        {%- endif -%}
+					     	                        {%- if i != 0 and page.sequence == false -%}
+					     	                          -
+					     	                        {%- endif -%}
+
 					      	                     {% assign i = i | plus: 1 %}
-					      	                   <a class="category-list" href="{{ page.url }}">{{ page.altname }}</a>
-					      	                {% endif -%}
+					      	                     {%- if ENTRY.PROGRAM == TEST.PROGRAM -%}
+					      	                   		<span style="padding:10px;"><b>{{ page.altname }}</b></span>
+					      	                   	{%- else -%}
+					      	                   		<a class="category-list" href="{{ page.url }}">{{ page.altname }}</a>
+					      	                   	{%- endif -%}
+					      	                {%- endif -%}
 					    	                {%- endfor -%}
 					    	             {%- endif -%}
 					    	         {%- endif -%}

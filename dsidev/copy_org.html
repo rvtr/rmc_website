@@ -1,0 +1,29 @@
+---
+layout: devinfo
+app: copy_org
+altname: RepaireToolBACKUP
+category: [TwlIPL test]
+catdesc: [A collection of tests used in the development of the DSi. Many of these are internal equivalents to TWL EVA's tests.]
+sequence: FALSE
+group: true 
+---
+<b>Repaire Tool BACKUP</b> is a tool used to back up parts of the DSi NAND and to an SD card. In order, it will copy:
+<ul>
+<li>The WiFi board firmware</li>
+<li>User settings</li>
+<li><code>nand:/shared2/</code></li>
+<li>All photos</li>
+<li>All saves</li>
+<li>Installed titles, and a list of them</li>
+<li>RTC data and HWInfo</li>
+</ul>
+After the backup is done, users can run the <a href="/dsidev/copy_dst.html">Repaire Tool RESTORE</a> program to restore the SD files.
+<br><br>
+There were a couple photos of Repaire Tool BACKUP in the gigaleaks:
+<ul>
+    <li><code>ctr.7z/svn/ctr_Repair/trunk/ConsoleDataMigration/documents/<a href="{{ site.imgdir }}{{ page.app }}/external/CTR用本体データ移行ツール仕様_20101221.ppt" target="_blank">CTR用本体データ移行ツール仕様_20101221.ppt</a></code></li>
+</ul>
+<div class="screenshot">
+    <a href="{{ site.imgdir }}{{ page.app }}/external/diagram.jpg" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/external/diagram.jpg"></a>
+    <a href="{{ site.imgdir }}{{ page.app }}/external/dsi.jpg" target="_blank"><img src="{{ site.imgdir }}{{ page.app }}/external/dsi.jpg"></a>
+</div>

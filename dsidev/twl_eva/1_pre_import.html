@@ -6,6 +6,7 @@ category: [TWL EVA]
 sequence: TRUE
 redirect_from: /dsidev/twl_eva_pre_import.html
 group: true
+preview: /preview.png
 ---
 When a DSi has gone through the factory's <a href="/dsidev/twlboardchecker.html">BOARD</a> testing, it is left with no firmware and only the <a href="/dsidev/sdmc_launcher.html">SDMC Launcher</a> bootloader. This bootloader is used to launch <b>PRE_IMPORT</b> off of the SD card. PRE_IMPORT will then install factory firmware and a bootloader that is functionally like the release version.
 <br><br>Factory firmware is like any other prototype firmware except for the fact that it contains an autoboot only Launcher. This means that it has no accessible menu and is only able to run inserted cartridges. Autobooting is all prototype firmware needs since it is just used to launch other versions of TWL EVA. This firmware is deleted once <a href="/dsidev/twl_eva_import.html">IMPORT</a> installs the final firmware, but headers can often still be found in unused DSis. Below is a list of all the titles and versions that make up factory firmware for retail and dev consoles.<br><br>

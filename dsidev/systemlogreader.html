@@ -8,7 +8,7 @@ sequence: FALSE
 group: true
 ---
 
-<b>SystemLogReader</b> is a tool that copies the system log from <code>nand:/sys/log/sysmenu.log</code> to the SD card. It is intended to be used through ntrboot, for when the system menu will not load and log recovery is not possible another way. There are full instructions on flashing and using ntrboot. Part of the translated guide is below, and the rest can be found in the source code:
+<b>SystemLogReader</b> is a tool that copies the system log (used for debugging/error checking) from <code>nand:/sys/log/sysmenu.log</code> to the SD card. It is intended to be used through ntrboot, for when the system menu will not load and log recovery is not possible another way. There are full instructions on flashing and using ntrboot. Part of the translated guide is below, and the rest can be found in the source code:
 <ul style="list-style-type:none;">
 　<li><b>2-1.</b> <u>Startup of SystemLogReader</u><br>
 　　Insert the DS flash card to which SystemLogReader was written in step 1 into the card slot of the main unit.<br>
@@ -58,7 +58,7 @@ The SystemLogReader instructions also include an explaination of the log format,
 　　title: HNBJ
 　　stgSystem.cpp [l.704]                     
 </TD></TR></TABLE></div>
-The error codes in the SystemLogReader instructions appear to be outdated, so they should only be used to understand the format. A complete list of the proper RED FATAL codes can be found from this array. 
+The error codes in the SystemLogReader instructions appear to be outdated, so they should only be used to understand the format. A complete list of the proper RED FATAL codes can be found from this array in the source: 
 <br><br>
 <div class="code-div"><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
 static char * FatalErrorCode[] = {

@@ -1,0 +1,289 @@
+---
+title: "IMPORTed from Foxconn: Releasing new DSi factory cartridges!"
+layout: release
+releaseslug: imported_from_foxconn
+preview: /preview.png
+---
+    <h1>IMPORTed from Foxconn: Releasing new DSi factory cartridges!</h1>
+    <p>Merry christmas and happy holidays! We just woke up to a collection of factory cartridges under the tree. Thanks to <b>j4m13c0</b> we have 26 new dumps, <b>Mecasacax</b> has given a helpful redump of IMPORT JPN v1.5, and an anoymous friend (santa maybe?) shared PRE_IMPORT v1.3! These dumps have been modified to add back the undumpable regions when possible, making them more accurate to the original ROMs.<br><br>
+    In order to make this release easier to view, all of the dumps have been categorized by their "type." The types determine the purpose of a factory tool, such as TWL EVA <b>CAMERA</b> testing cameras, and TWL EVA <b>IMPORT</b> installing firmware. Please enjoy!</p>
+
+    <table class="history">
+      <tr><th class="twl">Table of contents</th></tr>
+      <tr><td class="twl">- <a href="#mcu_firm_writer">MCU FIRM WRITER</a></td></tr>
+      <tr><td class="twl">- <a href="#selftest">SELFTEST</a></td></tr>
+      <tr><td class="twl">- <a href="#camera">CAMERA</a></td></tr>
+      <tr><td class="twl">- <a href="#mic">MIC</a></td></tr>
+      <tr><td class="twl">- <a href="#pre_import">PRE_IMPORT</a></td></tr>
+      <tr><td class="twl">- <a href="#import">IMPORT</a></td></tr>
+      <tr><td class="twl">- <a href="#ncheck">NCHECK</a></td></tr>
+      <tr><td class="twl">- <a href="#final">FINAL</a></td></tr>
+      <tr><td class="twl">- <a href="#tp_cal">TP_CAL</a></td></tr>
+      <tr><td class="twl">- <a href="#f_writer">F-WRITER</a></td></tr>
+    </table>
+
+    <h2 id="mcu_firm_writer">MCU FIRM WRITER</h2>
+    <p><b>MCU FIRM WRITER</b> writes the Microcontroller Unit (MCU) firmware. The MCU is responsible for all button inputs, cameras, and LEDs. This app is not a TWL EVA, but still appears to be used in the factory. It's hard to say where though as the MCU firmware should be installed during assembly, and having a corrupted or no MCU firmware would make it impossible to run the cartridge. The MCU FIRM WRITER also has a different version of the MCU firmware embedded.<br><br>MCU FIRM WRITER has been tested on retail DSis and panda development DSis (not debuggers though as <u>this will probably brick a debugger</u>) and should be somewhat safe to use, but please use caution as there is no way to unbrick MCU.</p>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  MCU firm   : <a href="https://gist.github.com/rvtr/6a0a239986b6ec135e3ae665ac9c628e" target="_blank">UTL_MCU_BA.hex</a>
+  Download   : <a href="{{ site.appdir }}MCU_FIRM_WRITER/MCU_FIRM_WRITER_v0.srl">MCU_FIRM_WRITER_v0.srl</PRE></TD></TR></TABLE>
+  <div class="screenshot">
+    <img src="{{ site.imgdir }}MCU_FIRM_WRITER/screenshots/start.png">
+    <img src="{{ site.imgdir }}MCU_FIRM_WRITER/screenshots/pass.png">
+  </div>
+
+    <h2 id="selftest">TWL EVA SELFTEST</h2>
+    <p>It's very difficult to tell what <b>SELFTEST</b> is used for. This autoboots the <b>SELF CHECKER</b> test. Normally SELF CHECKER is similar to FINAL or AGING, but this dump's SELF CHECKER just consists of a single MCU version check. The version is also pre-v1.0 making it seem more like a modified version and not the "release" copy that would be used in factories.</p>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Version    : v0.7
+  Build date : 2009/12/02
+  Download   : <a href="{{ site.appdir }}TWL_EVA_SELFTEST/TWL_EVA_SELFTEST_v0.7_20091202.srl">TWL_EVA_SELFTEST_v0.7_20091202.srl</PRE></TD></TR></TABLE>
+  <div class="screenshot">
+    <img src="{{ site.imgdir }}TWL_EVA_SELFTEST/screenshots/selftest.png">
+    <img src="{{ site.imgdir }}TWL_EVA_SELFTEST/screenshots/selftest_mcu.png">
+  </div>
+
+    <h2 id="camera">TWL EVA CAMERA</h2>
+    <p><a href="/dsidev/twl_eva_camera.html">CAMERA</a> is used to test the cameras with filters, different capture resolutions, and settings like lighting, contrast and sharpess. This specific version is called <b>CAMERA ASSY</b> and is just a variation on the standard CAMERA app.</p>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Version    : v2.1
+  Build date : 2008/11/27
+  Download   : <a href="{{ site.appdir }}TWL_EVA_CAMERA/TWL_EVA_CAMERA_ASSY_v2.1_20081127.srl">TWL_EVA_CAMERA_ASSY_v2.1_20081127.srl</PRE></TD></TR></TABLE>
+  <div class="screenshot">
+    <img src="{{ site.imgdir }}TWL_EVA_CAMERA/screenshots/camera_assy.png">
+    <img src="{{ site.imgdir }}TWL_EVA_CAMERA/screenshots/camera_assy_fail.png">
+  </div>
+
+    <h2 id="mic">TWL EVA MIC</h2>
+    <p><a href="/dsidev/twl_eva_mic.html">MIC</a> tests the microphones and audio output. It will if there is feedback and noise, and that the microphone can pick up sounds in the right volume range.</p>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Version    : v3.0
+  Build date : 2009/08/17
+  Download   : <a href="{{ site.appdir }}TWL_EVA_MIC/TWL_EVA_MIC_v3.0_20090817.srl">TWL_EVA_MIC_v3.0_20090817.srl</PRE></TD></TR></TABLE>
+  <div class="screenshot">
+    <img src="{{ site.imgdir }}TWL_EVA_MIC/screenshots/mic_3.0.png">
+    <img src="{{ site.imgdir }}TWL_EVA_MIC/screenshots/mic_graph.png">
+  </div>
+
+    <h2 id="pre_import">TWL EVA PRE_IMPORT</h2>
+    <p>Before the DSi NAND has any firmware, <a href="/dsidev/twl_eva_pre_import.html">PRE_IMPORT</a> will be booted from the SD card with the <a href="/dsidev/sdmc_launcher.html">SDMC Launcher</a> bootloader. Then PRE_IMPORT will format the NAND and install a menuless factory firmware. Factory firmware is not region specific (it's the "ALL" region) and will work without having system files like HWInfo set up. Many thanks to my friend for dumping their large collection of SDs in search of this.<br><br>Since this tool formats your NAND, it is <u>extremely dangerous to run.</u> Please hold <code>START</code> or <code>SELECT</code> on boot to prevent deleting NAND. Also make sure you have a NAND backup.</p>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Firmware   : v2105-7739 / v0.1A (retail)
+  Firmware   : v2095-7739 / v0.1A (dev)
+  Version    : v1.3
+  Build date : 2009/12/10
+  Download   : <a href="{{ site.appdir }}TWL_EVA_PRE_IMPORT/TWL_EVA_PRE_IMPORT_v1.3_20091210.srl">TWL_EVA_PRE_IMPORT_v1.3_20091210.srl</PRE></TD></TR></TABLE>
+  <div class="screenshot">
+    <img src="{{ site.imgdir }}TWL_EVA_PRE_IMPORT/screenshots/pre_import.png">
+    <img src="{{ site.imgdir }}TWL_EVA_PRE_IMPORT/screenshots/pre_import_installing.png">
+    <img src="{{ site.imgdir }}TWL_EVA_PRE_IMPORT/screenshots/pre_import_filelist.png">
+    <img src="{{ site.imgdir }}TWL_EVA_PRE_IMPORT/screenshots/pre_import_sdmc.png">
+  </div>
+
+    <h2 id="import">TWL EVA IMPORT</h2>
+    <p><a href="/dsidev/twl_eva_import.html">IMPORT</a> is used to install the final firmware on DSis. Each copy of IMPORT contains a complete firmware as retail signed TADs, and they can be used for upgrading/downgrading the firmware. Each version has been listed below, along with notes if it is special.</p>
+    <details>
+    <summary>JPN (v1.1)</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Firmware   : v1.4.1J
+  Build date : 2010/02/03
+  Target DSi : DSi XL (UTL)
+  Download   : <a href="{{ site.appdir }}TWL_EVA_IMPORT/TWL_EVA_IMPORT_UTL_JPN_v1.1_20100203.srl">TWL_EVA_IMPORT_UTL_JPN_v1.1_20100203.srl</PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>JPN (v1.5)</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Firmware   : v1.4J
+  Build date : 2009/08/20
+  Target DSi : DSi (TWL)
+  Download   : <a href="{{ site.appdir }}TWL_EVA_IMPORT/TWL_EVA_IMPORT_JPN_v1.5_20090820.srl">TWL_EVA_IMPORT_JPN_v1.5_20090820.srl</PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>JPN_A (v1.0)</summary>
+    <p>This specific firmware version (v1.4J_KST) was for the <a href="https://wiki.raregamingdump.ca/index.php/Nintendo_DS_Classroom" target="_blank">DS Classroom</a>, an educational DSi variant used to give Japanese students work, tests, and lessons. The firmware includes two bi-directional Japanese <--> English dictionaries, a normal Japanese dictionary, and the DS Classroom client. The Shop, DSi + Internet, and Nintendo Zone were removed.</p>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Firmware   : v1.4J_KST (classroom firmware)
+  Build date : 2010/01/19
+  Target DSi : DSi XL (UTL)
+  Download   : <a href="{{ site.appdir }}TWL_EVA_IMPORT/TWL_EVA_IMPORT_UTL_JPN_A_v1.0_20100119.srl">TWL_EVA_IMPORT_UTL_JPN_A_v1.0_20100119.srl</PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>USA (v1.0)</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Firmware   : v1.4U
+  Build date : 2010/12/28
+  Target DSi : DSi XL (UTL)
+  Download   : <a href="{{ site.appdir }}TWL_EVA_IMPORT/TWL_EVA_IMPORT_UTL_USA_v1.0_20091228.srl">TWL_EVA_IMPORT_UTL_USA_v1.0_20091228.srl</PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>USA (v1.1)</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Firmware   : v1.4.1U
+  Build date : 2010/03/12
+  Target DSi : DSi XL (UTL)
+  Download   : <a href="{{ site.appdir }}TWL_EVA_IMPORT/TWL_EVA_IMPORT_UTL_USA_v1.1_20100312.srl">TWL_EVA_IMPORT_UTL_USA_v1.1_20100312.srl</PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>USA (v1.3)</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Firmware   : v1.4U
+  Build date : 2009/08/20
+  Target DSi : DSi (TWL)
+  Download   : <a href="{{ site.appdir }}TWL_EVA_IMPORT/TWL_EVA_IMPORT_USA_v1.3_20090820.srl">TWL_EVA_IMPORT_USA_v1.3_20090820.srl</PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>USA_B (v1.0)</summary>
+    <p>This is a unique version of the v1.4U firmware which includes bundled apps on a non-XL DSi. These are the complete Brain Age set (Math, Arts & Letters, Sudoku), Photo Clock, and Clubhouse Games Card Classics.</p>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Firmware   : v1.4U (non-XL bundle)
+  Build date : 2009/05/10
+  Target DSi : DSi (TWL)
+  Download   : <a href="{{ site.appdir }}TWL_EVA_IMPORT/TWL_EVA_IMPORT_USA_B_v1.0_20090910.srl">TWL_EVA_IMPORT_USA_B_v1.0_20090910.srl</a></PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>EUR (v1.3)</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Firmware   : v1.4E
+  Build date : 2009/11/06
+  Target DSi : DSi (TWL)
+  Download   : <a href="{{ site.appdir }}TWL_EVA_IMPORT/TWL_EVA_IMPORT_EUR_v1.3_20091106.srl">TWL_EVA_IMPORT_EUR_v1.3_20091106.srl</PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>EUR (v1.0)</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Firmware   : v1.4E
+  Build date : 2009/11/02
+  Target DSi : DSi XL (UTL)
+  Download   : <a href="{{ site.appdir }}TWL_EVA_IMPORT/TWL_EVA_IMPORT_UTL_EUR_v1.0_20091102.srl">TWL_EVA_IMPORT_UTL_EUR_v1.0_20091102.srl</PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>EUR (v1.1)</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Firmware   : v1.4.1E
+  Build date : 2010/03/12
+  Target DSi : DSi XL (UTL)
+  Download   : <a href="{{ site.appdir }}TWL_EVA_IMPORT/TWL_EVA_IMPORT_UTL_EUR_v1.1_20100312.srl">TWL_EVA_IMPORT_UTL_EUR_v1.1_20100312.srl</PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>EUR (v1.2)</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Firmware   : v1.4.1E
+  Build date : 2010/05/14
+  Target DSi : DSi XL (UTL)
+  Download   : <a href="{{ site.appdir }}TWL_EVA_IMPORT/TWL_EVA_IMPORT_UTL_EUR_v1.2_20100514.srl">TWL_EVA_IMPORT_UTL_EUR_v1.2_20100514.srl</PRE></TD></TR></TABLE>
+    </details>
+  <div class="screenshot">
+    <img src="{{ site.imgdir }}TWL_EVA_IMPORT/screenshots/import.png">
+    <img src="{{ site.imgdir }}TWL_EVA_IMPORT/screenshots/import_eur.png">
+    <img src="{{ site.imgdir }}TWL_EVA_IMPORT/screenshots/import_installing.png">
+    <img src="{{ site.imgdir }}TWL_EVA_IMPORT/screenshots/import_list.png">
+  </div>
+
+    <h2 id="ncheck">TWL EVA NCHECK</h2>
+    <a href="/dsidev/twl_eva_ncheck.html">NCHECK</a> is used to make sure that IMPORT was run correctly. It will check the logs, serial, and region info to confirm that the right firmware was installed, and that the right IMPORT version was used (target EVA).<br><br>
+    <details>
+    <summary>JPN (v1.6)</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Target EVA : v1.0
+  Build date : 2009/09/14
+  Target DSi : DSi (TWL)
+  Download   : <a href="{{ site.appdir }}TWL_EVA_NCHECK/TWL_EVA_NCHECK_JPN_v1.6_20090914.srl">TWL_EVA_NCHECK_JPN_v1.6_20090914.srl</PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>USA (v1.0)</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Target EVA : v1.0
+  Build date : 2009/11/02
+  Target DSi : DSi XL (UTL)
+  Download   : <a href="{{ site.appdir }}TWL_EVA_NCHECK/TWL_EVA_NCHECK_UTL_USA_v1.0_20091102.srl">TWL_EVA_NCHECK_UTL_USA_v1.0_20091102.srl</PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>USA (v1.2)</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Target EVA : v1.0
+  Build date : 2009/09/14
+  Target DSi : DSi (TWL)
+  Download   : <a href="{{ site.appdir }}TWL_EVA_NCHECK/TWL_EVA_NCHECK_USA_v1.2_20090824.srl">TWL_EVA_NCHECK_USA_v1.2_20090824.srl</PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>USA (v1.3)</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Target EVA : v1.0
+  Build date : 2009/09/14
+  Target DSi : DSi (TWL)
+  Download   : <a href="{{ site.appdir }}TWL_EVA_NCHECK/TWL_EVA_NCHECK_USA_v1.3_20090914.srl">TWL_EVA_NCHECK_USA_v1.3_20090914.srl</PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>EUR (v1.0)</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Target EVA : v1.0
+  Build date : 2009/01/05
+  Target DSi : DSi (TWL)
+  Download   : <a href="{{ site.appdir }}TWL_EVA_NCHECK/TWL_EVA_NCHECK_EUR_v1.0_20090105.srl">TWL_EVA_NCHECK_EUR_v1.0_20090105.srl</PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>EUR (v1.2)</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Target EVA : v1.0
+  Build date : 2009/09/14
+  Target DSi : DSi (TWL)
+  Download   : <a href="{{ site.appdir }}TWL_EVA_NCHECK/TWL_EVA_NCHECK_EUR_v1.2_20090914.srl">TWL_EVA_NCHECK_EUR_v1.2_20090914.srl</PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>KOR (v1.0)</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Target EVA : v1.0
+  Build date : 2010/02/23
+  Target DSi : DSi (TWL)
+  Download   : <a href="{{ site.appdir }}TWL_EVA_NCHECK/TWL_EVA_NCHECK_KOR_v1.0_20100223.srl">TWL_EVA_NCHECK_KOR_v1.0_20100223.srl</PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>ASI (v1.0)</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Target EVA : v1.0
+  Build date : 2009/12/04
+  Target DSi : DSi (TWL)
+  Download   : <a href="{{ site.appdir }}TWL_EVA_NCHECK/TWL_EVA_NCHECK_ASI_v1.0_20091204.srl">TWL_EVA_NCHECK_ASI_v1.0_20091204.srl</PRE></TD></TR></TABLE>
+    </details>
+  <div class="screenshot">
+    <img src="{{ site.imgdir }}TWL_EVA_NCHECK/screenshots/ncheck.png">
+    <img src="{{ site.imgdir }}TWL_EVA_NCHECK/screenshots/ncheck_asi.png">
+    <img src="{{ site.imgdir }}TWL_EVA_NCHECK/screenshots/ncheck_usa.png">
+    <img src="{{ site.imgdir }}TWL_EVA_NCHECK/screenshots/ncheck_kor.png">
+  </div>
+
+    <h2 id="final">TWL EVA FINAL</h2>
+    <p><a href="/dsidev/twl_eva_final.html">FINAL</a> is the "final" overview test of basic hardware like screens, CPUs, RAM, and other hardware. This ensures the DSi does not need additional fixes, and that it is in a condition to have IMPORT install the final firmware.</p>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Version    : v3.0
+  Build date : 2009/07/02
+  Download   : <a href="{{ site.appdir }}TWL_EVA_FINAL/TWL_EVA_FINAL_v3.0_20090702.srl">TWL_EVA_FINAL_v3.0_20090702.srl</PRE></TD></TR></TABLE>
+  <div class="screenshot">
+    <img src="{{ site.imgdir }}TWL_EVA_FINAL/screenshots/final_3.0.png">
+    <img src="{{ site.imgdir }}TWL_EVA_FINAL/screenshots/final_not_matched.png">
+  </div>
+
+    <h2 id="tp_cal">TWL EVA TP_CAL</h2>
+    <p><a href="/dsidev/twl_eva_tp_cal.html">TP_CAL</a> tests and calibrates the touchscreen. It is designed to be run while a DSi is in a factory frame where touch input is very limited. This makes sure the touchscreen will be exact, or only off by a couple pixels from the LCD.</p>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Version    : v2.0
+  Build date : 2008/09/12
+  Download   : <a href="{{ site.appdir }}TWL_EVA_TP_CAL/TWL_EVA_TP_CAL_v2.0_20080912.srl">TWL_EVA_TP_CAL_v2.0_20080912.srl</PRE></TD></TR></TABLE>
+  <div class="screenshot">
+    <img src="{{ site.imgdir }}TWL_EVA_TP_CAL/screenshots/tp_cal.png">
+    <img src="{{ site.imgdir }}TWL_EVA_TP_CAL/screenshots/tp_cal_raw.png">
+  </div>
+
+    <h2 id="f_writer">Nitro EVA F-WRITER</h2>
+    <p><a href="/dsidev/f-writer.html">F-WRITER</a> is the DS lite/phat's version of TWL EVA IMPORT. This tool will install the firmware and set up the default settings.</p>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Firmware   : 2006/03/08 11:19 (DS lite)
+  Version    : v1.0
+  Build date : 2006/03/09
+  Download   : <a href="{{ site.appdir }}F-WRITER/F-WRITER_v1.0w_20060309.srl">F-WRITER_v1.0w_20060309.srl</PRE></TD></TR></TABLE>
+  <div class="screenshot">
+    <img src="{{ site.imgdir }}F-WRITER/screenshots/F-WRITER_WORLD.png">
+    <img src="{{ site.imgdir }}F-WRITER/screenshots/F-WRITER_FOR_NIS.png">
+    <img src="{{ site.imgdir }}F-WRITER/screenshots/F-WRITER_WORLD_MAIN.png">
+    <img src="{{ site.imgdir }}F-WRITER/screenshots/F-WRITER_IPL2_REWRITE.png">
+  </div>

@@ -1,0 +1,52 @@
+---
+title: X4, X5, and X6 Prototype DSis
+layout: release
+releaseslug: voodooween_dsi
+preview: /photos/X4_back.jpg
+---
+    <h1>X4, X5, and X6 Prototype DSis</h1>
+    <p>Thanks Voodooween we're releasing 3 new prototype DSis! All of these are retail protos running the v2235-7985 <a href="/dsidev/twl_eva_pre_import.html">factory firmware</a>. 
+    <h2>TWL-CPU-X4</h2>
+    This DSi is from inside the <a href="/dsidev/wrfutester.html">WRFU Tester</a>, a piece of factory hardware used to test wireless communications. The X4 DSi has been slightly modified with a couple wires connecting to the power switch and LEDs. This is so the DSi can be turned on and off with an external switch in the WRFU hardware. While most prototypes have a glossy finish, this one does not.
+    <div class="screenshot">
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/Launcher.BMP" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/Launcher.BMP" alt=""></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/MachineSettings.BMP" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/MachineSettings.BMP" alt=""></a>
+    </div>
+    The X4 had another firmware which was deleted but fully recovered. There is an autoboot Launcher v1538-6272, <a href="/dsidev/machinesettings.html">MachineSettings</a> v1538-6272, and the data titles wlanfirm and DSHashTable (no versions). This firmware has not been found before now, and is estimated to be from 2008/05 to 2008/06.<br><br>
+    <h4>Download</h4>
+    - <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/AAAPP2BG2356_v2235-7985_X4.bin.zip">X4 DSi NAND</a><br>
+    - <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/X4_recovered_firmware.zip">X4 DSi Deleted Firmware</a>
+    <div class="screenshot">
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X4_front.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/preview/X4_front.jpeg" alt="Top shell of the X4"></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X4_back.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/preview/X4_back.jpeg" alt="The bottom shell. It has chinese characters which translate to 'for mass production', and there is a serial of AAAPP2BG2356."></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X4_board_front.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/preview/X4_board_front.jpeg" alt="The front side of the X4 motherboard."></a>
+    </div>
+    <div class="screenshot">
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X4_open.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/preview/X4_open.jpeg" alt="The X4 is opened. It is all white, and has multiple wires leading out from the power button."></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/WRFU.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/preview/WRFU.jpeg" alt="The X4 is inside of the WRFU Tester hardware, and running the WRFU software."></a>
+    </div>
+
+    <h2>TWL-CPU-X5 and TWL-CPU-X6</h2>
+    These DSis are very similar to the <a href="/dsidev/release/proto-factory.html">previous X6</a> released here. The other X6 used to have wires coming out of the sides, but they were removed so it was impossible to tell what they were for. Voodooween's new X5 and X6 both still have the wires attached.
+    <div class="screenshot">
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/wires_power.png" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/preview/wires_power.jpeg" alt=""></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/wires_a.png" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/preview/wires_a.jpeg" alt=""></a> 
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/wires_unknown.png" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/preview/wires_unknown.jpeg" alt=""></a>
+    </div>
+    In the same order as the photos, the wires connect to the power button, A button, and the C90/C13 resistors. Connecting the resistor wires on a retail motherboard just resulted in the DSi turning off.<br><br>There was no deleted content in either of the prototypes, but the X6 strangely had multiple <code>.CHK</code> files on the root of the NAND, most likely created by a disk checking tool.<br><br>
+    <h4>Download</h4>
+    - <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/AAAPP2EH6514_v2235-7985_X5.bin.zip">X5 DSi NAND</a><br>
+    - <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/AAAMPP3EH496_v2235-7985_X6.bin.zip">X6 DSi NAND</a><br>
+    <div class="screenshot">
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X5_front.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/preview/X5_front.jpeg" alt="Top shell of the X5"></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X5_back.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/preview/X5_back.jpeg" alt="The bottom shell of the X5. There are no markings or labels other than the serial of AAAPP2EH6514."></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X5_open.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/preview/X5_open.jpeg" alt="The X5 is open."></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X5_board.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/preview/X5_board.jpeg" alt="The X5 motherboard."></a>
+    </div>
+    <div class="screenshot">
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6_front.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/preview/X6_front.jpeg" alt="Top shell of the X6"></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6_back.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/preview/X6_back.jpeg" alt="The bottom shell of the X6. There is a faded green label- likely the 'for mass production one'- and a serial of AAAMPP3EH496."></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6_open.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/preview/X6_open.jpeg" alt="The X6 is open."></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6_board_front.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/preview/X6_board_front.jpeg" alt="The front of the X6 motherboard."></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/X6_board_back.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/preview/X6_board_back.jpeg" alt="The back of the X6 motherboard."></a>
+    </div>

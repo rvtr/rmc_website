@@ -389,6 +389,13 @@ body {
   box-shadow: 0px 0px 2px 5px rgb(217,217,217,1);
   align-self: center;
 }
+.screenshot img:hover {
+  width: 300px;
+  height: auto;
+  border: 5px solid white;
+  box-shadow: 0px 0px 5px 7px rgb(128, 128, 128,1);
+  align-self: center;
+}
 .screenshot video {
   width: 300px;
   height: auto;

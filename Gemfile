@@ -16,3 +16,6 @@ end
 gem "webrick", ">= 1.8"
 gem "json"
 gem "google-protobuf", ">= 4.27.5"
+gem "erb", "~> 4.0"
+
+gem "logger", "~> 1.6"

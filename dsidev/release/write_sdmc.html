@@ -1,0 +1,85 @@
+---
+title: "AGING and WRITE SDMC-LNC"
+layout: release
+releaseslug: write_sdmc
+date: 2025/xx/xx
+preview: /preview.png
+---
+    <h1>AGING and WRITE SDMC-LNC</h1>
+    <p>Thanks to March42 we just got 6 new TWL EVA dumps (3 working, 3 unbootable)! These cartridges would have been used for factory setup and testing of DSis. 
+
+    <h2 id="write_sdmc">TWL EVA WRITE SDMC-LNC</h2>
+    <p><b>WRITE SDMC-LNC</b> is a tool to install the <a href="/dsidev/sdmc_launcher.html">SDMC Launcher</a> bootloader. It's difficult to say exactly what the purpose was, but WRITE SDMC-LNC is most likely for repairs. For example, a factory worker might install the wrong firmware to a DSi, so it must be reset. Installing SDMC Launcher would allow the worker to run <a href="/dsidev/twl_eva_pre_import.html">PRE_IMPORT</a> and return the DSi to a blank state. WRITE SDMC-LNC does not seem to be a part of the normal factory process.<br><br>This tool explains one of our older releases, the <a href="/dsidev/release/sdmc-launcher.html">SDMC Launcher DSi</a>. That DSi presumably returned to the factory for repairs and had the SDMC Launcher installed, showing that WRITE SDMC-LNC was actually used.</p>
+    <details>
+    <summary>v1.0</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Version    : v1.0
+  Build date : 2008/11/20
+  Download   : <a href="{{ site.appdir }}TWL_EVA_WRITE_SDMC-LNC/TWL_EVA_WRITE_SDMC-LNC_v1.0_20081120.srl">TWL_EVA_WRITE_SDMC-LNC_v1.0_20081120.srl</a>
+  Photos     : <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/TWL_EVA_WRITE_SDMC-LNC_v1.0_front.jpeg" target="_blank">Front</a> | <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/TWL_EVA_WRITE_SDMC-LNC_v1.0_back.jpeg" target="_blank">Back</a></PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>v1.1</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Version    : v1.1
+  Build date : 2009/10/26
+  Download   : <a href="{{ site.appdir }}TWL_EVA_WRITE_SDMC-LNC/TWL_EVA_WRITE_SDMC-LNC_v1.1_20091026.srl">TWL_EVA_WRITE_SDMC-LNC_v1.1_20091026.srl</a>
+  Photos     : <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/TWL_EVA_WRITE_SDMC-LNC_v1.1_front.jpeg" target="_blank">Front</a> | <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/TWL_EVA_WRITE_SDMC-LNC_v1.1_back.jpeg" target="_blank">Back</a></PRE></TD></TR></TABLE>
+    </details>
+  <div class="screenshot">
+    <img src="{{ site.imgdir }}TWL_EVA_WRITE_SDMC-LNC/screenshots/WRITE_SDMC-LNC_main.png">
+    <img src="{{ site.imgdir }}TWL_EVA_WRITE_SDMC-LNC/screenshots/WRITE_SDMC-LNC_v1.1.png">
+    <img src="{{ site.imgdir }}TWL_EVA_WRITE_SDMC-LNC/screenshots/WRITE_SDMC-LNC_pass_v1.1.png">
+  </div>
+
+    <h2 id="write_sdmc">TWL EVA AGING</h2>
+    <p><b>AGING</b> is the main test tool. AGING is similar to <a href="/dsidev/twl_eva_final.html">FINAL</a> in that it does an overview of all components such as screens, RAM, CPU, and sound, however AGING is meant to be run for up to an hour to stress test the DSi. This would make sure that weak/faulty hardware will not break immediately after leaving the factory, and that previous tests were not just flukes.</p>
+    <details>
+    <summary>v1.0</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Version    : v1.0
+  Build date : 2008/06/26
+  Download   : <a href="{{ site.appdir }}TWL_EVA_AGING/TWL_EVA_AGING_v1.0_20080626.srl">TWL_EVA_AGING_v1.0_20080626.srl</a>
+  Photos     : <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/TWL_EVA_AGING_v1.0_front.jpeg" target="_blank">Front</a> | <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/TWL_EVA_AGING_v1.0_back.jpeg" target="_blank">Back</a></PRE></TD></TR></TABLE>
+    </details>
+<!--
+    <details>
+    <summary>v1.0 (dev)</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Version    : v1.0 (dev)
+  Build date : 2008/06/26
+  Download   : <a href="{{ site.appdir }}TWL_EVA_AGING/TWL_EVA_AGING_v1.0_dev_20080626.srl">TWL_EVA_AGING_v1.0_dev_20080626.srl</a>
+  Photos     : <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/TWL_EVA_AGING_v1.0_front.jpeg" target="_blank">Front</a> | <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/TWL_EVA_AGING_v1.0_back.jpeg" target="_blank">Back</a></PRE></TD></TR></TABLE>
+    </details>
+-->
+  <div class="screenshot">
+    <img src="{{ site.imgdir }}TWL_EVA_AGING/screenshots/AGING_main.png">
+    <img src="{{ site.imgdir }}TWL_EVA_AGING/screenshots/AGING_start.png">
+  </div>
+
+    <h2 id="write_sdmc">Unbootable Dumps</h2>
+    <p>These dumps would not boot, however they have been included in case at some point they can be run. The build dates and versions have been extracted in hex and may not be correct.</p>
+    <details>
+    <summary>loose-m14-x1</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Version    : v8.0
+  Build date : 2006/12/05
+  Download   : <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/loose-m14-x1.srl">loose-m14-x1.srl</a>
+  Photos     : <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/loose-m14-x1_front.jpeg" target="_blank">Front</a> | <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/loose-m14-x1_back.jpeg" target="_blank">Back</a></PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>twl_mic_tester_v3.0</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Version    : v3.0
+  Build date : 2009/08/17
+  Download   : <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/twl_mic_tester_v3.0.srl">twl_mic_tester_v3.0.srl</a>
+  Photos     : <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/twl_mic_tester_v3.0_front.jpeg" target="_blank">Front</a> | <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/twl_mic_tester_v3.0_back.jpeg" target="_blank">Back</a></PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>wrfu-uti0151</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Version    : v2.01
+  Build date : 2009/05/18
+  Download   : <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/wrfu-uti0151.srl">wrfu-uti0151.srl</a>
+  Photos     : <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/wrfu-uti0151_front.jpeg" target="_blank">Front</a> | <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/wrfu-uti0151_back.jpeg" target="_blank">Back</a></PRE></TD></TR></TABLE>
+    </details>

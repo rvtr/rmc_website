@@ -27,9 +27,6 @@ twltoolsred: https://github.com/rvtr/TwlToolsRED/
 #   - {{ site.twlipl }}/tree/<commithash>/path/to/file.txt
 #   - {{ site.twlipl }}/tree/<branch>/path/to/file.txt
 
-# This is for programs that are a part of a set (eg. TWL EVA IMPORT, TWL EVA AGING, TWL EVA MIC)
-category-list: [TWL EVA, Nitro EVA, prototype firmware, TwlIPL test, bootloader/ntrboot]
-
 plugins:
   - jekyll-feed
   - jekyll-sitemap

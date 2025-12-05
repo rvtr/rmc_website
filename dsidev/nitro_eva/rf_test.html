@@ -1,0 +1,21 @@
+---
+layout: devinfo
+app: Nitro_EVA_RF_TEST
+redirect_from: /dsidev/nitro_eva_rf_test.html
+preview: /preview.png
+---
+{% include nitro_eva_commonality.html %}
+RF Test is a tool to test wireless functions in the factory, similar to the DSi's <a href="/dsidev/wrfutester.html">WRFU Tester</a>. This program was built off of <a href="/dsidev/wmtesttool.html">WMtest</a>, and has many of the same features such as measuring and generating noise on wireless channels. The WMtest menu can be opened by holding <code>SELECT</code> on boot.
+<br><br>
+RF Test's main feature is sending and receiving commands through UART. This would be done through an SPI<-->UART GBA cartridge adapter, likely connecting the retail DS to a factory test DS. The retail DS (client) would receive control commands, and the factory DS (host) would transmit those commands. A menu to assemble commands can be opened by holding <code>START</code> on boot, the pressing <code>Y</code>. The white letters are used to assemble a custom command, and the yellow letters will load prebuilt commands. Pressing select will switch between receiving and sending modes.
+<br><br>
+Commands are structured as a 2-digit command code, 2 digit parameter size, n digits of command operands, and then optionally an <code>R</code> character to reset the command processor.
+<br><br>
+One included test mode transmits a pattern of <code>01010101</code> bits as a carrier suppression test.
+<div class="screenshot">
+  <img src="{{ site.imgdir }}{{ page.app }}/screenshots/test.png">
+  <img src="{{ site.imgdir }}{{ page.app }}/screenshots/message.png">
+  <img src="{{ site.imgdir }}{{ page.app }}/screenshots/wmtest.png">
+  <img src="{{ site.imgdir }}{{ page.app }}/screenshots/test_mode.png">
+  <img src="{{ site.imgdir }}{{ page.app }}/screenshots/aging_mode.png">
+</div>

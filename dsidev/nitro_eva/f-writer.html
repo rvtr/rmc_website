@@ -1,0 +1,22 @@
+---
+layout: devinfo
+app: Nitro_EVA_F-WRITER
+redirect_from: /dsidev/nitro_eva_f-writer.html
+preview: /preview.png
+---
+{% include nitro_eva_commonality.html %}
+
+F-WRITER is the <b>F</b>irmware <b>writer</b> for the DS. Each version contains a single copy of the firmware in <code>nitro:/Ipl2/link/</code>. This firmware has a FF filled header, and no config region. Strings in copies of F-WRITER have been found to list undumped and unknown firmware versions.
+
+Unlike the other Nitro EVAs, F-WRITER is in its own special category. The bundled tests are exclusive to F-WRITER, and it does not contain any of the standard tests.
+
+<div class="screenshot">
+	<img src="{{ site.imgdir }}{{ page.app }}/screenshots/F-WRITER - Main Menu.png">
+	<img src="{{ site.imgdir }}{{ page.app }}/screenshots/F-WRITER - Test Program - Ipl2 Rewrite.png">
+	<img src="{{ site.imgdir }}{{ page.app }}/screenshots/F-WRITER - Test Program - Ipl2 Rewrite Overwrite.png">
+	<img src="{{ site.imgdir }}{{ page.app }}/screenshots/F-WRITER - Test Program - Ipl2 Rewrite NG.png">
+	<img src="{{ site.imgdir }}{{ page.app }}/screenshots/F-WRITER - Test Program - User Info Set.png">
+	<img src="{{ site.imgdir }}{{ page.app }}/screenshots/F-WRITER - Test Program - User Info Set OK.png">
+	<img src="{{ site.imgdir }}{{ page.app }}/screenshots/F-WRITER - Checker Menu - Configuration.png">
+	<img src="{{ site.imgdir }}{{ page.app }}/screenshots/F-WRITER - Test Program - Ipl2 Rewrite Writing.png">
+</div>

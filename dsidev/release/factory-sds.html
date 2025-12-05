@@ -1,0 +1,88 @@
+---
+title: "3DS factory tools and SDs"
+layout: release
+releaseslug: factory-sds
+date: 2025/06/xx
+preview: /preview.jpeg
+---
+    <h1>3DS factory tools and SDs</h1>
+    <p>Thanks to March42 we just got 6 new TWL EVA dumps (3 working, 3 unbootable)! These cartridges would have been used for factory setup and testing of DSis. 
+
+    <h2 id="write_sdmc">BSL_W</h2>
+    BSL_W is a tool to test/setup the 3DS wifi, and a part of the IMPORT process. The tool starts by connecting the 3DS to a factory router, 
+
+
+
+- Seems to work with the IMPORT program
+- BSL_W starts with some wifi thing, then IMPORT continues
+
+
+
+- 3DS: Hello PC!
+- PC: Hi! Can I please have some datas?
+- 
+
+
+    <ReadBarcode>false</ReadBarcode>
+    <TCPConnectionWait>true</TCPConnectionWait>
+    <TCPConnectionCTR>true</TCPConnectionCTR>
+    <WriteSerialNumber>false</WriteSerialNumber>
+    <RequestData>true</RequestData>
+    <GetSign>true</GetSign>
+    <WriteSign>true</WriteSign>
+    <ValidateSign>true</ValidateSign>
+    <SendData>true</SendData>
+
+
+
+
+    <p><b>BSL_W</b> is a tool to install the <a href="/dsidev/sdmc_launcher.html">SDMC Launcher</a> bootloader. It's difficult to say exactly what the purpose was, but WRITE SDMC-LNC is most likely for repairs. For example, a factory worker might install the wrong firmware to a DSi, so it must be reset. Installing SDMC Launcher would allow the worker to run <a href="/dsidev/twl_eva_pre_import.html">PRE_IMPORT</a> and return the DSi to a blank state. WRITE SDMC-LNC does not seem to be a part of the normal factory process.<br><br>This tool explains one of our older releases, the <a href="/dsidev/release/sdmc-launcher.html">SDMC Launcher DSi</a>. That DSi presumably returned to the factory for repairs and had the SDMC Launcher installed, showing that WRITE SDMC-LNC was actually used.</p>
+    <details>
+    <summary>v1.0</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Version    : v1.04
+  Build date : ----/--/--
+  Download   : <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/">TWL_EVA_WRITE_SDMC-LNC_v1.0_20081120.srl</a>
+    </details>
+    <details>
+    <summary>v1.1</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Version    : v1.1
+  Build date : 2009/10/26
+  Download   : <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/">TWL_EVA_WRITE_SDMC-LNC_v1.1_20091026.srl</a>
+    </details>
+  <div class="screenshot">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/">
+  </div>
+
+    <h2 id="write_sdmc">CTR Camera Sequencer Program</h2>
+    <p><b>CTR Camera Sequencer Program</b> is a tool used to test the 3DS cameras. A 3DS is connected to the Sequencer software by a cartridge's "HDMI" port, and is placed in a dark box. The 3DS is shown various images and Sequencer displays the camera output on the PC. The images shown are diagnostics like color charts.</p>
+    <details>
+    <summary>v1.31</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Version    : v1.31
+  Build date : ----/--/--
+  Download   : <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/CTR Camera Sequencer Program.V1.31.zip">CTR Camera Sequencer Program.V1.31.zip</a>
+    </details>
+    <details>
+    <summary>Dependencies</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Download   : <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/">CTR Camera Sequencer Program_deps.zip</a>
+    </details>
+
+  <div class="screenshot">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/">
+  </div>
+
+
+
+
+
+FR_CAM-IF        Ver0.27   CAMERA AND INTERFACE
+FR_CAM-IF-check  Ver0.19          ''
+FR_WA            Ver0.09c  WIRELESS AND AUDIO
+FR_WA            Ver0.15a         ''
+FR_WA            Ver0.15g         ''

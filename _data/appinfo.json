@@ -1,0 +1,4711 @@
+{
+   "programlist":[
+      {
+      "slug":"AppJumpChecker",
+      "title":"App Jump Checker",
+      "title_short":"",
+      "desc":"NAND app jump test",
+      "category":"TwlIPL test",
+      "category_broad":"TwlIPL test",
+      "target":"NAND",
+      "banner":"APP JUMP Checker",
+      "banner_1":"LANG_EN",
+      "icon_alt":"",
+      "published":"",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlIPL)",
+      "source":"https://github.com/rvtr/TwlIPL/tree/trunk/build/debugsoft/AppJumpChecker",
+      "versions":[
+            {
+               "version":"v0",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v0",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"ApplicationJumpTest",
+      "title":"Application Jump Test",
+      "title_short":"",
+      "desc":"NAND app jump test",
+      "category":"TwlIPL test",
+      "category_broad":"TwlIPL test",
+      "target":"NAND",
+      "banner":"TITLE_431A",
+      "banner_1":"LANG_EN",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlIPL)",
+      "source":"https://github.com/rvtr/TwlIPL/tree/trunk/build/debugsoft/ApplicationJump",
+      "versions":[
+            {
+               "version":"Nand1",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"Nand1",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"Nand2",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"Nand2",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"Card_AID",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"Card_Fail",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"Card",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"auto_preinst_rom",
+      "title":"auto_preinst_rom",
+      "title_short":"",
+      "desc":"Bundled app installer",
+      "category":"TwlIPL test",
+      "category_broad":"TwlIPL test",
+      "target":"CARD",
+      "banner":"RepairTool Restore",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"true",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlToolsRED)",
+      "source":"https://github.com/rvtr/TwlToolsRED/tree/master/build/tools/sctools/auto_preinst_rom",
+      "versions":[
+            {
+               "version":"",
+               "date":"",
+               "type":"",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"backupSample",
+      "title":"backupSample",
+      "title_short":"",
+      "desc":"",
+      "category":"",
+      "category_broad":"",
+      "target":"NAND",
+      "banner":"backup",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlToolsRED)",
+      "source":"",
+      "versions":[
+            {
+               "version":"v0",
+               "date":"20090501",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v0",
+               "date":"20090501",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"BannerViewerTemplate",
+      "title":"BannerViewerTemplate",
+      "title_short":"",
+      "desc":"",
+      "category":"SDK",
+      "category_broad":"SDK",
+      "target":"CARD",
+      "banner":"",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Nintendo Developer Portal (TWL SDK)",
+      "source":"",
+      "versions":[
+            {
+               "version":"v0",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            }
+         ]
+      },
+      {
+      "slug":"CalcHMAC_forBroadOn",
+      "title":"CalcHMAC ForBroadOn",
+      "title_short":"",
+      "desc":"TWL-TS HWInfo writer",
+      "category":"TwlIPL test",
+      "category_broad":"TwlIPL test",
+      "target":"CARD",
+      "banner":"NINTENDO DSi™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"true",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlToolsRED)",
+      "source":"https://github.com/rvtr/TwlIPL/tree/trunk/build/tools/CalcHMAC_forBroadOn",
+      "versions":[
+            {
+               "version":"",
+               "date":"",
+               "type":"",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"CardRomHeaderChecker",
+      "title":"Card Rom Header Checker",
+      "title_short":"",
+      "desc":"ROM header reader",
+      "category":"TwlIPL test",
+      "category_broad":"TwlIPL test",
+      "target":"NAND",
+      "banner":"Card ROM Header Checker",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlIPL)",
+      "source":"https://github.com/rvtr/TwlIPL/tree/trunk/build/debugsoft/CardRomHeaderChecker",
+      "versions":[
+            {
+               "version":"v0",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v0",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"ComponentSDKVersionIdentifier",
+      "title":"Component SDK Version Identifier",
+      "title_short":"",
+      "desc":"ROM SDK checker",
+      "category":"TwlIPL test",
+      "category_broad":"TwlIPL test",
+      "target":"NAND",
+      "banner":"Component SDK Version Identifier",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlIPL)",
+      "source":"https://github.com/rvtr/TwlIPL/tree/trunk/build/tools/NitroArm7VerChecker",
+      "versions":[
+            {
+               "version":"v0",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v0",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v10",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v10",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"CTRBoardChecker",
+      "title":"CTR CPU Board Sequencer",
+      "title_short":"CTR BOARD",
+      "desc":"3DS hardware tester",
+      "category":"Other_EVA",
+      "category_broad":"Other factory",
+      "target":"CARD",
+      "banner":"NINTENDO DSi™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (3DS_manu.7z)<br>- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"v1.0",
+               "date":"20160713",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"Shop",
+      "title":"DSi Shop",
+      "title_short":"Shop",
+      "desc":"Debug DSi Shop",
+      "category":"DSi Shop debugging",
+      "category_broad":"TWL firmware",
+      "target":"NAND",
+      "banner":"Nintendo DSi Shop",
+      "banner_1":"Nintendo",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (sd.rar)<br>- Gigaleaks (from_Nintendo.rar)",
+      "source":"",
+      "versions":[
+            {
+               "version":"thumb",
+               "date":"20090729",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"thumb",
+               "date":"20090729",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1536",
+               "date":"20090729",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1536",
+               "date":"20090729",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v14231",
+               "date":"20091001",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v14231",
+               "date":"20091001",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"DSGameCardToSD",
+      "title":"DS Game Card To SD",
+      "title_short":"",
+      "desc":"Cartridge dumper",
+      "category":"TwlIPL test",
+      "category_broad":"TwlIPL test",
+      "target":"NAND",
+      "banner":"DS Game Card To SD",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (ctr_tools_red)",
+      "source":"https://github.com/rvtr/TwlIPL/tree/trunk/build/tools/CardToSD",
+      "versions":[
+            {
+               "version":"v0",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v0",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"DSHashTable",
+      "title":"DS Cart Whitelist",
+      "title_short":"",
+      "desc":"DS cartridge whitelist",
+      "category":"",
+      "category_broad":"",
+      "target":"",
+      "banner":"",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlIPL)",
+      "source":"",
+      "versions":[
+            {
+               "version":"v3446",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v3446",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"DSProtect",
+      "title":"DS Protect",
+      "title_short":"",
+      "desc":"Emulator/piracy detection test",
+      "category":"SDK",
+      "category_broad":"SDK",
+      "target":"CARD",
+      "banner":"NINTENDO DS™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Nintendo Developer Portal (DSProtect SDK)",
+      "source":"",
+      "versions":[
+            {
+               "version":"NTR",
+               "date":"20091209",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            },
+            {
+               "version":"NTR",
+               "date":"20100629",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            },
+            {
+               "version":"NTR",
+               "date":"20110128",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            },
+            {
+               "version":"NTR",
+               "date":"20111026",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            },
+            {
+               "version":"TWL",
+               "date":"20091209",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"TWL",
+               "date":"20100629",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"TWL",
+               "date":"20110128",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"TWL",
+               "date":"20111026",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"NTR_thumb",
+               "date":"20091209",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            },
+            {
+               "version":"TWL_thumb",
+               "date":"20091209",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"NTR_instant",
+               "date":"20100629",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            },
+            {
+               "version":"NTR_instant",
+               "date":"20110128",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            },
+            {
+               "version":"NTR_instant",
+               "date":"20111026",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            },
+            {
+               "version":"TWL_instant",
+               "date":"20100629",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"TWL_instant",
+               "date":"20110128",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"TWL_instant",
+               "date":"20111026",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"DSSound",
+      "title":"DS Sound",
+      "title_short":"",
+      "desc":"Prototype DSi Sound",
+      "category":"Prototype firmware",
+      "category_broad":"TWL firmware",
+      "target":"NAND",
+      "banner":"Nintendo DSi Sound",
+      "banner_1":"Nintendo",
+      "icon_alt":"",
+      "published":"",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlIPL)",
+      "source":"",
+      "versions":[
+            {
+               "version":"v1828-JP",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1828-JP",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"encodeSD",
+      "title":"encodeSD",
+      "title_short":"",
+      "desc":"",
+      "category":"",
+      "category_broad":"",
+      "target":"NAND",
+      "banner":"NINTENDO DSi™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlToolsRED)",
+      "source":"",
+      "versions":[
+            {
+               "version":"v0",
+               "date":"20090501",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v0",
+               "date":"20090501",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"ErrorLogTest",
+      "title":"ErrorLogTest",
+      "title_short":"",
+      "desc":"Launcher log reader",
+      "category":"TwlIPL test",
+      "category_broad":"TwlIPL test",
+      "target":"CARD",
+      "banner":"ErrorLogTest",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"true",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlIPL)",
+      "source":"https://github.com/rvtr/TwlIPL/tree/trunk/build/tests/ErrorLogTest",
+      "versions":[
+            {
+               "version":"",
+               "date":"",
+               "type":"",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"FatalErrorMaker",
+      "title":"FatalErrorMaker",
+      "title_short":"",
+      "desc":"DSi brick test",
+      "category":"TwlIPL test",
+      "category_broad":"TwlIPL test",
+      "target":"CARD",
+      "banner":"FatalErrorMaker_card",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"",
+      "undumped":"true",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlIPL)",
+      "source":"https://github.com/rvtr/TwlIPL/tree/trunk/build/tests/FatalErrorMaker",
+      "versions":[
+            {
+               "version":"",
+               "date":"",
+               "type":"",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"KART",
+      "title":"KART",
+      "title_short":"",
+      "desc":"Augmented reality test",
+      "category":"",
+      "category_broad":"",
+      "target":"NAND",
+      "banner":"camera KART",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"",
+      "undumped":"",
+      "danger":"",
+      "credit":"collection_nintendo, rmc, MaxiBash, and xp",
+      "origin":"- Development Classroom DSi",
+      "source":"",
+      "versions":[
+            {
+               "version":"Cartridge",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"Cartridge",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"K04_altheader",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"K04_altheader",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"K04",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"K04",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"K06_deleted",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"K06_deleted",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"K06",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"K06",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"K07_2",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"K07_2",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"K07_n2",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"K07_n2",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"K07",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"K07",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"KENJCleaner",
+      "title":"KENJCleaner",
+      "title_short":"",
+      "desc":"Save data test",
+      "category":"TwlIPL test",
+      "category_broad":"TwlIPL test",
+      "target":"CARD",
+      "banner":"SaveData Cleaner",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"",
+      "undumped":"true",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlToolsRED)",
+      "source":"https://github.com/rvtr/TwlToolsRED/tree/master/build/tools/KENJCleaner",
+      "versions":[
+            {
+               "version":"",
+               "date":"",
+               "type":"",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"Launcher",
+      "title":"Launcher",
+      "title_short":"",
+      "desc":"Prototype home menu",
+      "category":"prototype firmware",
+      "category_broad":"TWL firmware",
+      "target":"NAND",
+      "banner":"Launcher",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- DSi prototypes<br>- Factory firmware<br>- Gigaleaks (TwlIPL)",
+      "source":"https://github.com/rvtr/TwlIPL/tree/trunk/build/systemMenu_RED/Launcher",
+      "versions":[
+            {
+               "version":"v----_----",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v----_----",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1206_5614",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1206_5614",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1206_5614_(update)",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1206_5614_(update)",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1541_6291",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1541_6291",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v2235_7985",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v2235_7985",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v2235_7985_(prod)",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v2235_7985_(prod)",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v2725_9336",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v2725_9336",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v2725_9336_(prod)",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v2725_9336_(prod)",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"unknown",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"unknown",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"MachineSettings",
+      "title":"Machine Settings",
+      "title_short":"",
+      "desc":"Prototype system settings",
+      "category":"prototype firmware",
+      "category_broad":"TWL firmware",
+      "target":"NAND",
+      "banner":"Settings",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"- v2095 by Voodooween and March42",
+      "origin":"- DSi prototypes<br>- Factory firmware<br>- Gigaleaks (TwlIPL)",
+      "source":"https://github.com/rvtr/TwlIPL/tree/trunk/build/systemMenu_RED/MachineSettings",
+      "versions":[
+            {
+               "version":"v----_----",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v----_----",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1025_5199",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1206_5614",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1206_5614",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1206_5614_(update)",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1206_5614_(update)",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1542_6291",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1542_6291",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v2095_7739",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v2095_7739",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v2105_7739",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v2725_9336",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v2725_9336",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v2725_9336_(prod)",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v2725_9336_(prod)",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"MbCardBackupTest",
+      "title":"mb card backup test",
+      "title_short":"",
+      "desc":"DS dev cart read/write tests",
+      "category":"SDK",
+      "category_broad":"SDK",
+      "target":"CARD",
+      "banner":"Nintendo Card Backup Util",
+      "banner_1":"By Mark Jawad [NOA]",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Nintendo Developer Portal",
+      "source":"",
+      "versions":[
+            {
+               "version":"v2.4",
+               "date":"20060301",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            },
+            {
+               "version":"v2.6",
+               "date":"20080918",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            }
+         ]
+      },
+      {
+      "slug":"MbChild",
+      "title":"MbChild",
+      "title_short":"",
+      "desc":"Download play test",
+      "category":"SDK",
+      "category_broad":"SDK",
+      "target":"CARD",
+      "banner":"",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Nintendo Developer Portal (NitroSDK)",
+      "source":"",
+      "versions":[
+            {
+               "version":"",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            },
+            {
+               "version":"simple",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            }
+         ]
+      },
+      {
+      "slug":"MCU_FIRM_WRITER",
+      "title":"MCU FIRM WRITER",
+      "title_short":"",
+      "desc":"MCU firmware installer",
+      "category":"TWL EVA",
+      "category_broad":"TWL factory",
+      "target":"CARD",
+      "banner":"mcu-firm",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"",
+      "undumped":"",
+      "danger":"high",
+      "credit":"j4m13c0",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"v0",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"Marionea",
+      "title":"Mitsumi Electric Debug Tool",
+      "title_short":"",
+      "desc":"DS WiFi module tester",
+      "category":"",
+      "category_broad":"NTR factory",
+      "target":"CARD",
+      "banner":"",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"",
+      "undumped":"",
+      "danger":"",
+      "credit":"March42, for <a href='https://web.archive.org/web/20230324233451/https://illusion.64history.net/'>FOI</a>",
+      "origin":"- Mitsumi Electric<br>- NitroSDK_private",
+      "source":"",
+      "versions":[
+            {
+               "version":"v2.47.00",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            },
+            {
+               "version":"v2.48.01",
+               "date":"20050426",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            },
+            {
+               "version":"v2.49.00",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            },
+            {
+               "version":"v2.54.00",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            },
+            {
+               "version":"v2.55.00",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            },
+            {
+               "version":"v2.56.00",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            }
+         ]
+      },
+      {
+      "slug":"nandAppSample",
+      "title":"nandAppSample",
+      "title_short":"",
+      "desc":"",
+      "category":"",
+      "category_broad":"",
+      "target":"NAND",
+      "banner":"simple",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlToolsRED)",
+      "source":"",
+      "versions":[
+            {
+               "version":"v0",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v0",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"NandFiler",
+      "title":"NandFiler",
+      "title_short":"",
+      "desc":"NAND save manager",
+      "category":"SDK",
+      "category_broad":"SDK",
+      "target":"NAND",
+      "banner":"NandFiler",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Nintendo Developer Portal (TWL SDK)",
+      "source":"",
+      "versions":[
+            {
+               "version":"v9297",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v9297",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v9826",
+               "date":"20090113",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v9826",
+               "date":"20090113",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v10126",
+               "date":"20090303",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v10126",
+               "date":"20090303",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v10616",
+               "date":"20090526",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v10616",
+               "date":"20090526",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v10769",
+               "date":"20090617",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v10769",
+               "date":"20090617",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v10772",
+               "date":"20090617",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v10772",
+               "date":"20090617",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v10984",
+               "date":"20090806",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v10984",
+               "date":"20090806",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11003",
+               "date":"20090824",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11003",
+               "date":"20090824",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11015",
+               "date":"20090825",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11015",
+               "date":"20090825",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11132",
+               "date":"20091109",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11132",
+               "date":"20091109",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11190",
+               "date":"20091125",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11190",
+               "date":"20091125",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11237",
+               "date":"20091208",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11237",
+               "date":"20091208",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11270",
+               "date":"20091225",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11270",
+               "date":"20091225",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11280",
+               "date":"20100113",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11280",
+               "date":"20100113",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11288",
+               "date":"20100204",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11288",
+               "date":"20100204",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11323",
+               "date":"20100426",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11323",
+               "date":"20100426",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11364",
+               "date":"20100715",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11364",
+               "date":"20100715",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11414",
+               "date":"20110420",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11414",
+               "date":"20110420",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11437",
+               "date":"20111209",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11437",
+               "date":"20111209",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"exported",
+               "date":"20111212",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"NandFirmWriter",
+      "title":"NandFirmWriter",
+      "title_short":"",
+      "desc":"ntrboot stage2 installer",
+      "category":"TwlIPL test",
+      "category_broad":"TwlIPL test",
+      "target":"CARD",
+      "banner":"Nand Firm Writer",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"true",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlIPL)",
+      "source":"https://github.com/rvtr/TwlIPL/tree/trunk/build/systemMenu_tools/NandFirmWriter",
+      "versions":[
+            {
+               "version":"",
+               "date":"",
+               "type":"",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"NandFirmWriter_ntrboot",
+      "title":"NAND Firm Writer",
+      "title_short":"",
+      "desc":"ntrboot stage2 installer",
+      "category":"bootloader/ntrboot",
+      "category_broad":"TwlIPL test",
+      "target":"Stage2",
+      "banner":"",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"true",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlIPL)",
+      "source":"https://github.com/rvtr/TwlIPL/tree/trunk/build/gcdfirm/memory-launcher-writer",
+      "versions":[
+            {
+               "version":"",
+               "date":"",
+               "type":"",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"NandInitializer",
+      "title":"NandInitializer",
+      "title_short":"",
+      "desc":"NAND setup tool",
+      "category":"TwlIPL test",
+      "category_broad":"TwlIPL test",
+      "target":"CARD",
+      "banner":"Nand Initializer",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"true",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlIPL)",
+      "source":"https://github.com/rvtr/TwlIPL/tree/trunk/build/systemMenu_tools/NandInitializerRed",
+      "versions":[
+            {
+               "version":"",
+               "date":"",
+               "type":"",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"NANDSoundPlayer",
+      "title":"NAND SoundPlayer",
+      "title_short":"",
+      "desc":"SDAT player/viewer",
+      "category":"SDK",
+      "category_broad":"SDK",
+      "target":"NAND",
+      "banner":"NAND SoundPlayer",
+      "banner_1":"Nintendo",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Nintendo Developer Portal (TWL System)",
+      "source":"",
+      "versions":[
+            {
+               "version":"v0_regionfree",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v0_regionfree",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v0",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v0",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"NANDSweeper",
+      "title":"NAND Sweeper",
+      "title_short":"",
+      "desc":"SD & NAND read/write tests",
+      "category":"TwlIPL test",
+      "category_broad":"TwlIPL test",
+      "target":"CARD",
+      "banner":"NINTENDO DSi™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"high",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlToolRED)",
+      "source":"",
+      "versions":[
+            {
+               "version":"Secure",
+               "date":"20090212a",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"",
+               "date":"20090212a",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"NCFGCrusher",
+      "title":"NCFG Crusher",
+      "title_short":"",
+      "desc":"WiFi config deletion",
+      "category":"SDK",
+      "category_broad":"SDK",
+      "target":"CARD",
+      "banner":"NCFG Crusher",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Nintendo Developer Portal (TWL SDK)",
+      "source":"https://github.com/rvtr/TwlIPL/tree/trunk/build/debugsoft/Internet/NCFGCrusher",
+      "versions":[
+            {
+               "version":"v0",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"Nitro_EVA_Proto",
+      "title":"Nitro EVA (prototype)",
+      "title_short":"Prototype",
+      "desc":"DS factory tests",
+      "category":"Nitro EVA",
+      "category_broad":"NTR factory",
+      "target":"CARD",
+      "banner":"NINTENDO DS™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"aMrY nInTeNdO",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"v0.0.3",
+               "date":"20040617",
+               "type":"zip",
+               "faketad":"",
+               "system":"NTR (DS)"
+            }
+         ]
+      },
+      {
+      "slug":"Nitro_EVA_AGING",
+      "title":"Nitro EVA AGING",
+      "title_short":"AGING",
+      "desc":"DS factory tests",
+      "category":"Nitro EVA",
+      "category_broad":"NTR factory",
+      "target":"CARD",
+      "banner":"NINTENDO DS™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"v1.0",
+               "date":"20040818",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            }
+         ]
+      },
+      {
+      "slug":"Nitro_EVA_F-WRITER",
+      "title":"Nitro EVA F-WRITER",
+      "title_short":"F-WRITER",
+      "desc":"USG firmware writer",
+      "category":"Nitro EVA",
+      "category_broad":"NTR factory",
+      "target":"CARD",
+      "banner":"NINTENDO DS™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"high",
+      "credit":"March42 and j4m13c0, for <a href='https://web.archive.org/web/20230324233451/https://illusion.64history.net/'>FOI</a>",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"v1.0k",
+               "date":"20061211",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            },
+            {
+               "version":"v1.0w",
+               "date":"20060309",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            }
+         ]
+      },
+      {
+      "slug":"Nitro_EVA_FLICKER",
+      "title":"Nitro EVA FLICKER",
+      "title_short":"FLICKER",
+      "desc":"DS screen calibration",
+      "category":"Nitro EVA",
+      "category_broad":"NTR factory",
+      "target":"CARD",
+      "banner":"NINTENDO DS™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"true",
+      "danger":"",
+      "credit":"",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"",
+               "date":"",
+               "type":"",
+               "faketad":"",
+               "system":"NTR (DS)"
+            }
+         ]
+      },
+      {
+      "slug":"Nitro_EVA_LCD_CHECKER",
+      "title":"Nitro EVA LCD CHECKER",
+      "title_short":"LCD",
+      "desc":"DS screen tester",
+      "category":"Nitro EVA",
+      "category_broad":"NTR factory",
+      "target":"CARD",
+      "banner":"NINTENDO DS™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"true",
+      "danger":"",
+      "credit":"",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"",
+               "date":"",
+               "type":"",
+               "faketad":"",
+               "system":"NTR (DS)"
+            }
+         ]
+      },
+      {
+      "slug":"Nitro_EVA_MIC",
+      "title":"Nitro EVA MIC",
+      "title_short":"MIC",
+      "desc":"Audio tester",
+      "category":"Nitro EVA",
+      "category_broad":"NTR factory",
+      "target":"CARD",
+      "banner":"NINTENDO DS™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"March42, for <a href='https://web.archive.org/web/20230324233451/https://illusion.64history.net/'>FOI</a>",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"v4.0",
+               "date":"20070507",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            },
+            {
+               "version":"v4.0",
+               "date":"20081201",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            }
+         ]
+      },
+      {
+      "slug":"Nitro_EVA_REWRITE",
+      "title":"Nitro EVA IPL2 REWRITE",
+      "title_short":"REWRITE",
+      "desc":"DS firmware reset",
+      "category":"Nitro EVA",
+      "category_broad":"NTR factory",
+      "target":"CARD",
+      "banner":"NINTENDO DS™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"true",
+      "danger":"",
+      "credit":"",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"",
+               "date":"",
+               "type":"",
+               "faketad":"",
+               "system":"NTR (DS)"
+            }
+         ]
+      },
+      {
+      "slug":"Nitro_EVA_RF_TEST",
+      "title":"Nitro EVA RF Test",
+      "title_short":"RF Test",
+      "desc":"DS wireless testing",
+      "category":"Nitro EVA",
+      "category_broad":"NTR factory",
+      "target":"CARD",
+      "banner":"NINTENDO DS™",
+      "banner_1":"WMtest",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"v1.2",
+               "date":"20060125",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            }
+         ]
+      },
+      {
+      "slug":"Nitro_EVA_SELF_CHECKER",
+      "title":"Nitro EVA SELF CHECKER",
+      "title_short":"SELF CHECKER",
+      "desc":"DS test verification",
+      "category":"Nitro EVA",
+      "category_broad":"NTR factory",
+      "target":"CARD",
+      "banner":"NINTENDO DS™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"v5.1",
+               "date":"20050621",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            },
+            {
+               "version":"v6.0",
+               "date":"20051111",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            },
+            {
+               "version":"v8.0",
+               "date":"20061205",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            },
+            {
+               "version":"v10.0",
+               "date":"20080617",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            },
+            {
+               "version":"v11.0",
+               "date":"20101027",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            },
+            {
+               "version":"v11.1",
+               "date":"20111208",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            }
+         ]
+      },
+      {
+      "slug":"Nitro_EVA_TEST",
+      "title":"Nitro EVA ONLY FOR TEST",
+      "title_short":"TEST",
+      "desc":"DS factory debug",
+      "category":"Nitro EVA",
+      "category_broad":"NTR factory",
+      "target":"CARD",
+      "banner":"NINTENDO DS™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"true",
+      "danger":"",
+      "credit":"",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"",
+               "date":"",
+               "type":"",
+               "faketad":"",
+               "system":"NTR (DS)"
+            }
+         ]
+      },
+      {
+      "slug":"Nitro_EVA_TP_JIG",
+      "title":"Nitro EVA TP JIG",
+      "title_short":"TP JIG",
+      "desc":"Touchscreen accuracy test",
+      "category":"Nitro EVA",
+      "category_broad":"NTR factory",
+      "target":"CARD",
+      "banner":"NINTENDO DS™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"true",
+      "danger":"",
+      "credit":"",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"",
+               "date":"",
+               "type":"",
+               "faketad":"",
+               "system":"NTR (DS)"
+            }
+         ]
+      },
+      {
+      "slug":"Nitro_EVA_TP_ACCURACY",
+      "title":"Nitro EVA TP ACCURACY",
+      "title_short":"TP ACC",
+      "desc":"Touchscreen accuracy test",
+      "category":"Nitro EVA",
+      "category_broad":"NTR factory",
+      "target":"CARD",
+      "banner":"NINTENDO DS™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"v9.0",
+               "date":"20070409",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            }
+         ]
+      },
+      {
+      "slug":"Nitro_EVA_TP_CAL",
+      "title":"Nitro EVA TP CALIBRATION",
+      "title_short":"TP CAL",
+      "desc":"Touchscreen calibration",
+      "category":"Nitro EVA",
+      "category_broad":"NTR factory",
+      "target":"CARD",
+      "banner":"NINTENDO DS™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"v6.0",
+               "date":"20051111",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            }
+         ]
+      },
+      {
+      "slug":"NotLaunch",
+      "title":"NotLaunch",
+      "title_short":"",
+      "desc":"Hidden launcher app demo",
+      "category":"TwlIPL test",
+      "category_broad":"TwlIPL test",
+      "target":"NAND",
+      "banner":"NINTENDO DS™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlIPL)",
+      "source":"https://github.com/rvtr/TwlIPL/tree/trunk/build/debugsoft/NotLaunch",
+      "versions":[
+            {
+               "version":"ALL",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"ALL",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"America",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"America",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"Australia",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"Australia",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"Europe",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"Europe",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"Japan",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"Japan",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"PhotoChecker",
+      "title":"PhotoChecker",
+      "title_short":"",
+      "desc":"Photo verification",
+      "category":"SDK",
+      "category_broad":"SDK",
+      "target":"CARD",
+      "banner":"PhotoChecker",
+      "banner_1":"V1.4",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Nintendo Developer Portal (Twl SDK)",
+      "source":"",
+      "versions":[
+            {
+               "version":"v1.4",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"PictoChat",
+      "title":"PictoChat (prototype)",
+      "title_short":"PictoChat",
+      "desc":"PictoChat prototype",
+      "category":"prototype firmware",
+      "category_broad":"TWL firmware",
+      "target":"NAND",
+      "banner":"PICTOCHAT(EN)",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlIPL)",
+      "source":"https://github.com/rvtr/TwlIPL/tree/trunk/build/systemMenu_RED/PictoChat",
+      "versions":[
+            {
+               "version":"v0",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v0",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"copy_org",
+      "title":"Repaire Tool BACKUP",
+      "title_short":"",
+      "desc":"NAND backup tool",
+      "category":"TwlIPL test",
+      "category_broad":"TwlIPL test",
+      "target":"CARD",
+      "banner":"RepairTool Backup",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"true",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlToolsRED)",
+      "source":"https://github.com/rvtr/TwlToolsRED/tree/master/build/tools/sctools/copy_org",
+      "versions":[
+            {
+               "version":"",
+               "date":"",
+               "type":"",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"copy_dst",
+      "title":"Repaire Tool RESTORE",
+      "title_short":"",
+      "desc":"NAND restore tool",
+      "category":"TwlIPL test",
+      "category_broad":"TwlIPL test",
+      "target":"CARD",
+      "banner":"RepairTool Restore",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"true",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlToolsRED)",
+      "source":"https://github.com/rvtr/TwlToolsRED/tree/master/build/tools/sctools/copy_dst",
+      "versions":[
+            {
+               "version":"",
+               "date":"",
+               "type":"",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"rtcedit",
+      "title":"rtcedit",
+      "title_short":"",
+      "desc":"RTC editor",
+      "category":"",
+      "category_broad":"",
+      "target":"CARD",
+      "banner":"NINTENDO DS™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Unknown",
+      "source":"",
+      "versions":[
+            {
+               "version":"v0",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            }
+         ]
+      },
+      {
+      "slug":"RVLBoardChecker",
+      "title":"RVL CPU Board Sequencer",
+      "title_short":"RVL BOARD",
+      "desc":"Wii hardware tester",
+      "category":"Other_EVA",
+      "category_broad":"Other factory",
+      "target":"CARD",
+      "banner":"NINTENDO DS™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"",
+      "undumped":"",
+      "danger":"",
+      "credit":"j4m13c0, and XX_750000 for <a href='https://web.archive.org/web/20230324233451/https://illusion.64history.net/'>FOI</a>",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"v7.2",
+               "date":"20070629",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            },
+            {
+               "version":"v12.2",
+               "date":"20100303",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            },
+            {
+               "version":"v13.2",
+               "date":"20110809",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            }
+         ]
+      },
+      {
+      "slug":"SaveDataTest",
+      "title":"SaveDataTest",
+      "title_short":"",
+      "desc":"Save data tests",
+      "category":"TwlIPL test",
+      "category_broad":"TwlIPL test",
+      "target":"NAND",
+      "banner":"DispVer TARGET",
+      "banner_1":"Region:EN",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlIPL)",
+      "source":"https://github.com/rvtr/TwlIPL/tree/trunk/build/debugsoft/MakerTitle/SaveData",
+      "versions":[
+            {
+               "version":"SEQURE",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"SEQURE",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"TARGET",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"TARGET",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"USER",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"USER",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"NANDAgingChecker",
+      "title":"SD/NAND Aging Checker",
+      "title_short":"",
+      "desc":"SD & NAND read/write tests",
+      "category":"TwlIPL test",
+      "category_broad":"TwlIPL test",
+      "target":"CARD",
+      "banner":"NINTENDO DS™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"",
+      "undumped":"",
+      "danger":"high",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlToolsRED)",
+      "source":"",
+      "versions":[
+            {
+               "version":"",
+               "date":"20080801a",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"sd2photo",
+      "title":"sd2photo",
+      "title_short":"",
+      "desc":"SD to NAND photo copier",
+      "category":"TwlIPL test",
+      "category_broad":"TwlIPL test",
+      "target":"NAND",
+      "banner":"SD to Photo",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlIPL)",
+      "source":"https://github.com/rvtr/TwlIPL/tree/trunk/build/debugsoft/Jpeg/SdToPhoto",
+      "versions":[
+            {
+               "version":"v0",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"SDMC_Launcher",
+      "title":"SDMC Launcher",
+      "title_short":"",
+      "desc":"SD booter stage2",
+      "category":"bootloader/ntrboot",
+      "category_broad":"TWL factory",
+      "target":"Stage2",
+      "banner":"",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"high",
+      "credit":"BrolyBroMan",
+      "origin":"- Gigaleaks (TwlIPL)<br>- TWL EVA",
+      "source":"https://github.com/rvtr/TwlIPL/tree/trunk/build/nandfirm/sdmc-launcher",
+      "versions":[
+            {
+               "version":"Dev",
+               "date":"20080821",
+               "type":"nand",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"Prod",
+               "date":"20080821",
+               "type":"nand",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"SimpleApp",
+      "title":"SimpleApp",
+      "title_short":"",
+      "desc":"Launcher jump test",
+      "category":"TwlIPL test",
+      "category_broad":"TwlIPL test",
+      "target":"NAND",
+      "banner":"simple",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlIPL)",
+      "source":"",
+      "versions":[
+            {
+               "version":"v0",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v0_arm7flxbreak",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v0_arm7ltdbreak",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v0_arm9flxbreak",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v0_arm9ltdbreak",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v0_headerbreak",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"SoftKeyboard",
+      "title":"Soft Keyboard",
+      "title_short":"",
+      "desc":"SDK keyboard demo",
+      "category":"SDK",
+      "category_broad":"SDK",
+      "target":"CARD",
+      "banner":"NINTENDO DS™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Nintendo Developer Portal (NitroSample SoftKeyboard)",
+      "source":"",
+      "versions":[
+            {
+               "version":"v0",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            }
+         ]
+      },
+      {
+      "slug":"sysmenuVersion",
+      "title":"Version Data",
+      "title_short":"",
+      "desc":"System version datafile",
+      "category":"prototype firmware",
+      "category_broad":"TWL firmware",
+      "target":"NAND",
+      "banner":"",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlIPL)",
+      "source":"",
+      "versions":[
+            {
+               "version":"v1.0-all",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.0-all",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.0-aus",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.0-aus",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.0-eur",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.0-eur",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.0-jpn",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.0-jpn",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.0-usa",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.0-usa",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"SystemLogReader",
+      "title":"SystemLogReader",
+      "title_short":"",
+      "desc":"System menu debug tool",
+      "category":"TwlIPL test",
+      "category_broad":"TwlIPL test",
+      "target":"CARD",
+      "banner":"SystemLog Reader",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"true",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlIPL)",
+      "source":"https://github.com/rvtr/TwlIPL/tree/trunk/build/systemMenu_tools/SystemLogReader",
+      "versions":[
+            {
+               "version":"",
+               "date":"",
+               "type":"",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"tcl_2",
+      "title":"tcl_2",
+      "title_short":"",
+      "desc":"ROM to NAND photo copier",
+      "category":"TwlIPL test",
+      "category_broad":"TwlIPL test",
+      "target":"NAND",
+      "banner":"tcl-2",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (sd.rar)",
+      "source":"",
+      "versions":[
+            {
+               "version":"v0",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v0",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"TitleList",
+      "title":"TitleList",
+      "title_short":"",
+      "desc":"Shared save data tests",
+      "category":"TwlIPL test",
+      "category_broad":"TwlIPL test",
+      "target":"NAND",
+      "banner":"TitleList A",
+      "banner_1":"Region:EN",
+      "icon_alt":"",
+      "published":"",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlIPL)",
+      "source":"https://github.com/rvtr/TwlIPL/tree/trunk/build/debugsoft/MakerTitle/TitleList",
+      "versions":[
+            {
+               "version":"A_NORMAL",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"A_NORMAL",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"B_NORMAL",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"B_NORMAL",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"C_NORMAL",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"C_NORMAL",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"D_NORMAL",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"D_NORMAL",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"E_NORMAL",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"E_NORMAL",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"F_NORMAL",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"F_NORMAL",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"G_NORMAL",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"G_NORMAL",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"H_NORMAL",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"H_NORMAL",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"I_NORMAL",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"I_NORMAL",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"J_NORMAL",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"J_NORMAL",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"A_SPECIAL",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"A_SPECIAL",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"B_SPECIAL",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"B_SPECIAL",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"C_SPECIAL",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"C_SPECIAL",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"D_SPECIAL",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"D_SPECIAL",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"E_SPECIAL",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"E_SPECIAL",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"F_SPECIAL",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"F_SPECIAL",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"G_SPECIAL",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"G_SPECIAL",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"H_SPECIAL",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"H_SPECIAL",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"I_SPECIAL",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"I_SPECIAL",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"J_SPECIAL",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"J_SPECIAL",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"TmpJumpChecker",
+      "title":"TMP JumpChecker",
+      "title_short":"",
+      "desc":"SRL jump test",
+      "category":"SDK",
+      "category_broad":"SDK",
+      "target":"NAND",
+      "banner":"TwlJumpChecker",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Nintendo Developer Portal (DSi TrialSoftPackage)",
+      "source":"",
+      "versions":[
+            {
+               "version":"v10989",
+               "date":"",
+               "type":"srl",
+               "faketadTwlJumpChecker":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v10989",
+               "date":"",
+               "type":"tad",
+               "faketadTwlJumpChecker":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"TMPJumpTest",
+      "title":"TMP JumpTest",
+      "title_short":"",
+      "desc":"",
+      "category":"TwlIPL test",
+      "category_broad":"TwlIPL test",
+      "target":"NAND",
+      "banner":"TMPjmpTEST",
+      "banner_1":"LANG_EN",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlIPL)",
+      "source":"https://github.com/rvtr/TwlIPL/tree/trunk/build/debugsoft/TMPJump",
+      "versions":[
+            {
+               "version":"v0",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v0",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"ecConfigView",
+      "title":"TWL EC file utility",
+      "title_short":"",
+      "desc":"DSi Shop config viewer",
+      "category":"DSi Shop debugging",
+      "category_broad":"TWL firmware",
+      "target":"NAND",
+      "banner":"EC file utility",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (sd.rar)",
+      "source":"",
+      "versions":[
+            {
+               "version":"v1.0",
+               "date":"20090303",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.0",
+               "date":"20090303",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"TWL_EVA_AGING",
+      "title":"TWL EVA AGING",
+      "title_short":"AGING",
+      "desc":"DSi factory tests",
+      "category":"TWL EVA",
+      "category_broad":"TWL factory",
+      "target":"CARD",
+      "banner":"NINTENDO DSi™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"medium",
+      "credit":"March42",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"v1.0",
+               "date":"20080626",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"TWL_EVA_CAMERA",
+      "title":"TWL EVA CAMERA",
+      "title_short":"CAMERA",
+      "desc":"DSi camera tester",
+      "category":"TWL EVA",
+      "category_broad":"TWL factory",
+      "target":"CARD",
+      "banner":"NINTENDO DSi™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"medium",
+      "credit":"- March42, HudU, ufo, Normmatt, Rezrospect, for <a href='https://web.archive.org/web/20230324233451/https://illusion.64history.net/'>FOI</a><br>- j4m13c0",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"v2.1",
+               "date":"20081127",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"ASSY_v2.1",
+               "date":"20081127",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"TWL_EVA_FINAL",
+      "title":"TWL EVA FINAL",
+      "title_short":"FINAL",
+      "desc":"DSi factory tests",
+      "category":"TWL EVA",
+      "category_broad":"TWL factory",
+      "target":"CARD",
+      "banner":"NINTENDO DSi™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"medium",
+      "credit":"- March42, for <a href='https://web.archive.org/web/20230324233451/https://illusion.64history.net/'>FOI</a><br>- j4m13c0",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"v3.0",
+               "date":"20090702",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v3.1",
+               "date":"20091119",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"TWL_EVA_FLICKER",
+      "title":"TWL EVA FLICKER",
+      "title_short":"FLICKER",
+      "desc":"DSi screen tester",
+      "category":"TWL EVA",
+      "category_broad":"TWL factory",
+      "target":"CARD",
+      "banner":"NINTENDO DSi™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"medium",
+      "credit":"",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"v1.0",
+               "date":"20080905",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"TWL_EVA_IMPORT",
+      "title":"TWL EVA IMPORT",
+      "title_short":"IMPORT",
+      "desc":"DSi final firmware installer",
+      "category":"TWL EVA",
+      "category_broad":"TWL factory",
+      "target":"CARD",
+      "banner":"NINTENDO DSi™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"high",
+      "credit":"j4m13c0 and Mecasacax",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"EUR_v1.3",
+               "date":"20091106",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"JPN_v1.5",
+               "date":"20090820",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"USA_v1.3",
+               "date":"20090820",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"USA_B_v1.0",
+               "date":"20090910",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"UTL_EUR_v1.0",
+               "date":"20091102",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"UTL_EUR_v1.1",
+               "date":"20100312",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"UTL_EUR_v1.2",
+               "date":"20100514",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"UTL_JPN_v1.1",
+               "date":"20100203",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"UTL_JPN_A_v1.0",
+               "date":"20100119",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"UTL_USA_v1.0",
+               "date":"20091228",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"UTL_USA_v1.1",
+               "date":"20100312",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"TWL_EVA_MIC",
+      "title":"TWL EVA MIC",
+      "title_short":"MIC",
+      "desc":"DSi microphone tester",
+      "category":"TWL EVA",
+      "category_broad":"TWL factory",
+      "target":"CARD",
+      "banner":"NINTENDO DSi™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"medium",
+      "credit":"- March42, HudU, ufo, Normmatt, Rezrospect, for <a href='https://web.archive.org/web/20230324233451/https://illusion.64history.net/'>FOI</a><br>- j4m13c0",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"v3.0",
+               "date":"20090817",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v3.0",
+               "date":"20090819",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"TWL_EVA_NCHECK",
+      "title":"TWL EVA NCHECK",
+      "title_short":"NCHECK",
+      "desc":"DSi test verification",
+      "category":"TWL EVA",
+      "category_broad":"TWL factory",
+      "target":"CARD",
+      "banner":"NINTENDO DSi™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"medium",
+      "credit":"j4m13c0",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"ASI_v1.0",
+               "date":"20091204",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"EUR_v1.0",
+               "date":"20090105",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"EUR_v1.2",
+               "date":"20090914",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"JPN_v1.6",
+               "date":"20090914",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"KOR_v1.0",
+               "date":"20100223",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"USA_v1.2",
+               "date":"20090824",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"USA_v1.3",
+               "date":"20090914",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"UTL_USA_v1.0",
+               "date":"20091102",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"TWL_EVA_PCHECK",
+      "title":"TWL EVA PCHECK",
+      "title_short":"PCHECK",
+      "desc":"DSi test verification",
+      "category":"TWL EVA",
+      "category_broad":"TWL factory",
+      "target":"CARD",
+      "banner":"NINTENDO DSi™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"true",
+      "danger":"medium",
+      "credit":"",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"",
+               "date":"",
+               "type":"",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"TWL_EVA_PREPARE",
+      "title":"TWL EVA PREPARE",
+      "title_short":"PREPARE",
+      "desc":"DSi HWInfo writer",
+      "category":"TWL EVA",
+      "category_broad":"TWL factory",
+      "target":"CARD",
+      "banner":"NINTENDO DSi™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"true",
+      "danger":"high",
+      "credit":"",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"",
+               "date":"",
+               "type":"",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"TWL_EVA_PREWRITE",
+      "title":"TWL EVA PREWRITE",
+      "title_short":"PREWRITE",
+      "desc":"DSi HWInfo writer",
+      "category":"TWL EVA",
+      "category_broad":"TWL factory",
+      "target":"CARD",
+      "banner":"NINTENDO DSi™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"true",
+      "danger":"high",
+      "credit":"",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"",
+               "date":"",
+               "type":"",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"TWL_EVA_PRE_IMPORT",
+      "title":"TWL EVA PRE_IMPORT",
+      "title_short":"PRE_IMPORT",
+      "desc":"DSi factory firmware installer",
+      "category":"TWL EVA",
+      "category_broad":"TWL factory",
+      "target":"CARD",
+      "banner":"NINTENDO DSi™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"high",
+      "credit":"",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"v1.3",
+               "date":"20091210",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"TWL_EVA_SELFTEST",
+      "title":"TWL EVA SELFTEST",
+      "title_short":"SELFTEST",
+      "desc":"DSi factory tests",
+      "category":"TWL EVA",
+      "category_broad":"TWL factory",
+      "target":"CARD",
+      "banner":"NINTENDO DSi™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"medium",
+      "credit":"j4m13c0",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"v0.7",
+               "date":"20091202",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"TWL_EVA_TP_CAL",
+      "title":"TWL EVA TP_CAL",
+      "title_short":"TP_CAL",
+      "desc":"DSi touch screen tests",
+      "category":"TWL EVA",
+      "category_broad":"TWL factory",
+      "target":"CARD",
+      "banner":"NINTENDO DSi™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"medium",
+      "credit":"j4m13c0",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"v2.0",
+               "date":"20080912",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"TWL_EVA_WRITE_SDMC-LNC",
+      "title":"TWL EVA WRITE_SDMC-LNC",
+      "title_short":"WRITE_SDMC-LNC",
+      "desc":"SDMC Launcher installer",
+      "category":"TWL EVA",
+      "category_broad":"TWL factory",
+      "target":"CARD",
+      "banner":"NINTENDO DSi™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"high",
+      "credit":"March42",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"v1.0",
+               "date":"20081120",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.1",
+               "date":"20091026",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"TWLCaptureSystemWriter",
+      "title":"TWLCaptureSystem Writer",
+      "title_short":"",
+      "desc":"TWL-CAPTURE updater",
+      "category":"TwlIPL test",
+      "category_broad":"TwlIPL test",
+      "target":"CARD",
+      "banner":"TWLCapture System Writer",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"true",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlIPL)",
+      "source":"https://github.com/rvtr/TwlIPL/tree/trunk/build/systemMenu_tools/TWLCaptureSystemWriter",
+      "versions":[
+            {
+               "version":"",
+               "date":"",
+               "type":"",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"TWLBoardChecker",
+      "title":"TWL CPU Board Sequencer",
+      "title_short":"TWL BOARD",
+      "desc":"DSi hardware tester",
+      "category":"TWL EVA",
+      "category_broad":"TWL factory",
+      "target":"CARD",
+      "banner":"NINTENDO DS™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"j4m13c0, and XX_750000 for <a href='https://web.archive.org/web/20230324233451/https://illusion.64history.net/'>FOI</a>",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"v3.0",
+               "date":"20100204",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            }
+         ]
+      },
+      {
+      "slug":"TWLManualViewerSD",
+      "title":"TWL ManualViewerSD",
+      "title_short":"",
+      "desc":"DSiWare manual viewer",
+      "category":"SDK",
+      "category_broad":"SDK",
+      "target":"NAND",
+      "banner":"TWL-ManualViewerSD",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Nintendo Developer Portal (TwlManualTools)",
+      "source":"",
+      "versions":[
+            {
+               "version":"v090703",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v090703",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v090818",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v090818",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"TwlNmenu",
+      "title":"TwlNmenu",
+      "title_short":"",
+      "desc":"NAND title manager",
+      "category":"SDK",
+      "category_broad":"SDK",
+      "target":"NAND",
+      "banner":"TwlNmenu",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"medium",
+      "credit":"",
+      "origin":"- Nintendo Developer Portal (TWL SDK)",
+      "source":"",
+      "versions":[
+            {
+               "version":"v9297",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v9297",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v9826",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v9826",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v10126",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v10126",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v10616",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v10616",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v10769",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v10769",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v10772",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v10772",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v10984",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v10984",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11003",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11003",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11015",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11015",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11132",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11132",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11190",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11190",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11237",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11237",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11270",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11270",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11288",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11288",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11323",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11323",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11364",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11364",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11414",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11414",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11437",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v11437",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"TwlSystemUpdater",
+      "title":"Twl SystemUpdater",
+      "title_short":"",
+      "desc":"Devkit firmware updater",
+      "category":"SDK",
+      "category_broad":"SDK",
+      "target":"CARD",
+      "banner":"System Updater",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"high",
+      "credit":"March42",
+      "origin":"- Nintendo Developer Portal<br>- Gigaleaks (sd.rar)",
+      "source":"https://github.com/rvtr/TwlIPL/tree/trunk/build/systemMenu_tools/SystemUpdaterRegionSelect",
+      "versions":[
+            {
+               "version":"v1.0c",
+               "date":"20081118",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.2_forCKdev",
+               "date":"20090417",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.2_forCKdev",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.2_forCKdev",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.2",
+               "date":"20090428",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.2",
+               "date":"20090428",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.2",
+               "date":"20090430",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.2",
+               "date":"20090430",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.2",
+               "date":"20090514",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.2",
+               "date":"20090514",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.2",
+               "date":"20090611",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.2",
+               "date":"20090611",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.2",
+               "date":"20090710",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.2",
+               "date":"20090710",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.3a",
+               "date":"20090630",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.4",
+               "date":"20090817",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.4a",
+               "date":"20100415",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"ufo",
+      "title":"ufo",
+      "title_short":"",
+      "desc":"DS developer demo",
+      "category":"SDK",
+      "category_broad":"SDK",
+      "target":"CARD",
+      "banner":"NINTENDO DS™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Nintendo Developer Portal (ufo)",
+      "source":"https://twlsdk.randommeaninglesscharacters.com/download/ufo/",
+      "versions":[
+            {
+               "version":"v0",
+               "date":"20050225",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            },
+            {
+               "version":"v0",
+               "date":"20060828",
+               "type":"srl",
+               "faketad":"",
+               "system":"NTR (DS)"
+            }
+         ]
+      },
+      {
+      "slug":"WiFiIcon",
+      "title":"WiFi Icon",
+      "title_short":"",
+      "desc":"Launcher WiFi icon demo",
+      "category":"TwlIPL test",
+      "category_broad":"TwlIPL test",
+      "target":"NAND",
+      "banner":"Wifi Icon",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Gigaleaks (TwlIPL)",
+      "source":"https://github.com/rvtr/TwlIPL/tree/trunk/build/debugsoft/WifiIcon",
+      "versions":[
+            {
+               "version":"v0",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v0",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"wlanfirm",
+      "title":"WiFi firmware",
+      "title_short":"",
+      "desc":"WiFi firmware datafile",
+      "category":"",
+      "category_broad":"",
+      "target":"NAND",
+      "banner":"",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"",
+      "undumped":"true",
+      "danger":"",
+      "credit":"",
+      "origin":"",
+      "source":"",
+      "versions":[
+            {
+               "version":"v1.0",
+               "date":"",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.0",
+               "date":"",
+               "type":"tad",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"WMTestTool",
+      "title":"WM test",
+      "title_short":"",
+      "desc":"DS wireless testing",
+      "category":"SDK",
+      "category_broad":"SDK",
+      "target":"CARD",
+      "banner":"NINTENDO DS™",
+      "banner_1":"WMtest",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Nintendo Developer Portal (Nitro, TWL, and CTR SDKs)",
+      "source":"",
+      "versions":[
+            {
+               "version":"v0",
+               "date":"20041101",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v0",
+               "date":"20051102",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v0",
+               "date":"20090115",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v0",
+               "date":"20110330",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
+      "slug":"WRFUTester",
+      "title":"WRFU Tester",
+      "title_short":"WRFU",
+      "desc":"DSi wireless testing",
+      "category":"TWL EVA",
+      "category_broad":"TWL factory",
+      "target":"CARD",
+      "banner":"NINTENDO DSi™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"v0.60",
+               "date":"20080821",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v2.01",
+               "date":"20090518",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v3.01",
+               "date":"20100617",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      }
+   ],
+   "categories":[
+      {
+      "slug":"prototype firmware",
+      "title":"Other prototype firmware apps",
+      "desc":"",
+      "sequence":""
+      },
+      {
+      "slug":"TWL EVA",
+      "title":"Other TWL EVA tests",
+      "desc":"",
+      "sequence":"true",
+      "order":[
+            {
+               "slug":"TWLBoardChecker",
+            },
+            {
+               "slug":"TWL_EVA_PRE_IMPORT",
+            },
+            {
+               "slug":"TWL_EVA_FLICKER",
+            },
+            {
+               "slug":"TWL_EVA_TP_CAL",
+            },
+            {
+               "slug":"TWL_EVA_AGING",
+            },
+            {
+               "slug":"TWL_EVA_FINAL",
+            },
+            {
+               "slug":"TWL_EVA_MIC",
+            },
+            {
+               "slug":"TWL_EVA_CAMERA",
+            },
+            {
+               "slug":"TWL_EVA_PREPARE",
+            },
+            {
+               "slug":"TWL_EVA_PREWRITE",
+            },
+            {
+               "slug":"TWL_EVA_PCHECK",
+            },
+            {
+               "slug":"WRFUTester",
+            },
+            {
+               "slug":"TWL_EVA_IMPORT",
+            },
+            {
+               "slug":"TWL_EVA_NCHECK",
+            },
+            {
+               "slug":"TWL_EVA_WRITE_SDMC-LNC",
+            },
+            {
+               "slug":"TWL_EVA_SELFTEST",
+            },
+            {
+               "slug":"MCU_FIRM_WRITER",
+            },
+         ]
+      },
+      {
+      "slug":"Nitro EVA",
+      "title":"Other Nitro EVA tests",
+      "desc":"",
+      "sequence":"true",
+      "order":[
+            {
+               "slug":"Nitro_EVA_Proto",
+            },
+            {
+               "slug":"Nitro_EVA_FLICKER",
+            },
+            {
+               "slug":"Nitro_EVA_LCD_CHECKER",
+            },
+            {
+               "slug":"Nitro_EVA_TP_CAL",
+            },
+            {
+               "slug":"Nitro_EVA_TP_JIG",
+            },
+            {
+               "slug":"Nitro_EVA_TP_ACCURACY",
+            },
+            {
+               "slug":"Nitro_EVA_AGING",
+            },
+            {
+               "slug":"Nitro_EVA_SELF_CHECKER",
+            },
+            {
+               "slug":"Nitro_EVA_MIC",
+            },
+            {
+               "slug":"Nitro_EVA_RF_TEST",
+            },
+            {
+               "slug":"Nitro_EVA_F-WRITER",
+            },
+            {
+               "slug":"Nitro_EVA_REWRITE",
+            },
+            {
+               "slug":"Nitro_EVA_TEST",
+            }
+         ]
+      },
+      {
+      "slug":"Other_EVA",
+      "title":"Other console BOARD tests",
+      "desc":"Nitro/TWL EVA tests meant to test the hardware of other consoles, like the 3DS and Wii.",
+      "sequence":""
+      },
+      {
+      "slug":"TwlIPL test",
+      "title":"Other TwlIPL tests",
+      "desc":"A collection of tests used in the development of the DSi. Many of these are internal equivalents to TWL EVA's tests, used in repair facilities or bundled with prototypes.",
+      "sequence":""
+      },
+      {
+      "slug":"bootloader/ntrboot",
+      "title":"Other bootloaders/ntrboot images",
+      "desc":"",
+      "sequence":""
+      },
+      {
+      "slug":"DSi Shop debugging",
+      "title":"Other DSi Shop debugging apps",
+      "desc":"",
+      "sequence":""
+      }
+   ],
+   "categories_broad":[
+      {
+      "slug":"TWL firmware",
+      "title":"DSi firmware debugging",
+      "desc":"Internal versions of DSi system apps, as well as related test tools.",
+      },
+      {
+      "slug":"NTR factory",
+      "title":"DS factory tools",
+      "desc":"Programs used in factories to test the hardware of the DS phat and DS lite.",
+      },
+      {
+      "slug":"TWL factory",
+      "title":"DSi factory tools",
+      "desc":"Programs used in factories to test DSi hardware and setup firmware.",
+      },
+      {
+      "slug":"Other factory",
+      "title":"Other factory apps",
+      "desc":"DS/DSi software made to interface with the hardware of other consoles, like the 3DS and Wii.",
+      },
+      {
+      "slug":"TwlIPL test",
+      "title":"TwlIPL tests",
+      "desc":"Debug and test software used in the development of the DSi, and in internal repair facilities.",
+      },
+      {
+      "slug":"SDK",
+      "title":"SDK test apps",
+      "desc":"Tools from the Nintendo Developer Portal that were used to debug SDKs, libraries, and manage installed software.",
+      }
+   ],
+   "categories_todo":[
+      {
+      "slug":"",
+      "title":"Miscellaneous programs",
+      "desc":"Programs that are waiting to be sorted, or which have no suitable category.",
+      }      
+   ]
+}

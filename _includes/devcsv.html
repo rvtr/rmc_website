@@ -3,118 +3,110 @@ function warnFaketad() {
   alert("This TAD is unofficial! The original TAD for this file has been lost, so we recreated it from an SRL using 'maketad.exe'.\n\nI highly suggest testing in an emulator before installing in case of errors.\n\nIf you have the original, please email me at ''lillian@randommeaninglesscharacters.com''.");
 }
 </script>
-<!-- Get first entry in CSV for the desired program. The credit/banner/name/origin should be the same across all files, listing multiple items in each line if there are differences. -->
-{% for ENTRY in site.data.dsinfo -%}
-  {%- if ENTRY.PROGRAM == page.app -%}
-    {%- if ENTRY.PUBLISHED == "TRUE" -%}
-
-<div class="devcsv-container">
- 
-{%- if ENTRY.TARGET != "Stage2" -%} 
-  <div class="devcsv-preview-container">
-    <div style="">
-      <div class="preview-container colorbox">
-        <div class="preview-flex">
-          <div class="preview-text">
-            {{ ENTRY.BANNER }}<br>{{ ENTRY.BANNER1 }}
-          </div>
-          <div class="preview-icon">
-            <img src="{{ site.imgdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif" style="width: 100%;object-fit: cover;">
+<!-- Get first program in CSV for the desired program. The credit/banner/name/origin should be the same across all files, listing multiple items in each line if there are differences. -->
+{% for program in site.data.appinfo.programlist %}
+  {%- if program.slug == page.app -%}
+    {%- if program.published == "true" -%}
+      <div class="devcsv-container">
+      {%- if program.target != "Stage2" -%} 
+        <div class="devcsv-preview-container">
+          <div style="">
+            <div class="preview-container colorbox">
+              <div class="preview-flex">
+                <div class="preview-text">
+                  {{ program.banner }}<br>{{ program.banner_1 }}
+                </div>
+                <div class="preview-icon">
+                  <img src="{{ site.imgdir }}{{ program.slug }}/{{ program.slug }}.gif" style="width: 100%;object-fit: cover;">
+                </div>
+              </div>
+              {%- if program.target == "CARD" -%}
+              <img src="{{ site.imgui }}menu/green/dsi_homemenu_card.png" class="" style="width:100%;">
+              {%- else -%}
+              <img src="{{ site.imgui }}menu/green/dsi_homemenu_nand.png" class="" style="width:100%;">
+              {%- endif -%}
+            </div>
           </div>
         </div>
-        {%- if ENTRY.TARGET == "CARD" -%}
-        <img src="{{ site.imgui }}menu/green/dsi_homemenu_card.png" class="" style="width:100%;">
-        {%- else -%}
-        <img src="{{ site.imgui }}menu/green/dsi_homemenu_nand.png" class="" style="width:100%;">
-        {%- endif -%}
+      {%- endif -%}
+      <div class="devcsv-info">
+        <b><u>Origin:</u></b><br>{{ program.origin }}
       </div>
-    </div>
-  </div>
-  {%- endif -%}
-  <div class="devcsv-info">
-    <b><u>Origin:</u></b><br>{{ ENTRY.ORIGIN }}
-  </div>
-  {%- if ENTRY.SOURCE != "" -%}
-  <div class="devcsv-info1">
-    <b><u>Source code:</u></b><br> - View on <a href="{{ ENTRY.SOURCE }}" target="_blank">GitHub</a>
-  </div>
-  {%- endif -%}
-  {%- if ENTRY.UNDUMPED == "TRUE" -%}
-  <div class="devcsv-info2">
-    <b><u>Dumped by:</u></b><br>Currently undumped!
-  </div>
-  {%- else -%}
-  <div class="devcsv-info2">
-    <b><u>Dumped by:</u></b><br>{{ ENTRY.CREDIT }}
-  </div>
-  <div class="devcsv-download">
-  <table class="devcsv-table">
-  <tr>
-    <th style="text-align: left;"><u><b>Downloads:</b></u></th>
-  <tr>
-  <tr>
-  {%- if ENTRY.TARGET == "Stage2" -%}
-  <th class=""><b>NAND</b></th>
-  {%- for ENTRY in site.data.dsinfo -%}
-    {%- if ENTRY.PROGRAM == page.app -%}
-  </tr>
-        <tr>
-            <td class="tadding"><a href="{{ site.appdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}_{{ ENTRY.VERSION }}{{ ENTRY.DATE }}.{{ ENTRY.TYPE }}" onclick="return confirm(`WARNING:\n\nTHIS PROGRAM WILL PERMANENTLY BRICK YOUR CONSOLE. Do not run this program unless in an emulator.\n\nBy clicking ''OK'' to download, you accept that you and you alone are responsible for any damages caused to your devices. I may provide this software, but running it is ultimately up to you, and so I will not be held responsible for the outcomes of your actions.\n\nPlease press ''Cancel'' if you do not agree to this or would not like to download the software.`)">{{ ENTRY.VERSION }}{{ ENTRY.DATE }}</a></td>
-    {%- endif -%}
-  {%- endfor -%}
-  {%- else -%}
-    <th class=""><b>SRL</b></th>
-  <!-- Do not include TAD list for CARD apps (impossible to be TADs). 
-  	   Twl SystemUpdater is an exception to this but we'll handle that
-  	   later somehow. -->
-  {%- if ENTRY.TARGET == "NAND" -%}
-    <th class=""><b>TAD</b></th>
-  {%- endif -%}
-  
-  {%- for ENTRY in site.data.dsinfo -%}
-    {%- if ENTRY.PROGRAM == page.app -%}
-
-      {%- if ENTRY.TYPE == "srl" or ENTRY.TYPE == "zip" -%}
-  </tr>
-        <tr>
-        {%- case ENTRY.DANGER -%}
-          {%- when "high" -%}
-            <td class="tadding"><a href="{{ site.appdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}_{{ ENTRY.VERSION }}{{ ENTRY.DATE }}.{{ ENTRY.TYPE }}" onclick="return confirm(`WARNING:\n\nTHIS PROGRAM WILL PERMANENTLY BRICK YOUR CONSOLE. Do not run this program unless in an emulator.\n\nBy clicking ''OK'' to download, you accept that you and you alone are responsible for any damages caused to your devices. I may provide this software, but running it is ultimately up to you, and so I will not be held responsible for the outcomes of your actions.\n\nPlease press ''Cancel'' if you do not agree to this or would not like to download the software.`)">{{ ENTRY.VERSION }}{{ ENTRY.DATE }}</a></td>
-          {%- when "medium" -%}
-            <td class="tadding"><a href="{{ site.appdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}_{{ ENTRY.VERSION }}{{ ENTRY.DATE }}.{{ ENTRY.TYPE }}" onclick="return confirm(`WARNING:\n\nThis program has a risk of permanently bricking your console. Only use if you know what you are doing.\n\nBy clicking ''OK'' to download, you accept that you and you alone are responsible for any damages caused to your devices. I may provide this software, but running it is ultimately up to you, and so I will not be held responsible for the outcomes of your actions.\n\nPlease press ''Cancel'' if you do not agree to this or would not like to download the software.`)">{{ ENTRY.VERSION }}{{ ENTRY.DATE }}</a></td>
-          {%- else -%}
-            <td class="tadding"><a href="{{ site.appdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}_{{ ENTRY.VERSION }}{{ ENTRY.DATE }}.{{ ENTRY.TYPE }}">{{ ENTRY.VERSION }}{{ ENTRY.DATE }}</a></td>
-        {%- endcase -%}
+      {%- if program.source != "" -%}
+        <div class="devcsv-info1">
+          <b><u>Source code:</u></b><br> - View on <a href="{{ program.source }}" target="_blank">GitHub</a>
+        </div>
       {%- endif -%}
-      {%- if ENTRY.TYPE == "tad" -%}
-        {%- case ENTRY.DANGER -%}
-          {%- when "high" -%}
-            <td class="tadding"><a href="{{ site.appdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}_{{ ENTRY.VERSION }}{{ ENTRY.DATE }}.{{ ENTRY.TYPE }}" onclick="return confirm(`WARNING:\n\nTHIS PROGRAM WILL PERMANENTLY BRICK YOUR CONSOLE. Do not run this program unless in an emulator.\n\nBy clicking ''OK'' to download, you accept that you and you alone are responsible for any damages caused to your devices. I may provide this software, but running it is ultimately up to you, and so I will not be held responsible for the outcomes of your actions.\n\nPlease press ''Cancel'' if you do not agree to this or would not like to download the software.`)">(tad)</a>
-              {%- if ENTRY.FAKETAD == "True" -%}
-                <a href="#" onclick="warnFaketad()">(!)</a>
+      {%- if program.undumped == "true" -%}
+        <div class="devcsv-info2">
+          <b><u>Dumped by:</u></b><br>Currently undumped!
+        </div>
+      {%- else -%}
+        <div class="devcsv-info2">
+          <b><u>Dumped by:</u></b><br>{{ program.credit }}
+        </div>
+        <div class="devcsv-download">
+          <table class="devcsv-table">
+            <tr>
+              <th style="text-align: left;"><u><b>Downloads:</b></u></th>
+            <tr>
+            <tr>
+            {%- if program.target == "Stage2" -%}
+              <th class=""><b>NAND</b></th>
+              {%- for file in program.versions -%}
+              </tr>
+                    <tr>
+                        <td class="tadding"><a href="{{ site.appdir }}{{ program.slug }}/{{ program.slug }}_{{ file.version }}{%- if file.date != '' -%}_{{ file.date }}{%- endif -%}.{{ file.type }}" onclick="return confirm(`WARNING:\n\nTHIS PROGRAM WILL PERMANENTLY BRICK YOUR CONSOLE. Do not run this program unless in an emulator.\n\nBy clicking ''OK'' to download, you accept that you and you alone are responsible for any damages caused to your devices. I may provide this software, but running it is ultimately up to you, and so I will not be held responsible for the outcomes of your actions.\n\nPlease press ''Cancel'' if you do not agree to this or would not like to download the software.`)">{{ file.version }}{%- if file.date != '' -%}_{{ file.date }}{%- endif -%}</a></td>
+              {%- endfor -%}
+            {%- else -%}
+              <th class=""><b>SRL</b></th>
+              <!-- Do not include TAD list for CARD apps (impossible to be TADs). 
+          	  Twl SystemUpdater is an exception to this but we'll handle that
+          	  later somehow. -->
+              {%- if program.target == "NAND" -%}
+                <th class=""><b>TAD</b></th>
               {%- endif -%}
-            </td>
-          {%- when "medium" -%}
-            <td class="tadding"><a href="{{ site.appdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}_{{ ENTRY.VERSION }}{{ ENTRY.DATE }}.{{ ENTRY.TYPE }}" onclick="return confirm(`WARNING:\n\nThis program has a risk of permanently bricking your console. Only use if you know what you are doing.\n\nBy clicking ''OK'' to download, you accept that you and you alone are responsible for any damages caused to your devices. I may provide this software, but running it is ultimately up to you, and so I will not be held responsible for the outcomes of your actions.\n\nPlease press ''Cancel'' if you do not agree to this or would not like to download the software.`)">(tad)</a>
-          {%- if ENTRY.FAKETAD == "True" -%}
-            <a href="#" onclick="warnFaketad()">(!)</a>
-          {%- endif -%}
-            </td>
-          {%- else -%}
-            <td class="tadding"><a href="{{ site.appdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}_{{ ENTRY.VERSION }}{{ ENTRY.DATE }}.{{ ENTRY.TYPE }}">(tad)</a>
-            {% if ENTRY.FAKETAD == "True" %}
-              <a href="#" onclick="warnFaketad()">(!)</a>
+              {%- for file in program.versions -%}
+                {%- if file.type == "srl" or file.type == "zip" -%}
+                </tr>
+                  <tr>
+                  {%- case program.danger -%}
+                    {%- when "high" -%}
+                      <td class="tadding"><a href="{{ site.appdir }}{{ program.slug }}/{{ program.slug }}_{{ file.version }}{%- if file.date != '' -%}_{{ file.date }}{%- endif -%}.{{ file.type }}" onclick="return confirm(`WARNING:\n\nTHIS PROGRAM WILL PERMANENTLY BRICK YOUR CONSOLE. Do not run this program unless in an emulator.\n\nBy clicking ''OK'' to download, you accept that you and you alone are responsible for any damages caused to your devices. I may provide this software, but running it is ultimately up to you, and so I will not be held responsible for the outcomes of your actions.\n\nPlease press ''Cancel'' if you do not agree to this or would not like to download the software.`)">{{ file.version }}{%- if file.date != '' -%}_{{ file.date }}{%- endif -%}</a></td>
+                    {%- when "medium" -%}
+                      <td class="tadding"><a href="{{ site.appdir }}{{ program.slug }}/{{ program.slug }}_{{ file.version }}{%- if file.date != '' -%}_{{ file.date }}{%- endif -%}.{{ file.type }}" onclick="return confirm(`WARNING:\n\nThis program has a risk of permanently bricking your console. Only use if you know what you are doing.\n\nBy clicking ''OK'' to download, you accept that you and you alone are responsible for any damages caused to your devices. I may provide this software, but running it is ultimately up to you, and so I will not be held responsible for the outcomes of your actions.\n\nPlease press ''Cancel'' if you do not agree to this or would not like to download the software.`)">{{ file.version }}{%- if file.date != '' -%}_{{ file.date }}{%- endif -%}</a></td>
+                    {%- else -%}
+                      <td class="tadding"><a href="{{ site.appdir }}{{ program.slug }}/{{ program.slug }}_{{ file.version }}{%- if file.date != '' -%}_{{ file.date }}{%- endif -%}.{{ file.type }}">{{ file.version }}{%- if file.date != '' -%}_{{ file.date }}{%- endif -%}</a></td>
+                  {%- endcase -%}
+                {%- endif -%}
+                {%- if file.type == "tad" -%}
+                  {%- case program.danger -%}
+                    {%- when "high" -%}
+                      <td class="tadding"><a href="{{ site.appdir }}{{ program.slug }}/{{ program.slug }}_{{ file.version }}{%- if file.date != '' -%}_{{ file.date }}{%- endif -%}.{{ file.type }}" onclick="return confirm(`WARNING:\n\nTHIS PROGRAM WILL PERMANENTLY BRICK YOUR CONSOLE. Do not run this program unless in an emulator.\n\nBy clicking ''OK'' to download, you accept that you and you alone are responsible for any damages caused to your devices. I may provide this software, but running it is ultimately up to you, and so I will not be held responsible for the outcomes of your actions.\n\nPlease press ''Cancel'' if you do not agree to this or would not like to download the software.`)">(tad)</a>
+                        {%- if file.faketad == "True" -%}
+                          <a href="#" onclick="warnFaketad()">(!)</a>
+                        {%- endif -%}
+                      </td>
+                    {%- when "medium" -%}
+                      <td class="tadding"><a href="{{ site.appdir }}{{ program.slug }}/{{ program.slug }}_{{ file.version }}{%- if file.date != '' -%}_{{ file.date }}{%- endif -%}.{{ file.type }}" onclick="return confirm(`WARNING:\n\nThis program has a risk of permanently bricking your console. Only use if you know what you are doing.\n\nBy clicking ''OK'' to download, you accept that you and you alone are responsible for any damages caused to your devices. I may provide this software, but running it is ultimately up to you, and so I will not be held responsible for the outcomes of your actions.\n\nPlease press ''Cancel'' if you do not agree to this or would not like to download the software.`)">(tad)</a>
+                        {%- if file.faketad == "True" -%}
+                          <a href="#" onclick="warnFaketad()">(!)</a>
+                        {%- endif -%}
+                      </td>
+                    {%- else -%}
+                      <td class="tadding"><a href="{{ site.appdir }}{{ program.slug }}/{{ program.slug }}_{{ file.version }}{%- if file.date != '' -%}_{{ file.date }}{%- endif -%}.{{ file.type }}">(tad)</a>
+                      {% if file.FAKETAD == "True" %}
+                        <a href="#" onclick="warnFaketad()">(!)</a>
+                      {%- endif -%}
+                      </td>
+                  {%- endcase -%}
+                {%- endif -%}
+              {%- endfor -%}
             {%- endif -%}
-            </td>
-        {%- endcase -%}
+          </table>
+        </div>
       {%- endif -%}
-    {%- endif -%}
-  {%- endfor -%}
-  {%- endif -%}
-  </table>
-  </div>
-  {%- endif -%}
-</div>
+      </div>
     {%- endif -%}
   {%- endif -%}
 {%- endfor %}

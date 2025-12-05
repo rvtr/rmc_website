@@ -1,0 +1,48 @@
+---
+title: PokeWalker Factory Tests
+layout: release
+releaseslug: phcproducttest
+date: 2025/12/05
+preview: /preview.png
+---
+    <h1>PokeWalker Factory Tests</h1>
+    <p>Today we're releasing two versions of the <b>PHC PRODUCT TEST</b>, a factory program for the PokeWalker (PHC) hardware. The tests are run from a Nintendo DS, with the PokeWalker connecting over infrared. Special dev cartridges are used, modified with an added IR transmitter on the save module, and a translucent black cover to allow IR light to pass through.
+    <br><br>
+    PHC PRODUCT TEST comes in two modes: <code>WRITE</code> and <code>VERIFY</code>. Both were compiled on 2009/05/18.
+    <ul>
+      <li>The <code>WRITE</code> mode will write to the PokeWalker's EEPROM with <code>UNIQUE ID DATA</code> (this sets up RTC), then <code>LCD INIT DATA</code>.</li>
+      <li>The <code>VERIFY</code> mode will just verify these two datas.</li>
+    </ul>
+    In order for the PokeWalker to connect to PHC PRODUCT TEST, you will need to <a href="https://en-americas-support.nintendo.com/app/answers/detail/a_id/3925/~/how-to-reset-the-pokéwalker" target="_blank">reset</a> the pokewalker with the test software open. When PHC PRODUCT TEST gets run, it sets the PokeWalker into a special mode called <code>interactionHandlerDebugMode22</code> which allows communication with more advanced factory hardware through SPI. From here the PokeWalker will run EEPROM, RTC, and accelerometer tests. <a href="https://dmitry.gr/?r=05.Projects&proj=28.%20pokewalker#_TOC_f13c0381e252dae8c49dbbbe4b91b378" target="_blank"><sup>(source)</sup></a>
+    <br><br>
+    Thanks to <b>ufo</b> for this release!
+    </p>
+    <details>
+    <summary>PHC PRODUCT TEST (WRITE)</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Build date : 2009/05/18
+  Download   : <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/PHC_PRODUCT_TEST_WRITE_v0_20090518.srl">PHC_PRODUCT_TEST_WRITE_v0_20090518.srl</PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>PHC PRODUCT TEST (VERIFY)</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Build date : 2009/05/18
+  Download   : <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/PHC_PRODUCT_TEST_VERIFY_v0_20090518.srl">PHC_PRODUCT_TEST_VERIFY_v0_20090518.srl</PRE></TD></TR></TABLE>
+    </details>
+    <div class="screenshot">
+      <video controls style="width:100%;max-width:700px;">
+        <source src="{{ site.releasedir }}{{ page.releaseslug }}/photos/phc.mp4" alt="Video of PHC PRODUCT TEST connecting to a PokeWalker." type='video/mp4'>
+      </video>
+    </div>
+    <div class="screenshot">
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/phc_srl_write.png" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/phc_srl_write.png" alt="PHC PRODUCT TEST WRITE running. The current mode and LCD type is displayed."></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/phc_srl_verify.png" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/phc_srl_verify.png" alt="PHC PRODUCT TEST VERIFY running. The current mode and LCD type is displayed."></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/phc_cart_front.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/phc_cart_front.jpg" alt="PHC cartridge front"></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/phc_cart_back.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/phc_cart_back.jpg" alt="PHC cartridge back"></a>
+    </div>
+    <div class="screenshot">
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/phc_sub_top.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/phc_sub_top.jpg" alt="IR save module front"></a>
+      <a href="{{ site.releasedir }}{{ page.releaseslug }}/photos/phc_sub_back.jpg" target="_blank"><img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/phc_sub_back.jpg" alt="IR save module back"></a>
+    </div>
+
+    <!-- {{ site.releasedir }}{{ page.releaseslug }} -->

@@ -1,11 +1,7 @@
 ---
 layout: devinfo
 app: TWL_EVA_PREPARE
-altname: PREPARE
-category: [TWL EVA]
-sequence: TRUE
 redirect_from: /dsidev/twl_eva_prepare.html
-group: true
 ---
 <b>PREPARE</b> is a tool to write and sign the DSi's HWInfo, a per-console file containing the serial and region. HWInfo is required to boot final firmware (ignored on factory firmware) and so PREPARE is used to <i>prepare</i> the DSi for <a href="/dsidev/twl_eva_import.html">IMPORT</a>.<br>There are two versions, PREPARE and PREPARE SD. The only difference is that PREPARE SD does not include "WRITE SDMC-LNC" (the <a href="/dsidev/sdmc_launcher.html">SDMC Launcher</a>), while the normal PREPARE does. There is also a <a href="/dsidev/twl_eva_prewrite.html">PREWRITE</a> which is very similar in function to PREPARE with a few additions, though PREWRITE is likely not used.<br><br>The tests for both PREPAREs are listed below:<br><br>
 <table class="functionlist"><tr><td><pre>

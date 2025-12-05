@@ -2,33 +2,21 @@
 layout: devinfo
 app: WMTestTool
 ---
-NINTENDO DS - WMtest
-WMtest Screenshot
+<p>
+WM test is a test app included in all DS SDKs. It is used to test the Wireless Manager library. The WM library handles most local wireless functions like download play and local multiplayer. The tests from WM test are listed below:
+</p>
+<ul>
+    <li><b>Scan Test:</b> For finding other DSes distributing software over NiFi and WiFi access points. WM Test allows you to narrow your search to specific channels</li>
+    <li><b>ScanEx Test:</b> This is a more detailed version of Scan Test.</li>
+    <li><b>MeasureChannel Test:</b> Checks if and how much a specific channel is being used,</li>
+    <li><b>Noise Mode:</b> This will send noise over NiFi and jam legitimate signals</li>
+</ul>
+<p>
+WM test has been embedded/forked into both the <a href="/dsidev/nitro_eva_proto.html">Nitro EVA prototype</a> and <a href="/dsidev/nitro_eva_rf_test.html">RF Test</a>.
+</p>
 
-left‎
-
-This application is a TWL(DSi) application compiled for use on the 3DS. It is an wireless test tool with its uses explained below:
-
-    Scan Test - Scans Wireless channels 1-13 (can be focused on one specific channel) for broadcasting stations. It can detect two types of broadcasting stations:
-
-    Wifi Access Points - Giving the Mac Address, Broadcasting Channel, 'c', and the SSID
-
-    DS Stations such as DS Download stations and Pokemon distributors - Giving the Mac Address, Brodcasting Channel, TGID and GGID
-
-    ScanEx Test - and has two Scan Types. Passive which lets you individually scan channels 1-13 (only one at at time) and the DS distribution channels (1,7,13 all at once). And Active which scans all 13 channels at once. when it finds a channel it prints on the bottom screen next to 'Found' 'bssDescCount='
-
-    MeasureChannel Test - not quite sure what this does but it for a given channel it gives a ratio(in percentage form), which it finds in its allocated test time ranging from 10ms to 1000ms. And for every interval of time which is specified, it tests and gives a ratio.
-
-    Noise Mode - Seeks wireless channels in which to make wireless noise (This is not made very clear on the app). You can specify the:
-
-Channel where the scanner will seek to make noise
-
-Noise Rate, ranging from 0% to 100%
-
-Frequency, ranging from 10ms to 50ms
-
-Seek Mode, ranging from 1000ms to 1500ms
-
-When the settings are chosen the top screen has two counters which display 'Noise ON count' and 'Noise OFF count' the counters are affected by the noise rate. Starting at 0% the 'Noise ON count' does not change but as the Noise rate gets closer to 100% the count moves and gets faster as Noise rate reaches 100%. For 'Noise OFF count' it is the exact opposite to the ' Noise ON count' in regards to counting. 
-
-CTR is NAND app, rest are not.
+<div class="screenshot">
+  <img src="{{ site.imgdir }}{{ page.app }}/screenshots/wmtesttool_3.png">
+  <img src="{{ site.imgdir }}{{ page.app }}/screenshots/wmtesttool_2.png">
+  <img src="{{ site.imgdir }}{{ page.app }}/screenshots/wmtesttool.png">
+</div>

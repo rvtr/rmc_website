@@ -18,7 +18,7 @@
       <title>{{ page.title }} | rmc</title>
       <meta property="og:title" content="{{ page.title }}">
       {% if page.preview == null -%}
-        <meta property="og:image" content="{{ site.imgdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif">
+        <!--<meta property="og:image" content="{{ site.imgdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif">-->
       {%- else -%}
         <meta property="og:image" content="{{ site.imgdir }}{{ page.preview }}">
         <meta property="twitter:image" content="{{ site.imgdir }}{{ page.preview }}">
@@ -29,21 +29,21 @@
       <meta property="twitter:title" content="{{ page.title }}">
       <meta name="keywords" content="dsi, ds, nintendo, dev" />
     {%- else -%}
-  {%- for ENTRY in site.data.dsinfo -%}
-    {%- if ENTRY.PROGRAM == page.app -%}
-      {%- if ENTRY.PUBLISHED == "TRUE" -%}
-        <title>{{ ENTRY.TITLE }} | {{ site.title }}</title>
-        <meta property="og:title" content="{{ ENTRY.TITLE }}">
+  {%- for program in site.data.appinfo.programlist -%}
+    {%- if program.slug == page.app -%}
+      {%- if program.published == "true" -%}
+        <title>{{ program.title }} | {{ site.title }}</title>
+        <meta property="og:title" content="{{ program.title }}">
         {% if page.preview == null -%}
-          <meta property="og:image" content="{{ site.imgdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif">
+          <meta property="og:image" content="{{ site.imgdir }}{{ program.slug }}/{{ program.slug }}.gif">
         {%- else -%}
-          <meta property="og:image" content="{{ site.imgdir }}{{ ENTRY.PROGRAM }}{{ page.preview }}">
-          <meta property="twitter:image" content="{{ site.imgdir }}{{ ENTRY.PROGRAM }}{{ page.preview }}">
+          <meta property="og:image" content="{{ site.imgdir }}{{ program.slug }}{{ page.preview }}">
+          <meta property="twitter:image" content="{{ site.imgdir }}{{ program.slug }}{{ page.preview }}">
        {%- endif %}
-        <meta name="description" content="{{ ENTRY.DESC }} for {{ ENTRY.SYSTEM }}">
-        <meta property="og:description" content="{{ ENTRY.DESC }} for {{ ENTRY.SYSTEM }}">
-        <meta property="twitter:description" content="{{ ENTRY.DESC }} for {{ ENTRY.SYSTEM }}">
-        <meta property="twitter:title" content="{{ ENTRY.TITLE }}">
+        <meta name="description" content="{{ program.desc }} for {{ program.system }}">
+        <meta property="og:description" content="{{ program.desc }} for {{ program.system }}">
+        <meta property="twitter:description" content="{{ program.desc }} for {{ program.system }}">
+        <meta property="twitter:title" content="{{ program.title }}">
         <meta name="keywords" content="dsi, ds, nintendo, dev, {{ page.app }}" />
       {%- endif -%}
     {%- endif -%}

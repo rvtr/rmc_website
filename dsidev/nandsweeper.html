@@ -3,13 +3,13 @@ layout: devinfo
 app: NANDSweeper
 ---
 
-        NANDSweeper is a tool created to destroy (<code>SWEEP</code>) and read (<code>DUMP</code>) the DSi's NAND and SD card. The app comes in two versions (NTRJ and NTRJ-Secure). I don't know the specific difference between them, but NTRJ-Secure will not boot. It's unknown why this tool exists, though it may have been to wipe prototypes considering how it was found in the TwlToolsRED repository (used to develop the internal IPL).
-        <h2>SWEEP</h2>
-        The <code>SWEEP</code> function allows you to set every byte in NAND or the SD as <code>00, FF, 55, AA</code>, or incremental/decremental and random patterns. The location to start writing is set through the <code>Input Transfer Sector</code>.
-        <h2>DUMP</h2>
-        <code>DUMP</code> displays a hex dump of the NAND and SD. The <code>Input Sector Address</code> sets the location to start reading from, and dpad-up and dpad-down are used to scroll through the hex dump.
+<p>NANDSweeper is a tool created to destroy and read the DSi's NAND/SD card. The app comes in two versions (NTRJ and NTRJ-Secure), with only NTRJ being bootable. It's unknown why this tool exists, though considering how it was found in the TwlToolsRED repository (used to develop the internal IPL), it may have been to wipe prototypes. NandSweeper is a fork of a less distructive program called <a href="/dsidev/nandagingchecker.html">SD/NAND Aging Checker</a>. The functions in NandSweeper are shown below:</p>
+<ul>
+  <li><b>SWEEP:</b> The <code>SWEEP</code> function allows users to set every byte in NAND or the SD as <code>00, FF, 55, AA</code>, or incremental/decremental and random patterns. The location to start writing is set through the <code>Input Transfer Sector</code>.</li>
+  <li><b>DUMP:</b> <code>DUMP</code> displays a hex dump of the NAND and SD. The <code>Input Sector Address</code> sets the location to start reading from, and dpad-up and dpad-down are used to scroll through the hex dump.</li>
+</ul>
 
-        <div class="screenshot">
-        	<img src="{{ site.imgdir }}{{ page.app }}/screenshots/nandsweeper_sweep.png">
-        	<img src="{{ site.imgdir }}{{ page.app }}/screenshots/nandsweeper_dump.png">
-    	</div>
+<div class="screenshot">
+  <img src="{{ site.imgdir }}{{ page.app }}/screenshots/nandsweeper_sweep.png">
+  <img src="{{ site.imgdir }}{{ page.app }}/screenshots/nandsweeper_dump.png">
+</div>

@@ -3,69 +3,98 @@ title: Index
 layout: dsiware
 redirect_from: /dsidev/index.html
 ---
-<marquee class="scroller"><code style="font-size:40px;" scrollamount="10">The website by junkers for junkers. Greetings to ufo, lasscat, togemet2, Rolfie, HudU, xp, Haifisch, MaxiBash, RedBees, March42, NinjaCheetah, DamiDoop, scalr, pancake, Voodooween, Kelly, MarioDS64, Fritz, MrPinball64, j4m13c0, Dionicio3, and collection_nintendo! Thanks to everyone across the web who has dumped, mirrored, or documented these programs. This entire website was designed by me, and me alone (unless you count stack overflow (and if you ignore DamiDoop the icon maker)). Sure, it's barely working, but at least it looks nicer and has more information than any other public sites. Y'all need to remember that there's more than just TwlNmenu and NandFiler. Also just include damn links! These programs don't do any good when you can't download and use them. Oh well, at least I've fixed that now. Now you can run all official DS brickers and NAND editing tools... oh. Maybe there's a reason not everything gets shared. Good luck staying safe! In other news, this site is fully self hosted! No more big companies limiting what I can do!</code></marquee>
+<marquee class="scroller"><code style="font-size:40px;" scrollamount="10">The website by junkers for junkers. Greetings to ufo, lasscat, togemet2, miagique, HudU, xp, Haifisch, MaxiBash, Mythra, RedBees, March42, NinjaCheetah, DamiDoop, scalr, pancake, Voodooween, Kelly, MarioDS64, Fritz, MrPinball64, j4m13c0, Dionicio3, Rairii, collection_nintendo, Lorenzooone, and Garhoogin! Thanks to everyone across the web who has dumped, mirrored, or documented these programs. This entire website was designed by me, and me alone (unless you count stack overflow (and if you ignore DamiDoop the icon maker)). Sure, it's barely working, but at least it looks nicer and has more information than any other public sites. Y'all need to remember that there's more than just TwlNmenu and NandFiler. Also just include damn links! These programs don't do any good when you can't download and use them. Oh well, at least I've fixed that now. Now you can run all official DS brickers and NAND editing tools... oh. Maybe there's a reason not everything gets shared. Good luck staying safe! In other news, this site is fully self hosted! No more big companies limiting what I can do!</code></marquee>
 
 <!-- ^ Real sigmas up here. -->
-<div style="margin:1%;">
-<div class="info" style="margin-top:1vw;margin-left:auto;margin-right:auto;width:60%;color:black">
-<h4>News: <a href="/dsidev/release/write_sdmc.html">AGING and WRITE SDMC-LNC dumped</a></h4>
-Some new factory tools just dropped thanks to <b>March42</b>! Most interesting is a tool used to "reset" DSis if an error happens in setup. Check it out!
-</div><br>
+  <div class="index-limit">
+    <div style="margin:1%;">
+      <div class="info" style="margin-top:1vw;margin-left:auto;margin-right:auto;width:60%;color:black">
+        <h4>News: <a href="/dsidev/release/write_sdmc.html">AGING and WRITE SDMC-LNC dumped</a></h4>
+        Some new factory tools just dropped thanks to <b>March42</b>! Most interesting is a tool used to "reset" DSis if an error happens in setup. Check it out!
+      </div><br>
 
-   <div class="devinfo-container-main releasepage colorbox">
-      <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
-      <div style="background-image: url('{{ site.imgui }}menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;">
-      <div class="devinfo-main" style="position:relative;"><br>
-<h2 style="padding-top:0;">Welcome to random meaningless characters!</h2>
+      <div class="devinfo-container-main releasepage colorbox">
+        <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
+        <div style="background-image: url('{{ site.imgui }}menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;">
+          <div class="devinfo-main" style="position:relative;"><br>
+            <h1 style="padding-top:0;">Welcome to random meaningless characters!</h1>
 
-<p>
-  Welcome! This site is focused on documenting every single DS/DSi factory and development app, as well as prototype firmwares and hardware. We have the largest collection of apps publicly available, the most accurate information, and things you'll have never heard of. We also do prototype/dev releases, so if you have any cartridges or development units, <a href="/contact.html">get in touch</a>
-</p>
-      </div>
-      </div>
-      <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
-   </div>
-</div>
-
-<!-- I retract all previous negative statements about RGD -->
-
-<div class="flex-container">
-{% assign i = 0 %}
-{% for ENTRY in site.data.dsinfo -%}
-    {%- if ENTRY.PUBLISHED == "TRUE" -%}
-      <div class="parent_or_guardian colorbox{{ i }}">
-        <div class="flexception">
-          <div class="flexceptionception">
-            <div>
-              <img src="{{ site.imgdir }}{{ ENTRY.PROGRAM }}/{{ ENTRY.PROGRAM }}.gif" width="52px" height="52px">
-            </div>
-            <div class="prompt_header">
-              <div class="flexceptionception_the_flexening">
-                <div class="prompt_title">
-                {{ ENTRY.TITLE }}
-                </div>
-                <div>
-                  <b>Target: </b>
-                  {%- if ENTRY.SYSTEM == "TWL (DSi)" -%}
-                   <span style="color:#ff0000;">{{ ENTRY.SYSTEM }}</span>
-                  {%- else -%}
-                   <span style="color:#3399ff;">{{ ENTRY.SYSTEM }}</span>
-                  {%- endif -%}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="prompt_info">
-            <i>{{ ENTRY.DESC }}</i>
+            <p>
+              Welcome! This site is focused on documenting every single DS/DSi factory and development app, as well as prototype firmwares and hardware. We have the largest collection of apps publicly available, the most accurate information, and things you'll have never heard of. We also do prototype/dev releases, so if you have any cartridges or development units, <a href="/contact.html">get in touch</a>
+              <br>
+              <br>
+              <table class="history">
+                <tr><th class="twl">Table of contents</th></tr>
+                {% for category in site.data.appinfo.categories_broad -%}
+                  <tr><td class="twl">- <a href="#cat-{{ category.slug | replace: ' ', '-' | downcase }}">{{ category.title}}</a></td></tr>
+                {%- endfor %}
+              </table>
+            </p>
           </div>
         </div>
-        <img class="prompt" src="{{ site.imgui }}menu/green/dsi_prompt.png">
-        <a href="/dsidev/{{ ENTRY.PROGRAM | downcase }}.html"><img class="prompt_two_a_new_hover" src="{{ site.imgui }}menu/dsi_prompthover.png"></a>
+        <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
       </div>
-      {% assign i = i | plus:1 %}
-      {%- if i == 4 -%}
-        {% assign i = 0 %}
-      {%- endif -%}
-    {%- endif -%}
-{%- endfor %}
+    </div>
+
+    <!-- I retract all previous negative statements about RGD -->
+
+    {% assign i = 0 %}
+    {% for category in site.data.appinfo.categories_broad -%}
+      <div class="devinfo-container-category colorbox1" style="margin-top: 50px;">
+        <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
+        <div style="background-image: url('{{ site.imgui }}menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;width:100%;">
+        <div class="devinfo-main" style="position:relative;"><br>
+          <h2 style="padding-top:0;">{{ category.title }}</h2>
+          <p>
+            {{ category.desc }}
+          </p>
+        </div>
+        </div>
+        <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_d.png" style="width: 100%;display:block;" class="pixelate">
+      </div>
+      <details class="devinfo-container-category" style="margin:auto;">
+      <summary><u>EXPAND</u></summary>
+        <div class="flex-container" id="cat-{{ category.slug | replace: ' ', '-' | downcase }}">
+        {% for program in site.data.appinfo.programlist -%}
+          {%- if category.slug == program.category_broad -%}
+            {%- if program.published == "true" -%}
+              <div class="parent_or_guardian colorbox{{ i }}">
+                <div class="flexception">
+                  <div class="flexceptionception">
+                    <div>
+                      <img src="{{ site.imgdir }}{{ program.slug }}/{{ program.slug }}.gif" class="prompt_icon">
+                    </div>
+                    <div class="prompt_header">
+                      <div class="flexceptionception_the_flexening">
+                        <div class="prompt_title">
+                        {{ program.title }}
+                        </div>
+                        <div>
+                          <b>Target: </b>
+                          {%- if program.versions[0].system == "TWL (DSi)" -%}
+                           <span style="color:#ff0000;">{{ program.versions[0].system }}</span>
+                          {%- else -%}
+                           <span style="color:#3399ff;">{{ program.versions[0].system }}</span>
+                          {%- endif -%}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prompt_info">
+                    <i>{{ program.desc }}</i>
+                  </div>
+                </div>
+                <img class="prompt" src="{{ site.imgui }}menu/green/dsi_prompt.png">
+                <a href="/dsidev/{{ program.slug | downcase }}.html"><img class="prompt_two_a_new_hover" src="{{ site.imgui }}menu/dsi_prompthover.png"></a>
+              </div>
+              {% assign i = i | plus:1 %}
+              {%- if i == 4 -%}
+                {% assign i = 0 %}
+              {%- endif -%}
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+        </div>
+      </details>
+    {%- endfor %}
 </div>

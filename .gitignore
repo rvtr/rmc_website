@@ -7,4 +7,6 @@ pages
 .idea
 /S3
 dsidev/release/factory_photos.html
+dsidev/release/3ds-pc-tools.html
 csv_test.html
+json_test.html

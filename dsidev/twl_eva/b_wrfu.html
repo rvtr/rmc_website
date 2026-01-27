@@ -4,22 +4,23 @@ app: WRFUTester
 redirect_from: /dsidev/wrfutester.html
 preview: /external/WRFU_BOX_I.jpg
 ---
-<i>All photos courtesy of Voodooween.</i>
-<br><br>
-<b>WRFU</b> is a factory wireless tester for the DSi. WRFU is built off of the TWL EVA base, though the menu has been completely stripped and it resembles nothing like other TWL EVAs. The tool is able to boot up into two modes, <b>ART</b> and <a href="https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter" target="_blank">UART</a>. ART appears to let the cartridge be used standalone, but UART requires the IS-SPI-USB-ADAPTER:
+<p><b>WRFU</b> is a factory wireless tester for the DSi. WRFU is built off of the TWL EVA base, though the menu has been completely stripped and it resembles nothing like other TWL EVAs. The tool is able to boot up into two modes, <b>ART</b> and <a href="https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter" target="_blank">UART</a>. ART appears to let the cartridge be used standalone, but UART requires the IS-SPI-USB-ADAPTER:</p>
 <div class="screenshot">
-	<a href="{{ site.imgdir }}WRFUTester/external/WRFU_SPI_USB_F.jpg" target="_blank"><img src="{{ site.imgdir }}WRFUTester/external/WRFU_SPI_USB_F.jpg"></a>
-	<a href="{{ site.imgdir }}WRFUTester/external/WRFU_SPI_USB_B.jpg" target="_blank"><img src="{{ site.imgdir }}WRFUTester/external/WRFU_SPI_USB_B.jpg"></a>
+	<a href="{{ site.imgdir }}WRFUTester/external/TWL-FC-MCP-SP-X1_labels.png" target="_blank"><img src="{{ site.imgdir }}WRFUTester/external/TWL-FC-MCP-SP-X1_labels.png"></a>
+	<a href="{{ site.imgdir }}WRFUTester/external/TWL-FC-MCP-SP-X1_front.png" target="_blank"><img src="{{ site.imgdir }}WRFUTester/external/TWL-FC-MCP-SP-X1_front.png"></a>
+	<a href="{{ site.imgdir }}WRFUTester/external/TWL-FC-MCP-SP-X1_back.png" target="_blank"><img src="{{ site.imgdir }}WRFUTester/external/TWL-FC-MCP-SP-X1_back.png"></a>
+	<a href="{{ site.imgdir }}WRFUTester/external/TWL-FC-MCP-SP-X1_open.png" target="_blank"><img src="{{ site.imgdir }}WRFUTester/external/TWL-FC-MCP-SP-X1_open.png"></a>
+	<a href="{{ site.imgdir }}WRFUTester/external/WRFU_SPI_USB_F.png" target="_blank"><img src="{{ site.imgdir }}WRFUTester/external/WRFU_SPI_USB_F.png"></a>
+	<a href="{{ site.imgdir }}WRFUTester/external/WRFU_SPI_USB_B.png" target="_blank"><img src="{{ site.imgdir }}WRFUTester/external/WRFU_SPI_USB_B.png"></a>
 </div>
-
-The SPI-USB is plugged into the back of the WRFU cart, allowing it to communicate with the WRFU Tester box.
+<p>The SPI-USB is plugged into the back of the WRFU cart, allowing it to communicate with a factory PC. There are no photos of the typical setup, but a test box with a permanently installed DSi (possibly for the FCC?) is shown below. This specific box used an X4 prototype DSi. The NAND has been dumped and <a href="/dsidev/release/voodooween-dsi.html">released</a>.</p>
 <div class="screenshot">
 	<a href="{{ site.imgdir }}WRFUTester/external/WRFU_BOX_O.jpg" target="_blank"><img src="{{ site.imgdir }}WRFUTester/external/WRFU_BOX_O.jpg"></a>
 	<a href="{{ site.imgdir }}WRFUTester/external/WRFU_BOX_I.jpg" target="_blank"><img src="{{ site.imgdir }}WRFUTester/external/WRFU_BOX_I.jpg"></a>
 	<a href="{{ site.imgdir }}WRFUTester/external/WRFU_BOX_I-2.jpg" target="_blank"><img src="{{ site.imgdir }}WRFUTester/external/WRFU_BOX_I-2.jpg"></a>
-	<a href="{{ site.imgdir }}WRFUTester/external/WRFU_CART.jpg" target="_blank"><img src="{{ site.imgdir }}WRFUTester/external/WRFU_CART.jpg"></a>
 </div>
-
+<div class="screenshot"><small><i>WRFU Tester box photos courtesy of Voodooween.</i></small></div>
+<p>
 It's hard to tell what WRFU does, but piecing together function names in WRFU tester we can make an educated guess. WRFU tester works by...
 <ul>
 	<li>Testing scanning WiFi connections (<code>NET_*</code>)</li>
@@ -27,7 +28,7 @@ It's hard to tell what WRFU does, but piecing together function names in WRFU te
 	<li>Testing the DSi firmware and wireless module(<code>TESTER_*</code>)</li>
 </ul>
 Information from the actual test list ends there, but strings after the list have <code>OS_DoApplicationJump</code>, implying that the WRFU Tester boots the download play app from the RFU tests. However, it's impossible to confirm any of this without a proper disassembly.
-<br><br>
+</p>
 <table class="functionlist"><tr><td><pre>
 NET_SetConnectChannel_C
 NET_SetSignalType
@@ -75,3 +76,6 @@ TESTER_PowerOff
 TESTER_PMBackLightOn
 TESTER_PMBackLightOff
 </td></tr></table>
+<p>The <a href="https://www.lnh-team.org/" target="_blank">DSpico</a> uses the v0.60 WRFU ROM in its "WRFUxxed" exploit. The hash for this version is listed below, and a detailed explaination of the exploit is available <a href="https://github.com/LNH-team/dspico-wrfuxxed/blob/develop/wrfuxxed.md" target="_blank">here</a>.
+<br><code>SHA1: 2d65fb7a0c62a4f08954b98c95f42b804fccfd26</code>
+</p>

@@ -3725,13 +3725,20 @@
       "published":"true",
       "undumped":"",
       "danger":"high",
-      "credit":"",
+      "credit":"DeadlyFoez for v1.0, with data recovery done by xp",
       "origin":"- Foxconn",
       "source":"",
       "versions":[
             {
                "version":"v1.3",
                "date":"20091210",
+               "type":"srl",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v1.0",
+               "date":"20080905",
                "type":"srl",
                "faketad":"",
                "system":"TWL (DSi)"

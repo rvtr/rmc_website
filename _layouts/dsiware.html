@@ -40,9 +40,9 @@
           <meta property="og:image" content="{{ site.imgdir }}{{ program.slug }}{{ page.preview }}">
           <meta property="twitter:image" content="{{ site.imgdir }}{{ program.slug }}{{ page.preview }}">
        {%- endif %}
-        <meta name="description" content="{{ program.desc }} for {{ program.system }}">
-        <meta property="og:description" content="{{ program.desc }} for {{ program.system }}">
-        <meta property="twitter:description" content="{{ program.desc }} for {{ program.system }}">
+        <meta name="description" content="{{ program.desc }} for {{ program.versions[0].system }}">
+        <meta property="og:description" content="{{ program.desc }} for {{ program.versions[0].system }}">
+        <meta property="twitter:description" content="{{ program.desc }} for {{ program.versions[0].system }}">
         <meta property="twitter:title" content="{{ program.title }}">
         <meta name="keywords" content="dsi, ds, nintendo, dev, {{ page.app }}" />
       {%- endif -%}

@@ -1,0 +1,225 @@
+---
+title: "3DS factory tools"
+layout: release
+releaseslug: 3ds_pc_tools
+date: 2026/03/xx
+preview: /preview.png
+---
+    <h1>3DS factory tools</h1>
+    <p>Today we've got seven 3DS factory tools from <b>march42</b>! All of these were run on factory PCs, hooked up to manufactured 3DSes through a cartridge adapter. This software has been recovered from factory SD cards, and will not work without the original factory environment. However, they will still boot and show us what the process of running them looked like. Should the original setups be replicated, dependencies for the software have also been included.
+
+    <table class="history">
+      <tr><th class="twl">Table of contents</th></tr>
+      <tr><td class="twl">- <a href="#bsl_w">System Writing Program</a></td></tr>
+      <tr><td class="twl">- <a href="#fr_cam_if">FR Camera And Interface Software</a></td></tr>
+      <tr><td class="twl">- <a href="#ctr_cam">CTR Camera Sequencer Program</a></td></tr>
+      <tr><td class="twl">- <a href="#fr_wa">FR Wireless And Audio Software</a></td></tr>
+    </table>
+
+    <h2 id="bsl_w">System Writing Program (BSL_W)</h2>
+    <p><b>BSL_W</b> is a tool to sign per-3DS files. It is run just before the firmware install process (CTR EVA IMPORT). The tool starts by connecting to a 3DS on a factory server. It reads, signs and then writes the SecureInfo, LocalFriendCodeSeed, and movable.sed in NAND. It then quits and allows IMPORT to install the firmware.
+    <br><br>
+    In order to run the software, extract the <code>BSL_W</code> folder and <code>lineNumber.txt</code> to the root of the C:\ drive. <code>lineNumber.txt</code> must contain a 4 digit number in plaintext and nothing more, otherwise BSL_W will fail to boot. You may need to open and close the "debug" screen (top left button) before you can control the software.
+    </p>
+    <details>
+    <summary>v1.04</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Version    : v1.04
+  Build date : 2011
+  Download   : <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/BSL_W_Ver.1.04_00_forEMS.zip">BSL_W_Ver.1.04_00_forEMS.zip</a></PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>Dependencies</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Download   : <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/BSL_W_deps.zip">BSL_W_deps.zip</a></PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>Process list</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  ReadBarcode       = false
+  TCPConnectionWait = true
+  TCPConnectionCTR  = true
+  WriteSerialNumber = false
+  RequestData       = true
+  GetSign           = true
+  WriteSign         = true
+  ValidateSign      = true
+  SendData          = true
+    </PRE></TD></TR></TABLE>
+    </details>
+  <div class="screenshot">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/BSL_W-3ds.jpg">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/BSL_W-cart.jpg">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/BSL_W-setup.jpg">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/BSL_W-3ds-side.jpg">
+  </div>
+  <div class="screenshot">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/BSL_W-main.png">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/BSL_W-ver.png">
+  </div>
+
+
+
+    <h2 id="fr_cam_if">FR Camera And Interface Software (FR_CAM-IF)</h2>
+    <p><b>FR_CAM-IF</b> is a tool to test the camera. The 3DS will be made to take photos of color charts, where an operator will confirm that the camera has taken the photo correctly.
+    <br><br>
+    In order to run the software, extract the <code>FR_CAM-IF</code> folder and <code>lineNumber_FR_CAM-IF.txt</code> to the root of the C:\ drive. <code>lineNumber_FR_CAM-IF.txt</code> must contain a 4 digit number in plaintext and nothing more, otherwise FR_CAM-IF will fail to boot. You may need to open and close the "debug" screen (top left button) before you can control the software.
+    </p>
+    <details>
+    <summary>v0.19</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Version    : v0.19
+  Build date : 2013
+  Download   : <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/FR_CAM-IF-check.zip">FR_CAM-IF-check.zip</a></PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>v0.27</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Version    : v0.27
+  Build date : 2013
+  Download   : <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/FR_CAM-IF.zip">FR_CAM-IF.zip</a></PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>Process list</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Inspection_Result_ScanSerialNumber        = false
+  Inspection_Result_CheckDUTConnection      = true
+  Inspection_Result_WriteSerialNumber       = false
+  Inspection_Result_WriteInspectionLogStart = true
+  Inspection_Camera_IN_GetTestImageCHART    = true
+  Inspection_Camera_IN_CheckOpticalAxisGaps = true
+  Inspection_Camera_IN_CheckResolution      = true
+  Inspection_Camera_IN_CheckColor           = true
+  Inspection_Camera_IN_GetTestImageWHITE    = true
+  Inspection_Camera_IN_CheckStain           = true
+  Inspection_Camera_IN_DeleteTestImage      = false
+  Inspection_Camera_OL_GetTestImageCHART    = true
+  Inspection_Camera_OL_CheckOpticalAxisGaps = true
+  Inspection_Camera_OL_CheckResolution      = true
+  Inspection_Camera_OL_CheckColor           = true
+  Inspection_Camera_OL_GetTestImageWHITE    = true
+  Inspection_Camera_OL_CheckStain           = true
+  Inspection_Camera_OL_DeleteTestImage      = false
+  Inspection_Camera_OR_GetTestImageCHART    = true
+  Inspection_Camera_OR_CheckOpticalAxisGaps = true
+  Inspection_Camera_OR_CheckResolution      = true
+  Inspection_Camera_OR_CheckColor           = true
+  Inspection_Camera_OR_GetTestImageWHITE    = true
+  Inspection_Camera_OR_CheckStain           = true
+  Inspection_Camera_OR_DeleteTestImage      = false
+  Inspection_Result_VisualInspect           = true
+  Inspection_Result_WriteInspectionLogOKNG  = true
+    </PRE></TD></TR></TABLE>
+    </details>
+
+  <div class="screenshot">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/FR_CAM_0.19-main.png">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/FR_CAM_0.19-ver.png">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/FR_CAM_0.27-ver.png">
+  </div>
+
+
+    <h2 id="ctr_cam">CTR Camera Sequencer Program</h2>
+    <p><b>CTR Camera Sequencer Program</b> is a tool used to test the 3DS cameras. A 3DS is connected to the Sequencer software by a cartridge's "HDMI" port, and is placed in a dark box. The 3DS is shown various images and Sequencer displays the camera output on the PC. The images shown are diagnostics such as color charts.
+    <br><br>
+    The first three photos below are from the 3DS factory setup manual. Pictured is the camera jig.
+    </p>
+    <details>
+    <summary>v1.31</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Version    : v1.31
+  Build date : 2010/11/18
+  Download   : <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/CTR Camera Sequencer Program.V1.31.zip">CTR Camera Sequencer Program.V1.31.zip</a></PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>Dependencies</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Download   : <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/CTR Camera Sequencer Program_deps.zip">CTR Camera Sequencer Program_deps.zip</a></PRE></TD></TR></TABLE>
+    </details>
+
+  <div class="screenshot">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/CTR_Cam_Seq-setup.jpg">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/CTR_Cam_Seq-3ds.jpg">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/CTR_Cam_Seq-running.jpg">
+  </div>
+  <div class="screenshot">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/CTR_Cam_Seq-main.png">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/CTR_Cam_Seq-ver.png">
+  </div>
+
+
+
+    <h2 id="fr_wa">FR Wireless And Audio Software (FR_WA)</h2>
+    <p><b>FR_WA</b> is a tool to test the WiFi module and microphone. The 3DS will connect to a factory access point, test the connection, and repeat the process two more times. After this the microphone sensitivity is checked.
+    <br><br>
+    In order to run the software, extract the <code>FR_WA</code> folder and <code>lineNumber_FR_WA.txt</code> to the root of the C:\ drive. <code>lineNumber_FR_WA.txt</code> must contain a 4 digit number in plaintext and nothing more, otherwise FR_WA will fail to boot. You may need to open and close the "debug" screen (top left button) before you can control the software.
+    </p>
+    <details>
+    <summary>v1.09c</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Version    : v1.09c
+  Build date : 2013
+  Download   : <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/FR_WA_Ver0.09c.zip">FR_WA_Ver0.09c.zip</a></PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>v1.15a</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Version    : v1.15a
+  Build date : 2013
+  Download   : <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/FR_WA_Ver0.15a.zip">FR_WA_Ver0.15a.zip</a></PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>v1.15g</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Version    : v1.15g
+  Build date : 2013
+  Download   : <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/FR_WA_Ver0.15g.zip">FR_WA_Ver0.15g.zip</a></PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>Dependencies</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Download   : <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/FR_WA_deps.zip">FR_WA_deps.zip</a></PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>Process list</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Inspection_Result_ScanSerialNumber          = true
+  Inspection_Result_CheckDUTConnection        = true
+  Inspection_Result_WriteSerialNumber         = true
+  Inspection_Result_WriteInspectionLogStart   = true
+  Inspection_Sound_CheckMicStability          = true
+  Inspection_Wifi24GHz_GetModuleInfo          = true
+  Inspection_Wifi24GHz_C1_Wifi24GHzConnect    = true
+  Inspection_Wifi24GHz_C1_UDPErrorRateRx      = true
+  Inspection_Wifi24GHz_C1_RSSIRx              = true
+  Inspection_Wifi24GHz_C1_UDPErrorRateTx      = true
+  Inspection_Wifi24GHz_C1_RSSITx              = true
+  Inspection_Wifi24GHz_C1_Wifi24GHzDisconnect = true
+  Inspection_Wifi24GHz_C2_Wifi24GHzConnect    = false
+  Inspection_Wifi24GHz_C2_UDPErrorRateRx      = false
+  Inspection_Wifi24GHz_C2_RSSIRx              = false
+  Inspection_Wifi24GHz_C2_UDPErrorRateTx      = false
+  Inspection_Wifi24GHz_C2_RSSITx              = false
+  Inspection_Wifi24GHz_C2_Wifi24GHzDisconnect = false
+  Inspection_Wifi24GHz_C3_Wifi24GHzConnect    = false
+  Inspection_Wifi24GHz_C3_UDPErrorRateRx      = false
+  Inspection_Wifi24GHz_C3_RSSIRx              = false
+  Inspection_Wifi24GHz_C3_UDPErrorRateT       = false
+  Inspection_Wifi24GHz_C3_RSSITx              = false
+  Inspection_Wifi24GHz_C3_Wifi24GHzDisconnect = false
+  Inspection_Sound_CheckMicCalibration        = true
+  Inspection_RFU_RSSIRx                       = true
+  Inspection_Sound_CheckMicSensitivity        = true
+  Inspection_Sound_CheckSpeakerOut            = true
+  Inspection_Result_WriteInspectionLogOKNG    = true
+    </PRE></TD></TR></TABLE>
+    </details>
+
+  <div class="screenshot">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/Camera                  14MP-9PG_20120201_001233.jpg">
+  </div>
+  <div class="screenshot">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/FR_WA_0.09-main.png">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/FR_WA_0.09-ver.png">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/FR_WA_0.15-ver.png">
+  </div>

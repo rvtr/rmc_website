@@ -192,6 +192,25 @@
          ]
       },
       {
+      "slug":"CAFEBoardChecker",
+      "title":"CAFE CPU Board Sequencer",
+      "title_short":"CAFE BOARD",
+      "desc":"Wii U hardware tester",
+      "category":"Other_EVA",
+      "category_broad":"Other factory",
+      "target":"CARD",
+      "banner":"NINTENDO DSi™",
+      "banner_1":"Demonstration",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[]
+      },
+      {
       "slug":"CalcHMAC_forBroadOn",
       "title":"CalcHMAC ForBroadOn",
       "title_short":"",
@@ -1837,6 +1856,40 @@
          ]
       },
       {
+      "slug":"NintendoZoneDebugger",
+      "title":"Nintendo Zone Debugger",
+      "title_short":"",
+      "desc":"Nintendo Zone testing/debugging",
+      "category":"Nintendo Zone Debugging",
+      "category_broad":"TWL firmware",
+      "target":"NAND",
+      "banner":"Nintendo Zone",
+      "banner_1":"Nintendo",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"Voodooween",
+      "origin":"",
+      "source":"",
+      "versions":[
+            {
+               "version":"v768_srl",
+               "date":"",
+               "type":"zip",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            },
+            {
+               "version":"v768_tad",
+               "date":"",
+               "type":"zip",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+         ]
+      },
+      {
       "slug":"Nitro_EVA_Proto",
       "title":"Nitro EVA (prototype)",
       "title_short":"Prototype",
@@ -2479,7 +2532,7 @@
       "banner":"NINTENDO DS™",
       "banner_1":"Demonstration",
       "icon_alt":"",
-      "published":"",
+      "published":"true",
       "undumped":"",
       "danger":"",
       "credit":"j4m13c0, and XX_750000 for <a href='https://web.archive.org/web/20230324233451/https://illusion.64history.net/'>FOI</a>",

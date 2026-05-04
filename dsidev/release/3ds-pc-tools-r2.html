@@ -1,0 +1,121 @@
+---
+title: "Even more 3DS factory tools"
+layout: release
+releaseslug: 3ds_pc_tools-r2
+date: 2026/05/04
+preview: /preview.png
+---
+   <h1>Even more 3DS factory tools</h1>
+    <p>We just got three more 3DS factory tools from Kelly, DeadlyFoez (with data recovery help from Rairii), and an anonymous uploader. See the <a href="./3ds-pc-tools">previous release</a> for more of this software.
+
+    <table class="history">
+      <tr><th class="twl">Table of contents</th></tr>
+      <tr><td class="twl">- <a href="#bs_w">System Writing Program</a></td></tr>
+      <tr><td class="twl">- <a href="#cr_wa">CR Wireless and Audio Software</a></td></tr>
+    </table>
+
+    <h2 id="bs_w">System Writing Program (BS_W)</h2>
+    <p><b>BS_W</b> is a tool to sign per-3DS files. This is a variant of <a href="3ds-pc-tools#bsl_w">BSL_W</a> from the last release, and appears functionally the same, with added <code>CheckRegion</code> and <code>CollectOptionalData</code> functions. BS_W is run just before the firmware install process (CTR EVA IMPORT). The tool starts by connecting to a 3DS on a factory server. It reads, signs and then writes the SecureInfo, LocalFriendCodeSeed, and movable.sed in NAND. It then quits and allows IMPORT to install the firmware.
+    <br><br>This version targets "JAN" consoles (n2DS XL)<br><br>
+    In order to run the software, extract the <code>BS_W</code> folder and <code>lineNumber.txt</code> to the root of the C:\ drive. <code>lineNumber.txt</code> must contain a 4 digit number in plaintext and nothing more, otherwise BS_W will fail to boot. You may need to open and close the "debug" screen (top left button) before you can control the software.
+    </p>
+    <details>
+    <summary>v2.13</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Version    : v2.13
+  Build date : 2010
+  Dumper     : DeadlyFoez (data recovery by Rairii)
+  Download   : <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/BS_W_Ver2.13.zip">BS_W_Ver2.13.zip</a></PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>Process list</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  ReadBarcode         = false
+  TCPConnectionWait   = true
+  TCPConnectionCTR    = true
+  WriteSerialNumber   = false
+  RequestData         = true
+  GetSign             = true
+  WriteSign           = true
+  ValidateSign        = true
+  CheckRegion         = true
+  CollectOptionalData = false
+  SendData            = true
+    </PRE></TD></TR></TABLE>
+    </details>
+  <div class="screenshot">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/BS_W-3ds.jpg">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/BS_W-cart.jpg">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/BS_W-setup.jpg">
+  </div>
+  <div class="screenshot">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/BS_W_2.13-main.png">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/BS_W_2.13-ver.png">
+  </div>
+
+    <h2 id="cr_wa">Wireless and Audio (CR_WA)</h2>
+    <p><b>CR_WA</b> appears to be the same as <a href="./3ds-pc-tools#fr_wa">FR_WA</a> from the previous release, but instead has the addition of the <code>Inspection_Result_CheckInspectionItems</code> and <code>Inspection_Result_RegistryInspectionItems</code> functions, and it does not check the microphone stability (<code>Inspection_Sound_CheckMicStability</code>). The program works by connecting to a factory access point, testing the connection, disconnecting, then testing the microphone.
+    <br><br>Both versions of this software target "KTR" consoles (n3DS)<br><br>
+    In order to run the software, extract the <code>CR_WA</code> folder and <code>lineNumber_CR_WA.txt</code> to the root of the C:\ drive. <code>lineNumber_CR_WA.txt</code> must contain a 4 digit number in plaintext and nothing more, otherwise CR_WA will fail to boot. You may need to open and close the "debug" screen (top left button) before you can control the software.
+    </p>
+    <details>
+    <summary>v2.13</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Version    : v1.11a
+  Build date : 2010
+  Dumper     : Kelly
+  Download   : <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/CR_WA_Ver1.11a.zip">CR_WA_Ver1.11a.zip</a></PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>v2.13</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Version    : v1.02
+  Build date : 2010
+  Dumper     : Anon
+  Download   : <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/CR_WA_Ver1.02.zip">CR_WA_Ver1.02.zip</a></PRE></TD></TR></TABLE>
+    </details>
+    <details>
+    <summary>Process list</summary>
+    <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+  Inspection_Result_ScanSerialNumber          = true
+  Inspection_Result_CheckSerialNumber         = true
+  Inspection_Result_CheckDUTConnection        = true
+  Inspection_Result_WriteSerialNumber         = true
+  Inspection_Result_WriteInspectionLogStart   = true
+  Inspection_Sound_CheckMicStability          = false
+  Inspection_Wifi24GHz_GetModuleInfo          = true
+  Inspection_Wifi24GHz_C1_Wifi24GHzConnect    = true
+  Inspection_Wifi24GHz_C1_RSSIRx              = true
+  Inspection_Wifi24GHz_C1_UDPErrorRateRx      = true
+  Inspection_Wifi24GHz_C1_RSSITx              = true
+  Inspection_Wifi24GHz_C1_UDPErrorRateTx      = true
+  Inspection_Wifi24GHz_C1_Wifi24GHzDisconnect = true
+  Inspection_Wifi24GHz_C2_Wifi24GHzConnect    = false
+  Inspection_Wifi24GHz_C2_RSSIRx              = false
+  Inspection_Wifi24GHz_C2_UDPErrorRateRx      = false
+  Inspection_Wifi24GHz_C2_RSSITx              = false
+  Inspection_Wifi24GHz_C2_UDPErrorRateTx      = false
+  Inspection_Wifi24GHz_C2_Wifi24GHzDisconnect = false
+  Inspection_Wifi24GHz_C3_Wifi24GHzConnect    = false
+  Inspection_Wifi24GHz_C3_RSSIRx              = false
+  Inspection_Wifi24GHz_C3_UDPErrorRateRx      = false
+  Inspection_Wifi24GHz_C3_RSSITx              = false
+  Inspection_Wifi24GHz_C3_UDPErrorRateTx      = false
+  Inspection_Wifi24GHz_C3_Wifi24GHzDisconnect = false
+  Inspection_Sound_CheckMicCalibration        = true
+  Inspection_RFU_RSSIRx                       = true
+  Inspection_Sound_CheckMicSensitivity        = true
+  Inspection_Sound_CheckSpeakerOut            = true
+  Inspection_Result_CheckInspectionItems      = true
+  Inspection_Result_RegistryInspectionItems   = false
+  Inspection_Result_WriteInspectionLogOKNG    = true
+    </PRE></TD></TR></TABLE>
+    </details>
+  <div class="screenshot">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/CR_WA_1.11a-main.png">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/CR_WA_1.11a-ver.png">
+  </div>
+  <div class="screenshot">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/CR_WA_1.02-main.png">
+    <img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/CR_WA_1.02-ver.png">
+  </div>

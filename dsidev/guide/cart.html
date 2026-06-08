@@ -1,0 +1,480 @@
+---
+title: DS(i) Data Recovery
+layout: release
+maxwidth: 1200px
+---
+<style>
+summary {
+  background-color: #d9d9d9;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+summary.collapse-info {
+  background-color: #ffd633;
+}
+
+details[open] summary {border-radius: 5px 5px 0 0;}
+
+details {
+  background: #999999;
+  border-radius: 5px;
+  margin: 10px;
+}
+details.collapse-info {
+  background: #ffeb99;
+}
+.collapse-infotext > p {
+  margin: 10px;
+}
+.collapse-infotext {
+    max-height: 100%;
+    overflow: hidden;
+}
+img.guide {
+  max-height: 400px;
+  max-width: 100%;
+}
+img.guide-long {
+  max-height: 800px;
+  max-width: 100%;
+}
+img.guide-wide {
+  max-height: 800px;
+  max-width: 100%;
+}
+figure {
+  background-color: #d9d9d9;
+  max-width: 400px;
+  max-height: 600px;
+  margin: 1rem;
+  height: fit-content;
+}
+figure > a > img {
+  border: 2px solid black;
+}
+figure.long {
+  max-width: 600px;
+}
+figure.tall {
+  max-width: 300px;
+}
+figure.float-left {
+  float: left;
+  margin-right: 1.5rem;
+}
+figure.float-right {
+  float: right;
+  margin-left: 1.5rem;
+}
+@media (max-width: 700px) {
+  figure.float-left,
+  figure.float-right {
+    float: none;
+    margin: 1rem auto;
+    display: block;
+  }
+}
+figcaption {
+  background-color: #d9d9d9;
+  padding: auto;
+}>
+
+.clear {
+  clear: both;
+}
+div.warning
+{
+    background-color:       #FFA;
+
+    margin:                 0.8em 3em;
+    padding:                1em;
+
+    border-width:           1px;
+    border-color:           #884;
+    border-style:           solid;
+}
+
+div.warning *
+{
+    margin:                 0em;
+}
+
+div.warning strong
+{
+    color:                  red;
+    font-weight:            bold;
+}
+</style>
+<div class="warning">
+  <p class="headding">
+    <b>NOTICE:</b> This page is still under construction. While most of the information has been published, the testing and releasing sections are still in progress. Please contact me on Discord at <code>@rvtr</code> if you need draft copies of those sections.
+  </p>
+</div>
+<h1>Data recovery for the Nintendo DS(i)</h1>
+<p>Want to back up cartridges, search for deleted prototypes, or revive old hardware? Meet your new "handbook" for everything to do with data recovery! First a word of warning: this is much more involved than a guide. I would strongly suggest <i>reading the entire document</i>, and not skipping ahead. This resource has been written so that the basic ideas are explained first, then the complex recovery processes are introduced later, building upon the previous topics. Even if you aren't making a cartridge dump, read the cartridge dump content. The tools introduced there maybe be referenced in the NAND section, for example. This is a series of lessons, not a tutorial. If you don't learn the basics, it will get confusing fast.
+<br><br>
+This resource assumes you already understand the basics of hex, and a hex editor. If not, there is a great video <a href="https://www.youtube.com/watch?v=hpk-UgFDB3Y">here</a>.
+</p>
+<hr>
+<h2>Making a cartridge dump</h2>
+<p>
+When we get a new cart, the <i>very first thing we need to do</i> is make sure it boots. If it doesn't then it could be broken, and none of the dumping info will help you. However, it can be possible to revive dead carts so look at the <b>dead and dying carts</b> section, and don't lose hope!
+<br><br>
+There are many different types of cartridges. Prototype, development, factory, demo, and retail. Most cartridges will dump properly, but there will always be a few troublesome ones we have to watch out for. Before we get to dumping, let's take a look at the known bad carts.
+</p>
+<details>
+  <summary>Problematic carts</summary>
+  <article>
+    <div class="flex-container">
+      <figure style='display: table'>
+        <a href="cart/FCS-TWL.jpg" target="_blank"><img class="guide" src='cart/FCS-TWL.jpg'></a>
+        <figcaption style='display: table-caption; caption-side: bottom;'>
+          DSi factory cart. These often require trying multiple backup tools, and they can be difficult to emulate. These are easier to spot with a PCB marking of "C08-X2"
+        </figcaption>
+      </figure>
+      <figure style='display: table'>
+        <a href="cart/FCS-NTR.jpg" target="_blank"><img class="guide" src='cart/FCS-NTR.jpg'></a>
+        <figcaption style='display: table-caption; caption-side: bottom;'>
+          DS factory cart. They can be difficult to emulate, but typically dump properly.
+        </figcaption>
+      </figure>
+      <figure style='display: table'>
+        <a href="cart/GUIDE.jpg" target="_blank"><img class="guide" src='cart/GUIDE.jpg'></a>
+        <figcaption style='display: table-caption; caption-side: bottom;'>
+          DS demo cart. These ones have a necessary NAND based save. Sometimes you're required to edit existing dump tools to back up the save.
+        </figcaption>
+      </figure>
+      <figure style='display: table'>
+        <a href="cart/TWL-DEV.jpg" target="_blank"><img class="guide" src='cart/TWL-DEV.png'></a>
+        <figcaption style='display: table-caption; caption-side: bottom;'>
+          DSi dev cart. Sometimes multiple dump tools are required, and splicing 2 or more dumps can be necessary.
+        </figcaption>
+      </figure>
+      <figure style='display: table'>
+        <a href="cart/WRFU.jpg" target="_blank"><img class="guide" src='cart/WRFU.png'></a>
+        <figcaption style='display: table-caption; caption-side: bottom;'>
+          WRFU Tester cart. Versions v0.60 and v2.01 of WRFU require GodMode9 v1.9.1 to get a proper dump.
+        </figcaption>
+      </figure>
+    </div>
+  </article>
+</details>
+<p>
+There are also some cases where there's a <a href="https://github.com/d0k3/GodMode9/pull/645" target="_blank">DSi game flashed to a DS cart</a>. This is the most challenging type of cart to dump, and it might be better to <a href="/contact.html">contact me</a> as all dump tools will likely fail.
+<br><br>
+Now that we're aware of potential issues, we can start dumping. There are multiple tools to try:
+<ol>
+  <li><a href="https://github.com/DS-Homebrew/GodMode9i" target="_blank">GodMode9i</a>: for DSi or 3DS, has the best chance of working</li>
+  <li><a href="https://github.com/d0k3/GodMode9" target="_blank">GodMode9</a>: for 3DS only, less reliable for factory carts</li>
+  <li><a href="https://cdn.randommeaninglesscharacters.com/tools/GodMode9-1_8-HardCodded_DSIDEVKEY.firm" target="_blank">GodMode9 (TWL dev keys)</a> for 3DS only, can get some troublesome DSi carts
+  <li><a href="https://randommeaninglesscharacters.com/dsidev/dsgamecardtosd.html" target="_blank">DS Game Card To SD</a>: for DSi only, sometimes (but rarely) recovers sections that GodMode9i can't.</li>
+</ol>
+For options <b>1.</b>, <b>2.,</b> and <b>3.</b>, make sure you've dumped the <code>.nds</code> (not <code>.trim.nds</code>) and <code>.txt</code>. If the <code>.nds.enc</code> and <code>.sav</code> are available, grab those as well. Saves can sometimes contain essential data for ROMs to work, and the text file has the important data like the CartID.
+<br><br>
+Once you've dumped the cartridge, it's time to verify it. This will check each section of the ROM, ensuring that all parts dumped correctly. To do this, we'll use <a href="./ds_verify.py">a script</a> made using code from <b>ntool</b>. Place your dump in the same directory as the script, and run <code>python ds_verify.py [path/to/ROM]</code>. Add <code>--dev</code> to the command if you're working with a development signed ROM, and <code>--encrypt</code> for ROMs that are decrypted. If all sections are good, you're done and the dump can be released. The proper way to do a release is all the way at the <a href="#releasing-your-data">end of this page</a>. If the dump verifies but fails to boot, see the <a href="#testing-your-rom">Testing Your ROM</a> section. If the dump is bad, you'll want to try again with a different tool.
+<br><br>
+The process should always be to dump the cart, verify it, and move onto the next dump tool if the previous ones failed. Even if a dump "looks good", it may have issues. Also, remember to verify for the correct signing type (dev, retail), otherwise we'll get a lot of false negatives. If every tool failed, see <a href="#dump-splicing">Dump splicing</a> below. If the dump verifies, but won't boot or seems to be missing necessary save data, scroll down to <a href="#nand-based-saves">NAND based saves</a>.
+</p>
+<h3 id="dump-splicing">Dump splicing</h3>
+<p>
+With a cartridge like the DSi development one, sometimes all your different dumps will fail to verify. Verify each unique dump and pay close attention to the results. If all HMACs failed, we're probably dealing with a bad cart (or nothing has been written to handle it) and there's nothing that can be done. However, if some HMACs pass, there might be a chance of recovery. Look at the two figures below:
+</p>
+<div class="flex-container">
+  <figure style='display: table'>
+    <a href="cart/VERIFY_FAIL1.png" target="_blank"><img class="guide" src='cart/VERIFY_FAIL1.png'></a>
+    <figcaption style='display: table-caption; caption-side: bottom;'>
+      Fig. 1, ARM9 fails<br>From DS Game Card to SD
+    </figcaption>
+  </figure>
+  <figure style='display: table'>
+    <a href="cart/VERIFY_FAIL2.png" target="_blank"><img class="guide" src='cart/VERIFY_FAIL2.png'></a>
+    <figcaption style='display: table-caption; caption-side: bottom;'>
+      Fig. 1.1, ARM9/7i fail<br>From GodMode9i
+    </figcaption>
+  </figure>
+</div>
+<p>
+The Figure 1 dump has a bad <code>ARM9</code> and <code>Secure area</code>, but everything else passed. Now look at Figure 1.1 which has a good <code>ARM9</code> and <code>Secure area</code>, but bad <code>ARM9/7i</code>. Between both bad dumps we have all the parts to create a good dump, so let's combine them!
+<br><br>
+First we need to figure out <i>where</i> each section is. To do this we'll look at the dump's header.
+  <figure style='display: table'  class="float-right long">
+    <a href="cart/IMHEX_ARMIOFFSETS.png" target="_blank"><img class="guide" src='cart/IMHEX_ARMIOFFSETS.png'></a>
+    <figcaption style='display: table-caption; caption-side: bottom;'>
+      Fig. 1.2, example ARM9/7i header info
+    </figcaption>
+  </figure>
+</p>
+<p>
+<div class="code-div"><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+ARM9:
+    0x020-023 : offset in ROM
+    0x02C-02F : size of section
+ARM7:
+    0x030-033 : offset in ROM
+    0x03C-03F : size of section
+ARM9i: (DSi only)
+    0x1C0-1C3 : offset in ROM
+    0x1CC-1CF : size of section
+ARM7i: (DSi only)
+    0x1D0-1D3 : offset in ROM
+    0x1DC-1DF : size of section
+</PRE></TD></TR></TABLE></div>
+For example, we'll look at the ARM9i offset in Figure 1.2. The value is <code>00 D0 04 00</code>, and it's stored as little-endian (the bytes are backwards). Flipping the bytes around gives us <code>00 04 D0 00</code>, or an ARM9i offset of <code>0x4D000</code>. Now we'll do the same for ARM9i size (<code>54 4B 00 00</code> --> <code>00 00 4B 54</code>) to get a size of <code>0x4B54</code>. With all that info ready...
+<ul>
+  <li>From the good dump, copy <code>0x4B54</code> bytes at offset <code>0x4D000</code></li>
+  <li>To the bad dump, paste + overwrite the good ARM9i into offset <code>0x4D000</code>
+</ul>
+We'll repeat this for every section until everything bad has been replaced, and until the dump entirely verifies. If the edited dump still comes out bad and you know you have every part, <a href="/contact.html">contact me</a>.
+</p>
+<h3 id="nand-based-saves">NAND based saves</h3>
+<p>
+Some carts like DS Guide have NAND based saves. Instead of the save and ROM being on two separate chips, they're both on the same chip. This can be a huge issue for us because many tools will not know how to handle NAND based saves. Saves can be required for some ROMs to function, so we need to edit the dump tools ourselves.
+<br>First dump the cartridge with GodMode9i using the "all" option, and look at the info text (example shown below). We want to make sure that the save <i>is not</i> detected, and that what gets dumped is a bad size and doesn't work. You'll have to use your judgement on that. 
+<br><br>
+From what we know, it also appears that you can determine NAND saves based on the CartID in the associated text files. If the second character of the CartID is '8', that means its using NAND save. The CardID's second character has been underlined below:
+<div class="code-div"><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+Title String : NGSERVER
+Product Code : UGDA01
+Revision     : 0
+Cart ID      : 8<u>8</u>007FEC
+Platform     : DS
+<u>Save Type    : NONE</u>
+Timestamp    : 2024-09-13 22:30:41
+GM9i Version : v3.5.4
+</PRE></TD></TR></TABLE></div>
+Now that you know the save is improperly detected, go into the dump options again and <i>only</i> dump the save. After dumping only the save you will have the correct size and everything should work. Finally, let's help out other people by adding your cartridge to GodMode9i's <a href="https://github.com/DS-Homebrew/GodMode9i/blob/f3160a7da1067da4bd081d72c912be695bba371a/arm9/source/dumpOperations.cpp#L291" target="_blank">source code</a> (don't worry, this is easy!). See the <code>cardNandGetSaveSize()</code> function? Just stick your cart in there! The last entry is the DS Guide as an example. Following the same format as the other entries, add the first three bytes of the TitleID in reverse order. Example: <code>TID = "UGDA" --> 0x<u>554744</u>41 --> 0x00<u>444755</u></code>
+<div class="code-div"><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+u32 cardNandGetSaveSize(void) {
+  switch(*(u32*)ndsCardHeader.gameCode & 0x00FFFFFF) {
+    case 0x00425855: // 'UXB'
+      return 8 << 20; // 8MByte - Jam with the Band
+    case 0x00524F55: // 'UOR'
+      return 16 << 20; // 16MByte - WarioWare D.I.Y.
+    case 0x004B5355: // 'USK'
+      return 64 << 20; // 64MByte - Face Training
+    case 0x00444755: // 'UGD'
+      return 128 << 20; // 128MByte - DS Guide
+  }
+
+  return 0;
+}
+</PRE></TD></TR></TABLE></div>
+</p>
+<h3>ntrboot carts</h3>
+<p>
+"ntrboot" is a special program that works as a recovery mode for DSis and 3DSes. The ROMs cannot be loaded normally (they don't even show up on the home menu), and are instead booted with a special button combination when the console is turned on. While no carts with ntrboot have been found yet, they did exist in the factory for setup and recovery. If your cartridge appears blank, you should always try looking ntrboot. The dump process will be the same as other carts, but we'll instead use a <a href="https://github.com/Wack0/GodMode9-ntrboot-dumper" target="_blank">special fork of gm9</a> to do the dumping.
+<br><br>
+If you did get a dump, or suspect that you have an ntrboot cartridge, please contact "Rairii" on the <a href="https://wiki.raregamingdump.ca/" target="_blank">Rare Gaming Dump</a> discord/matrix server. We need a copy to verify the dump process.
+</p>
+<!--<hr>
+<h2>Dead and dying carts</h2>
+<p>
+TODO
+</p>-->
+<hr>
+<h2>DSi NANDs</h2>
+<p>
+In order to look for data on the DSi, we need to make a system backup (NAND backup). NAND is where everything is stored, from firmware to games to photos. To make a backup, follow the <a href="https://dsi.cfw.guide/get-started.html" target="_blank">DSi CFW guide</a>, but <b>only to the point when the NAND backup has been made</b>. You can also directly use <a href="https://wiki.ds-homebrew.com/ds-index/ntrboot" target="_blank">ntrboot</a> with <a href="https://github.com/DS-Homebrew/SafeNANDManager" target="_blank">SafeNANDManager</a>, if you have a compatible flashcart.
+<br><br>
+After you make the dump, you should have a folder on your SD card named something like <code>DT304D031319F8383C</code> (the value after "DT" will be different for your console). Inside the folder will be <code>nand.bin</code>. This is your NAND backup. Now, mount the NAND backup in <a href="https://github.com/ihaveamac/ninfs" target="_blank">ninfs</a>. You should see a <code>twl_main.img</code> output by <b>ninfs</b>. This is the main data partition where programs are stored. We'll be working almost exclusively with this file.
+</p>
+<h3>Backing up installed programs</h3>
+<p>
+Recovering undeleted apps is a pretty easy thing to do. Simply mount <code>twl_main.img</code> in a tool like <a href="https://www.osforensics.com/tools/mount-disk-images.html" target="_blank">OSFMount</a> for Windows, natively within macOS, or <a href="https://en.wikipedia.org/wiki/GNOME_Disks" target="">GNOME Disks</a> on linux. Once you're in, copy the <code>nand:/title/</code> folder, and you're done. You can skip all the way down to the section labelled <a href="#testing-your-rom">Testing Your ROM</a>.
+</p>
+<h3>Recovering deleted apps</h3>
+<p>
+Before we get into the "real" data recovery, it's important to understand how file deletion works. When you write a file, the filesystem will create a bunch of pointers. These pointers tell us information about the file and where it is on the NAND. If I were to delete the file, the pointers would get removed, but the actual data of the file would remain. Most times it's possible to fully restore files. However, if I were to write new files to NAND, the deleted data is unprotected and could easily get overwritten by new data.
+<br><br>
+When recovering data, it's very important not to touch anything. Do not install new programs. Do not region change. Do not run factory tools. <u>Anything could destroy your deleted data forever!</u>
+</p>
+<p>
+So, how do we find deleted apps? Simple! Every single piece of software has a header. Like you saw with cartridge dumping, headers tell us all sorts of information about the app. While some of this data will change (sizes, offsets, names), there are always some bytes that never change. For our purposes we will be looking at the ASCII value of <code>WfA</code> (hex <code>0x576641</code>) as shown in figure 3. Start by seaching for <code>WfA</code> in <code>twl_main.img</code> of your decrypted NAND dump.
+<div class="flex-container">
+  <figure style='display: table' class="long">
+    <a href="cart/IMHEX_WFA.png" target="_blank"><img class="guide" src='cart/IMHEX_WFA.png'></a>
+    <figcaption style='display: table-caption; caption-side: bottom;'>
+      Fig. 3, example DSi ROM header
+    </figcaption>
+  </figure>
+</div>
+Once you find a match for <code>WfA</code>, look at the surrounding bytes. <code>WfA</code> is always <code>0x60</code> bytes after the start of the header, so let's confirm that we've found the correct data.
+<ul>
+  <li>The header should start with <code>0x0C</code> ASCII bytes (or zerobytes) making up the app's short title. In figure 3 this is <code>KART</code></li>
+  <li>After the short title, look for the Title ID. The TID is <code>0x04</code> ASCII bytes. In figure 3 this is <code>NTRJ</code></li>
+  <li>Finally confirm the publisher code. This is <code>0x02</code> ASCII bytes. In figure 3 this is <code>01</code></li>
+</ul>
+If your possible header looks like figure 3 and matches the short checklist, it's a header. Now it's time to extract the software. If you are working with a TWL ROM (DSiWare) take a look at <code>0x210-0x214</code> in the header. If it's an NTR ROM (child, see below), then look at <code>0x80-84</code>. The value for your ROM type is the total ROM size, written in little-endian. Like last time we'll flip the bytes around (in figure 3 this is <code>0x00CE0400</code> --> <code>0x0004CE00</code>). From the start of the header we will select the number of bytes specified in the total ROM size. Save the bytes as a new file and you're done! If all goes well your app should boot.
+</p>
+<details class="collapse-info">
+  <summary class="collapse-info">&#9432; Tip: Beware of The Childs!</summary>
+  <article>
+    <div class="collapse-infotext">
+      <figure style='display: table' class="long float-right">
+        <a href="cart/WHAT_IS_A_CHILD.png" target="_blank"><img class="guide-long" src='cart/WHAT_IS_A_CHILD.png'></a>
+        <figcaption style='display: table-caption; caption-side: bottom;'>
+          Fig. 3.8, binary visualizer showing data extraction by zerofilling
+        </figcaption>
+      </figure>
+      <p>
+      Watch out when searching for headers! Most headers you will find are for full apps, but some are "download play childs". These are embedded apps used in multiplayer. For example, Mario Kart DS allows players to send a shortened copy of the game to another person who does not own the Mario Kart DS cartridge. Sometimes the childs may embedded in recoverable apps in NAND, and other times are instead just leftovers from someone playing multiplayer games. Childs are often untestable and unbootable on their own, so only recover them if you believe that they are a part of a larger application.
+      <br><br>
+      You can identify a child by the header. Take a look at Figure 3.8. Do you see the extra header region shown in red? This only appears on DSi ROMs and DSiWare (TWL applications). If you <i>do not</i> see the extra header region, this is a normal DS (NTR) program and must be a child.
+      </p>
+    </div>
+    <div class="clear"></div>
+  </article>
+</details>
+<h4>Fragmentation: Detecting Patterns</h4>
+<p>
+Now we know the basics of data recovery... but it's not always so easy as it seems. When files are created, they may not be continuous, and so you can't simply copy them out like before. A new file might start writing in NAND's free space, but before it finishes it will hit an existing file (often times system files on the DSi). What happens? The new file "jumps" over the old data, and continues right after. That is called fragmentation. Fragging may occur many times in a single file, and it's our job to find every piece and stick them back together.
+<div class="flex-container">
+  <figure style='display: table' class="long">
+    <a href="cart/FRAGMENTATION.png" target="_blank"><img class="guide-long" src='cart/FRAGMENTATION.png'></a>
+    <figcaption style='display: table-caption; caption-side: bottom;'>
+      Fig. 3.2, the concept of fragmented files
+    </figcaption>
+  </figure>
+</div>
+Finding each part of a fragmented file is largely looking for patterns. Every file will have very recognizable data types. There might be long sections of random data, then repeating headers, then some text, etc. We can pay attention to what the patterns are, and if there's an abrupt change then it may mean we've hit a fragment, or we're on a new region of the file.
+<br><br>
+Let's look at Figure 3.3 for an example. Notice how the data is completely random up until <code>0xC14000</code>. Afterwards, there's a repeating pattern of 4 ASCII bytes, 4 zerobytes, and 20 bytes of randomness. Since the change in datatypes is so different, it would be a good idea to mark data after <code>0xC14000</code> as a fragment. To be extra sure, let's compare the "bad" data after <code>0xC14000</code> to undeleted files in NAND. In this specific case the data comes from the installed "DS Cart Whitelist". If we take the whitelist and compare it to the file we want to recover, we can find all the data belonging to the whitelist and remove it. Everything that remains should be the data we want. I'll talk about this more later.
+</p>
+  <figure style='display: table' class="float-left">
+    <a href="cart/IMHEX_FRAGHASH.png" target="_blank"><img class="guide-long" src='cart/IMHEX_FRAGHASH.png'></a>
+    <figcaption style='display: table-caption; caption-side: bottom;'>
+      Fig. 3.3, clear pattern difference showing a frag
+    </figcaption>
+  </figure>
+<!--   <figure style='display: table'>
+    <a href="cart/IMHEX_FRAGDIFF.png" target="_blank"><img class="guide-wide" src='cart/IMHEX_FRAGDIFF.png'></a>
+    <figcaption style='display: table-caption; caption-side: bottom;'>
+      Fig. 7, comparing the fragment to the source file
+    </figcaption>
+  </figure> -->
+<p>
+Searching for patterns in letters and numbers can be a bit challenging, so sometimes it's good to use a "binary visualizer". This allows us to see the file as colors. For ease of access we'll try the web visualizer called <a href="https://binvis.io/" target="_blank">binvis</a>. There are multiple different ways to visualize data (click the paintbrush icon):
+<ul>
+  <li><b>Byteclass</b>: bytes are colored based on their type. Low, high, ASCII, 0x00, and 0xFF bytes will each get their own color (no gradient used). This is the best for finding padding and text.</li>
+  <li><b>Magnitude</b>: bytes are colored in a gradient based on the value. Higher bytes will be light blue, and low bytes will be colored black.</li>
+  <li><b>Entropy</b>: bytes are colored based on how much bytes vary (their randomness). If there are many different values and patterns, the file is high entropy, and it will be bright magenta. If few unique values are used and there are patterns, the file is low entropy, and will be darker.</li>
+  <li><b>Detail</b>: each value is assigned as different of a color as possible, making it easy to spot individual values.</li>
+</ul>
+</p>
+<div class="clear"></div>
+  <figure style='display: table' class="float-right">
+    <a href="cart/BINVIS_FRAGHASH.png" target="_blank"><img class="guide-wide" src='cart/BINVIS_FRAGHASH.png'></a>
+    <figcaption style='display: table-caption; caption-side: bottom;'>
+      Fig. 3.4, the whitelist frag shown as entropy
+    </figcaption>
+  </figure>
+<p>
+Viewing file entropy is one of the best tools we have available because patterns stand out. Looking at Figure 3.4 you can see an entropy view of the whitelist fragmentation. The file we were trying to recover had a lot of randomness, as you can see by the bright magenta. Now look at the highlighted region. Notice how it is much darker, and it stands out in the randomness? Just based on the color, you can tell this is the whitelist data which does not belong.
+<br><br>
+There are of course a few things you need to keep in mind. Manual searches and binary visualizers find most of the fragments, but it's easy to get confused by what is a different file, and what is a new section of the current file. Figure 3.4 has many more different patterns visible. It's up to us to make the final call and use our best judgement on what "feels right" to include or remove. Thankfully there are some rules to help narrow down data:
+<ul>
+  <li>Files and fragments appear to always start on an address ending in <code>0x200</code>. So this could be <code>0x19A5<u>200</u></code>, <code>0x2D99<u>200</u></code>, <code>0x699<u>200</u></code>, etc.</li>
+  <li>The NAND is separated into sectors with a size of <code>0x200</code>. You can think of these as little evenly placed slots the data fits into. A file or fragment can only take up space equaling to a multiple of <code>0x200</code>, can never start partway through a sector, and no two files will ever share the same sector.</li>
+</ul>
+</p>
+
+<h4>System Files</h4>
+<p>Before we do fragmentation recovery on any device, we need to get familiar with system files. These will most often be what causes a fragment, so recognizing system files will help remove the bad data from the recovered file.
+<ul>
+  <li><b>Save files (Fig. 3.5)</b>: these always come in the form of FAT12 partitions. They will have a recognizable ASCII string of <code>xV4</code>.</li>
+  <li><b>Certificates (Fig. 3.6)</b>: each one will always be <code>0x300</code> bytes, and they're often strung together multiple at a time. They can be identified by ACSII <code>Root-CA0000000x</code></li>
+  <li><b>TMDs (Fig. 3.7)</b>: these are <code>0x208</code> bytes. They can be identified by ACSII <code>Root-CA0000000x-xx0000000x</code>. The structure looks similar to certificates but with the added identifier connected by a dash.</li>
+</ul>
+There are many types of system files, but the ones below are the most common. Being aware of even just a couple formats will make the recovery process much faster. You might want to look at the <code>nand:/sys/</code> and <code>nand:/sharedX/</code> in your dumps for more examples.
+</p>
+<div class="flex-container">
+  <figure style='display: table'>
+    <a href="cart/IMHEX_FRAGSAVE.png" target="_blank"><img class="guide-long" src='cart/IMHEX_FRAGSAVE.png'></a>
+    <figcaption style='display: table-caption; caption-side: bottom;'>
+      Fig. 3.5, frag caused by a save file
+    </figcaption>
+  </figure>
+  <figure style='display: table'>
+    <a href="cart/IMHEX_FRAGCERT.png" target="_blank"><img class="guide-long" src='cart/IMHEX_FRAGCERT.png'></a>
+    <figcaption style='display: table-caption; caption-side: bottom;'>
+      Fig. 3.6, frag caused by a certificate
+    </figcaption>
+  </figure>
+  <figure style='display: table'>
+    <a href="cart/IMHEX_FRAGTMD.png" target="_blank"><img class="guide-long" src='cart/IMHEX_FRAGTMD.png'></a>
+    <figcaption style='display: table-caption; caption-side: bottom;'>
+      Fig. 3.7, frag caused by the title metadata (TMD)
+    </figcaption>
+  </figure>
+</div>
+<h4>Deleting what you know</h4>
+<p>When recovering a file with many fragments, it's going to be hard to find every part. Instead of searching and guessing, try to delete what you know. Is your file fragmented by an installed app? Identify that app. Once you know what it is, delete any trace of it by filling its contents with zerobytes. Now do the same with the next interrupting file. By zerofilling unrelated data repeatedly, you carve out all the space <i>around</i> your file, and eventually you will reach a point where the only data left is pieces of your file (or parts of other deleted files). Figure 3.9 shows the results of zerofilling in binvis, where the colored data is the leftover fragments.
+</p>
+<details class="collapse-info">
+  <summary class="collapse-info">&#9432; Tip: Trouble determining if a fragment belongs?</summary>
+  <article>
+    <div class="collapse-infotext">
+      <figure style='display: table;' class="long float-right">
+        <a href="cart/SEEING_FRAGS.png" target="_blank"><img class="guide-long" src='cart/SEEING_FRAGS.png'></a>
+        <figcaption style='display: table-caption; caption-side: bottom;'>
+          Fig. 3.8, binary visualizer showing data extraction by zerofilling
+        </figcaption>
+      </figure>
+      <p>
+      Typically the content of a ROM will follow a common pattern. You'll have contents like the program code (medium entropy), assets (high if compressed, low if not), and text (very low). All of these will be confined to specific regions, and similar data types will be near each other. If you try to look into what the bytes are, you should be able to pick apart each region.
+      <br><br>
+      Whenever you find data that doesn't match its surroundings, like in Figure 3.8, it's usually a sign of bad data. There are of course exceptions, but most times you want to look for what stands out, and delete it.
+      <br>
+      </p>
+    </div>
+    <div class="clear"></div>
+  </article>
+</details>
+<p>
+Deleting can also extend to some negative decryption. When the NAND is initially set up, it is filled entirely with dummy zerobytes. This seems fine, but the partition (and the zerobytes) are technically "encrypted". That means that those zerobytes, despite not being any meaningful data, will still be decrypted when the partition is read by tools like <b>ninfs</b>. Decrypting zerobytes essentially encrypts them, turning them into high entropy, or <b>random</b> data. We can see this in action in Figure 3.10. It's important to compare the decrypted partition to its location in the raw NAND, clearing out this garbage data.
+</p>
+<div class="flex-container">
+  <figure style='display: table'>
+    <a href="cart/IMHEX_ISOLATED.png" target="_blank"><img class="guide" src='cart/IMHEX_ISOLATED.png'></a>
+    <figcaption style='display: table-caption; caption-side: bottom;'>
+      Fig. 3.9, binary visualizer showing data extraction by zerofilling
+    </figcaption>
+  </figure>
+  <figure style='display: table'>
+    <a href="cart/DECRYPTING_DECRYPTED.png" target="_blank"><img class="guide" src='cart/DECRYPTING_DECRYPTED.png'></a>
+    <figcaption style='display: table-caption; caption-side: bottom;'>
+      Fig. 3.10, left is a raw NAND dump, and right is a decrypted NAND dump
+    </figcaption>
+  </figure>
+</div>
+<h4>Putting fragmentation into practice</h4>
+<p>
+Now that you've figured out how to locate fragments, collect every single one you can find. After collecting enough fragments, we can start to re-assemble the original file. With linear fragmentation (what you'll usually see), pick every fragment you have identified by the order they appear in. Combine each of these fragments into a single file. This will be your work ROM.
+<br><br>
+As you continue adding to your work ROM, run the <a href="./ds_verify.py" target="_blank">verification script</a>. For a refresher, you run the script as <code>python ds_verify.py [path/to/ROM]</code>, with the added <code>--dev</code> option for development/prototype ROMs. First start with the header, then look at each region of the ROM as they appear. By going one by one, you can find mistakes before you put too much time into the recovery. For example,if  the ARM9i section is bad, you can look at the offsets where ARM9i is in NAND. There would likely be a fragment of another file in the ARM9i. Now you only need to review that single section. If you had built the entire ROM and then verified, you'd have multiple bad sections and it would be harder to know where to start.
+</p>
+<hr>
+<h3 id="testing-your-rom">Testing Your ROM</h3>
+<p>
+With:
+- melonDS full BIOS boot (runs many things)
+- no$gba good if melonDS fails
+
+How:
+- Autoboot first
+- Then unlaunch --> ROM (as cart, or booted from SD)
+- The Unlaunch --> Launcher --> ROM
+
+</p>
+<hr>
+<h3 id="releasing-your-data">Releasing Data</h3>
+<p>
+This is going to be a very subjective section. Everyone has their own preferences on how to release things, and there's no perfect way. With that being said, there are a few common rules you should follow.
+<ul>
+  <li>Always declare if software was recovered. Knowing that</li>
+  <li></li>
+  <li>Send your dumps to no-into. T87KIULHJMY57U8IJUL</li>
+</ul>
+</p>

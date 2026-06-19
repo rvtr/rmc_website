@@ -2,6 +2,7 @@
 title: DS(i) Data Recovery
 layout: release
 maxwidth: 1200px
+guideslug: dumping_guide
 ---
 <style>
 summary {
@@ -129,31 +130,31 @@ There are many different types of cartridges. Prototype, development, factory, d
   <article>
     <div class="flex-container">
       <figure style='display: table'>
-        <a href="cart/FCS-TWL.jpg" target="_blank"><img class="guide" src='cart/FCS-TWL.jpg'></a>
+        <a href="{{ site.guidedir }}{{ page.guideslug }}/FCS-TWL.jpg" target="_blank"><img class="guide" src='{{ site.guidedir }}{{ page.guideslug }}/FCS-TWL.jpg'></a>
         <figcaption style='display: table-caption; caption-side: bottom;'>
           DSi factory cart. These often require trying multiple backup tools, and they can be difficult to emulate. These are easier to spot with a PCB marking of "C08-X2"
         </figcaption>
       </figure>
       <figure style='display: table'>
-        <a href="cart/FCS-NTR.jpg" target="_blank"><img class="guide" src='cart/FCS-NTR.jpg'></a>
+        <a href="{{ site.guidedir }}{{ page.guideslug }}/FCS-NTR.jpg" target="_blank"><img class="guide" src='{{ site.guidedir }}{{ page.guideslug }}/FCS-NTR.jpg'></a>
         <figcaption style='display: table-caption; caption-side: bottom;'>
           DS factory cart. They can be difficult to emulate, but typically dump properly.
         </figcaption>
       </figure>
       <figure style='display: table'>
-        <a href="cart/GUIDE.jpg" target="_blank"><img class="guide" src='cart/GUIDE.jpg'></a>
+        <a href="{{ site.guidedir }}{{ page.guideslug }}/GUIDE.jpg" target="_blank"><img class="guide" src='{{ site.guidedir }}{{ page.guideslug }}/GUIDE.jpg'></a>
         <figcaption style='display: table-caption; caption-side: bottom;'>
           DS demo cart. These ones have a necessary NAND based save. Sometimes you're required to edit existing dump tools to back up the save.
         </figcaption>
       </figure>
       <figure style='display: table'>
-        <a href="cart/TWL-DEV.jpg" target="_blank"><img class="guide" src='cart/TWL-DEV.png'></a>
+        <a href="{{ site.guidedir }}{{ page.guideslug }}/TWL-DEV.jpg" target="_blank"><img class="guide" src='{{ site.guidedir }}{{ page.guideslug }}/TWL-DEV.png'></a>
         <figcaption style='display: table-caption; caption-side: bottom;'>
           DSi dev cart. Sometimes multiple dump tools are required, and splicing 2 or more dumps can be necessary.
         </figcaption>
       </figure>
       <figure style='display: table'>
-        <a href="cart/WRFU.jpg" target="_blank"><img class="guide" src='cart/WRFU.png'></a>
+        <a href="{{ site.guidedir }}{{ page.guideslug }}/WRFU.jpg" target="_blank"><img class="guide" src='{{ site.guidedir }}{{ page.guideslug }}/WRFU.png'></a>
         <figcaption style='display: table-caption; caption-side: bottom;'>
           WRFU Tester cart. Versions v0.60 and v2.01 of WRFU require GodMode9 v1.9.1 to get a proper dump.
         </figcaption>
@@ -183,13 +184,13 @@ With a cartridge like the DSi development one, sometimes all your different dump
 </p>
 <div class="flex-container">
   <figure style='display: table'>
-    <a href="cart/VERIFY_FAIL1.png" target="_blank"><img class="guide" src='cart/VERIFY_FAIL1.png'></a>
+    <a href="{{ site.guidedir }}{{ page.guideslug }}/VERIFY_FAIL1.png" target="_blank"><img class="guide" src='{{ site.guidedir }}{{ page.guideslug }}/VERIFY_FAIL1.png'></a>
     <figcaption style='display: table-caption; caption-side: bottom;'>
       Fig. 1, ARM9 fails<br>From DS Game Card to SD
     </figcaption>
   </figure>
   <figure style='display: table'>
-    <a href="cart/VERIFY_FAIL2.png" target="_blank"><img class="guide" src='cart/VERIFY_FAIL2.png'></a>
+    <a href="{{ site.guidedir }}{{ page.guideslug }}/VERIFY_FAIL2.png" target="_blank"><img class="guide" src='{{ site.guidedir }}{{ page.guideslug }}/VERIFY_FAIL2.png'></a>
     <figcaption style='display: table-caption; caption-side: bottom;'>
       Fig. 1.1, ARM9/7i fail<br>From GodMode9i
     </figcaption>
@@ -200,7 +201,7 @@ The Figure 1 dump has a bad <code>ARM9</code> and <code>Secure area</code>, but 
 <br><br>
 First we need to figure out <i>where</i> each section is. To do this we'll look at the dump's header.
   <figure style='display: table'  class="float-right long">
-    <a href="cart/IMHEX_ARMIOFFSETS.png" target="_blank"><img class="guide" src='cart/IMHEX_ARMIOFFSETS.png'></a>
+    <a href="{{ site.guidedir }}{{ page.guideslug }}/IMHEX_ARMIOFFSETS.png" target="_blank"><img class="guide" src='{{ site.guidedir }}{{ page.guideslug }}/IMHEX_ARMIOFFSETS.png'></a>
     <figcaption style='display: table-caption; caption-side: bottom;'>
       Fig. 1.2, example ARM9/7i header info
     </figcaption>
@@ -294,7 +295,7 @@ When recovering data, it's very important not to touch anything. Do not install 
 So, how do we find deleted apps? Simple! Every single piece of software has a header. Like you saw with cartridge dumping, headers tell us all sorts of information about the app. While some of this data will change (sizes, offsets, names), there are always some bytes that never change. For our purposes we will be looking at the ASCII value of <code>WfA</code> (hex <code>0x576641</code>) as shown in figure 3. Start by seaching for <code>WfA</code> in <code>twl_main.img</code> of your decrypted NAND dump.
 <div class="flex-container">
   <figure style='display: table' class="long">
-    <a href="cart/IMHEX_WFA.png" target="_blank"><img class="guide" src='cart/IMHEX_WFA.png'></a>
+    <a href="{{ site.guidedir }}{{ page.guideslug }}/IMHEX_WFA.png" target="_blank"><img class="guide" src='{{ site.guidedir }}{{ page.guideslug }}/IMHEX_WFA.png'></a>
     <figcaption style='display: table-caption; caption-side: bottom;'>
       Fig. 3, example DSi ROM header
     </figcaption>
@@ -313,7 +314,7 @@ If your possible header looks like figure 3 and matches the short checklist, it'
   <article>
     <div class="collapse-infotext">
       <figure style='display: table' class="long float-right">
-        <a href="cart/WHAT_IS_A_CHILD.png" target="_blank"><img class="guide-long" src='cart/WHAT_IS_A_CHILD.png'></a>
+        <a href="{{ site.guidedir }}{{ page.guideslug }}/WHAT_IS_A_CHILD.png" target="_blank"><img class="guide-long" src='{{ site.guidedir }}{{ page.guideslug }}/WHAT_IS_A_CHILD.png'></a>
         <figcaption style='display: table-caption; caption-side: bottom;'>
           Fig. 3.8, binary visualizer showing data extraction by zerofilling
         </figcaption>
@@ -332,7 +333,7 @@ If your possible header looks like figure 3 and matches the short checklist, it'
 Now we know the basics of data recovery... but it's not always so easy as it seems. When files are created, they may not be continuous, and so you can't simply copy them out like before. A new file might start writing in NAND's free space, but before it finishes it will hit an existing file (often times system files on the DSi). What happens? The new file "jumps" over the old data, and continues right after. That is called fragmentation. Fragging may occur many times in a single file, and it's our job to find every piece and stick them back together.
 <div class="flex-container">
   <figure style='display: table' class="long">
-    <a href="cart/FRAGMENTATION.png" target="_blank"><img class="guide-long" src='cart/FRAGMENTATION.png'></a>
+    <a href="{{ site.guidedir }}{{ page.guideslug }}/FRAGMENTATION.png" target="_blank"><img class="guide-long" src='{{ site.guidedir }}{{ page.guideslug }}/FRAGMENTATION.png'></a>
     <figcaption style='display: table-caption; caption-side: bottom;'>
       Fig. 3.2, the concept of fragmented files
     </figcaption>
@@ -343,13 +344,13 @@ Finding each part of a fragmented file is largely looking for patterns. Every fi
 Let's look at Figure 3.3 for an example. Notice how the data is completely random up until <code>0xC14000</code>. Afterwards, there's a repeating pattern of 4 ASCII bytes, 4 zerobytes, and 20 bytes of randomness. Since the change in datatypes is so different, it would be a good idea to mark data after <code>0xC14000</code> as a fragment. To be extra sure, let's compare the "bad" data after <code>0xC14000</code> to undeleted files in NAND. In this specific case the data comes from the installed "DS Cart Whitelist". If we take the whitelist and compare it to the file we want to recover, we can find all the data belonging to the whitelist and remove it. Everything that remains should be the data we want. I'll talk about this more later.
 </p>
   <figure style='display: table' class="float-left">
-    <a href="cart/IMHEX_FRAGHASH.png" target="_blank"><img class="guide-long" src='cart/IMHEX_FRAGHASH.png'></a>
+    <a href="{{ site.guidedir }}{{ page.guideslug }}/IMHEX_FRAGHASH.png" target="_blank"><img class="guide-long" src='{{ site.guidedir }}{{ page.guideslug }}/IMHEX_FRAGHASH.png'></a>
     <figcaption style='display: table-caption; caption-side: bottom;'>
       Fig. 3.3, clear pattern difference showing a frag
     </figcaption>
   </figure>
 <!--   <figure style='display: table'>
-    <a href="cart/IMHEX_FRAGDIFF.png" target="_blank"><img class="guide-wide" src='cart/IMHEX_FRAGDIFF.png'></a>
+    <a href="{{ site.guidedir }}{{ page.guideslug }}/IMHEX_FRAGDIFF.png" target="_blank"><img class="guide-wide" src='{{ site.guidedir }}{{ page.guideslug }}/IMHEX_FRAGDIFF.png'></a>
     <figcaption style='display: table-caption; caption-side: bottom;'>
       Fig. 7, comparing the fragment to the source file
     </figcaption>
@@ -365,7 +366,7 @@ Searching for patterns in letters and numbers can be a bit challenging, so somet
 </p>
 <div class="clear"></div>
   <figure style='display: table' class="float-right">
-    <a href="cart/BINVIS_FRAGHASH.png" target="_blank"><img class="guide-wide" src='cart/BINVIS_FRAGHASH.png'></a>
+    <a href="{{ site.guidedir }}{{ page.guideslug }}/BINVIS_FRAGHASH.png" target="_blank"><img class="guide-wide" src='{{ site.guidedir }}{{ page.guideslug }}/BINVIS_FRAGHASH.png'></a>
     <figcaption style='display: table-caption; caption-side: bottom;'>
       Fig. 3.4, the whitelist frag shown as entropy
     </figcaption>
@@ -391,19 +392,19 @@ There are many types of system files, but the ones below are the most common. Be
 </p>
 <div class="flex-container">
   <figure style='display: table'>
-    <a href="cart/IMHEX_FRAGSAVE.png" target="_blank"><img class="guide-long" src='cart/IMHEX_FRAGSAVE.png'></a>
+    <a href="{{ site.guidedir }}{{ page.guideslug }}/IMHEX_FRAGSAVE.png" target="_blank"><img class="guide-long" src='{{ site.guidedir }}{{ page.guideslug }}/IMHEX_FRAGSAVE.png'></a>
     <figcaption style='display: table-caption; caption-side: bottom;'>
       Fig. 3.5, frag caused by a save file
     </figcaption>
   </figure>
   <figure style='display: table'>
-    <a href="cart/IMHEX_FRAGCERT.png" target="_blank"><img class="guide-long" src='cart/IMHEX_FRAGCERT.png'></a>
+    <a href="{{ site.guidedir }}{{ page.guideslug }}/IMHEX_FRAGCERT.png" target="_blank"><img class="guide-long" src='{{ site.guidedir }}{{ page.guideslug }}/IMHEX_FRAGCERT.png'></a>
     <figcaption style='display: table-caption; caption-side: bottom;'>
       Fig. 3.6, frag caused by a certificate
     </figcaption>
   </figure>
   <figure style='display: table'>
-    <a href="cart/IMHEX_FRAGTMD.png" target="_blank"><img class="guide-long" src='cart/IMHEX_FRAGTMD.png'></a>
+    <a href="{{ site.guidedir }}{{ page.guideslug }}/IMHEX_FRAGTMD.png" target="_blank"><img class="guide-long" src='{{ site.guidedir }}{{ page.guideslug }}/IMHEX_FRAGTMD.png'></a>
     <figcaption style='display: table-caption; caption-side: bottom;'>
       Fig. 3.7, frag caused by the title metadata (TMD)
     </figcaption>
@@ -417,7 +418,7 @@ There are many types of system files, but the ones below are the most common. Be
   <article>
     <div class="collapse-infotext">
       <figure style='display: table;' class="long float-right">
-        <a href="cart/SEEING_FRAGS.png" target="_blank"><img class="guide-long" src='cart/SEEING_FRAGS.png'></a>
+        <a href="{{ site.guidedir }}{{ page.guideslug }}/SEEING_FRAGS.png" target="_blank"><img class="guide-long" src='{{ site.guidedir }}{{ page.guideslug }}/SEEING_FRAGS.png'></a>
         <figcaption style='display: table-caption; caption-side: bottom;'>
           Fig. 3.8, binary visualizer showing data extraction by zerofilling
         </figcaption>
@@ -437,13 +438,13 @@ Deleting can also extend to some negative decryption. When the NAND is initially
 </p>
 <div class="flex-container">
   <figure style='display: table'>
-    <a href="cart/IMHEX_ISOLATED.png" target="_blank"><img class="guide" src='cart/IMHEX_ISOLATED.png'></a>
+    <a href="{{ site.guidedir }}{{ page.guideslug }}/IMHEX_ISOLATED.png" target="_blank"><img class="guide" src='{{ site.guidedir }}{{ page.guideslug }}/IMHEX_ISOLATED.png'></a>
     <figcaption style='display: table-caption; caption-side: bottom;'>
       Fig. 3.9, binary visualizer showing data extraction by zerofilling
     </figcaption>
   </figure>
   <figure style='display: table'>
-    <a href="cart/DECRYPTING_DECRYPTED.png" target="_blank"><img class="guide" src='cart/DECRYPTING_DECRYPTED.png'></a>
+    <a href="{{ site.guidedir }}{{ page.guideslug }}/DECRYPTING_DECRYPTED.png" target="_blank"><img class="guide" src='{{ site.guidedir }}{{ page.guideslug }}/DECRYPTING_DECRYPTED.png'></a>
     <figcaption style='display: table-caption; caption-side: bottom;'>
       Fig. 3.10, left is a raw NAND dump, and right is a decrypted NAND dump
     </figcaption>
@@ -458,16 +459,47 @@ As you continue adding to your work ROM, run the <a href="./ds_verify.py" target
 <hr>
 <h3 id="testing-your-rom">Testing Your ROM</h3>
 <p>
-With:
-- melonDS full BIOS boot (runs many things)
-- no$gba good if melonDS fails
-
-How:
-- Autoboot first
-- Then unlaunch --> ROM (as cart, or booted from SD)
-- The Unlaunch --> Launcher --> ROM
-
+Testing ROMs is a very unreliable process, especially with prototypes and development apps. Each program will have very specific requirements in order to boot. We won't know what those requirements are, so we need to learn and attempt all methods of testing. 
+<h4>melonDS</h4>
+First, let's set up a testing environment with the <a href="https://melonds.kuribo64.net/" target="_blank">melonDS</a> emulator. I won't explain how to set up the emulator (this is easy enough to figure out yourself), but I will give you the best files. The most reliable results come from using the full BIOS, which I have prepared <a href="{{ site.guidedir }}{{ page.guideslug }}/BIOS.zip" target="_blank">here</a>. Only the full BIOS will support DSi NANDs with prototype bootloaders, and some prototype games. <b>Any other BIOS you download online will not work.</b> In order to actually make use of the full BIOS, the "Full BIOS boot" option must be enabled.
+<br><br>
+For NANDs, I suggest using my <a href="https://makenand.randommeaninglesscharacters.com/" target="_blank">NAND generator</a>. This will create a clean NAND from scratch, eliminating any issues that might come from a used console. Both retail and development NANDs can be created this way. You can obtain the IDs and HWInfos needed for the generator <a href="https://nands.randommeaninglesscharacters.com/" target="_blank">here</a>. However, keep in mind that these NANDs are not legitimate, and come with unlaunch pre-installed.
+<br><br>
+Once melonDS has been set up, try your dumped/recovered program with each of these boot methods:
+<ul>
+  <li>Attach the ROM as a cartridge, then autoboot it</li>
+  <li>Attach the ROM as a cartridge, load the home menu from unlaunch, then boot the cartridge</li>
+  <li>Attach the ROM as a cartridge, then boot it from the home menu (no unlaunch installed)</li>
+  <li>Copy the ROM to the virtual SD, then boot it with unlaunch</li>
+  <li>Copy the ROM to the virtual SD, then boot it with <a href="https://wiki.ds-homebrew.com/twilightmenu/" target="_blank">TWiLight Menu++</a></li>
+  <li><b>For DSiWare:</b> copy the ROM to the virtual SD, then install it to NAND with <a href="https://github.com/Epicpkmn11/NTM" target="_blank">NTM</a></li>
+  <li><b>For DSiWare:</b> create a TAD with <a href="https://randommeaninglesscharacters.com/dsidev/man/maketad.html" target="_blank">maketad</a>, copy the TAD to the virtual SD, then install it to NAND with <a href="https://github.com/rvtr/TDT" target="_blank">TDT</a>. For dev NANDs, you will need the <a href="https://cdn.randommeaninglesscharacters.com/tools/tdt/TadDeliveryTool_devkeys.srl" target="_blank">development build</a> of TDT.</li>
+</ul>
+<h4>Real hardware</h4>
+Real hardware is a bit more reliable, especially if you have development units and cartridges. For standalone DSis (retail or dev), try the following methods:
+<ul>
+  <li>Copy the ROM to the SD, then boot it with unlaunch</li>
+  <li>Copy the ROM to the SD, then boot it with <a href="https://wiki.ds-homebrew.com/twilightmenu/" target="_blank">TWiLight Menu++</a></li>
+  <li><b>For DSiWare:</b> copy the ROM to the SD, then install it to NAND with <a href="https://github.com/Epicpkmn11/NTM" target="_blank">NTM</a></li>
+  <li><b>For DSiWare:</b> create a TAD with <a href="https://randommeaninglesscharacters.com/dsidev/man/maketad.html" target="_blank">maketad</a>, copy the TAD to the SD, then install it to NAND with <a href="https://github.com/rvtr/TDT" target="_blank">TDT</a>. For dev units, you will need the <a href="https://cdn.randommeaninglesscharacters.com/tools/tdt/TadDeliveryTool_devkeys.srl" target="_blank">development build</a> of TDT.</li>
+</ul>
+If you have one, <a href="https://wiki.raregamingdump.ca/index.php/Nintendo_DS/Flash_Cards" target="_blank">development cartridges</a> are the best tools for testing. You can flash ROMs like developers would do with prototypes. This will help create the most accurate environment for running software. Eevitronics has created a <a href="https://www.eevitronics.jp/blogs/news/write-retail-debug-roms-to-3ds-and-dsi-cartridges" target="_blank">flasher</a> for the 3DS.
+<br><br>
+Once your dev cart is ready, you can either boot it as is from the home menu, or you can boot it from <a href="https://github.com/Lorenzooone/Simple-DS-Slot-1-Launcher/releases/" target="_blank">Simple DS Slot-1 Launcher</a>.
 </p>
+<details class="collapse-info">
+  <summary class="collapse-info">&#9432; Tip: What if my ROM came from a development cartridge?</summary>
+  <article>
+    <div class="collapse-infotext">
+      <p>
+      If your ROM came from a development cartridge, DO NOT use that same cartridge for testing. If you overwrite the cartridge with your dump before confirming that the dump was correct, you could write bad data and destroy the original software. As for testing, the point is to ensure that the dumped ROM is valid. We need to test the dump specifically, not the cartridge.
+      <br><br>
+      If you have a second and blank development cartridge, you may write to that and proceed with testing.
+      </p>
+    </div>
+    <div class="clear"></div>
+  </article>
+</details>
 <hr>
 <h3 id="releasing-your-data">Releasing Data</h3>
 <p>

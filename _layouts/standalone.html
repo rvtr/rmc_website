@@ -17,8 +17,8 @@
         <meta property="og:image" content="{{ site.url }}/icon.png">
         <!-- No "twitter" preview if just app icon -->
       {%- else -%}
-        <meta property="og:image" content="{{ site.releasedir }}{{ page.releaseslug }}{{ page.preview }}">
-        <meta property="twitter:image" content="{{ site.releasedir }}{{ page.releaseslug }}{{ page.preview }}">
+        <meta property="og:image" content="{{ page.preview }}">
+        <meta property="twitter:image" content="{{ page.preview }}">
       {%- endif %}
       <meta name="description" content="DS(i) development software documentation and preservation.">
       <meta property="og:description" content="DS(i) development software documentation and preservation.">
@@ -57,6 +57,8 @@
 </style>
   </head>
     <body>
+    {% include navdsi.html %}
+    {% include navncx.html %}
     <div class="release-limit" id="content-wrap">
       <div class="devinfo-container-main releasepage colorbox">
         <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">

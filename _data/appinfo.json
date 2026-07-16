@@ -203,12 +203,20 @@
       "banner_1":"Demonstration",
       "icon_alt":"",
       "published":"true",
-      "undumped":"",
+      "undumped":"true",
       "danger":"",
       "credit":"",
       "origin":"- Foxconn",
       "source":"",
-      "versions":[]
+      "versions":[
+            {
+               "version":"",
+               "date":"",
+               "type":"",
+               "faketad":"",
+               "system":"TWL (DSi)"
+            }
+      ]
       },
       {
       "slug":"CalcHMAC_forBroadOn",

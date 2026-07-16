@@ -2,171 +2,30 @@
 title: Index
 layout: dsiware
 ---
-<!-- The copy/pasting here is criminal... but so is adding another copy/paste jekyll layout -->
 
-<!-- Have you thought about autogenerating based on tags and including previews in the boxes? -->
-
-<div style="margin:1%;">
-   <div class="devinfo-container-main releasepage colorbox1">
-      <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
-      <div style="background-image: url('{{ site.imgui }}menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;width:100%;">
-      <div class="devinfo-main" style="position:relative;"><br>
-      <h3 style="padding-top:0;"><a href="/dsidev/release/3ds-pc-tools-r2.html">Even more 3DS factory PC tools</a> (2026/05/04)</h3>
-      <p style="width:100%;">
-      A few more 3DS factory tools from <b>Kelly</b> and <b>DeadlyFoez</b>! 
-      </p>
-      </div>
-      </div>
-      <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
-   </div>
+<div class="releaseindex-limit">
+  {% assign sorted_pages = site.pages | sort: "date" | reverse %}
+  {% for release in sorted_pages %}
+    {% if release.identifier == 'release-id' %}
+      {% if release.releaseslug != null %}
+        <div style="margin:1%;">
+           <div class="devinfo-container-main releasepage colorbox3">
+              <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
+              <div style="background-image: url('{{ site.imgui }}menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;width:100%;">
+                 <div class="devinfo-main" style="position:relative;flex-wrap: auto;"><br>
+                 <h3 style="padding-top:0;" class="text-center"><a href="{{ release.url }}">{{ release.title }}</a> ({{ release.date }})</h3>
+                 <div style="display:flex;flex-direction: row;flex-wrap:wrap;justify-content: space-around;  padding-bottom:15px">
+                 <p style="width:50%;min-width: 200px;">
+                 {{ release.fulldesc }}
+                 </p>
+                 <img style="width:auto;height:100%;max-height: 300px;max-width: 50%;" src="{{ site.releasedir }}{{ release.releaseslug }}{{ release.preview }}">
+                 </div>
+                 </div>
+              </div>
+              <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
+           </div>
+        </div>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
 </div>
-
-<div style="margin:1%;">
-   <div class="devinfo-container-main releasepage colorbox1">
-      <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
-      <div style="background-image: url('{{ site.imgui }}menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;width:100%;">
-      <div class="devinfo-main" style="position:relative;"><br>
-      <h3 style="padding-top:0;"><a href="/dsidev/release/3ds-pc-tools.html">3DS factory PC tools</a> (2026/05/01)</h3>
-      <p style="width:100%;">
-      New factory software just released from <b>March42</b>! These programs were used to setup the 3DS.
-      </p>
-      </div>
-      </div>
-      <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
-   </div>
-</div>
-
-<div style="margin:1%;">
-   <div class="devinfo-container-main releasepage colorbox1">
-      <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
-      <div style="background-image: url('{{ site.imgui }}menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;width:100%;">
-      <div class="devinfo-main" style="position:relative;"><br>
-      <h3 style="padding-top:0;"><a href="/dsidev/release/phcproducttest.html">PokeWalker factory tests</a> (2025/12/05)</h3>
-      <p style="width:100%;">
-      Thanks to <b>ufo</b>, we just got some PokeWalker test software. The tools, "PHC PRODUCT TEST", use a DS to set up PokeWalkers!
-      </p>
-      </div>
-      </div>
-      <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
-   </div>
-</div>
-
-<div style="margin:1%;">
-   <div class="devinfo-container-main releasepage colorbox0">
-      <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
-      <div style="background-image: url('{{ site.imgui }}menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;width:100%;">
-      <div class="devinfo-main" style="position:relative;"><br>
-      <h3 style="padding-top:0;"><a href="/dsidev/release/write_sdmc.html">AGING and WRITE SDMC-LNC factory tools</a> (2025/04/19)</h3>
-      <p style="width:100%;">
-      New DSi factory cart dumps from <b>March42</b>, one of which was never known to exist before now!
-      </p>
-      </div>
-      </div>
-      <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
-   </div>
-</div>
-
-<div style="margin:1%;">
-   <div class="devinfo-container-main releasepage colorbox1">
-      <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
-      <div style="background-image: url('{{ site.imgui }}menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;width:100%;">
-      <div class="devinfo-main" style="position:relative;"><br>
-      <h3 style="padding-top:0;"><a href="/dsidev/release/dev-nands_update.html">MangaON DSi Update: Build recovered</a> (2025/01/04)</h3>
-      <p style="width:100%;">
-      A build of the cancelled digital manga service called MangaON has been recovered by <b>MrPinball64</b>! This was assumed to be overwritten in our old release, but it was just fragmented!
-      </p>
-      </div>
-      </div>
-      <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
-   </div>
-</div>
-
-<div style="margin:1%;">
-   <div class="devinfo-container-main releasepage colorbox2">
-      <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
-      <div style="background-image: url('{{ site.imgui }}menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;width:100%;">
-      <div class="devinfo-main" style="position:relative;"><br>
-      <h3 style="padding-top:0;"><a href="/dsidev/release/voodooween-dsi.html">X4, X5, and X6 Prototype DSis</a> (2024/12/31)</h3>
-      <p style="width:100%;">
-      3 retail prototypes from <b>Voodooween</b>, all running factory firmware but with one new firmware as well!
-      </p>
-      </div>
-      </div>
-      <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
-   </div>
-</div>
-
-<div style="margin:1%;">
-   <div class="devinfo-container-main releasepage colorbox3">
-      <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
-      <div style="background-image: url('{{ site.imgui }}menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;width:100%;">
-      <div class="devinfo-main" style="position:relative;"><br>
-      <h3 style="padding-top:0;"><a href="/dsidev/release/imported_from_foxconn.html">DSi factory cartridges</a> (2024/12/25)</h3>
-      <p style="width:100%;">
-      27 factory cart dumps from <b>j4m13c0</b>, <b>Mecasacax</b>, many of which are firmware installers that have never seen the light of day!
-      </p>
-      </div>
-      </div>
-      <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
-   </div>
-</div>
-
-<div style="margin:1%;">
-   <div class="devinfo-container-main releasepage colorbox0">
-      <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
-      <div style="background-image: url('{{ site.imgui }}menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;width:100%;">
-      <div class="devinfo-main" style="position:relative;"><br>
-      <h3 style="padding-top:0;"><a href="/dsidev/release/sdmc-launcher.html">SDMC Launcher DSi</a> (2024/11/01)</h3>
-      <p style="width:100%;">
-      A retail DSi from the factory that is still running the unique SDMC Launcher bootloader. Thanks to <b>BrolyBroMan</b> for sharing!
-      </p>
-      </div>
-      </div>
-      <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
-   </div>
-</div>
-
-<div style="margin:1%;">
-   <div class="devinfo-container-main releasepage colorbox1">
-      <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
-      <div style="background-image: url('{{ site.imgui }}menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;width:100%;">
-      <div class="devinfo-main" style="position:relative;"><br>
-      <h3 style="padding-top:0;"><a href="/dsidev/release/proto-factory.html">X6 DSi and factory firmwares</a> (2024/10/09)</h3>
-      <p style="width:100%;">
-      An X6 prototype DSi and 3 final retail motherboards with factory (prototype) firmware. Huge thanks to <b>MarioDS64</b> for sharing his prototype, <b>HudsonU</b> for his factory firmware, and <b>Kelly</b> for helping me get ahold of my two boards. 
-      </p>
-      </div>
-      </div>
-      <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
-   </div>
-</div>
-
-<div style="margin:1%;">
-   <div class="devinfo-container-main releasepage colorbox2">
-      <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
-      <div style="background-image: url('{{ site.imgui }}menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;width:100%;">
-      <div class="devinfo-main" style="position:relative;"><br>
-      <h3 style="padding-top:0;"><a href="/dsidev/release/dev-nands.html">Classroom + MangaON DSi dev NANDs</a> (2023/09/29)</h3>
-      <p style="width:100%;">
-      8 NAND dumps from various DSi development units (and 2 retail), some of which were used for developing the Classroom DSi and MangaON. There is also a development cartridge containing the KART, a possible augmented reality test. <br>Many thanks to <b>collection_nintendo</b> on Instagram for providing the dumps. <br>
-      </p>
-      </div>
-      </div>
-      <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
-   </div>
-</div>
-
-<div style="margin:1%;">
-   <div class="devinfo-container-main releasepage colorbox3">
-      <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_u.png" style="width: 100%;position: static;display: block;" class="pixelate">
-      <div style="background-image: url('{{ site.imgui }}menu/dsi_widepromptnobar.png');background-size:100% 100%;position: static;display: inline-block;width:100%;">
-      <div class="devinfo-main" style="position:relative;"><br>
-      <h3 style="padding-top:0;"><a href="/dsidev/release/USG-CPU-X4.html">X4 Prototype released</a> (2023/05/22)</h3>
-      <p style="width:100%;">
-      Lots of detailed photos and the differences of a newly discovered X4 prototype DS lite. Huge thanks to <b>lasscat</b> and <b>ProtonX</b>!
-      </div>
-      </div>
-      <img src="{{ site.imgui }}menu/green/dsi_widebarnoprompt_d.png" style="width: 100%;display: block;" class="pixelate">
-   </div>
-</div>
-

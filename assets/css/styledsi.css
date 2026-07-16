@@ -262,6 +262,11 @@ body {
   max-width: 1400px;
   margin: auto;
 }
+
+.releaseindex-limit {
+  max-width: 1000px;
+  margin: auto;
+}
 .flex-container {
   display: flex;
   flex-wrap: wrap;

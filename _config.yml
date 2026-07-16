@@ -34,3 +34,11 @@ plugins:
   - jekyll-redirect-from # Can we find something better? Redirects break when serving to another computer
 feed:
   posts_limit: 20
+
+defaults:
+  -
+    scope:
+      path: "dsidev/release/*"
+      type: "pages"
+    values:
+      identifier: "release-id"

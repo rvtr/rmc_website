@@ -73,8 +73,12 @@ redirect_from: /dsidev/index.html
                           <b>Target: </b>
                           {%- if program.versions[0].system == "TWL (DSi)" -%}
                            <span style="color:#ff0000;">{{ program.versions[0].system }}</span>
-                          {%- else -%}
+                          {%- elsif program.versions[0].system == "NTR (DS)" -%}
                            <span style="color:#3399ff;">{{ program.versions[0].system }}</span>
+                          {%- elsif program.versions[0].system == "AGB (GBA)" -%}
+                           <span style="color:green;">{{ program.versions[0].system }}</span>
+                          {%- else -%}
+                           <span style="">{{ program.versions[0].system }}</span>
                           {%- endif -%}
                         </div>
                       </div>

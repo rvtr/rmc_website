@@ -1268,7 +1268,7 @@
       "banner":"mcu-firm",
       "banner_1":"",
       "icon_alt":"",
-      "published":"",
+      "published":"true",
       "undumped":"",
       "danger":"high",
       "credit":"j4m13c0",
@@ -1289,13 +1289,13 @@
       "title":"Mitsumi Electric Debug Tool",
       "title_short":"",
       "desc":"DS WiFi module tester",
-      "category":"",
-      "category_broad":"NTR factory",
+      "category":"SDK",
+      "category_broad":"SDK",
       "target":"CARD",
-      "banner":"",
-      "banner_1":"",
+      "banner":"NINTENDO DS™",
+      "banner_1":"Demonstration",
       "icon_alt":"",
-      "published":"",
+      "published":"true",
       "undumped":"",
       "danger":"",
       "credit":"March42, for <a href='https://web.archive.org/web/20230324233451/https://illusion.64history.net/'>FOI</a>",
@@ -2386,6 +2386,33 @@
                "system":"TWL (DSi)"
             }
          ]
+      },
+      {
+      "slug":"NTRBoardChecker",
+      "title":"NTR CPU Board Sequencer",
+      "title_short":"NTR BOARD",
+      "desc":"DS hardware tester",
+      "category":"Nitro EVA",
+      "category_broad":"NTR factory",
+      "target":"GBA",
+      "banner":"",
+      "banner_1":"",
+      "icon_alt":"",
+      "published":"true",
+      "undumped":"",
+      "danger":"",
+      "credit":"No credit",
+      "origin":"- Foxconn",
+      "source":"",
+      "versions":[
+            {
+               "version":"v1.05",
+               "date":"20061208",
+               "type":"gba",
+               "faketad":"",
+               "system":"AGB (GBA)"
+            }
+      ]
       },
       {
       "slug":"PhotoChecker",
@@ -4671,6 +4698,9 @@
       "desc":"",
       "sequence":"true",
       "order":[
+            {
+               "slug":"NTRBoardChecker",
+            },
             {
                "slug":"Nitro_EVA_Proto",
             },

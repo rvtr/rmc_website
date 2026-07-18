@@ -1,0 +1,319 @@
+---
+title: "CTR BOARD v2.0"
+layout: release
+releaseslug: ctr_board-r2
+date: 2026/07/18
+preview: /preview.png
+fulldesc: "Another copy of CTR BOARD has been dumped, this time targeting CTR (old 3DS), SPR (3DS XL), and FTR (2DS)!"
+---
+<h1>{{ page.title }}</h1>
+<p>And an anonymous uploader has just sent in a new CTR BOARD! This tool would have been used in factories to test 3DS consoles with a DSi. A more detailed explaination of BOARD can be found in our <a href="/dsidev/release/ctr_board.html">previous release</a>, or the dedicated <a href="/dsidev/ctrboardchecker.html">BOARD page</a>. This specific copy targets CTR (old 3DS), SPR (3DS XL), and FTR (2DS). This is a development signed ROM.
+<br><br>
+Unlike most TWL EVAs, you cannot access the menu by holding <code>START</code> on boot. The BOARD software automatically tries communicating to an XPort device. Since we do not have the factory hardware needed for communications, the software will be stuck trying to load until it eventually times out. To skip XPort setup, download the "CTR BOARD Config" zip, and extract the contents to the root of the SD. Then open <code>seq_cnfdata.txt</code>, and edit the <code>StartMenu</code> variable in the <code>[[TEST MODE]]</code> section from <code>FALSE</code> to <code>TRUE</code>.
+<br><br>
+Thanks to DeadlyFoez for dumping the SD card that the config came from.
+</p>
+<details>
+<summary>Download CTR BOARD</summary>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+	Build date : 2013/08/05
+	Version    : v2.0
+	Download   : <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/CTRBoardChecker_v2.0_20130805.srl">CTRBoardChecker_v2.0_20130805.srl</PRE></TD></TR></TABLE>
+</details>
+<details>
+<summary>Download CTR BOARD Config</summary>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+	Download   : <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/CTRBoardConfig.zip">CTRBoardConfig.zip</PRE></TD></TR></TABLE>
+</details>
+<details>
+<summary>BOARD Test List</summary>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+-----CPU Board Checker CTR-----
+82-001 CHECK LEVER STATUS            =TRUE
+70-001 CHARGE INITIALIZE             =TRUE
+71-001 BT POWER INITIALIZE           =TRUE
+72-001 BATTERY INITIALIZE            =TRUE
+77-001 KEY INITIALIZE                =TRUE
+87-001 CARD DETECT INITIALIZE        =TRUE
+71-068 SET BATTERY TYPE 0            =TRUE
+71-002 SUPPLY BTp POWER 1            =FALSE
+71-080 SUPPLY BTp POWER 1 MSD        =TRUE
+71-008 MEASURE BTp CURRENT 2         =FALSE
+71-085 MEASURE BTp CURRENT 2 MSD     =TRUE
+71-015 MEASURE VDET                  =TRUE
+71-016 MEASURE PVDD                  =TRUE
+71-017 MEASURE LDO18                 =TRUE
+71-042 MEASURE CUT VIN               =TRUE
+71-043 MEASURE CUT MCU PU            =TRUE
+71-044 MEASURE CUT B+                =TRUE
+70-014 CHARGE CONTROL SIGNAL 1       =FALSE
+70-022 CHARGE CONTROL SIGNAL 1 MSD   =TRUE
+70-017 CHECK LED ORANGE OFF          =TRUE
+70-002 SET CHARGE SW                 =TRUE
+70-005 OVP VIN                       =TRUE
+70-011 MEASURE CHARGE CURRENT 4      =TRUE
+70-006 LVLO VIN                      =TRUE
+70-012 MEASURE CHARGE CURRENT 5      =TRUE
+70-004 TYPICAL VIN                   =FALSE
+70-021 TYPICAL VIN MSD               =TRUE
+70-008 MEASURE CHARGE CURRENT 1      =TRUE
+70-015 CHARGE CONTROL SIGNAL 2       =FALSE
+70-023 CHARGE CONTROL SIGNAL 2 MSD   =TRUE
+70-018 CHECK LED ORANGE ON           =TRUE
+70-020 SET THERMISTER ABNORMAL       =FALSE
+70-013 MEASURE CHARGE CURRENT 6      =FALSE
+70-016 CHARGE CONTROL SIGNAL 3       =FALSE
+70-019 SET THERMISTER NORMAL         =FALSE
+71-006 SET BTp POWER 4.3V            =FALSE
+71-081 SET BTp POWER 4.3V MSD        =TRUE
+70-010 MEASURE CHARGE CURRENT 3      =TRUE
+71-005 SET BTp POWER 2.5V            =FALSE
+71-082 SET BTp POWER 2.5V MSD        =TRUE
+70-009 MEASURE CHARGE CURRENT 2      =TRUE
+70-003 CUT CHARGE SW                 =TRUE
+70-007 CUT VIN                       =TRUE
+71-003 CUT BTp POWER                 =TRUE
+71-069 SET BATTERY TYPE 5            =TRUE
+71-004 SET BTp POWER 3.6V            =FALSE
+71-083 SET BTp POWER 3.6V MSD        =TRUE
+82-010 SET SERIAL COUNTER I2C        =TRUE
+71-056 TURN ON POWER 1               =TRUE
+71-065 CONTROL SIGNAL 1              =FALSE
+71-087 CONTROL SIGNAL 1 MSD          =TRUE
+71-057 TURN ON POWER 2               =TRUE
+71-041 MEASURE LDO35                 =FALSE
+71-061 MEASURE POWER GROUP 1         =TRUE
+71-086 MEASURE POWER GROUP 1 MSD     =TRUE
+71-062 MEASURE POWER GROUP 2         =TRUE
+71-088 MEASURE LDO12                 =TRUE
+71-058 TURN ON POWER 3               =TRUE
+71-066 CONTROL SIGNAL 2              =FALSE
+71-063 MEASURE POWER GROUP 3         =TRUE
+71-059 TURN ON POWER 4               =TRUE
+71-064 MEASURE POWER GROUP 4         =TRUE
+71-007 MEASURE BTp CURRENT 1         =TRUE
+71-012 MEASURE BL CURRENT 1          =TRUE
+71-047 MEASURE CUT PWMO1             =FALSE
+71-048 MEASURE CUT PWMO2             =TRUE
+71-045 MEASURE CUT SD10 VDD          =TRUE
+71-046 MEASURE CUT VDD33C            =FALSE
+71-075 POWER CUT BY UVLO             =FALSE
+71-070 DIRECT BOOT KEY ON            =FALSE
+87-007 SET CARD DETECT ON            =FALSE
+71-052 CLEAR TRACE CODE              =FALSE
+71-053 GET START TRACE CODE          =FALSE
+71-076 DIRECT BOOT                   =FALSE
+71-035 MEASURE VDD33C                =FALSE
+71-055 CHECK TRACE CODE              =FALSE
+71-054 FINISH GET TRACE CODE         =FALSE
+71-071 DIRECT BOOT KEY OFF           =FALSE
+71-060 TURN OFF POWER                =FALSE
+71-078 SPECIAL BOOT KEY ON           =FALSE
+71-077 SPECIAL BOOT                  =FALSE
+82-018 LAUNCH CTR CARD PROGRAM       =FALSE
+71-035 MEASURE VDD33C                =TRUE
+71-034 MEASURE SD10 VDD              =TRUE
+75-001 ATTEST 1                      =TRUE
+75-003 CTR PROGRAM VERSION           =FALSE
+82-020 BOARD REENTRY                 =TRUE
+83-001 WRITE START LOG               =FALSE
+29-001 GET UID                       =FALSE
+73-001 GET NAND CID                  =FALSE
+73-002 GET MGIC VERSION              =FALSE
+73-003 GET PMIC VERSION              =FALSE
+73-005 GET MCU VERSION               =TRUE
+73-006 GET CONSOLE TYPE              =TRUE
+73-007 GET CAMERA VENDOR ID          =TRUE
+73-008 GET ACCEL XYZ                 =FALSE
+73-009 GET GYRO RPY                  =TRUE
+82-012 SET SERIAL COUNTER SPI        =TRUE
+72-004 GET BATTERY TYPE              =TRUE
+72-011 GET BATTERY TEMP 1            =TRUE
+72-012 GET BATTERY TEMP 2            =FALSE
+72-005 GET VCELL BOARD               =FALSE
+72-007 GET BATTERY REMAIN BOARD      =FALSE
+82-002 SD CARD READ/WRITE TEST       =FALSE
+87-006 SD CARD WP                    =FALSE
+87-005 SD CARD DETECT OFF            =FALSE
+87-004 SD CARD DETECT ON             =FALSE
+87-003 NTR CARD DETECT OFF           =FALSE
+87-002 NTR CARD DETECT ON            =FALSE
+74-009 RESET VIA MCU                 =FALSE
+75-002 ATTEST 2                      =FALSE
+71-079 SPECIAL BOOT KEY OFF          =FALSE
+77-004 KEY TEST                      =FALSE
+77-008 KEY TEST MSD                  =TRUE
+11-003 HOME KEY                      =TRUE
+11-004 WIFI KEY                      =TRUE
+73-004 GET CODEC VERSION             =TRUE
+77-006 ANALOG KEY                    =TRUE
+82-003 TOUCH PANEL                   =FALSE
+82-014 SET SERIAL COUNTER I2S        =TRUE
+15-001 MIC POWER ON                  =FALSE
+35-010 SET MASTER LED MAX            =TRUE
+74-001 LED RED                       =FALSE
+74-012 LED TEST MSD                  =FALSE
+74-002 LED BLUE                      =FALSE
+74-003 LED YELLOW                    =FALSE
+74-004 LED GREEN                     =FALSE
+74-005 LED PINK                      =FALSE
+74-006 LED INCOMING_R                =FALSE
+74-007 LED INCOMING_G                =FALSE
+74-008 LED INCOMING_B                =TRUE
+80-001 FLICKER ADJUST MAX            =TRUE
+80-010 FLICKER ADJUST MAX MSD        =TRUE
+80-002 FLICKER ADJUST MIN            =TRUE
+80-011 FLICKER ADJUST MIN MSD        =FALSE
+85-001 MAX BRIGHTNESS                =FALSE
+85-002 MIN BRIGHTNESS                =FALSE
+85-003 ACTIVE BACKLIGHT ON           =FALSE
+85-004 ACTIVE BACKLIGHT OFF          =FALSE
+86-001 3D MODE ON                    =TRUE
+86-006 3D MODE ON OFF MSD            =FALSE
+86-004 TUNE VOLUME MAX               =FALSE
+86-005 TUNE VOLUME MIN               =TRUE
+86-002 3D MODE OFF                   =TRUE
+80-003 SET LCD OFF                   =TRUE
+80-012 SET LCD OFF MSD               =FALSE
+71-009 MEASURE BTp CURRENT 3         =TRUE
+71-014 MEASURE BL CURRENT 3          =FALSE
+80-004 SET LCD ON                    =FALSE
+80-013 SET LCD ON MSD                =FALSE
+80-005 LD1 PULSE COUNTER             =FALSE
+80-014 LCD TEST MSD                  =FALSE
+80-006 LD2 CONTROL SIGNAL            =FALSE
+80-007 LD2 RGB SIGNAL 1              =FALSE
+80-008 LD2 RGB SIGNAL 2              =TRUE
+80-009 LD2 RGB SIGNAL 3              =TRUE
+78-001 SOUND INITIALIZE              =TRUE
+79-001 MIC INITIALIZE                =FALSE
+79-002 SET MIC CALIB DEFAULT         =TRUE
+78-002 SOUND VOLUME MAX              =TRUE
+78-006 I2S2 SOUND START              =TRUE
+78-026 I2S2 SOUND START MSD          =FALSE
+78-008 I2S2 AMPLITUDE                =TRUE
+78-025 I2S2 SOUND STOP               =TRUE
+78-005 I2S1 SOUND START              =FALSE
+78-027 I2S1 SOUND START MSD          =TRUE
+78-007 I2S1 AMPLITUDE                =TRUE
+78-003 SOUND VOLUME MIN              =TRUE
+78-028 SOUND VOLUME MIN MSD          =FALSE
+78-010 SOUND MUTE                    =TRUE
+78-024 I2S1 SOUND STOP               =TRUE
+78-011 SPEAKER R BOARD               =TRUE
+78-012 SPEAKER L BOARD               =TRUE
+15-001 MIC POWER ON                  =FALSE
+79-003 MEASURE MIC PW1               =TRUE
+79-005 MIC1 DC OFFSET                =FALSE
+79-006 MIC1 SAMPLING                 =TRUE
+79-011 MIC1 SAMPLING MSD             =TRUE
+78-013 SET HEADPHONE LOAD            =TRUE
+79-009 SWITCH MIC2                   =TRUE
+78-015 JACK INSERT                   =TRUE
+78-017 HEADPHONE R                   =TRUE
+78-018 HEADPHONE L                   =TRUE
+79-007 MIC2 DC OFFSET                =FALSE
+79-008 MIC2 SAMPLING                 =FALSE
+77-005 REMOTE KEY                    =FALSE
+78-016 JACK PULLOUT                  =FALSE
+78-014 CUT HEADPHONE LOAD            =FALSE
+79-010 SWITCH MIC1                   =FALSE
+15-002 MIC POWER OFF                 =FALSE
+79-004 MEASURE CUT MIC PW1           =FALSE
+82-008 GO SLEEP MODE                 =FALSE
+71-010 MEASURE BTp CURRENT 4         =FALSE
+82-009 RETURN FROM SLEEP MODE        =FALSE
+25-002 ICAM OPEN SHORT CHECK         =TRUE
+25-003 OCAML OPEN SHORT CHECK        =TRUE
+25-004 OCAMR OPEN SHORT CHECK        =FALSE
+88-001 IR INITIALIZE                 =TRUE
+88-002 IR ACCESS TEST                =TRUE
+88-003 IR COMMUNICATION              =FALSE
+88-007 IR COMMUNICATION MSD          =TRUE
+88-004 IR TX-RC TEST                 =TRUE
+88-005 IR RXD RECEIVE TEST           =FALSE
+88-006 IR POWERDOWN TEST             =TRUE
+76-001 REVISE RTC                    =TRUE
+83-002 WRITE OK LOG                  =FALSE
+71-073 FORCE POWER OFF               =TRUE
+71-060 TURN OFF POWER                =TRUE
+</PRE></TD></TR></TABLE>
+</details>
+<details>
+<summary>FINAL Test List</summary>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+-----Final Checker CTR-----
+82-001 CHECK LEVER STATUS            =FALSE
+70-001 CHARGE INITIALIZE             =FALSE
+71-001 BT POWER INITIALIZE           =FALSE
+70-004 TYPICAL VIN                   =FALSE
+70-021 TYPICAL VIN MSD               =FALSE
+70-008 MEASURE CHARGE CURRENT 1      =TRUE
+70-007 CUT VIN                       =TRUE
+71-072 WAIT POWER ON                 =TRUE
+75-001 ATTEST 1                      =TRUE
+75-003 CTR PROGRAM VERSION           =FALSE
+83-001 WRITE START LOG               =TRUE
+09-003 RTC COUNT UP 1 SEC            =TRUE
+29-001 GET UID                       =TRUE
+29-002 GET MAC ADDRESS               =TRUE
+73-001 GET NAND CID                  =TRUE
+73-002 GET MGIC VERSION              =FALSE
+73-003 GET PMIC VERSION              =TRUE
+73-004 GET CODEC VERSION             =FALSE
+73-005 GET MCU VERSION               =FALSE
+73-006 GET CONSOLE TYPE              =FALSE
+73-007 GET CAMERA VENDOR ID          =FALSE
+73-008 GET ACCEL XYZ                 =TRUE
+73-009 GET GYRO RPY                  =TRUE
+72-004 GET BATTERY TYPE              =TRUE
+72-011 GET BATTERY TEMP 1            =FALSE
+72-006 GET VCELL INTERFACE           =TRUE
+72-008 GET BATTERY REMAIN INTERFACE  =FALSE
+26-003 NO SD CARD                    =TRUE
+78-001 SOUND INITIALIZE              =TRUE
+79-001 MIC INITIALIZE                =FALSE
+78-004 WAIT SOUND VOLUME MAX         =FALSE
+15-001 MIC POWER ON                  =FALSE
+78-021 SPEAKER R INTERFACE           =TRUE
+78-022 SPEAKER L INTERFACE           =TRUE
+78-013 SET HEADPHONE LOAD            =TRUE
+79-009 SWITCH MIC2                   =TRUE
+78-019 WAIT JACK INSERT              =TRUE
+78-017 HEADPHONE R                   =TRUE
+78-018 HEADPHONE L                   =TRUE
+79-007 MIC2 DC OFFSET                =FALSE
+79-008 MIC2 SAMPLING                 =FALSE
+77-005 REMOTE KEY                    =FALSE
+78-020 WAIT JACK PULLOUT             =FALSE
+78-014 CUT HEADPHONE LOAD            =FALSE
+79-010 SWITCH MIC1                   =FALSE
+15-002 MIC POWER OFF                 =FALSE
+25-002 ICAM OPEN SHORT CHECK         =FALSE
+25-003 OCAML OPEN SHORT CHECK        =TRUE
+25-004 OCAMR OPEN SHORT CHECK        =TRUE
+82-016 NOR FLASH ACCESS              =FALSE
+88-001 IR INITIALIZE                 =TRUE
+88-002 IR ACCESS TEST                =TRUE
+88-003 IR COMMUNICATION              =TRUE
+88-007 IR COMMUNICATION MSD          =TRUE
+88-004 IR TX-RC TEST                 =FALSE
+88-005 IR RXD RECEIVE TEST           =FALSE
+88-006 IR POWERDOWN TEST             =FALSE
+74-010 DETECT FOLD                   =FALSE
+25-003 OCAML OPEN SHORT CHECK        =TRUE
+25-004 OCAMR OPEN SHORT CHECK        =TRUE
+74-011 DETECT OPEN                   =FALSE
+83-002 WRITE OK LOG                  =FALSE
+71-073 FORCE POWER OFF               =FALSE
+71-074 WAIT TURN OFF POWER           =FALSE
+</PRE></TD></TR></TABLE>
+</details>
+<div class="screenshot">
+	<img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/CTR_BOARD_v2.0_6.png">
+	<img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/CTR_BOARD_v2.0_1.png">
+	<img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/CTR_BOARD_v2.0_4.png">
+	<img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/CTR_BOARD_v2.0_3.png">
+	<img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/CTR_BOARD_v2.0_2.png">
+	<img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/CTR_BOARD_v2.0_5.png">
+</div>

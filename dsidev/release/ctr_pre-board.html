@@ -1,0 +1,123 @@
+---
+title: "3DS factory ntrboot cartridge, and DS phat wifi tester"
+layout: release
+releaseslug: ctr_pre-board
+date: 2026/07/18
+preview: /preview.jpg
+fulldesc: "We got a copy of an ntrboot cartridge that was used in factories to install the 3DS firmware, as well as a wireless tester for the DS phat!"
+---
+<h1>{{ page.title }}</h1>
+<p>Thanks to an anonymous dumper, we now have a copy of CTR PRE-BOARD, and a wireless tester for the DS phat! 
+</p>
+<table class="history">
+  <tr><th class="twl">Table of contents</th></tr>
+  <tr><td class="twl">- <a href="#preboard">PRE-BOARD</a></td></tr>
+  <tr><td class="twl">- <a href="#rftest">RF Test</a></td></tr>
+</table>
+<h2 id="preboard">PRE-BOARD</h2>
+<p>PRE-BOARD runs before the familiar <a href="/dsidev/ctrboardchecker.html">BOARD</a> stage, installing a factory firmware. This specific copy of PRE-BOARD installs v0.17.5 firmware, for the 3DS XL (SPR). PRE-BOARD is a DS rom containing prod 3DS ntrboot image. The FIRM starts at <code>0x7E00</code>, and the CONT (firmware contents) is at 0x180000</code>. The updater process in the FIRM corresponds to <code>ctr/sources/firmware/CTR-Kernel/updater1st/UpdaterProcess</code> in the <code>ctr.7z</code> source code.
+</p>
+<details>
+<summary>Included firmware CIAs:</summary>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+0004003000008102 v7172: TestMenu
+0004003000008a02 v4096: ErrDisp
+0004013000001502 v3072: am
+0004013000001602 v3074: camera
+0004013000001702 v4096: cfg
+0004013000001802 v3072: codec
+0004013000001a02 v2048: dsp
+0004013000001b02 v0: gpio
+0004013000001c02 v5120: gsp
+0004013000001d02 v4096: hid
+0004013000001e02 v1024: i2c
+0004013000001f02 v4102: mcu
+0004013000002002 v0: mic
+0004013000002102 v0: pdn
+0004013000002202 v5120: ptm
+0004013000002302 v1025: spi
+0004013000002402 v4101: ac
+0004013000002602 v4097: cecd
+0004013000002702 v2048: csnd
+0004013000002802 v3078: dlp
+0004013000002902 v5122: http
+0004013000002a02 v0: mp
+0004013000002b02 v3072: ndm
+0004013000002c02 v3074: nim
+0004013000002d02 v5120: nwm
+0004013000002e02 v4096: socket
+0004013000002f02 v4096: ssl
+0004013000003102 v1025: ps
+0004013000003202 v4096: friends
+0004013000003302 v4096: ir
+0004013000003402 v5122: boss
+0004013000008002 v5121: ns
+0004013800000002 v6677: NATIVE_FIRM
+0004013800000102 v4625: TWL_FIRM
+0004800542383841 v2048: DS Internet
+00048005484e4441 v1024: Download Play
+0004800f484e4841 v4096: DS Cart Whitelist
+0004800f484e4c41 v0: TWL Version Data
+	</PRE></TD></TR></TABLE>
+</details>
+
+<div class="screenshot">
+	<img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/TestMenu.png">
+</div>
+<p>
+Below is a picture of the test rig. A motherboard would be loaded onto the rig's pogo pins. The pins would lead to the cartridge port and button inputs, and a cartridge slot in the back is wired to the pins. Since the motherboard at this point doesn't have any firmware, all software needs to use ntrboot. This is a special recovery mode baked into the SoC, and it requires no extra hardware like screens or software like an operating system to run.
+</p>
+<div class="screenshot">
+	<img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/image-068.jpg">
+	<img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/image-069.jpg">
+	<img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/image-072.jpg">
+	<img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/image-073.jpg">
+	<img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/image-076.jpg">
+	<img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/image-078.jpg">
+	<img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/image-081.jpg">
+	<img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/image-070.jpg">
+</div>
+<p>
+To start, a factory worker would press the test button. This would turn the motherboard on, and would load the PRE-BOARD software from ntrboot. PRE-BOARD has no output on the screens, and instead relies on the power, WiFi, and test rig LEDs to show the current status.
+</p>
+<ul>
+  <li><b>During startup:</b> The motherboard's power LED will light up for 1 to 2 seconds and then turn off</li>
+  <li><b>During writing:</b> The motherboard's WiFi LED will light up at the same time the power indicator turns off (it will turn off when writing is complete)</li>
+  <li><b>Debug:</b> The status LEDs on the test rig change their pattern every few seconds</li>
+</ul>
+<p>You can tell when writing is finished by the power LED being on, the WiFi LED being off, and all test rig LEDs being on. We have close ups of the test rig's LEDs below:</p>
+<div class="screenshot">
+	<img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/image-074.jpg">
+	<img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/image-077.jpg">
+	<img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/image-079.jpg">
+</div>
+<p>
+No photos of this exact cartridge were provided, but below is another copy with the exact same label. The label on the cartridge reads: "CPU基板プリ検査器用カード" (Card for CPU Board Pre-Inspection Tester).
+<br><br>
+Thanks to Rairii for the GodMode9 <a href="https://github.com/Wack0/GodMode9-ntrboot-dumper" target="_blank">fork</a> to dump ntrboot cards and Lorenzooone for troubleshooting.
+</p>
+<div class="screenshot">
+	<img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/cart.png">
+</div>
+<details>
+<summary>Download CTR PRE-BOARD</summary>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+	Firmware   : v0.17.5
+	Download   : <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/NGCFIRM_PRE-BOARD_v0.17.5.ngc">NGCFIRM_PRE-BOARD_v0.17.5.ngc</a>
+	</PRE></TD></TR></TABLE>
+</details>
+<hr>
+<h2 id="rftest">RF GU & MODULE Test</h2>
+<p>This is an earlier version of <a href="/dsidev/nitro_eva_rf_test.html">RF Test</a>, instead called "<b>RF GU & MODULE Test</b>". It's hard to tell what this program does exactly, but it was built off of <a href="/dsidev/wmtesttool.html">WMtest</a>, and has many of the same features such as measuring and generating noise on wireless channels. The WMtest menu can be opened by holding <code>SELECT</code> on boot. RF Test's main feature is sending and receiving commands through UART. This would be done through an SPI<-->UART GBA cartridge adapter, likely connecting the retail DS to a factory test DS. The retail DS (client) would receive control commands, and the factory DS (host) would transmit those commands. A menu to assemble commands can be opened by holding <code>START</code> on boot, the pressing <code>Y</code>. 
+</p>
+<details>
+<summary>Download RF GU & MODULE Test</summary>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0><TR><TD><PRE>
+	Download   : <a href="{{ site.releasedir }}{{ page.releaseslug }}/files/RF_TEST_v3.0_20051115.srl">RF_TEST_v3.0_20051115.srl</a>
+	</PRE></TD></TR></TABLE>
+</details>
+<div class="screenshot">
+	<img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/rf-1.png">
+	<img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/rf-2.png">
+	<img src="{{ site.releasedir }}{{ page.releaseslug }}/photos/rf-3.png">
+</div>
